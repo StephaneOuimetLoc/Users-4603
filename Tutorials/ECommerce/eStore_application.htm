@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+    <link type="text/css" href="/assets/code_prism/prism.css" rel="stylesheet">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eCommerce - eStore Application</title>
+    <link href="../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../html_template.dwt" -->
+            <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+      <!-- #EndEditable -->
+      <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eCommerce - eStore Application <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eCommerce <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+
+    <div class="toc-container shadow">
+      <h2 class="toc-title">Table of Contents</h2>
+    </div>
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The eStore application is the desktop version of the eCommerce solution that allow users to purchase from an online portal to LOC SMS, without having to maintain two different systems. For the mobile version application, refer to the <a href="../mStore/SMS_eCommerce_mStore_application.htm">mStore application</a>.</p>
+
+      <p>There are multiple advantages with the eStore application since it is linked to LOC SMS and uses the same database, structure and features. All orders created in eStore application are retrieved, processed and closed at the store level or the warehouse.</p>
+
+      <p>The eStore application is built with the Sencha framework and is classified as a web application more than a typical web site.</p>
+
+      <p>According to the customer's needs, the eStore application can be customized by using the Sencha tools provided with SMS. A license is required to use Sencha Architect.</p>
+
+      <h2>The 'Home' page</h2>
+
+      <p>The Home page is the main web page all visitors see when accessing the eStore application. Creating an account is necessary to navigate in most menus. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>Login</li>
+
+        <li>Register (removed when user is logged)</li>
+
+        <li>Account</li>
+
+        <li>Orders</li>
+
+        <li>Basket (basket empty before login)</li>
+
+        <li>Logout (displayed when user is logged)</li>
+
+        <li>Product description search field</li>
+
+        <li>Home (Featured Products are displayed when user is logged)</li>
+
+        <li>Shopping</li>
+
+        <li>Coupons</li>
+
+        <li>Recipes</li>
+
+        <li>Lists</li>
+
+        <li>Flyer</li>
+
+        <li>Clubs</li>
+      </ul>
+
+      <p><img alt="" height="540" src="eStore_application_files/01-Home_page1.png" width="930"></p>
+
+      <h2>The 'Login' window</h2>
+
+      <p>The Login window allows the user to log in with their username or email and password. Visitors must create an account to navigate in the eStore application. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>User name or Email</li>
+
+        <li>Password</li>
+
+        <li>Forgot your password?</li>
+
+        <li>Save password locally</li>
+
+        <li>Sign in (to validate the information entered)</li>
+
+        <li>Don't have an account? Sign up</li>
+      </ul>
+
+      <p><img alt="" height="281" src="eStore_application_files/02-Login_page.png" width="443"></p>
+
+      <h2>The 'Register' window</h2>
+
+      <p>The Register window allows the visitor to create an account to navigate in the eStore application. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>First Name</li>
+
+        <li>Last Name</li>
+
+        <li>Phone number</li>
+
+        <li>EMail</li>
+
+        <li>Password and confirmation</li>
+
+        <li>My store (Select button)</li>
+
+        <li>Captcha</li>
+
+        <li><img alt="" class="Text" height="22" src="eStore_application_files/reCAPTCHA.png" width="102"> (Refresh captcha)</li>
+
+        <li>Receive our weekly flyer view email</li>
+
+        <li>Submit</li>
+      </ul>
+
+      <p><img alt="" height="519" src="eStore_application_files/03-Register_page.png" width="449"></p>
+
+      <h2>The 'Account' page</h2>
+
+      <p>The Account page gives the user acces to their own personal information for modification. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>Contact (Name, phone number, email, language etc.)</li>
+
+        <li>Preferences (Handling, Communication preferences, Food preferences)</li>
+
+        <li>Pickup Store (Stores addresses)</li>
+
+        <li>Main address</li>
+
+        <li>Shipping address</li>
+
+        <li>Cards (All cards linked to the account)</li>
+
+        <li>Points and clubs (All registered points program)</li>
+      </ul>
+
+      <p><img alt="" height="501" src="eStore_application_files/04-Account_page.png" width="931">&nbsp;</p>
+
+      <h2>The 'All Orders' page</h2>
+
+      <p>The All Orders page gives access to the user's older orders and it is also possible to reorder items from this page. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>Status (filter orders by Not completed, Submitted or Closed)</li>
+
+        <li>Age (filter orders from the last 30 days, 90 days or 180 day)</li>
+
+        <li>Re-open an order (requires an empty basket)</li>
+
+        <li>View items (add items to the current transaction)</li>
+
+        <li>Receipt (view the order receipt)</li>
+      </ul>
+
+      <p><img alt="" height="620" src="eStore_application_files/05-All_Orders.png" width="930">&nbsp;</p>
+
+      <h2>The 'Basket' page</h2>
+
+      <p>The basket page gives the user access to their shopping cart and displays the current order to complete it. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>Items (modify quantity)</li>
+
+        <li>X (delete item)</li>
+
+        <li>Checkout</li>
+
+        <li style="list-style: none">
+          <ul>
+            <li>Confirm address</li>
+
+            <li>Handling</li>
+
+            <li>Payment</li>
+
+            <li>Place order</li>
+          </ul>
+        </li>
+
+        <li>Save</li>
+
+        <li>Delete transaction</li>
+
+        <li>Change (Current Store)</li>
+      </ul>
+
+      <p><img alt="" height="566" src="eStore_application_files/06-Basket_page.png" width="930"></p>
+
+      <p class="Note"><strong>NOTE:</strong> When the order is received in the selected store, an order confirmation email is sent to the user.<br>
+      </p>
+
+      <h2>The 'Logout' option</h2>
+
+      <p>The Logout option allows the user to disconnect from the eStore application.<br>
+      <br>
+      </p>
+
+      <h2>The 'Search' field</h2>
+
+      <p>The Search field allows the user to search for an item by UPC code or product description. One or more words contained in the product description can be entered.</p>
+
+      <p><img alt="" height="51" src="eStore_application_files/07-Search_field.png" width="770"><br>
+      </p>
+
+      <h2>The 'Featured products' section</h2>
+
+      <p>The Featured products section of the Home page is used to promote specific products and they are displayed when the user is logged in. Refer to the <a href="Basic/Items_Management.htm">eCommerce - Items_management</a> topic for details.</p>
+
+      <p><img alt="" height="620" src="eStore_application_files/01-Home_page2.png" width="930"></p>
+
+      <h2>The 'Shopping' page</h2>
+
+      <p>The Shopping page allows the user to add items to the current order or to a saved order when it has been previously selected. Different search methods are available to filter the items. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>General search</li>
+
+        <li>Purchase history (items from previous orders only)</li>
+
+        <li>Manual entry (UPC code)</li>
+
+        <li>Page size (display 16 items, 50 items or 200 items per page)</li>
+
+        <li>The "Refine your Search" section filters</li>
+
+        <li style="list-style: none">
+          the search by: 
+
+          <ul>
+            <li>Departments</li>
+
+            <li>Categories</li>
+
+            <li>Promotions (Weekly flyer, Long-term and Manager)</li>
+
+            <li>Preferences (Organic, Peanut/Nut free, etc.)</li>
+          </ul>
+        </li>
+
+        <li>Featured items (selected in store)</li>
+      </ul>
+
+      <p><img alt="" height="620" src="eStore_application_files/07-Shopping_page.png" width="930"></p>
+
+      <h2>The 'Coupons' page</h2>
+
+      <p>The coupons page gives access to all regular and targeted coupons available to the connected user. Coupons must be clipped before being used in an order. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>All available offers</li>
+
+        <li>My offers ready to redeem</li>
+
+        <li>Old and used offers</li>
+
+        <li>Page size (display 16 items, 50 items or 200 items per page)</li>
+
+        <li>&nbsp;(Refresh) <img alt="" class="Text" height="19" src="eStore_application_files/Refresh_icon.png" width="19"></li>
+
+        <li>
+          The "Refine your Search" section filters the search by:<br>
+           
+
+          <ul>
+            <li>Promotions (Weekly flyer, Long-term, etc.)</li>
+
+            <li>Departments</li>
+
+            <li>Categories</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p><img alt="" height="620" src="eStore_application_files/08-Coupon_page.png" width="930">&nbsp;</p>
+
+      <p class="alert alert-warning"><strong>NOTE: <em></em></strong>Electronic coupons are not displayed in the application, they are applied in the order when the criteria are reached.</p>
+
+      <h2>The 'Recipes' page</h2>
+
+      <p>The Recipes page displays featured recipes and when the user selects a recipe, the detailed view opens. Search by Category displays all the recipes and allow the user to filter by type of recipes or by serving. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>
+          Search by Category
+
+          <ul>
+            <li>
+              Recipes search
+
+              <ul>
+                <li>Search recipes (description)</li>
+
+                <li>Page size (display 6, 25 ou 100 items)</li>
+
+                <li>Clear All Filters (to clear the previous selection)</li>
+
+                <li>Type of dishes</li>
+
+                <li>Servings</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>Featured recipes</li>
+
+        <li>Select recipe (view details)</li>
+
+        <li style="list-style: none">
+          <ul>
+            <li>Ingredients</li>
+
+            <li style="list-style: none">
+              <ul>
+                <li>Add to list</li>
+
+                <li>Add to cart</li>
+              </ul>
+            </li>
+
+            <li>Nutrition</li>
+
+            <li>Directions</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p class="Note"><strong>NOTE:</strong> To create and display recipes as Featured recipes, contact the reseller.</p>
+
+      <p><img alt="" height="620" src="eStore_application_files/09-Recipes_page.png" width="930">&nbsp;</p>
+
+      <p>&nbsp;</p>
+
+      <p><img alt="" height="465" src="eStore_application_files/10-Recipe_details1.png" width="930"><br>
+      </p>
+
+      <h2>The 'Lists' page</h2>
+
+      <p>The Lists page allows the user to add, manage and remove their shopping lists. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>Create a new list</li>
+
+        <li>Item search (in all the lists)</li>
+
+        <li>Sort order (Last modified, Last created, Biggest size and Name)</li>
+
+        <li>Search (of the search or sort defined)</li>
+
+        <li>Rename (the list)</li>
+
+        <li>View items (into the list)</li>
+
+        <li>Duplicate</li>
+
+        <li>X (delete the list)</li>
+      </ul>
+
+      <p><img alt="" height="383" src="eStore_application_files/11-Lists_page.png" width="931"></p>
+
+      <h2>The 'Flyer' page</h2>
+
+      <p>The Flyer page displays the store flyers for the current period, the user can view the pages using the arrows and select an item to view its details. Several flyers can be displayed. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>Select Flyer</li>
+
+        <li>Arrows (to view the pages)</li>
+
+        <li>Click on an item to view its details</li>
+      </ul>
+
+      <p>To displayed the store flyers, contact the reseller.</p>
+
+      <p><img alt="" height="888" src="eStore_application_files/12-Flyer_page.png" width="931"><br>
+      </p>
+
+      <h2>The 'Clubs' page</h2>
+
+      <p>The Clubs page allows you to view the balance of each point program for which the user participates as well as the items available for free with their number of points. Here are the features of this page based on the demo of LOC Software:</p>
+
+      <ul>
+        <li>Points program Name &amp; Balance</li>
+
+        <li>Search (points program)</li>
+
+        <li>Page size (display 16 items, 50 items or 200 items per page)</li>
+
+        <li>&nbsp;(Refresh) <img alt="" class="Text" height="19" src="eStore_application_files/Refresh_icon.png" width="19"></li>
+
+        <li>Points program's promotional items &amp; total points to redeem them</li>
+
+        <li>Points missing to obtain an item for free</li>
+
+        <li>Add to cart</li>
+      </ul>
+
+      <p>There is a function to send an email to notify the store staff that an online order is received, at the store level, and requires preparation.</p>
+
+      <p>To enable this function, an email address must be entered in the operators table (it can be an invidual or a group email address).</p>
+
+      <p><img alt="" height="933" src="eStore_application_files/13-Clubs_page.png" width="931">&nbsp;</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a> 
+<script type="text/javascript" src="/assets/jquery-3.5.1.min.js">
+</script>
+<script type="text/javascript" src="/assets/bootstrap.min.js">
+</script>
+<script type="text/javascript" src="/assets/tocbot412/tocbot.min.js">
+</script>
+<script type="text/javascript">
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.article-contents',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h2',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+    
+</script>
+<script type="text/javascript" src="/assets/code_prism/prism.js">
+</script>
+    <!-- #EndTemplate -->
+  </body>
+</html>
+

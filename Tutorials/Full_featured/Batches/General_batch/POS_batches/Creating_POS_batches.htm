@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SMS Help Document" />
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Create POS Batches</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿ <!-- #BeginTemplate "../../../../html_template.dwt" --> <!-- Title/Keywords edit on new documents --> <!-- #BeginEditable "doctitle" --> <!-- #EndEditable --> <a id="top" name="top"></a> <!-- Docs page layout --> <br />
+     
+
+    <h1><!-- #BeginEditable "Title" -->Create POS Batches <!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches &gt; POS information <!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" --><!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Batches are used for managing changes on multiple items. They may be <strong>main item</strong> batches, <strong>POS</strong> batches, <strong>price-related</strong> batches (future price, sale, TPR, instore, redeem, general price) or <strong>cost-related</strong> batches (future cost, allowance, rebate, discount, cost break, bill back, general cost).</p>
+
+      <p>The eSuite software also allows creating <strong>open</strong> batches that mix batch types and <strong>delete</strong> batches for removing groups of items.</p>
+
+      <p>This document focuses on how to create POS batches and how to populate them with items through the <strong>POS information</strong> entry in the <strong>Batches</strong> wizard.</p>
+
+      <p><img class="Text" src="Creating_POS_batches_files/POS_information_entry.png" /></p>
+
+      <h2>Creating POS batches from the POS information entry</h2>
+
+      <p>Batches in eSuite are created through the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a>, which contains the batch type, its unique number and the general batch information.</p>
+
+      <p>To create a POS batch:</p>
+
+      <p>In the launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <b>Batches</b>: the <b>Start</b> window opens in the <b>Batches</b> work area.</li>
+
+        <li>Click on <b>POS information</b> to open the <b>POS info batch</b> wizard.<br />
+         <img style="margin-top: 10px; margin-bottom: 10px;" src="Creating_POS_batches_files/wizard_empty.png" /></li>
+
+        <li>CClick on <b>Add batch</b> <img class="Text" src="Creating_POS_batches_files/add_batch_icon.png" /> to open the list of item-related batch types.<br />
+         <img style="margin-top: 10px; margin-bottom: 10px;" src="Creating_POS_batches_files/create_menu.png" /></li>
+
+        <li>Select <strong>POS info</strong>: the <strong>Batch header table</strong> opens on the desktop.<br />
+         The following values are displayed: Batch ID, target, source, start date and time, end date and time, batch type and action.<br />
+         <img style="margin-top: 10px; margin-bottom: 10px;" src="Creating_POS_batches_files/batch_header.png" /></li>
+
+        <li>Fill in all necessary fields.</li>
+
+        <li>Click <b>Save</b> in the toolbar to confirm the creation of the new batch.<br />
+         The <b>Batch header</b> table closes.<br />
+         The <b>POS batch</b> wizard displays the new batch number, description and type.<br />
+         <img style="margin-top: 10px;" src="Creating_POS_batches_files/wizard_values.png" /></li>
+      </ol>
+
+      <p>The <strong>Execute</strong> button provides access to the list of items and all the tools for adding items to the new batch. See below for details.</p>
+
+      <p style="text-align: right;"><a href="#Top">Back to top</a></p>
+
+      <h2>Adding items to the batch</h2>
+
+      <p>In eSuite, batches may be populated with <a href="#Adding_a_group">multiple items at once</a> or by <a href="#Adding_one_by_one">adding one item at a time</a>. Both aproaches are described below.</p>
+
+      <h2><a id="Adding_a_group" name="Adding_a_group">Adding a group</a> of items to the POS batch</h2>
+
+      <p>Batches in eSuite may be populated with multiple items at once. This is a fast and efficient method when the objective is to change basic item information, such as the future description.</p>
+
+      <p>Follow these steps:</p>
+
+      <ol>
+        <li>Open the <strong>POS info batch</strong> wizard.<br />
+        </li>
+
+        <li>Click in the <strong>Batch</strong> field: the selection window opens on the desktop, displaying the list of POS batches.<br />
+         <img style="margin-top: 10px; margin-bottom: 10px;" src="Creating_POS_batches_files/batch_selection_window.png" /></li>
+
+        <li>Select a batch and click <b>OK</b> to close the selection window.<br />
+         The wizard displays the number, description and type of the selected batch.</li>
+
+        <li>Add any other necessary search criteria.</li>
+
+        <li>Click <strong>Execute</strong> to display the list of items.</li>
+
+        <li>In the <strong>POS description</strong> column, make the necessary changes for the items that will be part of the selected batch.<br />
+         <img style="margin-top: 10px; margin-bottom: 10px;" src="Creating_POS_batches_files/add_batch_items.png" /></li>
+
+        <li>Click <strong>Save</strong> in the toolbar.</li>
+
+        <li>To view the items that are part of the batch, go back to the wizard and check <strong>Show existing items</strong>:<br />
+         <img style="margin-top: 10px;" src="Creating_POS_batches_files/wizard_items.png" /></li>
+
+        <li>Click <strong>Execute</strong> to list the items that are part of the batch.<br />
+         <img style="margin-top: 10px;" src="Creating_POS_batches_files/add_existing_items.png" /></li>
+      </ol>
+
+      <h2><a id="Adding_one_by_one" name="Adding_one_by_one">Adding items one by one</a></h2>
+
+      <p>Batches in eSuite may be populated by adding items one by one. This approach may take longer than adding multiple items at once, but it helps changing other item information than the basic one.</p>
+
+      <p>Follow these steps:</p>
+
+      <ol>
+        <li>Open the <strong>POS info batch</strong> wizard.</li>
+
+        <li>Click in the <strong>Batch</strong> field: the selection window opens on the desktop, displaying the list of POS batches.</li>
+
+        <li>Select the POS batch to add items and click <strong>OK</strong> to close the selection.<br />
+         The wizard displays the number, description and type of the selected batch.</li>
+
+        <li>Add any other necessary criteria.</li>
+
+        <li>Click <strong>Execute</strong> to display the list of items.</li>
+
+        <li>Select the item that will be added to the batch.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu, then <strong>Item batch</strong> to display the menu:<br />
+         <img style="margin-top: 10px; margin-bottom: 10px;" src="Creating_POS_batches_files/edit_menu.png" /></li>
+
+        <li>Select <strong>POS</strong>: the <strong>Future POS information</strong> table opens in a new window.<br />
+         <img style="margin-top: 10px; margin-bottom: 10px;" src="Creating_POS_batches_files/future_POS_table.png" /></li>
+
+        <li>Click on <strong>Pin</strong> in the toolbar: the future table will open on the desktop, next to the list of items.</li>
+
+        <li>Make the necessary changes and click <strong>Save</strong>.<br />
+         The item containing the new information is added to the batch.</li>
+
+        <li>
+          Select another item in the list. This will: 
+
+          <ul style="">
+            <li>Add the item to the current batch.<br />
+            </li>
+
+            <li>Refresh the future table with the information of the selected item.</li>
+          </ul>
+        </li>
+
+        <li>Make any necessary changes and click <strong>Save</strong>.</li>
+      </ol>
+
+      <p>Repeat these steps for each item that will be part of the batch.</p>
+
+      <p style="text-align: right;"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container --><a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

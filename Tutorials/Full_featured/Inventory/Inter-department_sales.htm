@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Interdepartmental Sales</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+        <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Interdepartmental Sales <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Inventory <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p class="auto-style1">To be revised once this feature is available in eSuite.</p>
+
+      <p>The <em>Deli</em> and <em>Bakery</em> departments often use items from the other store departments to produce <a href="../Special_items/Recipe_table/Recipe_table.htm">recipes</a>. Regarding the inventory, it is important to transfer the responsibility of the consumed items from their original departments to the Deli and Bakery departments.</p>
+
+      <p>If this is not done, the departments from which the items come will be short in their inventory and the Deli and Bakery departments will generate revenues without any cost of goods. The <strong>inter-department sales feature</strong> has been created and implemented to sell items to a particular department from any POS or backoffice terminal.</p>
+
+      <h2>Each department as a customer</h2>
+
+      <p>Each department to which it is possible to sell items must have a customer defined in the system. The customer number used for these departments should not be too long, usually a 3-digit number. For the system to understand that the sales performed for that customer is an inter-department sale, a link to the <strong>Inter-department sales</strong> function (<em>547</em>) should be defined in the customer's account. This is done by entering <em>547</em> in the <strong>Adding function</strong> field located under the <strong>Miscellaneous</strong> tab of the <strong>Customer</strong> table.</p>
+
+      <p><img class="Text" height="454" src="Inter-department_sales_files/customer_table.png" width="567">&nbsp;</p>
+
+      <p>Since the inter-department sales are made at the POS using customers, a specific shopper level has to be assigned to them, defining the price at which the items are sold (cost, cost plus, retail with and without discounts, etc.).</p>
+
+      <p><img class="Text" height="221" src="Inter-department_sales_files/shopper_level_table.png" width="378"></p>
+
+      <h2>Different item codes (UPCs) for the same item</h2>
+
+      <p>To move the inventory from one department to another, the item code (UPC) of the product needs to change so it could be assigned to a different department. To be able to make inter-department sales, a code used to transpose the inventory when the original code is sold needs to be set up. This code has to be defined in the <strong>Inter-department code</strong> field of the <strong>Main item</strong> table, for each item that can be sold to another department. It must contain the letter <em>C</em> at the place where the customer number of the department should go.</p>
+
+      <p>In the example below, the item code for bananas is <em>0000000004011</em>. The code to set in the <strong>Inter-department code</strong> field for this item may be <em>CCC0000004011</em>.</p>
+
+      <p><img class="Text" height="541" src="Inter-department_sales_files/main_item_table.png" width="416">&nbsp;</p>
+
+      <p>When bananas are sold to another department, the letter <em>C</em> set in the code is replaced by the digits of the customer number of the department to which the bananas are sold. As an example, if the bananas are sold to the Deli department for which the customer number is <em>501</em>, the item code for these bananas becomes <em>5010000004011</em>. Selling the bananas to the Bakery department, for which the customer number would be <em>502</em>, will give <em>5020000004011</em> as item code for these bananas.</p>
+
+      <p>Since there are new item codes for this kind of items, all these item codes should exist in the database. Following the same example, the item code <em>5010000004011</em> should be created in the item database and linked to the Deli department; the item code <em>5020000004011</em> should also be created and linked to the Bakery department, and so on. Finally, since these new item codes will be used only to produce prepared foods by these departments, they should be flagged as <em>Not for sale</em>.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" height="368" src="Inter-department_sales_files/item_bananas_main.png" width="416">&nbsp;</td>
+
+          <td><img class="Text" height="368" src="Inter-department_sales_files/item_bananas_deli_main.png" width="416">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><img class="Text" height="431" src="Inter-department_sales_files/item_bananas_POS.png" width="416">&nbsp;</td>
+
+          <td><br>
+           <img class="Text" height="431" src="Inter-department_sales_files/item_bananas_deli_POS.png" width="416">&nbsp;</td>
+        </tr>
+      </table>
+
+      <p>When they produce recipes that contain bananas as ingredients, the departments will use the item code <em>CCC0000004011</em> in the <a href="../Special_items/Recipe_table/Recipe_table.htm"><strong>Recipe</strong> table</a> (<em>5010000004011</em> for a Deli department recipe, <em>5020000004011</em> for a Bakery department recipe, etc.).</p>
+
+      <h4>Inter-department code missing</h4>
+
+      <p>By default, the system does not verify if the value in the <strong>Inter-department code</strong> field is set on an item when making an inter-department sale on that item. If it is not, the inventory is adjusted only on the department that sells the item, and not on the one that is buying it.</p>
+
+      <p>It is possible to configure the system so that it verifies if the value is set in the <strong>Inter-department code</strong> field when the operator is performing an inter-department sale. See the reseller to configure this feature (System.ini/Miscellaneous).</p>
+
+      <p>Once this configuration is set up, the operator gets the "Inter-dept code missing" error message at the POS.</p>
+
+      <p><img class="Text" height="88" src="Inter-department_sales_files/inter_dept_code_mssing_err_msg.png" width="208"></p>
+
+      <h2>Sell items to another department</h2>
+
+      <p>From the POS, the backoffice or the PDA, the selling transaction should be made to the proper department 'customer' using the item code of the 'main' item.</p>
+
+      <p>According to the example of the bananas sold to the Bakery department, the item code <em>0000000004011</em> has to be sold to customer <em>502</em>. The system will move the quantity sold from the original department (Produce, UPC <em>0000000004011</em>) to the department set in the <strong>Inter-department code</strong> field (Bakery, UPC <em>5020000004011</em>).</p>
+
+      <p class="Note"><strong>NOTE:</strong> For the inventory to be adjusted in both departments, it must first be <a class="auto-style1" href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Utilities/Inventory/Init_inventory.htm">initialized</a> <span class="auto-style1"><strong><span class="auto-style3">LINK to add</span></strong></span> on all banana items. Otherwise, the inventory will stay at the <span class="auto-style2">NO INV</span> status. This means a cost record is needed for all banana items.</p>
+
+      <h3>When the unit has to change</h3>
+
+      <p>When a department sells items to another department, the second department may need to change the unit used for these items. It could be the case when the Grocery department sells sugar to the Bakery department. The Grocery department is selling a <em>500 g</em> bag of sugar. Since the Bakery department will use the sugar in his recipes in small quantities, the <em>500 g</em> bag of sugar will be used in many recipes. When the inventory is adjusted for the sugar item on these departments, the system will remove a quantity of <em>1</em> [bag] from the Grocery department and add a quantity of <em>500</em> [g] in the Bakery department (instead of adding a quantity of <em>1</em> [bag]).</p>
+
+      <p>To be able to make that unit change, the <a href="../Main%20Item_Table.htm#Volume/weight"><strong>Volume/weight</strong> field</a> of the <a href="../Main%20Item_Table.htm"><strong>Main item</strong> table</a> is used in combination with the <a href="../POS_Table.htm#Scalable"><strong>Scalable</strong> field</a> of the <a href="../POS_Table.htm"><strong>POS</strong> table</a>.</p>
+
+      <p>So according to the example of the sugar sold to the Bakery department, here is the maintenance setup needed. For the sugar item of the Grocery department, <em>500</em> has to be set in the <strong>Volume/weight</strong> field. For the sugar item of the Bakery department, the <strong>Scalable</strong> field and the <strong>Not for sale</strong> field have to be <em>checked</em>.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" height="541" src="Inter-department_sales_files/item_sugar_grocery_main.png" width="416">&nbsp;</td>
+
+          <td><img class="Text" height="541" src="Inter-department_sales_files/item_sugar_bakery_main.png" width="416">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><img class="Text" height="431" src="Inter-department_sales_files/item_sugar_grocery_POS.png" width="416">&nbsp;</td>
+
+          <td><img class="Text" height="431" src="Inter-department_sales_files/item_sugar_bakery_POS.png" width="416">&nbsp;</td>
+        </tr>
+      </table>
+
+      <p>With this maintenance setup, a quantity of <em>1</em> will be removed from the inventory of the Grocery department and a quantity of <em>500</em> will be added to the inventory of the Bakery department when a 500 g bag of sugar will be sold to the Bakery department.</p>
+
+      <h3>Inventory history</h3>
+
+      <p>Once an inter-department sale is performed for an item, you can use the <a class="auto-style1" href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Analysis/Inventory/Inv_history_analysis.htm"><strong>Inventory history</strong> analysis</a> <span class="auto-style1"><strong>LINK to add</strong></span> to see the details of its inventory history (<span class="auto-style1"><strong>Inventory history</strong> option from the <strong>Analysis</strong> pull-down in the <strong>SMS Pro</strong> application</span>).</p>
+
+      <p>Here is an example:</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">Bags of sugar have been purchased. Some of them have been sold to customers and some others have been sold to the Bakery department.</td>
+        </tr>
+
+        <tr>
+          <td><strong class="auto-style1">IMAGE</strong></td>
+
+          <td><span class="auto-style1"><strong>IMAGE</strong></span></td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">Sugar has been purchased from the Grocery department. A certain quantity has been used in a recipe.</td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong class="auto-style1">IMAGE</strong></td>
+
+          <td><strong class="auto-style1">IMAGE</strong></td>
+        </tr>
+      </table>
+
+      <h2>Example</h2>
+
+      <p>This example shows how to sell <span class="auto-style1">either</span> a wine bottle and glasses of wine and track proper inventory of both (1 bottle of wine = 4 glasses of wine).</p>
+
+      <p><strong>Step 1: Create the Wine bottle (750 ml) record with an inter-department code.</strong></p>
+
+      <p>UPC for the wine bottle in this example is <em>0000000000850</em>. The associated inter-department code is <em>CCC0000000850</em>.</p>
+
+      <p><img class="Text" height="541" src="Inter-department_sales_files/wine_bottle_InterDptCode_main.png" width="416">&nbsp;</p>
+
+      <p><strong>Step 2: Create the inter-department wine bottle item with split code</strong></p>
+
+      <p>The inter-department item and split code are used to correctly track the inventory of the main wine bottle and wine glasses item.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" height="541" src="Inter-department_sales_files/wine_bottle_split_code_main.png" width="416">&nbsp;</td>
+
+          <td><img class="Text" height="430" src="Inter-department_sales_files/wine_bottle_split_code_price.png" width="643">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><img class="Text" height="431" src="Inter-department_sales_files/wine_bottle_split_code_POS.png" width="416">&nbsp;</td>
+
+          <td><img class="Text" height="430" src="Inter-department_sales_files/wine_glasses_split_code.png" width="643">&nbsp;</td>
+        </tr>
+      </table>
+
+      <p align="center">The inter-department wine bottle item is marked <strong>Not for sale</strong>. The <strong>Split code</strong> field contains the UPC of the wine glasses item (<em>5010000000849</em>) and the <strong>Split quantity</strong> contains <em>4</em>, which corresponds to the number of wine glasses contained in the bottle.</p>
+
+      <p><strong>Step 3: Create the inter-department wine glasses item</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" height="541" src="Inter-department_sales_files/glasses_main.png" width="416">&nbsp;</td>
+
+          <td><img class="Text" height="430" src="Inter-department_sales_files/glasses_price.png" width="643">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><img class="Text" height="431" src="Inter-department_sales_files/glasses_POS.png" width="416">&nbsp;</td>
+
+          <td><img class="Text" height="430" src="Inter-department_sales_files/glasses_cost.png" width="643"></td>
+        </tr>
+      </table>
+
+      <p>Once all inter-department items are created, the inventory must be initialized for each of them. After receiving wine bottles, purchases need to be made in order to process the transfer transactions of the department.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

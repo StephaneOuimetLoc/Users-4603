@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Base Rights - User Level Permissions</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../html_template.dwt" -->
+        <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->Base Rights - User Level Permissions<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->The eSuite software has basic user level restrictions.<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>These basic rights can be modified to increase or decrease the current access levels provided by the existing base rights. The <strong>Base Rights</strong> function gives the ability to create or modify access for user levels. Base rights <strong></strong>are local to each module of eSuite.</p>
+
+      <p>The <strong>Base Rights</strong> function has been created with 4 main fields that will allow customizing the access levels.</p>
+
+      <ol>
+        <li><strong><a name="Win">Win</a></strong> is the window that will be impacted by the change.<br>
+        It is identified by its Sencha class xtype. For example, the price window is called "item.itm.edit.price.master".</li>
+
+        <li>
+          <strong><a name="Query">Query</a></strong> is used to search for a component within the window selection above.<br>
+          We call a component any single visual element on a form window. Here are the supported values:<br>
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th style="width: 7px"><strong>Value</strong></th>
+
+                <th style="width: 637px"><strong>Description</strong></th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td style="width: 7px">self</td>
+
+              <td style="width: 637px">Means the window component itself. The whole window can be disabled so the user cannot open it. <strong><br>
+              Note</strong>: When the <em>self</em> value is entered, the only value that can be used in the <strong>Action</strong> field is <em>disable</em>.</td>
+            </tr>
+
+            <tr>
+              <td style="width: 7px; height: 34px;">[empty]</td>
+
+              <td style="width: 637px; height: 34px;"><b id="docs-internal-guid-681430e9-7fff-781d-c00c-d43d3d2bc240" style="font-weight:normal;">Empty means all the components within the window.<br>
+              All components may be set inside a form by making them all read-only.</b></td>
+            </tr>
+
+            <tr>
+              <td style="width: 7px">#itemId</td>
+
+              <td style="width: 637px">The most common query is based on the <em>itemId</em> value. There is an itemId on all components of the application.<br>
+              It may be used to control access to each component individually.</td>
+            </tr>
+
+            <tr>
+              <td style="width: 7px">xtype</td>
+
+              <td style="width: 637px">Changes may be applied to all the components of a certain class xtype.<br>
+              For example, if set to <em>button</em>, it will affect all the buttons in the window.</td>
+            </tr>
+
+            <tr>
+              <td style="width: 7px">#addBtn</td>
+
+              <td style="width: 637px">It will affect the button in the window.</td>
+            </tr>
+
+            <tr>
+              <td style="width: 7px">#deleteBtn</td>
+
+              <td style="width: 637px">It will affect the button in the window.</td>
+            </tr>
+
+            <tr>
+              <td style="width: 7px">#saveBtn</td>
+
+              <td style="width: 637px">It will affect the button in the window.</td>
+            </tr>
+          </table>
+        </li>
+
+        <li><strong>Level</strong> is used to provide the access to the components and action functions.<br>
+        If&nbsp; set it to <em>6</em>, it means the "owner" and all levels above it (programmer) have access to it.</li>
+
+        <li>
+          <strong>Action</strong> is used to select the kind of modifier to apply to the component(s).<br>
+          Here are the actions supported:<br>
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th style="width: 67px"><strong>Value</strong></th>
+
+                <th><strong>Description</strong></th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td style="width: 18px">read</td>
+
+              <td style="width: 962px">This will set the component to read-only</td>
+            </tr>
+
+            <tr>
+              <td style="width: 18px"><a name="hide0">hide</a></td>
+
+              <td style="width: 962px">This will hide the component completely</td>
+            </tr>
+
+            <tr>
+              <td style="width: 18px"><a name="disable0">disable</a></td>
+
+              <td style="width: 962px">This will disable the component. The component will be grayed out.</td>
+            </tr>
+          </table>
+        </li>
+      </ol>
+
+      <h2>Layout</h2>
+
+      <p><img class="img img-fluid img-thumbnail" height="342" src="Base_Right_files/Baserights_list.png" width="726"></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>ICON</th>
+
+            <th style="width: 95px; height: 21px">FIELD</th>
+
+            <th style="width: 682px; height: 21px">DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 16px"><img class="img img-fluid img-thumbnail" src="Base_Right_files/Plus_sign.png" width="32"></td>
+
+          <td style="width: 95px"><strong>Add</strong> </td>
+
+          <td style="width: 682px">Adds a new Base Right entry line in the list below</td>
+        </tr>
+
+        <tr>
+          <td style="width: 16px"><img class="img img-fluid img-thumbnail" src="Base_Right_files/Add_pulldown.png" width="67"></td>
+
+          <td style="width: 95px"><strong>Add pull-down</strong></td>
+
+          <td style="width: 682px">Adds a new Base Right entry line in the list below and provides the following options:<br>
+          1. <strong>Add record above</strong>, <em>or</em><br>
+          2. <strong>Add record below</strong>, depending on where your cursor is in the list.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px; width: 16px"><img class="img img-fluid img-thumbnail" height="30" src="Base_Right_files/Save_checkmark.png" width="27"></td>
+
+          <td style="height: 21px; width: 95px"><strong>Save</strong></td>
+
+          <td style="width: 682px; height: 21px">Saves the entered information created for the Base Right.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 16px"><img class="img img-fluid img-thumbnail" height="29" src="Base_Right_files/Undo_icon.png" width="29"></td>
+
+          <td style="width: 95px"><strong>Undo</strong></td>
+
+          <td style="width: 682px">Allows to remove the last entered base right details if it has not yet been saved.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 16px"><img class="img img-fluid img-thumbnail" height="30" src="Base_Right_files/Delete_icon.png" width="28"></td>
+
+          <td style="width: 95px"><strong>Delete</strong></td>
+
+          <td style="width: 682px">Allows to delete the selected Base Rights from the grid.<br>
+          <strong>Please note:</strong> You must click the <strong>Save</strong> checkmark after the use of the delete button.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 16px; height: 37px"><img class="img img-fluid img-thumbnail" height="29" src="Base_Right_files/Grab_icon.png" width="28"></td>
+
+          <td style="width: 95px; height: 37px"><strong>Prompt grab</strong> </td>
+
+          <td style="width: 682px; height: 37px">Will prompt the <strong>Hand</strong> icon to be placed on the top menu on the right of the tab(s).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 16px"><img class="img img-fluid img-thumbnail" height="31" src="Base_Right_files/Hand_icon.png" width="32"></td>
+
+          <td><strong>Grab view and field</strong></td>
+
+          <td>Clicking on the <strong>Hand</strong> icon while the focus is on a window, grid or button will capture the correct <strong><a href="#Win">Win</a></strong> and <a href="#Query"><strong>Query</strong></a> details to be automatically added into the Base Rights window list.<br>
+          This will leave the <strong>Level</strong>, <strong>Action</strong> and <strong>Comment</strong> fields to be completed.</td>
+        </tr>
+      </table>
+
+      <h2>Creating base rights</h2>
+
+      <p>Start creating <strong>Base Rights</strong> for the <strong>System</strong> module and then in the other modules. From the most restrictive to the least restrictive. When viewing the Base Rights for the system module almost every element is restricted to level 7 except for a few things are level 5.</p>
+
+      <p class="alert alert-info"><strong>Note:</strong> Log in with a p<strong>rogrammer level</strong> access, to have the permission to create base rights for all levels of eSuite.</p>
+
+      <p>In the example below, all levels other than <strong>Programmer</strong> (level <em>7</em>) will be blocked in the <strong>Configurator</strong> component in the <strong>Edit</strong> section of the <strong>System</strong> module.</p>
+
+      <ol>
+        <li>To access to the <strong>Base Rights</strong>, click on the <strong>Session</strong> <img class="img img-fluid img-thumbnail" height="22" src="Base_Right_files/Profile_iocn.png" width="21"> icon in the right corner of the top menu bar: a drop list option will display.<br>
+        <br>
+         <img class="img img-fluid img-thumbnail" height="196" src="Base_Right_files/Session_button.png" width="198"></li>
+
+        <li>Once clicked, this will bring up the <strong>Base Rights start</strong> window:<br>
+        <br>
+         <img class="img img-fluid img-thumbnail" height="268" src="Base_Right_files/Baserights_start.png" width="341"></li>
+
+        <li>Click on the <strong>Base Rights</strong> text inside the Start window to open the <strong>Base Rights list</strong> window where create, delete or undo will be available.<br>
+        <br>
+         <img class="img img-fluid img-thumbnail" height="342" src="Base_Right_files/Baserights_list.png" width="726"></li>
+
+        <li>
+          To start adding the <strong>Base Rights</strong>, click on the <strong>Grab</strong> <img class="img img-fluid img-thumbnail" height="29" src="Base_Right_files/Grab_icon.png" width="28"> icon. This will automatically prompt the <strong>Grab a view field</strong> <img class="img img-fluid img-thumbnail" height="31" src="Base_Right_files/Hand_icon.png" width="32"> icon on the menu bar.<br>
+          <br>
+           <img class="img img-fluid img-thumbnail" height="62" src="Base_Right_files/Grab_view_on_menu_bar.png" width="1180"><br>
+          <br>
+
+          <div>
+            <strong><em>Note:</em></strong> At this point, open any section to create access levels for,&nbsp; any eSuite module .<br>
+            In this example, the window that will have restricted access is the <strong>Configurator</strong> window.Use the tab key until the section is highlighted then use the Grab a View field to return to the Base Rights section.
+          </div>
+          <img class="img img-fluid img-thumbnail" height="494" src="Base_Right_files/Configurator_focus.png" width="1036">
+        </li>
+
+        <li>Click on the <strong>Grab view and field</strong> <img class="img img-fluid img-thumbnail" height="31" src="Base_Right_files/Hand_icon.png" width="32"> icon from the top menu bar. This will bring you back to the <strong>Base Rights list</strong> window, with the <strong>Win</strong> field populated with the details of the selected window.<br>
+        <br>
+         <img class="img img-fluid img-thumbnail" height="204" src="Base_Right_files/Win_config_start.png" width="850"><br>
+        </li>
+
+        <li>In order to block access to the <strong>Configurator</strong> window, enter the text word <em>self</em> into the <strong>Query</strong> field and press enter. This will set the field to the text entered with a red outline that has not yet been saved.</li>
+
+        <li>Press <strong>Tab</strong> or click into the <strong>Level</strong> field to select the level access name.</li>
+
+        <li>Enter the level number (<em>1</em>-<em>9</em>) or double click in the <strong>Level</strong> field to bring up the pull-down menu and select the name of the level from the list provided.<br>
+        <br>
+         <img class="img img-fluid img-thumbnail" height="455" src="Base_Right_files/Baserights_level_pulldown.png" width="781"><br>
+        </li>
+
+        <li>Press <strong>Enter</strong> or <strong>Tab</strong> to move the cursor over.</li>
+
+        <li>Type in text or double click in the <strong>Action</strong> field. The double click will bring up a pull-down menu with the 3 actions allowed (<em>read</em>, <em>disable</em> and <em>hide</em>). In this example the operator levels 6 and below will have the element win.cfg.start disabled.</li>
+
+        <li>Press the <strong>Enter</strong> key to put the cursor in the <strong>Comment</strong> field. As it is not first evident which each element is, confusion may be avoided by entering a comment to clarify what this setting does.</li>
+
+        <li>Enter text to describe the base right that was created.<br>
+        <strong>Note:</strong> The <strong>Comment</strong> field is not required in order to save the base right(s) created.</li>
+
+        <li>Click on <strong>Save</strong> <img class="img img-fluid img-thumbnail" height="30" src="Base_Right_files/Save_checkmark.png" width="27"> to save the new base right(s).<br>
+        That will set all details entered for the created base right(s). When they are saved there are no red outlines for the fields.<br>
+        <br>
+         <img class="img img-fluid img-thumbnail" height="455" src="Base_Right_files/Baserights_saved.png" width="781"><br>
+        </li>
+      </ol>
+
+      <h2>Setting restrictions</h2>
+
+      <p>To set restrictions on <strong>listed options</strong> or <strong>buttons</strong> in wizards and windows (Add, Save, Edit, pull down menus) either from the grids or <strong>Context Tools</strong> action buttons, use the cursor, the tab key and the left and right arrow keys to have the focus highlighted on the desired button/grid results. See examples of images with the focus highlighted.</p>
+
+      <div class="row">
+        <div class="col">
+          <p><strong>Focus is on the New button (blue highlight text)</strong></p>
+
+          <p><img class="img img-fluid img-thumbnail" height="530" src="Base_Right_files/Item_new_button.png" width="362"></p>
+        </div>
+
+        <div class="col">
+          <p><strong>Focus is on the Edit button (blue highlight rectangle)</strong></p>
+
+          <p><img class="img img-fluid img-thumbnail" height="558" src="Base_Right_files/Item_edit_button.png" width="1166"></p>
+        </div>
+      </div>
+
+      <p>When these examples are used, the Base Rights <strong>Win</strong> and <strong>Query</strong> fields will automatically be populated as seen below.</p>
+
+      <p>The examples below are both set to Manager level (<em>5</em>). The New Item button is now set to <a href="#hide"><strong>hide</strong></a> and the Item grid list Edit button is now set to <a href="#disable"><strong>disable</strong></a>.</p>
+
+      <p><img class="img img-fluid img-thumbnail" height="149" src="Base_Right_files/Item_newbutton_Item_edit_button_baserights.png" width="850"></p>
+
+      <p>Should any users with lower access permissions try to access the restricted section, they will automatically be prompted with the following error message: "Please login with the right access level".</p>
+
+      <p><img class="img img-fluid img-thumbnail" height="220" src="Base_Right_files/Restriction_message.png" width="363"></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- #BeginTemplate "../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+    <link type="text/css" href="/assets/code_prism/prism.css" rel="stylesheet"><!-- Title/Keywords edit on new documents -->
+    <!-- #BeginEditable "doctitle" -->
+
+    <!-- #EndEditable -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eCommerce - Items Management</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eCommerce - Items Management <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eCommerce <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+
+    <div class="toc-container shadow">
+      <h2 class="toc-title">Table of Contents</h2>
+    </div>
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>eCommerce - Items Management</h2>
+
+      <h3>The <a name="Featured">Featured</a> products</h3>
+
+      <p>The <strong>Featured products</strong> section is used to promote specific items. On the Host server or Store server depending on the selected scenario, the keyword <b>Featured</b> must be defined for each item in order to display them in eStore/mStore applications.</p>
+
+      <p>To display items in the Featured products section in the eStore and mStore applications, follow these steps:</p>
+
+      <ol>
+        <li>Under the Margin tab of the Price table, enter the keyword <strong>Featured</strong> in the Discount description field.<br>
+         <img alt="" height="533" src="Items_Management_files/eSuiteFeatureItem.PNG" width="728"><br>
+        <br>
+        </li>
+
+        <li>Deploy changes.</li>
+      </ol>
+
+      <p class="Note"><b>NOTE: Featured</b> products will be available on the eStore/mStore applications after the jobs <b>270-Generate local mStore promotion</b> and <b>275-Generate local eStore promotion</b> have been executed on the eCommerce server at the scheduled date and time.</p>
+
+      <h2>Search filters</h2>
+
+      <p>Several search filters are available for customers to refine their search and make it easier to find items in the eStore/mStore applications.</p>
+
+      <h4>Search bar</h4>
+
+      <p>The first section is the Search bar, when entering the search keyword, the query is executed on the following fields: UPC code, Brand description, Expanded description, Long description, and POS description to displayed the items.</p>
+
+      <p><img alt="" height="106" src="Items_Management_files/SearchBar.PNG" width="1251">&nbsp;</p>
+
+      <h4>Other search filtes</h4>
+
+      <p>The second section contains multiple types of search filters. Each selection is used to display the items, several selections allows to refine the search.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>eStore application</th>
+
+            <th>mStore application</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><img alt="" height="99" src="Items_Management_files/eStore_Categories.png" width="173"></td>
+
+          <td><img alt="" height="103" src="Items_Management_files/mStore_Departments.PNG" width="300"><br>
+           </td>
+
+          <td>
+            <p>From the <strong>eStore</strong> application:</p>
+
+            <p>The <strong>Categories</strong> section is separated into 2 levels:</p>
+
+            <ol>
+              <li>The first level displays all departments and filters items found in the selected department.</li>
+
+              <li>The second level displays all categories associated to each items found in the selected department.</li>
+            </ol>
+
+            <p>From the <strong>mStore</strong> application:</p>
+
+            <p>The <strong>Departments</strong> section displays all departments and filters items found in the selected department.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td><img alt="" height="102" src="Items_Management_files/mStore_Categories.PNG" width="300"></td>
+
+          <td>
+            <p>From the <strong>mStore</strong> application:</p>
+
+            <p>The <strong>Categories</strong> section displays all categories associated with each items according to the selected Department.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><img alt="" height="65" src="Items_Management_files/eStore_Product_types.png" width="175">&nbsp;</td>
+
+          <td><img alt="" height="104" src="Items_Management_files/mStore_Classifications.PNG" width="300"></td>
+
+          <td>
+            <p>From the <strong>eStore</strong> application:</p>
+
+            <p>The <strong>Product types</strong> section displays all the Classifications (from the Item Classification table) associated with each items according to the selected <strong>Categories</strong>.</p>
+
+            <p>From the <strong>mStore</strong> application:</p>
+
+            <p>The <strong>Classifications</strong> section displays all the Classifications (from the Item Classification table) associated with each items according to the selected <strong>Departments</strong>.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><img alt="" height="82" src="Items_Management_files/eStore_Brands.png" width="173">&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>
+            <p>From the <strong>eStore</strong> application:</p>
+
+            <p>The <strong>Brands</strong> section displays the brands name, from the Brand field of the Main item table, associated to each items based on the Categories filter selected.</p>
+
+            <p>From the <strong>mStore</strong> application:</p>
+
+            <p>The Brands section is not available.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><br>
+           <img alt="" height="215" src="Items_Management_files/eStore_Filters.png" width="176"><br>
+          &nbsp;</td>
+
+          <td><img alt="" height="241" src="Items_Management_files/mStore_Promotions.PNG" width="217">&nbsp;</td>
+
+          <td>
+            <p>From the <strong>eStore</strong> application:</p>
+
+            <p>The <strong>Filters</strong> section contains more generic filters:</p>
+
+            <ul>
+              <li><strong>Featured items</strong> filters featured items only.</li>
+
+              <li><strong>Purchased before</strong> filters items already purchased (close and processed transactions only).</li>
+
+              <li><strong>Purchase with points</strong> filters items available for purchase with points.</li>
+
+              <li>
+                <strong>All promotions</strong> section filters items based on the active price of the different types of promotions: 
+
+                <ul>
+                  <li><strong>Weekly sale</strong>: filters items with the SALE active price.</li>
+
+                  <li><strong>Long term rebate</strong>: filters items with the TPR active price.</li>
+
+                  <li><strong>Manager special</strong>: filters items with the STORE active price.</li>
+                </ul>
+              </li>
+            </ul>
+
+            <p>From the <strong>mStore</strong> application:</p>
+
+            <p>The Filters section offers the same filters as eStore. The Featured items filter is available from the menu.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><img alt="" height="257" src="Items_Management_files/eStore_Preferences.png" width="176">&nbsp;</td>
+
+          <td><img alt="" height="163" src="Items_Management_files/mStore_Preferences.PNG" width="217">&nbsp;</td>
+
+          <td>
+            <p>From the <strong>eStore</strong> and <strong>mStore</strong> applications:</p>
+
+            <p>The <strong>Preferences</strong> section displays all the preferences and filters items according to the keyword(s) predefined in the Classification field of the Main item table.</p>
+
+            <p>It is possible for customers to set default preferences in their customer account, then when they access the Shopping tab of the eStore/mStore applications,&nbsp;the items are automatically displayed according to these preferences.</p>
+          </td>
+        </tr>
+      </table>
+
+      <h2><a name="Preferences">Preferences</a></h2>
+
+      <p>The <strong>Preferences</strong> section on the eStore/mStore applications is used to filter items according to the predefined keyword(s). On the Host server or Store server depending on the selected scenario, the keyword(s) must be defined in the Classification field of the Main item table. Several preferences can be defined using ';' to separate them.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Keyword</th>
+
+            <th>Preferences</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>VEGE</td>
+
+          <td>Vegeterian</td>
+        </tr>
+
+        <tr>
+          <td>GLUTEN</td>
+
+          <td>Gluten free</td>
+        </tr>
+
+        <tr>
+          <td>NUTFREE</td>
+
+          <td>Nut free</td>
+        </tr>
+
+        <tr>
+          <td>LOWSODIUM</td>
+
+          <td>Reduced/low sodium</td>
+        </tr>
+
+        <tr>
+          <td>LOWCARB</td>
+
+          <td>Reduced/low sugar</td>
+        </tr>
+
+        <tr>
+          <td>DAIRYFREE</td>
+
+          <td>Lactose free</td>
+        </tr>
+
+        <tr>
+          <td>SUGARFREE</td>
+
+          <td>Sugar free</td>
+        </tr>
+      </table>
+
+      <h2>Item modifiers</h2>
+
+      <p>These <strong>item modifiers</strong> are especially for the eCommerce solution. When an item, defined with one of these keywords, is added to the shopping cart, the item details automatically open to allow customers to make a choice in additional fields.</p>
+
+      <p>A keyword must be defined in specific items, in the Type filed of the POS table of the Host server or the Store server depending on the selected scenario. Only one keyword can be defined.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Keyword</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>CAKE</td>
+
+          <td>Used for preparation of personalized cakes. Additional fields are related to flavor, size, color, icing and sprinkles as well as adding a message and an image/picture to be placed on the cake.</td>
+        </tr>
+
+        <tr>
+          <td>FRUIT</td>
+
+          <td>Used for fresh produce. Additional fields are related to specify the ripeness and size of the item.</td>
+        </tr>
+
+        <tr>
+          <td>GIFT</td>
+
+          <td>Used for item to be send as a gift. Additional field is for entering an email address.</td>
+        </tr>
+
+        <tr>
+          <td>MEATBYQTY</td>
+
+          <td>Used for selling meat by quantity. Additional fields are related to the quantity of item, marbling, trimming and quantity per package.</td>
+        </tr>
+
+        <tr>
+          <td>MEATBYWEIGHT</td>
+
+          <td>Used for selling meat by weight. Additional fields are related to the quantity of item, thickness or weight by steaks, marbling, trimming and quantity per package.</td>
+        </tr>
+
+        <tr>
+          <td>MEATDELI</td>
+
+          <td>Used for selling deli item. Additional fields are related to the total weight, thickness and lbs per package.</td>
+        </tr>
+
+        <tr>
+          <td>MEATGROUND</td>
+
+          <td>Used for selling meat grounded item. Additional fields are related to the total weight and lbs per package.</td>
+        </tr>
+
+        <tr>
+          <td>MEATOTHER</td>
+
+          <td>Used for selling other meat item. Additional fields are related to the quantity of item and quantity per package.</td>
+        </tr>
+
+        <tr>
+          <td>MEATROAST</td>
+
+          <td>Used for selling meat roast item. Additional fields are related to the quantity of item, quantity per package and weight of each roast.</td>
+        </tr>
+
+        <tr>
+          <td>NOTE</td>
+
+          <td>By default, all items have this modifier, even if the Type field is empty. It is used to add a basic note to an item.</td>
+        </tr>
+
+        <tr>
+          <td>TRAYPARTY</td>
+
+          <td>Used for selling tray item. Additional fields are related to the serving size and tray suggestion.</td>
+        </tr>
+      </table>
+
+      <h2>Special order</h2>
+
+      <p>The <strong>Special order</strong> is used to notify the customer that the selected item may take longer to arrive. The customer is not charge immediately for this item, the quantity will be entered at the store level at the preparation step, and then the customer will be charged.</p>
+
+      <p>The Special order (SP) must be defined in certain items, in the Status field of the POS table of the Host server or the Store server depending on the selected scenario.</p>
+
+      <p class="Note"><strong>NOTE:</strong> The value defined for the overshoot parameter, in the Profile table, must contain an additional amount related to special orders in order to complete the order at the store level.</p>
+
+      <h2>Extra Preparation Time</h2>
+
+      <p>The <strong>Extra preparation time</strong> is used to notify the customer, when selecting Delivery or Pickup handling method, that the selected item, such as custom cake, needs an extra preparation time.</p>
+
+      <p>&nbsp;The time must be defined in certain items, in the Time included field of the PRICE table of the Host server or the Store server depending on the selected scenario. In the Note section of the shopping cart, the comment 'Your order requires an extra preparation time of x day(s)' (in red) is displayed at the handling method selection to prevent customers from selecting a Delivery/Pickup time prior to the extra preparation time.</p>
+
+      <p class="Note"><strong>NOTE:</strong> The the number of days to copy must be increased in the route_copy script according to the Extra preparation time choices, allowing customers to complete their order.</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a> 
+<script type="text/javascript" src="/assets/jquery-3.5.1.min.js">
+</script>
+<script type="text/javascript" src="/assets/bootstrap.min.js">
+</script>
+<script type="text/javascript" src="/assets/tocbot412/tocbot.min.js">
+</script>
+<script type="text/javascript">
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.article-contents',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h2',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+    
+</script>
+<script type="text/javascript" src="/assets/code_prism/prism.js">
+</script>
+    <!-- #EndTemplate -->
+  </body>
+</html>
+

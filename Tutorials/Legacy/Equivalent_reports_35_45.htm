@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- #BeginTemplate "../../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Equivalent SMSPro Reports</title>
+    <link href="../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Equivalent SMSPro Reports <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite General <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>This document provides a list of equivalent reports between eSuite and SMS Pro V350. It also gives guidelines as to how to achieve similar reporting results between the two platforms. As eSuite and SMS Pro can be run in parallel within the same store, it is important to note the differences in the reporting options between SMSPro and eSuite and how best to take advantage of eSuite's reporting capabilities.</p>
+
+      <ol>
+        <li><a href="#Cost_of_Goods_by_Department">Cost of Goods by Department</a></li>
+
+        <li><a href="#Cost_of_Goods_by_Items">Cost of Goods by Items</a></li>
+
+        <li><a href="#Sub-Department_Cost_of_Goods_Reg_Vs_Promo">Sub-Department Cost of Goods Reg Vs Promo</a></li>
+
+        <li><a href="#Sub-Department_Cost_of_Goods_by_Item_Reg_vs_Promo">Sub-Department Cost of Goods by Item Reg vs Promo</a></li>
+
+        <li><a href="#Item_Cost_of_Goods_by_Sub-Department">Item Cost of Goods by Sub-Department</a></li>
+
+        <li><a href="#Item_Cost_of_Goods_Detailed_by_Sub-Department">Item Cost of Goods Detailed by Sub-Department</a></li>
+
+        <li><a href="#Item_Cost_of_Goods_Detailed_by_Sub-Department_(Batch)">Item Cost of Goods Detailed by Sub-Department (Batch)</a></li>
+
+        <li><a href="#Item_Markdown_by_Sub-Department_Cost_of_Goods_(Batch)">Item Markdown by Sub-Department Cost of Goods (Batch)</a></li>
+
+        <li><a href="#Cateogory_Cost_of_Goods_Reg_Vs_Promo">Category Cost of Goods Reg Vs Promo</a></li>
+
+        <li><a href="#Category_Cost_of_Goods_Items_Reg_Vs_Promo">Category Cost of Goods Items Reg Vs Promo</a></li>
+
+        <li><a href="#Item_Cost_of_Goods_by_Caterogory">Item Cost of Goods by Category</a></li>
+
+        <li><a href="#Item_Cost_of_Goods_Detail_by_Catergory">Item Cost of Goods Detail by Category</a></li>
+
+        <li><a href="#Item_Cost_of_Goods_Detail_by_Category_(Batch)">Item Cost of Goods Detail by Category (Batch)</a></li>
+
+        <li><a href="#Item_Cost_of_Goods_Detailed_by_Vendor">Item Cost of Goods Detailed by Vendor</a></li>
+
+        <li><a href="#Markdown_by_Vendor">Markdown by Vendor</a></li>
+
+        <li><a href="#Item_Markdown_by_Vendor">Item Markdown by Vendor</a></li>
+
+        <li><a href="#Item_Markdown_by_Vendor_(Batch)">Item Markdown by Vendor (Batch)</a></li>
+      </ol>
+
+      <h2><a name="Cost_of_Goods_by_Department">1. Cost of Goods by department</a></h2>
+
+      <p>In SMS Pro, the only report by department is currently the <strong>Cost of Goods by Item</strong>, which allows the user to enter a department range.</p>
+
+      <p style="text-align:center"><img class="Text" height="615" src="Equivalent_reports_35_45_files/COGS_DPT_SMSPro.png" width="557">&nbsp;</p>
+
+      <p>In eSuite, use the <strong>Items - Cost of Goods</strong> window to add criteria and group it by department and generate the equivalent report.</p>
+
+      <ol>
+        <li>Select the <strong>Items</strong> entry in the launcher, then click on <strong>Master</strong>.</li>
+
+        <li>In the <strong>Start</strong> window, select <strong>Cost of goods</strong>.</li>
+
+        <li>Click on <strong>Add criteria</strong> to open the <strong>Select criteria</strong> window.</li>
+
+        <li>In the <strong>Classification ranges</strong> section, select <em>Department number start</em> and <em>Department number stop</em>.</li>
+
+        <li>Click <strong>OK</strong>.</li>
+
+        <li>Enter the department range.</li>
+
+        <li>Click <strong>Execute</strong>.</li>
+      </ol>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" height="582" src="Equivalent_reports_35_45_files/COGS_DPT_eSuite_Criteria.png" width="412">&nbsp;</td>
+
+          <td><img class="Text" height="430" src="Equivalent_reports_35_45_files/COGS_DPT_eSuite_Criteria_Dpt.png" width="465">&nbsp;</td>
+
+          <td><img class="Text" height="582" src="Equivalent_reports_35_45_files/COGS_DPT_eSuite_Criteria_DptNo.png" width="412">&nbsp;</td>
+        </tr>
+      </table>
+
+      <p>The report is grouped by department.<br>
+      </p>
+
+      <p>When the expand button <img class="Text" height="16" src="Equivalent_reports_35_45_files/expand_button.png" width="19"> is active, the report shows the item detail for each department.<br>
+      When the collapse button <img class="Text" height="16" src="Equivalent_reports_35_45_files/collapse_button.png" width="19"> is active, the report shows only the sub-totals.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><strong>Cost of goods by department, detailed by item</strong></td>
+
+          <td style="text-align:center"><strong>Cost of goods by department</strong> </td>
+        </tr>
+
+        <tr>
+          <td><img height="576" src="Equivalent_reports_35_45_files/COGS_DPT_eSuite_Report1.png" width="831"></td>
+
+          <td><img height="577" src="Equivalent_reports_35_45_files/COGS_DPT_eSuite_Report2.png" width="831"></td>
+        </tr>
+      </table>
+
+      <h2><a name="Cost_of_Goods_by_Items">2. Cost of Goods by Items</a></h2>
+
+      <p>SMS Pro - Reports - Others - Items - Cost of Goods Detailed by Items</p>
+
+      <p style="text-align:center"><img class="Text" height="370" src="Equivalent_reports_35_45_files/COGS_ITM_SMSPRO.png" width="560"></p>
+
+      <p>In eSuite, use the default <strong>Items - Cost of goods</strong> window to generate the equivalent report.</p>
+
+      <ol>
+        <li>Select the <strong>Items</strong> entry in the launcher, then click on <strong>Master</strong>.</li>
+
+        <li>In the <strong>Start</strong> window, select <strong>Cost of goods</strong>.</li>
+
+        <li>Uncheck the <strong>Breakdown by sub-department</strong> box.</li>
+
+        <li>Click <strong>Execute</strong>.</li>
+      </ol>
+
+      <table>
+        <tr>
+          <td style="text-align:center; width: 1006px;"><strong>Wizard</strong></td>
+
+          <td style="text-align:center; width: 732px;"><strong>Report - Cost of goods by item</strong></td>
+        </tr>
+
+        <tr>
+          <td style="text-align:center; width: 1006px;"><img height="582" src="Equivalent_reports_35_45_files/COGS_ITM_eSuite_Criteria.png" width="412"></td>
+
+          <td style="text-align:center; width: 732px;"><img height="569" src="Equivalent_reports_35_45_files/COGS_ITM_eSuite_Report.png" width="825"></td>
+        </tr>
+      </table>
+
+      <h2><a name="Sub-Department_Cost_of_Goods_Reg_Vs_Promo">3. Sub-Department Cost of Goods Reg vs Promo</a></h2>
+      SMS Pro - Reports - Sub-Department - Inventory - Sub-Department Cost of Goods (Reg vs Promo) 
+
+      <p style="text-align:center"><img alt="" height="382" src="Equivalent_reports_35_45_files/COGS_ITM_SubDpt_RegvsPromo_SMSPRO.png" width="557" class="Text"></p>
+
+      <h2><a name="Sub-Department_Cost_of_Goods_by_Item_Reg_vs_Promo">4. Sub-Department Cost of Goods by Item Reg vs Promo</a></h2>
+
+      <h2><a name="Item_Cost_of_Goods_by_Sub-Department">5. Item Cost of Goods by Sub-Department</a></h2>
+
+      <h2>6. SMSPro - Reports - Sub-Department - Inventory - Sub-Department Cost of Goods Detailed by Sub_Dept</h2>
+
+      <p>Even though this report refers to a detailed report by default, it is summarized by sub-department. It allows to click for details by item directly in the report.</p>
+
+      <p style="text-align:center"><img alt="" height="310" src="Equivalent_reports_35_45_files/COGS_SubDpt_SMSPRO.png" width="388" class="Text"></p>
+
+      <p>Using the default <strong>Cost of goods</strong> report, the data is grouped by sub-department. When the flag <strong>By Item</strong> is removed, data is grouped by sub-department.</p>
+
+      <h2>a) <a name="Item_Cost_of_Goods_Detailed_by_Sub-Department">Item Cost of Goods Detailed by Sub-Department</a></h2>
+
+      <h2>b) <a name="Item_Cost_of_Goods_Detailed_by_Sub-Department_(Batch)">Item Cost of Goods Detailed by Sub-Department (Batch)</a></h2>
+
+      <p>SMS Pro - Reports - Sub-Department - Inventory - Item Cost of Goods Detailed by Sub-Dept (Batch)</p>
+
+      <p>Selection criteria allow the user to select <strong>Price batch</strong> or <strong>Old price batch</strong>.</p>
+
+      <p style="text-align:center"><img alt="" height="238" src="Equivalent_reports_35_45_files/COGS_SubDpt_Batch_SMSPRO.png" width="568" class="Text"></p>
+
+      <p style="text-align:center"><img alt="" height="265" src="Equivalent_reports_35_45_files/COGS_SubDpt_Batch_eSuite.png" width="735" class="Text"></p>
+
+      <h2>7<a name="Item_Markdown_by_Sub-Department_Cost_of_Goods_(Batch)">. Item Markdown by Sub-Department Cost of Goods (Batch)</a></h2>
+
+      <h2>8<a name="Cateogory_Cost_of_Goods_Reg_Vs_Promo">. Category Cost of Goods Reg Vs Promo</a></h2>
+
+      <h2>9<a name="Category_Cost_of_Goods_Items_Reg_Vs_Promo">. Category Cost of Goods Items Reg Vs Promo</a></h2>
+
+      <h2>10<a name="Item_Cost_of_Goods_by_Caterogory">. Item Cost of Goods by Category</a></h2>
+
+      <h2>11. <a name="Item_Cost_of_Goods_Detail_by_Catergory">Item Cost of Goods Detail by Category</a></h2>
+
+      <h2>12<a name="Item_Cost_of_Goods_Detail_by_Category_(Batch)">. Item Cost of Goods Detail by Category (Batch)</a></h2>
+
+      <h2>13<a name="Item_Cost_of_Goods_Detailed_by_Vendor">. Item Cost of Goods Detailed by Vendor</a></h2>
+
+      <h2><a name="Markdown_by_Vendor">14. Markdown by Vendor</a></h2>
+
+      <h2>15<a name="Item_Markdown_by_Vendor">. Item Markdown by Vendor</a></h2>
+
+      <h2><a name="Item_Markdown_by_Vendor_(Batch)">16. Item Markdown by Vendor (Batch)</a></h2>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

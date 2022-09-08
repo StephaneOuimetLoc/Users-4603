@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Generic Accounting Export</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template==NO-TOC.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Manage - Generic Accounting Export <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->Manage Export Accointing&nbsp;<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!--
+            -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Accounting</b> module in LOC SMS eSuite Manage is used to export the store's data to an accounting software. Sales and accounts payable can be exported</p>
+
+      <p>The LOC SMS eSuite Manage offers a <strong>Generic Accounting Export</strong> for G/L and A/P. The data exported can then be imported in an accounting package using its import option.</p>
+
+      <div class="alert alert-danger">
+        <b>WARNING:</b> 
+
+        <ul>
+          <li>To be able to program your <b>General Ledger</b> accounts in the LOC SMS eSuite Manage an Export terminal 961 must be added in the Terminal table (Export to = Generic Export GL).</li>
+
+          <li>To be able to program your <b>Account Payable</b> accounts in the LOC SMS eSuite Manage, the Export terminal 965 must be added in the <em>T</em>erminal table (Export to = Generic Export AP).</li>
+        </ul>
+      </div>
+
+      <h2>General Ledger</h2>
+
+      <p>The General Ledger data is exported by a script named <em>Export_Accounting_GL.sql</em>. The filename will be SMSGL_<em>ttt_yyyymmdd</em> where <em>t</em>=target followed by the date. The exported file will be created in both:</p>
+
+      <ul>
+        <li>The folder specified in the <strong>Sending driver</strong> field of the terminal <em>961</em> (the default value is <em>C:\SMS_EXPORT\</em>). One file per day is created.</li>
+
+        <li>In the <strong>eSuite</strong> &gt; <strong>Manage</strong> &gt; <strong>Accounting</strong> &gt; <strong>Ledger</strong> &gt; <strong>Export</strong> file where the General Ledger file can be selected and dowloaded. One file per day is created.</li>
+      </ul>
+
+      <p>Example of file format:</p>
+<pre>
+<code class="lang-sql">20200914,3,Grocery/Net Sales,D1,,9.00,
+20200914,1301,Dwr Cash,T1301,9.00,,</code>
+</pre>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 226px">Parameter number</th>
+
+            <th style="width: 306px">Description</th>
+
+            <th style="width: 1193px">DataType</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 226px">1</td>
+
+          <td style="width: 306px">Date of the transaction</td>
+
+          <td style="width: 1193px">Date (yyyymmdd)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px">2</td>
+
+          <td style="width: 306px">Totalizer number</td>
+
+          <td style="width: 1193px">Numeric</td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px">3</td>
+
+          <td style="width: 306px">Totalizer descriptor</td>
+
+          <td style="width: 1193px">Char</td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px">4</td>
+
+          <td style="width: 306px">GL Account number</td>
+
+          <td style="width: 1193px">Char(20)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px">5</td>
+
+          <td style="width: 306px">Debit Amount</td>
+
+          <td style="width: 1193px">Numeric (99999.99)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px">6</td>
+
+          <td style="width: 306px">Credit Amount</td>
+
+          <td style="width: 1193px">Numeric (99999.99)</td>
+        </tr>
+      </table>
+
+      <h2>Accounts Payable</h2>
+
+      <p>The Account payable data is exported by a script named <em>Export_Accounting_AP.sql</em>. The filename will be SMSAP_<em>ttt_yyyymmdd</em> where <em>t</em>=target followed by the date. The exported file will be created in both:</p>
+
+      <ul>
+        <li>The folder specified in the <strong>Sending driver</strong> of the terminal <em>965</em> (the default value is <em>C:\SMS_EXPORT\</em>).</li>
+
+        <li>In the <strong>eSuite</strong> &gt; <strong>Manage</strong> &gt; <strong>Accounting</strong> &gt; <strong>Payable</strong> &gt; <strong>Export</strong> file where the General Ledger file can be selected and dowloaded.<br>
+        </li>
+      </ul>
+
+      <p>Example of file format:</p>
+<pre>
+<code class="lang-sql">H,20090914,001,6225,B620,,
+D,8201,Grocery/Total purchased,123456,74.67,
+D,13910,Drop payment,123456369,,49.78
+D,13920,Charge to account,555666,,24.89</code>
+</pre>
+
+      <p>The file is created with 2 different records, H= header and D=detail. For each transaction, an H record will be created:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 107px">Parameter number</th>
+
+            <th style="width: 197px">Description</th>
+
+            <th>Data Type</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 107px">1</td>
+
+          <td style="width: 197px">H (Header)</td>
+
+          <td>Char(1)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 107px">2</td>
+
+          <td style="width: 197px">Date of the transaction</td>
+
+          <td>Date (yyyymmdd)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 107px">3</td>
+
+          <td style="width: 197px">Store Number</td>
+
+          <td>Char(5)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 107px">4</td>
+
+          <td style="width: 197px">Transaction number</td>
+
+          <td>Numeric</td>
+        </tr>
+
+        <tr>
+          <td style="width: 107px">5</td>
+
+          <td style="width: 197px">Vendor code</td>
+
+          <td>Char(14)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 107px">6</td>
+
+          <td style="width: 197px">PO Number <strong>*</strong></td>
+
+          <td>Char(8)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 107px">7</td>
+
+          <td style="width: 197px">Invoice Number</td>
+
+          <td>Char(20)</td>
+        </tr>
+      </table>
+
+      <p class="alert alert-warning"><strong>*</strong> The PO number will only be available if the final document to export was originally done from a Purchase Order type of document. If the A/P export is done at a head office, the billing document must be transferred to the host before the export to get the PO number exported, otherwise, this field will remain empty.</p>
+
+      <p>For each transaction, a detailed record will be created for each different AP account number.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 114px">Parameter number</th>
+
+            <th style="width: 168px">Description</th>
+
+            <th>Data Type</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 114px">1</td>
+
+          <td style="width: 168px">D (Detail)</td>
+
+          <td>Char (1)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 114px">2</td>
+
+          <td style="width: 168px">Totalizer</td>
+
+          <td>Numeric</td>
+        </tr>
+
+        <tr>
+          <td style="width: 114px">3</td>
+
+          <td style="width: 168px">Totalizer descriptor</td>
+
+          <td>Char</td>
+        </tr>
+
+        <tr>
+          <td style="width: 114px">4</td>
+
+          <td style="width: 168px">Accounting account</td>
+
+          <td>Char(20)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 114px">5</td>
+
+          <td style="width: 168px">Debit Amount</td>
+
+          <td>Numeric (99999.99)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 114px">6</td>
+
+          <td style="width: 168px">Credit Amount</td>
+
+          <td>Numeric (99999.99)</td>
+        </tr>
+      </table>
+
+      <h2>Technical notes</h2>
+
+      <ul>
+        <li>When adding the <em>Export</em> terminal, the default sending driver (export path) is derived from the System.ini [GENERAL] ReportExportDir value.</li>
+
+        <li>If this parameter is empty, its default value is <em>C:\SMS_EXPORT\</em>.</li>
+      </ul>
+
+      <h2>How to program and post the GL and AP accounts</h2>
+
+      <ul>
+        <li>For a detailed step by step on how to program and post the GL and AP accounts, see the <strong>Accounting module</strong> documentation in the <strong>SMSUsers</strong> help.</li>
+      </ul>
+
+      <p>&nbsp;</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

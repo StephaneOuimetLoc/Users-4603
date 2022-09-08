@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Preferred Shopper Points</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+        <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Care - Preferred Shopper Points <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Care &gt; Points <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The eSuite software provides different methods to give points directly from the points of sale on up to 35 point programs.</p>
+
+      <p>The points may be used (redeemed) to get discounts on items or items for free, as counters to the <sup>nth</sup> item for free, to get special discounts when a certain amount of purchases has been reached by the customer, etc.</p>
+
+      <p>This document focuses on:</p>
+
+      <ol>
+        <li><a href="#programs">Point programs</a></li>
+
+        <li><a href="#methods">Point methods</a></li>
+
+        <li><a href="#restrictions">Points restrictions</a></li>
+
+        <li><a href="#increase">Increase points</a></li>
+
+        <li><a href="#rounding">Point rounding</a></li>
+
+        <li><a href="#Net">Based on net or gross amount</a></li>
+
+        <li><a href="#give">How to give points</a></li>
+
+        <li><a href="#Receipt">Receipt</a></li>
+
+        <li><a href="#Reports">Reports</a></li>
+
+        <li><a href="#promotions">Other promotions related to the points</a></li>
+
+        <li><a href="#note">Notes</a></li>
+      </ol>
+
+      <h2><a name="programs">Point programs</a></h2>
+
+      <p>The system can manage up to 35 point programs. They are identified by a digit from <em>1</em> to <em>9</em> or by a letter from <em>A</em> to <em>Z</em>. A corresponds to point program <em>10</em>, <em>B</em> corresponds to point program <em>11</em> and so on up to <em>Z</em> that corresponds to point program <em>35</em>. Point program <em>1</em> is considered the main point program, all the others being secondary ones. They all work independently, according to their own methods, with no interaction between each other.</p>
+
+      <p>In the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a>, the <b><a href="../../Common/Customers/Shopper_level_table.htm#Point_programs">Point programs</a></b> field is used to identify the point programs that the customers linked to the shopper level are members of. The field allows entering or selecting multiple point programs, with no space in between.</p>
+
+      <p>The way the points are redeemed for the main point program <em>1</em> is defined in the <b>Shopper level</b> table and may be different for each shopper level. The way the points are redeemed for the secondary point programs (<em>2</em> to <em>Z</em>) are described in the System.ini file or directly on the items, since it is identical for every shopper level.</p>
+
+      <p class="Note"><b>NOTE:</b> In the <b>Shopper level</b> table, if the <b>Point programs</b> field is blank and a <a href="../../Common/Customers/Shopper_level_table.htm#Actual_method">point method</a> is defined for point program 1, the system considers that the customers who are linked to that shopper level are members of point program 1. This is due to the fact that when an upgrade is done from an old version, the main point program must continue to work.</p>
+
+      <h2><a name="methods">Point methods</a></h2>
+
+      <p>Points can be given according to four different point methods that can be combined:</p>
+
+      <ul>
+        <li>Points on preset items</li>
+
+        <li>Points on entry amounts</li>
+
+        <li>Points on tenders</li>
+
+        <li>Points on the sub-total</li>
+      </ul>
+
+      <h2>For the main point program</h2>
+
+      <p>The <b>Actual method</b> field of the <b>Shopper level</b> table is used to define the point method for the main point program (<em>1</em>).</p>
+
+      <h2>For the secondary point programs</h2>
+
+      <p>For the secondary point programs (point program <em>2</em> to <em>Z</em>), the system uses point method <i>A (Preset item alone)</i>, unless a point method has been defined in the System.ini file under the <b>Points</b> section. When a point method is specified with a rate, the points are given on all items.</p>
+
+      <p>Here are the parameters to define:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Method</th>
+
+            <th>Code</th>
+
+            <th>Definition</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <th width="114">
+            <p>POINTx_METHOD=</p>
+          </th>
+
+          <th style="width: 190px">
+            <p style="width: 230px">[character identifying the point method]</p>
+          </th>
+
+          <th>
+            <p>where x is the character that identifies the point program.<br>
+            See the <b><a href="../../Common/Customers/Shopper_level_table.htm#Actual_method">Actual method</a></b> field topic for the list of the point methods available and their identifying characters.</p>
+          </th>
+        </tr>
+
+        <tr>
+          <td width="114">
+            <p>POINTx_RATE=</p>
+          </td>
+
+          <td style="width: 190px">
+            <p>[rate]</p>
+          </td>
+
+          <td>
+            <p>where x is the character that identifies the point program.<br>
+            This parameter is needed with the <i>Entry amount</i> and <i>Sub-total</i> point methods. The rate corresponds to the number of pennies needed to get 1 point.</p>
+          </td>
+        </tr>
+      </table>
+
+      <p>The points can also be given directly on the items, using the <b><a href="../../Common/Item_maintenance/POS_Table.htm#URL">URL</a></b> field of the <a href="../../Common/Item_maintenance/POS_Table.htm"><b>POS</b> table</a>. Use the <em>POINTx=</em> parameter, where x is the character that identifies the point program. If no point program is specified, the POINT parameter applies to all point programs.</p>
+
+      <p>Here are its different values:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Value</th>
+
+            <th>Definition</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 114px">
+            <p>POINTx=N</p>
+          </td>
+
+          <td>
+            <p>No points are given on this item for the specified point program x.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 114px">
+            <p>POINTx=y</p>
+          </td>
+
+          <td>
+            <p>Points are given on this item for the specified point program x based on the y rate.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 114px">
+            <p>POINTx=Fz</p>
+          </td>
+
+          <td>
+            <p>A fixed number of points (z) are given on this item for the specified point program x.</p>
+          </td>
+        </tr>
+      </table>
+
+      <p class="Note"><b>NOTE:</b> By default, the points given according to the Entry amount point method are given on the <u>gross</u> amounts. This setting can be changed for the <u>net</u> amounts. The points given according to the Tender alone and the Sub-total alone methods using a rate are given based on totalizer 3 (Net sales). This totalizer can be changed. See your dealer for details.</p>
+
+      <h4>Fixed number of points using the Preset item point method</h4>
+
+      <p>By default, when a number of points is defined in the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Points">Points</a></b> field of the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a> (using the <i>Preset item</i> point method), the points are given on all relevant point programs indicated in the <b>Shopper level</b> table.</p>
+
+      <p>To give these points on a specific point program, this needs to be identified in the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Method">Method</a></b> field of the <b>Price</b> table (<em>P1</em> to <em>PZ</em>). More than one point program may be selected.</p>
+
+      <h2><a name="restrictions"></a>Restrict points</h2>
+
+      <p>There are different ways of excluding items from points, each of them depending on the point method.</p>
+
+      <p>The most usual one is by using the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Exclude_from_spending">Exclude from spending</a></b> field (<b>Exc spend)</b> in the <b>Price</b> table. It works with the <i>Entry amount</i> and the <i>Sub-total</i> point methods. When it is checked for an item, this means that no points are given for this item for any of the point programs. However, since the <i>Sub-total</i> method calculates the points based on the amount of totalizer <i>3</i> (<i>Net sales</i>) by default, when excluding items with the <b>Exclude from spending</b> field, change this reference for totalizer <i>3415</i> (<i>Admissible spending</i>). This is done in the System.ini file, with the parameter <em>CalculatePointTlz</em> under the [CLIENT] section.</p>
+
+      <p class="Note"><b>NOTE:</b> To exclude all items of a sub-department, check the <b>Exclude from spending</b> field of the <b>Price</b> table for all items that are part of this sub-department and the <b><a href="../../Common/Dimensions/Dimensions_tables/Subdpt_table.htm#Exc._spending">Exclude from spending</a></b> (<strong>Exc. spending</strong>) field of the <a href="../../Common/Dimensions/Dimensions_tables/Subdpt_table.htm"><b>Sub-department</b> table</a>. This field only excludes the direct sales performed in the sub-department.</p>
+
+      <p>To exclude points on some items for a point program or to only give points on some items for a point program when the point method is <i>Entry amount</i>, use the parameter <em>POINTx=</em> in the <b><a href="../../Common/Item_maintenance/POS_Table.htm#URL">URL</a></b> field of the <a href="../../Common/Item_maintenance/POS_Table.htm"><b>POS</b> table</a> for each desired item, where <em>x</em> is the character identifying the desired point program. Parameter <em>POINTx=N</em> means that no points are given for the specified program. Parameter <em>POINTx=[rate]</em> or <em>F[number of points]</em> means that points are given according to the specified rate or fixed number of points for the specified program. If <em>x</em> is not specified, this applies to all point programs.</p>
+
+      <p>Based on the <em>Tender only</em> method, the amount paid with the tender is used to calculate the number of points given according to the defined rate. To use a different value, the <em>POINTTLZ</em> parameter can be set to specify the totalizer to use. For example, if items are excluded using the <strong>Exc spend</strong> field, the parameter <em>POINTTLZ</em> can be set to <em>3415</em> (<em>Admissible spending</em>).</p>
+
+      <p>The number of points given can be restricted by a minimum sale condition. If the customer does not buy for a minimum amount in the transaction, the points are not given. This restriction works only with the <i>Sub-total</i> point method on point program <i>1</i>.</p>
+
+      <p>To set up a minimum sale condition, enter the minimum amount the customers must buy to obtain the points in the <b><a href="../../Common/Customers/Shopper_level_table.htm#Minimum_sale">Minimum sale</a></b> field of the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a>. The amount must be a numeric value and must contain a decimal point as the separator between dollars and cents.</p>
+
+      <h2><a name="increase"></a>Increase points</h2>
+
+      <p>The number of points given on point program <i>1</i> can be multiplied by a factor. For example, the points given can be doubled on any purchase for a special promotion. The multiplied factor is working with all four point methods on the point program <i>1</i> only.</p>
+
+      <p>To multiply the points given, enter the value of the multiplier factor in the <a href="../../Common/Customers/Shopper_level_table.htm#Multiplier_(points)"><b>Multiplier</b> (points)</a> field of the <b>Shopper level</b> table.</p>
+
+      <h3>Increase points on specific items only</h3>
+
+      <p>The <strong>Multiplier</strong> (points) field in the <strong>Shopper level</strong> table is used for multiplying all points given. The system does not have the possibility of multiplying points on specific items only. However, depending on the point method used, it may be possible to get a similar result.</p>
+
+      <p>If points are given based on the <em>Preset item</em> point method, the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Points">Points</a></b> field of the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a> is used for determining the number of points to give. This value can be increased for specific items.</p>
+
+      <p>If points are given based on a rate with the <em>Entry amount</em> method, the <em>POINTx</em> parameter can be set in the <b><a href="../../Common/Item_maintenance/POS_Table.htm#URL">URL</a></b> field of the <a href="../../Common/Item_maintenance/POS_Table.htm"><b>POS</b> table</a> to define a different rate for specific items.</p>
+
+      <p>If points are given based on the <em>Sub-total</em> method, additional points can be given using the <strong>Points</strong> field or the <em>POINTx</em> parameter.</p>
+
+      <p><strong>Example</strong></p>
+
+      <p>When the points are given based on the <em>Sub-total</em> method, the only thing that needs to be done to double the points on specific items is to set the value <em>POINT1=100</em> in the <strong>URL</strong> field of the <strong>POS</strong> table for these specific items. This way, the points will be doubled on these items, since the points are already given based on the sub-total.</p>
+
+      <p>Let us say that an item is sold at $10.00 and another one at $5.00. Based on the <em>Sub-total</em> point method with a rate of 100 (1 point per $1.00), the customer will get 15 points for this transaction (10+5). To double the points on the item sold at $10.00, the <em>POINT1=100</em> parameter is added in the <strong>URL</strong> field for this item. When this item is sold, 10 points are given at the moment it is sold and 15 points are given for the total of the transaction. At the end, a total of 25 points are given in this transaction, where points are doubled only for the item sold at $10.00.</p>
+
+      <h2><a name="Net"></a>Based on net or gross amount</h2>
+
+      <p>By default, the points are awarded based on the gross amount (before discounts).</p>
+
+      <p>It is possible to modify the configuration of the system so that the points are awarded based on the net amount (after discounts). See your reseller for changes in the configuration.</p>
+
+      <p class="Note"><strong>NOTE:</strong> The net amount feature does not apply to the Tender alone and the Sub-total alone methods.<br>
+      For items that are programmed to award a fixed number of points using the Preset item alone method, the points are not awarded if the item is sold at $0.00 based on net amount.</p>
+
+      <h2><a name="rounding"></a>Point rounding</h2>
+
+      <p>When the points are given according to a rate, it is possible to set how to round the number of points:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Rounding method</th>
+
+            <th>
+            </th>
+
+            <th>Definition</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 51px">Truncate</td>
+
+          <td style="width: 8px">=</td>
+
+          <td>Always eliminates any decimal.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 51px">Round</td>
+
+          <td style="width: 8px">=</td>
+
+          <td>Accounting rounding.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 51px">RoundUp</td>
+
+          <td style="width: 8px">=</td>
+
+          <td>Always rounds up.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 51px">.5 down</td>
+
+          <td style="width: 8px">=</td>
+
+          <td>Rounds down to the last 0.5 value.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 51px">.5 up</td>
+
+          <td style="width: 8px">=</td>
+
+          <td>Rounds up to the next 0.5 value.</td>
+        </tr>
+      </table>
+
+      <h2>How to give points</h2>
+
+      <p>The points are automatically given by the system according to the point method that is used, the restrictions and the configuration settings.</p>
+
+      <p>The points given are added to the point balance of the customer entered for the transaction. The system no longer needs a customer to be entered in the transaction to give points. In this case, the points given must be redeemed in the same transaction since they cannot be added to a customer's point balance. The unused points are lost.</p>
+
+      <p>The same thing occurs when a customer is entered in the transaction, except that the unused points are added to the point balance of the customer, or more points may be redeemed if the customer already has points in their point balance.</p>
+
+      <p>If the customer is entered at the end of the transaction, the system will automatically reset the points given for all items, sub-department sales and department sales. This does not apply to points given using a function (with the <em>POINT</em> parameter). In this case, the cashier needs to void the operation and perform it again. So the best way to proceed when points are given using a function is to enter the customer before the function is used.</p>
+
+      <p class="Note"><b>NOTE:</b> To give points without entering a customer in the transaction, point programs must be defined in the shopper level 1, which is the default shopper level.</p>
+
+      <h2><a name="Receipt"></a>Receipt</h2>
+
+      <p>On the receipt, the points given and the point balances are automatically printed for all point programs the customer is member of.</p>
+
+      <h2><a name="Reports"></a>Reports</h2>
+
+      <p>The eSuite software has some reports related to points, like the point balance at a certain date, point movement, etc. These reports are related to the main point program (<em>1</em>), except for the point balance that shows the current point balance of all point programs at the specified date.</p>
+
+      <p class="Note"><strong>NOTE:</strong> Since the secondary point programs are generally used to count items to give the n<sup>th</sup> item for free or for special promotions like the Pampers program, there is no need for a statement on the point movement for these point programs.</p>
+
+      <h2><a name="promotions"></a>Promotions related to points</h2>
+
+      <p>Different promotions can be given according to the point balances of the customers. For example, the shopper level can be upgraded based on a customer's point balance, allowing special discounts. Electronic coupons can also be given according to the accumulated points. See the <b><a href="../../Common/Customers/Shopper%20level%20upgrade/Shopper_level_upgrade.htm">Preferred shopper - Shopper level upgrade</a></b> and <b><a href="../../Common/Item_maintenance/Coupon_items/Electronic_coupons_programming/Electronic_coupons_examples.htm">Electronic coupons - Examples</a></b> topics for details on these promotions.</p>
+
+      <div class="card">
+        <h5 class="card-header"><a name="note"></a>Notes</h5>
+
+        <div class="card-body">
+          <p class="card-text">The points owned at the beginning of the transaction, the points given and the ones redeemed during the current transaction and the point balance at the end of the transaction are all printed on the receipt for all point programs. These values are all displayed in the <strong>Details</strong> window of the POS, but only the points owned at the beginning of the transaction for the main point program are displayed in the <strong>Header</strong> window of the POS. The total number of points given in the transaction can be displayed in the <strong>Total</strong> window. See your reseller for details.</p>
+
+          <p>For the point balance to be displayed in the <strong>Header</strong> window of the cashier screen (POS), a point program and a point method have to be set up in the <strong>Shopper level</strong> table. When working only with the <strong>Points adjustment</strong> functionality, we suggest that you use the <em>Preset item alone</em> point method to avoid giving unwanted points unless a value is set in the <strong><a href="../../Common/Item_maintenance/Price_Table.htm#Points">Points</a></strong> field of the <a href="../../Common/Item_maintenance/Price_Table.htm"><strong>Price</strong> table</a>.</p>
+        </div>
+      </div>
+
+      <p>For details on points, see the <b><a href="Points_examples.htm">Preferred shopper - Points - Examples</a></b> and <b><a href="Point_redemption.htm">Preferred shopper - Point redemption</a></b> topics.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

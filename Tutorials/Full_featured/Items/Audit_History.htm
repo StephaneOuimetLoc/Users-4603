@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- #BeginTemplate "../../../html_template==NO-TOC.dwt" -->
+
+<head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.8.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document"><!-- Title/Keywords edit on new documents --><!-- #BeginEditable "doctitle" -->
+<style type="text/css">
+  .auto-style1 {
+        font-size: medium;
+  }
+  
+</style>
+    <!-- #EndEditable -->
+    <meta name="SMS-HtmlEditor-User" content="SimonV">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Audit History</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <a name="top" id="top"></a> <!-- Docs page layout --><br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->Audit History Report - Overview <!-- #EndEditable --></h1>
+
+    <h2><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master&gt; Audit History&nbsp; <!-- #EndEditable --></h2>
+    <!-- #BeginEditable "toc" --><!--
+                    --><!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>This document describes the concept of Audit History under the Items section of eSuite Manage/Gas/Care/Buy or Gas.</p>
+
+      <h2>Concept</h2>
+
+      <p>The Audit History is a report showing all the changes done to the records in the Item Master tables.</p>
+
+      <p>Key Points:</p>
+
+      <ul>
+        <li>Shows when any field has been modified and displays the olf value and new value of that field.</li>
+
+        <li>Displays changes to any of the item master tables <span class="auto-style1">(<strong>OBJ_TAB</strong>, <strong>POS_TAB</strong>, <strong>PRICE_TAB</strong>, <strong>COST_TAB</strong>, <strong>ECL_TAB</strong>, <strong>BMP_TAB</strong>, <strong>LOC_REV</strong>, <strong>CLS_TAB</strong>)</span></li>
+
+        <li>Available in Single Store, Multi-Target as well as Multi-Tenant.</li>
+      </ul>
+
+      <h2>Access&nbsp;Audit&nbsp;History</h2>
+
+      <p>To access the Audit History click on the <strong>Items</strong> section in&nbsp; the Manage module. Then select <strong>Audit History</strong></p>
+
+      <p><img width="699" style="height: 592px;" alt="" src="Audit_History_files/access.png"></p>
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+      The Search wizard: 
+
+      <p>&nbsp;&nbsp;&nbsp; <img src="Audit_History_files/search_wizard2.png"></p>
+
+      <p>If you are querying for a large period of time and the report will not load, adjust the server timeout at the bottom right gear icon<br>
+       <img width="100" style="height: 31px;" alt="" src="Audit_History_files/gear_icon.png"></p>
+
+      <p>Adjust this value to 400 so the server has more time allowed to query the database.<br>
+       <img width="227" style="height: 171px;" alt="" src="Audit_History_files/gear_expanded.png"><br>
+      </p>
+
+      <h2>Default Search Criteria</h2>
+
+      <p>These are the default search criteria but more can be added by clicking the "More criteria" button, the following can be added:</p>
+
+      <p>&nbsp;&nbsp;&nbsp; <img src="Audit_History_files/more_criteria.png"></p>
+
+      <h2>Report</h2>
+
+      <p>Example report with data, columns, sorted in chronological order.</p>
+
+      <p><img width="1658" style="height: 323px;" alt="" src="Audit_History_files/report_grid.png"></p>
+
+      <p class="Note">Some Events in the report like lines 3-6 in the above screenshot are triggered by events like a Deploy Change that change the "Next Price" to "Active Price"</p>
+
+      <p class="Note">Note: Purge: The Audit report depends on how much data is being retained in the revision tables (i.e PRICE_REV).The revision tables are purged on a regular basis.You can find out how much data is being kept in the revision tables by asking your dealer to check the purge settings for REVISION in the setup console in the SYS module. The default setting is 14, so 14 days of data will be kept and you wil be able to consult the report 14 days back.</p>
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container --><a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

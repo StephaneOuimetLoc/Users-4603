@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Scale Tools</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+        <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Scale Tools<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxiliaries &gt; Scale Tables <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The document explains how <strong>Scale tools</strong> (<em>XchScale - Tools)</em> can be used when working with production scales.</p>
+
+      <p class="auto-style7"><img alt="" height="306" src="Deploy_Scale_Utilities_files/Scale_tools.png" width="300"></p>
+
+      <p>&nbsp;</p>
+
+      <p>The <strong>Scale Tools</strong> page can be opened from the 'Items' drop-down in the left hand menu of <strong>eSuite.</strong> This will allow utilization of additional features related to production scales.</p>
+
+      <p class="auto-style7"><img alt="" height="400" src="Deploy_Scale_Utilities_files/Navigate.png" width="166"></p>
+
+      <p class="Note"><strong>NOTE:</strong> If using <strong>ePlum</strong>, the only utilities available are "<em>Send item to Scale</em>" and "<em>Send future item change to scale</em>". There is no read back between SMS and ePlum.</p>
+
+      <h2>Index</h2>
+
+      <ul>
+        <li><a href="#SendtoScale">Send Item to Scale</a></li>
+
+        <li><a href="#GetFromScale">Get Item from Scale</a></li>
+
+        <li><a href="#PollReport">Poll Report</a></li>
+
+        <li><a href="#StatusCheck">Status Check</a></li>
+
+        <li><a href="#SendFuture">Send Future Item Changes to Scale</a></li>
+      </ul>
+
+      <h2 id="SendtoScale">Send Item to Scale</h2>
+
+      <p><img alt="" height="500" src="Deploy_Scale_Utilities_files/Send_Item.png" width="333"></p>
+
+      <p>'<strong>Send item to scale</strong>' is used for deploying item changes to the production scales. The image to the above demonstrates the default values set (date is blurred) when deploying changes to the production scales.</p>
+
+      <ul>
+        <li><strong>Data to send:</strong> - There is the option to send the item only, item and ingredient, ingredient only or nutrifact only.</li>
+
+        <li><strong>Sub-Department Range:</strong> - There is the option to send a specific sub-department range.</li>
+
+        <li><strong>Target: -</strong> The target scale to send the data. <strong>DSC</strong> is set by default, which means all scales.</li>
+
+        <li><strong>Date:</strong> - This window allows a date to be chosen.</li>
+
+        <li>
+          <strong>Send data by:</strong> - There are two (2) options that can be selected:
+
+          <ul>
+            <li>'Add or Replace' allows the item to be added or replaced (if re-using an existing PLU)</li>
+
+            <li>
+              'Create and Load' allows the items in the SMS database to overwrite all exisiting data in the productions scale.<br>
+               <strong></strong>
+
+              <div class="alert alert-warning">
+                <strong>NOTE:</strong> <em></em>If this option is selected, be aware that the data that was in the scale prior to deployment will be removed/erased.
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    &nbsp;
+
+    <ul>
+      <li>After selecting either of the two (2) options for 'Send data by', taction confirmation pop-ups will display to confirm the action. Select 'Yes' to proceed to deploy changes or 'No' to cancel.</li>
+    </ul>
+
+    <p class="auto-style2"><a href="#top">Back to Top</a></p>
+
+    <h2 id="GetFromScale">Get Item from Scale</h2>
+
+    <p><img alt="" height="500" src="Deploy_Scale_Utilities_files/Get_item.png" width="336"></p>
+
+    <p>'<strong>Get item from scale</strong>' is used for importing items from production scales to SMS. When the processor(s) is finished processing all the data retrieved from the scale, an external batch will be created.</p>
+
+    <ul>
+      <li>
+        <strong>Data to retrieve:</strong> - There are three (3) options that can be selected:
+
+        <ul>
+          <li>Item Only</li>
+
+          <li>Ingredient Only</li>
+
+          <li>Nutrition Only</li>
+        </ul>
+      </li>
+
+      <li><strong>Target:</strong> The target scale to send the data. <strong>DSC</strong> is set by default, which means all scales.</li>
+    </ul>
+
+    <h3>External Batch Action</h3>
+
+    <p>By default with production scales, the "<strong>ADD</strong>" action type will be for data application. If another action is required, it will need to be modified manually in the batch header. Possible actions are: <strong>ADD</strong>, <strong>ADDRPL</strong>, <span class="auto-style9"><strong>CHANGE</strong> or <strong>REMOVE</strong>.</span> Refer to the image below.</p>
+
+    <p><img alt="" height="87" src="Deploy_Scale_Utilities_files/external_batches.png" width="500"></p>
+
+    <p class="alert alert-danger"><strong>WARNING:</strong> This should only be done by a technician upon a new install/upgrade. ALL items in the external batch should be reviewed to ensure data accuracy/integrity before being applied/executed.</p>
+
+    <p class="auto-style2"><a href="#top">Back to Top</a></p>
+
+    <h2 id="PollReport">Poll Report</h2>
+
+    <p><img alt="" height="500" src="Deploy_Scale_Utilities_files/Poll_report.png" width="333"></p>
+
+    <p>'<strong>Poll Report</strong>' is used to obtain a report.</p>
+
+    <ul>
+      <li><strong>Target: -</strong> The target scale to send the data. <strong>DSC</strong> is set by default, which means all scales.</li>
+
+      <li><strong>Date:</strong> - This window allows a date to be chosen.</li>
+
+      <li>
+        <strong>Reset the scales: -</strong> There are two (2) options that can be selected:<br>
+         
+
+        <ul>
+          <li>No (X Reading)</li>
+
+          <li>Yes (Z Reading)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p class="Note"><strong>NOTES</strong> <em><br>
+    • 'X Reading' refers to simply reading the data from the scale, while 'Z Reading' refers to reading and then resetting the data from the scale.<br>
+     • Totalizer 8630 (Packaged) is used when polling production during the End of Day (Scheduler) process.</em></p>
+
+    <p class="auto-style2"><a href="#top">Back to Top</a></p>
+
+    <h2 id="StatusCheck">Status Check</h2>
+
+    <p><img alt="" height="500" src="Deploy_Scale_Utilities_files/status_check.png" width="336"></p>
+
+    <p>'<strong>Status Check</strong>' is used to check the 'Online' or 'Offline' status of the scale.</p>
+
+    <ul>
+      <li><strong>Target: -</strong> The target scale to send the data. <strong>DSC</strong> is set by default, which means all scales.</li>
+    </ul>
+
+    <p class="alert alert-warning"><strong>NOTE:</strong> An urgent message will only be received if there is an issue with the scale connectivity. Urgent messages should always be reviewed in order to rectify the issue. Issues left unresolved may have consequences.</p>
+
+    <p class="auto-style2"><a href="#top">Back to Top</a></p>
+
+    <h2 id="SendFuture">Send Future Item Changes to Scale</h2>
+
+    <p><img alt="" height="500" src="Deploy_Scale_Utilities_files/future_items.png" width="334"></p>
+
+    <p>'<strong>Send future item changes to scale</strong>' is used for deploying future item changes to the production scales.</p>
+
+    <ul>
+      <li><strong>Date:</strong> - This window allows a date to be chosen.</li>
+
+      <li><strong>Target: -</strong> The target scale to send the data. <strong>DSC</strong> is set by default, which means all scales.</li>
+    </ul>
+
+    <p class="Note"><strong>NOTE:</strong> This feature will not work with random weight codes entered as alternate codes (F154).</p>
+
+    <p class="auto-style2"><a href="#top">Back to Top</a></p>
+    <!-- #EndEditable -->
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

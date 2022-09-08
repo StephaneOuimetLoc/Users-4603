@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Points Examples</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+        <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Care - Points Examples <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite care &gt; Points <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Preferred shopper - Points - Examples</h2>
+
+      <p>Points are automatically given by the system according to the point method used. The points given are added to the point balance of the customer entered for each transaction. If no customer is entered for a transaction, the points are not added.</p>
+
+      <h3><a name="List"></a>List of examples</h3>
+
+      <table border="0" style="WIDTH: 100%">
+        <tr>
+          <td>
+            <ol>
+              <li><a href="#except_cigarettes_and_alcohol">Points are given on all items, except on cigarettes and alcohol, at the 1 penny per point rate</a>.</li>
+
+              <li><a href="#payment_made_by_credit_card">Points are given on all items at the 1 penny per point rate, plus 250 points are given when the payment is made by credit card</a>.</li>
+
+              <li><a href="#sub-total">Points are given on all items at the 1 penny per point rate, plus on the sub-total amount at the 10 penny per point rate</a>.</li>
+
+              <li><a href="#amount_higher_equal_$1.00">Points are given on all items at the 1 penny per point rate, on the entries for which the amount is higher or equal to $1.00</a>.</li>
+
+              <li><a href="#minimum_$100.00_in_transaction">Points are given on all items at the 1 penny per point rate when the customers buy for a minimum of $100.00 in the transaction</a>.</li>
+
+              <li><a href="#particular_shopper_level">A fixed number of points is given for each item. These points are doubled for the customers that are part of a particular shopper level.</a></li>
+
+              <li><a href="#doubled_on_Wednesday">A fixed number of points is given for each item. These points are doubled on Wednesday from 8:00am to 12:00pm</a>.</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+
+      <h3>1. Points are given on all items, <a name="except_cigarettes_and_alcohol">except on cigarettes and alcohol</a>, at the 1 penny per point rate</h3>
+
+      <p>This example uses the <em>Entry amount and preset item</em> point method with item exclusions.</p>
+
+      <p>Set up the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> information:</p>
+
+      <ol>
+        <li>In the list of shopper levels (<em>Customers &gt; Auxiliary tables &gt; Shopper levels</em>), select the shopper level for which the points will apply.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Select the <em>Entry amount and preset item</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Actual_method"><strong>Actual method</strong> field</a><i>.<br>
+        <br>
+         <img class="Text" height="679" src="Points_examples_files/ex1_actual_method.png" width="425"></i></li>
+
+        <li>Type <em>1</em> in the <a href="../../Common/Customers/Shopper_level_table.htm#Penny/point"><strong>Penny/point</strong> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex1_penny_point.png" width="425"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>In the <strong>Base</strong> tab of the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a>, set up the information for each item:</p>
+
+      <ol>
+        <li>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Master.</strong></li>
+
+        <li>In the <strong>Start</strong> window, click on <strong>Item list</strong>.</li>
+
+        <li>In the wizard, enter the search criteria corresponding to all cigarettes and alcohol items and click <strong>Execute</strong>.</li>
+
+        <li>For all cigarettes and alcohol items, type <em>0</em> in the <strong>Points</strong> field.<br>
+        <br>
+         <img class="Text" height="544" src="Points_examples_files/ex1_points.png" width="807"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>A point will be given for each penny of each item sold, except for the cigarettes and alcohol items.</p>
+
+      <p>The points are added to the point balance of the customer entered in the transaction, if they are part of the targeted shopper level. If no customer is entered or if the customer is not part of the targeted shopper level, the points are not added.</p>
+
+      <p style="text-align:right"><a href="#List">Go to the list of examples</a></p>
+
+      <h3>2. Points are given on all items at the 1 penny per point rate, plus 250 points are given when the <a name="payment_made_by_credit_card">payment is made by credit card</a></h3>
+
+      <p>This example uses the <em>Entry amount, preset item and tender</em> point method with a fixed number of points for the credit card tender.</p>
+
+      <p>Set up the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> information:</p>
+
+      <ol>
+        <li>In the list of shopper levels (<em>Customers &gt; Auxiliary tables &gt; Shopper levels</em>), select the shopper level for which the points will apply.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Select the <em>Entry amount, preset item and tender</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Actual_method"><strong>Actual method</strong> field</a><i>.<br>
+        <br>
+         <img class="Text" height="679" src="Points_examples_files/ex2_actual_method.png" width="425"></i></li>
+
+        <li>Type <em>1</em> in the <a href="../../Common/Customers/Shopper_level_table.htm#Penny/point"><strong>Penny/point</strong> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex2_penny_point.png" width="425"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>In <strong>eSuite System</strong>, set up the credit card tender function <i>(104</i>) in the <a href="../../../../Members/Tech/eSuite/System/Edit/Configuration_tables/Function_table.htm"><b>Function</b> table</a>:</p>
+
+      <ol>
+        <li>Type <i>POINT=F250</i> in the <a href="../../../../Members/Tech/eSuite/System/Edit/Configuration_tables/Function_table.htm#Alpha_parameter"><b>Alpha parameter</b> field</a>.<br>
+        <br>
+         <img class="Text" height="650" src="Points_examples_files/ex2_alpha_parameter.png" width="775"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>A point will be given for each penny of each item sold, plus 250 points if the payment is made by credit card.</p>
+
+      <p>The points are added to the point balance of the customer entered in the transaction, if they are part of the targeted shopper level. If no customer is entered or if the customer is not part of the targeted shopper level, the points are not added.</p>
+
+      <p style="text-align:right"><a href="#List">Go to the list of examples</a></p>
+
+      <h3>3. Points are given on all items at the 1 penny per point rate, plus on the <a name="sub-total">sub-total</a> amount at the 10 penny per point rate</h3>
+
+      <p>This example uses the <em>Entry amount, preset item and sub-total</em> <b></b>point method with 2 different penny per point rates.</p>
+
+      <p>Set up the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> information:</p>
+
+      <ol>
+        <li>In the list of shopper levels (<em>Customers &gt; Auxiliary tables &gt; Shopper levels</em>), select the shopper level for which the points will apply.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Select the <em>Entry amount, preset item and sub-total</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Actual_method"><strong>Actual method</strong> field</a><i>.<br>
+        <br>
+         <img class="Text" height="679" src="Points_examples_files/ex3_actual_method.png" width="425"></i></li>
+
+        <li>Type <em>1</em> in the <a href="../../Common/Customers/Shopper_level_table.htm#Penny/point"><strong>Penny/point</strong> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex3_penny_point.png" width="425"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>In <strong>eSuite System</strong>, set up the sub-total function (<em>720</em>) in the <a href="../../../../Members/Tech/eSuite/System/Edit/Configuration_tables/Function_table.htm"><b>Function</b> table</a>:</p>
+
+      <ol>
+        <li>Type <i>POINT=F250</i> in the <a href="../../../../Members/Tech/eSuite/System/Edit/Configuration_tables/Function_table.htm#Alpha_parameter"><b>Alpha parameter</b> field</a>.<br>
+        <br>
+         <img class="Text" height="650" src="Points_examples_files/ex3_alpha_parameter.png" width="775"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>A point will be given for each penny of each item sold, plus 1 point for each 10 pennies on the net sales amount of the transaction.</p>
+
+      <p>The points are added to the point balance of the customer entered in the transaction, if they are part of the targeted shopper level. If no customer is entered or if the customer is not part of the targeted shopper level, the points are not added.</p>
+
+      <p style="text-align:right"><a href="#List">Go to the list of examples</a></p>
+
+      <h3>4. Points are given on all items at the 1 penny per point rate, on the entries for which the <a name="amount_higher_equal_$1.00">amount is higher or equal to $1.00</a></h3>
+
+      <p>This example uses the <em>Entry amount alone</em> <b></b>point method with a minimum sale restriction.</p>
+
+      <p>Set up the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> information:</p>
+
+      <ol>
+        <li>In the list of shopper levels (<em>Customers &gt; Auxiliary tables &gt; Shopper levels</em>), select the shopper level for which the points will apply.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Select the <em>Entry amount alone</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Actual_method"><strong>Actual method</strong> field</a><i>.<br>
+        <br>
+         <img class="Text" height="678" src="Points_examples_files/ex4_actual_method.png" width="427"></i></li>
+
+        <li>Type <em>1</em> in the <a href="../../Common/Customers/Shopper_level_table.htm#Penny/point"><strong>Penny/point</strong> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex4_penny_point.png" width="425"></li>
+
+        <li>Type <em>1</em> in the <a href="../../Common/Customers/Shopper_level_table.htm#Minimum_sale"><strong>Minimum sale</strong> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex4_minimum_sale.png" width="425"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>A point will be given for each penny of each item sold for which the entry's amount is higher or equal to $1.00.</p>
+
+      <p>The points are added to the point balance of the customer entered in the transaction, if they are part of the targeted shopper level. If no customer is entered or if the customer is not part of the targeted shopper level, the points are not added.<br>
+      </p>
+
+      <p style="text-align:right"><a href="#List">Go to the list of examples</a></p>
+
+      <h3>5. Points are given on all items at the 1 penny per point rate when the customers buy for a <a name="minimum_$100.00_in_transaction">minimum of $100.00 in the transaction</a></h3>
+
+      <p>This example uses the <em>Sub-total alone</em> <b></b>point method with a minimum sale restriction.</p>
+
+      <p>Set up the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> information:</p>
+
+      <ol>
+        <li>In the list of shopper levels (<em>Customers &gt; Auxiliary tables &gt; Shopper levels</em>), select the shopper level for which the points will apply.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Select the <em>Sub-total alone</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Actual_method"><strong>Actual method</strong> field</a><i>.<br>
+        <br>
+         <img class="Text" height="682" src="Points_examples_files/ex5_actual_method.png" width="425"></i></li>
+
+        <li>Type <em>1</em> in the <a href="../../Common/Customers/Shopper_level_table.htm#Penny/point"><strong>Penny/point</strong> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex5_penny_point.png" width="425"></li>
+
+        <li>Type <em>100</em> in the <a href="../../Common/Customers/Shopper_level_table.htm#Minimum_sale"><strong>Minimum sale</strong> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex5_minimum_sale.png" width="425"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>A point will be given for each penny of each item sold if the total of the transaction is at least $100.00.</p>
+
+      <p>The points are added to the point balance of the customer entered in the transaction, if they are part of the targeted shopper level. If no customer is entered or if the customer is not part of the targeted shopper level, the points are not added.</p>
+
+      <p style="text-align:right"><a href="#List">Go to the list of examples</a></p>
+
+      <h3>6. A fixed number of points is given for each item. These points are doubled for the customers that are part of a <a name="particular_shopper_level">particular shopper level</a>.</h3>
+
+      <p>This example uses the <b>Preset item alone (A)</b> point method multiplied for some customers.</p>
+
+      <p>Set up the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> information:</p>
+
+      <ol>
+        <li>In the list of shopper levels (<em>Customers &gt; Auxiliary tables &gt; Shopper levels</em>), select the shopper level for which the points will apply.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Select the <em>Preset item alone</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Actual_method"><strong>Actual method</strong> field</a><i>.<br>
+        <br>
+         <img class="Text" height="678" src="Points_examples_files/ex6_actual_method.png" width="425"></i></li>
+
+        <li>Type <i>2</i> in the <a href="../../Common/Customers/Shopper_level_table.htm#Multiplier_(points)"><b>Multiplier (points)</b> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex6_multiplier.png" width="425"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>In the <strong>Base</strong> tab of the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a>, set up the information for each item:</p>
+
+      <ol>
+        <li>Type the number of points given when the item is sold at a price event in the <a href="../../Common/Item_maintenance/Price_Table.htm#Points"><b>Points</b> fields</a>.<br>
+        <br>
+         <img class="Text" height="544" src="Points_examples_files/ex6_points.png" width="807"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>The corresponding points will be given for each item sold, doubled for the customers that are part of that particular shopper level.</p>
+
+      <p>The points are added to the point balance of the customer entered in the transaction if they are part of the targeted shopper level. If no customer is entered or if the customer is not part of the targeted shopper level, the points are not added.</p>
+
+      <p style="text-align:right"><a href="#List">Go to the list of examples</a></p>
+
+      <h3>7. A fixed number of points is given for each item. These points are <a name="doubled_on_Wednesday">doubled on Wednesday</a>s from 8:00am to 12:00pm</h3>
+
+      <p>This example uses the <em>Preset item alone</em> <b></b>point method multiplied during a specific period. It uses the upgrade-to-level concept. The shopper level contains the period for which the points are doubled. For this period, the customers upgrade to another shopper level that doubles the points.</p>
+
+      <p>In this example, the shopper level upgrades to shopper level <i>4</i> to double the points.</p>
+
+      <p>See the <b><a href="../../Common/Customers/Shopper%20level%20upgrade/Shopper_level_upgrade.htm">Preferred shopper - Shopper level upgrade</a></b> topic for details on the upgrade-to-level concept.</p>
+
+      <p>Set up the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> information:</p>
+
+      <ol>
+        <li>In the list of shopper levels (<em>Customers &gt; Auxiliary tables &gt; Shopper levels</em>), select the shopper level for which the points will double.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>In the <strong>Upgrades</strong> tab, type <i>4</i> in the <a href="../../Common/Customers/Shopper_level_table.htm#Upgrade_to_level"><b>Upgrade to level</b> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex7_ugrade_level.png" width="425"></li>
+
+        <li>Type 0800 in the <a href="../../Common/Customers/Shopper_level_table.htm#Start"><strong>Wednesday (Wed) Start</strong> field</a>.</li>
+
+        <li>Type <i>1200</i> in the <a href="../../Common/Customers/Shopper_level_table.htm#Stop"><b>Wednesday (Wed) Stop</b> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex7_start_stop.png" width="425"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>Set up the points information in the <u>upgraded shopper level 4</u>:</p>
+
+      <ol>
+        <li>In the list of shopper levels (<em>Customers &gt; Auxiliary tables &gt; Shopper levels</em>), <u>select shopper level 4</u> and open the <strong>Shopper level</strong> table.</li>
+
+        <li>Select the <em>Preset item alone</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Actual_method"><strong>Actual method</strong> field</a>.<br>
+        <br>
+         <img height="677" src="Points_examples_files/ex7_level4_actual_method.png" width="425" class="Text"></li>
+
+        <li>Type <i>2</i> in the <a href="../../Common/Customers/Shopper_level_table.htm#Multiplier_(points)"><b>Multiplier (points)</b> field</a>.<br>
+        <br>
+         <img class="Text" height="555" src="Points_examples_files/ex7_multiplier.png" width="425"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>In the <strong>Base</strong> tab of the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a>, set up the information for each item:</p>
+
+      <ol>
+        <li>In the <a href="../../Common/Item_maintenance/Price_Table.htm#Points"><b>Points</b> fields</a>, type the number of points given when the item is sold at a price event.<br>
+        <br>
+         <img class="Text" height="546" src="Points_examples_files/ex7_points.png" width="807"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>The corresponding points will be given for <em>each</em> item sold, doubled on each Wednesday from 8:00am to 12:00pm.</p>
+
+      <p>The points are added to the point balance of the customer entered in the transaction if he is part of the targeted shopper level. If no customer is entered or if the customer is not part of the targeted shopper level, the points are not added.</p>
+
+      <p style="text-align:right"><a href="#List">Go to the list of examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

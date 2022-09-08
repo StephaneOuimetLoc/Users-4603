@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.8.0" />
+    <meta name="SMS-HtmlEditor-User" content="Anna" />
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Active" />
+    <title>Reverse Attributes</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body>
+    ﻿ 
+
+    <h1>ePos - Reverse Attributes</h1>
+
+    <p>Epos operations</p>
+
+    <h2>Table of content</h2>
+
+    <h2>Information</h2>
+
+    <p>Reverse attributes consist of shift functions.&nbsp;These functions&nbsp;will perform operations to inverse specific flags on items according to the function.</p>
+
+    <p>The following are the shift functions available:</p>
+
+    <ol>
+      <li>
+        <div>
+          <em>Function 740</em> <strong>Tax shift</strong>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <em>Function 742</em> <strong>Scale shift</strong>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <em>Function 744</em> <strong>Discount shift</strong>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <em>Function 746</em> <strong>Food stamp shift</strong>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <em>Function 747</em> <strong>WIC shift</strong>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <em>Function 748</em> <strong>FSA shift</strong>&nbsp;
+        </div>
+      </li>
+    </ol>
+
+    <h2>Tax Shift</h2>
+
+    <p>The Tax shift function manually adds or removes the taxability of an item sold. If an Item is flagged taxable(x) on the POS_TABLE, the tax shift will remove the tax(x). If an Item does not have a flag taxable(x) on the POS_TABLE, the tax shift will add the tax.</p>
+
+    <p>To temporarily add or remove the taxability of an item, follow these steps:</p>
+
+    <ol>
+      <li>
+        <div>
+          Open an epos session and login
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Select the tax shift button.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          A message will pop up in the Entry window&nbsp; "Tax shift?".
+        </div>
+      </li>
+
+      <li>
+        <div>
+          In the Entry window, enter the tax number(s) that must be added or removed.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Press the Enter key or click on the E button to validate your entry; The "Tax shift [numbers]" message is displayed in the Entry window.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Enter the item. <strong><br />
+          </strong>
+        </div>
+      </li>
+    </ol>
+
+    <p class="Note"><strong>Note:</strong> The Tax shift function must be used before entering the item.<br />
+     The Tax shift is effective for one (1) item only. This means you have to use the Tax shift function before each item for which the taxability must be added or removed in the transaction.</p>
+
+    <h2>Scale shift</h2>
+
+    <p>The Scale shift function manually adds or removes the scalable flag of an item sold.</p>
+
+    <p>To temporarily alter the scalability of an item that is not flagged scalable, follow these steps:</p>
+
+    <ol>
+      <li>
+        <div>
+          Open an epos session and login.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Select the Scale shift button.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          The "Scale shift" message is displayed in the Entry window.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Enter the item.&nbsp;<br />
+        </div>
+      </li>
+    </ol>
+
+    <p class="Note"><strong>Notes :</strong><br />
+     The Scale shift function must be used before entering the item.<br />
+     The Scale shift is effective for one (1) item only. This means you have to use the Scale shift function before each item for which the scalability must be added or removed.</p>
+
+    <h2>Discount shift</h2>
+
+    <p>The Discount shift function manually removes the discount ability of an item sold and sets the item to<br />
+     "None discountable" on the item line. The discount shift can also temporarily remove the "Stop discount" flag of an item and allow it to receive discounts.</p>
+
+    <p>To temporarily alter the discount ability of an item, follow these steps:</p>
+
+    <ol>
+      <li>
+        <div>
+          Open an epos session and login.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Select the Discount shift button.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          The "Discount shift" message is displayed in the Entry window.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Enter the item.<br />
+        </div>
+      </li>
+    </ol>
+
+    <p class="Note"><strong>Notes:</strong><br />
+     The Discount shift function must be used before entering the item.<br />
+     The Discount shift is effective for one (1) item only. This means you have to use the Discount shift function before each item for which the discount ability must be altered.<br />
+     The Discount shift function affects manual item discounts, proportional discounts, global discounts and shopper level discounts.<br />
+    </p>
+
+    <h2>Food Stamp shift</h2>
+
+    <p>The Food stamp shift function manually adds or removes the food stamp ability of an item sold.</p>
+
+    <p>To temporarily&nbsp;alter the food stamp ability of an item, follow these steps:</p>
+
+    <ol>
+      <li>
+        <div>
+          Open an epos session and login.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Select the Food stamp shift button.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          The "Food stamp shift" message is displayed in the Entry window.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Enter the item.
+        </div>
+      </li>
+    </ol>
+
+    <p class="Note"><strong>Notes:</strong><br />
+     The Food stamp shift function must be used before entering the item.<br />
+     The Food stamp shift is effective for one (1) item only. This means you have to use the Food stamp shift function before each item for which the food stamp ability must be toggled.</p>
+
+    <h1>Special Program Shift</h1>
+
+    <h2>WIC Shift</h2>
+
+    <p>The WIC shift function manually adds or removes the WIC ability of an item sold.</p>
+
+    <p>To temporarily alter the WIC ability of an item, follow these steps:</p>
+
+    <ol>
+      <li>
+        <div>
+          Open an epos session and login.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Select the WIC shift button.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          The "WIC shift" message is displayed in the Entry window.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Enter the item.&nbsp;
+        </div>
+      </li>
+    </ol>
+
+    <p class="Note"><strong>Notes:</strong> The WIC shift function must be used before entering the item.<br />
+     The WIC shift is effective for one(1)&nbsp; item only. This means you have to use the WIC shift function before each item for which the WIC ability must be altered.</p>
+
+    <h2>FSA Shift</h2>
+
+    <p>The FSA shift function manually adds or removes the FSA ability of an item sold, whether the item could be purchased using a FSA card as tender or not.</p>
+
+    <p>To temporarily alter the FSA ability of an item, follow these steps:</p>
+
+    <ol>
+      <li>
+        <div>
+          Open an epos session and login.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Select the FSA shift button.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          The "FSA shift" message is displayed in the Entry window.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          Enter the item.
+        </div>
+      </li>
+    </ol>
+
+    <p class="alert-danger">Important: By default the FSA Shift function does not allow access to any operator. Make sure you have configured the proper access rights before using this function.</p>
+
+    <p class="Note">Notes: The&nbsp;FSA shift function must be used before entering the item. The&nbsp;FSA shift is effective for one(1)&nbsp; item only. This means you have to use the&nbsp;FSA shift function before each item for which the FSA ability must be altered.<br />
+    </p>
+
+    <p><br />
+    </p>
+
+    <p><br />
+    </p>
+
+    <p><br />
+    </p>
+
+    <p><br />
+    </p>
+  </body>
+</html>
+

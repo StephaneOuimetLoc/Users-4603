@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Create Items for MultiTenant</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - How to Create Items for Multitenant <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; New<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Table of Contents</h2>
+
+      <p><a href="#specific_store">Creating a new item for a specific store</a><br>
+      <a href="#target-of-target">Creating a new item using target-of-target</a><br>
+      <a href="#Copying">Copying items from one store to another</a></p>
+
+      <h2>Information</h2>
+
+      <p>In Multitenant, every store is pointing to a single database at the host eliminating the store local database. Therefore, creating an item will generate the records in the master tables specifically for that store (target).&nbsp;</p>
+
+      <h2>Creating a new item for a <a name="specific_store">specific store</a></h2>
+
+      <p><strong>1.</strong> From the launcher, select <strong>Items</strong> then <strong>New.</strong><br>
+      </p>
+
+      <p><img src="Create_item_Multitenant_files/Launcher.png"></p>
+
+      <p>&nbsp;</p>
+
+      <p><strong>2.</strong> Enter the UPC in the <strong>Item Number</strong> field and the target for the store you're creating the item for.</p>
+
+      <p><strong>*** Note if this is being created by an operator linked to a store then that store will be set by default in the Target field.</strong><br>
+      For example, if the operator used to login is linked to store 001 then only target 001 will be available.</p>
+
+      <p><img src="Create_item_Multitenant_files/Enter_item.png"></p>
+
+      <p>&nbsp;</p>
+
+      <p><strong>3.</strong> You will then get prompted to create a new item. Select <strong>Yes.</strong></p>
+
+      <p><img src="Create_item_Multitenant_files/Item_not_found.PNG"></p>
+
+      <p>&nbsp;</p>
+
+      <p><strong>4.</strong> Fill in the information for the master tables: MAIN, POS, PRICE, COST and <strong>Save.</strong></p>
+
+      <p><strong>***</strong> Refer to the document "<strong>eSuite - How to Create Items</strong>" for more details on the layout for each field.</p>
+      <img src="Create_item_Multitenant_files/Create_save.png"><br>
+      <br>
+      <br>
+       
+
+      <h2>Creating a new item using <a name="target-of-target">target-of-target</a></h2>
+      <strong>Target-of-target</strong> is used to create an item for all the targets. This can be useful for a user at the head office that wants to create a new item for multiple stores without having to repeat the steps for each store.<br>
+      In order to achieve this, the operator must <strong>NOT</strong> be linked to a store.<br>
+      <br>
+      Follow the same steps from 1 to 4 and make sure to put a check for the option "<strong>Use target as target-of-target for new item</strong>".<br>
+      Since the operator isn't linked to a store, the default target will be <strong>PAL.<br>
+      </strong>Enter the information for each table and <strong>Save.</strong><br>
+       
+
+      <p><img src="Create_item_Multitenant_files/Target_of_target.png"></p>
+
+      <p>&nbsp;</p>
+
+      <p>You can verify if all targets were created in the master tables by searching for the item added. Select <strong>PAL</strong> for the target and include <strong>POS, Price and Cost</strong> then <strong>Execute</strong>:</p>
+
+      <p><img src="Create_item_Multitenant_files/search.png"></p>
+
+      <p>&nbsp;</p>
+
+      <p>You will see all the targets that have been created in the master tables for this item.</p>
+
+      <p><img src="Create_item_Multitenant_files/all_targets_created.png"></p>
+
+      <p>&nbsp;</p>
+
+      <h2><a name="Copying">Copying</a> items from one store to another</h2>
+
+      <p>Copying items from an existing store could be very useful when adding a new store to the chain.</p>
+
+      <p>Login with an operator that is <strong>NOT</strong> linked to a store.</p>
+
+      <p><strong>1.</strong> From the launcher, select <strong>Items</strong> then <strong>Items.</strong></p>
+
+      <p><img src="Create_item_Multitenant_files/Items_items.png"></p>
+
+      <p>&nbsp;</p>
+
+      <p><strong>2.</strong> In the <strong>Target</strong> field enter the store that you want to copy the items from (in this example we're copying from store 001). Then search for a range of items by adding <strong>more criteria</strong> for <strong>item code start</strong> and <strong>end</strong> then <strong>Execute.</strong></p>
+
+      <p><img src="Create_item_Multitenant_files/Item_search.png"></p>
+
+      <p>&nbsp;</p>
+
+      <p><strong>3.</strong> Select the item(s) that you want to copy and select <strong>Action&gt;Copy to store.</strong></p>
+      <img src="Create_item_Multitenant_files/Copy_to_store.png"><br>
+       
+
+      <p><strong>4.</strong> In the <strong>copy items</strong> window, enter the <strong>destination target</strong> (in this example we're copying to store 002) then select to wich <strong>master tables</strong> you want to copy the item(s) and <strong>Confirm</strong>.</p>
+
+      <p><img src="Create_item_Multitenant_files/Copy_items.png"></p>
+
+      <p>&nbsp;</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

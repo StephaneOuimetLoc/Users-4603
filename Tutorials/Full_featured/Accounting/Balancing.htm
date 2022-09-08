@@ -1,0 +1,1195 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Operator-Safe Balancing</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>Operator &amp; Safe Balancing with LOC SMS</h1>
+
+    <p>Cashier and Safe balancing numbers are reported in multiple LOC SMS reports. This document sheds light on these reports.</p>
+
+    <p>All totals in LOC SMS are available from the <strong>Store Multi Totals</strong> report. The balancing figures are split into multiple sections that this document will explain.</p>
+
+    <table style="width:100%">
+      <tr>
+        <th class="ListTitle" colspan="3">Operator Sections</th>
+      </tr>
+
+      <tr>
+        <th class="list">Name</th>
+
+        <th class="list">Totalizer<br>
+         range</th>
+
+        <th class="list">Description</th>
+      </tr>
+
+      <tr>
+        <td>Tendered</td>
+
+        <td>100</td>
+
+        <td>Portion of sales bought by media. This section is not affected by the operators loans/pickups/declares.</td>
+      </tr>
+
+      <tr>
+        <td>Revenue</td>
+
+        <td>900</td>
+
+        <td>Media received for total sales. This section is not affected by the operators loans/pickups/declares.</td>
+      </tr>
+
+      <tr>
+        <td>Load</td>
+
+        <td>1000</td>
+
+        <td>Loan totals. Money flows from the safe to the operators.</td>
+      </tr>
+
+      <tr>
+        <td>Pickup</td>
+
+        <td>1100</td>
+
+        <td>Pickup totals. Money flows from the operators to the safe.</td>
+      </tr>
+
+      <tr>
+        <td>Expected</td>
+
+        <td>1200</td>
+
+        <td>The amounts that are expected by operator.</td>
+      </tr>
+
+      <tr>
+        <td>Drawer</td>
+
+        <td>1300</td>
+
+        <td>The actual responsibility by operator.</td>
+      </tr>
+
+      <tr>
+        <td>Over/Short</td>
+
+        <td>1400</td>
+
+        <td>Over/short populated after a declare.</td>
+      </tr>
+    </table>
+
+    <table style="width:100%">
+      <tr>
+        <th class="ListTitle" colspan="3">Safe Sections</th>
+      </tr>
+
+      <tr>
+        <th class="list">Name</th>
+
+        <th class="list">Totalizer<br>
+         range</th>
+
+        <th class="list">Description</th>
+      </tr>
+
+      <tr>
+        <td>Received</td>
+
+        <td>2100</td>
+
+        <td>Amounts received in the safe.</td>
+      </tr>
+
+      <tr>
+        <td>Deposit</td>
+
+        <td>2200</td>
+
+        <td>Amounts deposited from the safe.</td>
+      </tr>
+
+      <tr>
+        <td>Expected</td>
+
+        <td>2300</td>
+
+        <td>Amounts expected in the safe.</td>
+      </tr>
+
+      <tr>
+        <td>Ending</td>
+
+        <td>2400</td>
+
+        <td>Actual safe contents.</td>
+      </tr>
+
+      <tr>
+        <td>Over/Short</td>
+
+        <td>2500</td>
+
+        <td>Over/short populated after a declare.</td>
+      </tr>
+    </table>
+
+    <p>In order to visualize what each section is for, let us first go through a regular operation and concentrate on the operator section. Clients are balancing their operators either daily or weekly. This makes the operator balancing much easier because the loop is closed in a day or a week. The steps are: loaning money at the beginning; selling items; doing pickups; declaring the operators at the end. Operators are starting with 0 responsibility and will finish their shifts with 0 responsibility.</p>
+
+    <p>In comparison, the safe is more complex because the amounts are accumulated and calculated, so we need to keep track of opening and closing totals for a safe during a balancing period (daily or weekly).</p>
+
+    <h3>Terminal Balancing</h3>
+
+    <p>In LOC SMS, it is possible to do terminal or operator balancing. The terminal balancing requires a configuration in the <a href="../../Configuration/Ini/System/System_Customer.htm#Terminal_prefix">System.ini file</a> (<strong>Terminal prefix</strong> parameter under the <strong>Customer</strong> part).</p>
+
+    <p>When doing terminal balancing, it is important to know that all totalizers related to the balancing of the drawer will be reported under the virtual operator created for the terminal balancing. All other totalizers will be reported under the "physical" operator.</p>
+
+    <h3>Operator Balancing</h3>
+
+    <p>Here are the details of the Operator balancing process.</p>
+
+    <h4>Before selling, we need to receive money in the safe and to loan money to operators</h4>
+
+    <ol>
+      <li>
+        We will start with $5000 in the safe; 
+
+        <table>
+          <tr>
+            <th class="ListTitle" colspan="3">MEDIA MOVEMENT</th>
+          </tr>
+
+          <tr>
+            <th class="list">Area</th>
+
+            <th class="list">Totalizer/section</th>
+
+            <th class="list">Amount</th>
+          </tr>
+
+          <tr>
+            <td>Safe</td>
+
+            <td>2401-Cash</td>
+
+            <td>$5000</td>
+          </tr>
+        </table>
+      </li>
+
+      <li>
+        In order to start the week, we receive $3000 from the bank to have enough change for the week;
+
+        <table>
+          <tr>
+            <th class="ListTitle" colspan="4">MEDIA MOVEMENT</th>
+          </tr>
+
+          <tr>
+            <th class="list">Area</th>
+
+            <th class="list">Totalizer/section</th>
+
+            <th class="list">Before</th>
+
+            <th class="list">After</th>
+          </tr>
+
+          <tr>
+            <td>Safe</td>
+
+            <td>2401-Cash</td>
+
+            <td>$5000</td>
+
+            <td>$8000</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>2301-Receive Cash</td>
+
+            <td>&nbsp;</td>
+
+            <td>$3000</td>
+          </tr>
+        </table>
+      </li>
+
+      <li>
+        Loan $100 to an operator: 
+
+        <table style="width:60%">
+          <tr>
+            <th class="ListTitle" colspan="4">MEDIA MOVEMENT</th>
+          </tr>
+
+          <tr>
+            <th class="list">Area</th>
+
+            <th class="list">Totalizer/section</th>
+
+            <th class="list">Before</th>
+
+            <th class="list">After</th>
+          </tr>
+
+          <tr>
+            <td>Safe</td>
+
+            <td>2401-Cash</td>
+
+            <td>$8000</td>
+
+            <td>$7900</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>2301-Receive Cash</td>
+
+            <td>$3000</td>
+
+            <td>$3000</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>Operator</td>
+
+            <td>1301-Drawer Cash</td>
+
+            <td>&nbsp;</td>
+
+            <td>$100</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1201-Expected Cash</td>
+
+            <td>&nbsp;</td>
+
+            <td>$100</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1001-Load Cash</td>
+
+            <td>&nbsp;</td>
+
+            <td>$100</td>
+          </tr>
+        </table>
+      </li>
+    </ol>
+
+    <h4>Let us start selling</h4>
+
+    <ol>
+      <li>
+        Total order: $55.00;<br>
+        Customer:$60.00 Cash;<br>
+        Change $5.00 Cash; 
+
+        <table style="width:60%">
+          <tr>
+            <th class="ListTitle" colspan="4">MEDIA MOVEMENT</th>
+          </tr>
+
+          <tr>
+            <th class="list">Area</th>
+
+            <th class="list">Totalizer/section</th>
+
+            <th class="list">Before</th>
+
+            <th class="list">After</th>
+          </tr>
+
+          <tr>
+            <td>Operator</td>
+
+            <td>101 - Tendered Cash</td>
+
+            <td>&nbsp;</td>
+
+            <td>$55</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>901 - Revenue Cash</td>
+
+            <td>&nbsp;</td>
+
+            <td>$55</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1301-Drawer Cash</td>
+
+            <td>$100</td>
+
+            <td>$155</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1201-Expected Cash</td>
+
+            <td>$100</td>
+
+            <td>$155</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1001-Load Cash</td>
+
+            <td>$100</td>
+
+            <td>$100</td>
+          </tr>
+        </table>
+      </li>
+
+      <li>
+        Total Order: $30.00;<br>
+        Customer:$45.00 Check;<br>
+        Change $15.00 Cash; 
+
+        <table style="width:60%">
+          <tr>
+            <th class="ListTitle" colspan="4">MEDIA MOVEMENT</th>
+          </tr>
+
+          <tr>
+            <th class="list">Area</th>
+
+            <th class="list">Totalizer/section</th>
+
+            <th class="list">Before</th>
+
+            <th class="list">After</th>
+          </tr>
+
+          <tr>
+            <td>Operator</td>
+
+            <td>101 - Tendered Cash</td>
+
+            <td>$55</td>
+
+            <td>$55</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>102 - Tendered Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>$30</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>901 - Revenue Cash</td>
+
+            <td>$55</td>
+
+            <td>$40</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>902 - Revenue Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>$45</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1301-Drawer Cash</td>
+
+            <td>$155</td>
+
+            <td>$140</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1302-Drawer Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>$45</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1201-Expected Cash</td>
+
+            <td>$155</td>
+
+            <td>$140</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1202-Expected Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>$45</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1001-Load Cash</td>
+
+            <td>$100</td>
+
+            <td>$100</td>
+          </tr>
+        </table>
+      </li>
+    </ol>
+
+    <h4>Balancing</h4>
+
+    <ol>
+      <li>
+        Pickup $100 Cash and $45 check from the operator; 
+
+        <table style="width:60%">
+          <tr>
+            <th class="ListTitle" colspan="4">MEDIA MOVEMENT</th>
+          </tr>
+
+          <tr>
+            <th class="list">Area</th>
+
+            <th class="list">Totalizer/section</th>
+
+            <th class="list">Before</th>
+
+            <th class="list">After</th>
+          </tr>
+
+          <tr>
+            <td>Operator</td>
+
+            <td>101 - Tendered Cash</td>
+
+            <td>$55</td>
+
+            <td>$55</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>102 - Tendered Check</td>
+
+            <td>$30</td>
+
+            <td>$30</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>901 - Revenue Cash</td>
+
+            <td>$40</td>
+
+            <td>$40</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>902 - Revenue Check</td>
+
+            <td>$45</td>
+
+            <td>$45</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1301-Drawer Cash</td>
+
+            <td>$140</td>
+
+            <td>$40</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1302-Drawer Check</td>
+
+            <td>$45</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1201-Expected Cash</td>
+
+            <td>$140</td>
+
+            <td>$40</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1202-Expected Check</td>
+
+            <td>$45</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1001-Load Cash</td>
+
+            <td>$100</td>
+
+            <td>$100</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1101-Pick Cash</td>
+
+            <td>&nbsp;</td>
+
+            <td>$100</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1102-Pick Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>$45</td>
+          </tr>
+        </table>
+      </li>
+
+      <li>
+        Counted operator drawer with $39, so we do a last pickup of $39; 
+
+        <table style="width:60%">
+          <tr>
+            <th class="ListTitle" colspan="4">MEDIA MOVEMENT</th>
+          </tr>
+
+          <tr>
+            <th class="list">Area</th>
+
+            <th class="list">Totalizer/section</th>
+
+            <th class="list">Before</th>
+
+            <th class="list">After</th>
+          </tr>
+
+          <tr>
+            <td>Operator</td>
+
+            <td>101 - Tendered Cash</td>
+
+            <td>$55</td>
+
+            <td>$55</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>102 - Tendered Check</td>
+
+            <td>$30</td>
+
+            <td>$30</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>901 - Revenue Cash</td>
+
+            <td>$40</td>
+
+            <td>$40</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>902 - Revenue Check</td>
+
+            <td>$45</td>
+
+            <td>$45</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1301-Drawer Cash</td>
+
+            <td>$40</td>
+
+            <td>$1</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1302-Drawer Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1201-Expected Cash</td>
+
+            <td>$40</td>
+
+            <td>$1</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1202-Expected Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1001-Load Cash</td>
+
+            <td>$100</td>
+
+            <td>$100</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1101-Pick Cash</td>
+
+            <td>$100</td>
+
+            <td>$139</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1102-Pick Check</td>
+
+            <td>$45</td>
+
+            <td>$45</td>
+          </tr>
+        </table>
+      </li>
+
+      <li>
+        Declare operator at zero; 
+
+        <table style="width:60%">
+          <tr>
+            <th class="ListTitle" colspan="4">MEDIA MOVEMENT</th>
+          </tr>
+
+          <tr>
+            <th class="list">Area</th>
+
+            <th class="list">Totalizer/section</th>
+
+            <th class="list">Before</th>
+
+            <th class="list">After</th>
+          </tr>
+
+          <tr>
+            <td>Operator</td>
+
+            <td>101 - Tendered Cash</td>
+
+            <td>$55</td>
+
+            <td>$55</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>102 - Tendered Check</td>
+
+            <td>$30</td>
+
+            <td>$30</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>901 - Revenue Cash</td>
+
+            <td>$40</td>
+
+            <td>$40</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>902 - Revenue Check</td>
+
+            <td>$45</td>
+
+            <td>$45</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1301-Drawer Cash</td>
+
+            <td>$1</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1302-Drawer Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1201-Expected Cash</td>
+
+            <td>$1</td>
+
+            <td>$1</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1202-Expected Check</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1001-Load Cash</td>
+
+            <td>$100</td>
+
+            <td>$100</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1101-Pick Cash</td>
+
+            <td>$139</td>
+
+            <td>$139</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1102-Pick Check</td>
+
+            <td>$45</td>
+
+            <td>$45</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+
+            <td>&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>&nbsp;</td>
+
+            <td>1401-SO Cash</td>
+
+            <td>&nbsp;</td>
+
+            <td>$-1</td>
+          </tr>
+        </table>
+      </li>
+    </ol>
+
+    <h3>Safe Balancing</h3>
+
+    <p>By default, LOC SMS keeps figure totals by day, by week, by month and by year. Depending on the period you choose, the reports will add all amounts by date. Earlier dates can also be selected. The <strong>Operator balancing</strong> report or the <strong>Multi totals by operator</strong> report will show the same figures.</p>
+
+    <p>Safe reports are more challenging because they need to keep a running total day after day, week after week. You need to be careful in your report selection since the weekly numbers are not necessarily the addition of the daily numbers, the <strong>Store Multi Totals</strong> report will not give the same result if you select daily, weekly for the actual week or weekly for the previous week.</p>
+
+    <p>However, the reports available in the <strong>Accounting</strong> section of the <strong>Store</strong> reports (<strong>SMS Pro</strong>/<strong>Reports</strong>/<strong>Financial</strong>/<strong>Store</strong>/<strong>Accounting</strong>) will always give what you are expecting as your safe balancing figures. The <strong>Store Multi Totals</strong> report will also give the safe balancing figures, but you need to filter what you are looking for. The safe ending figure in the <strong>Store Multi Totals</strong> report is where there will be a variance, so stay with the <strong>Safe</strong> reports.</p>
+
+    <table style="width:60%">
+      <tr>
+        <th class="ListTitle" colspan="4">SAFE</th>
+      </tr>
+
+      <tr>
+        <th class="list">Area</th>
+
+        <th class="list">Totalizer</th>
+
+        <th class="list">Day</th>
+
+        <th class="list">Week</th>
+      </tr>
+
+      <tr>
+        <td>Received</td>
+
+        <td>2100 - 2199</td>
+
+        <td>Total day</td>
+
+        <td>Total week</td>
+      </tr>
+
+      <tr>
+        <td>Deposited</td>
+
+        <td>2200 - 2299</td>
+
+        <td>Total day</td>
+
+        <td>Total week</td>
+      </tr>
+
+      <tr>
+        <td>Expected</td>
+
+        <td>2300 - 2399</td>
+
+        <td>Total day</td>
+
+        <td>Total week</td>
+      </tr>
+
+      <tr>
+        <td>Over/Short</td>
+
+        <td>2500 - 2599</td>
+
+        <td>Total day</td>
+
+        <td>Total week</td>
+      </tr>
+
+      <tr>
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
+
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>Ending</td>
+
+        <td>2400 - 2499</td>
+
+        <td>Total movement</td>
+
+        <td>End of week value</td>
+      </tr>
+    </table>
+
+    <h3>Troubleshooting tips</h3>
+
+    <p>Here are some tips to help troubleshooting issues.</p>
+
+    <h4>The tender to pickup is not visible in the tender list</h4>
+
+    <p>Verify in the <strong>Function</strong> table that the manager or the user has sufficient permissions for that tender.</p>
+  </body>
+</html>
+

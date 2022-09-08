@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Deploy scalelink</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+        <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - XchScale Overview and Deployment <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Utilities &gt; Scale Deli <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+       <a id="top"></a>
+
+      <h2>Information</h2>
+
+      <p><a id="top0"></a> The <em>XchScale - Overview and Deploy</em> document describes how to maintain/deploy items to production scales using the <strong>Deploy_Scale_Plum</strong> option.</p>
+
+      <p>This document assumes that the operator performing scale maintenance is familiar with the following software concepts:</p>
+
+      <ul>
+        <li>Item Maintenance</li>
+      </ul>
+
+      <h2>Index</h2>
+
+      <ul>
+        <li>
+          <a href="#RW">Random Weight Items</a>
+
+          <ul>
+            <li><a href="#weighed">Weighed Items</a></li>
+
+            <li><a href="#bycount">By Count Items</a></li>
+
+            <li><a href="#specific">Specific Behavior flags</a></li>
+
+            <li><a href="#exception">Exception Flags</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#access">Accessing scale-related tables</a></li>
+
+        <li>
+          <a href="#Deploy_Item">Deploy Items</a>
+
+          <ul>
+            <li><a href="#weighed0">Deploy - Weighed Item</a></li>
+
+            <li><a href="#bycount0">Deploy - By Count Item</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#specific">Specific Behavior Flags</a> 
+
+          <ul>
+            <li><a href="#NScaleO">Specific Behavior Flags - Not flagged scalable with Others</a></li>
+
+            <li><a href="#ScaleO">Specific Behavior Flags - Flagged scalable with Others</a></li>
+
+            <li><a href="#ScaleD">Specific Behavior Flags - Flagged scalable with Divisor</a></li>
+
+            <li><a href="#ScaleDO">Specific Behavior Flags - Flagged scalable with Divisor and Others</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#Banana">Weighed Random Weight - Basic Setup - Banana Example</a></li>
+
+        <li><a href="#Meat">Weighed Random Weight - Alternate Code - Meat Example</a></li>
+      </ul>
+
+      <h2 id="RW">Random Weight Items</h2>
+
+      <p>Random Weight item formats can be <a href="#weighed">weighed</a> or <a href="#bycount">by count</a>. The barcode printed on the label is a specific format: Leading with a 002 or 02, followed by 5 or 6 digits for the PLU of the item, then 4 to 5 more digits containing the actual sale price.<br>
+      The barcode contains the sale price, not the sell price and a check digit to ensure barcode validity.&nbsp;</p>
+
+      <p>In some places, such as Latin America, the barcode may contain the weight of the item as opposed to the sale price. Configuration varies depending on the physical scale settings. Please refer to the most common examples in the table below.</p>
+      <br>
+      <br>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><strong>002 Code</strong></th>
+
+            <th><strong>02 Code</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>002PPPPPCXXXX <em><br>
+           002 code + PPPPP for PLU + C for CheckDigit + XXXX for price/weight.</em> </td>
+
+          <td><em>02DPPPPPCXXXX<br>
+           02 code + D for Department + PPPPP for PLU + C for CheckDigit + XXXX for price/weight.</em> </td>
+        </tr>
+
+        <tr>
+          <td>002PPPPPXXXXX<em><br>
+           002 code + PPPPP for PLU + XXXXX for price/weight.</em></td>
+
+          <td><em>02DPPPPPXXXXX<br>
+           02 code + D for Department + PPPPP for PLU + XXXXX for price/weight.</em> </td>
+        </tr>
+      </table>
+
+      <p><a href="#top">Back to Top</a></p>
+
+      <h3 id="weighed">Weighed Items</h3>
+
+      <p>Weighed Random Weight items, are items that are weighed on production scales in departments such as: Deli; Meat; Fruit and Vegetable. Once an item is weighed, the scale will print a label with the price.</p>
+
+      <p>When the item is scanned at the POS, the barcode will be decoded and the PLU will be used to find the item. The item will be added to the sale, using the sell price on the item, example $19.99/kg. The POS will then take the sale value from the barcode and divide it by the sell price to get a quantity, for example $5.00/$19.99 = 0.25; <strong><em>e.g.:</em></strong> <em>Mozzarella is priced at $19.99/kg and the customer gets a piece weighing 0.25 kg. The item is worth $5.00. The scale will produce a label with a barcode on it which is placed on the mozzarella. When this is scanned at the front-end POS, the mozzarella will be added to the sale at $5.00.</em></p>
+
+      <p>For steps on how to program a weighed item, see <a href="#weighed0">Weighed</a> items topic in <strong>Deploying Items</strong> section below.</p>
+
+      <p><a href="#top">Back to Top</a></p>
+
+      <h3 id="bycount">By Count Items</h3>
+
+      <p>By Count items, are items that are normally pre-packaged at the same price, with the same or slight variance in weight. The scale will print a label for the price; <strong><em>e.g.:</em></strong> <em>Chicken wings are priced at 0.35¢/each and the customer gets 10 wings. The box is worth $3.50. The scale will produce a label with a barcode on it which is placed on the box containing the chicken wings. When this is scanned at the front-end POS, the box of chicken wings will be added to the sale at $3.50.</em></p>
+
+      <p>For steps on how to program a by count item, see <a href="#bycount0">By Count</a> items topic in the <strong>Deploying Items</strong> section below.</p>
+
+      <p class="Note"><strong>NOTE:</strong> 'By Count' items that are <span class="auto-style3">weighed</span> are <em>not</em> supported by many scales, <em>do not</em> set if not supported by the scale.</p>
+
+      <p><a href="#top">Back to Top</a></p>
+
+      <h3 id="specific">Specific Behavior flags</h3>
+
+      <p>In some cases specific flags can be set to configure special behaviors for scalable items. For details of particular behaviors, see <a href="#Specific">Specific Behavior flags</a> topic in section below.</p>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+
+      <h3 id="exception">Exception flags</h3>
+
+      <p>Exception flags are used to add settings that are unsupported by eSuite. They consist of manually programmed item values in order to achieve scale specific behavior(s) and passed in the HOSTCHNG file. They can be added to the <strong>URL</strong> <em>(F2660)</em> field in the <strong>POS</strong> table in eSuite.</p>
+
+      <p>For context, new features are regularly added to the market for production scales (existing or non-existing). To support these features, Invatron adds fields to their driver(s). By using exception flags, it is possible to use these new fields without having to wait for the next version/release of eSuite.</p>
+
+      <p class="Note"><strong>NOTES</strong><br>
+      • Exception flags may also be used to support existing Invatron parameters, which were not added to eSuite.<br>
+      • If using the URL field, do not duplicate a key that already exists in eSuite.</p>
+
+      <h6>Print Packaged Date/Time</h6>
+
+      <p>In order to enable <em>Print Packaged Date</em> and <em>Print Packaged Time</em> for production scale labels, a value needs to be entered into the <strong>URL</strong> <em>(F2660)</em> field of the <strong>POS</strong> table.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Value</th>
+
+            <th>Detail</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>XCHSCALE.PPD=Y,XCHSCALE.PPT=N</td>
+
+          <td>Print date only</td>
+        </tr>
+
+        <tr>
+          <td>XCHSCALE.PPD=Y,XCHSCALE.PPT=Y</td>
+
+          <td>Print date and time</td>
+        </tr>
+
+        <tr>
+          <td>XCHSCALE.PPD=N,XCHSCALE.PPT=N</td>
+
+          <td>DO NOT print date and time</td>
+        </tr>
+      </table>
+
+      <h6>Expiration by hour</h6>
+
+      <p>In order to enable <em>expiry by hour</em> instead of days, a value needs to be entered into the <strong>URL</strong> <em>(F2660)</em> field of the <strong>POS</strong> table.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Value</th>
+
+            <th>Detail</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>SLT=0</td>
+
+          <td>Print expiry in days (<em>default</em>)</td>
+        </tr>
+
+        <tr>
+          <td>SLT=1</td>
+
+          <td>Print expiry in hours</td>
+        </tr>
+      </table>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+
+      <h2 id="access">Accessing scale-related tables</h2>
+
+      <p>The scale tables (ingredients, nutrifacts, storage, scale COOL) are available from the <strong>Auxiliary tables</strong> entry in the launcher:</p>
+
+      <p style="text-align:center"><img alt="" height="398" src="Deploy_Scale_Overview_files/scale_tables.png" width="400"></p>
+
+      <p>The <strong>Alternate codes</strong> and the <strong>Scale information</strong> tables are available from the <strong>Edit</strong> button in the list of items:</p>
+
+      <p style="text-align:center"><img alt="" height="430" src="Deploy_Scale_Overview_files/edit_item.png" width="500"></p>
+
+      <p class="Note"><strong>NOTE:</strong> For more information on all tables highlighted in the above images, please refer to their respective User documents.</p>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+
+      <h2 id="Deploy_Item">Deploying Items</h2>
+
+      <p>In order to properly deploy an item to a scale, the random weight format must be used (Code 002 or 02). Type the PLU, then press the front slash ( <strong>/</strong> ) key, the PLU will automatically expand into a random weight UPC format.</p>
+
+      <h3 id="weighed0">Weighed Item</h3>
+
+      <ol>
+        <li>Create a random weight item with a 5 digit or 6 digit PLU.<br>
+        To do so, type the PLU desired and select '/' before hitting enter to confirm item creation. The code will expand into a Random Weight format.<br>
+        <em><strong>e.g.:</strong> Enter PLU '12345' then /. PLU will automatically expand to become '0021234500000'.</em></li>
+
+        <li>You need to set a 'Sub-Department' and sell 'Price' of the item.<br>
+        <em><strong>e.g.:</strong> Sell price would be $19.99/kg based on example above.</em></li>
+
+        <li>You need to flag the item as 'Scalable' in the POS table.</li>
+      </ol>
+
+      <h3 id="bycount0">By Count Item</h3>
+
+      <ol>
+        <li>Create a random weight item with a 5 digit or 6 digit PLU.<br>
+        To do so, type the PLU desired and select '/' before hitting enter to confirm item creation. The code will expand into a Random Weight format.<br>
+        <em><strong>e.g.:</strong> Enter PLU '12345' then /. PLU will automatically expand to become '0021234500000'.</em></li>
+
+        <li>You need to set a 'Sub-Department' and sell 'Price' of the item.</li>
+      </ol>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+
+      <h2 id="specific5">Specific Behavior Flags</h2>
+
+      <p>The 'Others' field flags can be used when wanting specific behavior for an item. For a summary on these flags please refer to the <a href="../../POS_Table.htm#Other_flags"><strong>Other flags</strong> (POS table)</a>, <a href="../../../Dimensions/Dimensions_tables/Subdpt_table.htm#Other_flags"><strong>Other flags</strong> (Sub-department table)</a> and <a href="../../../Dimensions/Dimensions_tables/Department_table.htm#Other_flags"><strong>Other flags</strong> (Department table)</a>. For more detail, please refer to the descriptions in the table below.</p>
+
+      <p>The 'Divisor' field flags can be used when wanting a weight divisor for an item. For a summary on these flags please refer to the <a href="../../POS_Table.htm#Divisor"><strong>Divisor</strong> field - POS table</a> document. For more detail, please refer to the descriptions in the table below.</p>
+
+      <h3 id="NScaleO">Not Flagged Scalable with Others</h3>
+
+      <p><img alt="" height="500" src="Deploy_Scale_Overview_files/Others_Field.png" width="386"></p>
+
+      <ol>
+        <li><strong>Scale Fix Weight</strong> - A scale fix weight item is an item that has no variance in weight. <strong><em><br>
+        e.g.:</em></strong> <em>Box of frozen salmon filet, individual portion, 6oz.</em></li>
+
+        <li><strong>Scale Fix Weight by Count</strong> - A scale fix weight by count item is an item that has no variance in weight and is calculated by unit. The weight is tracked for inventory purposes. <strong><em><br>
+        e.g.:</em></strong> <em>Store made cookies. Each cookie weighs 3 ounces but is sold by unit, 1/$1.00.</em></li>
+
+        <li><strong>Scale Fix Price</strong> - A scale fix price item is an item that has no variance in price. Weight may differ slightly, price remains the same. <strong><em><br>
+        e.g.:</em></strong> <em>A pack of 5 boneless chicken breast at $10.00/pack.</em></li>
+
+        <li><strong>Scale Open Price</strong> - A scale open price item is an item that does not have a set price. The operator will be prompted to enter a price value once having placed the item on the scale. The system will calculate the weight versus price entered to provide sale amount<strong><em>.<br>
+         e.g:</em></strong> <em>Applies to any regular random weight item, but allows item price to be modified at the scale.</em></li>
+
+        <li>
+          <strong>Scale Turkeyware</strong> - A scale turkeyware item is an item that is weighable and by count. The turkey is being sold by unit regardless of its weight. The weight is tracked for inventory purposes, as normally throughout the year the item would be sold dollar per pound/kilogram. <strong><em><br>
+           e.g:</em></strong> <em>Thanksgiving Holiday - Turkey Special, 3/$30.00.<br>
+          </em> <strong></strong>
+
+          <div class="alert alert-warning">
+            <strong>NOTE:</strong> <em>'By Count' items that are weighed are not supported by many scales. This should not be set if not supported by the scale.</em>
+          </div>
+        </li>
+
+        <li><strong>Scale Force Tare</strong> - A scale force tare item is an item that does not have an automatic tare set. The operator will be prompted to enter a tare value once having placed the container on the scale. Then, the tare will be zeroed out to proceed with weighing the item(s). The customer is charged for the weight of the item(s), not the container.<br>
+        <strong><em>e.g:</em></strong> <em>Popcorn chicken $1.00/gram - Small, Medium, Large formats (Small box = 0.5 grams, Medium box = 0.8 grams, Large box = 1 gram).</em></li>
+      </ol>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+
+      <h3 id="ScaleO">Flagged Scalable with Others</h3>
+
+      <p><img alt="" height="500" src="Deploy_Scale_Overview_files/Others_Field_Scalable.png" width="386"></p>
+
+      <ol>
+        <li><strong>Scale Fix Weight</strong> - A scale fix weight item is an item that has no variance in weight.<br>
+         <em><strong>e.g.:</strong> Box of frozen salmon filet, individual portion, 6oz. Weight is tracked for inventory.</em></li>
+
+        <li value="3"><strong>Scale Fix Price</strong> - <a id="Specific3">A scale fix price item is an item that has no variance in price. Weight may differ slightly, price remains the same.</a><br>
+         <a id="Specific4"><strong><em>e.g.:</em></strong> <em>A pack of 5 boneless chicken breast at $10.00/pack. Weight is tracked for inventory.</em></a></li>
+
+        <li value="6"><strong>Scale Force Tare</strong> - A scale force tare item is an item that does not have an automatic tare set. The operator will be prompted to enter a tare value once having placed the container on the scale. Then, the tare will be zeroed out to proceed with weighing the item(s). The customer is charged for the weight of the item(s), not the container. <em>Weight is tracked for inventory.<br>
+        <strong>e.g:</strong> Popcorn chicken $1.00/gram - Small, Medium, Large formats (Small box = 0.5 grams, Medium box = 0.8 grams, Large box = 1 gram).</em></li>
+      </ol>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+
+      <h3 id="ScaleD">Flagged Scalable with Divisor</h3>
+
+      <p><img alt="" height="400" src="Deploy_Scale_Overview_files/Divisor_Scalable.png" width="386"></p>
+
+      <ul>
+        <li><strong>Item Quarter Pound</strong> - A quarter pound item is an item that is sold by a quarter of a pound. In order to achieve this, a value of 0.25 needs to be entered in the divisor field.<br>
+        <em><strong>e.g.:</strong> Ground beef patties, sold at a 1/4 lb each.</em></li>
+
+        <li><strong>Item Half Pound</strong> - A half pound item is an item that is sold by a half of a pound. In order to achieve this, a value of 0.5 needs to be entered in the divisor field.<br>
+        <em><strong>e.g.:</strong> Ground turkey patties, sold at a 1/2 lb each.</em></li>
+      </ul>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+
+      <h3 id="ScaleDO">Flagged Scalable with Divisor and Others</h3>
+
+      <p><img alt="" height="500" src="Deploy_Scale_Overview_files/Others_Field_Scalable_Divisor.png" width="386"></p>
+
+      <ul>
+        <li><strong>Scale Open Price - Quarter Pound</strong> - A sale open price quarter pound item is an item that is sold by a quarter of a pound at the amount entered by the operator. In order to achieve this, a value of 0.25 needs to be entered in the divisor field with '<em>SO</em>' in the <em>'Others'</em> field.<br>
+        <em><strong>e.g.:</strong> Pre-packed slices of cheese, sold at a 1/4 lb each. The manager decides to reduce the price because they are getting close to the expiry date.</em></li>
+
+        <li><strong>Scale Open Price - Half Pound</strong> - A sale open price half pound item is an item that is sold by a half of a pound at the amount entered by the operator. In order to achieve this, a value of 0.5 needs to be entered in the divisor field with '<em>SO</em>' in the <em>'Others'</em> field.<br>
+        <em><strong>e.g.:</strong> Pre-packed meat, sold at a 1/2 lb each. The manager decides to reduce the price because the cut isn't satisfactory.</em></li>
+
+        <li><strong>Scale Open Price - Kilogram/Pound</strong> - A sale open price half pound item is an item that is sold by a half of a pound at the amount entered by the operator. In order to achieve this, a value of 0.5 needs to be entered in the divisor field with '<em>SO</em>' in the <em>'Others'</em> field.<br>
+        <em><strong>e.g.:</strong> Pre-packed strawberries, sold at a 1 kg/lb each. The manager decides to reduce the price because they are no longer fresh.</em></li>
+      </ul>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+
+      <table>
+        <tr>
+          <td>
+            <h3 id="Banana">Weighed Random Weight - Basic Setup - Banana Example</h3>
+
+            <p>View - Basic All in One</p>
+
+            <p>Required settings:</p>
+
+            <ul>
+              <li><strong>002</strong> or <strong>02</strong> code; as the main UPC or ALT code.</li>
+
+              <li><strong>Description Long;</strong> Will be replaced by the <em>Scale Desctriptor 1</em> from the <em>Scale Information</em> table if populated.</li>
+
+              <li><strong>Sub-Department;</strong> must qualify for the scale.</li>
+
+              <li><strong>Price;</strong> sell price.</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td><img alt="" height="558" src="Deploy_Scale_Overview_files/Banana_Example.png" width="798"> </td>
+        </tr>
+
+        <tr>
+          <td>
+            <h3 id="Meat">Weighed Random Weight - Alternate Code - Meat Example</h3>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p>Please refer to the example below to see how a Meat item can be configured.<br>
+            Alternate code, Storage Instructions and COOL formatting are demonstrated but optional.</p>
+
+            <p class="Note"><strong>NOTE:</strong> It is possible to attach a random weight 'Alternate Code' to the main item code so information pertinent to the scale is deployed.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="height: 805px"><img alt="" height="777" src="Deploy_Scale_Overview_files/Meat_Example.png" width="1000"> </td>
+        </tr>
+      </table>
+
+      <div>
+        <a href="#top">Back to Top</a>
+      </div>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

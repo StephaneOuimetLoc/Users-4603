@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <title>Add Windows Users to the LOC SMS Windows Groups</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>Add Windows Users to the LOC SMS Windows Groups</h1>
+
+    <p>This document describes the steps to add Windows users to the different LOC SMS Windows groups created during the installation of the LOC Store Management Suite software.</p>
+
+    <p>When you install the Share files component, four Windows groups are created. Each of them has specific characteristics that are important to know when it is time to add Windows users to them.</p>
+
+    <table style="width: 100%">
+      <tr>
+        <td><b>SMSOperators</b></td>
+
+        <td><b>SMSProgrammers</b></td>
+
+        <td><b>SMSRunAs</b></td>
+
+        <td><b>SMSDenied</b></td>
+      </tr>
+
+      <tr>
+        <td>Windows users who belong to the <b>SMSOperators</b> Windows group are the regular day-to-day users of the LOC Store Management Suite software, i.e. they have access to the regular operations with regular rights (regular levels in the system). The access to the Logs folder is denied.</td>
+
+        <td>Windows users who belong to the <b>SMSProgrammers</b> Windows group have administrative privileges inside the LOC Store Management Suite software, i.e. they have access to all operations with programmer rights (highest level in the system). The access to the Logs folder is denied.</td>
+
+        <td>Windows users who belong to the <b>SMSRunAs</b> Windows group are denied file access to the LOC SMS files but they are granted access to the LOC SMS software through the <b>SMSRunAs</b> utility. See <a href="SMSRunAs.htm"><b>SMSRunAs utility</b></a> for more details.</td>
+
+        <td>Windows users who belong to the <b>SMSDenied</b> Windows group are prevented access to the LOC Store Management Suite software. This group is used to prevent users from accessing the LOC SMS software and its files, so they are the computer users who do not work with the LOC SMS software.</td>
+      </tr>
+    </table>
+
+    <h3>Procedure for a Workgroup computer</h3>
+
+    <p class="Note"><b>Note:</b><br>
+    The steps are a slightly different if the computer is joined to <a href="#Domain">domain</a>.</p>
+
+    <ol>
+      <li class="Steps">Press 'Windows key + X' and select 'Computer Management'.</li>
+
+      <li class="Steps">
+        Expand the <b>Local Users and Groups</b> and select <b>Users.</b> 
+
+        <p class="List">The list of all Windows users is displayed.<br>
+         <img border="0" src="Add_users_to_groups_files/Computer_management_window.png" width="638"></p>
+      </li>
+
+      <li class="Steps">In the list of Windows users, double-click the user name of the user you want to customize (create a new user if the desired one does not exist).</li>
+
+      <li class="Steps">
+        In the <b>User Properties</b> window, click the <b>Member Of</b> tab; 
+
+        <p class="List">The <b>Member Of</b> tab lists all Windows groups in which the current user is actually a member.<br>
+         <img border="0" src="Add_users_to_groups_files/Member_Of_tab.png" width="404"></p>
+      </li>
+
+      <li class="Steps">
+        To add a group to the list, click <img class="Text" border="0" src="Add_users_to_groups_files/Add_btn.png" width="75" height="23">. 
+
+        <p class="List">The <b>Select Groups</b> window is displayed.<br>
+         <img border="0" src="Add_users_to_groups_files/Select_groups_window.png" width="464"></p>
+      </li>
+
+      <li class="Steps">
+        In the <b>Select Groups</b> window, click <img class="Text" border="0" src="Add_users_to_groups_files/Advanced_btn.png" width="90" height="23">. 
+
+        <p class="List">The <b>Select Groups</b> window is displayed.<br>
+         <img border="0" src="Add_users_to_groups_files/Select_groups_window_2.png" width="521"></p>
+      </li>
+
+      <li class="Steps">
+        In this other <b>Select Groups</b> window, click <img class="Text" border="0" src="Add_users_to_groups_files/Find_now_btn.png" width="75" height="23">. 
+
+        <p class="List">This lists all Windows groups that exist on the local machine.<br>
+         <img border="0" src="Add_users_to_groups_files/List_of_groups.png" width="521"></p>
+      </li>
+
+      <li class="Steps">
+        In the list of groups, select the Windows group to add, and click <img class="Text" border="0" src="Add_users_to_groups_files/OK_btn.png" width="75" height="23">. 
+
+        <p class="List">This enters the selected group in the <b>Enter the object names to select</b> field of the first <b>Select Groups</b> window.<br>
+         <img border="0" src="Add_users_to_groups_files/Group_selected.png" width="464"></p>
+      </li>
+
+      <li class="Steps">
+        Click<img class="Text" border="0" src="Add_users_to_groups_files/OK_btn.png" width="75" height="23"> to confirm the addition of the selected group. 
+
+        <p class="List">The Windows user is now member of the selected group.<br>
+         <img border="0" src="Add_users_to_groups_files/Group_added.png" width="404"></p>
+      </li>
+
+      <li>
+        <p class="List">Click <img class="Text" border="0" src="Add_users_to_groups_files/OK_btn.png" width="75" height="23"> to close the <b>User Properties</b> window.</p>
+      </li>
+
+      <li>
+        <p class="List">Close the <b>Computer Management</b> window.</p>
+      </li>
+    </ol>
+
+    <h3>Procedure on Active Directory</h3>
+
+    <p><a name="Domain0"></a><strong>To add a Windows user to a LOC SMS Windows group <u>in Active Directory</u>, follow these steps:</strong></p>
+
+    <ol>
+      <li class="Steps">
+        From the <b>Start</b> menu, choose <b>Administrative Tools</b> &gt; <b>Active Directory Users and Computers.</b><br>
+         <img border="0" src="Add_users_to_groups_files/ActiveDirectoryUsers.png"> 
+
+        <p class="List">The <b>Active Directory Users and Computers</b> window is displayed.</p>
+      </li>
+
+      <li class="Steps">
+        In the <b>Active Directory Users and Computers</b> window, expand the domain and select <b>Users.</b> 
+
+        <p class="List">This lists all existing Windows users on the domain.<br>
+         <img border="0" src="Add_users_to_groups_files/ActiveDirectoryUsersSelection.png"></p>
+      </li>
+
+      <li class="Steps">
+        In the list of existing Windows users, double-click the username of the user you want to customize (create a new user if the desired one does not exist). 
+
+        <p class="List">This opens the <b>Operator Properties</b> window.</p>
+      </li>
+
+      <li class="Steps">
+        In the <b>Operator Properties</b> window, click the <b>Member Of.</b> 
+
+        <p class="List">The <b>Member Of</b> tab lists all Windows groups in which the current operator is actually a member.<br>
+         <img border="0" src="Add_users_to_groups_files/ActiveDirectoryUsersAddGroup.png"></p>
+      </li>
+
+      <li class="Steps">
+        To add a group in the list, click <img class="Text" border="0" src="Add_users_to_groups_files/Add_btn_domain.png" width="75" height="23">. 
+
+        <p class="List">This opens the <b>Select Groups</b> window.<br>
+         <img border="0" src="Add_users_to_groups_files/ActiveDirectoryUsersAddGroup2.png"></p>
+      </li>
+
+      <li class="Steps">
+        In the <b>Select Groups</b> window, click <img class="Text" border="0" src="Add_users_to_groups_files/Advanced_btn_domain.png" width="90" height="23">. 
+
+        <p class="List">This opens another <b>Select Groups</b> window.</p>
+      </li>
+
+      <li class="Steps">
+        In this other <b>Select Groups</b> window, click <img class="Text" border="0" src="Add_users_to_groups_files/Find_now_btn_domain.png" width="73" height="21">. 
+
+        <p class="List">This lists all Windows groups that exist on the domain.<br>
+         <img border="0" src="Add_users_to_groups_files/ActiveDirectoryUsersAddGroup3.png"></p>
+      </li>
+
+      <li class="Steps">
+        In the list groups, select the Windows group to add, and click <img class="Text" border="0" src="Add_users_to_groups_files/OK_btn_domain.png" width="75" height="23">. 
+
+        <p class="List">This enters the selected group in the <b>Enter the object names to select</b> field of the first <b>Select Groups</b> window.<br>
+         <img border="0" src="Add_users_to_groups_files/ActiveDirectoryUsersAddGroup4.png"></p>
+      </li>
+
+      <li class="Steps">
+        Click <img class="Text" border="0" src="Add_users_to_groups_files/OK_btn_domain.png" width="75" height="23"> to confirm the addition of the selected group. 
+
+        <p class="List">The Windows operator is now member of the selected group.<br>
+         <img border="0" src="Add_users_to_groups_files/ActiveDirectoryUsersAddGroup5.png"></p>
+      </li>
+
+      <li>
+        <p class="List">Click <img class="Text" border="0" src="Add_users_to_groups_files/OK_btn_domain.png" width="75" height="23"> to close the <b>Operator Properties</b> window.</p>
+      </li>
+
+      <li>
+        <p class="List">Close the <b>Active Directory Users and Computers</b> window.</p>
+      </li>
+    </ol>
+  </body>
+</html>
+

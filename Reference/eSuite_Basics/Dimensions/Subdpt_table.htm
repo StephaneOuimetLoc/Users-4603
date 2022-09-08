@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Active" />
+    <title>Sub-department Table</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+        <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Sub-department Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Dimenstions &gt; Sub-Departments &gt; List <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>Sub-department</strong> table contains information for groups of items. The eSuite uses sub-departments as a way of grouping both coded items and direct key sales for reporting.</p>
+
+      <p>Instead of linking coded items directly to <a href="Department_table.htm">departments</a>, eSuite uses sub-departments to group items, and then links the sub-departments to departments. This allows for another report level, regrouping item codes in a more specific manner.</p>
+
+      <p>The sub-departments also have their own settings, such as taxability, maximum and minimum entries for sales and voids etc., used when direct key sales are performed. The items can also be programmed to follow these settings. The <b>Sub-department</b> table has to be deployed to the points of sale. The eSuite software does not support sub-department programming for all types of points of sale. The sub-department information may not get through to all points of sale; however, the Sub-department table must be programmed to use the sub-departments for reporting purposes.</p>
+
+      <h2>Displaying the Sub-department table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Dimensions</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Sub-departments</strong>: the <strong>Start</strong> window opens in the <strong>Sub-depart</strong> work area.</li>
+
+        <li>Click on <strong>List</strong>: the <strong>Sub-depts</strong> tab opens in the same window, displaying the <strong>Sub-department List</strong>.</li>
+
+        <li>To modify an existing sub-department, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit - Sub-department F3</strong> command in the bottom menu: the <strong>Sub-department</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new sub-department, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Sub-department</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <p><img src="Subdpt_table_files/subdpt_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Sub-department</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>bottom section</strong>.</p>
+
+      <h3><strong>Main section</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" src="Subdpt_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="12, 114, 72, 139" href="#Number">
+            <area shape="rect" coords="77, 115, 319, 141" href="#Description">
+            <area shape="rect" coords="321, 114, 394, 141" href="#Department">
+            <area shape="rect" coords="12, 164, 73, 190" href="#Max._entry">
+            <area shape="rect" coords="77, 165, 148, 191" href="#Min._entry">
+            <area shape="rect" coords="13, 215, 74, 241" href="#Max._void">
+            <area shape="rect" coords="76, 214, 147, 241" href="#Max._refund">
+            <area shape="rect" coords="11, 264, 72, 291" href="#Cust._age">
+            <area shape="rect" coords="78, 264, 147, 293" href="#Cash._age">
+            <area shape="rect" coords="11, 315, 73, 340" href="#Margin">
+            <area shape="rect" coords="76, 314, 147, 342" href="#Discount">
+            <area shape="rect" coords="171, 314, 262, 342" href="#Restrict.">
+            <area shape="rect" coords="11, 365, 93, 391" href="#Commission">
+            <area shape="rect" coords="97, 365, 196, 391" href="#Shrink">
+            <area shape="rect" coords="202, 364, 392, 391" href="#Other_flags">
+            <area shape="rect" coords="13, 414, 73, 442" href="#Mem._no.">
+            <area shape="rect" coords="79, 414, 136, 441" href="#Priority">
+            <area shape="rect" coords="142, 414, 392, 441" href="#Show_filter">
+            <area shape="rect" coords="12, 465, 392, 493" href="#URL">
+            <area shape="rect" coords="160, 140, 262, 161" href="#Scalable">
+            <area shape="rect" coords="161, 162, 263, 181" href="#Manual">
+            <area shape="rect" coords="162, 182, 265, 201" href="#WIC_item">
+            <area shape="rect" coords="161, 203, 265, 222" href="#Food_stamp">
+            <area shape="rect" coords="159, 223, 266, 243" href="#FSA_eligible">
+            <area shape="rect" coords="161, 243, 267, 263" href="#Not_in_net">
+            <area shape="rect" coords="161, 264, 268, 283" href="#Exc._spending">
+            <area shape="rect" coords="274, 142, 378, 161" href="#Taxable_1">
+            <area shape="rect" coords="274, 162, 381, 183" href="#Taxable_2">
+            <area shape="rect" coords="275, 184, 380, 202" href="#Taxable_3">
+            <area shape="rect" coords="274, 203, 382, 223" href="#Taxable_4">
+            <area shape="rect" coords="272, 224, 384, 242" href="#Taxable_5">
+            <area shape="rect" coords="273, 243, 383, 263" href="#Taxable_6">
+            <area shape="rect" coords="273, 264, 385, 283" href="#Taxable_7">
+            <area shape="rect" coords="272, 284, 386, 304" href="#Stop_discount">
+            <area shape="rect" coords="272, 304, 387, 323" href="#Stop_return">
+            <area shape="rect" coords="272, 325, 388, 344" href="#Stop_refund">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3><strong>Bottom section</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" src="Subdpt_table_files/bottom_section.png" usemap="#bottom_section"> <map name="bottom_section">
+            <area shape="rect" coords="1, 63, 135, 181" href="#Shopper">
+            <area shape="rect" coords="137, 63, 377, 180" href="#Discount_Shopper">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Sub-department</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td colspan="2" style=""><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156; height: 33px"><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <strong>Number</strong> field contains the sub-department number.<br>
+          It is a required field used to uniquely identify records in the sub-department list.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> field contains the description of the sub-department.<br>
+          It is not a required field; however, a description should be entered to identify the sub-department in the sub-department reports.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Department">Department</a></strong></td>
+
+          <td>The <b>Department</b> field links the sub-department to a department for global sales reports.<br>
+          It is a required field. There is no limit as to how many sub-departments can be linked to the same department.<br>
+          Regardless of the sub-department number, the grouped sales reports combine all sub-departments having the same department at the report generation time.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Max._entry">Max. entry</a></strong></td>
+
+          <td>The <strong>Maximum entry</strong> field contains the maximum amount the cashiers can enter for the sub-department key sales.<br>
+          It prevents cashiers from entering too high a value in the sub-department key.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Min._entry">Min. entry</a></strong></td>
+
+          <td>The <strong>Minimum entry</strong> field contains the minimum amount the cashiers can enter for the sub-department key sales.<br>
+          It prevents cashiers from entering too low a value in the sub-department key.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Max._void">Max. void</a></strong></td>
+
+          <td>The <strong>Maximum void</strong> field contains the maximum amount the cashiers can enter as a void (correction) for the sub-department key sales.<br>
+          It prevents overpunching void amounts at the points of sale.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Max._refund">Max. refund</a></strong></td>
+
+          <td>The <strong>Maximum refund</strong> field contains the maximum amount the cashiers can refund for the sub-department key sales.<br>
+          It prevents cashiers from refunding too high an amount in the sub-department key.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Cust._age">Cust. age</a></strong></td>
+
+          <td>The <strong>Customer age</strong> field contains the minimum age the purchasers must be to buy any item in the sub-department.<br>
+          For details, see the <a href="#The_Customer_age_field"><strong>Customer age</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Cash._age">Cash. age</a></strong></td>
+
+          <td>The <strong>Cashier age</strong> field contains the minimum age the cashiers must be to perform sales in the sub-department.<br>
+          For details, see the <a href="#The_Cashier_age_field"><strong>Cashier age</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Margin">Margin</a></strong></td>
+
+          <td>The <strong>Margin field</strong> contains the profit margin on the items of the sub-department, in percentage.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Discount">Discount</a></strong></td>
+
+          <td>The <b>Discount</b> field contains the percentage of discount applied when a sub-department sale is performed.<br>
+          The <a href="../../Customers/Shopper_level_table.htm#Apply_subdepartment_discount"><b>Apply sub-dept disc</b> field</a> must be checked in the corresponding shopper levels for the <b>Discount</b> to work.<br>
+          If an item discount (<a href="../../Item_maintenance/Price_Table.htm#The_Discount_$_field">discount $</a> or <a href="../../Item_maintenance/Price_Table.htm#The_Discount_%_field">discount %</a>) is also applicable on the item sold, the item discount is applied before the sub-department discount.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Restrict.">Restrict</a></strong><a name="Restrict."><strong>or</strong></a></td>
+
+          <td>The <strong>Restrictor</strong> field links the sub-department to a restriction that the items in the sub-department and the sub-department sales must follow.<br>
+          For example, in areas where stores are allowed to sell beer, wine or alcohol, sales might be legally restricted to certain hours of the day.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Commission">Commission</a></strong></td>
+
+          <td>The <strong>Commission</strong> field contains the salesperson's commission rate for the sub-department.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Shrink">Shrink</a></strong></td>
+
+          <td>The <strong>Shrink</strong> field contains the percentage that is allowed to be lost on a regular basis for the items in the sub-department.<br>
+          It is mostly used with perishable products.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Other_flags">Other flags</a></strong></td>
+
+          <td>The <strong>Other flags</strong> field contains additional sub-department sales information.<br>
+          For details, see the <a href="#The_Other_flags_field"><strong>Other flags</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Mem._no.">Mem. no.</a></strong></td>
+
+          <td>The <strong>Memory number</strong> field contains the memory number that links the keyed sub-department sales to the scales or the cash registers.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Priority">Priority</a></strong></td>
+
+          <td>The <strong>Priority</strong> field contains the order in which the sub-department must appear in the specified modules.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Show_filter">Show filter</a></strong></td>
+
+          <td>The <strong>Show filter</strong> field contains the identification letters of the modules where the sub-department must appear.<br>
+           For details, see the <a href="#The_Show_filter_field"><strong>Show filter</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="URL">URL</a></strong></td>
+
+          <td>The <strong>URL</strong> field contains special parameters used when a sale is performed in the sub-department.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Scalable">Scalable</a></strong></td>
+
+          <td>The <strong>Scalable</strong> field specifies whether the sub-department sales are performed by weight, scaled at the POS (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Manual">Manual</a></strong></td>
+
+          <td>The <strong>Manual</strong> field specifies whether the weight of the scalable sub-department sales can be manually entered using the POS keyboard (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="WIC_item">WIC item</a></strong></td>
+
+          <td>The <strong>WIC item</strong> field specifies whether the sub-department sales are WIC able (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Food_stamp">Food stamp</a></strong></td>
+
+          <td>The <strong>Food stamp</strong> field specifies whether the sub-department sales can be performed using food stamps as tender (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="FSA_eligible">FSA eligible</a></strong></td>
+
+          <td>The <strong>FSA eligible</strong> field specifies whether the sub-department sales can be performed using a FSA card as tender (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Not_in_net">Not in net</a></strong></td>
+
+          <td>The <strong>Not in net</strong> field specifies whether the sub-department sales are added to the store net sales (unchecked) or not (checked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Exc._spending">Exc. spending</a></strong></td>
+
+          <td>The <strong>Exclude from spending</strong> field specifies whether the keyed sub-department sales are excluded from discounts and points programs (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Taxable_1">Taxable 1</a></strong></td>
+
+          <td>The <strong>Taxable 1</strong> field specifies whether the sub-department sales have the first tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Taxable_2">Taxable 2</a></strong></td>
+
+          <td>The <strong>Taxable 2</strong> field specifies whether the sub-department sales have the second tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Taxable_3">Taxable 3</a></strong></td>
+
+          <td>The <strong>Taxable 3</strong> field specifies whether the sub-department sales have the third tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Taxable_4">Taxable 4</a></strong></td>
+
+          <td>The <strong>Taxable 4</strong> field specifies whether the sub-department sales have the fourth tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Taxable_5">Taxable 5</a></strong></td>
+
+          <td>The <strong>Taxable 5</strong> field specifies whether the sub-department sales have the fifth tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Taxable_6">Taxable 6</a></strong></td>
+
+          <td>The <strong>Taxable 6</strong> field specifies whether the sub-department sales have the sixth tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Taxable_7">Taxable 7</a></strong></td>
+
+          <td>The <strong>Taxable 7</strong> field specifies whether the sub-department sales have the seventh tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Stop_discount">Stop discount</a></strong></td>
+
+          <td>The <strong>Stop discount</strong> field specifies whether sub-discounts may be applied on the sub-department sales at the points of sale (unchecked) or not (checked).<br>
+          For details, see the <a href="#The_Stop_discount_field"><strong>Stop discount</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Stop_return">Stop return</a></strong></td>
+
+          <td>The <strong>Stop return</strong> field specifies whether the sub-department sales should be returned (unchecked) or not (checked).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Stop_refund">Stop refund</a></strong></td>
+
+          <td>The <strong>Stop refund</strong> field specifies whether the sub-department sales should be refunded (unchecked) or not (checked).</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Bottom section</strong></td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;<strong><a name="Shopper">Shopper</a></strong></td>
+
+          <td>The <strong>Shopper</strong> field contains the number of the shopper level to which a discount is applied when a sub-department sale is performed for the customers that are part of that shopper level.<br>
+           The discount given is specified in the <strong>Discount</strong> field.<br>
+          For details, see the <a href="#The_Shopper_field"><strong>Shopper</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Discount_Shopper">Discount</a></strong></td>
+
+          <td>The <strong>Discount (Shopper)</strong> field contains the percentage of discount applied when a sub-department sale is performed for the customers that are part of the shopper level specified in the <strong>Shopper</strong> field.<br>
+          For details, see the <a href="#The_Discount_field"><strong>Discount</strong> field section</a> below.&nbsp;</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Customer_age_field">The Customer age field</a></h2>
+
+      <p>The <strong>Customer age (Cust. age)</strong> field contains the minimum age the customers must be of to buy any item of the sub-department. For example, in areas where stores are allowed to sell beer, wine or alcohol, customers must be of legal adult age for that area in order to buy these items.</p>
+
+      <p class="Note"><b>NOTES:<br>
+      </b>The <b>Customer age</b> may also be specified for the <a href="Department_table.htm#Cust._age">department key</a> or an <a href="../../Item_maintenance/POS_Table.htm#Customer_age">item</a> only.<br>
+      If there is no customer age specified at the item level, the system automatically looks for the customer's age at the sub-department level ONLY if the <b><a href="../../Item_maintenance/POS_Table.htm#Follow_sub">Follow sub-department</a></b> field is checked.<br>
+      In the case where a customer's age is specified at the item level AND at the sub-department level, the system verifies both values. If these values are different, the customer age specified at the item level has precedence over the one at the sub-department level.</p>
+
+      <p>When a sale is performed in the sub-department, the cashier is prompted to enter the customer's birth date at the POS. The system automatically calculates the customer's age and compares it to the value in the <strong>Cust. age</strong> field. If the customer is under the minimum age required, a warning message is displayed on the POS screen.</p>
+
+      <p class="Note"><strong>NOTES:</strong><br>
+      If the operator is a level 5 or higher, this restriction will be bypassed.<br>
+      See your reseller regarding the possible alternate configurations (System.ini file).</p>
+
+      <p><strong>Example</strong></p>
+
+      <p>The customer's minimum age for all items that are part of sub-department #1 is 18. The information entered in the <strong>Sub-department</strong> table looks like this:</p>
+
+      <p><img height="53" src="Subdpt_table_files/cust_age.png" width="69"></p>
+
+      <p>When a customer buys an item in sub-department #1:</p>
+
+      <ol>
+        <li>The cashier registers the sale using the sub-department #1 key; the POS asks for the customer's birth date:<br>
+         <img height="139" src="Subdpt_table_files/POS_birth%20date.png" width="222"></li>
+
+        <li class="Steps">Customer's birth date should be entered in the requested format:<br>
+         <img height="140" src="Subdpt_table_files/POS_birth%20date_2.png" width="227"></li>
+
+        <li class="Steps">If the customer is under the specified age, a warning message is displayed and it will be impossible to sell that item to that very customer:<br>
+         <img height="142" src="Subdpt_table_files/POS_InsCustDate.png" width="227"></li>
+      </ol>
+
+      <p class="Note"><strong>NOTE:</strong> This example is based on the default configuration.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Cashier_age_field">The Cashier age field</a></h2>
+
+      <p>The <b>Cashier age</b> <b>(Cash. age</b>) field contains the minimum age that the cashiers (operators) must be of to sell the items in the sub-department and perform sub-department sales. For example, in areas where stores are allowed to sell beer, wine or alcohol, cashiers must be of legal adult age for that area in order to sell these items.</p>
+
+      <p>The operator's age is verified based on the information entered in the <strong>Birth date</strong> field of the <strong>Operator</strong> table. If no birth date has been specified in this field, the system does not perform any age validation.</p>
+
+      <p class="Note"><b>NOTE:</b> The cashier's age can also be specified for the <a href="Department_table.htm#Cash._age">department key</a> or for an <a href="../../Item_maintenance/POS_Table.htm#Cashier_age">item</a> only.</p>
+
+      <p><b>Example</b></p>
+
+      <p>The cashier's minimum age required for selling the items in sub-department #1 is 21. Cashier #29 is younger than the required age. The information entered in the <b>POS</b> and <b>Operator</b> tables looks like this:</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="width: 79px"><img height="54" src="Subdpt_table_files/cashier_age.png" width="78"></td>
+
+          <td><img height="59" src="Subdpt_table_files/cashier_DOB.png" width="122"></td>
+        </tr>
+      </table>
+
+      <p>When cashier #29 tries to sell an item in sub-department #1, the POS information will display the following message:</p>
+
+      <p><img height="143" src="Subdpt_table_files/POS_InsCashDate.png" width="227"></p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Other_flags_field">The Other flags field</a></h2>
+
+      <p>The <strong>Other flags</strong> field contains information on additional sub-department sales. A sub-department may have more than one value in the <strong>Other flags</strong> field.</p>
+
+      <p><img src="Subdpt_table_files/other_flags.png"></p>
+
+      <p class="Note"><b>NOTES:<br>
+      </b>For this field to apply to the items in the sub-department, they must be programmed to <a href="../../Item_maintenance/POS_Table.htm#Follow_sub">follow the sub-department settings</a>.<br>
+      The <b>Other flags</b> information may also be specified for the <a href="Department_table.htm#Other_flags">department keys</a> or for an <a href="../../Item_maintenance/POS_Table.htm#Other_flags">item</a> only.</p>
+
+      <p>To enter additional sub-department sales information, type the abbreviation of the desired information in the <strong>Other flags</strong> field or click in the <strong>Other flags</strong> field to select the desired information from the list of choices:</p>
+
+      <p></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><strong>OTHER FLAGS INFORMATION</strong></th>
+
+            <th><strong>ABBREVIATION</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>Enable zero price</td>
+
+          <td>EZ</td>
+
+          <td>The sub-department sales accept zero prices in the price fields of the Price table ($0.00).</td>
+        </tr>
+
+        <tr>
+          <td>No cost plus price</td>
+
+          <td>NC</td>
+
+          <td>No cost plus price can be calculated for the sub-department sales.</td>
+        </tr>
+
+        <tr>
+          <td>WIC 2</td>
+
+          <td>W2</td>
+
+          <td>The sub-department sales are WIC able 2.</td>
+        </tr>
+
+        <tr>
+          <td>WIC 3</td>
+
+          <td>W3</td>
+
+          <td>The sub-department sales are WIC able 3.</td>
+        </tr>
+
+        <tr>
+          <td>WIC 4</td>
+
+          <td>W4</td>
+
+          <td>The sub-department sales are WIC able 4.</td>
+        </tr>
+
+        <tr>
+          <td id="fixweight">Web Order</td>
+
+          <td>FE</td>
+
+          <td>The item can be ordered from the Web.</td>
+        </tr>
+
+        <tr>
+          <td id="fixweight0">Scale fix weight</td>
+
+          <td>FW</td>
+
+          <td>The scaled sub-department's sales have fixed weights (e.g. store-made muffins). See the scale manual for more information.</td>
+        </tr>
+
+        <tr>
+          <td id="fixbycount">Scale fix weight by count</td>
+
+          <td>FC</td>
+
+          <td>The scaled sub-department sales have fixed weight and is By Count.</td>
+        </tr>
+
+        <tr>
+          <td id="fixprice">Scale fix price</td>
+
+          <td>SF</td>
+
+          <td>The scaled sub-department sales have fixed prices (e.g. store-made pizzas). See the scale manual for more information.</td>
+        </tr>
+
+        <tr>
+          <td id="turkeyware">Scale special weight</td>
+
+          <td>SW</td>
+
+          <td>The scaled sub-department sales are 'weighable' and 'by count'.</td>
+        </tr>
+
+        <tr>
+          <td id="openprice">Scale open price</td>
+
+          <td>SO</td>
+
+          <td>The scaled sub-department sales allow an operator to enter a price per pound/kilogram and the system will calculate the price based on the weight of the item.</td>
+        </tr>
+
+        <tr>
+          <td id="forcetare">Scale force tare</td>
+
+          <td>FT</td>
+
+          <td>The scaled sub-department sales have a tare that is forced in the scale. See the scale manual for more information.</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+       
+
+      <p class="Note"><b>NOTES:<br>
+      </b> More than one type of information may be entered, with no space in between.<br>
+      For more detailed information on the Scale settings, please refer to the Scale - Over and Deploy document.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Show_filter_field">The Show filter field</a></h2>
+
+      <p>The <strong>Show filter</strong> field contains the identification letters of the modules where the sub-department must appear.</p>
+
+      <p><img height="300" src="Subdpt_table_files/show_filter.png" width="170"></p>
+
+      <p>The sub-department will only appear in the specified modules, or in any of the modules if the <i>Do Not Show</i> value is entered.</p>
+
+      <p>To enter the modules where the sub-department must appear, type the identification letters of the desired modules in the <strong>Show filter</strong> field or click in the <strong>Show filter</strong> field to select the desired modules from the list of choices.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Module</th>
+
+            <th>ID Letter</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 121px">Selling</td>
+
+          <td>S</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Inventory</td>
+
+          <td>I</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Costing</td>
+
+          <td>C</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Forecast</td>
+
+          <td>F</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Budget</td>
+
+          <td>B</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Hour</td>
+
+          <td>T</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Supply purchase</td>
+
+          <td>E</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Supply inventory</td>
+
+          <td>P</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Packing purchase</td>
+
+          <td>Y</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Packing inventory</td>
+
+          <td>U</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Receiving</td>
+
+          <td>R</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">Trend Book</td>
+
+          <td>K</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">DoNotShow</td>
+
+          <td>N</td>
+        </tr>
+
+        <tr>
+          <td style="width: 121px">E-Commerce</td>
+
+          <td>W</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+       
+
+      <p class="Note"><b>NOTE:</b> More than one module may be entered, with no space in between.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Stop_discount_field">The Stop discount field</a></h2>
+
+      <p>The <strong>Stop discount</strong> field specifies whether discounts may be applied on the sub-department sales at the points of sale (unchecked) or not (checked).</p>
+
+      <p>It does not allow manual item discounts, proportional discounts, global discounts, customer discounts (shopper level discounts) and sub-department discounts on the sub-department sales.</p>
+
+      <p class="Note"><b>NOTES:<br>
+      </b>For this field to apply to the items of the sub-department, they must be programmed to <a href="../../Item_maintenance/POS_Table.htm#Follow_sub">follow the sub-department settings</a>.<br>
+      The <strong>Stop discount</strong> behavior may also be specified for the <a href="Department_table.htm#Stop_discount">department keys</a> or an <a href="../../Item_maintenance/POS_Table.htm#Stop_discount">item</a> only.</p>
+
+      <p>To prevent discounts on the sub-department sales, check the <strong>Stop discount</strong> field.</p>
+
+      <p>The following message is displayed on the POS screen when the cashier tries to apply a discount on a sub-department sale for which the <strong>Stop discount</strong> flag has been checked:</p>
+
+      <p><img height="84" src="Subdpt_table_files/POS_StopDiscount.png" width="240"></p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Shopper_field">The Shopper field</a></h2>
+
+      <p>The <b>Shopper</b> field in the bottom section displays the shopper level to which a discount is applied in that sub-department. Customers that are part of that shopper level will then benefit from the discount that is specified in the <a href="#Discount_(Shopper)"><b>Discount</b> (Shopper) field</a></p>
+
+      <p>To add a shopper level:</p>
+
+      <ol>
+        <li>Once the <strong>Sub-department</strong> table is open, pin it to the desktop.</li>
+
+        <li>On the bottom of the Launcher, click on the <strong>Add to current desktop</strong> icon.</li>
+
+        <li>Open the <strong>list of shopper levels</strong> from the <strong>Clients Auxiliaries</strong> entry and select the shopper level to which you want to add a shopper discount.</li>
+
+        <li>In the <strong>Sub-department</strong> table, click on <strong><font size="4">+</font></strong>: the selected shopper level is automatically displayed in the <strong>Shopper</strong> field.<br>
+         <img height="306" src="Subdpt_table_files/ShoppeLevel_SubDpt.png" width="567"></li>
+      </ol>
+
+      <p>To delete a shopper level, follow these steps:</p>
+
+      <ol>
+        <li>Select the shopper level in the grid and click on <strong><font size="4">-</font></strong>.</li>
+
+        <li>A message will display, asking you to confirm your choice:<br>
+         <img height="100" src="Subdpt_table_files/confirmation_message.png" width="151"></li>
+      </ol>
+
+      <p>Deleting the shopper level will also delete the discount applied to it.</p>
+
+      <p class="Note"><strong>NOTE:</strong> The shopper discount supersedes the <a href="#Discount">sub-department discount</a>. A shopper discount can be entered for each shopper level in each sub-department.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Discount_field">The Discount (Shopper) field</a></h2>
+
+      <p>The <strong>Discount (Shopper)</strong> field contains the percentage of discount applied when a sub-department sale is performed for the customers that are part of the shopper level specified in the <a href="#Shopper"><strong>Shopper</strong> field</a>.</p>
+
+      <p>A shopper discount can be entered for each shopper level in each sub-department.</p>
+
+      <p>To add a discount in the bottom section, follow these steps:</p>
+
+      <ol>
+        <li>Select the <strong>Shopper level</strong> for which the discount will apply</li>
+
+        <li>Double-click in the <strong>Discount field</strong> to enable editing</li>
+
+        <li>Enter the <strong>percentage</strong> of discount to apply</li>
+
+        <li><strong>Save</strong> the changes</li>
+      </ol>
+
+      <p class="Note"><strong>NOTE:</strong> The shopper discount supersedes the <a href="#Discount">sub-department discount</a>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

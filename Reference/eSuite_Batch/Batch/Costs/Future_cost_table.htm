@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Future Cost Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Future Cost Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Future cost</b> table is used to change the future cost of the selected items. It contains the future cost basic information.</p>
+
+      <h2>Displaying the Future cost table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batches</strong> work area.</li>
+
+        <li>Click on <strong>Cost information</strong>: the <strong>Cost batch</strong> wizard opens in a new tab.</li>
+
+        <li>In the Batch type field, select <strong>Future cost</strong>.</li>
+
+        <li>In the <strong>Batch</strong> field, select a future cost batch.</li>
+
+        <li>Enter all other necessary criteria.</li>
+
+        <li>Press <strong>Execute</strong>: results will display in the <strong>Cost batch</strong> grid.</li>
+
+        <li>Select a record and click <strong>Edit</strong> in the bottom menu of the grid.</li>
+
+        <li>Select <strong>Cost batch</strong>, then <strong>Future cost</strong>: the <strong>Future cost</strong> table <strong></strong> opens over the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Future_cost_table_files/future_cost_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Future cost</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>Future cost table grid</strong>.</p>
+
+      <h4><strong>Main section</strong></h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img"><img class="Text" style="border-style:none" src="Future_cost_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="11, 141, 101, 167" href="#Batch">
+            <area shape="rect" coords="106, 141, 186, 168" href="#Target">
+            <area shape="rect" coords="192, 141, 252, 168" href="#Format">
+            <area shape="rect" coords="255, 142, 516, 166" href="#Vendor">
+            <area shape="rect" coords="12, 190, 113, 217" href="#Start_date">
+            <area shape="rect" coords="115, 191, 191, 217" href="#Case_size">
+            <area shape="rect" coords="195, 190, 257, 217" href="#Base_cost">
+            <area shape="rect" coords="12, 241, 92, 267" href="#Fee_%">
+            <area shape="rect" coords="92, 241, 185, 266" href="#Fee_$">
+            <area shape="rect" coords="187, 240, 256, 267" href="#Split">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h4><strong>Future cost table grid</strong></h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img"><img class="Text" style="border-style:none" src="Future_cost_table_files/table_grid.png" usemap="#table_grid"> <map name="table_grid">
+            <area shape="rect" coords="0, 93, 81, 261" href="#Batch">
+            <area shape="rect" coords="81, 92, 132, 259" href="#Target">
+            <area shape="rect" coords="132, 92, 195, 259" href="#Format">
+            <area shape="rect" coords="196, 91, 250, 258" href="#Vendor">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Future cost</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 171px; height: 22px;">FIELD</th>
+
+            <th style="height: 22px">DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Batch">Batch</a></strong></td>
+
+          <td>The <strong>Batch</strong> field contains the batch identifier.<br>
+           It is not editable. Its value comes from the <strong></strong> <a href="../Batch_header_table/Batch_header_table.htm#Batch_ID"><strong>Batch ID</strong></a> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future cost record is added, linking the future cost record to the current batch.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
+          When a future cost record is added, the <a href="../../Item_maintenance/Price_Table.htm#Target">target</a> value of the current cost record is automatically displayed in the <strong>Target</strong> field.<br>
+          It is grayed out (not editable) unless the Multi target option in the <em>System.ini</em> file is selected.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Format">Format</a></strong></td>
+
+          <td>The <strong>Format</strong> field contains the future buying format description.<br>
+          When a future cost record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Format">format</a> of the current cost record is automatically displayed in the <strong>Format</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Vendor">Vendor</a></strong></td>
+
+          <td>The <strong>Vendor</strong> field contains the vendor ID and name. It links the item to a vendor.<br>
+          When a future cost record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_ID">vendor ID</a> and the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_name">vendor name</a> of the current cost record are automatically displayed in the <strong>Vendor</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Start_date">Start date</a></strong></td>
+
+          <td>The <strong>Start date</strong> field is a date field that contains the future cost change date, i.e. the date on which the future cost becomes effective. The starting date is inclusive.<br>
+           When a future cost record is added, the <a href="../Batch_header_table/Batch_header_table.htm#Start_date">start date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> is automatically displayed in the <strong>Start date</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Case_size">Case size</a></strong></td>
+
+          <td>The <strong>Case size</strong> field contains the future number of units per case for the item.<br>
+          When a future cost record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Case">case size</a> of the current cost record is automatically displayed in the <strong>Case size</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Base_cost">Base cost</a></strong></td>
+
+          <td>The <strong>Base cos</strong>t field contains the future regular item cost per case.<br>
+          When a future cost record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Base_cost">base cost</a> of the current cost record is automatically displayed in the <strong>Base cost</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 34px"><strong><a name="Fee_%">Fee %</a></strong></td>
+
+          <td style="height: 34px">The <strong>Fee %</strong> field contains the future fees value for one case, expressed as a percentage.<br>
+           For details, see the <a href="../../Item_maintenance/Cost_Table.htm#Fee_%"><strong>Fee %</strong> field</a> in the <a href="../../Item_maintenance/Cost_Table.htm"><strong>Cost</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Fee_$">Fee $</a></strong></td>
+
+          <td>The <strong>Fee $</strong> field contains the future fees amount for one case, expressed in dollars.<br>
+          For details, see the <a href="../../Item_maintenance/Cost_Table.htm#Fee_$"><strong>Fee $</strong> field</a> in the <a href="../../Item_maintenance/Cost_Table.htm"><strong>Cost</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Split">Split</a></strong></td>
+
+          <td>The <b>Split</b> field contains the future fees amount by unit charged when the current item is bought in split case quantities.<br>
+           See the <a href="../../Item_maintenance/Cost_Table.htm#Split"><b>Split</b> field</a> in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a> for more details.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

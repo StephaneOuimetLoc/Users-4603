@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document"><!-- Title/Keywords edit on new documents -->
+    <!-- #BeginEditable "doctitle" -->
+    <!-- #EndEditable -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Vendor Table</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Dimensions Vendors Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Dimensions &gt; Vendors&nbsp;&gt; List <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Vendor</b> table contains the supplier/vendor information.</p>
+
+      <p>It is security referenced, requiring a password. Different security levels allow different accesses. By default, clerks can only view the list, managers can add new vendors, owners and programmers have complete access.</p>
+
+      <h2>Displaying the Vendor table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Dimensions</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Vendor</strong>: the <strong>Vendor</strong> window opens in the <strong>Vendor</strong> work area.</li>
+
+        <li>Click on <strong>List</strong>: the <strong>Vendors</strong> tab opens in the same window, displaying the <strong>Vendor List</strong>.</li>
+
+        <li>To modify an existing vendor record, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit - Vendor F3</strong> command in the bottom menu: the <strong>Vendor</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new family record, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Vendor</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Vendor_Table_files/vendor_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>&nbsp;The <strong>Vendor</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>bottom tab section</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Vendor_Table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="10, 115, 73, 142" href="#Target">
+            <area shape="rect" coords="78, 115, 171, 141" href="#Number">
+            <area shape="rect" coords="177, 115, 391, 140" href="#Name">
+            <area shape="rect" coords="11, 165, 173, 191" href="#Contact">
+            <area shape="rect" coords="177, 166, 292, 188" href="#Phone">
+            <area shape="rect" coords="297, 164, 394, 191" href="#Fax">
+            <area shape="rect" coords="13, 216, 172, 242" href="#Contact_2">
+            <area shape="rect" coords="176, 214, 292, 241" href="#Phone_2">
+            <area shape="rect" coords="296, 214, 392, 242" href="#Fax_2">
+            <area shape="rect" coords="12, 264, 112, 290" href="#Account_number">
+            <area shape="rect" coords="118, 264, 208, 293" href="#Billed_to">
+            <area shape="rect" coords="213, 265, 312, 291" href="#Categories">
+            <area shape="rect" coords="319, 265, 393, 290" href="#Profile">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Bottom tab section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Vendor_Table_files/address_tab.png" usemap="#address_tab"> <map name="address_tab">
+            <area shape="rect" coords="8, 26, 221, 100" href="#Address">
+            <area shape="rect" coords="225, 25, 295, 52" href="#Status">
+            <area shape="rect" coords="299, 24, 349, 52" href="#Taxes">
+            <area shape="rect" coords="354, 25, 374, 50" href="#No_RF">
+            <area shape="rect" coords="224, 74, 296, 102" href="#B.O.">
+            <area shape="rect" coords="301, 76, 390, 101" href="#UOM">
+            <area shape="rect" coords="10, 120, 113, 145" href="#State/Province">
+            <area shape="rect" coords="118, 120, 220, 146" href="#Code">
+            <area shape="rect" coords="224, 118, 317, 148" href="#Country">
+            <area shape="rect" coords="319, 119, 392, 148" href="#Def._Qty">
+          </map> </td>
+
+          <td><img class="Text" style="border-style:none" src="Vendor_Table_files/terms_tab.png" usemap="#terms_tab"> <map name="terms_tab">
+            <area shape="rect" coords="93, 24, 166, 49" href="#Terms_day">
+            <area shape="rect" coords="167, 24, 201, 50" href="#Term_discount">
+            <area shape="rect" coords="204, 23, 277, 49" href="#Rate_weight">
+            <area shape="rect" coords="280, 25, 329, 50" href="#Rate_cubic">
+            <area shape="rect" coords="334, 24, 390, 49" href="#Discount">
+            <area shape="rect" coords="11, 73, 91, 101" href="#Freight/broker">
+            <area shape="rect" coords="94, 74, 201, 101" href="#FOB">
+            <area shape="rect" coords="203, 73, 264, 101" href="#Min._order">
+            <area shape="rect" coords="269, 74, 329, 99" href="#Min._cubic">
+            <area shape="rect" coords="332, 73, 388, 99" href="#Operator">
+            <area shape="rect" coords="10, 123, 389, 157" href="#Internal_note_about_the_vendor">
+            <area shape="rect" coords="10, 24, 89, 50" href="#Terms">
+          </map> </td>
+
+          <td><img class="Text" style="border-style:none" src="Vendor_Table_files/notes_tab.png" usemap="#notes_tab"> <map name="notes_tab">
+            <area shape="rect" coords="10, 23, 390, 60" href="#Note_to_send_to_vendor">
+            <area shape="rect" coords="10, 83, 389, 111" href="#URL">
+            <area shape="rect" coords="9, 131, 388, 158" href="#E-mail">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+
+          <td class="Img">* Click on a field to get information on it.</td>
+
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Vendor</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th class="ListTitle" style="height: 22px">FIELD</th>
+
+            <th class="ListTitle" style="height: 22px">DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2" style=""><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Target">Target</a></strong></td>
+
+          <td style="height: 31px">The <strong>Target</strong> field contains the target identifier (the store group).&nbsp;<br>
+          It is a required field.<br>
+           For details, see the <a href="#The_Target_field"><strong>Target</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Number">Number</a></strong></td>
+
+          <td style="height: 31px">The <strong>ID</strong> field contains the vendor identifier.<br>
+          It is a required field.<br>
+          For details, see the <a href="#The_ID_field"><strong>ID</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Name">Name</a></strong></td>
+
+          <td style="height: 31px">The <strong>Name</strong> field contains the vendor's company name.<br>
+          It is not a required field; however, it helps identifying the vendor if codes are used as vendor identifiers.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Contact">Contact</a></strong></td>
+
+          <td style="height: 31px">The <strong>Contact</strong> field contains the name of the salesperson to contact at the vendor's location.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Phone">Phone</a></strong></td>
+
+          <td style="height: 31px">The <strong>Phone</strong> field contains the vendor's voice phone number that is normally used to place orders.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Fax">Fax</a></strong></td>
+
+          <td style="height: 31px">The <strong>Fax</strong> field contains the vendor's fax number that is normally used to fax orders.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Contact_2">Contact 2</a></strong></td>
+
+          <td style="height: 31px">The <strong>Contact 2</strong> field contains the name of a second salesperson to contact at the vendor's location.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Phone_2">Phone 2</a></strong></td>
+
+          <td style="height: 31px">The <strong>Phone 2</strong> field contains the voice phone number of the second salesperson at the vendor's location.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Fax_2">Fax 2</a></strong></td>
+
+          <td style="height: 31px">The <strong>Fax 2</strong> field contains the fax number of the second salesperson at the vendor's location.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Account_number">Account number</a></strong></td>
+
+          <td style="height: 31px">The <b>Account #</b> field contains your account number at the vendor's.<br>
+          For details, see the <a href="#The_Account_number_field"><strong>Account number</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Billed_to">Billed to</a></strong></td>
+
+          <td style="height: 31px">The <strong>Billed to</strong> field contains the number of the vendor to which the bill must be sent.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong>Categories</strong></td>
+
+          <td style="height: 31px">The <strong>Categories</strong> field contains the types of items that the vendor offers.<br>
+          For details, see the <a href="#Categories"><strong>Categories</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Profile">Profile</a></strong></td>
+
+          <td style="height: 31px">The <strong>Profile</strong> field contains the name of the profile used for the export of the buying documents for the vendor.<br>
+          It is used only in the case where the buying documents need a special export for the vendor.<br>
+          This is mostly used with a warehouse that is not an eSuite system. See the reseller for more details.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Address tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Address">Address</a></strong></td>
+
+          <td style="height: 31px">The <strong>Address</strong> section contains three lines where users can enter the vendor's address, (the address where the payment should be sent).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="State/Province">State/Province</a></strong></td>
+
+          <td style="height: 31px">The <strong>State/Province</strong> field contains the state or the province of the vendor's location, (where the payment should be sent).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Code">Code</a></strong></td>
+
+          <td style="height: 31px">The <strong>Code</strong> field contains the zip or postal code of the vendor's location (where the payment should be sent).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Country">Country</a></strong></td>
+
+          <td style="height: 31px">The <strong>Country</strong> field contains the country of the vendor's location (where the payment should be sent).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Def._Qty">Default qty</a>.</strong></td>
+
+          <td style="height: 31px">The <strong>Default quantity</strong> field contains the default quantity used in the purchase orders when the items sold by the current vendor are ordered.<br>
+          This fieldworks in combination with the Unit of measure field, i.e. the default quantity applies to the specific unit of measure.<br>
+          If the Def. Qty field does not contain any value, the default quantity is 1. &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Status">Status</a></strong></td>
+
+          <td style="height: 31px">The <strong>Status</strong> field contains the status of the vendor.<br>
+          It is used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="Taxes">Taxes</a></strong></td>
+
+          <td style="height: 31px">The <strong>Taxes</strong> field contains the numbers of the taxes that have to be charged on the buying documents (purchase orders, receiving and billing documents).<br>
+          The buying taxes are defined in the configuration files. See your reseller for more details.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 31px;"><strong><a name="No_RF">No RF</a></strong></td>
+
+          <td style="height: 31px">The <strong>No RF</strong> field is a flag field that specifies whether the vendor is visible (unchecked) or invisible (checked) on the PDA and RF units.<br>
+          The No RF field is useful to do not list vendors on the PDA and RF units from which there's no ordering.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="B.O.">B.O.</a></strong></td>
+
+          <td style="height: 32px">The <strong>B.O.</strong> field contains the number of days the items of a purchase order can stay in back order for that vendor.<br>
+          The <strong>B.O.</strong> field works in combination with the <strong>Status</strong> field in the <a href="../../Item_maintenance/Cost_Table.htm#Status"><strong>Cost</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="UOM">UOM</a></strong></td>
+
+          <td style="height: 32px">The <strong>Unit of measure (UOM)</strong>contains the identification characters of the buying format available for the current vendor.<br>
+          For details, see the <a href="#The_Unit_of_measure_(UOM)_field"><strong>Unit of measure (UOM)</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Terms tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Terms">Terms</a></strong></td>
+
+          <td style="height: 32px">The <strong>Terms</strong> field contains the description of the payment's terms.<br>
+          The values of the terms are defined in the <a href="#Terms_day"><strong>Terms day</strong></a> and <a href="#Term_discount"><strong>Terms discount</strong></a> fields.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Terms_day">Terms day</a>s</strong></td>
+
+          <td style="height: 32px">The <strong>Terms days</strong> field contains the number of days the terms discount is available.<br>
+          It works in combination with the <a href="#Term_discount"><strong>Terms discount</strong></a> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Term_discount">Terms discount</a></strong></td>
+
+          <td style="height: 32px">The <strong>Terms disc</strong> field contains the discount (expressed as a percentage) granted when the bill is paid within the number of days that is specified.<br>
+          It works in combination with the <a href="#Terms_day"><strong>Terms days</strong></a> field, as the discount is not automatically deducted from the bill when the payment id made within the number of days.<br>
+          It is used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Rate_weight">Rate weight</a></strong></td>
+
+          <td style="height: 32px">The <strong>Rate weight</strong> field contains the shipping fee rate charged by weight for the delivery of the merchandise.<br>
+          The total amount of the shipping fees appears under the <strong>Totals</strong> tab of the purchase orders.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Rate_cubic">Rate cubic</a></strong></td>
+
+          <td style="height: 32px">The <strong>Rate cubic</strong> field contains the shipping fee rate charged by volume for the delivery of the merchandise.<br>
+          The total amount of the shipping fees appears under the <strong>Totals</strong> tab of the purchase orders.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Discount">Discount</a></strong></td>
+
+          <td style="height: 32px">The <strong>Discount</strong> <strong>(Disc.)</strong> field contains the discount, expressed as a percentage, given by the vendor, i.e. the discount the vendor subtracts from the cost of each bill.<br>
+          It is used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Freight/broker">Freight/broker</a></strong></td>
+
+          <td style="height: 32px">The <strong>Freight/broker</strong> field contains the name of the freight company that ships the goods if the vendor does not ship directly to the store, and/or the name of the broker.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="FOB">FOB</a></strong></td>
+
+          <td style="height: 32px">The <strong>FOB</strong> field contains the pickup location name used when the vendor does not ship the goods directly to the store, i.e. the name of the location where the merchandise will be shipped by the vendor, usually without any fee.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Min._order">Min. order</a></strong></td>
+
+          <td style="height: 32px">The <strong>Minimum order (Min. order)</strong> field contains the minimum quantity, in cases, that must be ordered for the vendor to deliver the merchandise. This quantity comes from an agreement between the store and that vendor. The system does not control this quantity, but it appears on the purchase orders.<br>
+           The <strong>Minimum order</strong> field is used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Min._cubic">Min. cubic</a></strong></td>
+
+          <td style="height: 32px">The <strong>Minimum cubic (Min. cubic)</strong> field contains the minimum volume that must be ordered for the vendor to deliver the merchandise. This volume comes from an agreement between the store and that vendor. The system does not control this volume, but it appears on the purchase orders.<br>
+          The <strong>Minimum cubic</strong> field is used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Operator">Operator</a></strong></td>
+
+          <td style="height: 32px">The <strong>Operator</strong> field contains the number of the operator who works with the vendor, i.e. who does the purchase orders for that vendor. An operator cannot create or open a document for this vendor he is not the 'owner'.<br>
+          Enter the operator's name or click on the chevron to access the list of operators.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Internal_note_about_the_vendor">Internal note about the vendor</a></strong></td>
+
+          <td style="height: 32px">The <strong>Internal note about the vendor</strong> field contains additional information and/or comments on the vendor.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Notes tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="Note_to_send_to_vendor">Note to send to vendor</a></strong></td>
+
+          <td style="height: 32px">The <strong>Note to send to vendor</strong> field contains information and/or comments to communicate to the vendor.<br>
+          For the content of the <strong>Note to send to vendor</strong> field to be printed on reports, these must be customized.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="URL">URL</a></strong></td>
+
+          <td style="height: 32px">The <strong>URL</strong> field contains special parameters used when the vendor is associated to the current transaction.<br>
+          The special parameters are named alpha parameters. They are used when specific vendors are associated to transactions. See the reseller for more details.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 32px;"><strong><a name="E-mail">E-mail</a></strong></td>
+
+          <td style="height: 32px">The <b>E-mail</b> field contains the vendor's e-mail address.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Target_field">The Target field</a></h2>
+
+      <p>The <strong>Target</strong> field contains the target identifier, i.e. the store group.&nbsp;<br>
+      <br>
+      It is a required field, meaning that the new vendor records must have a valid entry in the <strong>Target</strong> field for the record to exist.&nbsp;It is used as a key field, along with the <a href="#The_ID_field">ID field</a>, to uniquely identify records in the <strong>Vendor</strong> table.&nbsp;</p>
+
+      <p>The default value of the <strong>Target</strong> field is <em>PAL</em>. The eSuite software is designed to support multi-stores or regional pricing.&nbsp;The <strong>Target</strong> field is grayed out (not editable) unless the <strong>Multi target option</strong> in the System.ini file is selected (see the reseller for details). &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+      <p>To modify the target identifier (in a multi-stores setting), type the target identifier in the <strong>Target</strong> field or click in the field to select a target identifier from the <strong>Target</strong> list.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_ID_field">The ID field</a></h2>
+
+      <p>The <strong>ID</strong> field contains the vendor's identifier. It is a required field, i.e. new vendor records must have a valid entry in the <strong>ID</strong> field for the record to exist. It is used as a key field to uniquely identify records in the <b>Vendor</b> <strong>List</strong>.</p>
+
+      <p>The <strong>ID</strong> field does not have to be numeric. It can contain characters, numbers and symbols, except for @ / \ &amp; &lt; &gt; ' " and 'space'. An error message will be displayed if any of these symbols are entered in the filed.</p>
+
+      <p>Both the vendor number and name are displayed when a vendor is selected for an item in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Account_number_field">The Account number field</a></h2>
+
+      <p>The <b>Account #</b> field contains the store's account number at the vendor's. The account number appears on the printed purchase orders.</p>
+
+      <p>Special entries are used in the <strong>Account #</strong> field:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th class="ListDark"><b>Special entries</b></th>
+
+            <th class="ListDark"><b>Description</b></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>STORE</td>
+
+          <td>The <em>STORE</em> entry specifies that the vendor is an eSuite warehouse to which the buying documents will automatically be exported when they are closed.<br>
+          In this case, the vendor ID must correspond to the store number of the warehouse, i.e. <em>998</em>.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2>The <a name="Categories">Categories</a> field</h2>
+
+      <p>The <b>Categories</b> field contains the types of items that the vendor offers.</p>
+
+      <p>Special entries are used in the <b>Categories</b> field:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th class="ListDark" style="width: 108px"><b>Special entries</b></th>
+
+            <th class="ListDark"><b>Description</b></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 108px">SHIPVIA</td>
+
+          <td>The <i>SHIPVIA</i> entry specifies that the vendor is a carrier. When the "ship via" entry is selected (in purchase orders, for instance), only the carriers are listed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 108px">ANY</td>
+
+          <td>The <i>ANY</i> entry specifies that any item from that vendor can be received, even if no item is associated to that vendor in the <strong>Cost</strong> table. This value is useful for two reasons. First, if some items are bought from different vendors, you might not want to program all the different vendors in the <b>Cost</b> table for each of those items.<br>
+          Second, you would build a big purchase order which contains any item from any vendor, and then split it later.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Unit_of_measure_(UOM)_field">The Unit of measure (UOM) field</a></h2>
+
+      <p>The <b>Unit of measure</b> (<b>UOM</b>) field contains the identification characters of the buying format available for the current vendor.</p>
+
+      <p><img class="Text" height="120" src="Vendor_Table_files/UOM.png" width="76"></p>
+
+      <p>The <b>Unit of measure</b> field has effects on the purchase orders. The buying formats available in the purchase orders depend on the values of the <b>Unit of measure</b> field. If the <strong>Unit of measure</strong> field does not contain any value, the <em>case</em> format is the only buying format available.</p>
+
+      <p>More than one buying format can be specified.</p>
+
+      <p class="Note"><b>NOTE:</b> The unit of measure may also be specified at the item level (the <strong><a href="../../Item_maintenance/Cost_Table.htm#UOM">Unit of measure</a></strong> <a href="../../Item_maintenance/Cost_Table.htm#UOM">field</a> in the <a href="../../Item_maintenance/Cost_Table.htm"><strong>Cost</strong> table</a>). In this case, the value defined in the <strong>Cost</strong> table has precedence over the value defined in the <strong>Vendor</strong> table.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

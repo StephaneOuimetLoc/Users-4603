@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eKiosk - How to Manage Items</title>
+    <link href="../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eKiosk - How to Manage Items<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eKiosk <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>The <a name="Featured">Featured</a> products</h2>
+
+      <p>This parameter must be set for each item to display, on the Host or store's server, based on the brand's deploy management. Please contact the reseller for more information.</p>
+
+      <p>To display items in the Preferred section of the Start page on the eKiosk, follow these steps:</p>
+
+      <ol>
+        <li>Enter 'Featured' in the Disc desc. field of the price table.<br>
+         <img alt="" height="325" src="eKiosk_Item_Management_files/Featured%20item.png" width="456"><br>
+        <br>
+        </li>
+
+        <li>Deploy changes.</li>
+      </ol>
+
+      <h2>Search filters</h2>
+
+      <p>Multiple search filters can be used to refine the search and find items more easily on the eKiosk application. When entering a keyword in the search bar, the query is executed on the following fields: F01, F29, F155, F255, F02.</p>
+
+      <table class="searchFiltersCustomTable" style="width: 1100px; border-style: solid;">
+        <tr>
+          <td rowspan='5'><img src="eKiosk_Item_Management_files/searchFilters.png" height="auto" width="auto"></td>
+
+          <td>The "Preferences" are used to filter items based on the classification field (OBJ.F1957).<br>
+          Note that it is possible to set default preferences in the customer account that will be applied automatically when searching the catalog.</td>
+        </tr>
+
+        <tr>
+          <td>The "Select Category" filter will show a list of all the categories (OBJ.F17).</td>
+        </tr>
+
+        <tr>
+          <td>The "Brands" are the brands name (OBF.F155) associated to each items displayed.</td>
+        </tr>
+
+        <tr>
+          <td>This section contains other, more generic, filters.<br>
+           <b>"Featured items"</b> will display featured items only (PRI.F903).<br>
+           <b>"Purchase with points"</b> will display items that are available to redeem with points.<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td>The All promotions section is used to filter items based on their active price :<br>
+           <b>Weekly</b> : items with a SALE active price.<br>
+           <b>Long term</b> : items with a TPR active price.<br>
+           <b>Manager</b> : items with a STOR active price.<br>
+           </td>
+        </tr>
+      </table>
+
+      <h2><a name="Preferences">Preferences</a></h2>
+
+      <p>The preferences section is used to filter items based on their classification field (OBJ.F1957) of the Main item table. Multiple preferences can be set by separating them by a ';'.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Preference</th>
+
+            <th>Keyword</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>Vegeterian</td>
+
+          <td>VEGE</td>
+        </tr>
+
+        <tr>
+          <td>Gluten free</td>
+
+          <td>GLUTEN</td>
+        </tr>
+
+        <tr>
+          <td>Nut free</td>
+
+          <td>NUTFREE</td>
+        </tr>
+
+        <tr>
+          <td>Reduced/low sodium</td>
+
+          <td>LOWSODIUM</td>
+        </tr>
+
+        <tr>
+          <td>Reduced/low sugar</td>
+
+          <td>LOWCARB</td>
+        </tr>
+
+        <tr>
+          <td>Lactose free</td>
+
+          <td>DAIRYFREE</td>
+        </tr>
+
+        <tr>
+          <td>Sugar free</td>
+
+          <td>SUGARFREE</td>
+        </tr>
+      </table>
+
+      <h2>Item modifiers</h2>
+
+      <p>It is possible to add extra fields to an item to specify preferences or change the behavior by adding a certain keyword in the Type field (F1785) of the POS table. Here is a list of the current modifiers and what they are used for:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>F1785</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>NOTE</td>
+
+          <td>All items will have this modifier by default, even if F1785 is empty. It is used to add a basic note to an item.</td>
+        </tr>
+
+        <tr>
+          <td>CAKE</td>
+
+          <td>Used for custom cake preparation. It will add extra fields related to the flavor, size, color, icing and sprinkles while also allowing to add a message and a picture to put on the cake.</td>
+        </tr>
+
+        <tr>
+          <td>FRUIT</td>
+
+          <td>Used to specify the ripeness and the size of the item.</td>
+        </tr>
+
+        <tr>
+          <td>MEATBYQTY</td>
+
+          <td>Used to sell meat by quantity. It will add extra fields related to the marbling, trimming and specify the quantity per package.</td>
+        </tr>
+
+        <tr>
+          <td>MEATBYWEIGHT</td>
+
+          <td>Same use as MEATBYQTY and will also add fields to select the thickness or the weight by steaks.</td>
+        </tr>
+
+        <tr>
+          <td>MEATDELI</td>
+
+          <td>Used for the deli meats. It allows to select the total weight, the thickness and the lbs per package.</td>
+        </tr>
+
+        <tr>
+          <td>MEATGROUND</td>
+
+          <td>Add a total weight field and a lbs per package field.</td>
+        </tr>
+
+        <tr>
+          <td>MEATOTHER</td>
+
+          <td>Add a quantity per package field.</td>
+        </tr>
+
+        <tr>
+          <td>MEATROAST</td>
+
+          <td>Add the quantity per package and weight of each roast fields.</td>
+        </tr>
+
+        <tr>
+          <td>TRAYPARTY</td>
+
+          <td>Used for ordering trays. It will add extra fields for the serving size and the type.</td>
+        </tr>
+
+        <tr>
+          <td>GIFT</td>
+
+          <td>Allows the user to send the item as a gift by entering an email address.</td>
+        </tr>
+      </table>
+
+      <h2>Special order</h2>
+
+      <p>When an item is a special order, it is possible to say so by setting the Status (POS.F08) field to SP of the POS_TAB. An item set as a special order will give a warning stating that special order items may take longer to arrive and the user will NOT be charged for that item if he adds it to the transaction.</p>
+
+      <div style="text-align: right;font-weight: bold;">
+        <a href="eKiosk_Overview.htm">Return to Overview</a>
+      </div>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

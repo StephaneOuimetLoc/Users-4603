@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Future Cost Break Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Future Cost Break Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches&nbsp; &gt; Cost information&nbsp; <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h1>Information</h1>
+
+      <p>The <b>Future cost break</b> table is used to enter the future cost breaks given on the cost of the selected items. It contains the future cost break information.</p>
+
+      <h2>Displaying the Future <b>cost break</b> table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batches</strong> work area.</li>
+
+        <li>Click on <strong>Cost information</strong>: the <strong>Cost batch</strong> wizard opens in a new tab.</li>
+
+        <li>In the Batch type field, select <strong>Cost break</strong>.</li>
+
+        <li>In the <strong>Batch</strong> field, select a cost break batch.</li>
+
+        <li>Enter all other necessary criteria.</li>
+
+        <li>Press <strong>Execute</strong>: results will display in the <strong>Cost break batch</strong> grid.</li>
+
+        <li>Select a record and click <strong>Edit</strong> in the bottom menu of the grid.</li>
+
+        <li>Select <strong>Cost batch</strong>, then <strong>Break quantity</strong>: the <strong>Future cost break quantity</strong> table <strong></strong> opens over the work area.</li>
+      </ol>
+
+      <p><img src="Future_cost_break_table_files/future_cost_break_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Future cost break</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>Future cost break table grid</strong>.</p>
+
+      <h4><strong>Main section</strong></h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" src="Future_cost_break_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="11, 141, 101, 168" href="#Batch">
+            <area shape="rect" coords="107, 140, 188, 168" href="#Target">
+            <area shape="rect" coords="190, 140, 253, 168" href="#Format">
+            <area shape="rect" coords="256, 140, 517, 167" href="#Vendor">
+            <area shape="rect" coords="11, 190, 112, 218" href="#Start_date">
+            <area shape="rect" coords="115, 190, 216, 218" href="#End_date">
+            <area shape="rect" coords="12, 241, 251, 268" href="#Qualifier">
+            <area shape="rect" coords="255, 241, 388, 267" href="#OI">
+            <area shape="rect" coords="390, 240, 461, 267" href="#Break_$">
+            <area shape="rect" coords="460, 240, 518, 267" href="#Break_%">
+            <area shape="rect" coords="10, 291, 127, 316" href="#Retail_needed">
+            <area shape="rect" coords="284, 291, 336, 318" href="#Maximum">
+            <area shape="rect" coords="337, 291, 386, 318" href="#Minimum">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h4><strong>Future cost break table grid</strong></h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" src="Future_cost_break_table_files/table_grid.png" usemap="#table_grid"> <map name="table_grid">
+            <area shape="rect" coords="1, 92, 81, 247" href="#Batch">
+            <area shape="rect" coords="81, 91, 133, 245" href="#Target">
+            <area shape="rect" coords="193, 91, 253, 245" href="#Vendor">
+            <area shape="rect" coords="133, 91, 193, 245" href="#Format">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Future cost break</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px; height: 22px;">FIELD</th>
+
+            <th style="height: 22px">DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Batch">Batch</a></strong></td>
+
+          <td>The <strong>Batch</strong> field contains the batch identifier.<br>
+           It is not editable. Its value comes from the <strong></strong> <a href="../Batch_header_table/Batch_header_table.htm#Batch_ID"><strong>Batch ID</strong></a> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future cost break record is added, linking the future cost break record to the current batch.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
+          When a future cost break record is added, the <a href="../../Item_maintenance/Price_Table.htm#Target">target</a> value of the current cost record is automatically displayed in the <strong>Target</strong> field.<br>
+          It is grayed out (not editable) unless the Multi target option in the <em>System.ini</em> file is selected.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Format">Format</a></strong></td>
+
+          <td>The <strong>Format</strong> field contains the future buying format description.<br>
+          When a future cost break record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Format">format</a> of the current cost record is automatically displayed in the <strong>Format</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor">Vendor</a></strong></td>
+
+          <td>The <strong>Vendor</strong> field contains the vendor ID and name. It links the item to a vendor.<br>
+          When a future cost break record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_ID">vendor ID</a> and the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_name">vendor name</a> of the current cost record are automatically displayed in the <strong>Vendor</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Start_date">Start date&nbsp;</a></strong> </td>
+
+          <td>The <strong>Start date</strong> field is a date field that contains the future cost break starting date, i.e. the date on which the future cost break becomes effective. The starting date is inclusive.<br>
+           When a future cost break record is added, the <a href="../Batch_header_table/Batch_header_table.htm#Start_date">start date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> is automatically displayed in the <strong>Start date</strong> field.<br>
+          The starting date will become the <a href="../../Item_maintenance/Cost_Table.htm#Start_date">break starting date</a> in the corresponding cost record.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="End_date">End date</a></strong></td>
+
+          <td>The <strong>End date</strong> field is a date field that contains the future cost break ending date, i.e. the date on which the future cost break is no longer effective. The ending date is inclusive.<br>
+          When a future cost break record is added, the <a href="../Batch_header_table/Batch_header_table.htm#End_date">ending date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><b>Batch header</b> table</a> is automatically displayed in the <b>End date</b> field. The ending date will become the <a href="../../Item_maintenance/Cost_Table.htm#End_date">break ending date</a> in the corresponding cost record.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Qualifier">Qualifier</a></strong></td>
+
+          <td>The <strong>Qualifier</strong> field contains the future qualifying conditions of the cost break. It is used for information purposes only.<br>
+          When a future cost break record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Qualifier">cost break qualifier</a> of the current cost record is automatically displayed in the <strong>Qualifier</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OI">OI</a></strong></td>
+
+          <td>The <strong>Off Invoice (OI)</strong> field contains the identification character of the future off invoice status.<br>
+          This status specifies when the cost break value is given.<br>
+          For details, see the <a href="#The_OI_field"><strong>OI</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Break_$">Break $</a></strong></td>
+
+          <td>The <strong>Break $</strong> field contains the future reduction amount per case for the cost break, applicable during the effective cost break period.<br>
+          When a future cost break record is added, the <a href="../../Item_maintenance/Cost_Table.htm#$">cost break reduction amount</a> of the current cost record is automatically displayed in the <strong>Break $</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Break_%">Break %</a></strong></td>
+
+          <td>The <strong>Break %</strong> field contains the future reduction per case expressed as a percentage for the cost break, applicable during the effective cost break period.<br>
+           When a future cost break record is added, the <a href="../../Item_maintenance/Cost_Table.htm#%">cost break reduction percentage</a> of the current cost record is automatically displayed in the <strong>Break %</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Retail_needed">Retail needed</a></strong></td>
+
+          <td>The <strong>Retail needed</strong> field contains the future sales condition to obtain the cost break. This sales condition may be expressed as a price at which the item must be sold, or a percentage of discount given on the selling price of the item.<br>
+           The <strong>Retail needed</strong> field is currently used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Minimum">Minimum</a></strong></td>
+
+          <td>The <strong>Minimum (Min)</strong> field contains the future minimum quantity required, in cases, to obtain the cost break reduction.<br>
+          When a future cost break record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Min">cost break minimum quantity</a> of the current cost record is automatically displayed in the <strong>Minimum</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Maximum">Maximum</a></strong></td>
+
+          <td>The <strong>Maximum (Max)</strong> field contains the future maximum quantity, in cases, which limits the number of cases bought on the cost break.<br>
+          When a future cost break record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Max">cost break maximum quantity</a> of the current cost record is automatically displayed in the <strong>Maximum</strong> field.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_OI_field">The OI field</a></h2>
+
+      <p>The <strong>Off Invoice (OI)</strong> field contains the identification character of the future off invoice status. This status specifies when the cost break value is given.</p>
+
+      <p>When a future cost break record is added, the <a href="../../Item_maintenance/Cost_Table.htm#OI">cost break off invoice value</a> of the current cost record is automatically displayed in the <b>Off Invoice</b> field.</p>
+
+      <p><img src="../Future_allowance_table/Future_allowance_table_files/OI_field.png"></p>
+
+      <p>The following values are available:</p>
+
+      <p></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><strong>Value</strong></th>
+
+            <th><strong>Description</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><b>Off invoice</b></td>
+
+          <td>The cost break value is subtracted from the invoice total.<br>
+          This affects the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td><b>End of promotion</b></td>
+
+          <td>The cost break value is given at the end of the promotion (as a check) according to the number of items bought.<br>
+          This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td><b>On statement</b></td>
+
+          <td>The cost break value appears on the vendor's statement. It is given according to the number of items bought.<br>
+          This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td><b>Movement required</b></td>
+
+          <td>The cost break value is given (as a check) according to the number of items sold.<br>
+          This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+       
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Generate Prices</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - How to Generate Prices Using the Cost Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The <b>Generate price</b> utility is used to calculate the selling prices from the cost amounts entered in the <a href="../Cost_Table.htm"><b>Cost</b> table</a>. The calculation is based on a margin.</p>
+
+      <h2>Displaying the Generate price window</h2>
+
+      <p>The <b>Generate price</b> window can be opened manually or automatically when a change is made in the <b>Cost</b> table. See the reseller for more details.</p>
+      <map name="generate_price_window">
+        <area shape="rect" coords="53, 41, 310, 61" href="">
+        <area shape="rect" coords="79, 65, 254, 85" href="">
+        <area shape="rect" coords="258, 65, 310, 85" href="">
+        <area shape="rect" coords="18, 111, 38, 131" href="">
+        <area shape="rect" coords="19, 128, 39, 148" href="">
+        <area shape="rect" coords="18, 146, 38, 166" href="">
+        <area shape="rect" coords="50, 176, 103, 196" href="">
+        <area shape="rect" coords="49, 196, 103, 216" href="">
+        <area shape="rect" coords="51, 218, 102, 238" href="">
+        <area shape="rect" coords="50, 239, 102, 259" href="">
+        <area shape="rect" coords="52, 263, 102, 283" href="">
+        <area shape="rect" coords="130, 111, 150, 131" href="">
+        <area shape="rect" coords="129, 130, 149, 150" href="">
+        <area shape="rect" coords="130, 149, 150, 169" href="">
+        <area shape="rect" coords="130, 168, 150, 185" href="">
+        <area shape="rect" coords="130, 182, 150, 201" href="">
+        <area shape="rect" coords="130, 198, 150, 218" href="">
+        <area shape="rect" coords="131, 215, 148, 232" href="">
+        <area shape="rect" coords="129, 231, 149, 251" href="">
+        <area shape="rect" coords="245, 122, 311, 142" href="">
+        <area shape="rect" coords="245, 140, 311, 160" href="">
+        <area shape="rect" coords="245, 158, 312, 178" href="">
+        <area shape="rect" coords="247, 198, 310, 218" href="">
+        <area shape="rect" coords="247, 216, 311, 236" href="">
+        <area shape="rect" coords="246, 236, 310, 256" href="">
+        <area shape="rect" coords="247, 266, 310, 286" href="">
+      </map>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><img class="Text" height="321" src="Generating_price_cost_table_files/generate_price_window.png" width="330" usemap="#generate_price_window"></td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center">* Click on a field to get information on it</td>
+        </tr>
+      </table>
+
+      <p class="alert alert-warning"><b>NOTE:</b> If the <a href="../Special_items/Contract_price_table/Contract_price_table.htm"><strong>Contract price</strong> table</a> is opened, the customer prices based on a margin will also be generated.</p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The table below briefly explains the <strong>Generate price</strong> window fields and their functionalities.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Targets">Targets</a></strong></td>
+
+          <td>The <b>Targets</b> field contains the target group(s) affected by the price generation.<br>
+          It is used in global price generation.<br>
+           The default value is <em>PAL</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Price_levels">Price levels</a></strong></td>
+
+          <td>The <strong>Price levels</strong> field contains the price level(s) for which the selling price is generated.<br>
+          The default value is <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="All_levels">All levels</a></strong></td>
+
+          <td>The <strong>All levels</strong> field enters automatically all price levels in the system.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Base_cost">Base cost</a></strong></td>
+
+          <td>The <strong>Base cost</strong> field specifies that the selling price is generated (or the profit is made) from the <a href="file:///Z:/V4500/Users/eSuite/Common/Item_maintenance/Cost_Table.htm#Base_cost"><strong>Base cost</strong> field</a> of the <a href="file:///Z:/V4500/Users/eSuite/Common/Item_maintenance/Cost_Table.htm"><strong>Cost</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Landed_cost">Landed cost</a></strong></td>
+
+          <td>The <strong>Landed cost</strong> field specifies that the selling price is generated (or the profit is made) from the sum of the base cost amount and the applicable fees.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Net_cost">Net cost</a></strong></td>
+
+          <td>The <strong>Net cost</strong> field specifies that the selling price is generated (or the profit is made) from the <a href="../Cost_Table.htm#Cost"><strong>Cost</strong> field</a> in the <a href="file:///Z:/V4500/Users/eSuite/Common/Item_maintenance/Cost_Table.htm"><strong>Cost</strong> table</a>.<br>
+          Usually, the <strong>Net cost</strong> value is the same as the <strong>Base cost</strong> value unless discounts, rebates, etc. are given by the vendor. In this case, the <strong>Net cost</strong> value changes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cost">Cost</a></strong></td>
+
+          <td>The <strong>Cost</strong> field contains the cost value from which the selling price is generated.<br>
+          Not editable. Its value comes from the <b>Cost</b> table. Depending on the base selected in the <strong>Base</strong> cost, <strong>Landed cost</strong> and <strong>Net cost</strong> fields, the <b>Cost</b> field contains the base cost or the net cost.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Margin">Margin</a></strong></td>
+
+          <td>The <strong>Margin</strong> field contains the profit margin on the item(s), in percentage. It is used to generate the selling price.<br>
+          Its default value is <em>Item</em>.<br>
+          For details, see the <a href="#The_Margin_field"><strong>Margin</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Round">Round</a></strong></td>
+
+          <td>The <strong>Round</strong> field contains the ending number of the selling price. It works in combination with the <a href="#Margin"><strong>Margin</strong> field</a>.<br>
+          Its default value is <em>Item</em>.<br>
+          For details, see the <a href="#The_Round_field"><strong>Round</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Price">Price</a></strong></td>
+
+          <td>The <strong>Price</strong> field displays the generated selling price.<br>
+          Not editable. Its value is generated from the cost value displayed in the <a href="#Cost"><b>Cost</b> field</a>, according to the <a href="#Margin">margin</a> and <a href="#Round">rounding</a> values entered.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Reset">Reset</a></strong></td>
+
+          <td>The <strong>Reset</strong> button resets the values of the <strong>Margin</strong> and <strong>Round</strong> fields to the default value (<em>Item</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Retail">Retail</a></strong></td>
+
+          <td>The <b>Retail</b> selling price specifies that the generated price value will be sent to the <strong>Regular</strong> price in the <b>Price</b> table. <span class="auto-style1"><strong>Check if it works (+ the following rows). If not, any other tables that must be opened for this to work? As the notes mention in chm 3.5 Generate price - Cost doc.</strong></span> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="TPR">TPR</a></b></td>
+
+          <td>The <b>TPR</b> selling price specifies that the generated price value will be sent to the <b>TPR</b> price in the <b>Price</b> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Sale">Sale</a></b></td>
+
+          <td>The <b>Sale</b> selling price specifies that the generated price value will be sent to the <b>Sale</b> price in the <b>Price</b> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Instore">Instore</a></b></td>
+
+          <td>The <b>Instore</b> selling price specifies that the generated price value will be sent to the <strong>Store</strong> price in the <b>Price</b> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Future_retail">Future retail</a></b></td>
+
+          <td>The <b>Future retail</b> selling price specifies that the generated price value will be sent to the <b>Future price</b> in the <b>Future price</b> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Future_TPR">Future TPR</a></b></td>
+
+          <td>The <b>Future TPR</b> selling price specifies that the generated price value will be sent to the <b>Future TPR</b> price in the <b>Future TPR</b> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Future_sale">Future sale</a></b></td>
+
+          <td>The <b>Future sale</b> selling price specifies that the generated price value will be sent to the <b>Future sale</b> price (<b>Future sale</b> table).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Future_instore">Future instore</a></b></td>
+
+          <td>The <b>Future instore</b> selling prices specifies that the generated price value will be sent to the <b>Future instore</b> price (<b>Future instore price</b> table).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Yes">Yes</a></strong></td>
+
+          <td>
+            <p class="Table">The <b>Yes</b> button generates the selling price for the current item.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><span class="auto-style1">One item (Yes section)</span></strong></td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><span class="auto-style1">Global (Yes section)</span></strong></td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Always</strong></td>
+
+          <td>The <b>Always</b> button automatically generates the selling price for each item whose information has been modified in the <b>Cost</b> table during the current maintenance session without opening the <b>Generate price</b> window each time. The <b>Margin</b> and <b>Round</b> values must contain the default value <i>Item</i> for the <b>Always</b> button to be available.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>No</strong></td>
+
+          <td>The <strong>No</strong> button does not generate the setting price for the current item. If the system is set to open the <strong>Generate price</strong> window each time a change is made in the <strong>Cost</strong> table, the <strong>Generate price</strong> window will be automatically displayed when a change is made for another item during the current maintenance session.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><span class="auto-style1">One item (No section)</span></strong></td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><span class="auto-style1">Global (No section)</span></strong></td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Never</strong></td>
+
+          <td>The <b>Never</b> button does not generate any selling price for any item during the current maintenance session.<br>
+          If the system is set to open the <strong>Generate price</strong> window each time a change is made in the <strong>Cost</strong> table, the <strong>Generate price</strong> window will not be displayed automatically for the complete current maintenance session. <span class="auto-style1">However, it can be opened manually by clicking on the toolbar button.</span> The <strong>Generate price</strong> window will be displayed automatically again during the next maintenance session.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Cancel</strong></td>
+
+          <td>The <strong>Cancel</strong> button closes the <strong>Generate price</strong> window without generating any selling price. If the system is set to open the <strong>Generate price</strong> window each time a change is made in the <strong>Cost</strong> table, the <strong>Generate price</strong> window will be automatically displayed when a change is made for another item during the current maintenance session.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Margin_field">The Margin field</a></h3>
+
+      <p>The <strong>Margin</strong> field contains the profit margin on the item in percentage. It is used to generate the selling price.<br>
+      The default value is <em>Item</em>.</p>
+
+      <p>The <b>Margin</b> field in the <b>Generate price</b> window has priority over the <a href="../Price_Table.htm#Margin_(suggested_retail)"><b>Margin</b> field</a> in the <a href="../Price_Table.htm"><b>Price</b> table</a> and overwrites it. However, the <b>Generate price</b> window can use the margin value of the <b>Price</b> table. To do so, the <i>Item</i> value must be entered in the <b>Margin</b> field of the <b>Generate price</b> window. A margin value must be entered in the <b>Price</b> table for a selling price to be calculated.</p>
+
+      <p>By default, the profit is calculated from the selling price and not from the cost of the item(s). For example, if the cost of the item is $1.00 and the margin is 10%, the item would be sold at $1.10. However, the generated price is $1.11. The system uses the following formula: for a profit of 10%, the cost is considered as 90% of the selling price. If 90% is equal to $1.00, 100% (the selling price) is equal to $1.11.</p>
+
+      <p>See the dealer for more details on how the profit may be calculated from the cost instead of the selling price and how the profit on the suggested retail price may be calculated from the retail price instead of the cost.</p>
+
+      <p>To enter the profit margin:</p>
+
+      <ul>
+        <li class="Steps">Type the profit margin in percentage in the <b>Margin</b> field, or</li>
+
+        <li class="Steps">Type <i>Item</i> in the <b>Margin</b> field to use the profit margin entered in the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Utilities/Item_tables/Price_table/Fields/TGM_field.htm"><b>TGM</b> field</a> of the <b>Price</b> table.<br>
+        The generated selling price is automatically displayed in the <b>Price</b> field of the <b>Generate price</b> window.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Round_field">The <span class="auto-style1">Round</span> field</a></h3>
+
+      <p>The <strong>Round</strong> field contains the ending number of the selling price. It works in combination with the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Utilities/Generate_price/Fields_cost/Margin_field.htm">Margin field</a>.<br>
+      Its default value is <em>Item</em>.</p>
+
+      <p>Two different ending numbers separated by a comma may be specified in the <b>Round</b> field. In this case:</p>
+
+      <ul>
+        <li>Any selling price that ends with a 5 or less will end with the first ending number.</li>
+
+        <li>Any selling price that ends above a 5 will end with the second ending number.</li>
+      </ul>
+
+      <p>The <b>Round</b> field in the <b>Generate price</b> window has priority over the <span class="auto-style1"><b>Round</b></span> field in the <a href="../Price_Table.htm"><b>Price</b> table</a> and overwrites it. However, the <b>Generate price</b> window can use the rounding value of the <b>Price</b> table. To do so, the <i>Item</i> value must be entered in the <b>Round</b> field of the <b>Generate price</b> window. A rounding value must be entered in the <b>Price</b> table for the ending number to apply.</p>
+
+      <p>To enter the ending number of the selling price:</p>
+
+      <ul>
+        <li class="Steps">Type the ending number(s) in the <b>Round</b> field, or</li>
+
+        <li class="Steps">Type <i>Item</i> in the <b>Round</b> field to use the ending number(s) entered in the <span class="auto-style1"><b>Round</b> field</span> of the <b>Price</b> table.<br>
+        The generated selling price is automatically updated in the <b>Price</b> field of the <b>Generate price</b> window.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2>Generating a price</h2>
+
+      <p>The <b>Generate price</b> utility helps generate the selling prices and the future selling prices from the cost amounts, based on a profit margin.</p>
+
+      <p>The selling prices may be generated item by item, globally for a group of items or automatically for all items. The <b>Generate price</b> window can be opened manually or automatically as soon as a change is made in the <b>Cost</b> table. See the dealer for more details.</p>
+
+      <p>To generate a selling price, follow these steps:</p>
+
+      <ol>
+        <li>Open the <b>Generate price</b> window.</li>
+
+        <li>Change the <a href="#Targets">targets</a> affected, if necessary.</li>
+
+        <li>Change the <a href="#Price_levels">price levels</a> affected, if necessary, or<br>
+        Click on the <a href="#All_levels"><b>All levels</b> button</a> to specify all price levels defined in the system.</li>
+
+        <li>Select the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Utilities/Generate_price/Fields_cost/From_section.htm">cost</a> from which the selling price is generated (<a href="#Base_cost">base</a>, <a href="#Landed_cost">landed</a> or <a href="#Net_cost">net</a> cost).<br>
+         The cost value of the selected base is displayed in the <a href="#Cost"><b>Cost</b> field</a> of the <b>Generate price</b> window.</li>
+
+        <li>Enter the <a href="#Margin">profit margin</a>.<br>
+        The generated selling price is displayed in the <a href="#Price"><b>Price</b> field</a>.</li>
+
+        <li>Enter the <a href="#Round">rounding value</a>, if necessary.<br>
+        The generated selling price is updated in the <b>Price</b> field.</li>
+
+        <li>Specify the selling price generated.</li>
+
+        <li>Click on the appropriate button to generate the specified selling price.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2>Generating a price from the TGM field</h2>
+
+      <p>The <b>Retail</b>, <b>Package</b> and <b>Limited</b> prices may be generated directly from the <span class="auto-style1"><b>TGM</b></span> fields of the <b><a href="../Price_Table.htm">Price</a></b>, <b><a href="../../Batches/Future_price_table/Future_price_table.htm">Future price</a></b>, <b><a href="../../Batches/Future_sales_price_table/Future_sales_price_table.htm">Future sales</a></b>, <b><a href="../../Batches/Future_TPR_table/Future_TPR_table.htm">Future TPR</a></b> and <b><a href="../../Batches/Future_instore_price_table/Future_instore_price_table.htm">Future instore</a></b> tables.</p>
+
+      <div class="Note">
+        <strong>NOTES:</strong> 
+
+        <ul>
+          <li>To be able to generate a selling price in the <b>Price</b> table, a cost must exist for the item in the <a href="../Cost_Table.htm"><b>Cost</b> table</a>.</li>
+
+          <li>To be able to generate a future selling price, a cost must exist for the item in the <b>Cost</b> table or a future cost must exist in the <a href="../../Batches/Future_cost_table/Future_cost_table.htm"><b>Future cost</b> table</a>.</li>
+        </ul>
+      </div>
+
+      <p>To generate a retail, package or limited price, follow these steps:</p>
+
+      <ol>
+        <li>Enter the desired margin value in the corresponding <b>TGM</b> field.</li>
+
+        <li>Enter the price quantity in the corresponding <b>Price</b> field.<br>
+         A price quantity is required to generate a price.</li>
+
+        <li>Enter the ending number in the corresponding <b>Round</b> field, if necessary.</li>
+
+        <li>To generate the selling price, click on <strong class="auto-style1">name of button</strong> or double-click in the corresponding <b>TGM</b> field (<span class="auto-style1">in the <b>Price</b> table only</span>).<br>
+         The <b>Generate price</b> window is displayed.</li>
+
+        <li>Select the cost from which the selling price is generated (from which the profit is made).<br>
+        The unit cost amount is displayed in the bottom of the <strong>Generate price</strong> window.</li>
+
+        <li>Click on the appropriate button to generate the corresponding selling price.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

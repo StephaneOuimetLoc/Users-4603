@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Shelf Location Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Shelf Location Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Shelf location</b> table specifies where each item is located in the store, and controls the shelf facing.</p>
+
+      <h2>Displaying the Shelf location table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item list</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Items - General List</strong>.</li>
+
+        <li>Enter the search criteria and click on <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window.</li>
+
+        <li>Select a record and click on <strong>Edit</strong> on the bottom of the item grid: the option menu is displayed.</li>
+
+        <li>Select <strong>Master tables</strong> and then <strong>Shelf location</strong>: the <strong>Shelf edit table</strong> opens, overlapping the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Shelf_location_table_files/shelf_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Shelf</strong> table is divided into three parts: the <strong>main section</strong>, the <strong>bottom section</strong> and the <strong>Shelf table grid</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Shelf_location_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="13, 114, 92, 140" href="#Target">
+            <area shape="rect" coords="96, 114, 220, 142" href="#Shelf_ID">
+            <area shape="rect" coords="223, 113, 372, 141" href="#Label_template">
+            <area shape="rect" coords="376, 117, 397, 137" href="#Main">
+            <area shape="rect" coords="13, 175, 62, 202" href="#Position">
+            <area shape="rect" coords="67, 176, 118, 202" href="#Side">
+            <area shape="rect" coords="124, 175, 172, 200" href="#Aisle">
+            <area shape="rect" coords="176, 176, 236, 201" href="#Section">
+            <area shape="rect" coords="241, 174, 282, 201" href="#Quantity">
+            <area shape="rect" coords="288, 175, 326, 202" href="#Life">
+            <area shape="rect" coords="332, 175, 391, 202" href="#Plano_ID">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Bottom section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Shelf_location_table_files/bottom_section.png" usemap="#bottom_section"> <map name="bottom_section">
+            <area shape="rect" coords="10, 35, 65, 63" href="#Facing_X">
+            <area shape="rect" coords="73, 34, 125, 62" href="#Facing_Y">
+            <area shape="rect" coords="133, 34, 187, 60" href="#Facing_Z">
+            <area shape="rect" coords="191, 13, 252, 62" href="#Total_quantity">
+            <area shape="rect" coords="254, 13, 298, 63" href="#Total_X">
+            <area shape="rect" coords="300, 12, 346, 64" href="#Total_Y">
+            <area shape="rect" coords="346, 12, 398, 64" href="#Total_Z">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Shelf table grid</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Shelf_location_table_files/shelf_table_grid.png" usemap="#shelf_table_grid"> <map name="shelf_table_grid">
+            <area shape="rect" coords="1, 90, 64, 210" href="#Target_column">
+            <area shape="rect" coords="65, 91, 189, 210" href="#Shelf_ID_column">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Shelf table</strong> fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <b>Target</b> field contains the target identifier (the store group).&nbsp;<br>
+          It is a required field.&nbsp;<br>
+          The default value of the <b>Target</b> field is <i>PAL</i>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Shelf_ID">Shelf ID</a></strong></td>
+
+          <td>The <b>Shelf ID</b> field contains the shelf identifier within the aisle where the item is located.<br>
+          It is a required field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Label_template">Label template</a></strong></td>
+
+          <td>The <strong>Label template</strong> field contains the default type of shelf tag to be printed for the item.<br>
+          It is used to filter the labels to print in the Labels module as well as on the PDA.<br>
+          The label template can be a single tag or a template tag. See the <strong>Label template group</strong> table to get details on the template tags.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Main">Main</a></strong></td>
+
+          <td>The <strong>Main</strong> field specifies whether a shelf label is to be printed in the store for this item (checked), or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Position">Position</a></strong></td>
+
+          <td>The <b>Position</b> field contains the facing position on the <a href="#Shelf_ID">shelf</a> where the item is located.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Side">Side</a></strong></td>
+
+          <td style="height: 21px">The <strong>Side</strong> field contains the side of the <a href="#Aisle">aisle</a> where the item is located.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Aisle">Aisle</a></strong></td>
+
+          <td style="height: 21px">The <b>Aisle</b> field contains the aisle where the item is located.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Section">Section</a></strong></td>
+
+          <td style="height: 21px">The <b>Section</b> field contains the section of the store where the item is located.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Quantity">Quantity</a></strong></td>
+
+          <td style="height: 21px">The <b>Quantity</b> <strong>(Qty)</strong> field contains the number of shelf tags to print for this item.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Life">Life</a></strong></td>
+
+          <td style="height: 21px">The <strong>Life</strong> field contains the number of days the item is available for sale before being removed from the sales area.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Plano_ID">Plano ID</a></strong></td>
+
+          <td>Description to come.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Bottom section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Facing_X">Facing X</a></strong></td>
+
+          <td style="height: 21px">The <b>Facing X</b> field contains the number of facings on the shelf for the item.&nbsp;<br>
+          The default value of the <b>Facing X</b> field is <i>1</i>.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Facing_Y">Facing Y</a></strong></td>
+
+          <td style="height: 21px">The <strong>Facing Y</strong> field contains the number of units in height included in one facing.&nbsp;<br>
+           The default value of the <strong>Facing Y</strong> field is <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Facing_Z">Facing Z</a></strong></td>
+
+          <td style="height: 21px">The <b>Facing Z</b> field contains the number of units in depth contained in one facing.<br>
+          The default value of the <b>Facing Z</b> field is <i>1</i>.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Total_quantity">Total quantity</a></strong></td>
+
+          <td style="height: 21px">The <strong>Total quantity</strong> field displays the total number of units on the shelf for the item, according to the facing numbers entered.<br>
+          The <b>Total quantity</b> value is automatically calculated (<b><a href="#Facing_X">Facing X</a></b> x <b><a href="#Facing_Y">Facing Y</a></b> x <b><a href="#Facing_Z">Facing Z</a></b>).</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Total_X">Total X</a></strong></td>
+
+          <td style="height: 21px">The <strong>Total X</strong> field displays the total width value that the item takes up on the shelf according to the item width and the number of facings.<br>
+          The <strong>Total X</strong> value is automatically calculated (<a href="file:///Z:/V4500/Users/eSuite/Common/Item_maintenance/Main%20Item_Table.htm#Width">item width</a> x <a href="#Facing_X">Facing X</a>).</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Total_Y">Total Y</a></strong></td>
+
+          <td style="height: 21px">The <strong>Total Y</strong> field displays the total height value, in centimeters, that the item takes up on the shelf according to the item height and the number of units in height contained in one facing.<br>
+          The <strong>Total Y</strong> value is automatically calculated (<a href="file:///Z:/V4500/Users/eSuite/Common/Item_maintenance/Main%20Item_Table.htm#Height">item height</a> x <a href="#Facing_Y">Facing Y</a>).</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Total_Z">Total Z</a></strong></td>
+
+          <td style="height: 21px">The <strong>Total Z</strong> field displays the total depth value, in centimeters, that the item takes up on the shelf according to the item depth and the number of units in depth contained in one facing.<br>
+          The <strong>Total Z</strong> value is automatically calculated (<a href="file:///Z:/V4500/Users/eSuite/Common/Item_maintenance/Main%20Item_Table.htm#Depth">item depth</a> x <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Item_tables/Shelf_table/Fields/FacingZ_field.htm">Facing Z</a>).</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Shelf table grid</strong></td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Target_column">Target column</a></strong></td>
+
+          <td style="height: 21px">The <strong>Target column</strong> contains the list of target identifiers (store groups) for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px;"><strong><a name="Shelf_ID_column">Shelf ID column</a></strong></td>
+
+          <td style="height: 21px">The <strong>Shelf ID column</strong> contains the list of shelf identifiers within the aisle where the item is located.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

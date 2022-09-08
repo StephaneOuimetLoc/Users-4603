@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Items Maintenance</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Item Maintenance <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item List (New) <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The <strong>Items</strong> entry is common to most eSuite modules. Item maintenance can be carried out by managing items directly from the database or in a <a href="../Batches/Batch_maintenance_overview/Batch_maintenance_overview.htm">batch process</a>.</p>
+
+      <p>The eSuite software keeps the item information in different tables, called <a href="Item_Overview.htm">item tables</a>. They are essential for creating items, generating prices and tracking cost information.&nbsp;Item tables can be accessed from the <b>Items</b> menu in the launcher.</p>
+
+      <h2>Creating an item</h2>
+
+      <p>The eSuite software allows creating items and copying existing items to new ones.</p>
+
+      <p>Items may be created from the item grid. When the <strong>Add</strong> button <img class="Text" height="22" src="Item_Maintenance_files/add_button.png" width="19"> is activated in the toolbar, it opens the <strong><a href="Creating_items/Create_item.htm#Item_creation_table">Item creation</a></strong> table that includes the major sections of the main item tables:</p>
+
+      <p><img class="Text" src="Item_Maintenance_files/item_creation_table.png"></p>
+
+      <p>&nbsp;</p>
+
+      <p>See <strong><a href="Creating_items/Creating_items.htm">Creating items</a></strong> for details.</p>
+
+      <p>New items may also be created by copying existing items. When the <strong>Copy current item to a new item</strong> button <img class="Text" height="21" src="Item_Maintenance_files/copy_current_to_new_button.png" width="19"> is activated in the item grid, it opens the <strong>Item creation table</strong> and the <strong>Copy item</strong> window. This allows entering a new UPC and copying the information.</p>
+
+      <p><img class="Text" src="Copying_items/Copying_items_files/copy_item_window.png"></p>
+
+      <p>&nbsp;See <strong><a href="Copying_items/Copying_items.htm">Copying a current item to a new one</a></strong> for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2>Editing an item</h2>
+
+      <p>Items in eSuite may be modified from both the item grid or the item tables.</p>
+
+      <p>In the item grid:</p>
+
+      <ul>
+        <li>Double-click the editable field where information needs to be changed. Editable fields in eSuite grids are identified by a small flag in the top right corner:<br>
+         <img src="Item_Maintenance_files/editable_field.png"></li>
+
+        <li>Save the changes.</li>
+      </ul>
+
+      <p>&nbsp;In the item tables:</p>
+
+      <ul>
+        <li>In <strong>Items - General list</strong>, select the editable field where information needs to be changed.</li>
+
+        <li>Press <strong>F3</strong> on the keyboard to open the item table based on the grid position.</li>
+
+        <li>Save the changes.</li>
+      </ul>
+
+      <p class="Note"><strong>NOTE:</strong> Item tables may be opened from the <strong>Items</strong> entry in the launcher or by from <strong>Edit</strong> in the bottom menu of the item grid.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2>Item controls</h2>
+
+      <p>The bottom menu in the item grid offers further controls for item maintenance: <strong><a href="#Edit">Edit</a>, <a href="#Analyze">Analyze</a></strong> and <strong><a href="#Actions">Action</a>:</strong></p>
+
+      <p><img class="Text" src="Item_Maintenance_files/bottom_menu_controls.png"></p>
+
+      <h3><a name="Edit"><strong>Edit</strong></a></h3>
+
+      <p>The <strong>Edit</strong> control offers a complex menu that allows opening and editing item tables.</p>
+
+      <p><img class="Text" src="Item_Maintenance_files/edit.png"></p>
+
+      <p>The table below briefly explains the menu options and their functionalities.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px">MENU</th>
+
+            <th style="width: 256px">SUB-MENU</th>
+
+            <th>FUNCTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong>Preferred</strong></td>
+
+          <td style="width: 256px"><strong>Based on grid position (F3)</strong></td>
+
+          <td>Opens the item table corresponding to the field selected in the grid.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>All in one basic item (CTRL+F3)</strong></td>
+
+          <td>Opens the <strong>Item creation</strong> table with the information of the item selected in the grid.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>&nbsp;</strong> </td>
+
+          <td style="width: 256px"><strong>Multi core tables</strong></td>
+
+          <td>Opens the core information in the main item tables.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Master tables</strong></td>
+
+          <td style="width: 256px"><strong>Main master</strong></td>
+
+          <td>Opens the <a href="Main%20Item_Table.htm"><strong>Main item</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>POS master</strong></td>
+
+          <td>Opens the <a href="POS_Table.htm"><strong>POS</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Price master</strong></td>
+
+          <td>Opens the <a href="Price_Table.htm"><strong>Price</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Cost master</strong></td>
+
+          <td>Opens the <a href="Cost_Table.htm"><strong>Cost</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Shelf location</strong></td>
+
+          <td>Opens the <a href="Shelf_location_table.htm"><strong>Shelf location</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Special items</strong></td>
+
+          <td style="width: 256px"><strong>Alternate codes</strong></td>
+
+          <td>Opens the <a href="Special_items/Alternate_code_table/Alternate_code_table.htm"><strong>Alternate codes</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Contract price</strong></td>
+
+          <td>Opens the <a href="Special_items/Contract_price_table/Contract_price_table.htm"><strong>Contract price</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Electronic coupon link</strong></td>
+
+          <td>Opens the <a href="Special_items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic coupon link</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Inventory trigger</strong></td>
+
+          <td>Opens the <a href="Special_items/Inventory_trigger_table/Inventory_trigger_table.htm"><strong>Inventory trigger</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Recipe</strong></td>
+
+          <td>Opens the <a href="Special_items/Recipe_table/Recipe_table.htm"><strong>Recipe</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Kit</strong></td>
+
+          <td>Opens the <a href="Special_items/Kit_table/Kit_table.htm"><strong>Kit</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Modifier</strong></td>
+
+          <td>Opens the <a href="Special_items/Modifier_table/Modifier_table.htm"><strong>Modifier</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Item classification</strong></td>
+
+          <td>Opens the <strong>Item classification</strong> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td style="width: 256px"><strong>Images</strong></td>
+
+          <td>Opens the <strong>Item images</strong> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Scale items</strong></td>
+
+          <td style="width: 256px"><strong>Scale information</strong></td>
+
+          <td>Opens the <strong>Scale information</strong> table.</td>
+        </tr>
+      </table>
+
+      <h3><a name="Analyze">Analyze</a></h3>
+
+      <p>The <strong>Analyze</strong> control offers tools for getting item information based on user-defined criteria:</p>
+
+      <ol>
+        <li>The <strong>Item sub query</strong> option groups and breaks down the information in the entire item grid.</li>
+
+        <li>The <strong>Item-linked query</strong> allows additional tables to be joined with information related to the item that has been selected in the grid.</li>
+      </ol>
+
+      <p><img class="Text" src="Item_Maintenance_files/analyze.png"></p>
+
+      <h3><a name="Action">Action</a></h3>
+
+      <p>The <strong>Action</strong> button allows assigning or unassigning promotions to the items selected in the grid. It also gives access to labels.</p>
+
+      <p><img class="Text" src="Item_Maintenance_files/action.png"></p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

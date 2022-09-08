@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Accounts Operations</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1><!-- #BeginEditable "Title" -->Accounts Operations</h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Manage &gt; Accounting &gt; Receivable &gt; Accounts Summary <!-- #EndEditable --></p>
+
+    <h2>Information</h2>
+
+    <p>The Accounts summary entry in eSuite Manage<span>&nbsp;module is used for operations related to customer's account payments, balance adjustments, validating customers account balances and activities down to transaction details for both <strong>Local</strong> account type and <strong>Centralized</strong> account type (SMSPay).</span></p>
+
+    <div class="alert alert-warning" style="left: 0px; top: 0px;">
+      <strong>NOTE:</strong>&nbsp;Through our the Accounting Module you have the choice to select customer type in the wizards. Make sure to choose the correct account type. Use <strong>Local</strong> (accounts saved in native tables) or <strong>Centralized</strong> (at the host level in SMSPay tables).<br />
+       <img width="213" class="auto-style1" style="height: 121px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Customer_type.png" /><br />
+    </div>
+
+    <p>This document shows how to:</p>
+
+    <ul>
+      <li>Create a Balance adjustment</li>
+
+      <li>Apply an Open payment</li>
+
+      <li>Apply a Match payment</li>
+
+      <li>Pay all invoices</li>
+
+      <li>Submit interest</li>
+
+      <li>Analyze customer A/R transaction details</li>
+    </ul>
+
+    <h2>Creating a Balance adjustment</h2>
+
+    <p>Balance adjustments are created in eSuite Manage / Receivable / Accounts summary.</p>
+
+    <p>To create a balance adjustment:</p>
+
+    <ol>
+      <li>In the launcher, click the arrow on <strong>Accounting</strong> entry to display its menu.</li>
+
+      <li>Click on <strong>Receivable</strong>: the start window opens on the desktop</li>
+    </ol>
+    &nbsp; 
+
+    <p><img width="737" class="auto-style1" style="height: 508px;" src="eSuite_Manage_accounting_accounts_summary_files/Start_menu.png" /></p>
+
+    <ol>
+      <li>Click on <strong>Account summary</strong>: the search wizard will open on desktop</li>
+
+      <li>Add <em>all</em> necessary criteria and click <strong>Execute</strong></li>
+
+      <li><strong>Select</strong> the customer account</li>
+    </ol>
+
+    <div class="alert alert-warning" style="left: 0px; top: 0px;">
+      <strong>NOTE:</strong>&nbsp;Multiple customer selection is not permitted when using the Action tab. If you have more than one customer selected, you will receive the following warning message:<br />
+       <img width="363" class="auto-style1" style="height: 221px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/warning.png" />
+    </div>
+
+    <ol>
+      <li>Click on <strong>Action</strong></li>
+
+      <li>Select <strong>Balance adjustment</strong></li>
+    </ol>
+
+    <p><img width="1195" class="auto-style1" style="height: 822px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Balance_adjustment.png" /><br />
+    </p>
+
+    <p>The Account balance adjustment window will open up showing the account number and customer's current balance</p>
+
+    <p><img width="479" class="auto-style1" style="height: 424px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Balance_adjustment_amount.png" /></p>
+
+    <ol>
+      <li>Enter the <strong>balance adjustment amount</strong> (required field), reason code (if applicable) and notes (if applicable)</li>
+
+      <li>Select <strong>Skip notification</strong> (if applicable)</li>
+
+      <li>Click <strong>Submit</strong></li>
+
+      <li><strong>Refresh</strong> the Summary grid. The adjustment will be added to the Cust.adjustment column and the amount will be reflected in the Calculated and Current columns</li>
+    </ol>
+
+    <p><img width="1208" class="auto-style1" style="height: 251px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Balance_adjustment_amount_1.png" /></p>
+
+    <h2>Applying an Open payment</h2>
+
+    <p>&nbsp;Open payments are payments that will apply to the oldest balance and are not matched to a specific invoice. Open payments in eSuite are applied in eSuite Manage / Receivable / Accounts summary and can only be paid by check.</p>
+
+    <p>To create an open payment</p>
+
+    <ol>
+      <li>In the launcher, click the arrow on <strong>Accounting entry</strong> to display its menu.</li>
+
+      <li>Click on <strong>Receivable</strong>: the start window opens on the desktop</li>
+
+      <li>Click on <strong>Account summary</strong>: the search wizard will open on desktop</li>
+
+      <li>Add all necessary criteria and click <strong>Execute</strong></li>
+
+      <li>Select the <strong>customer account</strong></li>
+
+      <li>Click on <strong>Action</strong></li>
+
+      <li>Select <strong>Open payment</strong></li>
+
+      <li style="list-style: none">
+        <p>The Account Open Payment window will open up showing you the account number and customer's current balance.</p>
+      </li>
+    </ol>
+
+    <p><img width="477" class="auto-style1" style="height: 421px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/open_payment.png" /></p>
+
+    <ol>
+      <li value="8">Enter <strong>open check date, open payment amount</strong> (required field), <strong>reason code</strong> (if applicable) and <strong>notes</strong> (if applicable)</li>
+
+      <li>Select <strong>Skip notification</strong> (if applicable)</li>
+
+      <li>Click <strong>Submit</strong></li>
+
+      <li><strong>Refresh Summary grid</strong>. The open payment will be added to the payment column and the amount will be reflected in the Calculated and Current columns</li>
+    </ol>
+
+    <p><img width="1210" class="auto-style1" style="height: 362px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/open_payment_refresh_screen.png" /></p>
+
+    <h2>Match payment to the invoice</h2>
+
+    <p>The match payments option is used when the customer wants the payment to be applied to a specific invoice, matching the payment to the invoice. Match payments in eSuite are applied in eSuite Manage / Receivable / Accounts summary and can only be paid by check.</p>
+
+    <ol>
+      <li>In the launcher, click the arrow on <strong>Accounting</strong> entry to display its menu</li>
+
+      <li>Click on <strong>Receivable:</strong> the start window opens on the desktop</li>
+
+      <li>Click on <strong>Account summary</strong>: the search wizard will open on desktop</li>
+
+      <li>Add <em>all</em> necessary criteria and click <strong>Execute</strong></li>
+
+      <li>Select the <strong>customer account</strong></li>
+
+      <li>Click on <strong>Action</strong></li>
+
+      <li>Select <strong>Match payment</strong></li>
+
+      <li style="list-style: none">
+        <p>The Account Match Payment window will open on desktop showing you the account number, name and due amount.</p>
+      </li>
+
+      <li value="8">Enter the <strong>check amount</strong></li>
+
+      <li>Enter <strong>Reference</strong> (if applicable - this could be used to enter the check number as a reference)</li>
+
+      <li><strong>Check date</strong>: the date in which you want the check payment to apply to. If no date is entered then the transaction will be on current date</li>
+
+      <li><strong>Balance</strong>: this field will keep a running count of the balance left to match (payment verses matched invoice. Once you have entered the check amount, the balance will show in negative until you select the invoice you wish to match the payment to.</li>
+    </ol>
+
+    <p><img width="971" class="auto-style1" style="height: 449px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Match_Payment.png" /></p>
+
+    <p>&nbsp;The balance needs to be at 0.00 in order to apply and save the match payment. Otherwise you will received an error message:</p>
+
+    <p><img width="361" class="auto-style1" style="height: 218px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Balance_must_be_zero.png" /></p>
+
+    <div class="alert alert-warning">
+      <strong>NOTE:</strong>&nbsp;You can do a partial payment using the Match payment option. See example provided. A check amount of $100.00 is applied to account #5. With the $100.00 check I have enough to match payment for invoice #00000043, 0000044 and partial payment for 0000061. This is leaving an amount of $25.62 left to pay on invoice #00000061
+    </div>
+
+    <p><img width="997" class="auto-style1" style="height: 626px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Partial_match_payment.png" /></p>
+
+    <h2>Pay all invoices</h2>
+
+    <p>The Pay All option allows you to enter a check and pay all of the outstanding invoice in one transaction. Pay All payment in eSuite are applied in eSuite Manage / Receivable / Accounts summary and can only be paid by check.</p>
+
+    <p>The pay all can be done in Open payment or Match payment</p>
+
+    <p><strong>Pay all in Open payment:</strong></p>
+
+    <ol>
+      <li>In the launcher, click the arrow on <strong>Accounting entry</strong> to display its menu.</li>
+
+      <li>Click on <strong>Receivable</strong>: the start window opens on the desktop</li>
+
+      <li>Click on <strong>Account summary</strong>: the search wizard will open on desktop</li>
+
+      <li>Add <em>all</em> necessary criteria and click <strong>Execute</strong></li>
+
+      <li>Select the <strong>customer account</strong></li>
+
+      <li>Click on <strong>Action</strong></li>
+
+      <li>Select <strong>Open payment</strong></li>
+
+      <li>The window will show that <strong>account number</strong> and <strong>balance due</strong></li>
+    </ol>
+
+    <p><img width="537" class="auto-style1" style="height: 471px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/full_open_payment.png" /></p>
+
+    <ol>
+      <li>Enter <strong>open payment amount</strong> for full balance <strong>due amount</strong> (required field), <strong>reason code</strong> (if applicable) and <strong>notes</strong> (if applicable)</li>
+
+      <li>Select <strong>Skip notification</strong> (if applicable)</li>
+
+      <li>Click <strong>Submit</strong></li>
+
+      <li><strong>Refresh</strong> Summary grid</li>
+    </ol>
+
+    <p><img width="1347" class="auto-style1" style="height: 334px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Full_open_payment_applied.png" /></p>
+
+    <p><strong>Pay all in Match payment:</strong></p>
+
+    <ol>
+      <li>In the launcher, click the arrow on <strong>Accounting</strong> entry to display its menu.</li>
+
+      <li>Click on <strong>Receivable</strong>: the start window opens on the desktop</li>
+
+      <li>Click on <strong>Account summary</strong>: the search wizard will open on desktop</li>
+
+      <li>Add all necessary criteria and click <strong>Execute</strong></li>
+
+      <li>Select the <strong>customer account</strong></li>
+
+      <li>Click on <strong>Action</strong></li>
+
+      <li>Select <strong>Match payment</strong></li>
+
+      <li style="list-style: none">
+        <p>The Account Match Payment window will open on desktop showing you the account number, name and due amount.</p>
+      </li>
+
+      <li>Select Pay all. The amounts will auto populate and matched each invoice</li>
+    </ol>
+
+    <p><img width="898" class="auto-style1" style="height: 604px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Full_matched%20payment.png" /></p>
+
+    <ol>
+      <li>Enter <strong>Reference</strong> (if applicable - this could be used to enter the check number as a reference)</li>
+
+      <li><strong>Check date</strong>: the date in which you want the check payment to apply to. If no date is entered then the transaction will be on current date</li>
+
+      <li>Select <strong>Skip notification</strong> (if applicable)</li>
+
+      <li>Click <strong>Submit</strong></li>
+
+      <li>Refresh <strong>Summary grid</strong></li>
+    </ol>
+
+    <h2>Analyzing customers A/R transactions</h2>
+
+    <p>The Analyze option allows you to view customers transaction details and multi total reports</p>
+
+    <p>To access the transaction details in Accounts summary:</p>
+
+    <ol>
+      <li>In the launcher, click the arrow on <strong>Accounting</strong> entry to display its menu.</li>
+
+      <li>Click on <strong>Receivable</strong>: the start window opens on the desktop</li>
+
+      <li>Click on <strong>Account summary</strong>: the search wizard will open on desktop</li>
+
+      <li>Add <em>all</em> necessary criteria and click <strong>Execute</strong></li>
+
+      <li>Select the <strong>customer account</strong></li>
+
+      <li>Click on <strong>Analyze</strong></li>
+    </ol>
+
+    <p><img width="820" class="auto-style1" style="height: 576px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/Account_summary_transaction_details.png" /></p>
+
+    <ol>
+      <li value="7">Once in transaction detail you can drill down to customer info / tables using the Edit option or ej information using the Action option</li>
+    </ol>
+
+    <p><img width="1246" class="auto-style1" style="height: 579px;" alt="" src="eSuite_Manage_accounting_accounts_summary_files/AR_transaction_detail_actions.png" /></p>
+
+    <div class="alert alert-warning">
+      <strong>NOTE:</strong>&nbsp;In Account summary using the customer type 'Centralized' the Debit note and Balance expired columns do not exist - future development
+    </div>
+    <!-- end of main container --><a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

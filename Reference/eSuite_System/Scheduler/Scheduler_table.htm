@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Scheduler Edit</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite System - Scheduler Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite System &gt; Scheduler <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Scheduler</b> table defines the automated processes, or jobs, that must be executed by the system. Price deployment, POS polling, backups and inter-office data file transfers are examples of the types of processes that are usually defined as jobs in the <b>Scheduler</b> table.</p>
+
+      <p>The Scheduler table can also define processes that are not set for automatic execution, using the Scheduler as a configurable menu, or list of processes, containing jobs that must be executed manually. The eSuite software is configured to keep track of all scheduled events, and their executions.</p>
+
+      <div class="Note">
+        <b>NOTES:</b> 
+
+        <ul>
+          <li>The <b>Scheduler</b> table has to be configured by a user with the right credentials.</li>
+
+          <li>Any change to the <b>Scheduler</b> table will not be available or active until the SMSHttps service is restarted.</li>
+        </ul>
+      </div>
+
+      <h2>Activated jobs</h2>
+
+      <p>By default, the <b>Scheduler</b> grid contains some jobs that are already configured in the system. When installing eSuite for the first time, the most important of them are activated: a valid date and time have been entered in the <b><a href="#Last_date">Last date</a></b> field so they will be executed automatically (the date in the <b>Last date</b> field corresponds to the date of the installation of the software). It is important to note that there should not be a frequency for a task if there is no last date entered in the <strong>Last date</strong> field. This could cause execute time issues.</p>
+
+      <p>To activate a job on the <em>backoffice server scheduler</em>, enter a valid date and time in the <b>Last date</b> field.</p>
+
+      <p>To activate a job on a <em>front-end workstation scheduler</em>, create a new entry in the <b>Scheduler</b> table with the target number of the front-end workstation in the <b><a href="#Host_target">Host target</a></b> and <b><a href="#Execution_target">Execution target</a></b> fields and enter a valid date and time in the <b>Last date</b> field.</p>
+
+      <div class="Note">
+        <b>NOTE:</b> 
+
+        <ul>
+          <li>When changing the time on the different jobs, the order of execution for the default jobs must be kept</li>
+
+          <li><strong>Example</strong>: The Close Events job should be run <em>before</em> the Deploy to Head Office job and so on</li>
+        </ul>
+      </div>
+
+      <h2>Displaying the Scheduler table</h2>
+
+      <p>In the Launcher, click the <strong>Scheduler</strong> entry:</p>
+
+      <ol>
+        <li>The <strong>Scheduler</strong> window opens in the <strong>Scheduler</strong> work area.</li>
+
+        <li>Click on <strong>Scheduler</strong>: the <strong>Scheduler</strong> grid opens in the <strong>List</strong> tab.</li>
+
+        <li>To edit an existing job, click on <strong>Edit</strong> in the bottom menu: the <strong>Scheduler</strong> table will open, displaying the information on the selected job.</li>
+
+        <li>To create a new job, click <strong>Add</strong> <img class="Text" height="14" src="Scheduler_table_files/add.png" width="15"> in the toolbar: the <strong>Scheduler</strong> table will open for editing.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><img style="border-style:none" class="Text" src="Scheduler_table_files/scheduler_table.png" usemap="#schedule_table"> <map name="schedule_table">
+            <area shape="rect" coords="16, 258, 151, 280" href="#Execute_past_events">
+            <area shape="rect" coords="96, 130, 166, 158" href="#Number">
+            <area shape="rect" coords="174, 131, 515, 159" href="#Name">
+            <area shape="rect" coords="525, 132, 591, 157" href="#Execution_target">
+            <area shape="rect" coords="59, 167, 127, 194" href="#Every_xx_days">
+            <area shape="rect" coords="58, 197, 126, 224" href="#Every_xx_months">
+            <area shape="rect" coords="60, 227, 124, 254" href="#Every_xx_minutes">
+            <area shape="rect" coords="270, 167, 594, 193" href="#Next_date">
+            <area shape="rect" coords="269, 198, 595, 223" href="#Last_date">
+            <area shape="rect" coords="269, 227, 335, 254" href="#Too_late">
+            <area shape="rect" coords="289, 256, 337, 282" href="#Effective_date">
+            <area shape="rect" coords="279, 286, 564, 311" href="#If_file_exists">
+            <area shape="rect" coords="13, 290, 141, 310" href="#Execute_manually">
+            <area shape="rect" coords="13, 340, 595, 418" href="#Command">
+            <area shape="rect" coords="14, 131, 84, 158" href="#Host_target">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <p>Tasks may be executed from this table using the <strong>Execute</strong> button in the toolbar.</p>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the fields and their functionalities in the <strong>Scheduler</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELDS</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px; "><strong><a name="Execute">Execute</a></strong></td>
+
+          <td>Runs the associated script.<br>
+          Disabled by default.<br>
+          Enabled when the <a href="#Execute_manually"><strong>Execute manually</strong> field</a> is checked.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Host_target">Host target</a></strong></td>
+
+          <td>The <strong>Host target</strong> field contains the target identifier of the node on which the job has to run.&nbsp;<br>
+          It is a required field used with the <a href="#Number"><strong>Number</strong> field</a> to uniquely identify records in the <strong>Scheduler</strong> table.<br>
+          The default value is [the target identifier of the current node].</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <b>Number</b> field contains the job number.&nbsp;<br>
+          It is a required field used with the <a href="#Host_target"><strong>Host target</strong> field</a> to uniquely identify records in the <b>Scheduler</b> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Name">Name</a></strong></td>
+
+          <td>The <strong>Name</strong> field contains the job name describing the process and making it easy to identify.&nbsp;<br>
+          It is a required field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Execution_target">Execution target</a></strong></td>
+
+          <td>The <strong>Execution target (Exec. target)</strong> field contains the target identifier of the node where the process results must be sent.<br>
+          The execution target can be sales terminals, other PCs, or stores configured in the <b>Terminal</b> and <b>Target</b> tables. For example, a process that collects item modifications that must be distributed to sales terminals or other stores usually has its execution target set to the configured destination.<br>
+          If no execution target is specified for a process, the process results are aimed at the <a href="#Host_target">host target</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Every_xx_days">Every xx days</a></strong></td>
+
+          <td>The <strong>Every xx days</strong> field contains the number of days between each execution of the process.<br>
+          Its value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Every_xx_months">Every xx months</a></strong></td>
+
+          <td>The <strong>Every xx months</strong> field contains the number of months between each execution of the process.<br>
+          Its value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Every_xx_minutes">Every xx minutes</a></strong></td>
+
+          <td>The <strong>Every xx minutes</strong> field contains the number of minutes between each execution of the process.<br>
+          The <b>Every xx minutes</b> value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Execute_past_events">Execute past events</a></strong></td>
+
+          <td>The <strong>Execute past events</strong> field specifies whether the previous unsuccessful executions of the process have to be run up to the present (checked) or not (unchecked).<br>
+          For details, see the <a href="#The_Execute_past_events_field"><strong>Execute past events</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Execute_manually">Execute manually</a></strong></td>
+
+          <td>The <strong>Execute manually</strong> field specifies whether the process can be manually executed (checked) or not (unchecked).<br>
+           When checked, the <a href="#Last_date"><strong>Last date</strong> field</a> should be left empty.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Next_date">Next date</a></strong></td>
+
+          <td>The <strong>Next date</strong> field contains the next date and time the process will be executed.<br>
+          For details, see the <a href="#The_Next_date_field"><strong>Next date</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Last_date">Last date</a></strong></td>
+
+          <td>The <strong>Last date</strong> field contains the date and time of the last successful execution of the process.<br>
+          For details, see the <a href="#Last_date"><strong>Last date</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Too_late">Too late</a></strong></td>
+
+          <td>The <strong>Too late</strong> field contains the number of hours and minutes (HHMM) during which the system should try to execute the process after it was scheduled.<br>
+          For details, see the <a href="#The_Too_late_field"><strong>Too late</strong> field section</a> below.<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Effective_date">Effective date</a></strong></td>
+
+          <td>The <strong>Effective date</strong> field contains the number of days the system should add to or subtract from the next date in order to calculate the correct date to use for the process.<br>
+          For details, see the <a href="#The_Effective_date_field"><strong>Effective date</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="If_file_exists">If file exists</a></strong></td>
+
+          <td>The <strong>If file exists</strong> field contains the name of the file needed for the process to be executed.<br>
+          For details, see the <a href="#The_If_file_exists_field"><strong>If file exists</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Command">Command</a></strong></td>
+
+          <td>The <strong>Command</strong> field contains the command string to execute.<br>
+          For details, see the <a href="#The_Command_field"><strong>Command</strong> field section</a> below.</td>
+        </tr>
+      </table>
+
+      <h2><a name="The_Execute_past_events_field">The Execute past events field</a></h2>
+
+      <p>The <strong>Execute past events</strong> field specifies whether the previous unsuccessful executions of the process have to be run up to the present (checked) or not (unchecked).</p>
+
+      <p>In some situations, when a process has not been completed successfully during consecutive scheduled periods, it must be re-executed for every period it should have run in the past. For example, if an automated daily report print out has not been successful for three days because of printer problems and users want to print all reports since the last successful execution. When the <b>Execute past events</b> field is checked, the system executes the process once for every scheduled period since the last successful attempt, displayed in the <b><a href="#Last_date">Last date</a></b> field.</p>
+
+      <p>On the other hand, some processes should never be re-executed even if they have not been completed successfully, such as electronic cash register polling. In this example, even if three days have passed since the last successful polling, the first time the process was executed, the cash register was "Z" cleared. Any repetition of this polling returns zero values. When the <b>Execute past events</b> field is <u>not</u> checked, the system executes the process once, then sets the <a href="#Next_date"><b>Next date</b> field</a> to the configured date and time for the normal scheduled execution.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Next_date_field">The Next date field</a></h2>
+
+      <p>The <strong>Next date</strong> field contains the next date and time the process will be executed.</p>
+
+      <p>The <b>Next date</b> field is not editable. The date and time displayed are based on the values entered in the <b><a href="#Every_xx_days">Every xx days</a></b>, <b><a href="#Every_xx_months">Every xx months</a></b> and/or <b><a href="#Every_xx_minutes">Every xx minutes</a></b> fields, and the date and time configured in the <a href="#Last_date"><b>Last date</b></a> field.</p>
+
+      <p>For example, if a process is set to run every <i>2</i> days (<b>Every xx days</b> field = <i>2</i>), the <b>Next date</b> field displays a date and time two (2) days after the last date and time entry.</p>
+
+      <p class="Note"><b>NOTE:</b> Usually, only one of the <b>Every xx</b> fields contains a value. However, if two or all three of them contain values, they all affect the value of the next date field.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Last_date_field">The Last date field</a></h2>
+
+      <p>The <strong>Last date</strong> field contains the date and time of the last successful execution of the process.</p>
+
+      <p>By default, the <b>Scheduler</b> table contains some jobs already configured in the system. When installing the eSuite software for the first time, these jobs are not activated and they will not be executed automatically. To activate a job, enter a valid date and time in the <b>Last date</b> field.</p>
+
+      <p>Once a process has been executed successfully, the next date becomes the last date, and a new next date is defined according to the <b><a href="#Every_xx_days">Every xx days</a></b>, <b><a href="#Every_xx_months">Every xx months</a></b> and/or <b><a href="#Every_xx_minutes">Every xx minutes</a></b> values.</p>
+
+      <p>To populate the <strong>Last date</strong> field:</p>
+
+      <ul>
+        <li>Click on the calendar icon in the <strong>Last date</strong> field</li>
+
+        <li>Select the date</li>
+
+        <li>
+          If necessary, change the date and time 
+
+          <div class="row">
+            <div class="col">
+              <img class="Text" src="Scheduler_table_files/last%20date_picker.png" style="vertical-align: middle">
+            </div>
+
+            <div class="col">
+              <img src="Scheduler_table_files/last%20date_time.png" class="Text">
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <p>Required date format: <em>mm/dd/yyyy</em></p>
+
+      <p>Required time format: <em>hh:mm:ss</em></p>
+
+      <p>The last date, combined with the values in the <strong>Every x days</strong>, <strong>Every x months</strong> and <strong>Every x minutes</strong> fields, defines the next date. For example:</p>
+
+      <ul>
+        <li>To execute the job every day starting today, enter <i>1</i> in the <b>Every xx days</b> field and <i>yesterday's date</i> in the <b>Last date</b> field.</li>
+
+        <li>To execute the job every week starting next week, enter <i>7</i> in the <b>Every xx days</b> field and <i>today's date</i> in the <b>Last date</b> field.</li>
+
+        <li>To execute the job every month starting the current month, enter <i>1</i> in the <b>Every xx months</b> field and <i>last month's date</i> in the <b>Last date</b> field.</li>
+      </ul>
+
+      <p>To force a process to run for past dates, enter the first date for which the job should run and check the <strong>Execute past events</strong> field. For example:</p>
+
+      <ul>
+        <li>To execute the job every day starting with last week (7 days ago), enter <i>1</i> in the <b>Every xx days</b> field, <i>last week's date</i> (8 days ago) in the <b>Last date field</b> and check the <b>Execute past events</b> field.</li>
+      </ul>
+
+      <p class="Note"><strong>NOTE:</strong> When no time is entered in the <strong>Last date</strong> field, the system will run the scheduled job at midnight.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Too_late_field">The Too late field</a></h2>
+
+      <p>The <strong>Too late</strong> field contains the number of hours and minutes (required format: HHMM) during which the system should try to execute the process after it was scheduled.</p>
+
+      <p>The process will not be executed after the specified time period until the next scheduled time, displayed in the <b><a href="#The_Next_date_field">Next date</a></b> field. For example:</p>
+
+      <ul>
+        <li>To execute a process at 2:00 AM, but not after 6:00 AM, the value <i>0400</i> (for '4 hours') has to be entered in the <b>Too late</b> field.</li>
+      </ul>
+
+      <p>Leave the <b>Too late after</b> field blank if the system should execute the process at any time after the scheduled time.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Effective_date_field">The Effective date field</a></h2>
+
+      <p>The <strong>Effective date</strong> field contains the number of days the system should add to or subtract from the next date in order to calculate the correct date to use for the process.</p>
+
+      <p>In some cases, the process uses a date that must be different than the actual date (system date). For example, the <i>Calculate cumulative</i> process is scheduled to be executed at <i>2:00am</i> (after midnight). In this case, since the system date and sales date do not match, the process needs to be executed using yesterday's date (-1).</p>
+
+      <ul>
+        <li>Enter a <em>negative</em> number to date the process in the past.</li>
+
+        <li>Enter a <em>positive</em> number to date the process in the future.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_If_file_exists_field">The If file exists field</a></h2>
+
+      <p>The <strong>If file exists</strong> field contains the name of the file needed for the process to be executed.</p>
+
+      <p>In some cases, a process should only be executed if certain information is already available in the system. If the required information resides in a file, the process may depend on the existence of that file.</p>
+
+      <p>To populate the <strong>If file exists</strong> field, type the name of the file with its extension preceded by its full path.</p>
+
+      <div class="alert alert-warning">
+        <b>NOTE:</b> The system uses the archive file attribute to determine if a file is ready for processing. To use the <b>If file exists</b> condition, the file <em>must have its archive attribute set to OFF</em> for the system to recognize that the file exists.
+      </div>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Command_field">The Command field</a></h2>
+
+      <p>The <b>Command</b> field contains the command string to execute.</p>
+
+      <p>To enter the command string to execute, type the command string in the <b>Command</b> field.</p>
+
+      <p>The command string must be a specific command recognized by eSuite. Here are some examples:</p>
+
+      <ul>
+        <li>xch=send</li>
+
+        <li>xch=recv</li>
+
+        <li>sql=[<i>file_name</i>]</li>
+
+        <li>sqm=[<i>file_name</i>]</li>
+
+        <li>sqr=[<i>file_name</i>]</li>
+
+        <li>sqi=[<i>file_name</i>]</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

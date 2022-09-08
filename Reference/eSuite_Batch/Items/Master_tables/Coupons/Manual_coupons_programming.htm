@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Manual Coupons Programming</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Manual Coupons Programming<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxiliaries &gt; Coupon list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h1>Manual coupon programming</h1>
+
+      <p>Manual coupons are store and vendor coupons that need to be keyed in manually by the cashier, unlike electronic coupons which are issued by the system at the end of the transaction. Like any item in the system, manual coupons have their own UPCs; they are considered negative items.</p>
+
+      <ul>
+        <li>By default, the manual store coupons are added as new registrations in the transactions and they affect the net sales.</li>
+
+        <li>By default, the manual vendor coupons are added as new registrations in the transactions and they do not affect the net sales.</li>
+      </ul>
+
+      <p>Manual coupons may be programmed by entering their <strong>POS</strong> and <strong>price</strong> information and defining the criteria by means of the <strong>Electronic coupon link</strong> table. The conditions are validated when the cashier enters or scans the manual coupon.</p>
+
+      <p>However, eSuite offers the <strong><a href="../Coupons/Coupons.htm">Coupon wizard</a></strong> that facilitates the creation of coupons by grouping all criteria (type, method, quantity, amount, etc.) that must be respected for the coupon to be applied.</p>
+
+      <p>For the manual coupons to be issued, the <a href="../../../Customers/Shopper_level_table.htm#Apply_coupon_links"><strong>Apply coupon link</strong> field</a> of the <a href="../../../Customers/Shopper_level_table.htm"><strong>Shopper level</strong> table</a> must be checked in the corresponding shopper levels.</p>
+
+      <p>Each item sold may be associated with more than one manual coupon, but only one manual coupon discount may be applied on an item. The multiplication methods <em>Based on validated criteria</em> and <em>Based on quantity sold</em> are not used, meaning thar the manual coupon is not multiplied even if the criteria are reached more than once. To be able to issue the manual coupon a second time, the cashier has to enter the manual coupon a second time.</p>
+
+      <p>However, some methods may be set in the manual coupon definition to change the default behavior. For details, see <strong><a href="../Coupons/Coupons.htm">Coupons</a></strong>.</p>
+
+      <h2>Manual coupon example</h2>
+
+      <p>The <strong>Coupon wizard</strong> is used to program the conditions that must be respected for the manual coupons to be applied.</p>
+
+      <p>Many different manual coupons can be programmed; however, there are some limitations compared to electronic coupons.</p>
+
+      <p>Below are the steps for programming a <em>Cents off</em> manual coupon. For more examples, see <strong><a href="Manual_coupons_examples.htm">Manual coupons - examples</a></strong>.</p>
+
+      <h3>Get $0.50 off when you purchase a small coffee</h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="3">1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px" colspan="2"><strong>Value</strong> field: select <em>Cents off</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px" colspan="2"><strong>Discount</strong> field: enter <em>$0.50</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Coupon type</strong> field: select <em>Manual</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Description</strong> field: add a meaningful description.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Sub-dpt.</strong> field: select the right sub-department.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="159" src="Manual_coupons_programming_files/main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Type</strong> field: select <em>Item saless</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Equal to</strong> field: select the small coffee&nbsp;item.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Minimum value</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2">Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+           This method (see <em><a href="#Data_view">Data view</a></em> in <strong>Criteria tab</strong>) forces the system to apply the manual coupon discount on the coffee item.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="443" src="Manual_coupons_programming_files/add_criteria.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">3. In the <strong>Details</strong> tab:&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Enter a <strong>Start date</strong>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px; height: 21px;">
+          </td>
+
+          <td style="width: 423px; height: 21px;" colspan="2">Enter an <strong>End date</strong>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="326" src="Manual_coupons_programming_files/coupon_details.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">4. In the <strong>Descriptions</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px; height: 12px;">
+          </td>
+
+          <td style="height: 12px;"><strong>Expanded description</strong>: enter the expanded description of the promotion.</td>
+
+          <td style="width: 423px; height: 12px;">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="325" src="Manual_coupons_programming_files/coupon_description.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="157" src="Manual_coupons_programming_files/coupon_code.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2">The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em><a name="Data_view">Data view</a></em>):</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2"><img class="Text" height="326" src="Manual_coupons_programming_files/coupon_text_view.png" width="415">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="325" src="Manual_coupons_programming_files/coupon_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p class="List">In this example:</p>
+
+      <ul>
+        <li>The customer buys a small coffee that costs $1.25.</li>
+
+        <li>As the item is part of the <em>Cents off</em> promotion, the cashier applies the manual coupon of $0.50.</li>
+
+        <li>The customer will only pay $0.75 plus taxes.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="Manual_coupons_examples.htm">Go to Manual coupons - examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

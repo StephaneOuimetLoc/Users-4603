@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Label on Price Event Discrepancy</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Label on Price Event Discrepancy <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->TAGLINE <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information&nbsp;</h2>
+
+      <p><span class="auto-style1"><strong>To be revised and update once this feature is available in eSuite.<br>
+      Images in SMS Pro are for reference only; please replace them with their equivalent in eSuite.</strong></span><strong><br class="auto-style1">
+      </strong> <span class="auto-style1"><strong>Raluca, 2019-10-17</strong></span></p>
+
+      <p>The <strong>Label on price event discrepancy</strong> tool is used to:</p>
+
+      <ul>
+        <li>Initialize labels for one or more items;</li>
+
+        <li>Print labels for items with label discrepancies.</li>
+      </ul>
+
+      <p class="Note"><strong>NOTE:</strong> When using the Label on price event discrepancy tool, the Item Price window must be closed. Otherwise, the information being displayed in the tool may be inaccurate if an item has multiple price levels.</p>
+
+      <h2>Using the Label price event discrepancy tool</h2>
+
+      <p>Before using the <strong>Label price event discrepancy</strong> tool , the [Label]<strong><em>LABEL_REGGEN_METH</em></strong> key in Application.Ini file needs to be set:</p>
+
+      <ul>
+        <li>LABEL_REGGEN_METH=0 for Detect retail price change</li>
+
+        <li>LABEL_REGGEN_METH=1 for Include Instore price as retail price</li>
+
+        <li>LABEL_REGGEN_METH=2 for Include Instore price and TPR as retail price</li>
+
+        <li>LABEL_REGGEN_METH=3 for See all events including the return to regular price</li>
+      </ul>
+
+      <h2>Displaying the Label price event discrepancy tool</h2>
+
+      <p>In the Launcher, click the arrow in the <strong><span class="auto-style1">Tools</span></strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <span class="auto-style2">Item validity checks</span>: the <strong>Start</strong> window opens in the <strong><span class="auto-style1">Execute</span></strong> work area.</li>
+
+        <li>Select&nbsp;<b><strong>Label price event discrepancy</strong></b>. <span class="auto-style1">- item grid opens?</span></li>
+
+        <li>Select the item to analyze.<br>
+        <br>
+         <img class="Text" height="409" src="Label_price_discrepancy_files/label_discrepancy.png" width="227"></li>
+      </ol>
+
+      <p>The <strong>Label on price event discrepancy</strong> tool displays the differences between the last printed label an item (<strong><em>Printed</em></strong> column) and the information the label should display (<em><strong>Active</strong></em> column).<br>
+      Only items with discrepancies will show <span class="auto-style1">in the browser</span>.</p>
+
+      <p><strong>There are several options when working with label discrepancies:</strong></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 179px">OPTION</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 179px"><strong>Reset active item</strong></td>
+
+          <td>Resets the currently selected item <b>Print label on next batch</b> flag.<br>
+          This simulates printing a label and can be used to initialize an item's label status.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 179px"><strong>Reset all items in browser</strong></td>
+
+          <td>Resets the <b>Print label on next batch</b> flag for all items in the browser.<br>
+          This simulates printing a label and can be used to initialize the label status for all the items in the browser.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 179px"><strong>Refresh browser</strong></td>
+
+          <td>Refreshes the browser to display only items with differences between the current label to be printed and the last printed label.<br>
+          This can be used when having performed <b>Reset active item</b>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 179px"><strong>Print all items in browser</strong></td>
+
+          <td>Selects all the items in the browser.<br>
+          Using the same methodology as <strong>Label on price events</strong>, it displays the <strong>Label by next event</strong> screen that allows to generate and print labels.<br>
+          For more information on how to generate and print labels, see <a href="../Labels/Generating_and_Printing_Labels.htm"><strong>Generating and printing labels</strong></a>.</td>
+        </tr>
+      </table>
+
+      <div class="Note">
+        <strong>NOTES:</strong> 
+
+        <ul>
+          <li>Changes must be deployed before using the <strong>Label on price event discrepancy</strong> tool.</li>
+
+          <li>Multi-target is not supported when using <strong>Print all items from browser</strong>. Items will only be displayed on the <strong>Label by next event</strong> screen with one target and one price level.</li>
+        </ul>
+      </div>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Modifier Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Modifier Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>Modifier</strong> table is used to assign modifier comments to an item. It works with the other item tables, as its entries are related to a UPC.</p>
+
+      <p>It is possible to have as many notes as required and they can be linked to any item. Notes will appear on the kitchen receipt.</p>
+
+      <p>It is currently used with the fast food kiosks to request condiments when ordering sandwiches. After the customer selects the sandwich they want to order, the system asks them for the condiments they want. In this example, the sandwich is considered the main item and the different condiments are the modifiers. As many modifiers as needed may be linked to the same main item.</p>
+
+      <p>Some modifiers are compulsory, meaning that they have to be selected for the main item be sold. Others are considered as extras.</p>
+
+      <p>Also, some modifiers change the price and some do not. In the example above, an extra bacon may charge an additional amount.</p>
+
+      <p class="Note"><strong>NOTE:</strong> Even if the <strong>Modifier</strong> table is an item table, it is deployed to the front-end workstations as an <strong>Auxiliary</strong> table, using the <strong>Deploy auxiliaries</strong> job.</p>
+
+      <h2>Displaying the Modifier table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item</strong> <strong>list</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Items - General List</strong>.</li>
+
+        <li>Enter the search criteria and click <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window.</li>
+
+        <li>Select a record and click on <strong>Edit</strong> on the bottom of the item grid: the option menu is displayed.</li>
+
+        <li>Select <strong>Special items</strong> and then <strong>Modifier</strong>: the <strong>Modifier edit table</strong> opens overlapping the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Modifier_table_files/modifier_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Modifier</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>Modifier table grid</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Modifier_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="12, 114, 62, 141" href="#Sequence">
+            <area shape="rect" coords="67, 115, 323, 142" href="#Description">
+            <area shape="rect" coords="12, 166, 132, 192" href="#Required">
+            <area shape="rect" coords="137, 164, 322, 191" href="#Type">
+            <area shape="rect" coords="13, 215, 323, 241" href="#Link">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Modifier table grid</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Modifier_table_files/table_grid.png" usemap="#table_grid"> <map name="table_grid">
+            <area shape="rect" coords="0, 92, 52, 293" href="#Sequence">
+            <area shape="rect" coords="52, 92, 103, 293" href="#Required">
+            <area shape="rect" coords="102, 91, 174, 293" href="#Type">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p>The <strong>Modifier</strong> table grid offers quick information on the modifiers that are linked to the item. The following columns are displayed: <strong><a href="#Sequence">Sequence</a></strong>, <strong><a href="#Required">Required</a></strong>, and <strong><a href="#Type">Type</a></strong>.</p>
+
+      <p>Columns are movable, resizable and may be selected/deselected for a customized experience. They allow sorting the records in an ascending or a descending order.<br>
+      By default, records are displayed in ascending order by sequence. Selecting a record allows displaying and editing its information in the main section of the <strong>Modifier</strong> table.</p>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the item <strong>Modifier</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px" class="ListDark" colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Sequence">Sequence</a></strong></td>
+
+          <td>The <strong>Sequence</strong> field contains the sequence number that determines the order in which the modifier will be asked to the customer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> field contains the description of the modifier.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Required">Required</a></strong></td>
+
+          <td>The <strong>Required</strong> field contains the identifier letter defining the nature of the modifier.<br>
+          <em>Compulsory (C)</em> means that the customer must make a choice on this modifier.<br>
+          <em>Extra (E)</em> means that the customer can make a choice on this modifier.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Type">Type</a></strong></td>
+
+          <td>The <strong>Type</strong> field contains the identification letters of the type used to determine how the modifier will be filtered, i.e. to determine the choice to display for the modifier.<br>
+           The following options are available: <strong>Category</strong>, <strong>Family code</strong>, <strong>Report code</strong>, <strong>Sub-department</strong> and <strong>Department</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Link">Link</a></strong></td>
+
+          <td>The <strong>Link</strong> field contains the code of the selected type.<br>
+          It displays the list of modifiers, according to the selected type.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2>Item modifier setup</h2>
+
+      <p>A modifier is an item that affects another item during a sale. If the item modifier has a price, it will affect the price of the main item it is linked to. The best example is in a restaurant environment where modifiers such as ham, lettuce, tomatoes, etc. extra bacon are are added to the main item, a sandwich.</p>
+
+      <p>More than one modifier may be linked to an item.<br>
+      More than one modifier group may be linked to an item.</p>
+
+      <p>Item modifiers and modifier groups are listed and linked to the main item through the <strong>Modifier</strong> table. See the <a href="#example">example</a> below.</p>
+
+      <h3>Application</h3>
+
+      <p>The item modifiers are used in one of these options/plugins:</p>
+
+      <ul>
+        <li>Kiosk_FastFood</li>
+
+        <li>Plugin_POS_Delivery</li>
+
+        <li>Plugin_POS_FastFood</li>
+      </ul>
+
+      <p>See the reseller for more details on these options/plugins.</p>
+
+      <h3><a name="example"></a>Linking an item to a modifier</h3>
+
+      <p>This example illustrates how to link an item to modifiers grouped by category.</p>
+
+      <ol>
+        <li>Create the main item (<em>Chicken sandwich</em>).</li>
+
+        <li>Create the category <em>500000</em> called <em>Extras</em>.</li>
+
+        <li>Create the items that are extras <em>(cheese, tomatoes</em>, <em>lettuce</em>, etc.).</li>
+
+        <li>From the main item (<em>Chicken sandwich</em>), open the <strong>Modifier</strong> table and set the following values:<br>
+         <strong>Description</strong> field: add a relevant description.<strong><br>
+        Required</strong> field: select <em>Extra</em>.<br>
+        <strong>Type</strong> field: select <em>Category</em>.<br>
+        <strong>Link</strong> field: select <em>5000000</em>.<br>
+         <img src="Modifier_table_files/modifier_table_extras.png"><br>
+        </li>
+      </ol>
+
+      <p>The extras are now linked to the <em>Chicken sandwich</em> item.</p>
+
+      <h2>Required item modifier group</h2>
+
+      <p>An item modifier group can be <em>Compulsory</em> (<em>C</em>) or <em>Extra</em> (<em>X</em>). The main difference between these two kinds of requirements is that you absolutely need to make a choice for the <em>Compulsory</em> item modifier, like a yes/no question that can have more than 2 choices (for example, the type of bread of a sandwich). On the other hand, the <em>Extra</em> item modifier can have several item modifiers selected or none of them (for example, the different toppings of a sandwich).</p>
+
+      <p>Each item modifier can be grouped by category, family, report, sub-department or department. Once each group is created, they can be associated with more than one main item.</p>
+
+      <p>Through the eKiosk application, it is possible to have an image attached to an item in the <strong>Modifier</strong> table. The image must be saved in the \Storeman\Bitmaps directory, under the UPC of the item (for example, <em>0000000006000.jpg</em>). The image file can be of any HTML valid type such as .bmp, .jpg, .gif or .png.</p>
+
+      <h3>Tips</h3>
+
+      <p>To have a Yes/No choice like "Do you want an extra bacon? (Yes/No)", two items have to be created: one for the YES option and one for the NO option. These two items have to be grouped under the same category, such as <em>Extra Bacon</em>.</p>
+
+      <h3>Fees</h3>
+
+      <p>To have a modifier that affects the price of the current item, the configuration needs to be done accordingly.</p>
+
+      <p>See your reseller for the details.</p>
+
+      <h2>Ability to multiply extra modifiers</h2>
+
+      <p>Through the eKiosk application, it is possible to multiply the extra modifiers by a quantity of 2 or 3 without having to create separate modifiers. For example, to have a multiplier of 2 (x2) and 3 (x3) for the extra bacon modifier, the value <em>3</em> has to be set in the <strong>Qty rent</strong> field of the <strong>POS</strong> table for the extra bacon item.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

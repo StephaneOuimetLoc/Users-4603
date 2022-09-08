@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <!-- #BeginTemplate "../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SMS Help Document" /><!-- Title/Keywords edit on new documents -->
+    <!-- #BeginEditable "doctitle" -->
+    <!-- #EndEditable -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Payment on Clover Devices</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <a name="top"></a> <!-- Docs page layout -->
+     <br />
+     
+
+    <h1><!-- #BeginEditable "Title" -->mFloor - Payment on Clover Devices<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->mFloor Selling <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>This document describes how to use the Clover for payment when using mFloor on a Clover Flex device.</p>
+
+      <h2>Invoice Total screen</h2>
+
+      <p>When using a Clover device, a new button labeled <b>Pay</b> will appear on the <b>Invoice Total</b> screen of mFloor.<br />
+      This button triggers the payment with the Clover application by sending it the amount to be paid.</p>
+      <img height="500" src="mFloor_Clover_files/Invoice_total.jpg" width="283" /> 
+
+      <h2>Payment Process</h2>
+
+      <p>When pressing the <b>Pay</b> button, the Clover app opens asking to confirm the amount to be paid.<br />
+      This amount is coming from mFloor directly and it's the full balance to pay.<br />
+      Before completing this step, the Cashier can modify the amount if needed. When done, press the <b>Charge</b> button.</p>
+      <img height="500" src="mFloor_Clover_files/Charge_Amount.jpg" width="283" /> 
+
+      <p>The Clover device will display a screen with instructions for the customer. The next steps are to be completed by the card holder (ie: Tap, Insert or Swipe).</p>
+      <img height="500" src="mFloor_Clover_files/Customer_Action.jpg" width="281" /> 
+
+      <p>Upon completion, the device is to be handed back to the cashier. The device will display a <b>Receipt Options</b> screen containing the following choices:</p>
+
+      <ul>
+        <li>Printer Customer Receipt: This prints a bank stub directly from the Clover printer.</li>
+
+        <li>Email: This button send a copy of the receipt via email to the customer <b>(The send receipt via email part of mFloor must be configured for this to work)</b>.</li>
+
+        <li>Text Message: This button send a copy of the receipt to the customer's phone via text (This feature is not currently supported)</li>
+
+        <li>Void Transaction: TBD</li>
+
+        <li>Done: This button bring the cashier back to mFloor.</li>
+      </ul>
+
+      <p>If the payment is not complete, mFloor will show the Invoice Total screen again with the updated balance to pay.</p>
+
+      <p><img alt="" height="500" src="mFloor_Clover_files/Completion_Clover.jpg" width="281" /> <img height="500" src="mFloor_Clover_files/Clover_Partial.jpg" width="279" /></p>
+
+      <h2>Detailed Transaction Receipts</h2>
+
+      <p>Currently it is only possible to send the receipt via email to the customer. mFloor will look into the transaction header to find if there is an email.<br />
+      If not, it will prompt the customer to enter his email address in order to get his receipt. As previously mentionned, the Clover device can still print a bank stub directly on its printer.</p>
+
+      <p class="auto-style2"><a href="mFloor_Selling_Module.htm">Return to mFloor - Selling menu</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

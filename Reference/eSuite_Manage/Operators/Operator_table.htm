@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Operator Table</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Manage - Operator Table&nbsp; <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Manage &gt; Operators &gt; Operator List <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>To use the eSuite software, users must have an operator number assigned to their profile in the system. The information on all system users, also known as operators, is kept in the <b>Operator</b> table.</p>
+
+      <p>Each operator is assigned a user level or <a href="Security_profiles.htm">security profile</a>. The eSuite software can be configured to control operator information for more than one site. In multistore situations, each record has a <b>Target</b> field, linking the operator to a store or a group of stores.</p>
+
+      <p>The <b>Operator</b> table contains security information that requires a high security profile in order to be accessed. Users who have access to the <b>Operator</b> table cannot modify user profiles with a higher security level than the one assigned to them. Only a user with the programmer security level has the authority to modify profiles in the <b>Operator</b> table.</p>
+
+      <div class="card">
+        <h5 class="card-header">Special notes</h5>
+
+        <div class="card-body">
+          <p class="card-text">To create, edit, modify or delete an operator in the Operator table, you need to have an equivalent or higher security profile than the user's profile you are creating/editing/modifying or deleting. This is necessary to prevent a user with a lower security profile from tampering with security levels and, consequently, confidential information.</p>
+
+          <p class="card-text">Please be advised that by deleting an operator, you are deleting the historical information linked to that information. For that reason, LOC Software recommends modifying records instead of deleting them.</p>
+
+          <p class="card-text">Sales personnel are defined in the system like any other operator. The difference between an operator and a salesperson is the way to log in. For salespersons, certain settings must be defined in the System.ini file. Contact your reseller for more information.</p>
+        </div>
+      </div>
+
+      <h2>Displaying the list of operators</h2>
+
+      <p>Operator profiles are created through the <strong>Operator</strong> table and displayed in the operator list.</p>
+
+      <p>To access the operator list, from the <strong>Manage module</strong> of eSuite:</p>
+
+      <ol>
+        <li>In the Launcher, click on <strong>Operators</strong>: the <strong>Start</strong> window opens in the <strong>Operators</strong> work area.</li>
+
+        <li>Select <strong>Operator list</strong>: the grid of all operators in the system opens in the <strong>Operators</strong> window.</li>
+      </ol>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Operator_table_files/operator_list.png" usemap="#operator_list"> <map name="operator_list">
+            <area shape="rect" coords="3, 91, 111, 598" href="#Sequence">
+            <area shape="rect" coords="111, 92, 222, 598" href="#Number">
+            <area shape="rect" coords="224, 93, 469, 599" href="#Short_name">
+            <area shape="rect" coords="470, 93, 570, 599" href="#Level">
+            <area shape="rect" coords="572, 92, 720, 598" href="#First_name">
+            <area shape="rect" coords="722, 92, 826, 597" href="#Last_name">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2>Displaying the Operator table</h2>
+
+      <p>From the <strong>Manage module</strong> of eSuite:</p>
+
+      <ol>
+        <li>In the Launcher, click on <strong>Operators</strong>: the <strong>Start</strong> window opens in the <strong>Operators</strong> work area.</li>
+
+        <li>Select <strong>Operator list</strong>: the grid of all operators in the system opens in the <strong>Operators</strong> window.</li>
+
+        <li>To modify an existing operator record, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu: the <strong>Operator</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new operator record, click on <strong>Add</strong> in the grid toolbar: the <strong>Operator</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <p><img class="Text" height="520" src="Operator_table_files/operator_table.png" width="560"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Operator</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>bottom tab section</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" height="272" src="Operator_table_files/main_section.png" width="493" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="10, 100, 72, 123" href="#Sequence">
+            <area shape="rect" coords="76, 100, 137, 122" href="#Number">
+            <area shape="rect" coords="145, 102, 205, 124" href="#Level">
+            <area shape="rect" coords="210, 102, 270, 124" href="#Filter">
+            <area shape="rect" coords="272, 103, 486, 124" href="#Short_name">
+            <area shape="rect" coords="9, 146, 97, 168" href="#Secret_code">
+            <area shape="rect" coords="102, 147, 199, 167" href="#Birth_date">
+            <area shape="rect" coords="203, 147, 283, 167" href="#Language">
+            <area shape="rect" coords="289, 147, 350, 167" href="#Status">
+            <area shape="rect" coords="352, 147, 399, 167" href="#Drawer">
+            <area shape="rect" coords="402, 146, 486, 167" href="#Profile">
+            <area shape="rect" coords="10, 190, 248, 213" href="#First_name">
+            <area shape="rect" coords="256, 189, 485, 213" href="#Last_name">
+            <area shape="rect" coords="56, 221, 483, 244" href="#Email">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <p><strong>Bottom tab section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" height="212" src="Operator_table_files/main_tab.png" width="491" usemap="#main_tab"> <map name="main_tab">
+            <area shape="rect" coords="9, 45, 282, 87" href="#Address">
+            <area shape="rect" coords="291, 45, 485, 87" href="#Telephone_1/2">
+            <area shape="rect" coords="11, 106, 166, 130" href="#City">
+            <area shape="rect" coords="170, 107, 251, 130" href="#Province/state">
+            <area shape="rect" coords="255, 107, 370, 129" href="#Country">
+            <area shape="rect" coords="374, 106, 483, 130" href="#Postal/zip">
+            <area shape="rect" coords="58, 137, 482, 161" href="#Note">
+          </map> </td>
+
+          <td><img class="Text" style="border-style:none" height="212" src="Operator_table_files/employment_tab.png" width="491" usemap="#employment_tab"> <map name="employment_tab">
+            <area shape="rect" coords="11, 45, 106, 67" href="#Hiring_date">
+            <area shape="rect" coords="111, 45, 209, 69" href="#Revision_date">
+            <area shape="rect" coords="212, 46, 298, 69" href="#Holidays">
+            <area shape="rect" coords="303, 45, 390, 68" href="#Additional_experience">
+            <area shape="rect" coords="395, 45, 485, 68" href="#Superior">
+            <area shape="rect" coords="10, 88, 400, 110" href="#Job_description">
+            <area shape="rect" coords="406, 90, 483, 110" href="#Department">
+            <area shape="rect" coords="9, 134, 88, 154" href="#Payroll">
+            <area shape="rect" coords="93, 133, 215, 153" href="#Insurance_number">
+            <area shape="rect" coords="221, 134, 320, 154" href="#Employee_number">
+            <area shape="rect" coords="326, 134, 401, 154" href="#State">
+            <area shape="rect" coords="404, 134, 482, 154" href="#Gender">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get more information.</td>
+
+          <td class="Img">* Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img"><img class="Text" style="border-style:none" height="211" src="Operator_table_files/links_tab.png" width="491" usemap="#links_tab"> <map name="links_tab">
+            <area shape="rect" coords="96, 43, 190, 65" href="#Store">
+            <area shape="rect" coords="195, 44, 341, 66" href="#Customer">
+            <area shape="rect" coords="345, 44, 484, 66" href="#Vendor">
+          </map> </td>
+
+          <td class="Img"><img class="Text" style="border-style:none" height="213" src="Operator_table_files/custom_tab.png" width="491" usemap="#custom_tab"> <map name="custom_tab">
+            <area shape="rect" coords="10, 11, 484, 163" href="#[empty]">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get more information.</td>
+
+          <td class="Img">* Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Operator</strong> table fields and their functionalities.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px" class="ListTitle">FIELD</th>
+
+            <th class="ListTitle">DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td colspan="2"><u><strong>Main section</strong></u></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Sequence">Sequence</a></strong></td>
+
+          <td>The <b>Sequence</b> field contains the operator order number.<br>
+           Auto-generated by the software when a new operator is created.<br>
+           Grayed out and not editable.<br>
+          For details, see the <a href="#The_Sequence_field"><strong>Sequence</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <b>Number</b> field contains the number used by the operator to log into the system.<br>
+          This operator number must be unique.<br>
+           For details, see the <a href="#The_Number_field"><strong>Number</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Level">Level</a></strong></td>
+
+          <td>The <strong>Level</strong> field contains the user level or <a href="Security_profiles.htm">security profile</a> assigned to the operator.<br>
+          To add, modify or delete an operator, you must have an equivalent or a higher security profile than the operator that you are adding, editing, modifying or deleting. In other words, an "assistant manager" cannot add, edit, modify or delete a "manager", an "owner" or a "programmer". This is necessary to prevent a lower profile user from assigning themselves a higher security profile or tampering with higher security profiles.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Filter">Filter</a></strong></td>
+
+          <td>The <strong>Filter</strong> field indicates contains the identification characters (alpha-numerical) of the operators who have access to the current target.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Short_name">Short name</a></strong></td>
+
+          <td>The <strong>Short name</strong> field contains the name of the operator used at the points of sale.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Secret_code">Secret code</a></strong></td>
+
+          <td>The <strong>Secret code</strong> field contains the password the operator must to enter every time they log in.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Birth_date">Birth date</a></strong></td>
+
+          <td>The <b>Birth date</b> field contains the operator's date of birth.<br>
+          Some items require that the operator be of a certain age.<br>
+          The <strong>Birth date</strong> field is used for the operator's age verification.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Language">Language</a></strong></td>
+
+          <td>The <strong>Language</strong> field contains the operator's preferred language.<br>
+          Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Status">Status</a></strong></td>
+
+          <td>The <strong>Status</strong> field contains the status of the operator, such as <em>Active</em>, <em>Dismissed</em>, <em>Disease</em>.<br>
+           Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Drawer">Drawer</a></strong></td>
+
+          <td>The <b>Drawer</b> field contains the drawer number assigned to the operator.<br>
+           Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Profile">Profile</a></strong></td>
+
+          <td>The <b>Profile</b> field contains the name of the grid preferences for the operator.<br>
+          It helps define different grid preferences for different groups of operators.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="First_name">First name</a></strong></td>
+
+          <td>The <b>First name</b> field contains the operator's first name.<br>
+           Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Last_name">Last name</a></strong></td>
+
+          <td><span class="auto-style1">The <b>Last name</b> field contains the operator's last name.<br>
+          Used for information purposes only.</span></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Email">Email</a></strong></td>
+
+          <td>The <b>Email</b> field contains the operator's email address.<br>
+           It may be used to log into the system.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Main tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Address">Address</a></strong></td>
+
+          <td>The <b>Address</b> field contains the operator's home address.<br>
+           It is split in two parts: <b>Address line 1</b> and <b>Address line 2</b>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Telephone_1/2">Telephone 1/2</a></strong></td>
+
+          <td>The <strong>Telephone 1/2</strong> field contains the operator's phone number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="City">City</a></strong></td>
+
+          <td>The <strong>City</strong> field contains the city of the operator's residence.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Province/state">Province/state</a></strong></td>
+
+          <td>The <strong>Province/state</strong> field contains the province or state of the operator's residence.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Country">Country</a></strong></td>
+
+          <td><span class="auto-style1">The <strong>Country</strong> field contains the country of the operator's residence.</span></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Postal/zip">Postal/zip</a></strong></td>
+
+          <td>The <strong>Postal/Zip</strong> field contains the postal or zip code of the operator's residence.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Note">Note</a></strong></td>
+
+          <td>The <b>Note</b> field contains additional information about the operator.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Employment tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Hiring_date">Hiring date</a></strong></td>
+
+          <td>The <b>Hiring date</b> field contains the hiring date of the operator.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Revision_date">Revision date</a></strong></td>
+
+          <td>The <b>Revision date</b> field contains the date of the last time the operator was promoted.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Holidays">Holidays</a></strong></td>
+
+          <td>The <strong>Holidays</strong> field contains the operator's holiday period, expressed in the chosen unit of measure (days, weeks).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Additional_experience">Additional experience</a></strong></td>
+
+          <td>The <strong>Additional experience</strong> field contains the duration of the operator's additional experience, expressed in the chosen unit of measure (months, years).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Superior">Superior</a></strong></td>
+
+          <td>The <b>Superior</b> field contains the operator number of the operator's superior.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Job_description">Job description</a></strong></td>
+
+          <td>The <strong>Job description</strong> field contains the description of the operator's job.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Department">Department</a></strong></td>
+
+          <td>The <strong>Department</strong> field contains the number of the department in which the operator works.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Payroll">Payroll</a></strong></td>
+
+          <td>The <strong>Payroll</strong> field contains the payroll number that links the operator to the <strong>Payroll</strong> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Insurance_number">Insurance number</a></strong></td>
+
+          <td>The <strong>Insurance number</strong> field contains the number of the operator's insurance.<br>
+          Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Employee_number">Employee number</a></strong></td>
+
+          <td>The <strong>Employee number</strong> field contains the operator's employee number. It may be different than the <a href="#Number">operator number</a>.<br>
+          Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="State">State</a></strong></td>
+
+          <td>The <strong>State</strong> field contains the operator's civil state.<br>
+           Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Gender">Gender</a></strong></td>
+
+          <td>The <strong>Gender</strong> field contains the operator's gender.<br>
+          Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Links tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Store">Store</a></strong></td>
+
+          <td>The <strong>Store</strong> field is used to determine to which store the sales of each operator are attributed in a head office environment. If an operator works in store <em>123</em> and <em>345</em> is entered in the <strong>Store</strong> field, all the sales for that operator will be added to the sales of store <em>345</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Customer">Customer</a></strong></td>
+
+          <td>The <strong>Customer</strong> field is used to determine to which customer the sales of each operator are attributed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor">Vendor</a></strong></td>
+
+          <td>The <strong>Customer</strong> field is used to determine to which customer the sales of each operator are attributed.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Custom tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><em><a name="[empty]">[empty]</a></em></td>
+
+          <td>For future development.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Sequence_field">The Sequence field</a></h2>
+
+      <p>The <b>Sequence</b> field contains the operator order number. It is auto-generated by the software when a new operator is created. It is grayed out and not editable.</p>
+
+      <p>The eSuite software uses the first record number available. If a record is deleted, eSuite will re-use its number the next time a record will be added.</p>
+
+      <p>On a multi-target layout, the sequence number must be different for each site to avoid conflicts at the Head office when the data is deployed. Thee sequence number must start by a different number at each site. See your dealer for more details.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Number_field">The Number field</a></h2>
+
+      <p>The <b>Number</b> field contains the number used by the operator to log into the system. This operator number must be unique.</p>
+
+      <p>If more than 8 digits are used, the default finish (to) numbers when running a report need to be changed. The default range is from 0 to 99999999; other 9's will need to be added to be able to display the information for the operator numbers that contain more than 8 digits.</p>
+
+      <p>The <b>Number</b> field is numeric-only, since some front-end workstations and cash registers may not have alpha keypads. The operator number may be different than the assigned <a href="#Sequence">sequence number</a>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

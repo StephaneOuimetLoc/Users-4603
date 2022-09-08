@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Coupons Overview</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Coupons Overview <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Coupon list<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The eSuite software offers the coupon wizard utility aimed at simplifying the creation of coupons by grouping all their criteria (type, method, quantity, amount, etc.).</p>
+
+      <p>Once the information is gathered and saved, the coupon is assigned a unique UPC that starts with 096 followed by the promotion number (10 digits). It is possible to manually enter coupon UPCs: automatic coupons may, for example, start with 095 followed by the promotion number and target coupons may start with 097 followed by the promotion number.</p>
+
+      <p>Below is a description of the <strong>Coupon wizard</strong> fields and functionalities and an <a href="#Creating_a_coupon">example</a> of how to create a coupon.</p>
+
+      <h2>Displaying the coupon wizard</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>New</strong> next to the <strong>Coupon list</strong> option: the <strong>Coupon wizard</strong> opens overlapping the work area.</li>
+      </ol>
+
+      <p><img height="481" src="Coupons_files/coupon_wizard.png" width="416"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Coupon wizard</strong> is a versatile tool whose layout adjusts according to the values set in its fields. It is divided into three parts: the <strong><a href="#Main_section">main section</a></strong>, the <strong><a href="#Tab_section">tab section</a></strong> and the <a href="#Add_criteria_window"><strong>Add criteria</strong> <strong>window</strong></a>.</p>
+
+      <h3><a name="Main_section">Main section</a></h3>
+
+      <p>The default view of the main section displays the following fields: <strong>Value type</strong>, <strong>Discount</strong>, <strong>Coupon type</strong>, <strong>Description</strong>, <strong>Sub-department</strong>, <strong>Code</strong> and <strong>Disable</strong>.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style=" height=" src="Coupons_files/main_section.png" width="416" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="6, 81, 142, 106" href="#Cents_off">
+            <area shape="rect" coords="145, 81, 275, 106" href="#Discount">
+            <area shape="rect" coords="279, 82, 406, 106" href="#Coupon_type">
+            <area shape="rect" coords="7, 126, 227, 150" href="#Description">
+            <area shape="rect" coords="228, 126, 290, 149" href="#Sub-department">
+            <area shape="rect" coords="292, 125, 384, 150" href="#Code">
+            <area shape="rect" coords="386, 127, 406, 147" href="#Disable">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p>The value selected in the <strong>Value type</strong> field determines the name of the field related to the discount:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 182px; "><strong>Value type field</strong></th>
+
+            <th><strong>Name of field related to discount (click the fields for more info)</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Cents off</strong></td>
+
+          <td><img src="Coupons_files/Discount_field.png" width="151" usemap="#discount_field"> <map name="discount_field">
+            <area shape="rect" coords="5, 17, 145, 37" href="#Discount">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 182px;"><strong>Cents per weight/volume</strong></td>
+
+          <td><map name="DiscPer_field">
+            <area shape="rect" coords="5, 17, 148, 40" href="#Discount_per">
+          </map> <img src="Coupons_files/DiscountPer_field.png" width="151" usemap="#DiscPer_field"> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 182px;"><strong>Percent</strong></td>
+
+          <td style=""><img height="43" src="Coupons_files/percent_field.png" width="151" usemap="#Percent_field"> <map name="Percent_field">
+            <area shape="rect" coords="4, 18, 149, 38" href="#Percent_field">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 182px;"><strong>Buy X get Y free</strong></td>
+
+          <td style=""><img height="43" src="Coupons_files/BuyX_GetY_fields.png" width="151" usemap="#BuyX_GetY_field"> <map name="BuyX_GetY_field">
+            <area shape="rect" coords="3, 18, 72, 41" href="#Buy_X">
+            <area shape="rect" coords="74, 19, 148, 42" href="#Get_Y">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td style="width: 182px;"><strong>Bundle price</strong></td>
+
+          <td style=""><img height="43" src="Coupons_files/Price_field.png" width="151" usemap="#Price_field"> <map name="Price_field">
+            <area shape="rect" coords="6, 18, 147, 38" href="#Price">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 182px;"><strong>No discount</strong></td>
+
+          <td style=""><img height="42" src="Coupons_files/No_Discount_field.png" width="151" usemap="#NoDiscount_field"> <map name="NoDiscount_field">
+            <area shape="rect" coords="2, 18, 148, 39" href="#No_discount_field">
+          </map> </td>
+        </tr>
+      </table>
+
+      <h3><strong><a name="Tab_section">Tab section</a></strong></h3>
+
+      <p>The following tabs and views are available in the tab section:</p>
+
+      <p><strong><a name="Criteria_tab">Criteria tab</a></strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td style=" width: 851px;"><strong>Text view</strong></td>
+
+          <td style=" width: 852px;"><strong>Data view</strong></td>
+        </tr>
+
+        <tr>
+          <td style=" width: 851px;"><img src="Coupons_files/criteria_text_view.png" width="416" usemap="#criteria_text_view"> <map name="criteria_text_view">
+            <area shape="rect" coords="3, 61, 409, 96" href="#Final_description">
+            <area shape="rect" coords="9, 286, 50, 315" href="#Text">
+            <area shape="rect" coords="56, 287, 96, 316" href="#Data">
+            <area shape="rect" coords="331, 285, 403, 314" href="#Add_criteria">
+          </map> </td>
+
+          <td style=" width: 852px;"><img src="Coupons_files/criteria_data_view.png" width="416" usemap="#criteria_data_view" style="margin-right: 0px"> <map name="criteria_data_view">
+            <area shape="rect" coords="7, 65, 50, 100" href="#Condition">
+            <area shape="rect" coords="51, 64, 131, 99" href="#Code">
+            <area shape="rect" coords="132, 64, 202, 99" href="">
+            <area shape="rect" coords="204, 62, 261, 97" href="#quantity">
+            <area shape="rect" coords="261, 63, 303, 98" href="#dollar_">
+            <area shape="rect" coords="304, 63, 350, 98" href="#weight">
+            <area shape="rect" coords="350, 62, 407, 97" href="#Coupon_methods">
+            <area shape="rect" coords="13, 290, 52, 318" href="#Text">
+            <area shape="rect" coords="59, 289, 98, 318" href="#Data">
+            <area shape="rect" coords="333, 287, 406, 318" href="#Add_criteria">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td style=" width: 851px;" class="Img">* Click on a field to get information on it.</td>
+
+          <td style=" width: 852px;" class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Details tab</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img src="Coupons_files/details_tab.png" width="416" usemap="#details_tab"> <map name="details_tab">
+            <area shape="rect" coords="14, 61, 103, 81" href="#Funding">
+            <area shape="rect" coords="109, 62, 230, 83" href="#Coupon_template">
+            <area shape="rect" coords="16, 105, 103, 126" href="#Event_type">
+            <area shape="rect" coords="112, 106, 191, 127" href="#Start_date">
+            <area shape="rect" coords="192, 105, 275, 126" href="#End_date">
+            <area shape="rect" coords="15, 149, 228, 171" href="#Registration_type">
+            <area shape="rect" coords="248, 148, 270, 171" href="#Multiply">
+            <area shape="rect" coords="281, 151, 325, 170" href="#Bonus">
+            <area shape="rect" coords="325, 150, 390, 170" href="#Point_program">
+            <area shape="rect" coords="15, 195, 81, 216" href="#Quantity_limit">
+            <area shape="rect" coords="89, 194, 168, 216" href="#Limit_group_(mix)">
+            <area shape="rect" coords="176, 194, 257, 214" href="#Amount_limit">
+            <area shape="rect" coords="280, 196, 326, 216" href="#Redeem">
+            <area shape="rect" coords="326, 195, 392, 215" href="#Point_program_(redeem)">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Descriptions tab</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img src="Coupons_files/descriptions_tab.png" width="416" usemap="#descriptions_tab"> <map name="descriptions_tab">
+            <area shape="rect" coords="15, 67, 399, 89" href="#Expanded_description">
+            <area shape="rect" coords="15, 104, 192, 125" href="#Brand">
+            <area shape="rect" coords="200, 105, 400, 125" href="#Size">
+            <area shape="rect" coords="13, 142, 401, 198" href="#Long_description">
+            <area shape="rect" coords="13, 215, 399, 287" href="#Marketing">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3><strong><a name="Add_criteria_window">Add criteria window</a></strong></h3>
+
+      <p>Access the <strong>Add criteria</strong> window by clicking on <strong><a href="#Add_criteria">Add criteria</a></strong> in the <strong>Criteria tab</strong>.</p>
+
+      <p>Some fields, including the ones related to <a href="#Coupon_methods">coupon methods</a>, are not displayed by default when the <strong>Add criteria</strong> window opens; they are visible or not according to the option selected in the <strong><a href="#Type">Type</a></strong> field:</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><strong>Type:<br>
+          Item sales</strong></td>
+
+          <td style=" width: 558px;"><strong>Type:<br>
+          Total sales</strong></td>
+
+          <td><strong>Type:<br>
+          Minimum point balance</strong></td>
+        </tr>
+
+        <tr>
+          <td><img src="Coupons_files/add_criteria_general_fields.png" width="340" usemap="#add_criteria_fields"> <map name="add_criteria_fields">
+            <area shape="rect" coords="14, 59, 158, 82" href="#Condition">
+            <area shape="rect" coords="170, 59, 323, 82" href="#Equal_to">
+            <area shape="rect" coords="15, 116, 156, 139" href="#Minimum_measure">
+            <area shape="rect" coords="171, 116, 256, 138" href="#Minimum_value">
+            <area shape="rect" coords="16, 174, 320, 198" href="#Multiplication_and_accumulation">
+            <area shape="rect" coords="12, 220, 317, 248" href="#Make_sure_the_discount_affects_the_item(s)_in_these_criteria">
+            <area shape="rect" coords="12, 251, 318, 277" href="#The_item(s)_in_this_condition_can_only_participate_in_one_offer">
+            <area shape="rect" coords="15, 305, 330, 330" href="#Manual_description">
+            <area shape="rect" coords="17, 355, 328, 379" href="#Final_description">
+            <area shape="rect" coords="7, 408, 72, 438" href="#Delete">
+            <area shape="rect" coords="197, 407, 264, 439" href="#Cancel">
+            <area shape="rect" coords="270, 408, 333, 439" href="#OK">
+          </map> </td>
+
+          <td style=" width: 558px;"><img src="Coupons_files/add_criteria_total_sales_fields.png" width="340" usemap="#add_criteria_total_sales_fields"> <map name="add_criteria_total_sales_fields">
+            <area shape="rect" coords="15, 59, 158, 82" href="#Total_sales">
+            <area shape="rect" coords="172, 59, 311, 82" href="#Totalizer">
+            <area shape="rect" coords="16, 118, 156, 140" href="#Minimum_measure">
+            <area shape="rect" coords="170, 117, 256, 141" href="#Minimum_value">
+            <area shape="rect" coords="16, 174, 320, 198" href="#Multiplication_and_accumulation">
+            <area shape="rect" coords="12, 250, 314, 278" href="#The_item(s)_in_this_condition_can_only_participate_in_one_offer">
+            <area shape="rect" coords="14, 305, 329, 329" href="#Manual_description">
+            <area shape="rect" coords="16, 354, 329, 378" href="#Final_description">
+            <area shape="rect" coords="4, 406, 72, 437" href="#Delete">
+            <area shape="rect" coords="194, 406, 263, 436" href="#Cancel">
+            <area shape="rect" coords="268, 406, 334, 436" href="#OK">
+          </map></td>
+
+          <td><img src="Coupons_files/add_criteria_minimum_points_fields.png" width="340" usemap="#add_criteria_minimum_points_fields"> <map name="add_criteria_minimum_points_fields">
+            <area shape="rect" coords="17, 60, 156, 82" href="#Minimum_point_balance">
+            <area shape="rect" coords="16, 108, 157, 130" href="#Program">
+            <area shape="rect" coords="169, 108, 263, 130" href="#Minimum_balance">
+            <area shape="rect" coords="16, 304, 327, 328" href="#Manual_description">
+            <area shape="rect" coords="15, 353, 327, 377" href="#Final_description">
+            <area shape="rect" coords="6, 405, 75, 437" href="#Delete">
+            <area shape="rect" coords="195, 405, 264, 435" href="#Cancel">
+            <area shape="rect" coords="266, 405, 334, 435" href="#OK">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+
+          <td style=" width: 558px;" class="Img">* Click on a field to get information on it.</td>
+
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2><a name="Content">Content</a></h2>
+
+      <p>Here is the description of the <strong>Coupon wizard</strong> fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 218px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Value_type">Value type</a></td>
+
+          <td>The <strong>Value type</strong> field contains the type of discount that the coupon is programmed to apply.<br>
+           For details, see the <a href="#The_Value_type_field"><strong>Value type</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Discount">Discount</a></td>
+
+          <td>The <strong>Discount</strong> field contains the amount in dollars given as a discount when the customer buys <em>1</em> item in a transaction.<br>
+          Available when <em>Cents off</em> is selected in the <strong><a href="#Value_type">Value type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Discount_per">Discount per</a></td>
+
+          <td>The <strong>Discount per (DiscPer)</strong> field contains the amount in dollars given as a discount when the customer buys a certain weight/volume of the item in a transaction.<br>
+          Available when <em>Cents per weight/volume</em> is selected in the <strong><a href="#Value_type">Value type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Percent_field">Percent</a></td>
+
+          <td>The <strong>Percent</strong> field contains the percentage given as a discount when the customer buys <i>1</i> item in a transaction.<br>
+          Available when <em>Percent</em> is selected in the <strong><a href="#Value_type">Value type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Buy_X">Buy X</a></td>
+
+          <td>The <strong>Buy X</strong> field contains the number of items of the same manufacturer that the customer needs to buy in a transaction in order to <a href="#Get_Y">get Y</a> items for free.<br>
+          Available when <em>Buy X get Y free</em> is selected in the <strong><a href="#Value_type">Value type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Get_Y">Get Y</a></td>
+
+          <td>The <strong>Get Y</strong> field contains the number of free items that are given when the customer <a href="#Buy_X">buys X</a> item(s) of the same manufacturer.<br>
+          Available when <em>Buy X get Y free</em> is selected in the <strong><a href="#Value_type">Value type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Price">Price</a></td>
+
+          <td>The <strong>Price</strong> field contains the price at which the group of items that compose the coupon criteria is sold.<br>
+          Available when <em>Bundle price</em> is selected in the <strong><a href="#Value_type">Value type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="No_discount_field">No discount</a></td>
+
+          <td>The <strong>No discount</strong> field is used with other types of discount (percent, items for free, bundle or vouchers). However, for <em>percent</em>, <em>items for free</em> and <em>bundle</em> discounts, it is recommended that a value be set for coupon classification.<br>
+          Available when <em>No discount</em> is selected in the <strong><a href="#Value_type">Value type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Coupon_type">Coupon type</a></td>
+
+          <td>The <strong>Coupon type</strong> field contains the type of coupon (<em><a href="#Manual">manual</a></em>, <em><a href="#Electronic">electronic</a></em>, <em><a href="#Printed">printed</a></em>, <em><a href="#Targeted">targeted</a></em>, <em><a href="#Automatic">automatic</a></em>, <em><a href="#Public">public</a></em>) and defines the way the coupon will be applied in the transaction.<br>
+          See the <a href="#The_Coupon_type_field"><strong>Coupon type</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Description">Description</a></td>
+
+          <td>The <strong>Description</strong> field contains short information on the coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Sub-department">Sub-department</a></td>
+
+          <td>The <strong>Sub-department</strong> field contains the sub-department number the coupon is linked to.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Code">Code</a></td>
+
+          <td>The <strong>Code</strong> field contains the coupon code.<br>
+           When left blank, it is generated by the system once the coupon information is saved.<br>
+          The code may be manually entered.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Disable">Disable</a></td>
+
+          <td>The <strong>Disable</strong> field specifies whether the coupon are active and can be applied (unchecked) or not (checked).</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Criteria tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Text">Text</a></td>
+
+          <td>The <strong>Text</strong> field displays the final description of the coupon criteria in text format.<br>
+          Not editable; the information is automatically entered from the <strong>Final description</strong> field in the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Data">Data</a></td>
+
+          <td>The <strong>Data</strong> field displays the final description of the coupon in data format.<br>
+          Not editable; the information is automatically entered from the <strong>Add criteria</strong> window (<strong>Type</strong>, <strong>Code</strong>, <strong>Percent</strong>, <strong>Quantity</strong>, <strong>Dollar</strong>, <strong>Weight</strong>, <strong>Method</strong>) and displayed in a grid.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Add_criteria">Add criteria</a></td>
+
+          <td>The <strong>Add criteria</strong> button gives access to the <strong>Add criteria</strong> window that allows adding/editing coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Add criteria window</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Type">Type</a></td>
+
+          <td>The <strong>Type</strong> field contains the type of condition that has to be respected for the electronic coupon to apply.<br>
+          For details, see the <a href="#The_Type_field"><strong>Type</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Equal_to">Equal to</a></td>
+
+          <td>The <strong>Equal to</strong> field contains the value (UPC, promo ID, sub-department number, etc.) for the option selected in the <strong><a href="#Type">Type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Totalizer">Totalizer</a></td>
+
+          <td>The <strong>Totalizer</strong> field contains the totalizer number used to target the electronic coupon criteria. Its default value is <i>3</i> (Net sales).<br>
+          Available when <strong>Totalizer sales</strong> is selected in the <strong><a href="#Type">Type</a></strong> field.<br>
+          For details, see the <a href="#The_Totalizer_sales_field"><strong>Totalizer</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Minimum_measure">Minimum measure</a></td>
+
+          <td>The <strong>Minimum measure</strong> field contains the measure that applies to the coupon criterion (<a name="quantity">quantity</a>, <a name="dollar_">dollar</a> or <a name="weight">weight</a>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Minimum_value">Minimum value</a></td>
+
+          <td>The <strong>Minimum value</strong> field contains the value that applies to the coupon criterion, according to the option selected in the <strong><a href="#Minimum_measure">Minimum measure</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Program">Program</a></td>
+
+          <td>The <strong>Program</strong> field specifies the program from which the minimum point balance must be taken for the coupon to apply.<br>
+          Available when <strong><a href="#Minimum_point_balance">Minimum point balance</a></strong> is selected in the <strong><a href="#Type">Type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Minimum_balance">Minimum balance</a></td>
+
+          <td>The <strong>Minimum balance</strong> field specifies the minimum number of points of the selected program that are needed for the coupon to apply.<br>
+          Available when <strong><a href="#Minimum_point_balance">Minimum point balance</a></strong> is selected in the <strong><a href="#Type">Type</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Multiplication_and_accumulation">Multiplication and accumulation</a></td>
+
+          <td>The <strong>Multiplication and accumulation</strong> field contains the method used for the coupon.<br>
+          For details, see the <a href="#The_Multiplication_and_accumulation_field"><strong>Multiplication and accumulation</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Make_sure_the_discount_affects_the_item(s)_in_these_criteria">Make sure the discount affects the item(s) in these criteria</a></td>
+
+          <td>The <strong>Make sure the discount affects the item(s) in these criteria</strong> method establishes the item (or entry) to which the coupon discount applies.<br>
+          For details, see the <a href="#The_Make_sure_the_discount_affects_the_item(s)_in_these_criteria_field"><strong>Make sure the discount affects the item(s) in these criteria</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="The_item(s)_in_this_condition_can_only_participate_in_one_offer">The item(s) in this condition can only participate in one offer</a></td>
+
+          <td><strong>The item(s) in this condition can only participate in one offer</strong> method specifies that the items referred to in that condition may be associated to only 1 electronic coupon in a transaction.<br>
+          In this case, the system looks for the best coupon in the software, based on its classification.<br>
+          For details, see the <a href="#The_item(s)_in_this_condition_can_only_participate_in_one_offer_field"><strong>The item(s) in this condition can only participate in one offer</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Manual_description">Manual description</a></td>
+
+          <td>The <strong>Manual description</strong> field allows to manually enter the description of the coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Final_description">Final description</a></td>
+
+          <td>The <strong>Final description</strong> field contains the information on the coupon criteria. Text may be entered manually or otherwise generated automatically by the system.<br>
+          It is displayed in text view in the <a href="#Criteria_tab"><strong>Criteria</strong> tab</a> of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Delete">Delete</a></td>
+
+          <td>The <strong>Delete</strong> button allows deleting the current coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Cancel">Cancel</a></td>
+
+          <td>The <strong>Cancel</strong> button allows canceling any changes made in the coupon criteria.<br>
+          It closes the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="OK">OK</a></td>
+
+          <td>The <strong>OK</strong> button saves the changes made to the coupon criteria.<br>
+          It closes the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Details tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Funding">Funding</a></td>
+
+          <td>The <strong>Funding</strong> field specifies whether the coupon in a store or a vendor one.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Coupon_template">Coupon template</a></td>
+
+          <td>The <strong>Coupon template</strong> field contains the name of the coupon template.<br>
+          For details, see the <a href="#The_Coupon_template_field"><strong>Coupon template</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Event_type">Event type</a></td>
+
+          <td>The <strong>Event type</strong> specifies whether the coupon is a <em>Regular</em> or a <em>Sale</em> one.<br>
+          Regular event coupons do not have a start date or an end date.<br>
+          Sale event coupons must have a start date and an end date.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Start_date">Start date</a></td>
+
+          <td>The <strong>Start date</strong> field contains the date on which the coupon event becomes effective.<br>
+          The start date is inclusive.<br>
+           Not applicable when <em>Regular</em> is selected in the <a href="#Event_type"><strong>Event type</strong> field</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="End_date">End date</a></td>
+
+          <td>The <strong>End date</strong> field contains the date on which the coupon event is no longer effective.<br>
+          The end date is inclusive.<br>
+          Not applicable when <em>Regular</em> is selected in the <a href="#Event_type"><strong>Event type</strong> field</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Registration_type">Registration type</a></td>
+
+          <td>The <strong>Registration type</strong> field contains special parameters used when the item is sold.<br>
+          For details, see the <a href="#Registration_type_field"><strong>Registration type</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Multiply">Multiply</a></td>
+
+          <td>The <strong>Multiply</strong> field allows multiplying the points awarded into the transaction using a coupon in the software.<br>
+          It works in combination with the <strong><a href="#Bonus">Bonus</a></strong> and <strong><a href="#Point_program">Point program</a></strong> fields.<br>
+           For details, see the <a href="#The_Multiply_field"><strong>Multiply</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Bonus">Bonus</a></td>
+
+          <td>The <strong>Bonus</strong> field contains the multiplier factor for the points set in the <strong><a href="#Point_program">Point program</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Point_program">Point program</a> (bonus)</td>
+
+          <td>The <strong>Point program</strong> field contains the identification letter/digit corresponding to the point program from which the points are multiplied.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Quantity_limit">Quantity limit</a></td>
+
+          <td>The <strong>Quantity limit</strong> field contains the number of coupons that may be obtained in one transaction according to the <a href="#Multiplication_and_accumulation">multiplication and accumulation method</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Limit_group_(mix)">Limit group (mix)</a></td>
+
+          <td>The <strong>Limit group (mix)</strong> field allows selecting the item that is subject to the limit set in the <strong><a href="#Quantity_limit">Quantity limit</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Amount_limit">Amount limit</a></td>
+
+          <td>The <strong>Amount limit</strong> field contains the price for the item that is subject to the limit set in the <strong><a href="#Quantity_limit">Quantity limit</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Redeem">Redeem</a></td>
+
+          <td>The <strong>Redeem</strong> field contains the number of points that must be used for getting the discount.<br>
+           It works in combination with the <strong><a href="#Point_program_(redeem)">Point program</a></strong> (redeem) field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Point_program_(redeem)">Point program</a> <strong></strong> (redeem)</td>
+
+          <td>The <strong>Point program</strong> field contains the identification letter/digit corresponding to the point program from which the points are redeemed.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Descriptions tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Expanded_description">Expanded description</a></td>
+
+          <td>The <strong>Expanded description</strong> field contains a detailed description of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Brand">Brand</a></td>
+
+          <td>The <strong>Brand</strong> field contains the name of the manufacturer of the item to which the coupon applies.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Size">Size</a></td>
+
+          <td>The <strong>Size</strong> field contains the size of the item to which the coupon applies.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Long_description">Long description</a></td>
+
+          <td>The <strong>Long description</strong> field contains a detailed description of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 218px"><a name="Marketing">Marketing</a></td>
+
+          <td>The <strong>Marketing</strong> field contains an internal note on the item to which the coupon applies.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Value_type_field">The <strong>Value type</strong> field</a></h3>
+
+      <p>The <strong>Value type</strong> field contains the type of discount that the coupon is programmed to apply. The following values are available:</p>
+
+      <p><img height="194" src="Coupons_files/value_type_menu.png" width="151"></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 168px;"><strong>Value type</strong></th>
+
+            <th><strong>Description</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 168px; "><a name="Cents_off">Cents off</a></td>
+
+          <td style="">The <b>Cents off</b> type specifies that the amount entered in the <a href="#Discount"><strong>Discount</strong></a> field is given as a discount when the customer buys <i>1</i> item in a transaction.<br>
+           Displayed by default when the coupon wizard opens.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 168px; "><a name="Cents_per_weight/volume">Cents per weight/volume</a></td>
+
+          <td style="">The <strong>Cents per weight/volume</strong> type specifies that the amount entered in the <strong><a href="#Discount_per">DiscPer</a></strong> field is given as a discount when the customer buys a certain weight/volume of the item in a transaction.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 168px; "><a name="Percent">Percent</a></td>
+
+          <td style="">The <strong>Percent</strong> type specifies that the value entered in the <strong><a href="#Percent">Percent</a></strong> field is given as a discount when the customer buys <i>1</i> item in a transaction.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 168px; "><a name="Buy_X_get_Y_free">Buy X get Y free</a></td>
+
+          <td style="">The <strong>Buy X get Y free</strong> field specifies that <em>Y</em> item(s) is/are given for free when the customer buys <em>X</em> item(s) of the same manufacturer in a transaction. The item given for free is the cheapest one.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 168px; "><a name="Bundle_price">Bundle price</a></td>
+
+          <td style="">The <strong>Bundle price</strong> type specifies that the value entered in the <strong><a href="#Price">Price</a></strong> field is the price at which the group of items that compose the coupon criteria is sold.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 168px; "><a name="No_discount">No discount</a></td>
+
+          <td>The <strong>No discount</strong> type specifies that no discount is to be applied for the coupon.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Coupon_type_field">The Coupon type field</a></h3>
+
+      <p>The <strong>Coupon type</strong> field contains the type of coupon and defines the way the coupon will be given in the transaction. The following values are available:</p>
+
+      <p><img height="188" src="Coupons_files/coupon_type.png" width="136"></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style=""><strong>Coupon type</strong></th>
+
+            <th><strong>Description</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style=" "><a name="Manual">Manual</a></td>
+
+          <td style="">The manual coupon will be manually given by the cashier.<br>
+          See <a href="../Manual_coupons_programming/Manual_coupons_programming.htm"><strong>Manual coupons programming</strong></a> for details.</td>
+        </tr>
+
+        <tr>
+          <td style=" "><a name="Electronic">Electronic</a></td>
+
+          <td style="">The electronic coupon will be automatically given by the system on the transaction sub-total.<br>
+          See <strong><a href="../Electronic_coupons_programming/Electronic_coupons_programming.htm">Electronic coupons programming</a></strong> for details.</td>
+        </tr>
+
+        <tr>
+          <td style=" "><a name="Printed">Printed</a></td>
+
+          <td style="">The printed coupon will be issued with the coupon value and used in a future transaction.<br>
+          See <strong><a href="../Printed_coupons_programming/Printed_coupons_programming.htm">Printed coupon programming</a></strong> for details.</td>
+        </tr>
+
+        <tr>
+          <td style=" "><a name="Targeted">Targeted</a></td>
+
+          <td style="">The coupon will be automatically given by the system to targeted customers.<br>
+          The clip targeted coupon will be automatically given when clipped on the eStore/mStore applications.<br>
+          See <strong><a href="../Targeted_coupons_programming/Targeted_coupons_programming.htm">Targeted coupon programming</a></strong> for details.</td>
+        </tr>
+
+        <tr>
+          <td style=" "><a name="Automatic">Automatic</a></td>
+
+          <td style="">The coupon will be automatically given by the system as soon as the item is sold.<br>
+          See <strong><a href="../Automatic_coupons_programming/Automatic_coupons_programming.htm">Automatic coupon programming</a></strong> for details.</td>
+        </tr>
+
+        <tr>
+          <td style=" "><a name="Public">Public</a></td>
+
+          <td>The coupon is available to any customer when clipped on the eStore/mStore applications.<br>
+          See <strong><a href="../Public_coupons_programming/Public_coupons_programming.htm">Public coupon programming</a></strong> for details.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Type_field">The Type field</a></h3>
+
+      <p>The <strong>Type</strong> field in the <a href="#Add_criteria_window"><strong>Add criteria</strong> window</a> contains the type of condition that has to be respected for the electronic coupon to apply:</p>
+
+      <p><img height="372" src="Coupons_files/type_field.png" width="147"></p>
+
+      <p>The abbreviation for the selected criterion is displayed in the <strong>Type</strong> column of the <strong>Criteria tab</strong>, in <strong>Data</strong> view. See the table below.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 161px;"><b>Type</b></th>
+
+            <th style="width: 59px;"><strong>Abbreviation</strong></th>
+
+            <th><b>Description</b></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 161px; ">Item sales</td>
+
+          <td style="width: 59px; "><strong>ITM</strong></td>
+
+          <td>The <b>Item sales</b> criterion is based on the sales of a certain item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 161px; ">Promo ID sales</td>
+
+          <td style="width: 59px; "><strong>PID</strong></td>
+
+          <td>The <b>Promo ID sales</b> criterion is based on the sales of a group of items.<br>
+          The items are grouped using a promo ID number that is set in the <a href="../../POS_Table.htm"><b>POS</b> table</a> (<a href="../../POS_Table.htm#Promotion_ID"><b>Promotio</b>n ID field</a>) for each item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 161px; ">Sub-department</td>
+
+          <td style="width: 59px; "><strong>SUB</strong></td>
+
+          <td>The <b>Sub-department sales</b> criterion is based on the sales of a certain sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 161px; ">Department sales</td>
+
+          <td style="width: 59px; "><strong>DPT</strong></td>
+
+          <td>The <b>Department sales</b> criterion is based on the sales of a certain department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 161px; "><a name="Total_sales">Total sales</a></td>
+
+          <td style="width: 59px; "><strong>TTL</strong></td>
+
+          <td>The <b>Total sales</b> criterion is based on the sales amount accumulated in a totalizer specified in the <strong><a href="#Totalizer">Totalizer</a></strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 161px; "><a name="Minimum_point_balance">Minimum point balance</a></td>
+
+          <td style="width: 59px; "><strong>PTS</strong></td>
+
+          <td>The <strong>Minimum point balance</strong> criterion is based on the balance of minimum points accumulated by the customer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 161px; ">Customer specific</td>
+
+          <td style="width: 59px; "><strong>CLT</strong></td>
+
+          <td>The <b>Customer specific</b> criterion is based on a specific customer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 161px; ">Customer level</td>
+
+          <td style="width: 59px; "><strong>CLF</strong></td>
+
+          <td>The <b>Customer level</b> criterion is based on a certain customer level.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 161px; ">Customer not level</td>
+
+          <td style="width: 59px; "><strong>CNF</strong></td>
+
+          <td>The <b>Customer not level</b> criterion excludes a certain customer level.</td>
+        </tr>
+
+        <tr>
+          <td>Customer group</td>
+
+          <td style="width: 59px; "><strong>CLG</strong></td>
+
+          <td>The <b>Customer group</b> criterion is based on a certain customer group.</td>
+        </tr>
+
+        <tr>
+          <td>Customer group 2</td>
+
+          <td style="width: 59px; "><strong>CG2</strong></td>
+
+          <td>The <b>Customer group 2</b> criterion is based on a certain customer group 2.</td>
+        </tr>
+
+        <tr>
+          <td style="">Every X transaction</td>
+
+          <td style="width: 59px; ;"><strong>CNT</strong></td>
+
+          <td style="">The <b>Every X transaction</b> criterion is based on a number of transactions performed on the same POS.</td>
+        </tr>
+
+        <tr>
+          <td style="">Random with X chances</td>
+
+          <td style="width: 59px; ;"><strong>RND</strong></td>
+
+          <td style="">The <b>Random with X chances</b> criterion is based on a random possibility.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Totalizer_sales_field"><strong>The Totalizer</strong> sales field</a></h3>
+
+      <p>The <strong>Totalizer</strong> field is available when <strong>Totalizer sales</strong> is selected in the <strong><a href="#Type">Type</a></strong> field. It contains the totalizer number used to target the electronic coupon criteria.<br>
+      Its default value is <i>3</i> (Net sales).</p>
+
+      <p>When other options are selected in the <strong>Type</strong> field, specific totalizers may be used:</p>
+
+      <p></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><strong>Type</strong></th>
+
+            <th><strong>Totalizer</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>Item sales</td>
+
+          <td>The <b>ITM</b> type usually uses the totalizer <i>3</i> (Net sales). The totalizer <i>3415</i> (Admissible spending) is also a usual totalizer.</td>
+        </tr>
+
+        <tr>
+          <td>Promo ID sales</td>
+
+          <td>The <b>PID</b> type usually uses the totalizer <i>3</i> (Net sales).</td>
+        </tr>
+
+        <tr>
+          <td>Sub-department</td>
+
+          <td>The <b>SUB</b> type usually uses the totalizer <i>3</i> (Net sales). The totalizer <i>3415</i> (Admissible spending) is also a usual totalizer.</td>
+        </tr>
+
+        <tr>
+          <td>Department sales</td>
+
+          <td>The <b>DPT</b> type usually uses the totalizer <i>3</i> (Net sales). The totalizer <i>3415</i> (Admissible spending) is also a usual totalizer.</td>
+        </tr>
+
+        <tr>
+          <td>Total sales</td>
+
+          <td>The <b>TTL</b> type usually uses the totalizer <i>3</i> (Net sales). The totalizer <i>3415</i> (Admissible spending) is also a usual totalizer.</td>
+        </tr>
+
+        <tr>
+          <td>Minimum point balance</td>
+
+          <td>The <b>PTS</b> type does not use any totalizer. However, the <b>Totalizer</b> field is set to <i>3401</i> (Points given).</td>
+        </tr>
+
+        <tr>
+          <td>Customer specific</td>
+
+          <td>The <b>CLT</b> type does not use any totalizer. However, the <b>Totalizer</b> field is set to <i>3</i> (Net sales).</td>
+        </tr>
+
+        <tr>
+          <td><b>Customer level</b></td>
+
+          <td>The <b>CLF</b> type does not use any totalizer. However, the <b>Totalizer</b> field is set to <i>3</i> (Net sales).</td>
+        </tr>
+
+        <tr>
+          <td><b>Customer not level</b></td>
+
+          <td>The <b>CNF</b> type does not use any totalizer. However, the <b>Totalizer</b> field is set to <i>3</i> (Net sales).</td>
+        </tr>
+
+        <tr>
+          <td><b>Customer group</b></td>
+
+          <td>The <b>CLG</b> type does not use any totalizer. However, the <b>Totalizer</b> field is set to <i>3</i> (Net sales).</td>
+        </tr>
+
+        <tr>
+          <td><b>Customer group 2</b></td>
+
+          <td>The <b>CG2</b> type does not use any totalizer. However, the <b>Totalizer</b> field is set to <i>3</i> (Net sales).</td>
+        </tr>
+
+        <tr>
+          <td><b>Every X transaction</b></td>
+
+          <td>The <b>CNT</b> type does not use any totalizer. However, the <b>Totalizer</b> field is set to <i>3</i> (Net sales).</td>
+        </tr>
+
+        <tr>
+          <td><b>Random with X chances</b></td>
+
+          <td>The <b>RND</b> type does not use any totalizer. However, the <b>Totalizer</b> field is set to <i>3</i> (Net sales).</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+       
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="Coupon_methods">Coupon methods</a></h3>
+
+      <p>The coupon methods dictate the coupon behavior. They may be selected from the following fields in the <a href="#Add_criteria_window"><strong>Add criteria</strong> window</a>:</p>
+
+      <ul>
+        <li><strong><a href="#Multiplication_and_accumulation">Multiplication and accumulation</a></strong></li>
+
+        <li><strong><a href="#Make_sure_the_discount_affects_the_item(s)_in_these_criteria">Make sure the discount affects the item(s) in these criteria</a></strong></li>
+
+        <li><strong><a href="#The_item(s)_in_this_condition_can_only_participate_in_one_offer">The item(s) in this condition can only participate in one offer</a></strong></li>
+      </ul>
+
+      <p>The method identifier is displayed in the <strong>Method</strong> column of the <strong>Criteria tab</strong>, in <strong>Data</strong> view.</p>
+
+      <h4><a name="The_Multiplication_and_accumulation_field">The Multiplication and accumulation field</a></h4>
+
+      <p>The <strong>Multiplication and accumulation</strong> field contains the method used for the coupon:</p>
+
+      <p><img height="254" src="Coupons_files/multiplication_accumulation_field.png" width="302"></p>
+
+      <p class="Note"><strong>NOTE:</strong> When the <strong><a href="#Type">Type</a></strong> is set to Total sales, this field is called <strong>Multiplication</strong>.</p>
+
+      <p>The available methods are:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 230px"><strong>Method</strong></th>
+
+            <th style="width: 58px"><strong>Identifier</strong></th>
+
+            <th><strong>Behavior</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 230px"><strong>No multiplication</strong></td>
+
+          <td style="width: 58px">(empty)</td>
+
+          <td>
+            <p class="Table">Basically, a coupon is only given once in a transaction, even if its criteria are matched several times. Each item sold may participate in more than one coupon, but only one (1) coupon discount may be applied on an item (or an entry).</p>
+
+            <p><strong>Examples</strong>:<br>
+            Coupon #1: 2 Sprites&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = $0.30 off<br>
+             Coupon #2: 1 Coke + 1 bag of chips&nbsp;&nbsp;&nbsp; = $0.50 off<br>
+            Coupon #3: 1 Coke + 1 chocolate bar&nbsp; = $0.40 off</p>
+
+            <p>Customer #1 buys 2 Sprites. They will get $0.30 off.</p>
+
+            <p>Customer #2 buys 4 Sprites. They will get $0.30 off.</p>
+
+            <p>Customer #3 buys 1 Coke, 1 bag of chips and 1 chocolate bar.&nbsp;They will get $0.90 ($0.50 + $0.40) off.</p>
+
+            <p>Customer #4 buys 2 Cokes, 2 bags of chips and 2 chocolate bars.&nbsp;They will get $0.90 ($0.50 + $0.40) off.</p>
+
+            <p>Customer #5 buys 2 Cokes, 1 bag of chips and 1 chocolate bar.&nbsp;They will get $0.90 ($0.50 + $0.40) off.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 230px"><strong>Based on validated criteria</strong></td>
+
+          <td style="width: 58px"><strong>R</strong></td>
+
+          <td>
+            <p class="Table">This method specifies that the coupon is given each time the criterion is reached.</p>
+
+            <p>The <b>Based on validated criteria</b> method has to be specified for each criterion that it applies to.</p>
+
+            <p><strong>Examples</strong>:<br>
+            Electronic coupon #1: 2 Sprites&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = $0.30 off<br>
+            Electronic coupon #2: 1 Coke + 1 bag of chips&nbsp;&nbsp;&nbsp;&nbsp; = $0.50 off<br>
+            Electronic coupon #3: 1 Coke + 1 chocolate bar&nbsp;&nbsp; = $0.40 off</p>
+
+            <p>The <b>Based on validated criteria</b> method is applied to each criterion.</p>
+
+            <p>Customer #1 buys 2 Sprites.&nbsp;They will get $0.30 off.</p>
+
+            <p>Customer #2 buys 4 Sprites.&nbsp;They will receive $0.60 (2 x $0.30) off.</p>
+
+            <p>Customer #3 buys 1 Coke, 1 bag of chips and 1 chocolate bar. They will get $0.90 ($0.50 + $0.40) off.</p>
+
+            <p>Customer #4 buys 2 Cokes, 2 bags of chips and 2 chocolate bars. They will get $1.80 (2 x $0.50 + 2 x $0.40) off.</p>
+
+            <p>Customer #5 buys 2 Cokes, 1 bag of chips and 1 chocolate bar. They will get $0.90 ($0.50 + $0.40) off.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 230px"><strong>Based on quantity sold</strong></td>
+
+          <td style="width: 58px"><strong>Q</strong></td>
+
+          <td>
+            <p class="Table">This method specifies that the coupon is given for each item sold that matches the coupon criterion.</p>
+
+            <p>As the <strong>Based on quantity sold</strong> method gives fractional quantities, it is useful for discounts per pound when a minimum poundage is reached.</p>
+
+            <p>This method has to be specified for each criterion that it applies to.</p>
+
+            <p><strong>Examples</strong>:<br>
+            Electronic coupon #1: 2 Sprites&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = $0.30 off<br>
+            Electronic coupon #2: 1 Coke + 1 bag of chips&nbsp;&nbsp;&nbsp;&nbsp; = $0.50 off<br>
+            Electronic coupon #3: 1 Coke + 1 chocolate bar&nbsp;&nbsp; = $0.40 off</p>
+
+            <p>The <strong>Based on quantity sold</strong> method is applied to each criterion.</p>
+
+            <p>Customer #1 buys 2 Sprites. They will get $0.60 (2 x $0.30) off.</p>
+
+            <p>Customer #2 buys 4 Sprites. They will get $1.20 (4 x $0.30) off.</p>
+
+            <p>Customer #3 buys 1 Coke, 1 bag of chips and 1 chocolate bar. They will get $0.90 ($0.50 + $0.40) off.</p>
+
+            <p>Customer #4 buys 2 Cokes, 2 bags of chips and 2 chocolate bars. They will get $1.80 (2 x $0.50 + 2 x $0.40) off.</p>
+
+            <p>Customer #5 buys 2 Cokes, 1 bag of chips and 1 chocolate bar. They will get $1.80 (2 x $0.50 + 2 x $0.40) off.</p>
+
+            <p><u>Fractional quantities example</u>:<br>
+            Electronic coupon #4: 2 pounds of meat = $0.10 off per pound.</p>
+
+            <p>Customer #6 buys 2.65 pounds of meat. They will get $0.27 (2.65 * $0.10) off.</p>
+
+            <p class="NoteList"><b>NOTE:</b> For the <b>Code 2</b> items (pre-scaled or random weight items), the <a href="../../POS_Table.htm#Scalable"><b>Scalable</b> field</a> of the <a href="../../POS_Table.htm"><b>POS</b> table</a> must be checked <span style="FONT-STYLE: normal">ON</span> on the item definitions. Otherwise, no discount will be given on these items since the system is not able to know how many pounds (or kilograms) are sold.</p>
+
+            <p class="alert alert-danger"><strong>WARNING:</strong> Avoid using the <strong>Q</strong> (<strong>Based on quantity sold</strong>) method with a minimum <a href="#Amount_limit">amount</a> of $0.01 as condition. In that case, the system can issue a fractional quantity of the coupon, not giving the expected result. A minimum <a href="#Quantity_limit">quantity</a> should be used instead.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 230px"><strong>Use the smallest</strong></td>
+
+          <td style="width: 58px"><strong>S</strong></td>
+
+          <td>
+            <p class="Table">The <strong>Use the smallest amount</strong> method specifies that when an item of that criterion is sold more than once in a transaction, the coupon is given according to the smallest item, based on the weight.</p>
+
+            <p>The <strong>Use the smallest amount</strong> method is useful when giving a discount per pound/kilogram on the smallest item.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 230px"><strong>Use the biggest</strong></td>
+
+          <td style="width: 58px"><strong>B</strong></td>
+
+          <td>
+            <p class="Table">The <strong>Use the biggest amount</strong> method specifies that when an item of that criterion is sold more than once in a transaction, the electronic coupon is given according to the biggest item, based on the weight.</p>
+
+            <p>The <strong>Use the biggest amount</strong> method is useful when giving a discount per pound on the biggest item.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 230px"><strong>Use the cheapest</strong></td>
+
+          <td style="width: 58px"><strong>C</strong></td>
+
+          <td>The <strong>Use the cheapest</strong> method specifies that when an item of that criterion is sold more than once in a transaction, the electronic coupon is given according to the least expensive item, based on the amount.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 230px"><strong>Accumulate for bundle or percent</strong></td>
+
+          <td style="width: 58px"><strong>A</strong></td>
+
+          <td>
+            <p class="Table">This method specifies from which item (or entry) the electronic coupon discount expressed as a percentage is calculated.</p>
+
+            <p>The <b>Accumulate <strong>for bundle or percent</strong></b> method can also be used on bundle coupons, i.e. selling a group of items at a special price. In this case, the discount is considered to be the price at which the bundle is sold and not that of the electronic coupon.</p>
+
+            <p>When the items that are part of the bundle have different prices, the system will use the average price of the items sold to calculate the discount given by the bundle e-coupon. To use the exact price of all items sold instead, the <em>A</em> method should not be used (only the <em>CB</em> method).</p>
+
+            <p class="NoteList"><b>NOTES:</b><br>
+            The <strong>Make sure the discount affects the item(s) in these criteria</strong> method can be used with <b>Accumulate for bundle or percent</b>.<br>
+            The <b>Accumulate for bundle or percent</b> method mixed with the <strong>Based on quantity sold</strong> (<b>Q</b>) method means that the percentage is given according to the sales. This mix is used with the <b>Promo ID sales</b>, the <b>Sub-department</b>, the <b>Department sales</b> and the <b>Total sales</b> types to give a percentage on an accumulated amount.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 230px"><strong>Exclude this from accumulation</strong></td>
+
+          <td style="width: 58px"><strong>X</strong></td>
+
+          <td>
+            <p class="Table">This method specifies that the items that are part of the criterion are excluded from the other criteria.</p>
+
+            <p>It is used on the <b>Item sales</b>, <b>Sub-department sales</b> and <b>Department sales</b> types to exclude these items from other criteria defined with the <b>Promo ID sales</b>, the <b>Sub-department sales</b>, the <b>Department sales</b> and the <b>Total sales</b> types (exclude the smallest groupings from the biggest groupings).<br>
+            Items of a <strong>Promo ID sales</strong> can be excluded from the <strong>Total sales</strong> type only.</p>
+
+            <p class="NoteList"><b>NOTE:</b> The exclusion is based on the same totalizer (totalizer 3 on both criteria, or totalizer 7 on both criteria, etc.).</p>
+          </td>
+        </tr>
+      </table>
+
+      <h3><a name="The_Make_sure_the_discount_affects_the_item(s)_in_these_criteria_field">The Make sure the discount affects the item(s) in these criteria field</a></h3>
+
+      <p>The <strong>Make sure the discount affects the item(s) in these criteria</strong> method establishes the item (or entry) to which the coupon discount applies. Only one electronic coupons discount may be applied to an item or entry. Be sure to not create collisions.</p>
+
+      <p>If no match is forced, the electronic coupon discount is applied by the system to any available item in the transaction according to the smallest impact on the item sales.</p>
+
+      <p>If the electronic coupon discount cannot be applied on an item or entry, it will not be given.</p>
+
+      <p>It is also possible to match the discount to more than one criterion (up to a maximum of 3). In this case, the discount given is split proportionally between the specified items. This works for dollar discounts and bundle discounts; it does not work for percentage discounts and items for free. See the <a href="../Electronic_coupons_programming/Electronic_coupons_examples.htm"><b>Electronic coupons - Examples</b> topic</a> for an example.</p>
+
+      <h3><a name="The_item(s)_in_this_condition_can_only_participate_in_one_offer_field">The item(s) in this condition can only participate in one offer field</a></h3>
+
+      <p><strong>The item(s) in this condition can only participate in one offer</strong> method specifies that the items referred to in that condition may be associated to only <u>one</u> electronic coupon in a transaction.<br>
+      In this case, the system looks for the best coupon in the software, based on its classification.</p>
+
+      <p>This method applies with the <b>Item sales</b>, <b>Promo ID sales</b>, <b>Sub-department</b>, <b>Department sales</b> and <b>Total sales</b> types.</p>
+
+      <p><strong>The item(s) in this condition can only participate in one offer</strong> method has to be specified for each criterion that it applies to.</p>
+
+      <p><strong>Examples</strong>:</p>
+
+      <ul>
+        <li>Electronic coupon #1: 2 Sprites&nbsp;= $0.30 off</li>
+
+        <li>Electronic coupon #2: 1 Coke + 1 bag of chips&nbsp;= $0.50 off</li>
+
+        <li>Electronic coupon #3: 1 Coke + 1 chocolate bar&nbsp; = $0.40 off</li>
+      </ul>
+
+      <p>The item(s) in this condition can only participate in one offer method applies to each criterion.</p>
+
+      <ul>
+        <li>Customer #1 buys 2 Sprites. They will receive $0.30 off.</li>
+
+        <li>Customer #2 buys 4 Sprites. They will receive $0.30 off.</li>
+
+        <li>Customer #3 buys 1 Coke, 1 bag of chips and 1 chocolate bar. They will get $0.50 off.</li>
+
+        <li>Customer #4 buys 2 Cokes, 2 bags of chips and 2 chocolate bars. They will get $0.90 ($0.50 + $0.40) off.</li>
+
+        <li>Customer #5 buys 2 Cokes, 1 bag of chips and 1 chocolate bar. They will get $0.90 ($0.50 + $0.40) off.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+       <strong></strong>
+
+      <h3><strong><a name="The_Coupon_template_field">The Coupon template field</a></strong></h3>
+
+      <p>The <strong>Coupon template</strong> field contains the name of the coupon template.</p>
+
+      <p>To use one of the default coupon templates (<i>trs_pos_frm_cpn_txt.htm</i> for the text coupon template and <i>trs_pos_frm_cpn_win.htm</i> for the graphic coupon template), click the arrow in the field and select an option from the menu.</p>
+
+      <p>To use a customized coupon template, type the last part of the file name corresponding to the template to use in the field. The first part of the file name must be the same as the default template file name (<i>trs_pos_frm</i>):</p>
+
+      <p><img height="54" src="Coupons_files/coupon_template_field.png" width="336"></p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="Registration_type_field">Registration type field</a></h3>
+
+      <p>The <strong>Registration type</strong> field contains alpha parameters used when the item is sold. Three alpha parameters are available in the coupon wizard:</p>
+
+      <p><img height="117" src="Coupons_files/registration_type_field.png" width="227"></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 190px;"><strong>Alpha parameter</strong></th>
+
+            <th style="width: 91px;"><strong>Value</strong></th>
+
+            <th><strong>Description</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 190px;"><strong>Modify item registration</strong></td>
+
+          <td style="width: 91px;">WIT=REG</td>
+
+          <td style="">This alpha parameter is used for changing all coupons behavior.<br>
+          On the POS screen, the coupon will apply on the same line as the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px;"><strong>Copy item registration</strong></td>
+
+          <td style="width: 91px;">WIT=NEWREG</td>
+
+          <td style="">This alpha parameter changes the behavior of specific coupons instead of all of them.<br>
+          On the POS screen, the coupon will apply at the end of the transaction.<br>
+          Its description is the same with the item description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px;"><strong>Create a coupon registration</strong></td>
+
+          <td style="width: 91px;">WIT=NEWCPN</td>
+
+          <td style="">This alpha parameter changes the behavior of specific coupons instead of all of them.<br>
+          On the POS screen, the coupon will apply at the end of the transaction.<br>
+          Its description is the same with the coupon description.</td>
+        </tr>
+      </table>
+
+      <p class="Note"><strong>NOTE:</strong> The value of selected parameter is also displayed in the <strong><a href="../../POS_Table.htm#URL">URL</a></strong> field of the coupon <a href="../../POS_Table.htm"><strong>POS</strong> table</a>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Multiply_field">The Multiply field</a></h3>
+
+      <p>The <strong>Multiply</strong> field allows multiplying the points awarded into the transaction using an electronic coupon.</p>
+
+      <p>It works in combination with the <a href="#Bonus"><strong>Bonus</strong></a> field, which contains the multiplier factor, and with the <a href="#Point_program"><strong>Point program</strong></a> field that specifies the point program used for multiplying.</p>
+
+      <p><img height="62" src="Coupons_files/multiply_field.png" width="189"></p>
+
+      <p>In the image above, the <strong>Multiply</strong> field being selected means that the number of points awarded in <strong>Point program M</strong> will be <em>tripled</em> when the coupon is applied.</p>
+
+      <p>By default, the multiplication of points by an electronic coupon has priority over the multiplication of points set into the system.<br>
+      This behavior can be changed. Refer to the reseller for more details.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="Creating_a_coupon">C<strong>reating a coupon</strong></a></h2>
+
+      <p>Below are the steps for creating an electronic coupon offering a percentage discount on a Promotion ID sale (20% discount on cookies).</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">1. In the <strong>Items</strong> menu, click <strong>Master</strong>.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Start</strong> window, click <strong>New</strong> next to the <strong>Coupon list</strong> entry.</td>
+        </tr>
+
+        <tr>
+          <td>
+          </td>
+
+          <td><img height="390" src="Coupons_files/new_coupon.png" width="265"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Percent</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Percent</strong> field: enter <em>20</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Electronic</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><img height="159" src="Coupons_files/create_coupon_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Promotion ID sales</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td><strong>Program</strong> field: enter <em>Cookies.</em></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Based on validated criteria.</em></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td>Select <strong>Make sure the discount affects in item(s) in this condition</strong> checkbox.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><img height="442" src="Coupons_files/create_coupon_add_criteria.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em> or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><img height="325" src="Coupons_files/create_coupon_details_tab.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">6. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">7. Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><img height="156" src="Coupons_files/create_coupon_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td><img height="324" src="Coupons_files/create_coupon_text_view.png" width="416"> <img height="325" src="Coupons_files/create_coupon_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

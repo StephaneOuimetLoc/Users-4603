@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Periods Edit</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite System - Period Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite System &gt; Scheduler &gt; Periods <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Period</b> table defines the different periods (fiscal and regular periods) of the store. Periods are used in reports.</p>
+
+      <p>The <b>Period</b> table requires a high security level access (owner and programmer).</p>
+
+      <ul>
+        <li>By default, the period types are not displayed in the <b>Period</b> report parameters. See the <em>Application.ini</em> file documentation for more details.</li>
+      </ul>
+
+      <h2>Displaying the Period table</h2>
+
+      <p>In the Launcher, click the <strong>Scheduler</strong> entry:</p>
+
+      <ol>
+        <li>The <strong>Start</strong> window opens in the <strong>Scheduler</strong> work area.</li>
+
+        <li>Click on <strong>Periods</strong>: the <strong>Periods</strong> grid opens in the <strong>List</strong> tab.</li>
+
+        <li>To modify an existing record, select it in the grid and double-click it, press the F3 key on the keyboard or select <strong>Edit</strong> in the bottom menu: the <strong>Period edit</strong> table will open, displaying the existing information related to that period.</li>
+
+        <li>To create a new record, click <strong>Add</strong> <img class="Text" height="14" src="Period_table_files/add.png" width="15"> in the toolbar: the <strong>Period</strong> table will open for editing.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" height="285" src="Period_table_files/period_table.png" width="500" usemap="#period_table"> <map name="period_table">
+            <area shape="rect" coords="11, 115, 81, 141" href="#Target">
+            <area shape="rect" coords="85, 116, 217, 141" href="#Type">
+            <area shape="rect" coords="220, 116, 350, 140" href="#Start_date">
+            <area shape="rect" coords="355, 115, 485, 141" href="#End_date">
+            <area shape="rect" coords="11, 164, 139, 191" href="#Number">
+            <area shape="rect" coords="11, 215, 487, 241" href="#Description">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on the field to get information on it</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the fields and their functionalities in the <strong>Period</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELDS</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
+          It is a required field.<br>
+          The default value is <em>PAL</em>.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Type">Type</a></strong></td>
+
+          <td>The <b>Type</b> field contains the type of period (<em>Period</em> or <em>Fiscal year</em>).<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Start_date">Start date</a></strong></td>
+
+          <td>The <b>Start date</b> field contains the date at which the period starts.<br>
+          The starting date is inclusive.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="End_date">End date</a></strong></td>
+
+          <td>The <strong>End date</strong> field contains the date on which the period ends.<br>
+          It is a required field.<br>
+          The ending date is inclusive.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <strong>Number</strong> field contains the number of the period, according to the <a href="#Type">type of period</a> defined.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <b>Description</b> field contains the description of the period.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

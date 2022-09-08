@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Scale Ingredients (Scale Text) Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Scale Ingredients (Scale Text) Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxialaries &gt; Scale Tables <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Scale ingredients (scale text)</b> table contains the lists of ingredients for items that are made in the store. The <strong>Scale text</strong> table works with the <strong>Scale information</strong> table.</p>
+
+      <h2>Displaying the Scale text table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Auxiliary tables</strong>: the <strong>Start</strong> window opens in the <strong>Auxiliary</strong> work area.</li>
+
+        <li>Click on <strong>Scale Tables</strong> and then on the <strong>Scale Ingredients</strong>: the <strong>Scale Text</strong> tab opens in the same window, displaying the <strong>Scale Text List</strong>.</li>
+
+        <li>To modify an existing scale text record, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu: the <strong>Scale text</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new scale text record, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Scale text</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img"><img style="border-style:none" class="Text" src="Scale_ingredients_table_files/scale_ingredients_text_table.png" usemap="#scale_ingredients_text_table"> <map name="scale_ingredients_text_table">
+            <area shape="rect" coords="13, 116, 92, 141" href="#Target">
+            <area shape="rect" coords="99, 114, 197, 142" href="#Number">
+            <area shape="rect" coords="203, 115, 273, 142" href="#S-Dept">
+            <area shape="rect" coords="276, 115, 348, 141" href="#OperLevel">
+            <area shape="rect" coords="11, 165, 71, 190" href="#Font_size">
+            <area shape="rect" coords="76, 165, 392, 189" href="#Descriptor">
+            <area shape="rect" coords="13, 216, 393, 334" href="#Ingredient_text">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">*Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Scale text</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
+          The default value of the <strong>Target</strong> field is <em>PAL</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <strong>Number</strong> field contains the identifier number of the scale ingredient information. It is used to link the scale information to the scale ingredient information.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="S-Dept">S-Dept</a></strong></td>
+
+          <td>The <strong>Sub-department</strong> field links the scale ingredients information to a <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>.<br>
+          For details, see the <a href="#The_Sub-department_field"><strong>Sub-department</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OperLevel">OperLevel</a></strong></td>
+
+          <td>The <strong>Operator level</strong> field contains the number of the minimum operator level needed to manage the scale ingredients records.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Font_size">Font size</a></strong></td>
+
+          <td>The <strong>Font size</strong> field specifies the size of the font to be used for the ingredient text.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Descriptor">Descriptor</a></strong></td>
+
+          <td>The <strong>Descriptor</strong> field contains the main description of the ingredients.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Ingredient_text">Ingredient text</a></strong></td>
+
+          <td>The <strong>Ingredient text</strong> field contains the list of ingredients.<br>
+          For details, see the <a href="#The_Ingredient_text_field"><strong>Ingredient</strong> text field section</a> below.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Sub-department_field">The Sub-department field</a></h2>
+
+      <p>The <b>Sub-department</b> <b>(S-Dept</b>) field links the scale ingredients information to a <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>.</p>
+
+      <p>In most POS systems, item sales are linked to sale categories for reporting purposes. Because different POS systems use different terminology for sale links, it is important to understand the eSuite terminology and how it relates to the POS system.</p>
+
+      <p>The eSuite software uses a three-tier sale link level organization:</p>
+
+      <ol>
+        <li>Item sales are accumulated in sub-departments;.</li>
+
+        <li>Sub-department sales are accumulated in departments (a department sales total contains sales from one or more sub-departments).</li>
+
+        <li>Department sales are accumulated in group sales (a group sales total contains sales from one or more departments).</li>
+      </ol>
+
+      <p>The eSuite software sale links levels (sub-departments, departments and groups) are defined in the <b><a href="../../Dimensions/Subdepartment/Subdpt_table.htm">Sub-department</a></b> and <b><a href="../../Dimensions/Department/Department_table.htm">Department</a></b> tables.</p>
+
+      <p>Whether or not the POS system uses the same terms, eSuite requires that items be linked to a sub-department or to a first sale link level.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Ingredient_text_field">The Ingredient text field</a>&nbsp;</h2>
+
+      <p>The <strong>Ingredient text</strong> field contains the list of ingredients.</p>
+
+      <p>The <strong>Max width</strong> and <strong>Max height</strong> fields define the available space for the ingredient information on the label. Once a sub-department is selected, these two fields are automatically adjusted according to the definition of the smallest scale located in the specified sub-department. The values come from the XchScale driver information.</p>
+
+      <p>The <strong>Ingredient text</strong> field has a line auto-feed feature. The information is deployed as a single string and no carriage return. It is required to calculate the number of spaces to arrive at the next line.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <p>&nbsp;</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

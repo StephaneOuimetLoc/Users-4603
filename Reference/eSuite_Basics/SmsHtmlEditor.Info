@@ -1,9 +1,6 @@
-GitLock=Robert
 Session_menu
 Result_grids
 Widgets
-Result_actions
-Wizards
 Tools_Menu
 Deploys
 Context_tools
@@ -11,4 +8,3 @@ Basic_navigation
 Reports
 Edit_windows
 Dimensions
-Result_actions

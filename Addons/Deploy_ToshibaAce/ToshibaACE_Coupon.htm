@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Module - Toshiba ACE Interface - Electronic Coupons</title>
+    <link href="../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->Module - Toshiba ACE Interface - Electronic Coupons <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->ToshibaACE <span class="badge badge-warning">Unmanaged</span> <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <em>Toshiba ACE Interface - Electronic Coupons</em> document will assist in programming and understanding how coupones work between LOC SMS and Toshiba ACE. Electronic and manual coupons are interfaced with Toshiba ACE. When a coupon is identified as an electronic coupon, it is automatically sold and linked to the related item. When a manual coupon is presented, the cashier needs to enter the coupon UPC. In both situations, the criteria set for the coupon is validated.</p>
+
+      <p class="Note"><strong>NOTE:</strong> In order to populate the proper totalizers, a specific range of UPC has been reserved for the electronic coupons (see the configuration of the system with your reseller).</p>
+
+      <h2>Index</h2>
+
+      <ul>
+        <li><a href="#program">Coupon Programming</a></li>
+
+        <li><a href="#scoupons">Preferred Shopper Coupons VS. Targeted Coupons</a></li>
+
+        <li><a href="#couponsetup">Coupon Setup</a></li>
+
+        <li style="list-style: none">
+          <ul>
+            <li><a href="#regular">Regular Discount</a></li>
+
+            <li><a href="#repetition">Repetition Discount</a></li>
+
+            <li><a href="#bogo">BOGO Coupon</a></li>
+
+            <li><a href="#percentage">Percentage Coupon</a></li>
+
+            <li><a href="#bundle">Final Price (Bundle) Discount</a></li>
+
+            <li><a href="#weight">Weight Discount</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2 id="program">Coupon Programming</h2>
+
+      <p>The <strong>Coupon link</strong> table is used to define the conditions that must be reached to get the coupon. It is used in conjunction with the <em>Price</em> table, which defines the discount to give: amount off, percentage off, etc..</p>
+
+      <p class="auto-style2"><img alt="" height="185" src="ToshibaACE_coupon_files/SMS_Ecl.png" width="532"></p>
+
+      <ol>
+        <li>
+          The <strong>Type</strong> field define the type of the criterion;
+
+          <p>The supported types are:</p>
+        </li>
+
+        <li style="list-style: none">
+          <ul>
+            <li>PID (group of items);</li>
+
+            <li>DPT (department);</li>
+
+            <li>TTL (total sales);</li>
+
+            <li>CLT (customer);</li>
+
+            <li>CLF (shopper level).</li>
+          </ul>
+        </li>
+
+        <li>The value of the <strong>Code</strong> field depends on the value set in the <strong>Type</strong> field (PID number, department number, customer number, shopper level number);</li>
+
+        <li>The <strong>Quantity</strong> of items required to get the coupon (used with the PID type);</li>
+
+        <li>The <strong>Amount</strong> required to get the coupon (used with the DPT and TTL types);</li>
+
+        <li>The <strong>Weight</strong> field is not used;</li>
+
+        <li>The <strong>Method(s)</strong> that modify the behavior of the coupon.</li>
+      </ol>
+
+      <div class="Note">
+        <strong>NOTES:</strong> 
+
+        <ul>
+          <li>The PID entered needs to be numeric and have a maximum value of 32864.</li>
+
+          <li>Alpha characters are not accepted by ACE.</li>
+        </ul>
+        If an Alpha character is used, batch deployment will fail and will prevent and future changes from being sent to ACE until corrected.
+      </div>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Supported Coupons</th>
+
+            <th>Supported Coupon Methods</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>
+            <ul>
+              <li>Accumulate $ Amount, Get % Off</li>
+
+              <li>Accumulate $ Amount, Get $ Off</li>
+
+              <li>Buy One, Get One Free</li>
+
+              <li>Buy X Get Y @ Percent off</li>
+
+              <li>Buy X, Get Y @ Specific Price</li>
+
+              <li>Weight Purchase, Get $ Off per LB</li>
+
+              <li>Item @ $ Off</li>
+
+              <li>Minimum Item Quantity Purchase, Get $ Off</li>
+
+              <li>Minimum Item Quantity Purchase, Get % Off</li>
+
+              <li>Targeted Coupons</li>
+
+              <li>Preferred Shopper Coupons</li>
+            </ul>
+          </td>
+
+          <td>
+            <ul>
+              <li>M - <em>Match with this item</em>, which tells the system to apply the discount on the items of this type</li>
+
+              <li>X - <em>Exclude this from total</em>, which excludes the items of this PID from the minimum purchase required</li>
+
+              <li>R - <em>Multiply using criteria</em>, which tells the system to apply the coupon each time the criteria matched</li>
+
+              <li>A - <em>Accumulate for percent or bundle</em>, must be used with CB method (Price Table) of item</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <p class="auto-style3"><a href="#top">Back to Top</a></p>
+
+      <h2 id="scoupons">Preferred Shopper Coupons VS. Targeted Coupons</h2>
+
+      <p>Normally, a coupon is linked to an item (PID, DPT and TTL types). However, there are two (2) types of coupons that are related to customers:</p>
+
+      <ul>
+        <li>Preferred shopper coupon (CLF type).</li>
+
+        <li>Targeted coupon (CLT type).</li>
+      </ul>
+
+      <p>These types of coupons are automatically triggered if the customer entered in the transaction is a specific customer (<em>Targeted coupon</em>), or is part of the specified shopper level (<em>Preferred shopper coupon</em>). The Preferred shopper coupon and the Targeted coupon will be given on the Toshiba ACE lanes only if the Customer information is deployed from the LOC SMS backoffice server.</p>
+
+      <p style="text-align:right"><a href="#top">Back to Top</a></p>
+
+      <h2 id="couponsetup">Coupon Setup</h2>
+
+      <p>The examples below show how to set up supported coupons in LOC SMS so they can be used in Toshiba ACE. Each example presents a table that explains what is needed as well as a screen shot that shows how the coupon would look like in LOC SMS.</p>
+
+      <p class="Note"><strong>NOTE:</strong> When a coupon has a starting and an ending date, the coupon will be automatically deleted from LOC SMS <span class="auto-style1">and</span> Toshiba ACE when the end date is reached.</p>
+
+      <p style="text-align:right"><a href="#top">ck to Top</a></p>
+
+      <h3>Examples:</h3>
+
+      <ul>
+        <li><a href="#regular">Amount Off Coupon</a></li>
+
+        <li><a href="#percentage">Percent Off Coupon</a></li>
+
+        <li><a href="#repetition">Repetition Coupon</a></li>
+
+        <li><a href="#buyxgety">Buy X Get Y % Off Coupon</a></li>
+
+        <li><a href="#bogo">BOGO Coupon</a></li>
+
+        <li><a href="#bundle">Final Price (Bundle) Coupon</a></li>
+
+        <li><a href="#weight">Weight Coupon</a></li>
+      </ul>
+
+      <h3 id="regular">Amount Off Coupon</h3>
+
+      <p>$1.00 discount is given when 1 item of the PID 123 is purchased.</p>
+
+      <p><strong>Price</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Field</th>
+
+            <th>Value</th>
+
+            <th>&nbsp;</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Price</strong></td>
+
+          <td>1.00&nbsp;</td>
+
+          <td>1</td>
+
+          <td>The price is used as a discount amount (not a retail price).</td>
+        </tr>
+
+        <tr>
+          <td><strong>Start</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The starting date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>End</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The ending date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Time</strong></td>
+
+          <td>00:00</td>
+
+          <td>23:59</td>
+
+          <td>The starting and ending time.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Pkg price</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Limited qty</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Dsc $ | %</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Mix | Meth</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+      </table>
+
+      <p><strong>Coupon link</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Type</th>
+
+            <th>Code</th>
+
+            <th>Cum</th>
+
+            <th>Tlz</th>
+
+            <th>Qty</th>
+
+            <th>Amount</th>
+
+            <th>Weight</th>
+
+            <th>Method</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>PID</td>
+
+          <td>123</td>
+
+          <td>T</td>
+
+          <td>3</td>
+
+          <td>1</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>M</td>
+        </tr>
+      </table>
+
+      <p>The <em>M</em> value in the <strong>Method</strong> field means that the discount will be applied on the item that is part of the <em>PID 123</em>.</p>
+
+      <p><img alt="" height="362" src="ToshibaACE_coupon_files/RegularDiscount.png" width="800"></p>
+
+      <p style="text-align:right"><a href="#top">Back to Top</a></p>
+
+      <h3 id="percentage">Percent Off Coupon</h3>
+
+      <p>10% is given on all items of the PID 123 when at least 1 item of the PID 123 is purchased.</p>
+
+      <p><strong>Price</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Field</th>
+
+            <th>Value</th>
+
+            <th>&nbsp;</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Price</strong></td>
+
+          <td>0.00&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><strong>Start</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The starting date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px"><strong>End</strong></td>
+
+          <td style="height: 21px">MM/DD/YYYY</td>
+
+          <td style="height: 21px">
+          </td>
+
+          <td style="height: 21px">The ending date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Time</strong></td>
+
+          <td>00:00</td>
+
+          <td>23:59</td>
+
+          <td>The starting and ending time.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Pkg price</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Limited qty</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Dsc $ | %</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>10</td>
+
+          <td>The percentage to apply as discount.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Mix | Meth</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+      </table>
+
+      <p><strong>Coupon link</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Type</th>
+
+            <th>Code</th>
+
+            <th>Cum</th>
+
+            <th>Tlz</th>
+
+            <th>Qty</th>
+
+            <th>Amount</th>
+
+            <th>Weight</th>
+
+            <th>Method</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>PID</td>
+
+          <td>123</td>
+
+          <td>T</td>
+
+          <td>3</td>
+
+          <td>1</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>M</td>
+        </tr>
+      </table>
+
+      <p>The <em>M</em> value in the <strong>Method</strong> field means that the discount will be applied on the item that is part of the <em>PID 123</em>.</p>
+
+      <p><img alt="" height="476" src="ToshibaACE_coupon_files/percentage.png" width="800"></p>
+
+      <p class="NoteList"><strong>NOTE:</strong> The percentage is applied on the item, not on the total of the transaction.</p>
+
+      <p style="text-align:right"><a href="#top">Back to Top</a></p>
+
+      <h3 id="repetition">Repetition Coupon</h3>
+
+      <p>$1.00 discount is given each time $2.00 of item of the PID 123 is purchased.</p>
+
+      <p><strong>Price</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Field</th>
+
+            <th>Value</th>
+
+            <th>&nbsp;</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Price</strong></td>
+
+          <td>1.00&nbsp;</td>
+
+          <td>1</td>
+
+          <td>The price is used as a discount amount (not a retail price).</td>
+        </tr>
+
+        <tr>
+          <td><strong>Start</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The starting date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>End</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The ending date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Time</strong></td>
+
+          <td>00:00</td>
+
+          <td>23:59</td>
+
+          <td>The starting and ending time.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Pkg price</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Limited qty</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Dsc $ | %</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Mix | Meth</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+      </table>
+
+      <p><strong>Coupon link</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Type</th>
+
+            <th>Code</th>
+
+            <th>Cum</th>
+
+            <th>Tlz</th>
+
+            <th>Qty</th>
+
+            <th>Amount</th>
+
+            <th>Weight</th>
+
+            <th>Method</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>PID</td>
+
+          <td>123</td>
+
+          <td>T</td>
+
+          <td>3</td>
+
+          <td>1</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>MR</td>
+        </tr>
+      </table>
+
+      <p>The <em>M</em> value in the <strong>Method</strong> field means that the discount will be applied on the item that is part of the <em>PID 123</em>.</p>
+
+      <p>The <em>R</em> value in the <strong>Method</strong> field means that the discount will only be applied/repeated each time <em>ALL</em> of the conditions set are met.</p>
+
+      <p><img alt="" height="363" src="ToshibaACE_coupon_files/Repetition.png" width="800"></p>
+
+      <p class="NoteList"><strong>NOTE</strong>: ACE limitation: The items in the promotion must be greater than the discount. The items will be included in the item spend amount if you purchase one item that is equal to or greater than the price value on the coupon. Otherwise, the items will not be included in the item spend amount.</p>
+
+      <p style="text-align:right"><a href="#top">Back to Top</a></p>
+
+      <h4>Buy X get Y Percent Off Coupon</h4>
+
+      <p>10% is given on all items of the PID 8926 when at least 6 items of the PID 8926 are purchased.</p>
+
+      <p><strong>Price</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Field</th>
+
+            <th>Value</th>
+
+            <th>&nbsp;</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Price</strong></td>
+
+          <td>0.00&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><strong>Start</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The starting date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px"><strong>End</strong></td>
+
+          <td style="height: 21px">MM/DD/YYYY</td>
+
+          <td style="height: 21px">
+          </td>
+
+          <td style="height: 21px">The ending date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Time</strong></td>
+
+          <td>00:00</td>
+
+          <td>23:59</td>
+
+          <td>The starting and ending time.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Pkg price</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Limited qty</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Dsc $ | %</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>10</td>
+
+          <td>The percentage to apply as discount.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Mix | Meth</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+      </table>
+
+      <p><strong>Coupon link</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Type</th>
+
+            <th>Code</th>
+
+            <th>Cum</th>
+
+            <th>Tlz</th>
+
+            <th>Qty</th>
+
+            <th>Amount</th>
+
+            <th>Weight</th>
+
+            <th>Method</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>PID</td>
+
+          <td>8926</td>
+
+          <td>T</td>
+
+          <td>3</td>
+
+          <td>6</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>MR</td>
+        </tr>
+      </table>
+
+      <p>The <em>M</em> value in the <strong>Method</strong> field means that the discount will be applied on the items that are part of <em>PID 8926</em>.</p>
+
+      <p>The <em>R</em> value in the <strong>Method</strong> field means that the discount will only be applied when <em>ALL</em> of the conditions set are met.</p>
+
+      <p><img alt="" height="465" src="ToshibaACE_coupon_files/buyXgetYoff.png" width="800"></p>
+
+      <p class="NoteList"><strong>NOTE:</strong> The percentage is applied on the items, not on the total of the transaction.</p>
+
+      <p style="text-align:right"><a href="#top">Back to Top</a></p>
+
+      <h3 id="bogo">BOGO Coupon</h3>
+
+      <p>An item for free is given when 1 item of the PID 123 and 1 item of the PID 124 are purchased.</p>
+
+      <p><strong>Price</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Field</th>
+
+            <th>Value</th>
+
+            <th>&nbsp;</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Price</strong></td>
+
+          <td>0.00&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td><strong>Start</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The starting date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>End</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The ending date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Time</strong></td>
+
+          <td>00:00</td>
+
+          <td>23:59</td>
+
+          <td>The starting and ending time.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Pkg price</strong></td>
+
+          <td>1.00</td>
+
+          <td>2</td>
+
+          <td>The BOGO: how many items for free (1.00) and how many items to buy (2).</td>
+        </tr>
+
+        <tr>
+          <td><strong>Limited qty</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>1</td>
+
+          <td>The number of times the coupon can be given within the limit (in units).</td>
+        </tr>
+
+        <tr>
+          <td><strong>Dsc $ | %</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Mix | Meth</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>LT</td>
+
+          <td>The limit of the coupon (LT means by transaction).</td>
+        </tr>
+      </table>
+
+      <p><strong>Coupon link</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Type</th>
+
+            <th>Code</th>
+
+            <th>Cum</th>
+
+            <th>Tlz</th>
+
+            <th>Qty</th>
+
+            <th>Amount</th>
+
+            <th>Weight</th>
+
+            <th>Method</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>PID</td>
+
+          <td>123</td>
+
+          <td>T</td>
+
+          <td>3</td>
+
+          <td>1</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>M</td>
+        </tr>
+
+        <tr>
+          <td>PID</td>
+
+          <td>124</td>
+
+          <td>T</td>
+
+          <td>3</td>
+
+          <td>1</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+
+      <p>The <em>M</em> value in the <strong>Method</strong> field means that the discount will be applied on the item that is part of the <em>PID 123</em>.</p>
+
+      <p><img alt="" height="583" src="ToshibaACE_coupon_files/BOGO.png" width="800"><br>
+      </p>
+
+      <p class="NoteList"><strong>NOTE:</strong> In this scenario, the value of the <strong>Pkg price</strong> field and the limit can be removed, and a percentage or a price to get a fixed value discount can be added.</p>
+
+      <p style="text-align:right"><a href="#top">Back to Top</a></p>
+
+      <h3 id="bundle">Final Price Coupon (Bundle)</h3>
+
+      <p>The item of the PID 124 is sold at $10.00.</p>
+
+      <p><strong>Price</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 75px">Field</th>
+
+            <th>Value</th>
+
+            <th>&nbsp;</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 75px"><strong>Price</strong></td>
+
+          <td>10.00&nbsp;</td>
+
+          <td>1</td>
+
+          <td>The final price at which the item should be sold.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 75px"><strong>Start</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The starting date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 75px"><strong>End</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The ending date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 75px"><strong>Time</strong></td>
+
+          <td>00:00</td>
+
+          <td>23:59</td>
+
+          <td>The starting and ending time.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 75px"><strong>Pkg price</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td style="width: 75px"><strong>Limited qty</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td style="width: 75px"><strong>Dsc $ | %</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td style="width: 75px"><strong>Mix | Meth</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>CB</td>
+
+          <td>The method that changes the behavior of the coupon (the <em>CB</em> method identifies the value defined in the <strong>Price</strong> field as a final price instead of a discount).</td>
+        </tr>
+      </table>
+
+      <p><strong>Coupon link</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Type</th>
+
+            <th>Code</th>
+
+            <th>Cum</th>
+
+            <th>Tlz</th>
+
+            <th>Qty</th>
+
+            <th>Amount</th>
+
+            <th>Weight</th>
+
+            <th>Method</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>PID</td>
+
+          <td>124</td>
+
+          <td>T</td>
+
+          <td>3</td>
+
+          <td>1</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>M</td>
+        </tr>
+      </table>
+
+      <p>The <em>M</em> value in the <strong>Method</strong> field means that the discount, which corresponds to the price at which the item is sold minus $10.00, will be applied on the item that is part of the <em>PID 124</em>.</p>
+
+      <p><img alt="" height="455" src="ToshibaACE_coupon_files/FinalPriceDiscount.png" width="800"><br>
+      </p>
+
+      <p class="NoteList"><strong>NOTE:</strong> The final price discount will only apply if the discount amount is at least equal to the price of the item to which it is linked.</p>
+
+      <p style="text-align:right"><a href="#top">Back to Top</a></p>
+
+      <h3 id="weight">Weight Coupon</h3>
+
+      <p>A discount of $0.25 per pound is given on the items of the PID 4011, up to 50 pounds.</p>
+
+      <p class="NoteList"><strong>NOTE:</strong> The coupon needs to be set as a scalable item in the <strong>POS</strong> table.</p>
+
+      <p><strong>Price</strong> <strong>table</strong>:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Field</th>
+
+            <th>Value</th>
+
+            <th>&nbsp;</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Price</strong></td>
+
+          <td>0.25</td>
+
+          <td>1</td>
+
+          <td>The price is used as a discount amount per pound.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Start</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The starting date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>End</strong></td>
+
+          <td>MM/DD/YYYY</td>
+
+          <td>&nbsp;</td>
+
+          <td>The ending date of the coupon.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Time</strong></td>
+
+          <td>00:00</td>
+
+          <td>23:59</td>
+
+          <td>The starting and ending time.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Pkg price</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Limited qty</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>50</td>
+
+          <td>The number of times the coupon can be given within the limit (in pounds).</td>
+        </tr>
+
+        <tr>
+          <td><strong>Dsc $ | %</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>---</td>
+        </tr>
+
+        <tr>
+          <td><strong>Mix | Meth</strong></td>
+
+          <td>&nbsp;</td>
+
+          <td>LT</td>
+
+          <td>The limit of the coupon (LT means by transaction).</td>
+        </tr>
+      </table>
+
+      <p><strong>Coupon link</strong> table:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Type</th>
+
+            <th>Code</th>
+
+            <th>Cum</th>
+
+            <th>Tlz</th>
+
+            <th>Qty</th>
+
+            <th>Amount</th>
+
+            <th>Weight</th>
+
+            <th>Method</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>PID</td>
+
+          <td>4011</td>
+
+          <td>T</td>
+
+          <td>3</td>
+
+          <td>1</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+
+      <p><img alt="" height="456" src="ToshibaACE_coupon_files/WeightDiscount.png" width="800"></p>
+
+      <p class="NoteList"><strong>NOTE:</strong> If the limit by pound is lower than 10, the coupon will not be applied (this is due to a limitation in Toshiba ACE). For the coupon be given, the purchase of a second item will need to be forced.</p>
+
+      <p style="text-align:right"><a href="#top">Back to Top</a></p>
+
+      <p style="text-align:right"><a href="User_ToshibaACE.htm">Go to the Toshiba ACE Interface - Users Guide document</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Price Edit</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+    <meta name="SMS-HtmlEditor-GitLock" content="Steve" />
+  </head>
+
+  <body class="bg-white">
+    ï»? <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Price Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The eSuite software uses relational tables to store item information. The <strong>Price</strong> table contains all pricing information for the main item.</p>
+
+      <p>To find a price record for the main item, eSuite uses a unique key made up of three fields: the main item UPC, the target and the price level. This means that each UPC can have more than one price record in the <strong>Price</strong> table, as long as the target and/or the price level change. For the same target, a UPC can have as many different price records as there are unique price levels, and for the same price level, a UPC can have as many different price records as there are unique targets.</p>
+
+      <h2>Displaying the Price Table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item</strong> <strong>list</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Items - General List</strong> view.</li>
+
+        <li>Enter the search criteria and click <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window.</li>
+
+        <li>Select a record.</li>
+
+        <li>Click on <strong>Edit</strong> on the bottom of the item grid to display its menu.</li>
+
+        <li>Select <strong>Master tables</strong>, then <strong>Price master</strong>: the <strong>Price edit table</strong> opens over the work area.</li>
+
+        <li style="list-style: none">
+          <p><img class="Text" src="Price_Table_files/price_table.png"></p>
+        </li>
+      </ol>
+
+      <p>Because of the multiple records capability, the <b>Price</b> table can toggle between a simple view and a detailed view.</p>
+
+      <p>The simple view consists of the quick reference section and the pricing columns.<br>
+      The detailed view adds the bottom tab section and the left tab section.</p>
+
+      <p>The <strong>Collapse</strong>/<strong>Expand left</strong> control in the toolbar hides/shows the left tab section.<br>
+      The <strong>Collapse</strong>/<strong>Expand bottom</strong> control in the toolbar hides/shows the bottom tab section.</p>
+
+      <h2>Quick item reference</h2>
+
+      <p>The <strong>quick item reference</strong> section has two editable fields: <strong>Target</strong> (with a multi-store installation) and <strong>Level</strong>. They fields must be filled in before adding prices.</p>
+
+      <p><img src="Price_Table_files/quick_item_reference.png" class="Text"></p>
+
+      <p>&nbsp;</p>
+
+      <p>The other fields are grayed out and used for information purposes only:</p>
+
+      <ul>
+        <li>The <strong>Active price</strong> field shows the current price for the item.</li>
+
+        <li>The <strong>Next price</strong> field will show the new price until the changes are deployed to the points of sale. Once the modifications have been deployed, the <strong>Active price</strong> field is updated with the value in the <strong>Next price</strong> field and the <strong>Next price</strong> field is updated with the next pricing event, based on the pricing columns.</li>
+      </ul>
+
+      <h2>Pricing columns</h2>
+
+      <p>The <strong>pricing columns</strong> allow maintaining several pricing events:</p>
+
+      <ul>
+        <li><strong>Regular</strong>: displays the normal (regular) price of the item.</li>
+
+        <li><strong>TPR</strong>: displays the temporary price reduction applied on the item.</li>
+
+        <li><strong>Sale</strong>: displays the short term promotional price of the item.</li>
+
+        <li><strong>Store</strong>: displays store-specific price (temporary or permanent) of the item.</li>
+
+        <li style="list-style: none">
+          <p><img src="Price_Table_files/pricing_columns.png" class="Text"></p>
+        </li>
+      </ul>
+
+      <p>Each pricing column contains several common fields: <strong>Price</strong>, <strong>Start date</strong>, <strong>End date</strong>. The start and end dates are inclusive: regardless of the price column, the prices in the <strong>Price</strong> fields will remain active until the end date expires.</p>
+
+      <p>The <strong>Regular</strong> and the <strong>Sale</strong> columns display the <strong>Time</strong> field.</p>
+
+      <p>The <strong>TPR column</strong> displays <strong></strong>the <strong>Ad</strong> field, containing the identification letter of the advertising type used for the item.<br>
+      </p>
+
+      <p>The <strong>Store column</strong> displays the <strong>TPR</strong> and <strong>Sale</strong> checkboxes. The <b>TPR</b> checkbox specifies whether the store price overrides the <strong>TPR</strong> price (checked) or not (unchecked). The <b>Sale</b> field specifies whether the store price overrides all prices (checked) or not (unchecked).</p>
+
+      <h3>Precedence</h3>
+
+      <p>If <strong>Regular</strong>, <strong>TPR</strong> and <strong>Sale</strong> pricing columns contain prices but none of the three has the start and end dates specified, the <strong>Regular price</strong> takes precedence over the two other ones.</p>
+
+      <p>If a <strong>Store price</strong> is also entered (without any dates specified), the <strong>Store price</strong> takes precedence over the <strong>Regular price</strong>. Both <strong>TPR</strong> <strong>and</strong> <strong>Sale prices</strong> require valid dates in the <strong>Start</strong> and <strong>End date</strong> fields for their prices to take effect. If no dates are specified for the <strong>Regular price</strong>, the eSuite software uses the date and time when the modifications were made as the active date for the change. The <strong>TPR price</strong> takes precedence over the <strong>Regular price</strong> when the current day is part of the TPR dates range. The <strong>Sale price</strong> also takes precedence over the <strong>Regular price</strong> when the current day is part of the Sale dates range. If the current day is part of both the TPR and Sale dates ranges, the <strong>Sale price</strong> takes precedence over the <strong>TPR price</strong>. Finally, the <strong>Store price</strong> may also take precedence over the <strong>TPR</strong> and <strong>Sale prices</strong> if it is specified as such.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><strong>Default precedence</strong></td>
+
+          <td><strong>Store Precedence over Sale (includes over TPR)</strong></td>
+
+          <td><strong>Store Precedence Over TPR</strong></td>
+        </tr>
+
+        <tr>
+          <td><img align="middle" height="252" src="Price_Table_files/default_precedence.png" width="416" class="Text"></td>
+
+          <td><img align="middle" height="249" src="Price_Table_files/store_over_sale.png" width="416" class="Text"></td>
+
+          <td><img height="245" src="Price_Table_files/store_over_TPR.png" width="416" class="Text"></td>
+        </tr>
+      </table>
+
+      <h3>Profit margin calculation method</h3>
+
+      <p>The profit margin is displayed for each price, near the header for each column.</p>
+
+      <p>The profit margin is calculated according to one of the two options that were selected when the software was configured for your store. To illustrate the two options available, here are two examples with the same cost and profit margin %.</p>
+
+      <h3><strong>Margin on cost</strong></h3>
+
+      <ul>
+        <li>The margin on cost in this example is the result of 25% of $10.00.</li>
+
+        <li>The margin is $2.50, and the retail price is $12.50.</li>
+
+        <li>The formula to calculate the profit margin as a percentage of the cost is : Cost + (Cost * profit margin %).</li>
+      </ul>
+
+      <h3><strong>Margin on retail</strong></h3>
+
+      <ul>
+        <li>The margin on retail in this example is the result of 25% of the retail price.</li>
+
+        <li>The margin is $3.33 and the retail price is $13.33.</li>
+
+        <li>The formula to calculate the profit margin as a percentage of the retail price is: Cost / (1 - profit margin %).</li>
+      </ul>
+
+      <h2>Bottom tab section</h2>
+
+      <p>The bottom tab section offers additional information on the price of the item in the <strong>Price</strong> table. The following tabs and views are available: <strong>Base</strong> (displayed by default), <strong>Margin</strong>, <strong>Redeem</strong> and <strong>General</strong>. See the <strong><a href="#Layout">Layout</a></strong> section for details.</p>
+
+      <h2>Price table grid</h2>
+
+      <p>The <strong>Price</strong> table grid offers quick information on the price record. The following tabs and views are available: <strong>Grid</strong> (displayed by default), <strong>Active</strong> and <strong>Next</strong>.</p>
+
+      <p>The <strong>Grid</strong> tab shows the item price records displayed in a list with four columns: <strong>Target</strong>, <strong>Level</strong>, <strong>Active</strong> <strong>price</strong> and <strong>Quantity</strong>. Information in the grid is not editable.</p>
+
+      <p>Columns are movable, resizable and may be selected/deselected for a customized experience. They allow sorting the records in an ascending or a descending order.<br>
+      Records are displayed in ascending order by target, with the <em>PAL</em> target record selected by default. Selecting a record allows displaying and editing its information in the quick item reference section of the <strong>Price</strong> table:</p>
+
+      <p><img class="Text" src="Price_Table_files/left_grid_information.png"></p>
+
+      <p>The <strong>Active</strong> tab contains data on the active price of the record selected in the <strong>Grid</strong> tab. Information is displayed in a table and is not editable.</p>
+
+      <p><img class="Text" src="Price_Table_files/left_active_price_information.png"></p>
+
+      <p>The <strong>Next</strong> tab contains data on the next price of the record selected in the <strong>Grid</strong> tab. Information is displayed in a table and is not editable.</p>
+
+      <p><img class="Text" src="Price_Table_files/left_next_price_information.png" height="535" width="816"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Price</strong> table is divided into four parts: the <strong>quick item reference section</strong>, <strong></strong>the <strong>pricing columns</strong>, the <strong>bottom tab section</strong> and the <strong>Price table grid.</strong></p>
+
+      <h3><strong>Quick item reference section</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Price_Table_files/quick_item_reference.png" usemap="#quick_item_reference"> <map name="quick_item_reference">
+            <area shape="rect" coords="6, 55, 85, 81" href="#Target">
+            <area shape="rect" coords="84, 53, 138, 80" href="#Level">
+            <area shape="rect" coords="146, 54, 257, 81" href="#Active_price">
+            <area shape="rect" coords="259, 54, 316, 81" href="#Source_active_price">
+            <area shape="rect" coords="326, 54, 439, 80" href="#Next_price">
+            <area shape="rect" coords="442, 54, 494, 81" href="#Source_next_price">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3><strong>Pricing columns</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Price_Table_files/pricing_columns.png" usemap="#pricing_columns"> <map name="pricing_columns">
+            <area shape="rect" coords="46, 27, 483, 53" href="#Price">
+            <area shape="rect" coords="47, 54, 484, 78" href="#Start">
+            <area shape="rect" coords="47, 77, 483, 103" href="#End">
+            <area shape="rect" coords="48, 102, 153, 126" href="#Time">
+            <area shape="rect" coords="181, 102, 261, 127" href="#Ad">
+            <area shape="rect" coords="265, 101, 374, 129" href="#Time">
+            <area shape="rect" coords="398, 106, 432, 124" href="#TPR">
+            <area shape="rect" coords="448, 106, 486, 124" href="#Sal">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3><strong>Bottom tab section</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="width: 685px"><map name="base_tab">
+            <area shape="rect" coords="67, 49, 499, 75" href="#Package">
+            <area shape="rect" coords="66, 75, 499, 99" href="#Limit">
+            <area shape="rect" coords="66, 98, 500, 125" href="#Mix">
+            <area shape="rect" coords="67, 125, 499, 152" href="#Method">
+            <area shape="rect" coords="66, 152, 499, 178" href="#Discount">
+            <area shape="rect" coords="67, 178, 500, 203" href="#Points">
+          </map> <img class="Text" style="border-style:none" src="Price_Table_files/tab_base.png" usemap="#base_tab"> </td>
+
+          <td><img class="Text" style="border-style:none" height="230" src="Price_Table_files/tab_margin.png" usemap="#margin_tab" width="505"> <map name="margin_tab">
+            <area shape="rect" coords="99, 73, 174, 99" href="#The_Retail_(margin)_field">
+            <area shape="rect" coords="173, 75, 241, 101" href="#Retail_(rounding)">
+            <area shape="rect" coords="102, 99, 173, 123" href="#Package_(margin)">
+            <area shape="rect" coords="172, 100, 242, 124" href="#Package_(rounding)">
+            <area shape="rect" coords="101, 124, 173, 150" href="#Limited_(margin)">
+            <area shape="rect" coords="173, 124, 242, 151" href="#Limited_(rounding)">
+            <area shape="rect" coords="326, 74, 459, 100" href="#Price_(suggested_retail)">
+            <area shape="rect" coords="327, 100, 461, 125" href="#Margin_(suggested_retail)">
+            <area shape="rect" coords="100, 172, 405, 199" href="#Discount_description">
+            <area shape="rect" coords="409, 177, 495, 197" href="#Exclude_from_spending">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center; width: 685px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="width: 684px"><img class="Text" style="border-style:none" height="230" src="Price_Table_files/tab_redeem.png" usemap="#redeem_tab" width="505"> <map name="redeem_tab">
+            <area shape="rect" coords="52, 54, 155, 81" href="#Start_redeem">
+            <area shape="rect" coords="221, 54, 327, 81" href="#End_redeem">
+            <area shape="rect" coords="91, 85, 158, 111" href="#Discount_points">
+            <area shape="rect" coords="259, 84, 325, 109" href="#Discount_amount">
+            <area shape="rect" coords="91, 116, 156, 140" href="#Free_points">
+            <area shape="rect" coords="92, 144, 156, 170" href="#Clip_points">
+            <area shape="rect" coords="89, 173, 328, 201" href="#Program">
+          </map> </td>
+
+          <td><img class="Text" style="border-style:none" src="Price_Table_files/tab_general.png" usemap="#general_tab"> <map name="general_tab">
+            <area shape="rect" coords="100, 76, 190, 100" href="#Commission">
+            <area shape="rect" coords="102, 106, 212, 131" href="#Operator_level">
+            <area shape="rect" coords="101, 134, 210, 161" href="#Time_included">
+            <area shape="rect" coords="100, 164, 157, 191" href="#Add_totalizer">
+            <area shape="rect" coords="326, 75, 464, 100" href="#Like_code">
+            <area shape="rect" coords="327, 104, 466, 131" href="#Item_link">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center; width: 684px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3><strong>Price table grid</strong></h3>
+
+      <table style="width: 1419px">
+        <tr>
+          <td style="height: 177px; width: 472px;"><img class="Text" style="border-style:none" height="298" src="Price_Table_files/left_price_grid.png" usemap="#left_grid" width="151"> <map name="left_grid">
+            <area shape="rect" coords="0, 0, 35, 269" href="#Target">
+            <area shape="rect" coords="34, 0, 74, 269" href="#Level">
+            <area shape="rect" coords="74, 0, 141, 269" href="#Active_price">
+          </map> </td>
+
+          <td style="width: 472px; height: 177px;"><img class="Text" style="border-style:none" height="304" src="Price_Table_files/left_active_price.png" usemap="#left_active_price" width="151"> <map name="left_active_price">
+            <area shape="rect" coords="60, 55, 143, 71" href="#Source_active_price">
+            <area shape="rect" coords="60, 71, 143, 88" href="#Active_price">
+            <area shape="rect" coords="61, 88, 143, 103" href="#Last_date">
+            <area shape="rect" coords="60, 103, 143, 121" href="#Last_time">
+            <area shape="rect" coords="60, 121, 144, 140" href="#Package">
+            <area shape="rect" coords="58, 140, 143, 155" href="#Limit">
+            <area shape="rect" coords="60, 152, 142, 170" href="#Discount">
+            <area shape="rect" coords="59, 166, 142, 184" href="#Mix">
+            <area shape="rect" coords="59, 183, 143, 201" href="#Method">
+            <area shape="rect" coords="60, 201, 143, 219" href="#Points">
+          </map> </td>
+
+          <td style="height: 177px; width: 473px;"><img class="Text" style="border-style:none" height="304" src="Price_Table_files/left_next_price.png" usemap="#left_next_price" width="151"> <map name="left_next_price">
+            <area shape="rect" coords="58, 55, 143, 73" href="#Source_next_price">
+            <area shape="rect" coords="58, 73, 144, 91" href="#Next_price">
+            <area shape="rect" coords="59, 88, 144, 106" href="#Next_date">
+            <area shape="rect" coords="58, 102, 144, 122" href="#Next_time">
+            <area shape="rect" coords="60, 122, 144, 140" href="#Package">
+            <area shape="rect" coords="60, 139, 143, 157" href="#Limit">
+            <area shape="rect" coords="60, 152, 144, 170" href="#Discount">
+            <area shape="rect" coords="60, 170, 143, 186" href="#Mix">
+            <area shape="rect" coords="59, 183, 143, 202" href="#Method">
+            <area shape="rect" coords="60, 201, 144, 219" href="#Points">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center; width: 472px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align: center; width: 472px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align: center; width: 473px;">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Price</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 191px"><strong>FIELD</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+
+          <tr>
+            <td colspan="2"><strong>Quick item reference section</strong></td>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <b>Target</b> field contains the target identifier (the store group).<br>
+           See the <a href="#The_Target_field"><strong>Target</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Level">Level</a></strong></td>
+
+          <td>The <strong>Level</strong> field contains the price level number.&nbsp;<br>
+          It is a required field. See the <a href="#The_Level_field"><strong>Level</strong> field section</a>.<br>
+          <strong>Note:</strong> Price levels are not supported for e-Coupons.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Active_price">Active price</a></strong></td>
+
+          <td>The <strong>Active price</strong> field shows the current active price for the item, that is the current price for the record target and price level.<br>
+          See the <a href="#The_Active_price_field"><strong>Active price</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Source_active_price">Source</a><br>
+           (Active price field)</strong></td>
+
+          <td>The <b>Source</b> field contains the origin of the current <a href="#The_Active_price_field"><span><strong>Active price</strong> field</span></a>, based on the modification dates in the pricing columns.<br>
+          See the <a href="#The_Source_field_(Active_price)"><strong>Source (Active price)</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Next_price">Next price</a></strong></td>
+
+          <td>The <b>Next price</b> field shows the next price for the item based on the modifications made in the pricing columns.<br>
+          See the <a href="#The_Next_price_field"><strong>Next price</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Source_next_price">Source</a><br>
+          (Next price field)</strong></td>
+
+          <td>The <b>Source</b> field contains the origin of the current <a href="#The_Next_price_field"><span><strong>Next price</strong> field</span></a>, based on the modification dates in the pricing columns.<br>
+          See the <a href="#The_Source_field_(Next_price)"><strong>Source (Next price)</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Price">Price</a></strong></td>
+
+          <td>The <strong>Price</strong> field contains the selling prices for the pricing events.<br>
+          See the <strong></strong> <a href="#The_Price_field"><strong>Price</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px; height: 47px;"><strong><a name="Start">Start</a></strong></td>
+
+          <td style="height: 47px">The <strong>Start</strong> field contains the start dates on which the pricing events become effective.<br>
+          The start date is inclusive.<br>
+          See the <a href="#The_Start_field"><strong>Start</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="End">End</a></strong></td>
+
+          <td>The <strong>End</strong> field contains the end dates on which the pricing events are no longer effective.<br>
+          The end date is inclusive.<br>
+          See the <a href="#The_End_field"><strong>End</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Time">Time</a></strong></td>
+
+          <td>The <b>Time</b> field specifies the exact time during which the <b>Retail</b> and <b>Sale</b> pricing columns are effective.<br>
+          See the <a href="#The_Time_field"><strong>Time</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Ad">Ad</a></strong></td>
+
+          <td>The <strong>Ad</strong> field contains the identification letter of the advertising type used for the item.<br>
+          See the <a href="#The_Ad_field"><strong>Ad</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="TPR">TPR</a></strong></td>
+
+          <td>The <strong>TPR</strong> field specifies whether the store price overrides the TPR price (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Sal">Sal</a></strong></td>
+
+          <td>The <strong>Sal</strong> field specifies whether the store price overrides all prices (checked) or not (unchecked).<br>
+          All prices are <strong>Retail</strong>, <strong>TPR</strong> and <strong>Sale</strong> prices.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Base tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Package">Package</a></strong></td>
+
+          <td>The <strong>Package</strong> field contains the item package prices for the pricing events, i.e. special prices if a certain quantity of the item is bought by a customer.<br>
+          See the <a href="#The_Package_field"><strong>Package</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Limit">Limit</a></strong></td>
+
+          <td>The <strong>Limit</strong> field limits the quantity of an item a customer may purchase at a special price.<br>
+          See the <a href="#The_Limit_field"><strong>Limit</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Mix">Mix</a></strong></td>
+
+          <td>The <strong>Mix</strong> field links the item to a mix &amp; match, which is used to mix items in order to match them to a price.<br>
+           See the <a href="#The_Mix_field"><strong>Mix</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Method">Method</a></strong></td>
+
+          <td>The <strong>Method</strong> field contains the identification letters of the price method used, corresponding to a special price behavior.<br>
+          See the <a href="#The_Method_field"><strong>Method</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Discount">Discount</a></strong></td>
+
+          <td>The <b>Discount</b> field contains the discount applied to the item when it is sold.<br>
+          See the <a href="#The_Discount_field"><strong>Discount</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Points">Points</a></strong></td>
+
+          <td>The <strong>Points</strong> field contains the number of points given to the customer when they buy the item at a price event.<br>
+           See the <a href="#The_Points_field"><strong>Points</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Margin tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Retail_(margin)">Retail (margin)</a></strong></td>
+
+          <td>The <strong>Retail (margin)</strong> field contains the retail profit margin on the item in percentage.<br>
+          It is used to generate the item retail price.<br>
+          See the <a href="#The_Retail_(margin)_field"><strong>Retail (margin)</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Retail_(rounding)">Retail (rounding)</a></strong></td>
+
+          <td>The <strong>Retail (rounding)</strong> field contains the ending number of the retail price.<br>
+          It works in combination with the <a href="#The_Retail_(margin)_field"><strong>Retail</strong> <strong>(margin)</strong></a> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Package_(margin)">Package (margin)</a></strong></td>
+
+          <td>The <b>Package (margin)</b> field contains the package price profit margin on the item in percentage.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Package_(rounding)">Package (rounding)</a></strong></td>
+
+          <td>The <strong>Package (rounding)</strong> field contains the ending number of the package price.<br>
+          It works in combination with the <a href="#Package_(margin)"><strong>Package (margin)</strong></a> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Limited_(margin)">Limited (margin)</a></strong></td>
+
+          <td>The <b>Limited</b> <strong>(margin)</strong> field contains the limited quantity price profit margin on the item in percentage</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Limited_(rounding)">Limited (rounding)</a></strong></td>
+
+          <td>The <strong>Limited (rounding)</strong> field contains the ending number of the limited quantity price.<br>
+          It works in combination with the <a href="#Limited_(margin)"><strong>Limited (margin)</strong></a> <strong></strong>field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Price_(suggested_retail)">Price (suggested retail)</a></strong></td>
+
+          <td>The <strong>Price</strong> <strong>(suggested retail)</strong> field contains the suggested retail price.<br>
+          See the <a href="#The_Price_Suggested_Retail_field"><strong>Price</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Margin_(suggested_retail)">Margin (suggested retail)</a></strong></td>
+
+          <td>The <strong>Margin (suggested price)</strong> field contains the suggested price profit margin expressed as a percentage, used to generate the particular suggested price for the item.<br>
+          See the <a href="#The_Margin_(suggested_retail)_field"><strong>Margin (suggested retail)</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Discount_description">Discount description</a></strong></td>
+
+          <td>The <strong>Discount description</strong> field contains the description of the discount given. This description may appear on the customized receipts and invoices.<br>
+          If the <b>Discount description</b> field does not contain any description, the <a href="../Customers/Shopper_level_table.htm#The_Shopper_level_field">shopper level description</a> will be displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Exclude_from_spending">Exclude from spending</a></strong></td>
+
+          <td>The <strong>Exclude from spending (Exc. spend)</strong> field specifies whether the sales of the item are excluded from the points calculation (checked) or not (unchecked).<br>
+          See the <a href="#The_Exclude_from_spending_field"><strong>Exclude from spending</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><span><strong>Redeem tab</strong></span></td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Start_redeem">Start</a></strong></td>
+
+          <td>The <strong>Start</strong> field contains the starting date for the preset item point redemption, namely the date from which the point discount on the item can be given. The starting date is inclusive.<br>
+          If no dates (starting and ending dates) are specified, the redemption points are accepted at any time.<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="End_redeem">End</a></strong></td>
+
+          <td>The <strong>End</strong> field contains the ending date for the preset items points redemption, namely the date on which the point discount to be given on the item ends. The ending date is inclusive.<br>
+          If no dates (starting and ending dates) are specified, the redemption points are accepted at any time.<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Discount_points">Discount points</a></strong></td>
+
+          <td>The <strong>Discount points</strong> field contains the number of points needed for the customer to get a discount on the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Discount_amount">Discount amount</a></strong></td>
+
+          <td>The <strong>Discount</strong> field contains the amount of the discount given when the customer redeems points on the item.<br>
+          The <strong>Discount</strong> field works in combination with the <strong><a href="#Discount_points">Discount points</a></strong> and <a href="#Program"><strong>Program</strong></a> fields.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Free_points">Free points</a></strong></td>
+
+          <td>The <strong>Free points</strong> field contains the number of points needed for the customer to get the item for free.<br>
+          It works in combination with the <a href="#Program"><strong>Program</strong> field</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Clip_points">Clip points</a></strong>&nbsp;</td>
+
+          <td>The <strong>Clip points</strong> field contains the number of points obtained from clipped offers.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Program">Program</a></strong></td>
+
+          <td>The <strong>Program</strong> field contains the character that corresponds to the point program from which the points are redeemed.The list of point programs can be modified in the Popup.ini file. See the reseller for more details.<br>
+          The <strong>Program</strong> field works in combination with the <strong><a href="#Discount_points">Discount points</a></strong>, <strong><a href="#Free_points">Free points</a></strong> and <strong><a href="#Discount_amount">Discount amount</a></strong> fields.<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong><span>General tab</span></strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Commission">Commission</a></strong></td>
+
+          <td>The <strong>Commission</strong> field contains the salesman's commission amount for the item.<br>
+          It is used for information purposes only (not shown in the commission report).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Operator_level">Operator level</a></strong></td>
+
+          <td>The <strong>Operator level</strong> field contains the number of the minimum operator level needed to manage the current price record.<br>
+           To choose a user level, click on the arrow in the field and select an option in the drop-down list.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Time_included">Time included</a></strong></td>
+
+          <td>The <strong>Time included</strong> field contains the number of days the item is rented at this price (or at this price level).<br>
+           To select an option, click on the arrow in the field and make a choice in the drop-down list.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Add_totalizer">Add totalizer</a></strong></td>
+
+          <td>The <strong>Add totalizer</strong> field contains the number of an additional totalizer in which the value of the item sold must be added.<br>
+          The additional totalizer may be used as a condition in an electronic coupon or to limit the number of times the item is sold.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px"><strong><a name="Like_code">Like code</a></strong></td>
+
+          <td>The <strong>Like code</strong> field contains a code used to group items.<br>
+          See the <a href="#The_Like_code"><strong>Like code</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px; height: 18px;"><strong><a name="Item_link">Item link</a></strong></td>
+
+          <td style="height: 18px">The <strong>Item link</strong> field contains the UPC code of a linked item.<br>
+          When the first item is sold, the linked item is automatically sold with the first one. One can link up to ten (10) items.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Price table grid</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px; height: 18px;"><a name="Last_date"><strong>Last date</strong></a></td>
+
+          <td style="height: 18px">The <strong>Last date</strong> field contains the date of the latest active price change.<br>
+           It is displayed in the <strong>Active</strong> tab. &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px; height: 18px;"><strong><a name="Last_time">Time</a>&nbsp;</strong> </td>
+
+          <td style="height: 18px">The <strong>Time</strong> field contains the time of the latest active price change.<br>
+          It is displayed in the <strong>Active</strong> tab. &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px; height: 18px;"><strong><a name="Next_date">Next date&nbsp;</a></strong> </td>
+
+          <td style="height: 18px">The <b>Next date</b> field contains the date of the next price change and indicates the date in the <a href="#Next_price"><b>Next price</b> field</a>.&nbsp;<br>
+          It is displayed in the <strong>Next price</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 191px; height: 18px;"><strong><a name="Next_time">Time</a>&nbsp;</strong> </td>
+
+          <td style="height: 18px">The <strong>Time</strong> field contains the time of the next price change and indicates the time in the <a href="#Next_price"><strong>Next price</strong> field</a>.<br>
+          It is displayed in the <strong>Next price</strong> tab. &nbsp;</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Target_field">The Target field</a></h3>
+
+      <p>The <b>Target</b> field contains the target identifier, namely the store group. It is a required field, meaning that new price records must have a valid entry in the <b>Target</b> field for the record to exist. It is used as a key field, along with the main item UPC and the <b><a href="#Level">Level</a></b> field to uniquely identify records in the <a href="#Left_tab_section"><b>Price</b> grid</a> (left tab section of the table). The default value of the <b>Target</b> field is <i>PAL</i>.</p>
+
+      <p>The eSuite software is designed to support multi-stores or regional pricing. The <b>Target</b> field is not editable unless the <b>Multi target</b> option is selected in the <i>System.ini</i> file.</p>
+
+      <p>In a multi-stores setting, the target identifier can be modified by typing it in the Target field or by double-clicking the field and selecting the target in the Target grid.</p>
+
+      <p>Records must already exist in the <b>Target</b> grid for choices to be available. A warning message is displayed for invalid target identifiers.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Level_field">The Level field</a></h3>
+
+      <p>The <strong>Level</strong> field contains the price level number. It is a required field, i.e. new price records must have a valid entry in the <strong>Level</strong> field for the record to exist. It is used as a key field, along with the main item UPC and the <a href="#The_Target_field"><b>Target</b> field</a> to uniquely identify records in the <a href="#Left_tab_section"><b>Price</b> grid</a> (left tab section of the table). The default value of the <b>Level</b> field is 1.</p>
+
+      <p class="Note"><b>NOTE:<br>
+      </b>Starting with SMS v350x, <em>Application.ini[TARGET_TRS]</em> is used to determine which target to use for each item table.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB='PAL' will force the Host to use the PAL record.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB='@WIZGET(TARGET)' will force the Host to use the Global Store Number record.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB=ISNULL((SELECT TOP 1 SUB_PRI.F1000 FROM PRICE_TAB SUB_PRI JOIN LNK_TAB SUB_LNK ON SUB_PRI.F1000=SUB_LNK.F1000 JOIN LNK_TAB SUB_LNK2 ON SUB_LNK.F1056=SUB_LNK2.F1056 AND SUB_LNK.F1057=SUB_LNK2.F1057 AND SUB_LNK2.F1000='@WIZGET(TARGET)' JOIN STO_TAB SUB_STO ON SUB_LNK.F1000=SUB_STO.F1000 WHERE SUB_PRI.F01=PRI.F01 AND SUB_PRI.F126=PRI.F126 ORDER BY SUB_STO.F1937 DESC),'PAL'). That will use the proper target set for the Global StoreID selected.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Active_price_field">The Active price field</a></h3>
+
+      <p>The <strong>Active price</strong> field shows the current active price for the item, that is the current price for the record target and price level.</p>
+
+      <p>The <b>Active price</b> field is not editable and used for information purposes only. It contains the price at which the item is selling at the points of sale included in the target unless there were communication errors. If the item has never been deployed, i.e. sent to the points of sale, the <b>Active price</b> field is empty.</p>
+
+      <p>The <b>Active price</b> field, as all other price fields, is split into two (2) fields:</p>
+
+      <ol>
+        <li>The <b>Active price amount</b> field that contains the current active price for the item, and</li>
+
+        <li>The <b>Active price quantity</b> field that contains the current active price quantity for the item.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Source_field_(Active_price)">The Source field (Active price)</a></h3>
+
+      <p>The <b>Source</b> field contains the origin of the current <a href="#The_Active_price_field"><b>Active price</b> field</a>, based on the modification dates in the pricing columns.</p>
+
+      <p>The <b>Source</b> field is not editable and used for information purposes only. Its possible values are:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th width="15%">Field</th>
+
+            <th width="85%">Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td width="15%"><b>REG</b></td>
+
+          <td width="85%">when the next pricing event comes from the <b>Retail</b> pricing column</td>
+        </tr>
+
+        <tr>
+          <td width="15%"><b>TPR</b></td>
+
+          <td width="85%">when the next pricing event comes from the <b>TPR</b> pricing column</td>
+        </tr>
+
+        <tr>
+          <td width="15%"><b>SALE</b></td>
+
+          <td width="85%">when the next pricing event comes from the <b>Sale</b> pricing column</td>
+        </tr>
+
+        <tr>
+          <td width="15%"><b>STOR</b></td>
+
+          <td width="85%">when the next pricing event comes from the <b>Instore</b> pricing column</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Next_price_field">The Next price field</a></h3>
+
+      <p>The <b>Next price</b> field shows the next price for the item based on the modifications made in the pricing columns.</p>
+
+      <p>The <b>Next price</b> field is not editable and used for information purposes only. Its value is updated as soon as the modifications are posted (saved) to the database. If there are several new prices (TPR or sales), the <b>Next price</b> field shows the next pricing event based on price column priorities. Once the modifications have been deployed to the points of sale, the <a href="#The_Active_price_field"><b>Active price</b> field</a> is updated with the <b>Next price</b> field information and the <b>Next price</b> field is updated to display the next pricing event based on the modifications made in the pricing columns.</p>
+
+      <p>The <b>Next price</b> field, as all other price fields, is split into two (2) fields:</p>
+
+      <ol>
+        <li>The <b>Next price amount</b> field that contains the next price for the item, and</li>
+
+        <li>The <b>Next price quantity</b> field that contains the next price quantity for the item.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Source_field_(Next_price)">The Source field (Next price)</a></h3>
+
+      <p>The <b>Source</b> field is an 8-character field that contains the origin of the current <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Item_tables/Price_table/Top_fields/Next_price_field.htm"><b>Next price</b> field</a>, based on the modification dates in the pricing columns.</p>
+
+      <p>The <b>Source</b> field is not editable and used for information purposes only. Its possible values are:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th width="15%">Field</th>
+
+            <th width="85%">Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td width="15%"><b>REG</b></td>
+
+          <td width="85%">when the next pricing event comes from the <b>Retail</b> pricing column;</td>
+        </tr>
+
+        <tr>
+          <td width="15%"><b>TPR</b></td>
+
+          <td width="85%">when the next pricing event comes from the <b>TPR</b> pricing column;</td>
+        </tr>
+
+        <tr>
+          <td width="15%"><b>SALE</b></td>
+
+          <td width="85%">when the next pricing event comes from the <b>Sale</b> pricing column;</td>
+        </tr>
+
+        <tr>
+          <td width="15%"><b>STOR</b></td>
+
+          <td width="85%">when the next pricing event comes from the <b>Instore</b> pricing column.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Price_field">The Price field</a></h3>
+
+      <p>The <b>Price</b> table field contains the selling prices for the pricing events.</p>
+
+      <p>The <b>Price</b> field is split into two fields for each pricing column:</p>
+
+      <p><strong>Regular</strong> pricing column</p>
+
+      <ol>
+        <li>The <strong><a name="Regular_Price_amount">Regular Price amount</a></strong> contains the retail price for the item.</li>
+
+        <li>The <a name="Regular_Price_quantity"><strong>Regular</strong> <b>Price quantity</b></a> contains the retail price quantity for the item.</li>
+      </ol>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ol>
+        <li>The <b><a name="TPR_Price_amount">TPR Price amount</a></b> contains the TPR price for the item.</li>
+
+        <li>The <b><a name="TPR_Price_quantity">TPR Price quantity</a></b> contains the TPR price quantity for the item.</li>
+      </ol>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ol>
+        <li>The <b><a name="Sale_Price_amount">Sale Price amount</a></b> contains the sale price for the item.</li>
+
+        <li>The <b><a name="Sale_Price_quantity">Sale Price quantity</a></b> contains the sale price quantity for the item.</li>
+      </ol>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ol>
+        <li>The <b><a name="Store_Price_amount">Store Price amount</a></b> contains the instore price for the item.</li>
+
+        <li>The <b><a name="Store_Price_quantity">Store Price quantity</a></b> contains the instore price quantity for the item.</li>
+      </ol>
+
+      <p>Prices must be numeric values and must contain a decimal point as the dollars/cents separator. There is no fixed limit maximum price for an item.</p>
+
+      <p>By default, when you enter a price in any pricing column <b>Price</b> field, the eSuite software automatically places '1' as quantity in the <b>Price quantity</b> field. If the price is a split price, the quantity must reflect the item quantity for the <b>Price</b> field.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Start_field">The Start field</a></h3>
+
+      <p>The <b>Start</b> field contains the start dates for the pricing events, i.e. the dates on which the pricing events become effective. The start date is inclusive.</p>
+
+      <p>To enter a date</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ul>
+        <li>
+          <p>The <strong>Retail</strong> <b>Start</b> field contains the start date for the retail price, i.e. the date at which the retail price becomes effective.</p>
+        </li>
+      </ul>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ul>
+        <li>
+          <p>The <b>TPR</b> <b>Start</b> field contains the start date for the TPR price, i.e. the date at which the TPR price becomes effective.</p>
+        </li>
+      </ul>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ul>
+        <li>
+          <p>The <b>Sale</b> <b>Start</b> field is a date field that contains the start date for the sale price, i.e. the date at which the sale price becomes effective.</p>
+        </li>
+      </ul>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ul>
+        <li>
+          <p>The <b>Store</b> <b>Start</b> field (F1216) is a date field that contains the start date for the instore price, i.e. the date at which the instore price becomes effective.</p>
+        </li>
+      </ul>
+
+      <p>The <b>TPR</b> and <b>Sale</b> pricing columns must contain valid <b>Start</b> and <a href="#The_End_field"><span><strong>End</strong></span></a> dates for the eSuite software to recognize the temporary prices as the next pricing event. The <b>Retail</b> and <b>Instore</b> prices do not require <b>Start</b> and <b>End</b> dates.</p>
+
+      <p>Enter a start date by typing it in the <b>Start</b> field of the corresponding pricing column or by double-clicking the icon in the field to open the calendar and select the start date.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_End_field">The End field</a></h3>
+
+      <p>The <b>End</b> field is a date field that contains the end dates for the pricing events, i.e. the dates on which the pricing events are no longer effective.&nbsp;The end date is inclusive.</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ul>
+        <li>The <strong>Retail</strong> <strong>E</strong><b>nd</b> field contains the end date for the retail price, i.e. the date at which the retail price is no longer effective.</li>
+      </ul>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ul>
+        <li>The <strong>TPR End</strong> field contains the end date for the TPR price, i.e. the date at which the TPR price is no longer effective.</li>
+      </ul>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ul>
+        <li>The <a name="Sale_End"><b>Sale</b> <strong>E</strong><b>nd</b></a> field contains the end date for the sale price, i.e. the date at which the sale price is no longer effective.</li>
+      </ul>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Store</b> <strong>E</strong><b>nd</b> field contains the end date for the instore price, i.e. the date at which the instore price is no longer effective.</li>
+      </ul>
+
+      <p>The <b>TPR</b> and <b>Sale</b> pricing columns must contain valid <b><a href="#The_Start_field">Start</a></b> and <b>End</b> dates for the eSuite software to recognize the temporary prices as the next pricing event. The <b>Retail</b> and <b>Instore</b> prices do not require <b>Start</b> and <b>End</b> dates.</p>
+
+      <p>Enter an end date by typing it in the <strong>End</strong> field of the corresponding pricing column or by double-clicking the icon in the field to open the calendar and select the end date.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Time_field">The Time field</a></h3>
+
+      <p>The <b>Time</b> field specifies the exact time during which the <b>Retail</b> and <b>Sale</b> pricing columns are effective, which offers precision as to when the price becomes effective. For example, it can be used to specify a very short term promotional pricing, such as a 4-hour promotion.</p>
+
+      <p>The <b>Time</b> field is split into two (2) fields:</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ol>
+        <li>The <b>Retail start time</b> that contains the start time for the retail price event.</li>
+
+        <li>The <b>Retail end time</b> that contains the end time for the retail price event.</li>
+      </ol>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ol>
+        <li>The <b>Sale start time</b> that contains the start time for the sale price event.</li>
+
+        <li>The <b>Sale end time</b> that contains the end time for the sale price event.</li>
+      </ol>
+
+      <p>If no time is specified, the eSuite software uses 00:00 as the start time and 23:59 (11:59 pm) as the end time.<br>
+      The <b>TPR</b> and <b>Instore</b> pricing columns do not include a time field.&nbsp;They automatically use 00:00 as the default start time, and 23:59 (11:59 pm) as the default end time.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Ad_field">The Ad field</a></h3>
+
+      <p>The <b>Ad</b> field contains the identification letter of the advertising type used for the item.</p>
+
+      <p>The following values are offered in the drop-down menu:</p>
+
+      <p><img class="Text" src="Price_Table_files/ad_dropdown_menu.png"></p>
+
+      <p>If different advertising media is used for promotional items, it is possible to analyze sales and costs for the promotion (including the ad type) allowing to decide the best advertising method based on the promotion results.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Package_field">The Package field</a></h3>
+
+      <p>The <strong>Package</strong> field contains the item package prices for the pricing events, i.e. special prices if a certain quantity of the item is bought by a customer.</p>
+
+      <p>The <b>Package price</b> field is split into two (2) fields for each pricing column:</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ol>
+        <li>The <b>Retail Package amount</b> field contains the retail package price for the item.</li>
+
+        <li>The <b>Retail Package quantity</b> field contains the retail package price quantity for the item.</li>
+      </ol>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ol>
+        <li>The <b><a name="TPR_Package_amount">TPR Package amount</a></b> field contains the TPR package price for the item.</li>
+
+        <li>The <b><a name="TPR_Package_quantity">TPR Package quantity</a></b> field contains the TPR package price quantity for the item.</li>
+      </ol>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ol>
+        <li>The <b>Sale Package amount</b> field contains the sale package price for the item.</li>
+
+        <li>The <b>Sale Package quantity</b> field contains the sale package price quantity for the item.</li>
+      </ol>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ol>
+        <li>The <b>Store Package amount</b> field contains the instore package price for the item.</li>
+
+        <li>The <b>Store Package quantity</b> field contains the instore package price quantity for the item.</li>
+      </ol>
+
+      <p class="Note"><b>Notes:<br>
+      </b>The <a href="../Customers/Shopper_level_table.htm#Apply_package_price"><b>Apply package price</b> field</a> must be checked in the corresponding shopper levels for the <b>Package</b> field <b></b>to work.<br>
+      By default, the package discount is applied on the last item. However, it is possible to apply this discount proportionally on all items (<span style="FONT-STYLE: normal">system.ini</span>). See the dealer for more details.<br>
+      To apply the package discount on subsequent items (i.e. on all items after the quantity is reached), enter the <span style="FONT-STYLE: normal">Keep going package price</span> method (<span style="FONT-STYLE: normal">F</span>) in the <b>Method</b> (<b>Meth</b>) field.</p>
+      <b>Example 1</b> 
+
+      <p>The regular price of item <i>#000000000001</i> is <i>$2.99</i>, but if a customer buys <i>3</i> items <i>#0000000000001</i>, he pays <i>$7.49</i> for the <i>3</i> items (instead of <i>$8.97</i>).</p>
+
+      <p>The information entered in the <b>Price</b> table looks like this:</p>
+
+      <table style="width: 1419px">
+        <tr>
+          <td style="text-align:right" style="width: 708px"><img class="Text" height="23" src="Price_Table_files/package_field_example_1.png" width="113">&nbsp;</td>
+
+          <td style="width: 709px"><img class="Text" height="23" src="Price_Table_files/package_price_example_1.png" width="113">&nbsp;</td>
+        </tr>
+      </table>
+
+      <p>When a customer buys a certain quantity of item <i>#0000000000001</i>, the POS information looks like:</p>
+
+      <ol>
+        <li>
+          A first item <i>#0000000000001</i> is scanned:<br>
+           
+
+          <table style="width: 100%">
+            <tr>
+              <td><img class="Text" height="158" src="Price_Table_files/package_field_POS_info1.jpg" width="615"></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          A second item <i>#0000000000001</i> is scanned:<br>
+           
+
+          <table style="width: 100%">
+            <tr>
+              <td><img class="Text" height="158" src="Price_Table_files/package_field_POS_info2.jpg" width="615"></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          A third item <i>#0000000000001</i> is scanned:<br>
+           
+
+          <table style="width: 100%">
+            <tr>
+              <td><img class="Text" height="158" src="Price_Table_files/package_field_POS_info3.jpg" width="615"></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          A fourth item <i>#0000000000001</i> is scanned:<br>
+           
+
+          <table style="width: 100%">
+            <tr>
+              <td><img class="Text" height="158" src="Price_Table_files/package_field_POS_info4.jpg" width="615"></td>
+            </tr>
+          </table>
+        </li>
+      </ol>
+
+      <p class="Note"><b>NOTE:</b> Item #<span style="FONT-STYLE: normal">0000000000001</span> can also be scanned one time, associated to the quantity sold. In this case, the POS information looks like this:</p>
+
+      <p><img class="Text" height="158" src="Price_Table_files/package_field_note.jpg" width="615"></p>
+      <b>Example 2</b> 
+
+      <p>It is possible to limit the number of items to sell at the package price, meaning that the subsequent items are sold at the regular price without applying any package price discount. This is done using the quantity part of the <strong>Limit quantity</strong> field, which contains the maximum amount of items to include into the package price discount.</p>
+
+      <p>The regular price of item <i>#000000000001</i> is <i>$2.99</i>, but if a customer buys <i>3</i> items <i>#0000000000001</i>, he pays <i>$7.49</i> for the <i>3</i> items (instead of <i>$8.97</i>), limited to 6 items (so 2 times the package price discount).</p>
+
+      <p>The information entered in the <b>Price</b> table looks like:</p>
+
+      <table style="width: 1419px">
+        <tr>
+          <td style="text-align:right" style="width: 708px"><img class="Text" height="23" src="Price_Table_files/package_field_example_1.png" width="113">&nbsp;</td>
+
+          <td style="width: 709px"><img class="Text" height="41" src="Price_Table_files/price_package_limit.png" width="113"></td>
+        </tr>
+      </table>
+
+      <p>When the customer buys 6 of item <i>#0000000000001</i>, the POS information looks like:</p>
+
+      <p><img class="Text" height="351" src="Price_Table_files/package_field_example_2.png" width="377"></p>
+
+      <p>Subsequent items are sold at $2.99 each (no additional package price discount applied).</p>
+
+      <p class="Note"><b>NOTE:</b> The value set in the <strong>Limit quantity</strong> field must be a multiple of the value set in the <strong>Package amount</strong> field. In this example, 6 is a multiple of 3.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Limit_field">The Limit field</a></h3>
+
+      <p>The <b>Limit</b> field limits the quantity of an item a customer may purchase at a special price.</p>
+
+      <p>The <b>Limit</b> field is split in two (2) fields for each pricing column:</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ol>
+        <li>The <b>Retail Limit amount</b> field contains the retail limited quantity price for the item.</li>
+
+        <li>The <b>Retail Limit quantity</b> field contains the retail limited quantity for the item.</li>
+      </ol>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ol>
+        <li>The <b><a name="TPR_Limit_amount">TPR Limit amount</a></b> field contains the TPR limited quantity price for the item.</li>
+
+        <li>The <b><a name="TPR_Limit_quantity">TPR Limit quantity</a></b> field contains the TPR limited quantity for the item.</li>
+      </ol>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ol>
+        <li>The <b>Sale Limit amount</b> field contains the sale limited quantity price for the item.</li>
+
+        <li>The <b>Sale Limit quantity</b> field contains the sale limited quantity for the item.</li>
+      </ol>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ol>
+        <li>The <b>Store Limit amount</b> field contains the instore limited quantity price for the item.</li>
+
+        <li>The <b>Store Limit quantity</b> field contains the instore limited quantity for the item.</li>
+      </ol>
+
+      <p>The point of sale will sell the item at the price specified in the <b>Limit quantity</b> field up to and including the quantity specified; then, if the quantity purchased by the customer exceeds the quantity specified, the rest of the items will be sold at the price specified in the <b>Price</b> field of the pricing column that is being programmed.</p>
+
+      <p class="Note"><b>NOTE:</b> The <a href="../Customers/Shopper_level_table.htm#Apply_limited_price"><strong>Apply limited price</strong> field</a> in the <a href="../Customers/Shopper_level_table.htm"><strong>Shopper level</strong> table</a> must be checked in the corresponding shopper levels for the <b>Limit quantity</b> to work.</p>
+      <b>Example</b> 
+
+      <p>The regular price of item <i>#0000000000001</i> is <i>$2.99</i>, but a special price is specified at <i>$2.49</i>, limit of <i>3</i> items per customer.</p>
+
+      <p>This information entered in the <b>Price</b> table looks like this:</p>
+
+      <table style="width: 1419px">
+        <tr>
+          <td style="text-align:right; width: 708px;"><img class="Text" height="23" src="Price_Table_files/package_field_example_1.png" width="113"></td>
+
+          <td style="text-align:left; width: 709px;" style="width: 709px">&nbsp;<img class="Text" height="20" src="Price_Table_files/limit_quantity_fields.png" width="113"></td>
+        </tr>
+      </table>
+
+      <p>When a customer buys a certain quantity of item <i>#0000000000001</i>, the POS information looks like this:</p>
+
+      <ol>
+        <li class="Steps">
+          A first item <i>#0000000000001</i> is scanned:
+
+          <table style="width: 100%">
+            <tr>
+              <td><img height="158" src="Price_Table_files/limit_field_POS_info1.jpg" width="615" class="Text"></td>
+            </tr>
+          </table>
+          <br>
+        </li>
+
+        <li class="Steps">
+          A second item <i>#0000000000001</i> is scanned:
+
+          <table style="width: 100%">
+            <tr>
+              <td><img height="158" src="Price_Table_files/package_field_POS_info2.jpg" width="615" class="Text"></td>
+            </tr>
+          </table>
+          <br>
+        </li>
+
+        <li class="Steps">
+          A third item <i>#0000000000001</i> is scanned:<br>
+           
+
+          <table style="width: 100%">
+            <tr>
+              <td><img height="158" src="Price_Table_files/package_field_POS_info3.jpg" width="615" class="Text"></td>
+            </tr>
+          </table>
+          <br>
+        </li>
+
+        <li class="Steps">
+          A fourth item <i>#0000000000001</i> is scanned:<br>
+           
+
+          <table style="width: 100%">
+            <tr>
+              <td><img height="158" src="Price_Table_files/package_field_POS_info4.jpg" width="615"></td>
+            </tr>
+          </table>
+          <br>
+        </li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Mix_field">The Mix field</a></h3>
+
+      <p>The <b>Mix</b> field links the item to a mix &amp; match, which is used to mix items to match them to a price.</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ul>
+        <li>The <b>Retail Mix</b> field links the item to a mix &amp; match, which is used to mix items and match them to a retail price.</li>
+      </ul>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ul>
+        <li>The <b>TPR Mix</b> field links the item to a mix &amp; match, which is used to mix items and match them to a TPR price.</li>
+      </ul>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Sale Mix</b> field links the item to a mix &amp; match, which is used to mix items and match them to a sale price.</li>
+      </ul>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Store Mix</b> field links the item to a mix &amp; match, which is used to mix items and match them to an instore price.</li>
+      </ul>
+
+      <p>To link the item to a mix &amp; match, type the mix &amp; match number in the corresponding <strong>Mix</strong> field or click the corresponding <strong>Mix</strong> field to select a mix &amp; match from the <a href="Auxiliary_tables/MixMatch_table.htm"><strong>Mix &amp; Match table</strong></a>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Method_field">The Method field</a></h3>
+
+      <p>The <b>Method</b> (<b>Meth</b>) field contains the identification letters of the price method used, corresponding to a special price behavior.</p>
+
+      <p><img class="Text" height="441" src="Price_Table_files/method_field.png" width="151">&nbsp;</p>
+
+      <p>To enter a price method, type the identification letters associated to the desired price method in the corresponding <strong>Meth</strong> field, or click the arrow in the corresponding <strong>Meth</strong> field to select the desired price method from the drop-down list.</p>
+
+      <p class="Note"><strong>NOTE:</strong> Some price methods may be mixed.</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ul>
+        <li>The <b>Retail Method</b> field contains the identification letters of the retail price method used, corresponding to a special retail price behavior.</li>
+      </ul>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ul>
+        <li>The <b>TPR Method</b> field contains the identification letters of the TPR price method used, corresponding to a special TPR price behavior.</li>
+      </ul>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Sale Method</b> field contains the identification letters of the sale price method used, corresponding to a special sale price behavior.</li>
+      </ul>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Store Method</b> field contains the identification letters of the instore price method used, corresponding to a special instore price behavior.</li>
+      </ul>
+
+      <h3>Price method definitions</h3>
+
+      <p>Here is the list of the price methods used by eSuite. Each price method is identified by one or two letters.</p>
+
+      <p><strong>SIL extended price methods</strong></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Code</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>PF</b>=</td>
+
+          <td class="WorkTD" valign="top">
+            <b>Keep going package price</b>
+
+            <p>This price method is the same as the <a href="#The_Package_field">package method</a>, except that once the package price quantity is reached, subsequent items continue to be sold at the package price.</p>
+          </td>
+        </tr>
+      </table>
+
+      <p><strong>SMS extended price methods</strong></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Code</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="WorkTD" valign="top"><strong>RW=</strong></td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Reverse weight able</b>
+
+            <p>This price method inverts the scalability of the item.<br>
+            This price method may be used when the item that is usually scalable is sold by unit during a promotion.</p>
+
+            <p class="NoteList"><strong>Note:</strong><br>
+            When a weight able item is sold by unit using the RW method, enter the average weight of the item in the <strong>Weight</strong> field of the <strong>Main item</strong> table. At the processing time, the quantity sold multiplied by the value of the <strong>Weight</strong> field will be used to affect correctly the quantity.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>RQ</b>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Reverse quantity required</b>
+
+            <p>This price method inverts the quantity required field.<br>
+            This price method may be used when the item must request the quantity during a promotion only.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>RD</b>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Reverse discountable</b> 
+
+            <p>This price method inverts the discount ability of the item.<br>
+            This price method may be used to make a price level non discountable.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>RP</b>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Reverse quantity as unit</b> 
+
+            <p>This price method inverts the price quantity usage.<br>
+            The price quantity may be used to save in the total quantity and not for price calculation. For example, the item is <i>3/$1.00</i>. When scanning one of these items, the amount will be <i>$1.00</i> and the quantity will be <i>3</i>.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>RV=</b></td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Reverse volume pricing</b> 
+
+            <p>This price method inverts the functionality of the <b>Package</b> and <b>Limit</b> fields.</p>
+
+            <p class="NoteList"><b>Note:</b><br>
+            The <b>Volume pricing</b> mode may be set for all items in the <span style="FONT-STYLE: normal">System.ini</span> file. See the reseller for more details.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><strong>RS=</strong></td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <strong>Reverse sale as discount</strong> 
+
+            <p>This price method sets the sale price as a discount so it can be part of the best discount feature. The calculated discount represents the difference between the active price and the regular price.<br>
+            The promo as discount feature does not work with package and limited prices; when it is used, the package and limited prices are ignored. The promo as discount feature does not work with the best price level feature either. Other advanced pricing features might also be affected or not work with the promo as discount feature.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>LT</b>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Limit by transaction</b> 
+
+            <p>This price method limits the number of this item or this electronic coupon given to a customer within a transaction.<br>
+            The <a href="#The_Limit_field"><b>Limit</b> field</a> is used to specify the maximum amount or quantity accepted. See the Electronic coupons programming topic for more details on the electronic coupons.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>LD</b>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Limit by day</b> 
+
+            <p>This price method limits the number of this item or this electronic coupon given to a customer within a day.<br>
+            The <a href="#The_Limit_field"><b>Limit</b> field</a> is used to specify the maximum quantity accepted. See the Electronic coupon programming topic for more details on the electronic coupons.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>LW</b>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Limit by week</b> 
+
+            <p>This price method limits the number of this item or this electronic coupon given to a customer within a week.<br>
+            The <a href="#The_Limit_field"><b>Limit</b> field</a> is used to specify the maximum quantity accepted. See the Electronic coupon programming topic for more details on the electronic coupons.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>LM</b>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Limit by month</b> 
+
+            <p>This price method limits the number of this item or this electronic coupon given to a customer within a month.<br>
+            The <a href="#The_Limit_field"><b>Limit</b> field</a> is used to specify the maximum quantity accepted. See the Electronic coupon programming topic for more details on the electronic coupons.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>LN</b>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Limit by NRT</b> 
+
+            <p>This price method limits the number of this item or this electronic coupon given to a customer based on his grand total sales.<br>
+            The <a href="#The_Limit_field"><b>Limit</b> field</a> is used to specify the maximum quantity accepted. See the Electronic coupon programming topic for more details on the electronic coupons.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>CU=</b></td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Coupon unlimited</b> <br>
+             
+
+            <p>This price method removes the limits of the electronic coupon, i.e. the electronic coupon's discount is not matched to an item (or an entry), it is added as a new registration in the transaction, and more than one electronic coupon's discount may be given according to the same item.<br>
+            This price method is used for electronic coupon items only.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>CC=</b></td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Coupon collision allowed</b> <br>
+             
+
+            <p>This price method allows electronic coupon's discount collisions, i.e. the electronic coupon's discount is still matched to an item (or an entry), but more than one electronic coupon's discount may be applied to this item (or entry).<br>
+            This price method is used for electronic coupon items only.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>CB=</b></td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Coupon bundle price</b> <br>
+             
+
+            <p>This price method gives a bundle behavior to the electronic coupon, i.e. the amount of the electronic coupon becomes the price at which the group of items that composes the electronic coupon's criteria is sold.<br>
+            This price method is used for electronic coupon items only. It can work in combination with the <b>Accumulate for percent or bundle</b> (<b>A</b>) electronic coupon method.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><strong>CR</strong>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <strong>Coupon reverse order</strong> 
+
+            <p>This price method inverts the matching of the electronic coupon from the cheapest item to the most expensive one, or from the most expensive item to the cheapest one.<br>
+            By default, a fixed amount discount is matched with the most expensive item. With the <strong>CR</strong> price method, it is matched with the cheapest item.<br>
+            By default, a percentage discount is matched with the cheapest item. With the <strong>CR</strong> price method, it is matched with the most expensive item.<br>
+            By default, an item for free discount is matched with the cheapest item. With the <strong>CR</strong> price method, it is matched with the most expensive item.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><strong>CN</strong>=</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <strong>Coupon allow negative</strong> 
+
+            <p>This price method allows a negative discount (so increasing the value of the items) when the total value of the items of a bundle is lower than the value of the bundle.<br>
+            For example, buy 5 meat items for $19.99. Since the meat items have variable weights, so variable values, the total value of the 5 meat items is always different. If the customer buys 5 meat items for which the total value is $17.99, the bundle e-coupon will increase the value of the 5 meat items to $19.99.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><b>Px=</b></td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Points program X</b> 
+
+            <p>This price method identifies on which points programs the points defined in the <b>Points</b> field are awarded. More than one points program can be specified (e.g. P1P3).<br>
+            In order to apply the points to the program X, the customer must be part of this points program (defined in the <strong>Shopper level</strong> table).</p>
+
+            <p class="NoteList"><b>NOTE:</b> The names of the points programs can be changed. More points programs can be listed (the system manages up to 35 points programs). See the reseller for more details.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="WorkTD" valign="top"><strong>M1=</strong>&nbsp;</td>
+
+          <td class="WorkTD" valign="top" style="width: 1362px">
+            <b>Multiply points X</b> 
+
+            <p>This price method allows to multiply the points awarded into the transaction using an electronic coupon, where x identifies the points program on which points are multiply. This method works in combination with the <strong>Points</strong> field that contains the multiplier factor.</p>
+
+            <p>Example:<br>
+            <em>M2</em> set in the <strong>Method</strong> field and <em>3</em> in the <strong>Points</strong> field means that points awarded on points program 2 are tripled.</p>
+
+            <p>By default, the points multiplication by an electronic coupon has priority over the points multiplication set into the system. This behavior can be changed. Refer to the reseller for more details.</p>
+          </td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Discount_field">The Discount field</a></h3>
+
+      <p>The <b>Discount (Dsc)</b> field contains the discount applied to the item when it is sold.</p>
+
+      <p>The <strong>Discount</strong> field is split into two (2) fields for each pricing column:</p>
+
+      <p>1. <a name="The_Discount_$_field">The <strong>Discount $</strong> field</a> contains the amount of discount applied to the item when it is sold.</p>
+
+      <p class="alert alert-warning"><b>NOTE:</b> A <b>Discount</b> may also be specified for a whole <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>.</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ul>
+        <li>The <b>Retail Dsc $</b> field contains the amount of discount applied to the item when it is sold at the retail price.</li>
+      </ul>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ul>
+        <li>The <b><a name="TPR_Dsc_$">TPR Dsc $</a></b> field contains the amount of discount applied to the item when it is sold at the TPR price.</li>
+      </ul>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Sale Dsc $</b> field contains the amount of discount applied to the item when it is sold at the sale price.</li>
+      </ul>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Store Dsc $</b> field contains the amount of discount applied to the item when it is sold at the instore price.</li>
+      </ul>
+
+      <p class="alert alert-warning"><b>NOTES:</b><br>
+      The <a href="../Customers/Shopper_level_table.htm#Apply_item_discount_$"><b>Apply item discount $</b> field</a> in the <a href="../Customers/Shopper_level_table.htm"><strong>Shopper level</strong> table</a> must be checked in the corresponding shopper levels for the <b>Discount $</b> to work.<br>
+      If a <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm#Discount">sub-department discount</a> is also applicable on the item sold, it is applied after the item discount.</p>
+      2. <span><a name="The_Discount_%_field">The <strong>Discount %</strong> field</a></span> contains the percentage of discount applied to the item when it is sold. 
+
+      <p class="alert alert-warning"><b>NOTE:</b> A <b>Discount</b> may also be specified for a whole <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>.</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ul>
+        <li>The <b>Retail Dsc %</b> field contains the percentage of discount applied to the item when it is sold at the retail price.</li>
+      </ul>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ul>
+        <li>The <b><a name="TPR_Dsc_%">TPR Dsc %</a></b> field contains the percentage of discount applied to the item when it is sold at the TPR price.</li>
+      </ul>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Sale Dsc %</b> field contains the percentage of discount applied to the item when it is sold at the sale price.</li>
+      </ul>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Store Dsc %</b> field contains the percentage of discount applied to the item when it is sold at the instore price.</li>
+      </ul>
+
+      <p class="alert alert-warning"><b>NOTES:</b><br>
+      The <a href="../Customers/Shopper_level_table.htm#Apply_item_discount_%"><b>Apply item discount %</b> field</a> in the <a href="../Customers/Shopper_level_table.htm"><strong>Shopper level</strong> table</a> must be checked in the corresponding shopper levels for the <b>Discount %</b> to work.<br>
+      If a <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm#Discount">sub-department discount</a> is also applicable on the item sold, it is applied after the item discount.<br>
+      TThe POS must be capable of keeping item discount information for this field to be functional. Most electronic cash registers do not support this type of item information; the discount is either done manually with a discount key, or included in the item price.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Points_field">The Points field</a></h3>
+
+      <p>The <b>Points</b> field contains the number of points given to the customer when they buy the item at a price event.</p>
+
+      <p>The <b>Points</b> field works in combination with the <a href="#The_Method_field"><b>Price method</b> field</a> used to specify the point programs on which the points have to be added.</p>
+
+      <p><strong>Retail</strong> pricing column</p>
+
+      <ul>
+        <li>The <b>Retail Points</b> field contains the number of points given to the customer when they buy the item at the retail price.</li>
+      </ul>
+
+      <p><b>TPR</b> pricing column</p>
+
+      <ul>
+        <li>The <b>TPR Points</b> field contains the number of points given to the customer when they buy the item at the TPR price.</li>
+      </ul>
+
+      <p><b>Sale</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Sale Points</b> field contains the number of points given to the customer when they buy the item at the sale price.</li>
+      </ul>
+
+      <p><b>Store</b> pricing column</p>
+
+      <ul>
+        <li>The <b>Store Points</b> field contains the number of points given to the customer when they buy the item at the instore price.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Retail_(margin)_field">The Retail (margin) field</a></h3>
+
+      <p>The <b>Retail</b> <strong>(Margin)</strong> field contains the retail profit margin on the item in percentage. It is used to generate the item retail price.</p>
+
+      <p>There are two options to choose from in the <strong>Generate price utility - Cost table</strong> to calculate the retail (margin) price.</p>
+
+      <h3>To calculate the margin from the retail price:</h3>
+
+      <ul>
+        <li>Retail TGM (Target Gross Margin) = cost / (1 - profit margin %)</li>
+
+        <li><strong>Example</strong>: $3.33 = $10.00 / (1 - 25%)</li>
+      </ul>
+
+      <h3>To calculate the margin from the cost:</h3>
+
+      <ul>
+        <li>Retail TGM (Target Gross Margin) = cost + ( cost * margin)</li>
+
+        <li><strong>Example</strong>: $2.50 = $10 + ($10 * 25%)</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Price_Suggested_Retail_field">The Price (suggested retail) field</a></h3>
+
+      <p>The <strong>Price (suggested retail)</strong> field contains the suggested retail price. It is used for information purposes only, and may appear in some reports. It is split in two fields:</p>
+
+      <ol>
+        <li>The <strong>Suggested retail price (SRP) amount</strong> field that contains the suggested retail price for the item, and</li>
+
+        <li>The <strong>Suggested retail price (SRP) quantity</strong> field that contains the number of units included in the item. This field is grayed out; its value comes from the <a href="Main%20Item_Table.htm#Sell_pack"><b>Sell pack</b> field</a> in the <a href="Main%20Item_Table.htm"><strong>Main item</strong> table</a>.</li>
+      </ol>
+
+      <p class="Note"><b>NOTE:</b> When the price information is saved, eSuite automatically saves the sell pack quantity in the <b>SRP quantity</b> field. The default value of the sell pack quantity is <span style="FONT-STYLE: normal">1</span>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Margin_(suggested_retail)_field">The Margin (suggested retail) field</a></h3>
+
+      <p>The <b>Margin (suggested retail)</b> field contains the suggested price profit margin expressed as a percentage, used to generate the particular suggested price for the item.</p>
+
+      <p>It is split in two fields:</p>
+
+      <ol>
+        <li>The <strong><a name="Suggested_retail_price_(SRP)_margin">Suggested retail price (SRP) margin</a></strong> field that contains the SRP profit margin on the item in percentage. It is used to generate the item suggested retail price.<br>
+        </li>
+
+        <li>The <strong>Suggested retail price (SRP) margin rounding</strong> contains the ending number of the suggested retail price. It works in combination with the <b><a href="#Suggested_retail_price_(SRP)_margin">SRP margin</a></b> field.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Exclude_from_spending_field">The Exclude from spending field</a></h3>
+
+      <p>The <b>Exclude from spending</b> <b>(Exc. spend</b><strong>)</strong> field specifies whether the sales of the item are excluded from the points calculation (checked) or not (unchecked).</p>
+
+      <p>The <b>Admissible spending</b> <strong>totalizer</strong> is used to define the total sales amount admissible in the points calculation. When the <strong>Exclude from spending</strong> field is checked, the <strong>Admissible spending</strong> <strong>totalizer</strong> is not populated with the value of the item.</p>
+
+      <p class="Note"><b>NOTES:</b><br>
+      For this field to work, the item must not be programmed to <a href="POS_Table.htm#The_Follow_sub-department_field">follow the sub-department settings</a>.<br>
+      The <b>Exclude from spending</b> behavior may also be specified on <a href="../Dimensions/Dimensions_tables/Department_table.htm#Exc._spending">keyed department sales</a> and <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm#Exc._spending">keyed sub-department sales</a>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a href="#The_Margin_tab"></a><a name="The_Like_code">The Like code</a> field</h3>
+
+      <p>The <b>Like code</b> field contains a code used to group items. It facilitates item maintenance as, when a change is made in the price record of an item that has a like code, the system can change the price record of all the other items having the same like code (for example, items that have different flavors, scents, etc.).</p>
+
+      <p>To enter a like code, type the UPC of the like code item in the field or click the arrow to open the Like code list and make a selection.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">â–?/a><!-- #EndTemplate -->
+  </body>
+</html>
+

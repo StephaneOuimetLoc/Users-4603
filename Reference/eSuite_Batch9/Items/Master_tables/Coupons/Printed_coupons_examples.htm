@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Printed Coupons Examples</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Printed Coupons Examples <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Coupon list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Printed coupons are store and vendor coupons given by the system when the specified criteria are met.</p>
+
+      <p>Here are some examples of how to create printed coupons.</p>
+
+      <h2><a name="List_of_examples">List of examples</a></h2>
+
+      <ol>
+        <li><a href="#Ex_1">Buy 7 bags of Oreo cookies, get an extra 3 for free</a></li>
+
+        <li><a href="#Ex_2">Buy for $20.00 in the Produce sub-department, get $1.00 off and 2 additional points in the main point program (point program 1) if the customer is shopper level 3</a></li>
+
+        <li><a href="#Ex_3">Buy for a total of $100.00 (excluding tobacco and alcohol purchases) in the transaction, get $15.00 off</a></li>
+
+        <li><a href="#Ex_4">Buy 2 items of the Grocery sub-department, get 15% off on these 2 items; buy 4 items of the Grocery sub-department, get 20% off on these 4 items</a></li>
+      </ol>
+
+      <h2><a name="Ex_1">Buy</a> 7 bags of Oreo cookies</h2>
+
+      <p>Get an extra 3 for free</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Buy X get Y free</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Buy X</strong> field: enter <em>10</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Get Y</strong> field: enter <em>3</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Printed</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-dpt.</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="160" src="Printed_coupons_examples_files/1_oreos_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the <em>Oreo bag UPC</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>10</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+           This method forces the system to apply the printed coupon discount on the Oreo bags.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="442" src="Printed_coupons_examples_files/1_oreos_add_criteria.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Details</strong> tab:&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon template</strong> field: click and select the coupon format.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="327" src="Printed_coupons_examples_files/coupon_details.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5. Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The system will automatically assign the record a <strong>coupon code</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="158" src="Printed_coupons_examples_files/1_oreos_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="328" src="Printed_coupons_examples_files/1_oreos_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="325" src="Printed_coupons_examples_files/1_oreos_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>If the customer buy 6 bags of Oreo cookies, they will not get any discount.</li>
+
+        <li>If thye buy 10 bags of Oreo cookies, they will get 3 of them for free.</li>
+
+        <li>If they buy 15 bags of Oreo cookies, they will get 3 of them for free.</li>
+
+        <li>If they buys 22 bags of Oreo cookies in the same transaction, he will get 3 of them for free, etc.</li>
+
+        <li>For the customer to get 6 bags of Oreo cookies for free when they buy 20 bags of Oreo cookies in the same transaction, add <i>Based on validated criteria</i> (<i>R</i>) in the <a href="../Coupons/Coupons.htm#Multiplication_and_accumulation"><b>Multiplication and accumulation</b> field</a> of the <strong>Add criteria</strong> window. In this case, 3 bags of Oreo cookies will be given for free for each 10 bags of Oreo cookies bought by the customer in the same transaction.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_2">Buy</a> for $20.00 in the Produce sub-department</h2>
+
+      <p>Get $1.00 off and 2 additional points in the main point program (point program 1) if the customer is shopper level 3&nbsp;</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Cents off</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Discount</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Printed</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-dpt.</strong> field: select the <em>Produce sub-department</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="157" src="Printed_coupons_examples_files/2_produce_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Customer level</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the <em>customer level</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="443" src="Printed_coupons_examples_files/2_produce_add_criteria_customer.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the second criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Sub-department</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the <em>produce sub-department number</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Dollar</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px; height: 21px;">
+          </td>
+
+          <td style="width: 423px; height: 21px;"><strong>Minimum value</strong> field: enter <em>20</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+           This method forces the system to apply the printed coupon discount on the items in the <em>Produce</em> sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="442" src="Printed_coupons_examples_files/2_produce_add_criteria_subdpt.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Details</strong> tab:&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon template</strong> field: click and select the coupon format.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Bonus</strong> field: enter <em>2</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Point program</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="325" src="Printed_coupons_examples_files/2_produce_details_tab.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5. Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The system will automatically assign the record a <strong>coupon code</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="156" src="Printed_coupons_examples_files/2_produce_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="325" src="Printed_coupons_examples_files/2_produce_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="324" src="Printed_coupons_examples_files/2_produce_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>The shopper level <i>3</i> customer gets <i>$1.00</i> off and <em>2</em> points in the main point program when they buy for <i>$20.00</i> in the <b>Produce</b> sub-department in the transaction.</li>
+
+        <li>Even if the shopper level 3 customer buys for <i>$40.00</i> in the <b>Produce</b> sub-department, they will only get <i>$1.00</i> off and <em>2</em> points in the main point program.</li>
+
+        <li>To repeat the electronic coupon, add the <i>Multiply using criteria</i> method (<i>R</i>) to the <i>SUB</i> criterion. Then the shopper level <i>3</i> customer will get <i>$2.00</i> off and <i>4</i> points in the main point program when they buy for $40.00 in the <strong>Produce</strong> sub-department; $3.00 off and 6 points in the main point program when he will buy for $60.00 in the Produce sub-department, etc.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_3">Buy</a> for a total of $100.00</h2>
+
+      <p>&nbsp;(excluding tobacco and alcohol purchases) in the transaction, get $15.00 off .</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Cents off</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Discount</strong> field: enter <em>15</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Printed</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-dpt.</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="154" src="Printed_coupons_examples_files/3_alcohol_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Total sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Totalizer</strong> field: enter <em>3</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Dollar</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>100</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="442" src="Printed_coupons_examples_files/3_alcohol_add_criteria_total_sales.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the second criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Sub-department</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the <em>beer sub-department number</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Exclude this from accumulation</em>.<br>
+           This method forces the system to exclude any sale from the beer sub-department from the required <i>$100.00</i> (<i>X</i>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="442" src="Printed_coupons_examples_files/3_alcohol_add_criteria_subdpt_beer.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the third criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Sub-department</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the <em>wine sub-department number</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Exclude this from accumulation</em>.<br>
+           This method forces the system to exclude any sale from the wine sub-department from the required <i>$100.00</i> (<i>X</i>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="443" src="Printed_coupons_examples_files/3_alcohol_add_criteria_subdpt_wine.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the fourth criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Sub-department</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the <em>tobacco sub-department number</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Exclude this from accumulation</em>.<br>
+           This method forces the system to exclude any sale from the tobacco sub-department from the required <i>$100.00</i> (<i>X</i>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="442" src="Printed_coupons_examples_files/3_alcohol_add_criteria_subdpt_tobacco.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">6. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon template</strong> field: click and select the coupon format.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="327" src="Printed_coupons_examples_files/coupon_details.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">7. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">8. Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The system will automatically assign the record a <strong>coupon code</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="157" src="Printed_coupons_examples_files/3_alcohol_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="323" src="Printed_coupons_examples_files/3_alcohol_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="325" src="Printed_coupons_examples_files/3_alcohol_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>The customer gets $15.00 off when they buy for at least $100.00 in the transaction.</li>
+
+        <li>If the customer buys any tobacco or alcohol (beer and/or wine) item, they must buy for an additional amount in order to get the discount, since the amount of these items does not count in the required $100.00 minimum purchase.</li>
+      </ul>
+
+      <p class="NoteList"><b>NOTE:</b> For the discount be added as a new entry in the transaction instead of being applied on an item, add the <span style="FONT-STYLE: normal">WIT=NEWREG</span> or <span style="FONT-STYLE: normal">WIT=NEWCPN</span> parameter in the <a href="../Coupons/Coupons.htm#Registration_type"><strong>Registration type</strong> field</a>.</p>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_4">Buy</a> 2 items of the Grocery sub-department</h2>
+
+      <p>Get 15% off on these 2 items; buy 4 items of the Grocery sub-department, get 20% off on these 4 items</p>
+
+      <p>This example includes two printed coupons that work identically (buy a number of items in the same sub-department and get a certaint percentage off on these items).</p>
+
+      <p>However, the required quantities differ from one coupon to the other, and therefore the discount percentage is different.</p>
+
+      <p>The two printed coupons may exclude each other: when the customer buys 4 items of the Grocery sub-department, only 1 of these 2 discounts should be given, namely the 20% off on the 4 items. To get both discounts, the customer should buy 6 items of the Grocery sub-department.</p>
+
+      <h3>Create the first printed coupon (2 items, 15% off)</h3>
+
+      <p>&nbsp;</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Percent</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Discount</strong> field: enter <em>15</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Printed</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-dpt.</strong> field: select the Grocery sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="158" src="Printed_coupons_examples_files/4_groceries_15_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Sub-department</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>2</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent</em>.<br>
+          This method calculates the percentage discount on the 2 items of the Grocery sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+          This method forces the system to apply the printed coupon discount on the items in the Grocery sub-department.<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>The item(s) in this condition can only participate in one offer</strong>.<br>
+          This method limits the participation of the 2 items to this electronic coupon only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="442" src="Printed_coupons_examples_files/4_groceries_15_add_criteria.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon template</strong> field: click and select the coupon format.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="327" src="Printed_coupons_examples_files/coupon_details.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5. Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The system will automatically assign the record a <strong>coupon code</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="159" src="Printed_coupons_examples_files/4_groceries_15_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="324" src="Printed_coupons_examples_files/4_groceries_15_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="326" src="Printed_coupons_examples_files/4_groceries_15_data_view.png" width="416"></td>
+        </tr>
+      </table>
+      <br>
+      <br>
+       
+
+      <h3>Create the second printed coupon (4 items, 20% off)</h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Percent</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Discount</strong> field: enter <em>20</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Printed</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-dpt.</strong> field: select the Grocery sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="156" src="Printed_coupons_examples_files/4_groceries_20_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Sub-department</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>4</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent</em>.<br>
+          This method calculates the percentage discount on the 4 items of the Grocery sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+          This method forces the system to apply the printed coupon discount on the items in the Grocery sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>The item(s) in this condition can only participate in one offer</strong>.<br>
+          This method limits the participation of the 4 items to this electronic coupon only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="443" src="Printed_coupons_examples_files/4_groceries_20_add_criteria.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon template</strong> field: click and select the coupon format.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="327" src="Printed_coupons_examples_files/coupon_details.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5. Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The system will automatically assign the record a <strong>coupon code</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="157" src="Printed_coupons_examples_files/4_groceries_20_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="326" src="Printed_coupons_examples_files/4_groceries_20_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="325" src="Printed_coupons_examples_files/4_groceries_20_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>If the customer buys 1 item of the Grocery sub-department, they will not get any discount.</li>
+
+        <li>If they buy 2 items of the Grocery sub-department, they will get 15% off on these 2 items.</li>
+
+        <li>If the customer buys 3 items of the Grocery sub-department, they will get 15% off on 2 items.</li>
+
+        <li>If they buy 4 items of the Grocery sub-department, they will get 20% off on these 4 items</li>
+
+        <li>If the customer buys 5 items of the Grocery sub-department, they will get 20% on 4 items.</li>
+
+        <li>If they buy 6 items of the Grocery sub-department, they will get 20% on 4 items and 15% on the 2 others</li>
+
+        <li>Iif the customer buys 7 items, they will get 20% on 4 items and 15% on 2 others.</li>
+
+        <li>If they buy 8 items, they will get 20% on 4 items and 15% on 2 others, etc.</li>
+      </ul>
+
+      <p class="List">Since the items of the Grocery sub-department have different prices, an average price is defined by the system, which is then multiplied by the quantity of items required (2 for the 15% coupon and 4 for the 20% coupon) to determine the amount from which the percentage discount is calculated.</p>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

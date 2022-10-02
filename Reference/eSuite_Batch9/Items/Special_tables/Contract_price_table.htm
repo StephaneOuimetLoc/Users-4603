@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Contract Price Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Contract Price Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Contract price</b> table contains particular prices on items for specific customers. Each customer may have a particular price for the same item.</p>
+
+      <h2>Displaying the <b>Contract price</b> table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item</strong> <strong>list</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Items - General List</strong>.</li>
+
+        <li>Enter the search criteria and click <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window.</li>
+
+        <li>Select a record and click on <strong>Edit</strong> on the bottom of the item grid: the option menu is displayed.</li>
+
+        <li>Select <strong>Special items</strong> and then <strong>Contract price</strong>: the <strong><b>Contract price</b> edit table</strong> opens overlapping the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Contract_price_table_files/contract_price_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <b>Contract price</b> table is divided in two parts: the <strong>main section</strong> and the <strong><b>Contract price</b> table grid</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Contract_price_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="12, 117, 144, 142" href="#New">
+            <area shape="rect" coords="146, 114, 392, 140" href="#Name">
+            <area shape="rect" coords="12, 165, 83, 191" href="#Margin">
+            <area shape="rect" coords="82, 164, 141, 192" href="#Round">
+            <area shape="rect" coords="147, 165, 256, 192" href="#Price">
+            <area shape="rect" coords="12, 216, 258, 241" href="#Method">
+            <area shape="rect" coords="12, 264, 111, 289" href="#Suggested_price_(margin)">
+            <area shape="rect" coords="113, 265, 181, 289" href="#Suggested_price_(round)">
+            <area shape="rect" coords="184, 266, 259, 291" href="#Suggested_price__(price)">
+            <area shape="rect" coords="262, 266, 393, 290" href="#Reference">
+            <area shape="rect" coords="11, 314, 260, 342" href="#Dates">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong><b>Contract price</b> table grid</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Contract_price_table_files/table_grid.png" usemap="#table_grid"> <map name="table_grid">
+            <area shape="rect" coords="0, 87, 88, 225" href="#Customer">
+            <area shape="rect" coords="89, 88, 164, 227" href="#Price_grid">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p>The <b>Contract price</b> table grid offers quick information on particular item prices for specific customers. The following columns are displayed: <a href="#Customer"><strong>Customer</strong></a> and <a href="#Price"><strong>Price</strong></a>.</p>
+
+      <p>Columns are movable, resizable and may be selected/deselected for a customized experience. They allow sorting the records in an ascending or a descending order.<br>
+      Records are displayed in ascending order by customer identifier. Selecting a record allows displaying and editing its information in the main section of the <b>Contract price</b> table.</p>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the item <b>Contract price</b> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><b>Main section</b></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="New">New</a></strong></td>
+
+          <td>The <strong>New</strong> field contains the customer identifier.<br>
+          It gives access to the customer list.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Name">Name</a></strong></td>
+
+          <td>The <strong>Name</strong> field contains the full name (last name, first name) of the customer. It is displayed as soon as a customer is specified and added in the <b>Contract price</b> table.<br>
+          It is greyed out and used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Margin">Margin</a></strong></td>
+
+          <td>The <strong>Margin</strong> field contains the profit margin, expressed as a percentage, used to generate the particular price for the customer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Round">Round</a></strong></td>
+
+          <td>The <strong>Round</strong> field contains the ending number of the particular price.<br>
+          For details, see the <a href="#The_Round_field"><strong>Round</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Price">Price</a></strong></td>
+
+          <td>The <strong>Price</strong> field contains the particular price of the item for the customer.<br>
+          For details, see the <a href="#The_Price_field"><strong>Price</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Method">Method</a></strong></td>
+
+          <td>The <strong>Method</strong> field contains the price method to use for the customer contract price.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Suggested_price_(margin)">Suggested price (margin)</a></strong></td>
+
+          <td>The <b>Suggested price (margin)</b> field contains the suggested price profit margin, expressed as a percentage, used to generate the particular suggested price for the customer.<br>
+          It is used for information purposes only, and may appear in some reports.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Suggested_price_(round)">Suggested price (round)</a></strong></td>
+
+          <td>The <b>Suggested price (round)</b> contains the ending number of the particular suggested price. It works in combination with the <a href="#Suggested_price_(margin)"><strong>Suggested price (margin)</strong> field</a>.<br>
+          For details, see the <a href="#Suggested_price_(round)"><strong>Suggested price (round)</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Suggested_price__(price)">Suggested price<br>
+           (price)</a></strong></td>
+
+          <td>The <b>Suggested price (price)</b> field contains the particular suggested price for the customer.<br>
+          It is used for information purposes only, and may appear in some reports.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Reference">Reference</a></strong></td>
+
+          <td>The <b>Reference</b> field contains the contract reference number.<br>
+          It is used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Dates">Dates</a></strong></td>
+
+          <td>The <b>Dates</b> field is split in two different fields: <strong>starting</strong> (the start date for the particular price) and <strong>ending</strong> (the end date for the particular price).<br>
+           It is not a mandatory field; if no dates are specified, the particular price is valid at any time.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Table grid</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Customer">Customer</a></strong></td>
+
+          <td>The <b>Customer</b> column contains the customer identifier.<br>
+           It is entered using the <a href="#New"><b>New</b> field</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Price_grid">Price</a></strong></td>
+
+          <td>The <strong>Price</strong> field contains the particular price of the item for the customer in the <a href="#Customer"><strong>Customer</strong> column</a>.<br>
+          For details, see the <a href="#The_Price_field"><strong>Price</strong> field section</a> below.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Round_field">The Round field</a></h3>
+
+      <p>The <strong>Round</strong> field contains the ending number of the particular price. It works in combination with the <a href="#Margin"><strong>Margin</strong> field</a>.<br>
+      </p>
+
+      <p><img class="Text" height="53" src="Contract_price_table_files/round_field.png" width="151"></p>
+
+      <p>Two different ending numbers may be specified in the <strong>Round</strong> field, separated by a comma. In this case, any price that ends with a five (5) or less will end with the first ending number, and any price that ends above a five (5) will end with the second ending number.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Price_field">The Price field</a></h3>
+
+      <p>The <strong>Price</strong> field contains the particular price of the item for the customer.</p>
+
+      <p><img class="Text" height="46" src="Contract_price_table_files/price_field.png" width="115"></p>
+
+      <p>The <b>Price</b> field is split in two fields:</p>
+
+      <ol>
+        <li>The <b>Price amount</b> that contains the particular price of the item for the customer.</li>
+
+        <li>The <b>Price quantity</b> that contains the quantity of the item that may be purchased at the particular price.</li>
+      </ol>
+
+      <p>The point of sale will sell the item at the particular price to that customer up to and including the quantity specified. Then, if the quantity purchased by the customer exceeds the quantity specified, the rest of the items will be sold at the retail price defined in the <a href="../../Price_Table.htm"><b>Price</b> table</a>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Suggested_price_(round)_field">The Suggested price (round) field</a></h3>
+
+      <p>The <b>Suggested price (round)</b> contains the ending number of the particular suggested price. It works in combination with the <a href="#Suggested_price_(margin)"><strong>Suggested price (margin)</strong> field</a>.</p>
+
+      <p><img class="Text" height="52" src="Contract_price_table_files/suggested_price_round.png" width="434"></p>
+
+      <p>Two (2) different ending numbers may be specified in the <b>Suggested price (round)</b> field, separated by a comma. In this case, any price that ends with a five (5) or less will end with the first ending number, and any price that ends above a five (5) will end with the second ending number.</p>
+
+      <p>The <b>Suggested price (round)</b> field is used for information purposes only, and may appear in some reports.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

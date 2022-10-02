@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!-- #BeginTemplate "../../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+    
+
+    <!-- Title/Keywords edit on new documents -->
+    <!-- #BeginEditable "doctitle" -->
+    <!-- #EndEditable -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Generate Labels Based on Price Events</title>
+    <link href="../../../../work.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <a name="top"></a>
+    <!-- Docs page layout -->
+    <br>
+    <h1>
+                        <!-- #BeginEditable "Title" -->eSuite - How to Generate Labels Based on Price Events
+                        <!-- #EndEditable -->
+                    </h1>
+                   <p class="breadcrumb">eSuite > Tools &gt; Labels &gt; Generate based on price events</p>
+        <!-- #BeginEditable "toc" -->
+
+        
+
+
+        <!-- #EndEditable -->
+            <div class="article-contents">
+                <!-- #BeginEditable "Body" -->
+<h2><a name="Top0"></a>Information</h2>
+<p>The <strong>Labels - Price Events</strong> utility helps identifying the 
+items for which the system will print labels on a specific date. The system 
+manages all the batches and the events defined in the items, and compiles the 
+next event for the selected date. </p>
+<p>This feature is used to compile the very next event, not the one scheduled in three weeks. 
+This means that if the utility is due to run for today and changes have to be printed, 
+when the utility will be run again for the next week, the changes done today 
+will be shown again for the next week until the changes have been activated. So 
+the following steps are recommended: price changes for instance, print labels, 
+activate and deploy the changes to avoid them to be printed again on the next 
+use of this utility.</p>
+<h2>How to Generate Labels Based on Price Events</h2>
+<p>In the Launcher, click the arrow in the <strong>Tools</strong> entry to display its menu and 
+then:</p>
+<ol>
+	<li>Click on <strong>Labels</strong>: the <strong>Start</strong> window 
+	opens in the <strong>Labels</strong> work area.</li>
+	<li>Click on <strong>Generate based on price events</strong>: the <strong>
+	Labels - price events</strong> wizard opens in a new tab.</li>
+</ol>
+<table style="width: 100%">
+	<tr>
+		<td>
+		<img style="border-style:none" class="Text" src="Price_events_files/label_price_events.png" usemap="#label_price_events">
+		<map name="label_price_events">
+			<area shape="rect" coords="27, 124, 147, 152" href="#Period">
+			<area shape="rect" coords="155, 124, 287, 152" href="#Start">
+			<area shape="rect" coords="295, 124, 424, 152" href="#Stop">
+			<area shape="rect" coords="49, 155, 141, 189" href="#double_arrows">
+			<area shape="rect" coords="178, 154, 401, 190" href="#single_arrows">
+			<area shape="rect" coords="15, 225, 436, 251" href="#Item_selection">
+			<area shape="rect" coords="15, 273, 436, 300" href="#Next_price_source_method">
+			<area shape="rect" coords="15, 321, 221, 347" href="#Price_level_start">
+			<area shape="rect" coords="230, 320, 435, 348" href="#Price_level_stop">
+			<area shape="rect" coords="8, 593, 92, 627" href="#Reset">
+			<area shape="rect" coords="342, 592, 444, 626" href="#Execute">
+		</map>
+		</td>
+	</tr>
+	<tr>
+		<td class="Img">*Click on a field to get more information.</td>
+	</tr>
+</table>
+<h2>
+Layout of the Labels - Price events wizard</h2>
+<p>
+Here is the description of the fields 
+and functionalities in the <strong>
+	Labels - Price events </strong>wizard:</p>
+	<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr><th style="width: 168px">FIELD</th>
+		<th>DESCRIPTION</th>
+		</tr>
+		</thead>		
+		<tr>
+			<td style="width: 168px"><strong><a name="Period">Period</a></strong></td>
+			<td>Determines the time length for the price event.<br><em>Day</em> 
+			is the default 
+			value.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Start">Start</a></strong></td>
+			<td>Allows the selection of the 
+			starting date for the price event.<br>The current date is the default 
+			value.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Stop">Stop</a></strong></td>
+			<td>Allows the selection of the 
+			ending date for the price event.<br>The current date is the 
+			default value.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong>Left/right <a name="double_arrows">
+			double arrows</a></strong></td>
+			<td>Allow changing values simultaneously in the <strong>Start</strong> and <strong>Stop</strong> 
+			fields, according to the value set in the <strong>Period</strong> 
+			field.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong>Left/right <a name="single_arrows">
+			single arrows</a></strong></td>
+			<td>Allow changing the value in the fields above them (<strong>Start</strong> or <strong>
+			Stop</strong>), according to the value set in the <strong>
+			Period</strong> field.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Item_selection">Item selection</a></strong></td>
+			<td>Specifies if the items 
+			that are flagged <em>Not for sale</em> are included or not in the 
+			selection.<br>If the item changes are received from the 
+			host, it is possible that you are not selling some of these items. 
+			In this case, these items are flagged <em>Not for sale</em> and you may 
+			choose not to print labels on them.<br>The default value is <em>All items except the 
+			ones having the "NOT FOR SALE" flag on</em>.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Next_price_source_method">Next price source method</a></strong></td>
+			<td>Specifies the 
+			method to use when printing labels.<br>For details, see the
+			<a href="#Next_price_source_method_field"><strong>Next price source 
+			method</strong> section</a> below.<br><em>See all events and 
+			detect retail price change value</em> is the default 
+			value.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Price_level_start">Price level start</a></strong></td>
+			<td>Defines the starting 
+			price level for which labels have to be printed.<br><em>0:All</em> 
+			is the default 
+			value.<br>See the <a href="#The_Price_level_fields"><strong>Price 
+			level fields</strong> section</a> below.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Price_level_stop">Price level stop</a></strong></td>
+			<td>Defines the ending price 
+			level for which labels have to be printed.<br><em>99999:All</em> is 
+			the default 
+			value.<br>See the <a href="#The_Price_level_fields"><strong>Price 
+			level fields</strong> section</a> below.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Reset">Reset</a></strong></td>
+			<td>Allows resetting the wizard values to the default ones.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Execute">Execute</a></strong></td>
+			<td>Allows performing the search according to the criteria entered 
+			in the wizard.<br>Enabled by default.</td>
+		</tr>
+		<tr>
+			<td style="width: 168px"><strong><a name="Settings">Settings</a></strong></td>
+			<td>Opens the&nbsp;<strong>Execute</strong> window.<br>Allows changing 
+			the search parameters. </td>
+		</tr>
+	</table>
+<h3>
+The <a name="Next_price_source_method_field">Next price source method field</a></h3>
+<p>The <strong>Next price source method</strong> specifies the method to use 
+when printing labels.</p>
+<p>Four methods are available:</p>
+<ul>
+	<li class="Steps"><strong>See all events and detect retail price change</strong><br>Let's say 
+	there is a sale that goes effective today. The active price will be the sale 
+	price. A next event will be generated at the end of the sale to have the 
+	item get back to the regular price. This means that the regular price does 
+	not really change and so no label should be printed.<br>This method will 
+	recall the last regular price that was printed and will 
+	compare it with the next regular event. Only the real price changes will 
+	be shown.<br>The key in Application.ini file in label section is 
+	<code class="lang-markup">LABEL_REGGEN_METH=0</code>.</li>
+	<li class="Steps"><strong>Include Instore price change as a retail price 
+	</strong> <br>This method acts exactly 
+as the first one except that the INSTORE event is considered as a regular price change.<br>Let's say there is an INSTORE for the next three months. The same label is 
+used for a regular price change, so you will remove the item label and put this 
+one instead. In fact, this is like a regular price change, so there is no special 
+sign printed for it.<br>This method will recall the price that was printed.<br>The 
+key in Application.ini file in label section is <code class="lang-markup">LABEL_REGGEN_METH=1</code>.</li>
+	<li class="Steps"><strong>Include Instore price and TPR change as a retail price</strong><br>This method 
+	works as the previous one, except that the INSTORE and the TPR event is 
+	considered as a 
+regular price change.<br>The key in Application.ini file in label section is 
+	<code class="lang-markup">LABEL_REGGEN_METH=2</code>.</li>
+	<li class="Steps"><strong>See all events including the return to regular price</strong><br>This method does not 
+remember the last regular price printed. So ALL next events will be shown here. 
+The key in Application.ini file in label section is <code class="lang-markup">LABEL_REGGEN_METH=3</code> </li>
+</ul>
+<p>See
+the <a href="Label_examples.htm"><strong>Labels - examples</strong> topic</a> 
+for examples for each case.</p>
+<h2><a name="The_Price_level_fields">The Price level fields</a></h2>
+<p>The <strong>Price level start</strong> and the <strong>Price level stop</strong> 
+fields allow setting the price level range of the items for which labels will be 
+printed.</p>
+<p class="Note"><b>NOTE:<br></b>Starting v350x, 
+	Application.ini[TARGET_TRS] is used to determine which target to use for each 
+	item table.<br>Application.ini[TARGET_TRS]PRICE_TAB='PAL' will force the Host 
+	to use the PAL record.<br>Application.ini[TARGET_TRS]PRICE_TAB='@WIZGET(TARGET)' will force the Host 
+	to use the Global Store Number record.<br>Application.ini[TARGET_TRS]PRICE_TAB=ISNULL((SELECT TOP 1 SUB_PRI.F1000 FROM 
+	PRICE_TAB SUB_PRI JOIN LNK_TAB SUB_LNK ON SUB_PRI.F1000=SUB_LNK.F1000 JOIN 
+	LNK_TAB SUB_LNK2 ON SUB_LNK.F1056=SUB_LNK2.F1056 AND 
+	SUB_LNK.F1057=SUB_LNK2.F1057 AND SUB_LNK2.F1000='@WIZGET(TARGET)' JOIN 
+	STO_TAB SUB_STO ON SUB_LNK.F1000=SUB_STO.F1000 WHERE SUB_PRI.F01=PRI.F01 AND 
+	SUB_PRI.F126=PRI.F126 ORDER BY SUB_STO.F1937 DESC),'PAL'). That will use the 
+	proper target set for the Global StoreID selected.</p>
+<p style="text-align:right"><a href="#Top">Back to top</a></p>
+<h2>Labels - Event summary results</h2>
+<p>When the<strong> Labels on price events</strong> utility is launched, it 
+opens the <strong>Labels - Event summary results</strong> wizard:</p>
+<table style="width: 100%">
+	<tr>
+		<td>
+		<img style="border-style:none" class="Text" src="Price_events_files/event_summary_results.png" usemap="#event_summary_results">
+		<map name="event_summary_results">
+			<area shape="rect" coords="8, 127, 299, 155" href="#Keep_items_having_a_predefined_label">
+			<area shape="rect" coords="16, 178, 275, 204" href="#Event_list">
+			<area shape="rect" coords="280, 177, 537, 204" href="#Aisle">
+			<area shape="rect" coords="16, 225, 537, 252" href="#Label_format">
+			<area shape="rect" coords="15, 273, 542, 300" href="#Like_code">
+			<area shape="rect" coords="16, 320, 543, 348" href="#Select_items_by_price_variation">
+			<area shape="rect" coords="17, 368, 276, 395" href="#Action_to_do">
+			<area shape="rect" coords="282, 369, 539, 395" href="#Print_this_quantity_for_each_label">
+			<area shape="rect" coords="10, 544, 279, 570" href="#Use_quantity_set_in_item_location">
+			<area shape="rect" coords="7, 592, 91, 626" href="#Reset">
+			<area shape="rect" coords="444, 592, 515, 624" href="#Execute">
+			<area shape="rect" coords="516, 593, 544, 623" href="#Execute">
+		</map>
+	</td>
+	</tr>
+	<tr>
+		<td class="Img">*Click on a field to get more information.</td>
+	</tr>
+</table>
+<p>The <strong>Event summary results</strong> wizard is used to report, 
+generate, print and activate the items that have a next event.</p>
+
+<p>
+Here is the description of the fields and functionalities in the <strong>
+	Labels - Event summary results </strong>wizard:</p>
+	<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+		<th style="width: 243px">FIELD</th>
+		<th>DESCRIPTION</th>  
+  </tr>
+</thead>
+		<tr>
+			<td style="width: 243px"><strong>
+			<a name="Keep_items_having_a_predefined_label">Keep items having a 
+			predefined label</a></strong></td>
+			<td>When checked, the <em>Use template from shelf</em> value is 
+			added to the menu in the <strong><a href="#Label_format">Label 
+			format</a></strong> field.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong><a name="Event_list">Event list</a></strong></td>
+			<td>Shows all next events grouped by event.<br>The number displayed 
+			between parentheses is the number of items that have a selected 
+			event to print. After selecting an event to print, the <strong>
+			<a href="#Aisle">Aisle</a></strong> field is refreshed to show these 
+			items grouped by aisle (this information is coming from the <strong>
+			Shelf</strong> table). All aisles or only a specific one may be 
+			selected for printing. The label format to use for this event is 
+			defined by the value set in the <strong>Label format</strong> field.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong><a name="Aisle">Aisle</a></strong></td>
+			<td>Groups by event all items with a selected event to 
+			print.<br><em>All</em> is the default value.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong><a name="Label_format">Label format</a></strong></td>
+			<td>
+			C<ttd>ontains the label format. Provides a drop-down menu with the 
+		predefined label formats.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong><a name="Like_code">Like code</a></strong></td>
+			<td>Gives the option of printing labels without using like codes or 
+			printing a single label for a group of items that share the same 
+			like code.<br>In a sale event, it may happen that all flavors of a 
+			product go on sale. Generally, one sign is printed for each flavor, 
+			but it may be possible to use like codes and print only one sign for 
+			all flavors.<br>The
+			<a href="../Item_maintenance/Price_Table.htm#Like_code"><strong>Like 
+			code</strong> field</a> in the
+			<a href="../Item_maintenance/Price_Table.htm"><strong>Price</strong> 
+			table</a> is used to group items together. To make it work with the 
+			label utility, the UPC code of the master item of the group must be 
+			entered in the <strong>Like code</strong> field for all flavors of this product. Only the 
+			label of the master item will be printed when the like code feature 
+			is used.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong>
+			<a name="Select_items_by_price_variation">Select items by price 
+			variation</a></strong></td>
+			<td>Gives the option of printing labels for all items or only items 
+			whose price has gone up or only items whose price has gone down.<br>
+			When printing labels for items whose price has changed, the engine will compare the actual regular price with the 
+			last regular price print to determine which label to print. If there 
+			is no last regular price print, then this label will qualify only 
+			when the <em>All Items</em> option is selected.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong><a name="Action_to_do">Action to do</a></strong></td>
+			<td>The <em>Print report</em> option allows printing a report before 
+			printing the labels and make sure the right labels are printed for 
+			the right items.<br>The <em>Generate label</em> option allows 
+			generating a label batch to be printed and it recalls the regular 
+			price (if a regular price event is printed) to detect the real price 
+			changes.<br>The <em>Activate item</em> option takes the printed 
+			items from the batches and applies them to the items.<br><strong>
+			<div class="alert alert-warning">
+				NOTE:</strong> The <em>Activate item</em> option will not send the 
+			changes to the lanes. A deploy change process is still needed. Also, 
+			when items are activated and transferred from the batches to the 
+			items, there might still be items in the batches. In this case, the 
+			batches are flagged as <em>Closed</em>, so no more items can be 
+			added to these batches from a host deploy change.</div>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>
+			<a name="Print_this_quantity_for_each_label">
+			Print this quantity for 
+			each label</a></strong></td>
+			<td>Allows entering a quantity of labels to be printed. </td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong>
+			<a name="Use_quantity_set_in_item_location">Use quantity set in item 
+			location</a></strong></td>
+			<td>Allows printing the same label according to the quantity set in 
+			the <a href="../Item_maintenance/Shelf_location_table.htm"><strong>
+			Shelf location</strong> table</a>.<br>When selected, the
+			<a href="#Print_this_quantity_for_each_label"><strong>Print this 
+			quantity for each label</strong> field</a> is disabled.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong><a name="Reset_summary">Reset</a></strong></td>
+			<td>Allows resetting the wizard values to the default ones.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong><a name="Execute_summary">Execute</a></strong></td>
+			<td>Launches the search and opens the
+			<a href="Labels_in_eSuite.htm#Printing">list of labels</a> that are 
+			ready to print.<br>Enabled when the <strong>Event list</strong> and 
+			the <strong>Label format</strong> fields are populated.</td>
+		</tr>
+		<tr>
+			<td style="width: 243px"><strong><a name="Settings_summary">Settings</a></strong></td>
+			<td>Opens the <strong>Execute</strong> window.<br>Allows changing 
+			the search parameters. </td>
+		</tr>
+		</table>
+<p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+
+
+                <!-- #EndEditable -->
+            </div>
+    
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a>
+</body>
+
+<!-- #EndTemplate -->
+
+</html>

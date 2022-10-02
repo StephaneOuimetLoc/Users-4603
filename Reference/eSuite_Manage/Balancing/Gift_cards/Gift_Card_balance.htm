@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document"><!-- Title/Keywords edit on new documents -->
+    <!-- #BeginEditable "doctitle" -->
+    <!-- #EndEditable -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Link Gift card to Customer</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Manage - Gift Card Balance <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Manage &gt; Balancing &gt; Gift card <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <ul>
+        <li>Open session in LOC SMS eSuite Manage in order to have access to the gift card operations.</li>
+      </ul>
+      <!--============================================= !=====================-->
+
+      <h2>Transfer gift card value</h2>
+
+      <ul>
+        <li>Open the <strong>Balancing</strong> menu and click on <b>Gift</b></li>
+
+        <li>from the <b>Gift card</b> menu, select <b>Balance</b> and click on <b>Execute</b>. You can use the <b>Add Criteria</b> button to refine the search</li>
+
+        <li>Select a gift card from the list. In order to do a value transfer, the gift card must be assigned to a customer, if no customer is assigned to the gift card a warning message will pop up. Refer to section <a href="#Associate_customer_GC">Associate a gift card to a customer</a> to know how to do this process</li>
+
+        <li>click on button <b>Action</b> at the bottom of the window</li>
+
+        <li>select <b>Balance transfer</b>, the <b>Prepaid balance transfer</b> window will open</li>
+
+        <li>on the left side of the <b>Prepaid balance transfer</b> window, on field Number, select the gift card from the list, the gift card info will be displayed</li>
+
+        <li>on the right side select the Destination gift card</li>
+
+        <li>enter the amount to be transferred and click on <b>Submit</b></li>
+      </ul>
+      <!--============================================= !=====================-->
+      <!--============================================= !=====================-->
+
+      <h2><a id="Associate_customer_GC">Associate a gift card to a customer</a></h2>
+
+      <p>A gift card number can be associated to an existing customer. Be aware that eSuite will not validate if the associated gift card exists on its database.</p>
+
+      <ol>
+        <li>Open session in LOC SMS eSuite, Management Suite in order to assign a gift card to a customer.</li>
+
+        <li>Open the Customers menu and click on <b>Clients</b>.</li>
+
+        <li>Click on <b>General List</b>;</li>
+
+        <li>search for the client to whom the gift card will be assigned using one of the available options and click on <b>Execute</b>;</li>
+
+        <li>The window <b>Customers - General List</b> will pop up.</li>
+
+        <li>Select the customer using the checkbox at the left of the <b>Customer ID</b>.</li>
+
+        <li>Click on <b>Edit</b> at the bottom of the window and select <b>Alternate codes</b>.</li>
+
+        <li>
+          Add a gift card: 
+
+          <ul>
+            <li>Click on <img src="Gift_Card_Balance_files/Symbol_Add.png" width="20" height="20" style="vertical-align: middle;"></li>
+
+            <li>on field Alternate number write down the gift card number</li>
+
+            <li>on Type, select <b>Gift Card</b> from the drop-down menu or write down <b>GIFT</b></li>
+
+            <li>select one status from the drop-down menu</li>
+
+            <li>optionally, add a Description to the gift card</li>
+
+            <li>select the Recharge Type from the drop-down list</li>
+
+            <li>select the recharge Frequency</li>
+
+            <li>set the field Value</li>
+
+            <li>set the field Minimum</li>
+
+            <li>Save the changes using <img src="Gift_Card_Balance_files/Symbol_Accept.png" width="20" height="20" style="vertical-align: middle;"></li>
+          </ul>
+        </li>
+      </ol>
+
+      <p>In order to do the same process on multiple clients, use the <img src="Gift_Card_Balance_files/Symbol_Pin.png" width="20" height="20" style="vertical-align: middle;"> to switch between customers.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Field</th>
+
+            <th>Value</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td rowspan="8">Status</td>
+        </tr>
+
+        <tr>
+          <td>Active</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Inactive</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>On Hold</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Stolen</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Lost</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Dead</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Deleted</td>
+
+          <td>In order to change the gift card status to DELETED, the balance must be zero.</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3">Recharge Type</td>
+        </tr>
+
+        <tr>
+          <td>Fixed Value</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Top-up</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td rowspan="8">Recharge Frequency</td>
+        </tr>
+
+        <tr>
+          <td>Manual</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minimum trigger</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Weekly</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Monthly</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Quarterly</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Value</td>
+
+          <td>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minimum</td>
+
+          <td>
+          </td>
+        </tr>
+      </table>
+      <!--============================================= !=====================-->
+      <!--============================================= !=====================-->
+
+      <h3>Known errors</h3>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Error</th>
+
+            <th>Type</th>
+
+            <th>
+            </th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>Error finding customer record</td>
+
+          <td>Warning</td>
+
+          <td>In order to transfer the value from a gift card to another, the gift card needs to be assigned to a customer. Refer to section <a href="#Associate_customer_GC">Associate a gift card to a customer</a> to know how to associate a gift card to a customer.</td>
+        </tr>
+
+        <tr>
+          <td>AI: Account Inactive</td>
+
+          <td>Error</td>
+
+          <td>In order to use a Gift card on a transaction, the gift card must have an Active status.</td>
+        </tr>
+      </table>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

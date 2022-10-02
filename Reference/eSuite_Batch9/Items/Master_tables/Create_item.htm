@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Create Items</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - How to Create Items <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list (New)<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The eSuite software allows creating items through the <strong>Item creation</strong> table, which includes the main information in the four master tables: <strong><a href="../Main%20Item_Table.htm">Main item</a></strong>, <strong><a href="../POS_Table.htm">POS</a></strong>, <strong><a href="../Price_Table.htm">Price</a></strong> and <strong><a href="../Cost_Table.htm">Cost</a></strong>.</p>
+
+      <p>Once the new items have been created, changes in the database have to be deployed. The new information will be sent to the front-end workstations and the cash registers on the network.</p>
+
+      <h2>Displaying the <a name="Item_creation_table"></a>Item creation table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens on the <strong>Items</strong> desktop.<br>
+         <img style="padding-top:4 px; padding-bottom:4 px" src="Create_item_files/items_window.png"></li>
+
+        <li>Click on <strong>New</strong>.<strong><br>
+         <img style="padding-top:4 px; padding-bottom:4 px" src="Create_item_files/new_start_window.png"><br>
+        </strong>The <strong>Item Creation</strong> table opens in the work area.<br>
+        By default, the only enabled field is <strong>Item number</strong>. The other fields become available when the new number is entered.<br>
+         <img style="padding-top:4 px; padding-bottom:4 px" src="Create_item_files/item_creation_table.png"></li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Item Creation</strong> table consists of four sections: <strong><a href="#General_information">General information</a></strong>, <strong><a href="#POS_information">POS information</a></strong>, <strong><a href="#Price_information">Price information</a></strong> and <strong><a href="#Cost_information">Cost information</a></strong>.</p>
+
+      <p>By default, when the <strong>Item creation</strong> table opens, all the fields are disabled except the UPC field. They become enabled once the new item UPC is entered.</p>
+
+      <h4><b><a name="General_information">General information</a></b></h4>
+
+      <table style="width: 1397px">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Create_item_files/general_information.png" usemap="#general_info"> <map name="general_info">
+            <area shape="rect" coords="111, 18, 232, 44" href="#Item_number">
+            <area shape="rect" coords="117, 50, 423, 74" href="#Expanded_description">
+            <area shape="rect" coords="116, 79, 423, 105" href="#Category">
+            <area shape="rect" coords="521, 49, 636, 75" href="#Brand">
+            <area shape="rect" coords="524, 80, 639, 106" href="#Size">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h4><b><a name="POS_information">POS information</a></b></h4>
+
+      <table style="width: 1397px">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Create_item_files/POS_information.png" usemap="#POS_info"> <map name="POS_info">
+            <area shape="rect" coords="114, 20, 191, 45" href="#Target_POS">
+            <area shape="rect" coords="116, 51, 420, 76" href="#Description">
+            <area shape="rect" coords="117, 79, 421, 106" href="#Sub-department">
+            <area shape="rect" coords="115, 109, 423, 137" href="#Bottle_link">
+            <area shape="rect" coords="115, 139, 421, 166" href="#Tare">
+            <area shape="rect" coords="438, 63, 542, 80" href="#Follow_sub">
+            <area shape="rect" coords="440, 84, 541, 100" href="#Scalable">
+            <area shape="rect" coords="441, 103, 540, 122" href="#Food_stamp">
+            <area shape="rect" coords="442, 124, 540, 139" href="#WIC">
+            <area shape="rect" coords="549, 63, 674, 81" href="#Force_price">
+            <area shape="rect" coords="550, 83, 675, 101" href="#Force_quantity">
+            <area shape="rect" coords="551, 102, 677, 122" href="#Stop_discount">
+            <area shape="rect" coords="684, 62, 771, 81" href="#Taxable_1">
+            <area shape="rect" coords="683, 83, 771, 102" href="#Taxable_2">
+            <area shape="rect" coords="683, 103, 770, 122" href="#Taxable_3">
+            <area shape="rect" coords="684, 122, 770, 144" href="#Taxable_4">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h4><b><a name="Price_information">Price information</a></b></h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Create_item_files/price_information.png" usemap="#price_info"> <map name="price_info">
+            <area shape="rect" coords="113, 39, 193, 64" href="#Target_price">
+            <area shape="rect" coords="113, 69, 236, 96" href="#Retail">
+            <area shape="rect" coords="115, 98, 236, 125" href="#Price_package">
+            <area shape="rect" coords="114, 127, 389, 157" href="#Mix_&amp;_Match">
+            <area shape="rect" coords="230, 38, 285, 65" href="#Level">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h4><b><a name="Cost_information">Cost information</a></b></h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Create_item_files/cost_information.png" usemap="#cost_information"> <map name="cost_information">
+            <area shape="rect" coords="62, 38, 139, 64" href="#target_cost">
+            <area shape="rect" coords="170, 40, 271, 62" href="#Authorized">
+            <area shape="rect" coords="63, 69, 389, 95" href="#Vendor">
+            <area shape="rect" coords="63, 98, 168, 125" href="#Format">
+            <area shape="rect" coords="64, 128, 170, 156" href="#Base">
+            <area shape="rect" coords="262, 98, 389, 125" href="#Vendor_code">
+            <area shape="rect" coords="262, 129, 390, 155" href="#Case">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>The table below briefly explains the fields in the <strong>Item Creation</strong> table and their functionalities.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><b>General information</b> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Item_number">Item number</a></strong></td>
+
+          <td>The <strong>Item number</strong> field contains the item code (UPC).<br>
+          It is a required field used to uniquely identify records in the list of items.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Expanded_description">Expanded description</a></strong></td>
+
+          <td>The <strong>Expanded description</strong> field contains the main description of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Brand">Brand</a></strong></td>
+
+          <td>The <strong>Brand</strong> field contains the name of the item manufacturer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Category">Category</a></strong></td>
+
+          <td>The <strong>Category</strong> field allows displaying the list of categories and linking the item to the selected category.<br>
+          It contains the category number and its description.<br>
+          For details on categories in eSuite, see the <a href="../../Dimensions/Dimensions_tables/Category_Table.htm"><strong>Category</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Size">Size</a></strong></td>
+
+          <td>The <strong>Size</strong> field contains the item size (e.g., 125 ml).</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><b>POS information</b></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target_POS">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
+          The default value is <em>PAL</em>.<br>
+          The <b>Target</b> field is grayed out unless the system is set up for multi targets.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> field in the POS information section contains the short description used at the points of sale.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Sub-department">Sub-department</a></strong></td>
+
+          <td>The <strong>Sub-department</strong> field links the item to a sub-department.<br>
+          For details, see the <a href="../POS_Table.htm#Sub-department"><strong>Sub-department</strong> field</a> in the <a href="../POS_Table.htm"><strong>POS</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Bottle_link">Bottle link</a></strong></td>
+
+          <td>The <strong>Bottle link</strong> field links the item to a bottle link that contains a deposit value. The bottle links are displayed in the drop-down menu.<br>
+          Records must already exist in the <a href="../Auxiliary_tables/Bottle_link_table.htm"><strong>Bottle link</strong> table</a> for the drop-down list to display choices.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Tare">Tare</a></strong></td>
+
+          <td>The <strong>Tare</strong> field links the item to a tare value that is used to subtract the item packaging weight from the total weight.<br>
+          For details on tare links in eSuite, see the <a href="../Auxiliary_tables/Tare_table.htm"><strong>Tare</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Follow_sub">Follow sub</a></strong></td>
+
+          <td>The <strong>Follow sub-department</strong> field specifies whether the item follows the linked sub-department sales information programming (checked) or not (unchecked).<br>
+          Selected by default.<br>
+          For details, see the <strong><a href="../POS_Table.htm#Follow_sub">Follow sub-department</a></strong> <a href="../POS_Table.htm#Follow_sub">field</a> in the <a href="../POS_Table.htm"><strong>POS</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Scalable">Scalable</a></strong></td>
+
+          <td>The <strong>Scalable</strong> field specifies whether the item is sold by weight and scaled at the POS (checked) or sold by price (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Food_stamp">Food stamp</a></strong></td>
+
+          <td>The <strong>Food stamp</strong> field specifies whether the item can be purchased using food stamps as tender (checked) or not (unchecked).<br>
+          For this field to work, the item must not be programmed to <a href="#Follow_sub">follow the sub-department settings</a>.<br>
+          The <strong>Food stamp</strong> flag may be specified for a whole <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm#WIC_item">sub-department</a> or <a href="../../Dimensions/Dimensions_tables/Department_table.htm#WIC_item">department keys</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="WIC">WIC</a> item</strong></td>
+
+          <td>The <strong>WIC item</strong> field specifies whether the item is WIC able (checked) or not (unchecked).<br>
+          For this field to work, the item must not be programmed to <a href="#Follow_sub">follow the sub-department settings</a>.<br>
+          The <b>WIC item</b> flag may be specified for a whole <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm#WIC_item">sub-department</a> or <a href="../../Dimensions/Dimensions_tables/Department_table.htm#WIC_item">department keys</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Force_price">Force price</a></strong></td>
+
+          <td>The <strong>Force price</strong> field specifies whether the item price must be manually entered when the item is sold at the POS (checked) or not (unchecked).<br>
+          For details, see the <a href="../POS_Table.htm#Force_price"><strong>Force price</strong> field section</a> in the <a href="../POS_Table.htm"><strong>POS</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Force_quantity">Force quantity</a></strong></td>
+
+          <td>The <strong>Force quantity</strong> field specifies whether the item quantity must be entered before the item can be sold at the POS (checked) or not (unchecked).<br>
+          For details, see the <a href="../POS_Table.htm#Force_quantity"><strong>Force quantity</strong> field</a> in then <a href="../POS_Table.htm"><strong>POS</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Stop_discount">Stop discount</a></strong></td>
+
+          <td>The <strong>Stop discount</strong> field specifies whether discounts may be applied on the item when it is sold at the POS (unchecked) or not (checked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_1">Taxable 1</a></strong></td>
+
+          <td>The <strong>Taxable 1</strong> field specifies whether the item has the first tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_2">Taxable 2</a></strong></td>
+
+          <td>The <strong>Taxable 2</strong> field specifies whether the item has the second tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_3">Taxable 3</a></strong></td>
+
+          <td>The <strong>Taxable 3</strong> field specifies whether the item has the third tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_4">Taxable 4</a></strong></td>
+
+          <td>The <strong>Taxable 4</strong> field specifies whether the item has the fourth tax for the retail region (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px" class="ListDark" colspan="2"><b>Price information</b></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target_price">Target</a></strong></td>
+
+          <td>The <b>Target</b> field contains the target identifier (the store group).<br>
+           The default value is <em>PAL</em>.<br>
+          For details, see the <a href="../Price_Table.htm#Target"><strong>Target</strong> field</a> in the <strong><a href="../Price_Table.htm">Price</a></strong> <a href="../Price_Table.htm">table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Level">Level</a></strong></td>
+
+          <td>The <strong>Level</strong> field contains the price level number.<br>
+          The default value is <em>1</em>.<br>
+          For details, see the <a href="../Price_Table.htm#Level"><strong>Level</strong> field</a> in the <strong><a href="../Price_Table.htm">Price</a></strong> <a href="../Price_Table.htm">table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Retail">Retail</a></strong></td>
+
+          <td>The <strong>Retail</strong> field contains the retail price and the retail quantity for the item.<br>
+          For details, see the <a href="../Price_Table.htm#Price"><strong>Price</strong> field</a> in the <strong><a href="../Price_Table.htm">Price</a></strong> <a href="../Price_Table.htm">table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Price_package">Price package</a></strong></td>
+
+          <td>The <b>Price package</b> field contains the retail package price and quantity for the item.&nbsp;<br>
+          For details, see the <a href="../Price_Table.htm#Package"><strong>Package</strong> field</a> in the <strong><a href="../Price_Table.htm">Price</a></strong> <a href="../Price_Table.htm">table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Mix_&amp;_Match">Mix &amp; Match</a></strong></td>
+
+          <td>The <strong>Mix &amp; Match</strong> field links the item to a mix &amp; match, which is used to mix items in order to match them to a price.<br>
+          For details, see the <a href="../Price_Table.htm#Mix"><strong>Mix</strong> field</a> in the <strong><a href="../Price_Table.htm">Price</a></strong> <a href="../Price_Table.htm">table</a>.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><b>Cost information</b></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="target_cost">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).&nbsp;<br>
+          The default value is <em>PAL</em>.<br>
+          The <b>Target</b> field is grayed out unless the system is set up for multi targets.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Authorized">Authorized</a></strong></td>
+
+          <td>The <strong>Authorized</strong> field specifies whether the current cost record is the official authorized cost (checked) or not (unchecked).<br>
+          It is useful in multi-vendors cases, when an item has more than one cost record.&nbsp;The cost record officially authorized is the one used in the reports.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor">Vendor</a></strong></td>
+
+          <td>The <strong>Vendor</strong> field links the current item cost record to a vendor.&nbsp;<br>
+          For details, see the <a href="../Cost_Table.htm#The_Vendor_ID_field"><strong>Vendor ID</strong> field</a> in the <strong><a href="../Price_Table.htm">Price</a></strong> <a href="../Price_Table.htm">table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Format">Format</a></strong></td>
+
+          <td>The <strong>Format</strong> field contains the buying format.<br>
+           The default value is <em>CASE</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Base">Base</a></strong></td>
+
+          <td>The <strong>Base</strong> field contains the regular item cost per case.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor_code">Vendor code</a></strong></td>
+
+          <td>The <strong>Vendor code</strong> field contains the code used by the vendor to identify the item.&nbsp;<br>
+          It is generally used to order the item from the vendor.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Case">Case</a></strong></td>
+
+          <td>The <strong>Case</strong> field contains the number of units per case for the item.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2>Creating an item</h2>
+
+      <ol>
+        <li>Open the <strong>Item creation</strong> table.<br>
+        By default, the only enabled field is <strong>Item number</strong>.</li>
+
+        <li>Type a new item code and press <b>Enter</b> on the keyboard.</li>
+
+        <li>If the UPC already exists in the database, the <strong>Item Creation</strong> table displays the information of the corresponding item.<br>
+        If the UPC does not exist in the database, the following confirmation dialog is displayed:<br>
+         <img src="Create_item_files/confirmation_message.png"></li>
+
+        <li>Click <strong>Yes</strong> to confirm.<br>
+        All fields are enabled for editing.</li>
+
+        <li>Enter the item information.</li>
+
+        <li>Save the changes and close the table.</li>
+
+        <li>Refresh the item grid to display the new item.</li>
+
+        <li>Deploy changes.</li>
+      </ol>
+
+      <p>Item information may be further edited from the master tables.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2>Random weight codes</h2>
+
+      <p>Random weight codes are identified by the digit <em>2</em> at the beginning of the UPC. They contain the product number on 5 digits and the price of the item encoded in the last 5 digits.</p>
+
+      <p>In eSuite, the <strong>Item creation</strong> table provides a tool that generates the random weight codes when creating the new item: the forward slash <u>on the numerical keyboard</u>. For example, by typing <em>12345</em> in the <strong>Item number</strong> field and hitting <strong>/</strong> <u>on the numerical keyboard</u>, the code will automatically change for <em>0021234500000</em>.</p>
+
+      <p><img class="Text" src="Create_item_files/random_weight_codes.png"></p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2>Freeze current entry button</h2>
+
+      <p><em>Currently under development.</em></p>
+
+      <p>The <strong>Freeze current entry</strong> button is used to freeze a part of the main code (UPC) in the <strong>Item number</strong> field.</p>
+
+      <p>It can be used for creating items from the same manufacturer. Since the first digits of the UPC are the same, they can be frozen and only the last digits will need to be entered for the new items.</p>
+
+      <p><img class="Text" height="37" src="Create_item_files/freeze_current_entry.png" width="228"></p>
+
+      <p>To unfreeze the digits, click again on the <strong>Freeze current entry</strong> button.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

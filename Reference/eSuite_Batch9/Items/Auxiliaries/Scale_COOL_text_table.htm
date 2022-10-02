@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Scale COOL Text Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Scale COOL Text Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxialaries<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>Scale COOL text</strong> table stores the texts that will be printed on the labels for the country of origin, the production method, etc.</p>
+
+      <p>Each COOL text contains a number to which an item is linked. This number can also be used in the <strong><a href="Scale_COOL_short_list_table.htm">Scale COOL short list</a></strong> table.</p>
+
+      <p>To link an item to a given COOL text, the <strong>Text</strong> and/or the <strong>Pre-text</strong> fields of the <strong>Scale information</strong> table are used, depending on whether the COOL text is a regular text or a pre-text. Typically, the pre-text is used to print production information in front of the COOL text.</p>
+
+      <p class="Note"><strong>NOTE:</strong> Even if the <strong>Scale COOL text</strong> table is an auxiliary table, its content is deployed to the front-end workstations using the "Deploy changes process".</p>
+
+      <h2>Displaying the Scale COOL text table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Auxiliary tables</strong>: the <strong>Start</strong> window opens in the <strong>Auxiliary</strong> work area.</li>
+
+        <li>Click on <strong>Scale Tables</strong> and then on the <strong>Scale COOL Text</strong>: the <strong>Scale COOL Text</strong> tab opens in the same window, displaying the <strong>Scale COOL Text List</strong>.</li>
+
+        <li>To modify an existing scale COOL text record, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu: the <strong>Scale COOL text</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new scale COOL text record, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Scale COOL text</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img"><img style="border-style:none" class="Text" src="Scale_COOL_text_table_files/scale_COOL_text.png" usemap="#scale_COOL_text_table"> <map name="scale_COOL_text_table">
+            <area shape="rect" coords="12, 114, 93, 142" href="#Target">
+            <area shape="rect" coords="98, 114, 198, 142" href="#Number">
+            <area shape="rect" coords="204, 114, 272, 142" href="#S-Dept">
+            <area shape="rect" coords="276, 114, 348, 141" href="#OperLevel">
+            <area shape="rect" coords="380, 117, 409, 139" href="#Pre-text">
+            <area shape="rect" coords="11, 163, 74, 191" href="#Font_size">
+            <area shape="rect" coords="79, 163, 397, 193" href="#Descriptor">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">*Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Scale COOL text</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier, i.e. the store group.<br>
+          It is a required field used to uniquely identify records in the <strong>Scale COOL Text List</strong>.<br>
+          The default value of the <strong>Target</strong> field is PAL.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <strong>Number</strong> field contains the identifier of the scale COOL text information. This identifier is used to link scale information to scale COOL text information.<br>
+          It is a required field used to uniquely identify records in the <strong>Scale COOL Text List</strong>.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="S-Dept">S-Dept</a></strong></td>
+
+          <td>The <strong>Sub-department</strong> field links the scale COOL text information to a <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>.<br>
+          For details, see the <a href="#The_Sub-department_field"><strong>Sub-department</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OperLevel">OperLevel</a></strong></td>
+
+          <td>The <strong>Operator level</strong> field contains the number of the minimum operator level needed to manage the scale nutrifacts records.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Pre-text">Pre-text</a></strong></td>
+
+          <td>The <strong>Pre-text</strong> field specifies whether the scale COOL text record is a pre-text (checked) or not (unchecked).<br>
+          The pre-text is typically used to print production information in front of the COOL text.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Font_size">Font size</a></strong></td>
+
+          <td>The <strong>Font size</strong> field specifies the font size to use for the COOL text.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Descriptor">Descriptor</a></strong></td>
+
+          <td>The <strong>Descriptor</strong> field contains the description of the COOL text.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Sub-department_field">The Sub-department list</a></h2>
+
+      <p>The <strong>Sub-department (S-Dept)</strong> links the scale COOL text information to a <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>.&nbsp;</p>
+
+      <p>In most POS systems, item sales are linked to sale categories for reporting purposes. Because different POS systems use different terminology for sale links, it is important to understand the LOC SMS eSuite terminology and how it relates to the POS system. The eSuite software uses a three-tier sale links level organization:</p>
+
+      <ol>
+        <li>Item sales are accumulated in sub-departments;</li>
+
+        <li>Sub-department sales are accumulated in departments (a department sales total contains sales from one or more sub-departments);</li>
+
+        <li>Department sales are accumulated in group sales (a group sales total contains sales from one or more departments).</li>
+      </ol>
+
+      <p>The eSuite software sale link levels (sub-departments, departments and groups) are defined in the <strong><a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm">Sub-department</a></strong> and <strong><a href="../../Dimensions/Dimensions_tables/Department_table.htm">Department</a></strong> tables.</p>
+
+      <p>Whether or not the POS system uses the same terms, eSuite requires that items be linked to a sub-department or to a first sale link level.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

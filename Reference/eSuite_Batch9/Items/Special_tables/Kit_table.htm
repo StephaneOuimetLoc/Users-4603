@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Kit Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Kit Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2 name="Top"><a name="Top0"></a>Information</h2>
+
+      <p><span>Document needs revising and updating once the</span> <strong><span>Generate ratio</span></strong> <span>feature is available in eSuite (Raluca, 2019-08-19)</span></p>
+
+      <p>The <b>Kit</b> table is used to join multiple items and sell them as one item. It is used to manage kits that contain different items. Kits are considered items since they have their own UPCs; the major difference is that they include other items. A kit may contain an unlimited number of items. Each of these items must already exist in the system.</p>
+
+      <p>The present document describes the <strong>Kit</strong> table <a href="#Layout">fields and functionalities</a>. It explains how to <a href="#Creating_a_kit">create kits</a> in eSuite and how to <a href="#Generating_ratios">generate ratios automatically</a>.</p>
+
+      <h2><a name="Displaying_the_Kit_table">Displaying the Kit table</a></h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item</strong> <strong>list</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Items - General List</strong>.</li>
+
+        <li>Enter the search criteria and click <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window.</li>
+
+        <li>Select a record and click on <strong>Edit</strong> on the bottom of the item grid: the option menu is displayed.</li>
+
+        <li>Select <strong>Special items</strong> and then <strong>Kit</strong>: the <strong>Kit edit table</strong> opens overlapping the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Kit_table_files/kit_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Kit</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>Kit table grid</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Kit_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="11, 140, 81, 166" href="#Level">
+            <area shape="rect" coords="11, 190, 389, 218" href="#Linked_UPC">
+            <area shape="rect" coords="12, 240, 87, 268" href="#Multiple">
+            <area shape="rect" coords="92, 240, 166, 267" href="#Ratio_sale">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Kit table grid</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Kit_table_files/table_grid.png" usemap="#table_grid"> <map name="table_grid">
+            <area shape="rect" coords="10, 10, 30, 30" href="">
+            <area shape="rect" coords="10, 10, 30, 30" href="">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p>The <strong>Kit</strong> table grid offers quick information on the items that are part of the kit. The following columns are displayed: <strong><a href="#Level">Level</a></strong> and <strong><a href="#Linked_UPC">Linked UPC</a></strong>.</p>
+
+      <p>Columns are movable, resizable and may be selected/deselected for a customized experience. They allow sorting the records in an ascending or a descending order.<br>
+      By default, records are displayed in ascending order by level. Selecting a record allows displaying and editing its information in the main section of the <strong>Kit</strong> table.</p>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the item <strong>Kit</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Level">Level</a></strong></td>
+
+          <td>The <strong>Level</strong> field contains the price level number.<br>
+          Its default value is <em>1</em>.<br>
+          The price level number indicates which price must be used to calculate the ratio of the item in the kit.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Linked_UPC">Linked UPC</a></strong></td>
+
+          <td>The <strong>Linked UPC</strong> field contains the UPC number of the linked item, i.e. the item included in the kit.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Multiple">Multiple</a></strong></td>
+
+          <td>The <b>Multiple</b> field contains the quantity of this item included in the kit.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Ratio_sale">Ratio sale</a></strong></td>
+
+          <td>The <b>Ratio sale</b> field contains the percentage the item holds in the kit, calculated from the ratio of the individual item price on the kit price.<br>
+          It defines the price for each item of the kit, for the item sales reports to correctly reflect the sales amounts.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Table grid</strong></td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Level_column">Level column</a></strong></td>
+
+          <td>&nbsp;The <strong>Level column</strong> contains the price levels of all the items included in the kit.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Linked_UPC_column">Linked UPC column</a></strong></td>
+
+          <td>The <strong>Linked UPC</strong> <strong>column</strong> contains the UPC numbers of all the items included in the kit.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="Creating_a_kit">Creating a kit</a></h2>
+
+      <p>A kit is an item containing other items. For example, a gift basket that contains a chocolate bar, bottle of wine and a book.<br>
+      Inventory is not kept on the gift basket but on the individual items in the gift basket. When selling a gift basket, the individual items are reduced.</p>
+
+      <p>After creating the first kit in the system, eSuite must be reloaded. The software checks if there are any kits in the system and if not, it disables the kit update engine to speed up the transaction process.</p>
+
+      <p>The <b>Kit</b> table is used to manage the kit. For kits that contain many of the same item, like a carton of cigarettes, use the <b><a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Item_tables/Cost_table/Fields/Split_code_field.htm">Split code</a></b> and <b><a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Item_tables/Cost_table/Fields/Split_qty_field.htm">Split quantity</a></b> fields of the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Item_tables/Cost_table/Cost_table.htm"><b>Cost</b> table</a>.</p>
+
+      <p>To create a kit, follow these steps:</p>
+
+      <ol>
+        <li class="Steps">Create a new item (the kit).</li>
+
+        <li class="Steps">Select the kit record in the item list. <a href="#Displaying_the_Kit_table">Open</a> the <strong>Kit</strong> table.</li>
+
+        <li class="Steps">Click <strong>Add</strong> <img class="Text" height="21" src="Kit_table_files/add.png" width="19"> in the toolbar to add a new item to the kit.<br>
+        The <strong><a href="#Item">Item</a></strong> field is populated with the kit UPC.<br>
+         The <strong><a href="#Level">Level</a></strong> field displays <em>1</em> (<em>Regular</em>).<br>
+         <img src="Kit_table_files/add_item.png"></li>
+
+        <li class="Steps">If necessary, change the <strong><a href="#Level">price level</a></strong>.</li>
+
+        <li class="Steps">In the <strong>Linked UPC</strong> field, enter the item code, <em>or</em><br>
+        Click on the arrow to open the <strong>Linked UPC window</strong>. Click <strong>Go</strong> to display the item list. Select the item to add to the kit and click <strong>OK</strong> to display the item in the <strong>Kit</strong> table.<br>
+         <img src="Kit_table_files/linked_UPC_window.png"></li>
+
+        <li class="Steps">Enter the <strong><a href="#Multiple">Multiple</a></strong> value.</li>
+
+        <li class="Steps">Save the changes:<br>
+         <img src="Kit_table_files/save_kit_item.png"></li>
+
+        <li class="Steps">Repeat these steps to add more items to the kit:<br>
+         <img src="Kit_table_files/kit_items.png"></li>
+
+        <li class="Steps">Click on <strong>Generate ratio</strong> to automatically generate the ratio for all items in the kit. <strong><span>Please update when Generate ratio feature is available + not sure whether needs to be populated now or at the very end via Generate ratio. Please test for accuracy.<br>
+        ADD IMAGE</span></strong></li>
+
+        <li class="Steps">Save the changes.</li>
+      </ol>
+
+      <p class="Note"><strong>NOTE:</strong> The ratio value can also be entered manually. The <b>Ratio sale</b> field is <u>left blank</u> for the last item of the kit for rounding purposes. The system will calculate it to 100 minus the ratios of the other items in the kit. The <strong>Ratio sale</strong> field of the other items must not be blank. If the kit retail price is 10.00, the system will not know what it is supposed to be calculating and will enter the total retail price of the kit for each of its items.</p>
+
+      <p>For details, see the <a href="Kit_examples.htm">examples</a>.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Generating_ratios">Generating ratios</a></h2>
+
+      <p>Each item that composes a kit has a <a href="#Ratio_sale">ratio sale</a>. This ratio indicates the percentage the item holds in the kit, calculated from the ratio of the individual item price on the kit price. It defines the price for each item of the kit, for the item sales reports to correctly reflect the sales amounts. The values of the ratios may be generated automatically.</p>
+
+      <p>The <b>Ratio sale</b> field is <u>left blank</u> for the last item of the kit for rounding purposes.</p>
+
+      <p>To generate automatically the ratio for all items in the kit, click on the <strong>Generate ratio</strong> button.</p>
+
+      <h3>How generating automatic ratio works</h3>
+
+      <p>The system calculates the ratio sale for the first item of the kit, i.e. the ratio of the item price on the kit price. It continues with the second item, and so on until the next to last item. No ratio is calculated for the last item of the kit for rounding purposes. The last item of the kit absorbs the rebate given by the kit.</p>
+
+      <div class="Note">
+        <b>NOTES:</b> 
+
+        <ul>
+          <li>When the kit only includes one item, no ratio is calculated.</li>
+
+          <li>The order in which the items are added in the <b>Kit</b> table becomes significant with generating the automatic ratio.</li>
+        </ul>
+      </div>
+
+      <h3>Examples</h3>
+
+      <p>Let us see some examples of the automatic ratio generation.</p>
+
+      <h5><strong>Example 1</strong></h5>
+
+      <p>A gift basket that includes three bottles of wine is sold for $20.00. Individually, each bottle is sold $10.00. <span><strong>Images below shown as example; please change them with the equivalents in eSuite when Generate ratio available.</strong></span></p>
+
+      <p class="Img"><img class="Text" height="137" src="Kit_table_files/Ex1-without_ratio.jpg" width="258"></p>
+
+      <p>After generating the ratios automatically, the ratio of bottle 1 is <em>50</em> ($10.00/$20.00 = 50%), and the ratio of bottle 2 is <em>50</em> ($10.00/$20.00 = 50%). The <strong>Ratio sale</strong> field of bottle 3 is left blank for rounding purposes. The last item of the kit absorbs the rebate given by the kit and bottle 3 is considered free.</p>
+
+      <p><img class="Text" height="137" src="Kit_table_files/Ex1-with_ratios.jpg" width="258"></p>
+
+      <p><strong>Example 2</strong></p>
+
+      <p>A gift basket that includes 1 bottle of shampoo, 1 bottle of conditioner and 2 soaps is sold for $5.50. Individually, the bottle of shampoo is sold $2.50, the bottle of conditioner is sold $2.50 and the soaps are sold $1.00 each.</p>
+
+      <p><img class="Text" height="137" src="Kit_table_files/Ex2-without_ratio.jpg" width="258"></p>
+
+      <p>After generating the ratios automatically, the ratio of the bottle of shampoo is <em>45.45</em> ($2.50/$5.50 = 45.45%), and the ratio of the bottle of conditioner is <em>45.45</em> ($2.50/$5.50 = 45.45%). The <strong>Ratio sale</strong> field of the 2 soaps is left blank for rounding purposes.&nbsp;The last item of the kit absorbs the rebate given by the kit, so in this case, the 2 soaps are sold $0.25 each ($5.50 - $2.50 - $2.50 = $0.50/2 = $0.25).</p>
+
+      <p><img class="Text" height="137" src="Kit_table_files/Ex2-with_ratios.jpg" width="258"></p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

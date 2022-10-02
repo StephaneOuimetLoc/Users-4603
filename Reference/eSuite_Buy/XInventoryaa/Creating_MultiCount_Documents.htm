@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SMS Help Document" />
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Multi-Count Inventory</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿ <!-- #BeginTemplate "../../../html_template==NO-TOC.dwt" --> <!-- Title/Keywords edit on new documents --> <!-- #BeginEditable "doctitle" --> <!-- #EndEditable --> <a id="top" name="top"></a> <!-- Docs page layout --> <br />
+     
+
+    <h1><!-- #BeginEditable "Title" -->Multi-Count Documents <!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Buy &gt; Inventory &gt; Count &gt; Count by Sub-Department <!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" --><!--
+                --><!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>This document describes how to perform the different required operations in an inventory multi-count document.</p>
+
+      <p>The possible operations are:</p>
+
+      <ul>
+        <li><a href="#creating">Create</a> and <a href="#editing">edit</a> a multi-count document</li>
+
+        <li><a href="#adding_items">Add items</a> to the multi-count document</li>
+
+        <li><a href="#voiding">Remove</a> items from the multi-count document</li>
+
+        <li><a href="#add_quantities">Manage quantities</a> into the multi-count document</li>
+
+        <li><a href="#deleting">Delete</a> a multi-count document</li>
+
+        <li><a href="#suspending">Suspend</a> or <a href="#closing">close</a> the multi-count document</li>
+      </ul>
+
+      <p>All count documents are now created as multi-count. Therefore the count option is no longer available.</p>
+
+      <p>In a multi-count document, the first count replaces the inventory quantity with the value entered. Any following count for the same item at the same date is incremental.</p>
+
+      <h2>Generating an inventory count sheet by sub-department</h2>
+
+      <ol>
+        <li>In the <strong>Start</strong> menu, select <strong>Count by Sub-Department</strong>.<br />
+         <img width="570" height="422" src="Creating_MultiCount_Documents_files/Menu_Count_SubDept.png" /></li>
+
+        <li>Set the required criteria and filter the records.<br />
+         <img width="603" height="639" class="Text" src="Creating_MultiCount_Documents_files/Wizard_count_SubDept.png" /></li>
+
+        <li>Click Execute to generate the report.<br />
+         <img width="1335" height="483" class="Text" src="Creating_MultiCount_Documents_files/Count_sheet_results.png" /></li>
+      </ol>
+
+      <h2><a id="creating" name="creating">Creating a multi-count document</a></h2>
+
+      <p>To create a multi-count document:</p>
+
+      <ol>
+        <li>In the Launcher, expand <strong>Inventory</strong>.</li>
+
+        <li>Select <strong>Count</strong>.<br />
+         The <strong>Start</strong> window opens on the desktop.<br />
+         <img width="608" height="429" class="Text" src="Creating_MultiCount_Documents_files/Create_new_document.png" /></li>
+
+        <li>Click <strong>New</strong>.<br />
+         The <strong>New document</strong> window opens.<br />
+         <img width="453" height="252" src="Creating_MultiCount_Documents_files/New_document.png" /></li>
+
+        <li>Select the Store and the Inventory date.</li>
+
+        <li>You can specify the Vendor and/or the Sub-department or leave both blank</li>
+
+        <li>Click <strong>Create</strong> to confirm the creation of the multi-count document.</li>
+      </ol>
+
+      <p>When a multi-count document is created:</p>
+
+      <ul>
+        <li>Its status is <em>Open</em>. The transaction number and date are shown in the Context Tools.<br />
+         <img width="340" height="297" src="Creating_MultiCount_Documents_files/Context_Tools.png" /></li>
+
+        <li>The new multi-count document is listed in the Open document grid that is available from the <strong>Documents</strong> and <strong>Documents - All</strong> options in the <strong>Start</strong> menu.</li>
+      </ul>
+
+      <h2>Adding items to the multi-count document</h2>
+
+      <p>Once a multi-count document is created, items can be added to it. At this point, the Items, Lines and Header are no longer greyed out.</p>
+
+      <p><img width="570" height="423" src="Creating_MultiCount_Documents_files/Multi_Count_Menu.png" /></p>
+
+      <p>To add items:</p>
+
+      <ol>
+        <li>In the <strong>Start</strong><span>&nbsp;</span> window, select <strong>Items</strong>. Then enter the criteria the search for the required items, and click <strong>Execute</strong>.<br />
+         <img width="425" height="633" src="Creating_MultiCount_Documents_files/Wizard_items.png" /><br />
+         or<br />
+         select <strong>Items - All</strong> to display all items.<br />
+         <img width="1347" height="504" src="Creating_MultiCount_Documents_files/Editable_fields.png" /><br />
+         The <strong>Case</strong>, <strong>Unit</strong>, <strong>Weight</strong> and <strong>Cost</strong> fields are editable directly in the grid.</li>
+
+        <li>Double-click in any editable field, <a id="add_quantities" name="add_quantities">add the quantities</a>, then press <strong>Enter</strong>.<br />
+         <img width="1379" height="494" class="Text" src="Creating_MultiCount_Documents_files/Edited_items.png" /></li>
+
+        <li>Once the values are entered, click <strong><img width="23" height="23" class="Text" src="Creating_MultiCount_Documents_files/Icon_save.png" /></strong>.<br />
+         The new values are displayed in the <strong>Resume</strong> and <strong>Cost</strong> columns.<br />
+         <img width="1378" height="490" class="Text" src="Creating_MultiCount_Documents_files/Resume_Cost.png" /><br />
+        </li>
+      </ol>
+
+      <h2><a id="editing" name="editing">Editing</a> the multi-count document</h2>
+
+      <p>Before closing the multi-count document, it is possible to review and edit the information in it. This is done through the <strong>Document</strong> window.</p>
+
+      <ol>
+        <li>From the <strong>Start</strong> menu, select <strong>Documents - All</strong>.<br />
+         The list of multi-count documents are displayed in the document grid.</li>
+
+        <li>Select a document, and right-click to display the list of options.<br />
+         <img width="1005" height="287" src="Creating_MultiCount_Documents_files/Edit_count_document.png" /></li>
+
+        <li>Select <strong>Open</strong>.</li>
+
+        <li>From the Start menu, select Lines - All.<br />
+         The content of the document is displayed.<br />
+         <img width="1192" height="404" src="Creating_MultiCount_Documents_files/Open_Documents.png" /></li>
+
+        <li>Select a line and click <strong>Edit</strong>.<br />
+         <img width="805" height="433" src="Creating_MultiCount_Documents_files/Line_Edit.png" /></li>
+
+        <li>Modify the values and click <img width="23" height="23" class="Text" src="Creating_MultiCount_Documents_files/Icon_save.png" />.</li>
+
+        <li>Close the window and click <img width="24" height="24" class="Text" src="Creating_MultiCount_Documents_files/Icon_refresh.png" /> to refresh the values displayed in the grid.<br />
+         <img width="1192" height="407" src="Creating_MultiCount_Documents_files/Lines_window.png" /></li>
+      </ol>
+
+      <h2><a id="voiding" name="voiding">Voiding</a> items</h2>
+
+      <p>Items can be removed from the multi-count document.</p>
+
+      <ol>
+        <li>In the Lines section of the Documents window, select the item to remove and right-click to display the list of options.<br />
+         <img width="994" height="385" src="Creating_MultiCount_Documents_files/Lines_void.png" /></li>
+
+        <li>Select <strong>Void</strong>.<br />
+         A confirmation message is prompted.<br />
+         <img width="275" height="165" src="Creating_MultiCount_Documents_files/Confirm_void.png" /></li>
+
+        <li>Click <strong>Yes</strong> to delete the item from the multi-count document.</li>
+      </ol>
+
+      <h2><a id="deleting" name="deleting">Deleting</a> a multi-count document</h2>
+
+      <p>Opened multi-count documents can be deleted from the <strong>Document</strong> window:</p>
+
+      <ol>
+        <li>In the Context Tools window, click <strong><img width="21" height="25" class="Text" src="Creating_MultiCount_Documents_files/Icon_Cancel.png" /></strong>.<br />
+         A confirmation message is prompted.<br />
+         <img width="297" height="166" src="Creating_MultiCount_Documents_files/Confirm_cancel.png" /></li>
+
+        <li>Click <strong>Yes</strong> to delete the document.<br />
+         In the Opened documents grid, click <img class="Text" src="Creating_MultiCount_Documents_files/Icon_refresh.png" /> to refresh the list; the deleted document is not longer listed.</li>
+      </ol>
+
+      <h2><a id="suspending" name="suspending">Suspending</a> a multi-count document</h2>
+
+      <p>Opened multi-count documents can be suspended and edited at a later time.</p>
+
+      <ol>
+        <li>Open the <strong>Document</strong> window for the multi-count documents.</li>
+
+        <li>Click <span style="mso-spacerun: yes;"><img width="21" height="23" class="Text" src="Creating_MultiCount_Documents_files/Icon_Hour_Glass.png" /> in the Context Tools window to suspend the document.</span></li>
+      </ol>
+
+      <h2><a id="closing" name="closing">Closing</a> the multi-count document</h2>
+
+      <ol>
+        <li>From the <strong>Start</strong> menu, click <strong>Documents - All</strong>.<br />
+         The list of multi-count documents is displayed in the grid.</li>
+
+        <li>Select a document and open it.</li>
+
+        <li>Click <span style="mso-no-proof: yes;"><img width="21" height="23" class="Text" src="Creating_MultiCount_Documents_files/Icon_Arrow.png" v:shapes="Picture_x0020_38" /> in the <strong>Context Tools</strong> window.<br />
+         A confirmation message is prompted.<br />
+        </span> <img width="289" height="167" src="Creating_MultiCount_Documents_files/Confirm_close.png" /></li>
+
+        <li>
+          Click <strong>Yes</strong> to close the document.<br />
+           In the Opened documents grid, click <span style="mso-spacerun: yes;"><img width="24" height="24" class="Text" src="Creating_MultiCount_Documents_files/Icon_refresh.png" /> to refresh the list; the multi-count document is no longer listed.</span> 
+
+          <p class="NoteList"><strong>NOTE:</strong> It is not possible to reopen a closed multi-count document.</p>
+        </li>
+      </ol>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container --><a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

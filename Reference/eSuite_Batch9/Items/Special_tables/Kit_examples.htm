@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Kit Examples</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Kit Examples <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The <b>Kit</b> table is used to join multiple items and sell them as one item. It is used to manage kits that contain different items. Kits are considered items since they have their own UPCs; the major difference is that they include other items. A kit may contain an unlimited number of items. Each of these items must already exist in the system.</p>
+
+      <p>A kit links the big format of an item to its smallest unit. For example, a carton or cigarettes is linked to the pack and not the opposite.<br>
+      </p>
+
+      <p>Before creating a kit, you must adjust the inventory of the item by transferring the quantity in inventory for the big format (carton) into the smallest unit (pack). Once the kit has been created, the inventory of the smallest unit (pack) will be affected when the big format (carton) is purchased or sold.</p>
+
+      <p>After having created the first kit in the system, eSuite must be reloaded. The software checks if there are any kits in the system and if not, it disables the kit update engine to speed up the transaction process.</p>
+
+      <p>The <b>Kit</b> table is used to manage the kit. For kits that contain many of the same item, like a carton of cigarettes, use the <b><a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Item_tables/Cost_table/Fields/Split_code_field.htm">Split code</a></b> and <b><a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Item_tables/Cost_table/Fields/Split_qty_field.htm">Split quantity</a></b> fields of the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Item_tables/Cost_table/Cost_table.htm"><b>Cost</b> table</a>.</p>
+
+      <h2>Example</h2>
+
+      <h4>&nbsp;A basket that contains 1 bottle of shampoo, 1 bottle of conditioner and 2 soaps</h4>
+
+      <p>The shampoo, the conditioner and the soap must already exist in the database.</p>
+
+      <ol>
+        <li>Create the basket item.</li>
+
+        <li>In the item list, select the basket item. Click <strong>Edit</strong> in the bottom menu, then <strong>Special items</strong> and Kit: the <strong>Kit</strong> table opens on the desktop.</li>
+
+        <li>Click <strong>Add</strong> <img class="Text" height="21" src="Kit_examples_files/add.png" width="19"> in the toolbar to add a new item to the kit.<br>
+        Keep <i>1</i> in the <a href="Kit_table.htm#Level"><b>Level</b> field</a>.<br>
+        Add the <em>shampoo</em> item in the <a href="Kit_table.htm#Linked_UPC"><strong>Linked UPC</strong> field</a>.<br>
+        Type <em>1</em> in the <a href="Kit_table.htm#Multiple"><strong>Multiple</strong> field</a>.</li>
+
+        <li>Click <strong>Add</strong> <img class="Text" height="21" src="Kit_examples_files/add.png" width="19"> in the toolbar to add a new item to the kit.<br>
+        Keep <i>1</i> in the <a href="Kit_table.htm#Level"><b>Level</b> field</a>.<br>
+        Add the <em>conditioner</em> item in the <a href="Kit_table.htm#Linked_UPC"><strong>Linked UPC</strong> field</a>.<br>
+        Type <em>1</em> in the <a href="Kit_table.htm#Multiple"><strong>Multiple</strong> field</a>.</li>
+
+        <li>Click <strong>Add</strong> <img class="Text" height="21" src="Kit_examples_files/add.png" width="19"> in the toolbar to add a new item to the kit.<br>
+        Keep <i>1</i> in the <a href="Kit_table.htm#Level"><b>Level</b> field</a>.<br>
+        Add the soap item in the <a href="Kit_table.htm#Linked_UPC"><strong>Linked UPC</strong> field</a>.<br>
+        Type <em>2</em> in the <a href="Kit_table.htm#Multiple"><strong>Multiple</strong> field</a>.<br>
+        <br>
+         <img height="248" src="Kit_examples_files/kit_table_items.png" width="491" class="Text"></li>
+
+        <li><span class="auto-style1">Click on the <b>Generate ratio</b> button to calculate the items ratios.</span></li>
+
+        <li>Save the information.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

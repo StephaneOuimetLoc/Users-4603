@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - How to Program Targeted Coupons</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - How to Program Targeted Coupons <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Coupon List <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Targeted coupons are store and vendor coupons given by the system when the specified criteria are reached. They can be for specific customers or they have to be clipped from the store's Web site.</p>
+
+      <p>Like any item in the system, the targeted coupons have their own UPCs; they are considered negative items.</p>
+
+      <p>By default, the targeted store coupons are linked directly to the items like and they affect the item sales.<br>
+      By default, the targeted vendor coupons are added as new registrations in the transactions and they do not affect the item sales.</p>
+
+      <p>Targeted coupons may be programmed in the classical way, namely by entering their <strong>POS</strong> and <strong>price</strong> information and defining the criteria by means of the <strong>Electronic coupon link</strong> table.</p>
+
+      <p>However, eSuite offers the <strong><a href="../Coupons/Coupons.htm">Coupon wizard</a></strong> that facilitates the creation of coupons by grouping all criteria (type, method, quantity, amount, etc.) that must be respected for the coupon to be applied.</p>
+
+      <p>By default, a targeted coupon is only given once in a transaction, even if its criteria are matched several times, except if it is added more than once in the customer's account.</p>
+
+      <p>Only one targeted coupon discount may be applied on an item, but some methods may be set in the targeted coupons definition to change these default behaviors. For details, see <strong><a href="../Coupons/Coupons.htm">Coupons</a></strong>.</p>
+
+      <h2>Targeted coupon example</h2>
+
+      <p>The <strong>Coupon wizard</strong> is used to program the criteria that must be respected for the targeted coupons to be applied.</p>
+
+      <p>Below are the steps for programming a targeted coupon. For more examples, see <strong><a href="Targeted_coupons_examples.htm">Targeted coupons - examples</a></strong>.</p>
+
+      <h4>Buy 2 bags of Ruffles chips and a bottle of Gatorade for $7.00</h4>
+
+      <p>This coupon is offered for 2 bags of any Ruffles chips flavor and 1 bottle of any Gatorade flavor.</p>
+
+      <p>All Ruffles flavors must be part of the same promotion (in the example below, <em>210</em>).<br>
+      All Gatorade flavors must be part of the same promotion (in the example below, <em>211</em>).</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Bundle price</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px">Price: enter <em>7.00</em></td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Targeted</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select the right sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="158" src="../Electronic_coupons_programming/Electronic_coupons_programming_files/main_section.png" width="415">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add condition</strong> to add the criteria related to the Ruffles chips promotion.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Condition</strong> field: select <em>Promo ID sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the Ruffles chips promotion identification number.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>2</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent</em>.<br>
+          This method (see <em><a href="#data_view">Data view</a></em> in <strong>Criteria tab</strong>) specifies that the Ruffles chips are part of the bundle.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="height: 21px; width: 9px;">
+          </td>
+
+          <td style="width: 423px; height: 21px;">Click <strong>OK</strong> to confirm the changes and close the <strong>Add criteria</strong> window.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="440" src="Targeted_coupons_programming_files/add_criteria_ruffles.png" width="340">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Criteria</strong> tab, click <strong>Add condition</strong> to&nbsp;add the criteria related to the Gatorade promotion.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td><strong>Condition</strong> field: select <em>Promo ID sales</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the Gatorade promotion identification number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td><strong>Minimum measure</strong> field: select <em>Quantity</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td><strong>Minimum value</strong> field: enter <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent</em>.<br>
+          This method (see <em><a href="#Data_view">Data view</a></em> in <strong>Criteria tab</strong>) specifies that Gatorade is part of the bundle.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in this criteria</strong>.<br>
+           This method (see <em><a href="#Data_view">Data view</a></em> in <strong>Criteria tab</strong>) forces the system to apply the targeted coupon discount on the bottles of Gatorade.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td>Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td>Click <strong>OK</strong> to confirm the changes and close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td><img class="Text" height="442" src="Targeted_coupons_programming_files/add_criteria_gatorade.png" width="340">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="323" src="Targeted_coupons_programming_files/coupon_details.png" width="416">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">6. In the <strong>Descriptions</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="height: 12px; width: 9px;">
+          </td>
+
+          <td style="height: 12px;"><strong>Expanded description</strong>: enter the expanded description of the promotion (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="323" src="Targeted_coupons_programming_files/coupon_descriptions.png" width="416">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">7. Click <strong>Save</strong> in the toolbar.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td>The system will automatically assign the record a <strong>coupon code</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td>&nbsp;<img class="Text" height="157" src="Targeted_coupons_programming_files/coupon_code.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em><a name="Data_view">Data view</a></em>):</td>
+        </tr>
+
+        <tr>
+          <td style="width: 9px">&nbsp;</td>
+
+          <td>&nbsp;<img class="Text" height="324" src="Targeted_coupons_programming_files/criteria_text_view.png" width="416">&nbsp;&nbsp;&nbsp; <img class="Text" height="324" src="Targeted_coupons_programming_files/criteria_data_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp;<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">8. Add this offer to a customer account. &nbsp;</td>
+        </tr>
+      </table>
+
+      <p>In this example:</p>
+
+      <ul>
+        <li>The customer pays $7.00 for 2 bags of Ruffles chips and 1 bottle of Gatorade.</li>
+
+        <li>The targeted coupon discount, which is the difference between the total value of the 3 items and $7.00, is applied on the bottle of Gatorade.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="Targeted_coupons_examples.htm">Go to Targeted coupons - examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

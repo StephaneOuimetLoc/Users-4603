@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Offers Reports</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Care - Offers Reports <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Care &gt; Offers <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The <strong>Offers</strong> reports allow analysis and follow-up of store and vendor discounts. They provide information such as the discount value, the type of offers assigned and used by customers, etc.</p>
+
+      <p>The Offers reports are available from <strong>eSuite Care</strong>:</p>
+
+      <ol>
+        <li>In the launcher, click on <strong>Offers</strong>.</li>
+
+        <li>Select the right type of report from the <strong>Start</strong> window.</li>
+      </ol>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="width: 560px"><img height="588" src="Offers_reports_files/offers_reports.png" width="480"></td>
+
+          <td>
+            <p><strong>Offers reports:</strong></p>
+
+            <ul>
+              <li><strong><a href="#targeted_offers">Targeted offers</a></strong></li>
+
+              <li><strong><a href="#Details">Details</a></strong></li>
+
+              <li><strong><a href="#assigned">Assigned offers</a></strong></li>
+
+              <li><strong><a href="#details">Details</a></strong></li>
+
+              <li><strong><a href="#redemptions">Redemptions</a></strong></li>
+
+              <li><strong><a href="#tasks">Offer tasks</a></strong></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Targeted <a name="targeted_offers">offers</a></h2>
+
+      <p>The <strong>Targeted offers wizard</strong> offers criteria selection that includes offer code and description, sub-department, category, family and report code. It displays the unassigned offers only. The <strong>More criteria</strong> button adds further offer-related criteria.</p>
+
+      <p><img height="568" src="Offers_reports_files/targeted_offers_wizard.png" width="395"></p>
+
+      <p>The <strong>Offers - Items list</strong> displays the electronic offers available to customers.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Edit</strong> opens the <strong>Coupon</strong> table for the modification of the selected offer and the creation of new offers.</li>
+
+        <li><strong>Analyze</strong> displays the offer details.<br>
+         It provides access to queries for further-drill down to previous results (offers, items and customers).</li>
+
+        <li><strong>Action</strong> allows <a href="../Assign_targeted_coupons/Assign_targeted_coupons.htm">assigning the offer</a>, creting GS1 coupons (currently under development) and creating offers.</li>
+      </ul>
+
+      <p><img height="596" src="Offers_reports_files/items_report.png" width="886"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Offers - Items</strong> report.</p>
+      " 
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 190px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 190px"><strong>Offer code</strong></td>
+
+          <td>The offer number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>POS description</strong></td>
+
+          <td>The description of the offer displayed on the POS screen and/or printed on the receipt.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Funding</strong></td>
+
+          <td>Defines whether the coupon is a store or a vendor coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Value</strong></td>
+
+          <td>The value of the discount given with the offer.<br>
+          It works in relation with the <a href="#Value type"><strong>Value type</strong> field</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong><a name="Value_type">Value type</a></strong></td>
+
+          <td>The type of the discount given with the offer (cents off, buy X get Y free, bundle, etc.).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Offer type</strong></td>
+
+          <td>The type of offer. Default value: <i>Targeted</i>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Start date</strong></td>
+
+          <td>The date on which the coupon event becomes effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>End date</strong></td>
+
+          <td>The date on which the coupon event is no longer effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px; height: 40px;"><strong>Last date</strong></td>
+
+          <td style="height: 40px">The date on which the offer was last modified.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="assigned">Assigned</a> offers</h2>
+
+      <p>The <strong>Assigned offers wizard</strong> offers criteria selection that includes offer code and description, customer, category, family and report code. It allows breaking down the report information by customer.</p>
+
+      <p><img class="Text" height="570" src="Offers_reports_files/assigned_wizard.png" width="395"></p>
+
+      <p>The <strong>Assigned offers report</strong> displays the list of targeted offers assigned to customers, including clip or ready to use offer information, the exposure total value and the used total value by offer.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Edit</strong> opens the <strong>Coupon</strong> table for the modification of the selected offer and the creation of new offers.</li>
+
+        <li><strong>Analyze</strong> allows to display the offer details.<br>
+         It offers tools for performing subqueries and linked queries to further drill down to previous results (offers, items and customers).</li>
+
+        <li><strong>Action</strong> allows <a href="../Assign_targeted_coupons/Assign_targeted_coupons.htm">assigning the offer</a>, creating GS1 coupons (currently under development) and creating offers.</li>
+      </ul>
+
+      <p><img height="779" src="Offers_reports_files/assigned_report.png" width="1203"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Offers - Assigned</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 190px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 190px"><strong>Offer code</strong></td>
+
+          <td>The offer number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px; height: 40px;"><strong>Description</strong></td>
+
+          <td style="height: 40px">The description of the offer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><u><strong>Assigned</strong></u></td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Customer count</strong></td>
+
+          <td>The number of customers the offer is assigned to.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Quantity</strong></td>
+
+          <td>The total number of targeted coupons available in the offer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Clip</strong></td>
+
+          <td>The number of targeted coupons in the offer that need to be clipped in order to be used.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Ready</strong></td>
+
+          <td>The number of targeted coupons in the offer that are ready to be used, i.e. no clipping is necessary.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><u><strong>Exposure</strong></u></td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Clip</strong></td>
+
+          <td>The total value of the targeted coupons that need clipping in order to be used.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Ready</strong></td>
+
+          <td>The total value of the targeted coupons ready to be used, i.e. no clipping is necessary.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><u><strong>Used</strong></u></td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Quantity</strong></td>
+
+          <td>The total number of targeted coupons that have been used.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Value</strong></td>
+
+          <td>The total value of the targeted coupons that have been used.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="details">Details</a></h2>
+
+      <p>The <strong>Offers - details wizard</strong> provides criteria selection that includes target. The <strong>More criteria</strong> button adds criteria related to offer values, date, account, marketing and others.</p>
+
+      <p><img class="Text" height="568" src="Offers_reports_files/details_wizard.png" width="395"></p>
+
+      <p>The <strong>Offers - details report</strong> displays the targeted offers movement by the customer. It includes information on the customer, value, the quantity assigned, used, left, and the exposure.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Edit</strong> opens the <strong>Coupon</strong> table for the modification of the selected offer and the creation of new offers.</li>
+
+        <li><strong>Analyze</strong> displays the offer details.<br>
+         It provides access to subqueries and linked queries for further drill-down to previous results (offers, items and customers).</li>
+
+        <li><strong>Action</strong> allows <a href="../Assign_targeted_coupons/Assign_targeted_coupons.htm">assigning the offer</a>, creating GS1 coupons (currently under development) and creating offers.</li>
+      </ul>
+
+      <p><img height="809" src="Offers_reports_files/details_report.png" width="1436"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Offers - Details</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 190px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 190px"><strong><u>Customer details</u></strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Customer ID</strong></td>
+
+          <td>The account number of the customer the offer is assigned to.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Legal name</strong></td>
+
+          <td>The customer's company name.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong><u>Offer details</u></strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Code</strong></td>
+
+          <td>The offer number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Description</strong></td>
+
+          <td>The description of the offer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Value</strong></td>
+
+          <td>The value of the targeted coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong><u>Movement</u></strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Assigned</strong></td>
+
+          <td>The number of targeted coupons available.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Clip</strong></td>
+
+          <td>The number of targeted coupons available for clipping.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Ready</strong></td>
+
+          <td>The number of targeted coupons ready for redeem.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Used</strong></td>
+
+          <td>The number of used targeted coupons.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Left</strong></td>
+
+          <td>The number of the remaining targeted coupons.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Exposure</strong></td>
+
+          <td>The value of the remaining targeted coupons.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="redemptions">Redemptions</a></h2>
+
+      <p>The <strong><a name="Offers_-_redemptions_wizard">Offers - redemptions wizard</a></strong> provides criteria selection that includes target and allows <a name="breaking_down_the_report_information">breaking down the report information</a> by date, by store, by totalizer, by coupon, by item and by customer. Criteria related to account, offer, item and totalizer may be added with the <strong>Add criteria</strong> button.</p>
+
+      <p><img class="Text" height="572" src="Offers_reports_files/redemptions_wizard.png" width="395"></p>
+
+      <p>The <strong>Offers - redemptions report</strong> displays the total discount of the targeted offers used and total sales information. The <strong>More criteria</strong> button adds redemption-related criteria on customer account IDs, offer code and type, item codes and totalizers.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li>
+          <strong>Analyze</strong> allows breaking the report information by transaction.<br>
+          It provides access to subqueries and linked queries for further drill-down to previous results (customers, items and coupons). 
+
+          <div class="alert alert-warning">
+            <strong>NOTE:</strong> To use subqueries and linked queries, <a href="#breaking_down_the_report_information">break down</a> the report information by customer, by item or by coupon in the <a href="#Offers_-_redemptions_wizard"><strong>Offers - redemptions wizard</strong></a>.
+          </div>
+          &nbsp;
+        </li>
+      </ul>
+
+      <p><img height="408" src="Offers_reports_files/redemptions_report.png" width="1260"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Offers - Redemptions</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 190px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 190px" style="text-align: left"><strong>Store ID</strong></td>
+
+          <td>The store number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Amount</strong> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Discount</strong></td>
+
+          <td>The total amount discounted.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Before discount</strong></td>
+
+          <td>The total amount before discount.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Paid</strong></td>
+
+          <td>The total amount paid.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Discount</strong> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Ratio</strong></td>
+
+          <td>The discount ratio.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Transaction</strong></td>
+
+          <td>The total number of transactions.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Item</strong> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Count</strong></td>
+
+          <td>The total item count.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Weight</strong></td>
+
+          <td>The total item weight.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Average</strong> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Discount</strong></td>
+
+          <td>The average discount value per item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Count</strong></td>
+
+          <td>The average item count.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Weight</strong></td>
+
+          <td>The average item weight.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Transaction</strong></td>
+
+          <td>The average transaction total.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 190px"><strong>Percent on promo</strong></td>
+
+          <td>The percentage applied on the current promotion.</td>
+        </tr>
+      </table>
+
+      <p class="Note"><strong>NOTE:</strong> The <strong>Offers - redemptions</strong> report requires additional configurations to function. See your reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2>Offer <a name="tasks">tasks</a></h2>
+
+      <p>The <strong>Offer tasks</strong> grid displays the list of all scheduled tasks associated to offers, by type.</p>
+
+      <p><img height="541" src="Offers_reports_files/tasks_report.png" width="919"></p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Edit</strong> allows the modification of the selected task.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

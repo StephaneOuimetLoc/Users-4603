@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Customer Edit</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Customer Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Customers &gt; Master &gt; General list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Customer table</h2>
+
+      <p>The eSuite software uses relational tables to store customer information. The <b>Customer</b> table contains general information on the customer, such as name, address, phone numbers, etc.</p>
+
+      <h2>Displaying the Customer table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Customers</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Clients</strong>: the <strong>Start</strong> window opens in the <strong>Customer</strong> work area.</li>
+
+        <li>Click on <strong>General List</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Customers - General List</strong>.</li>
+
+        <li>Enter the search criteria and click <strong>Execute</strong>: results will display in a record grid, in the <strong>Customers</strong> tab of the same window.</li>
+
+        <li>To modify an existing customer record, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu: the <strong>Customer</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new customer record, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Customer</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <p><img class="img img-fluid img-thumbnail" src="Customer_table_files/customer_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Customer</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>bottom tab section</strong>.</p>
+
+      <h3><strong>Main section</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="img img-fluid img-thumbnail" src="Customer_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="13, 114, 121, 140" href="#Customer_ID">
+            <area shape="rect" coords="153, 114, 372, 140" href="#First_name">
+            <area shape="rect" coords="382, 114, 647, 142" href="#Last_name">
+            <area shape="rect" coords="651, 114, 721, 141" href="#Target">
+            <area shape="rect" coords="12, 166, 73, 192" href="#Shopper">
+            <area shape="rect" coords="77, 165, 144, 190" href="#Promo">
+            <area shape="rect" coords="148, 165, 257, 192" href="#Valid_until">
+            <area shape="rect" coords="262, 166, 371, 190" href="#Birth_date">
+            <area shape="rect" coords="380, 164, 722, 190" href="#Company_name">
+            <area shape="rect" coords="12, 215, 72, 242" href="#Risk">
+            <area shape="rect" coords="78, 214, 146, 239" href="#Group">
+            <area shape="rect" coords="153, 215, 223, 240" href="#Group_2">
+            <area shape="rect" coords="226, 214, 296, 240" href="#Gender">
+            <area shape="rect" coords="302, 215, 371, 240" href="#Status">
+            <area shape="rect" coords="381, 215, 718, 240" href="#POS_comment">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3><strong>Bottom tab section</strong></h3>
+
+      <table style="width: 1419px">
+        <tr>
+          <td style="width: 472px; height: 46px"><img class="img img-fluid img-thumbnail" src="Customer_table_files/main_tab.png" usemap="#main_tab"> <map name="main_tab">
+            <area shape="rect" coords="15, 33, 372, 78" href="#Address">
+            <area shape="rect" coords="297, 5, 372, 32" href="#Verify">
+            <area shape="rect" coords="381, 31, 546, 80" href="#Phone/Mobile">
+            <area shape="rect" coords="551, 32, 722, 79" href="#Tax_exempt_1/2">
+            <area shape="rect" coords="380, 101, 722, 128" href="#Email">
+            <area shape="rect" coords="222, 131, 242, 151" href="">
+            <area shape="rect" coords="381, 151, 497, 177" href="#Bill_to">
+            <area shape="rect" coords="621, 150, 722, 177" href="#Operator_ID">
+            <area shape="rect" coords="10, 101, 226, 126" href="#City">
+            <area shape="rect" coords="230, 101, 371, 128" href="#Province/state">
+            <area shape="rect" coords="12, 151, 226, 176" href="#Country">
+            <area shape="rect" coords="232, 151, 371, 177" href="#Code">
+            <area shape="rect" coords="499, 151, 563, 176" href="#Language">
+            <area shape="rect" coords="222, 131, 242, 151" href="">
+            <area shape="rect" coords="566, 152, 615, 178" href="#BO">
+          </map> </td>
+
+          <td style="height: 46px; width: 472px;"><img class="img img-fluid img-thumbnail" src="Customer_table_files/member_tab.png" class="Text" usemap="#member_tab"> <map name="member_tab">
+            <area shape="rect" coords="15, 201, 384, 227" href="#Notification_methods">
+            <area shape="rect" coords="567, 59, 715, 86" href="#Mailing_(last_date)">
+            <area shape="rect" coords="566, 106, 716, 132" href="#Calling_(last_date)">
+            <area shape="rect" coords="409, 108, 547, 136" href="#Calling_(soliciting)">
+            <area shape="rect" coords="266, 109, 386, 135" href="#Renewal">
+            <area shape="rect" coords="408, 57, 546, 82" href="#Mailing_(soliciting)">
+            <area shape="rect" coords="265, 57, 385, 83" href="#Closed">
+            <area shape="rect" coords="14, 107, 102, 133" href="#Updated">
+            <area shape="rect" coords="130, 107, 247, 133" href="#Calling_(store)">
+            <area shape="rect" coords="126, 58, 246, 85" href="#Created_(store)">
+            <area shape="rect" coords="17, 55, 106, 79" href="#Created_(account)">
+            <area shape="rect" coords="411, 185, 651, 211" href="#Point_programs">
+            <area shape="rect" coords="15, 253, 383, 279" href="#Notification_ID">
+          </map> </td>
+
+          <td style="height: 46px; width: 473px;"><img class="img img-fluid img-thumbnail" src="Customer_table_files/shipping_tab.png" class="Text" usemap="#shipping_tab"> <map name="shipping_tab">
+            <area shape="rect" coords="275, 234, 365, 259" href="#Currency_code">
+            <area shape="rect" coords="90, 106, 370, 131" href="#Address_2">
+            <area shape="rect" coords="417, 104, 540, 130" href="#State/Province">
+            <area shape="rect" coords="416, 81, 540, 105" href="#City_shipping">
+            <area shape="rect" coords="379, 54, 540, 78" href="#Phone">
+            <area shape="rect" coords="591, 80, 715, 105" href="#Code_shipping">
+            <area shape="rect" coords="545, 54, 713, 79" href="#Fax">
+            <area shape="rect" coords="90, 184, 271, 210" href="#Number">
+            <area shape="rect" coords="17, 184, 84, 210" href="#Credit_card">
+            <area shape="rect" coords="385, 233, 551, 260" href="#Default_route">
+            <area shape="rect" coords="15, 234, 114, 261" href="#Expiration">
+            <area shape="rect" coords="120, 234, 272, 261" href="#Signature_on_the_card">
+            <area shape="rect" coords="276, 183, 364, 208" href="#Secret_number">
+            <area shape="rect" coords="195, 53, 370, 81" href="#Contact">
+            <area shape="rect" coords="386, 184, 499, 209" href="#Weight_cost">
+            <area shape="rect" coords="88, 80, 370, 106" href="#Address_1">
+            <area shape="rect" coords="556, 233, 715, 261" href="#Default_handling">
+            <area shape="rect" coords="627, 185, 713, 210" href="#Rate_3">
+            <area shape="rect" coords="506, 184, 619, 210" href="#Cubic_cost">
+            <area shape="rect" coords="16, 54, 193, 80" href="#Company_name_shipping">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center; width: 472px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align:center; width: 472px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align:center; width: 473px;">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <table style="width: 1419px">
+        <tr>
+          <td style="width: 472px"><img class="img img-fluid img-thumbnail" src="Customer_table_files/limits_tab.png" usemap="#limits_tab"> <map name="limits_tab">
+            <area shape="rect" coords="121, 50, 290, 135" href="#Volume">
+            <area shape="rect" coords="296, 52, 466, 137" href="#Amount">
+          </map> </td>
+
+          <td style="width: 472px"><img class="img img-fluid img-thumbnail" src="Customer_table_files/miscellaneous_tab.png" usemap="#miscellaneous_tab"> <map name="miscellaneous_tab">
+            <area shape="rect" coords="13, 41, 723, 68" href="#URL_parameters">
+            <area shape="rect" coords="12, 94, 126, 119" href="#Alias_code">
+            <area shape="rect" coords="132, 94, 264, 120" href="#Alias_reason">
+            <area shape="rect" coords="269, 94, 472, 119" href="#Adding_function">
+            <area shape="rect" coords="8, 143, 478, 220" href="#Internal_comment">
+            <area shape="rect" coords="10, 244, 479, 271" href="#Classification">
+          </map> </td>
+
+          <td style="width: 473px"><img class="img img-fluid img-thumbnail" src="Customer_table_files/custom_tab.png" usemap="#custom_tab"> <map name="custom_tab">
+            <area shape="rect" coords="3, 3, 727, 300" href="#Custom_tab">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center; width: 472px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align:center; width: 472px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align:center; width: 473px;">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Customer</strong> table fields and their functionalities.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px" colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Customer_ID">Customer ID</a></strong></td>
+
+          <td>The <strong>Customer ID</strong> field contains the customer number. It is required and unique, unless the eSuite software is configured for multi-stores (multi-targets). In this case, it is possible to have more than one customer with the same number, but with different targets.<br>
+          Not editable; once created, it cannot be modified.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="First_name">First name</a></strong></td>
+
+          <td>The <strong>First name</strong> field contains the customer's first name.<br>
+          Not required.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Last_name">Last name</a></strong></td>
+
+          <td>The <strong>Last name</strong> field contains the customer's last name.<br>
+          Not required.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (store group). The default value is <em>PAL</em>.<br>
+          Required field used with the customer ID to uniquely identify records in the customer grid.<br>
+          Editable only with multi targets.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Shopper">Shopper</a></strong></td>
+
+          <td>The <strong>Shopper</strong> field links the customer to a shopper level.<br>
+          Required. Each customer must be linked to a <a href="Shopper_level_table.htm">shopper level</a> and a <a href="Risk_level_table.htm">risk level</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Promo">Promo</a></strong></td>
+
+          <td>The <strong>Promo</strong> field links the customer to a shopper level used during the promotion whose ending date is set in the <a href="#Valid_until"><strong>Valid</strong> until</a> field.<br>
+          Has priority over the <a href="#Shopper"><strong>Shopper</strong> field</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Valid_until">Valid until</a></strong></td>
+
+          <td>The <strong>Valid until</strong> field contains the date on which the customer's account becomes inactive. It may show a promotion validity date.<br>
+          See the <a href="#The_Valid_until_field">Valid until field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Birth_date">Birth date</a></strong></td>
+
+          <td>The <strong>Birth date</strong> field contains the customer's date of birth.<br>
+          May appear in customer reports. Used for information purposes only: if the customer buys an item that has an age restriction and their birthdate is set into the customer record, the system will not prompt the cashier for the customer's birthdate at the time of sale.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Company_name">Company name</a></strong></td>
+
+          <td>The <strong>Company name</strong> field contains the customer's company name. It is displayed above the address line in reports, statements, mailing labels and envelopes.<br>
+          If no company name is manually entered, the field will be automatically populated with the values in the <a href="#Last_name"><strong>Last name</strong></a> and the <a href="#First_name"><strong>First name</strong></a> fields when the customer record is saved.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Risk">Risk</a></strong></td>
+
+          <td>The <strong>Risk</strong> field links the customer to a risk level establishing their credit profile.<br>
+          Required.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Group">Group</a></strong></td>
+
+          <td>The <strong>Group</strong> field links the customer to a customer group based on a first criterion.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Group_2">Group 2</a></strong></td>
+
+          <td>The <strong>Group 2</strong> field links the customer to a second customer group based on a second criterion.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Gender">Gender</a></strong></td>
+
+          <td>The <strong>Gender</strong> field contains the customer's gender.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Status">Status</a></strong></td>
+
+          <td>The <strong>Status</strong> field contains the status of the customer.<br>
+          See the <a href="#The_Status_field"><strong>Status</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="POS_comment">POS comment</a></strong></td>
+
+          <td>The <strong>POS comment</strong> field contains a comment, a message or a piece of information displayed on the cashier's screen when the customer number is entered.<br>
+           See the <a href="#The_POS_comment_field"><strong>POS comment</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px" colspan="2"><strong>Main tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Address">Address</a></strong></td>
+
+          <td>The <strong>Address</strong> field contains the customer's address.<br>
+           Displayed on statements, mailing labels and envelopes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="City">City</a></strong></td>
+
+          <td>The <strong>City</strong> field contains the customer's city of residence.<br>
+          Displayed on statements, mailing labels and envelopes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Province/state">Province/state</a></strong></td>
+
+          <td>The <strong>Province/State</strong> field contains the customer's province or state of residence.<br>
+          Displayed on statements, mailing labels and envelopes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Country">Country</a></strong></td>
+
+          <td>The <strong>Country</strong> field contains the customer's country of residence.<br>
+           Displayed on statements, mailing labels and envelopes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Code">Code</a></strong></td>
+
+          <td>The <strong>Code</strong> field contains the zip or the postal code of the customer's residence.<br>
+          Displayed on statements, mailing labels and envelopes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Verify">Verify</a></strong></td>
+
+          <td>The <strong>Verify</strong> field specifies if the customer's address has been validated (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Phone/Mobile">Phone/Mobile</a></strong></td>
+
+          <td>The <strong>Phone/Mobile</strong> field contains the customer's phone number.<br>
+           Parentheses, hyphens and and spaces are accepted.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Tax_exemption_1/2">Tax exemption 1/2</a></strong></td>
+
+          <td>The <strong>Tax exemption 1</strong> field contains the exemption numbers for tax 1 (usually the federal tax), tax 3 (usually the local tax or the service type tax), tax 5 and tax 7. Enter the exemption numbers in <i>Exemption number tax 1, Exemption number tax 3, Tax exemption tax 5, Tax exemption tax 7</i> formats separated by comma.<br>
+          The <b>Tax exemption 2</b> field contains the exemption numbers for tax 2 (usually the state or provincial tax), tax 4 (usually the service or the alternate local tax) and tax 6. Enter the exemption numbers in <i>Exemption number tax 2, Exemption number tax 4, Tax exemption 6</i> formats separated by a comma.<br>
+          Customers who have valid tax exemption numbers are not charged for these taxes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Email">Email</a></strong></td>
+
+          <td>The <strong>Email</strong> field contains the customer's email address.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Bill_to">Bill to</a></strong></td>
+
+          <td>The <strong>Bill to</strong> field contains the ID of the customer's ID to whom the invoice must be sent.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Language">Language</a></strong></td>
+
+          <td>The <strong>Language</strong> field contains the customer's preferred language.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="BO">BO</a></strong></td>
+
+          <td>The <strong>BO</strong> field contains the number of days the items of a sale order can stay in back order for the customer.<br>
+           The <a href="../Item_maintenance/POS_Table.htm#Status"><strong>Status</strong> field</a> of the <a href="../Item_maintenance/POS_Table.htm"><strong>POS table</strong></a> is used to specify the items that may be kept in back order.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Operator_ID">Operator ID</a></strong></td>
+
+          <td>The <strong>Operator ID</strong> field contains the number of the operator who usually sells to the customer.<br>
+          Usually linked to the customer for commission purposes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px" colspan="2"><strong>Member tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Created_(account)">Created (account)</a></strong></td>
+
+          <td>The <strong>Created</strong> field contains the creation date of the customer's account.<br>
+          Not editable.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Updated">Updated</a></strong></td>
+
+          <td>The <strong>Updated</strong> field contains the date of the last update of the customer's account.<br>
+          Not editable and used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Created_(store)">Created (store)</a></strong></td>
+
+          <td>The <strong>Created</strong> field contains the number of the store where the customer account has been created.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Calling_(store)">Calling (store)</a></strong></td>
+
+          <td>The <strong>Calling</strong> field contains the number of the store from which the solicitation calls are made.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Closed">Closed</a></strong></td>
+
+          <td>The <strong>Closed</strong> field contains the date on which the customer's membership ends.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 41px;"><strong><a name="Renewal">Renewal</a></strong></td>
+
+          <td style="height: 41px">The <strong>Renewal</strong> field contains the renewal date of the customer's membership.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Mailing_(soliciting)">Mailing (soliciting)</a></strong></td>
+
+          <td>The <strong>Mailing</strong> field contains the reference number of the last mail solicitation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Calling_(soliciting)">Calling (soliciting)</a></strong></td>
+
+          <td>The <strong>Calling</strong> field contains the reference number of the last call solicitation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Mailing_(last_date)">Mailing (last date)</a></strong></td>
+
+          <td>The <strong>Mailing</strong> field contains the date of the last mail solicitation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Calling_(last_date)">Calling (last date)</a></strong></td>
+
+          <td>The <strong>Calling</strong> field contains the date of the last call solicitation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Notification_methods">Notification methods</a></strong></td>
+
+          <td>The <strong>Notification methods</strong> contains the method used to notify the customer about available deals.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Notification_ID">Notification ID</a></strong></td>
+
+          <td>The <strong>Notification ID</strong> field contains the identification number of the notification.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Point_programs">Point programs</a></strong></td>
+
+          <td>The <strong>Point programs</strong> field <strong></strong>contains the identifier characters of the point programs the customer is members of.<br>
+          See the <a href="#The_Point_programs_field"><strong>Point programs</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px" colspan="2"><strong>Shipping tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Company_name_shipping">Company name</a></strong></td>
+
+          <td>The <strong>Company name</strong> field contains the name of the company where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px;"><strong><a name="Contact">Contact</a></strong></td>
+
+          <td>The <strong>Contact</strong> field contains the name of the person to contact where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Phone">Phone</a></strong></td>
+
+          <td>The <strong>Phone</strong> field contains the voice phone number of the location where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Fax">Fax</a></strong></td>
+
+          <td>The <strong>Fax</strong> field contains the fax number of the location where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Address_1">Address 1</a></strong></td>
+
+          <td>The <strong>Address 1</strong> field contains the first part of the address where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Address_2">Address 2</a></strong></td>
+
+          <td>The <strong>Address 2</strong> field contains the second part of the address where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="City_shipping">City</a></strong></td>
+
+          <td>The <strong>City</strong> field contains the city where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="State/Province">State/Province</a></strong></td>
+
+          <td>The <strong>State/Province (S/P)</strong> field contains the state or the province where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Code_shipping">Code</a></strong></td>
+
+          <td>The <strong>Code</strong> field contains the zip or the postal code of the location where the items purchased by the customer must be shipped.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Credit_card">Credit card</a></strong></td>
+
+          <td>The <strong>Credit card</strong> field in the <strong>Billing</strong> section <strong>c</strong>ontains the customer's credit card type.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <strong>Number</strong> field in the <strong>Billing</strong> section contains the customer's credit card number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Secret_number">Secret number</a></strong></td>
+
+          <td>The <strong>Secret number</strong> field in the <strong>Billing</strong> section contains the secret number for entering the customer's account in the transaction.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Expiration">Expiration</a></strong></td>
+
+          <td>The <strong>Expiration</strong> field in the <strong>Billing</strong> section contains the expiration date of the customer's credit card.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Signature_on_the_card">Signature on the card</a></strong></td>
+
+          <td>The <strong>Signature on the card</strong> field in the <strong>Billing</strong> section contains the name of the person who signs the customer's credit card.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Currency_code">Currency code</a></strong></td>
+
+          <td>The <strong>Currency code</strong> field in the <strong>Billing</strong> section contains the code of the preferred currency for the customer's account (Canadian or United States).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Rate 1 (w<a name="Weight_cost">eight cost</a>)</strong></td>
+
+          <td>The <strong>Weight cost</strong> field in the <strong>Freight</strong> section contains the shipping fees rate charged by weight for the shipping of the merchandise for that customer.<br>
+           The amount of the total shipping fees appears under the <strong>Totals tab</strong> of the sale orders.<br>
+          Each item must have a <a href="../Item_maintenance/Main%20Item_Table.htm#Weight">weight value</a> defined in the <b>Main item</b> table for a total weight to be calculated in the sale orders. This feature must be enabled beforehand (System.ini file). See the reseller for more details.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Rate 2 (c<a name="Cubic_cost">ubic cost</a></strong></td>
+
+          <td>The <strong>Cubic cost</strong> field in the <strong>Freight</strong> section contains the shipping fees rate charged by volume for the shipping of the merchandise for that customer.<br>
+           The total shipping fees amount appears under the <strong>Totals tab</strong> of the sale orders.<br>
+           Each item must have a <a href="../Items/Main%20Item_Table.htm#Cubic">cubic value</a> defined in the <a href="../Item_maintenance/Main%20Item_Table.htm"><b>Main item</b> table</a> for a total volume to be calculated in the sale orders. This feature must be enabled beforehand (System.ini file). See the reseller for more details.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Rate_3">Rate 3</a></strong></td>
+
+          <td>The <strong>Rate 3</strong> field in the <strong>Freight</strong> section contains other shipping fees for the customer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Default_route">Default route</a></strong></td>
+
+          <td>The <strong>Default route</strong> field in the <strong>Freight</strong> section contains the shipping route for the customer.<br>
+          Records must already exist in the <b>Route</b> table for the <strong>Default route</strong> field to display choices.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Default_handling">Default handling</a></strong></td>
+
+          <td>The <strong>Default handling</strong> field in the <strong>Freight</strong> section contains the default handling method.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px" colspan="2"><strong>Limits tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Volume">Volume</a></strong></td>
+
+          <td>Description to come&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Amount">Amount</a></strong></td>
+
+          <td>Description to come&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Miscellaneous&nbsp;tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="URL_parameters">URL parameters</a></strong></td>
+
+          <td>The <strong>URL parameters</strong> field contains special parameters (called alpha parameters) used when the customer is associated to the current transaction.<br>
+          They are used when specific customers are associated to transactions. See the reseller for more details.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Alias_code">Alias code</a></strong></td>
+
+          <td>For future development</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Alias_reason">Alias reason</a></strong></td>
+
+          <td>For future development</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Adding_function">Adding function</a></strong></td>
+
+          <td>The <strong>Adding function</strong> field contains the number of the alternate function as to where to add the sales for that customer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Internal_comment">Internal comment</a></strong></td>
+
+          <td>The <strong>Internal comment</strong> field contains notes on the customer or on the customer support.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Classification">Classification</a></strong></td>
+
+          <td>Description to come</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong><a name="Custom_tab">Custom tab</a></strong></td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td>Description to come</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Valid_until_field">The Valid until field</a></h2>
+
+      <p>The <strong>Valid until</strong> field contains the date on which the customer's account becomes inactive.</p>
+
+      <p>The <i>Customer not found</i> message is displayed in the <b>Entry</b> window of the POS when the cashier enters an inactive customer account number.</p>
+
+      <p><strong>Promotion</strong></p>
+
+      <p>The <strong>Valid until</strong> field also works in combination with the <a href="#Promo"><strong>Promo</strong> field</a>. In the case where a promotion shopper level is assigned to the customer, the <strong>Valid until</strong> field sets the <u>promotion validation date</u>. When the promotion period expires on the date defined in the <b>Valid until</b> field, the customer account goes back to its original shopper level.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Status_field">The Status field</a></h2>
+
+      <p>The <strong>Status</strong> field contains the customer's account status.</p>
+
+      <p><img class="img img-fluid img-thumbnail" height="81" src="Customer_table_files/status_field.png" width="147">&nbsp;</p>
+
+      <p>The Status field is used to filter the customer account number in the <strong>Receivable</strong> module, except for those that are not active. This feature may be useful when a customer account history is needed on file, but the account is no longer active.</p>
+
+      <p>The <strong>Status</strong> field is also used to do not mail the electronic receipt (<em>R</em>) to this customer when the system is set up with the electronic receipt feature.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_POS_comment_field">The POS comment field</a></h2>
+
+      <p>The <strong>POS comment</strong> field contains a comment, a message or a piece of information that is displayed on the cashier display when the customer number is entered.</p>
+
+      <p>The <b>POS comment</b> field can be a convenient way to make the cashier aware of the customer's status or any other pertinent remark concerning the customer.</p>
+
+      <p class="Note"><b>Note:<br>
+      </b>Both the points of sale and the customer screens need to be designed depending on the use of the POS comment.<br>
+       Some of the screens are used for the cashier screen and the customer screen already has the <strong>POS comment</strong> field by default. If the display on the cashier screen is not supported, operators can still enter comments or messages for the office use.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="The_Point_programs_field">The Point programs field</a></h2>
+
+      <p>The <strong>Point programs</strong> field in the <strong>Customer</strong> table is used within the eCommerce solution. It works on an opt-in/opt-out basis, allowing customers to choose the programs they want to participate in, according to their shopper level. When the customer is part of all point programs that correspond to the shopper level they belong to, the <strong>Point programs</strong> field is empty.</p>
+
+      <p>The <strong>Point programs</strong> field <strong></strong>contains the identifier characters of the point programs the customer is member of. The customer account must be linked to a <a href="Auxiliary/Shopper%20level%20table.htm#The_Shopper_level_field">shopper level</a>.</p>
+
+      <p>The system can manage up to 35 point programs. They are identified by characters from 1 to 9 and from A to Z: A corresponds to the point program 10, B corresponds to the point program 11 a.s.o., up to Z that corresponds to the point program 35.</p>
+
+      <p>The point program 1 is the main point program. All other point programs are called 'secondary point programs'.</p>
+
+      <p>Multiple point programs may be specified, case in which the characters in the field should not be separated by any space, comma or semi-colon. &nbsp;</p>
+
+      <p>Records must already exist in the <a href="Shopper_level_table.htm#Point_programs"><strong>Point programs</strong> field</a> of the <strong><a href="Shopper_level_table.htm">Shopper level table</a></strong> for the <strong>Point programs</strong> field to display choices.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

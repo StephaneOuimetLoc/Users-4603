@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Future Bill Back Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Future Bill Back Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Future bill back</b> table is used to enter the future bill backs given on the selected items. It contains the future bill back information.</p>
+
+      <h2>Displaying the Future <b>cost bill back</b> table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batches</strong> work area.</li>
+
+        <li>Click on <strong>Cost information</strong>: the <strong>Cost batch</strong> wizard opens in a new tab.</li>
+
+        <li>In the Batch type field, select <strong>Bill back</strong>.</li>
+
+        <li>In the <strong>Batch</strong> field, select a bill back batch.</li>
+
+        <li>Enter all other necessary criteria.</li>
+
+        <li>Press <strong>Execute</strong>: results will display in the <strong>Cost bill back batch</strong> grid.</li>
+
+        <li>Select a record and click <strong>Edit</strong> in the bottom menu of the grid.</li>
+
+        <li>Select <strong>Cost batch</strong>, then <strong>Bill back</strong>: the <strong>Future cost allowances</strong> table <strong></strong> opens over the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Future_bill_back_table_files/future_bill_back_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Future cost bill back</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>Future cost bill back table grid</strong>.</p>
+
+      <h4><strong>Main section</strong></h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Future_bill_back_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="11, 140, 100, 167" href="#Batch">
+            <area shape="rect" coords="105, 140, 187, 167" href="#Target">
+            <area shape="rect" coords="192, 140, 249, 166" href="#Format">
+            <area shape="rect" coords="256, 141, 515, 166" href="#Vendor">
+            <area shape="rect" coords="11, 191, 81, 216" href="#Dollar_1">
+            <area shape="rect" coords="85, 192, 156, 217" href="#Dollar_2">
+            <area shape="rect" coords="160, 191, 232, 217" href="#Dollar_3">
+            <area shape="rect" coords="235, 190, 308, 216" href="#Dollar_4">
+            <area shape="rect" coords="10, 240, 83, 266" href="#Percent_1">
+            <area shape="rect" coords="86, 241, 158, 268" href="#Percent_2">
+            <area shape="rect" coords="162, 241, 230, 267" href="#Percent_3">
+            <area shape="rect" coords="235, 241, 306, 267" href="#Percent_4">
+            <area shape="rect" coords="312, 240, 515, 266" href="#Descriptor_4">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h4><strong>Future cost bill back table grid</strong></h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Future_bill_back_table_files/table_grid.png" usemap="#table_grid"> <map name="table_grid">
+            <area shape="rect" coords="2, 93, 81, 253" href="#Batch">
+            <area shape="rect" coords="81, 93, 136, 253" href="#Target">
+            <area shape="rect" coords="192, 92, 253, 252" href="#Vendor">
+            <area shape="rect" coords="133, 92, 192, 251" href="#Format">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Future cost bill back</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px; height: 22px;">FIELD</th>
+
+            <th style="height: 22px">DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Batch">Batch</a></strong></td>
+
+          <td>The <strong>Batch</strong> field contains the batch identifier.<br>
+           It is not editable. Its value comes from the <strong></strong> <a href="../Batch_header_table/Batch_header_table.htm#Batch_ID"><strong>Batch ID</strong></a> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future bill back record is added, linking the future bill back record to the current batch.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Price_Table.htm#Target">target</a> value of the current cost record is automatically displayed in the <strong>Target</strong> field.<br>
+          It is grayed out (not editable) unless the Multi target option in the <em>System.ini</em> file is selected.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Format">Format</a></strong></td>
+
+          <td>The <strong>Format</strong> field contains the future buying format description.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Format">format</a> of the current cost record is automatically displayed in the <strong>Format</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor">Vendor</a></strong></td>
+
+          <td>The <strong>Vendor</strong> field contains the vendor ID and name. It links the item to a vendor.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_ID">vendor ID</a> and the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_name">vendor name</a> of the current cost record are automatically displayed in the <strong>Vendor</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Dollar_1">Dollar 1</a></strong></td>
+
+          <td>The <strong>Dollar 1</strong> field contains the future value per case of the bill back 1, expressed in dollars.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Dollars">bill back 1</a> value of the current cost record is automatically displayed in the <strong>Dollar 1</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Dollar_2">Dollar 2</a></strong></td>
+
+          <td>The <strong>Dollar 2</strong> field contains the future value per case of the bill back 2, expressed in dollars.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Dollars">bill back 2</a> value of the current cost record is automatically displayed in the <strong>Dollar 2</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Dollar_3">Dollar 3</a></strong></td>
+
+          <td>The <strong>Dollar 3</strong> field contains the future value per case of the bill back 2, expressed in dollars.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Dollars">bill back 3</a> value of the current cost record is automatically displayed in the <strong>Dollar 3</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Dollar_4">Dollar 4</a></strong></td>
+
+          <td>TThe <strong>Dollar 4</strong> field contains the future value per case of the bill back 2, expressed in dollars.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Dollars">bill back 4</a> value of the current cost record is automatically displayed in the <strong>Dollar 4</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent_1">Percent 1</a></strong></td>
+
+          <td>The <strong>Percent 1</strong> field contains the future value per case of the bill back 1, expressed as a percentage.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Percent">bill back 1</a> value of the current cost record is automatically displayed in the <strong>Percent 1</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent_2">Percent 2</a></strong></td>
+
+          <td>The <strong>Percent 2</strong> field contains the future value per case of the bill back 1, expressed as a percentage.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Percent">bill back 2</a> value of the current cost record is automatically displayed in the <strong>Percent 2</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent_3">Percent 3</a></strong></td>
+
+          <td>TThe <strong>Percent 3</strong> field contains the future value per case of the bill back 1, expressed as a percentage.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Percent">bill back 3</a> value of the current cost record is automatically displayed in the <strong>Percent 3</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent_4">Percent 4</a></strong></td>
+
+          <td>TThe <strong>Percent 4</strong> field contains the future value per case of the bill back 1, expressed as a percentage.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Percent">bill back 4</a> value of the current cost record is automatically displayed in the <strong>Percent 4</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Descriptor_4">Descriptor 4</a></strong></td>
+
+          <td>The <strong>Descriptor 4</strong> field contains the future description of the bill back 4.<br>
+          When a future bill back record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Description">bill back 4 description</a> of the current cost record is automatically displayed in the <strong>Descriptor 4</strong> field.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

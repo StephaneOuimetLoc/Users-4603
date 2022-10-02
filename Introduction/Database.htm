@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Database</title>
+    <link href="../work.css" rel="stylesheet">
+  </head>
+
+  <body>
+    ﻿ 
+
+    <h1>Relational database</h1>
+
+    <h2>Information</h2>
+
+    <p>The eSuite software stores all data in a relational database. Related information is stored in tables. The relational database model allows operators to find specific information by sorting data based on any field within the database.</p>
+
+    <h2>Relational tables</h2>
+
+    <p>The eSuite software item data is stored in the database in the form of tables. The eSuite keeps separate tables for item information. Each relational table contains information linked to the main item or code (UPC). The eSuite software uses this approach because it removes the fixed number of field limitations.</p>
+
+    <h2>Unlimited information</h2>
+
+    <p>In a relational database, it is possible to have an unlimited number of prices, costs, vendors, etc. for the same item, based on regional or price level differences. For example, if the point of sale is capable of selling an item on different pricing levels, the item must keep pricing information for each of those levels. Items in the database would have to contain enough pricing records to accommodate all price levels. In most databases, it is impossible to add new records each time you need a new price level or other information.</p>
+
+    <p>By keeping information in separate tables, it is possible to join several key (unique) fields to add new records. For example, the item UPC and the price level fields are used to add a new price record for the same item. This way, databases are not limited to a fixed number of records. Therefore, as long as the joint key fields are unique for every record, there is no limit to the possible amount of new information. So, following the example above, an item UPC linked to a new price level adds a new price record for that item because the item UPC and the price level together create a new unique key.</p>
+
+    <h2>Regional pricing</h2>
+
+    <p>The eSuite software also allows regional pricing. Besides the price level, each price record must include a target (or region). This means that the same UPC can have a different price for each level, for each target. These three unique fields combined (UPC - Price level - Target) create a unique identification for each record in the related tables.</p>
+  </body>
+</html>
+

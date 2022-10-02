@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Price Generation Batch</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template==NO-TOC.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Price Generation for Items and Batches <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Price Generation <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!--
+            -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The eSuite software offers two price generation tools by splitting up the functions for <em>Items</em> and <em>Batches</em>. These tools will offer different options, depending on whether they refer to items or to batches in eSuite.</p>
+
+      <p>The price generation functions may be found in multiple areas within eSuite. See below for the locations.</p>
+
+      <table style="width: 98%">
+        <tr>
+          <td style="width: 308px"><strong>Items</strong></td>
+
+          <td style="width: 267px"><strong>Items</strong></td>
+
+          <td style="width: 386px"><strong>Items</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 308px">Items general list &gt; Edit &gt; Master tables</td>
+
+          <td style="width: 267px">Items general list &gt; Edit &gt; Master tables</td>
+
+          <td style="width: 386px">Items - Price list</td>
+        </tr>
+
+        <tr>
+          <td style="width: 308px">Price list &gt; Edit &gt; Master tables</td>
+
+          <td style="width: 267px">Price list &gt; Edit &gt; Master tables</td>
+
+          <td style="width: 386px">Price List &gt; Edit &gt; Master tables (Price and Cost masters)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 308px">Price master</td>
+
+          <td style="width: 267px">Cost master</td>
+
+          <td style="width: 386px">Ability to select multi items from grid results using Actions&gt; Generate price (prompt window for selected)</td>
+        </tr>
+
+        <tr>
+          <td style="width: 308px"><img src="Price_Generation_Item_Batch_files/img4.jpg"></td>
+
+          <td style="width: 267px"><img src="Price_Generation_Item_Batch_files/img5.jpg"></td>
+
+          <td style="width: 386px"><img src="Price_Generation_Item_Batch_files/img6.jpg"><br>
+          <br>
+           <img src="Price_Generation_Item_Batch_files/img7.jpg"><br>
+          </td>
+        </tr>
+      </table>
+
+      <h3>Price generation for items</h3>
+
+      <p>Price generation functions for items are selected either with the "<strong>$</strong>" sign icon or by confirming "<strong>Yes</strong>" when using the multi-selection in the "Items - Price list" action. Once selected, they open the <strong>Price generate</strong> window:</p>
+
+      <table style="width: 55%">
+        <tr>
+          <td style="width: 305px"><strong>Single Target</strong></td>
+
+          <td style="width: 318px"><strong>Multi-Target</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 305px"><img src="Price_Generation_Item_Batch_files/img9.jpg"></td>
+
+          <td style="width: 318px"><img src="Price_Generation_Item_Batch_files/img8.jpg"></td>
+        </tr>
+      </table>
+
+      <h1>Batches</h1>
+
+      <p>From the eSuite Batch module, click on <strong>Batches</strong> in the launcher to open the <strong>Batches</strong> start window. The <strong>Price generate batch</strong> button is on the right of the <strong>Prices</strong> button.</p>
+
+      <p><img src="Price_Generation_Item_Batch_files/img10.jpg"></p>
+
+      <p class="Note"><strong>NOTE</strong>: In order to use this function, the batch of choice (retail, TPR, sale, instore, etc.) needs to be created beforehand, as it needs to be selected in the <strong>Price generate batch</strong> wizard in order to execute. The <strong>Execute</strong> action button will remain greyed out until an existing batch is selected from the <strong>Batch</strong> field pull-down.</p>
+
+      <p><img src="Price_Generation_Item_Batch_files/imgC.jpg"></p>
+
+      <p>Selecting an existing batch will automatically populate the following three fields: <strong>Batch</strong>, <strong>Batch description</strong> and <strong>Batch type</strong>. This allows using multiple options as the same time.</p>
+
+      <h3>Price generation for batches</h3>
+
+      <p>Price generation functions for batches are available from the <strong>Price generate batch</strong> wizard:</p>
+
+      <p><img height="719" src="Price_Generation_Item_Batch_files/price_generation_batches.jpg" width="425"></p>
+
+      <h2>Description of price generation functions</h2>
+
+      <p>The following is a description of the price generation functions available in eSuite for items and for batches.</p>
+
+      <h3>Send to section</h3>
+
+      <p>The <strong>Send to</strong> section is available in the <strong>Price generation</strong> window for items. It indicates the selling price for which the price value is generated.</p>
+
+      <p><img height="350" src="Price_Generation_Item_Batch_files/send_to_section.jpg" width="400"></p>
+
+      <p>Four selling prices are available:</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="width: 160px"><strong>NAME</strong></td>
+
+          <td><strong>DESCRIPTION</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 160px"><strong>Retail</strong></td>
+
+          <td>Indicates that the generated price value will be sent to the <b>Retail</b> price (<b>Price</b> table).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 160px"><strong>TPR</strong></td>
+
+          <td>Indicates that the generated price value will be sent to the <b>TPR</b> price (<b>Price</b> table).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 160px"><strong>Sale</strong></td>
+
+          <td>Indicates that the generated price value will be sent to the <strong>Sale</strong> price (<strong>Price</strong> table).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 160px"><strong>Instore</strong></td>
+
+          <td>Indicates that the generated price value will be sent to the <strong>Instore</strong> price (<strong>Price</strong> table).</td>
+        </tr>
+      </table>
+
+      <h3>Base cost section</h3>
+
+      <p>The <strong>Base cost</strong> section is common to the price generation tool for both items and batches. It specifies the base from which the selling price (profit) is generated. Its default value is <em>Base</em>.</p>
+
+      <p>Three bases are available in eSuite:</p>
+
+      <ul>
+        <li><strong>Base</strong> specifies that the selling price is generated (or the profit is made) from the <b>Base cost</b> field of the <b>Cost</b> table.</li>
+
+        <li><strong>Landed</strong> specifies that the selling price is generated (or the profit is made) from the sum of the base cost amount and the applicable fees.</li>
+
+        <li><strong>Net</strong> specifies that the selling price is generated (or the profit is made) from the <strong>Cost</strong> field of the <strong>Cost</strong> table.<br>
+        Usually, the <strong>Net cost</strong> value is the same as the <strong>Base cost</strong> value unless discounts, rebates, etc. are given by the vendor. In that case, the <strong>Net cost</strong> value changes.</li>
+      </ul>
+
+      <p>The three tabs&nbsp;of the <strong>Base cost</strong> section allow changing the default base from which the selling price is generated (from which the profit is made).</p>
+
+      <p><img height="350" src="Price_Generation_Item_Batch_files/base_cost_section.jpg" width="400"></p>
+
+      <table style="width: 82%">
+        <tr>
+          <td><strong>NAME</strong></td>
+
+          <td><strong>DESCRIPTION</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px"><strong>+</strong> (plus) <strong>Cost fees</strong></td>
+
+          <td>Adds the value of the cost fees to the seeling price that will be generated.<br>
+          Checked by default in the <strong>Landed</strong> and <strong>Net</strong> tabs.<br>
+          Enabled when the <strong>- Cost fees</strong> checkbox is disabled and vice-versa.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px; height: 40px;"><strong>-</strong> (minus) <strong>Cost fees</strong></td>
+
+          <td style="height: 40px">Subtracts the value of the cost fees from the selling price that will be generated.<br>
+          Enabled when the <strong>+ Cost fees</strong> checkbox is disabled and vice-versa.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px">- <strong></strong>(minus) <strong>Off-invoice deals</strong></td>
+
+          <td>Subtracts the value of the off-invoice deals from the selling price that will be generated.<br>
+          Checked by defautlt in the <strong>Net</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px">- <strong></strong>(minus) <strong>Bill-back deals</strong></td>
+
+          <td>Subtracts the value of the bill-back deals from the selling price that will be generated.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px"><strong>Apply future batches on cost</strong> (for batches only)</td>
+
+          <td>Applies the changes made in the selected batch.<br>
+          Checked by default in all tabs (<strong>Base</strong>, <strong>Landed</strong> and <strong>Net</strong>).</td>
+        </tr>
+      </table>
+
+      <h3>Margins section</h3>
+
+      <p>The <strong>Margins</strong> section is common to the price generation tool for both items and batches.</p>
+
+      <p>The <b>Generate price</b> utility is used to calculate the selling prices from the cost amounts entered in the <b>Cost</b> table. The calculation is based on a margin.</p>
+
+      <table style="width: 82%">
+        <tr>
+          <td style="width: 393px"><strong>NAME</strong></td>
+
+          <td><strong>DESCRIPTION</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px"><strong>Retail</strong></td>
+
+          <td>Contains the retail profit margin on the item in percentage. It is used to generate the item retail price.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px"><strong>Package</strong></td>
+
+          <td>Contains the package price profit margin on the item in percentage.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px"><strong>Limited</strong></td>
+
+          <td>Contains the limited quantity price profit margin on the item in percentage.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 393px"><strong>VAT</strong></td>
+
+          <td>Contains the VAT taxes profit margin in percentage.</td>
+        </tr>
+      </table>
+
+      <h3>Buttons section</h3>
+
+      <p>The price generation tools have several buttons to generate the selling prices. Each one of them has its particular function.</p>
+
+      <p><img height="350" src="Price_Generation_Item_Batch_files/buttons_section.jpg" width="400"></p>
+
+      <table style="width: 82%">
+        <tr>
+          <td style="width: 209px; height: 40px;"><strong>NAME</strong></td>
+
+          <td style="height: 40px"><strong>DESCRIPTION</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Yes</strong></td>
+
+          <td>The <b>Yes</b> button generates the selling price for the current item/batch.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Always</strong></td>
+
+          <td>The <b>Always</b> button automatically generates the selling price for each item whose information has been changed in the <b>Cost</b> table during the current maintenance session, without having to open the <b>Generate price</b> window each time.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>No</strong></td>
+
+          <td>The <b>No</b> button does not generate the selling price for the current item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Never</strong></td>
+
+          <td>The <b>Never</b> button does not generate any selling price for any item during the current maintenance session.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Cancel</strong></td>
+
+          <td>The <b>Cancel</b> button closes the P<b>rice generate</b> window without generating any selling price.</td>
+        </tr>
+      </table>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

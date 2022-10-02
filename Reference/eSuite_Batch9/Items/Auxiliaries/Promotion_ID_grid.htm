@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Promotion ID Grid</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Promotion ID Grid <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxialaries <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>Promotion ID</strong> grid displays the list of promotions that are active in the system and the IDs that help identify these promotions.</p>
+
+      <p><b>Promotion IDs</b> are an efficient way of grouping different items. Note that an item can be part of more than one promotion.</p>
+
+      <p>When a record is selected, the <strong>Promotion ID</strong> grid:</p>
+
+      <ul>
+        <li>Gives access to the list of <a href="#Items">items</a> that are grouped under the selected promotion ID. The listed items may be <a href="#Edit_an_item">edited</a>, <a href="#Analyze">analyzed</a>, <a href="#Assign">assigned</a> further promotion IDs and <a href="#Assign">unassigned</a> from the current promotion ID.</li>
+
+        <li>Gives access to the list of <a href="#Coupons">coupons</a> that are linked to the selected promotion ID. The listed coupons may be <a href="#Coupons_linked_to_PID">edited</a>.</li>
+
+        <li>Allows <a href="#Remove">removing</a> the selected promotion ID and the items/coupons linked to it.</li>
+      </ul>
+
+      <h2>Displaying the Promotion ID grid</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Auxiliary tables</strong>: the Start window opens in the <strong>Auxiliary</strong> work area.</li>
+
+        <li>Click on <strong>Promotion IDs</strong>: the tab opens in the same window, displaying the <strong>Promotion IDs</strong> grid.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" height="470" src="Promotion_ID_grid_files/PID_grid.png" width="414" usemap="#promotion_ID_grid"> <map name="promotion_ID_grid">
+            <area shape="rect" coords="0, 69, 60, 442" href="#PID">
+            <area shape="rect" coords="60, 69, 408, 442" href="#Linked_to">
+            <area shape="rect" coords="252, 447, 288, 469" href="#Items">
+            <area shape="rect" coords="292, 447, 338, 469" href="#Coupons">
+            <area shape="rect" coords="343, 447, 389, 469" href="#Remove">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">*Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Promotion ID</strong> grid fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="PID">PID</a></strong></td>
+
+          <td>The <strong>PID</strong> field contains the promotion identifier (alphanumeric).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Linked_to">Linked to</a></strong></td>
+
+          <td>The <strong>Linked to</strong> field contains information on the item(s) and coupon(s) that are part the promotion IDs.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Items">Items</a></strong></td>
+
+          <td>The <strong>Items</strong> button gives access to the list of items that are grouped under the same PID.<br>
+          For details, see the <a href="#Items_linked_to_PID"><strong>Items linked to PID</strong> section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Coupons">Coupons</a></strong></td>
+
+          <td>The <strong>Coupons</strong> button gives access to the list of coupons that are linked to the selected promotion ID.<br>
+          For details, see the <a href="#Coupons_linked_to_PID"><strong>Coupons linked to PID</strong> section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Remove">Remove</a></strong></td>
+
+          <td>The <strong>Remove</strong> button deletes the selected promotion ID.<br>
+          For details, see the <a href="#Remove_a_PID_from_the_system"><strong>Remove PID</strong> section</a> below.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="Items_linked_to_PID">Items linked to PID</a></h2>
+
+      <p>When a record is selected, the <strong>Items</strong> button in the <strong>Promotion ID</strong> grid gives access to the list of items that are grouped under the selected promotion ID.</p>
+
+      <p>These items may be edited, analyzed, assigned further promotion IDs and unassigned from the current promotion ID.</p>
+
+      <h3><a name="Edit_an_item">Edit an item</a> linked to a PID</h3>
+
+      <p>To edit an item linked to a promotion, select it in the PID item list and click <strong>Edit</strong>:</p>
+
+      <p><img class="Text" height="234" src="Promotion_ID_grid_files/edit_item.png" width="499"></p>
+
+      <p>The drop-down menu gives access to the item-related tables:</p>
+
+      <p><img class="Text" height="122" src="Promotion_ID_grid_files/edit_menu.png" width="151"></p>
+
+      <h3><a name="Analyze">Analyze</a> an item linked to a PID</h3>
+
+      <p>To analyze an item linked to a promotion, select it in the PID item list and click <strong>Analyze</strong>:</p>
+
+      <p><img class="Text" height="232" src="Promotion_ID_grid_files/analyze_item.png" width="499"></p>
+
+      <p>The drop-down menu gives access to the item-related queries:</p>
+
+      <p><img class="Text" height="76" src="Promotion_ID_grid_files/analyze_menu.png" width="189"></p>
+
+      <h3><a name="Assign">Assign</a>/unassign a PID</h3>
+
+      <p>To assign/unassign a promotion, select the item in the PID item list and click <strong>Actions</strong>:</p>
+
+      <p><img class="Text" height="234" src="Promotion_ID_grid_files/actions_item.png" width="499"></p>
+
+      <p>The drop-down menu allows assigning/unassigning the promotion ID to and from the selected item:</p>
+
+      <p><img class="Text" height="74" src="Promotion_ID_grid_files/actions_menu.png" width="189"></p>
+
+      <p>A different promotion ID may be assigned to the selected item:</p>
+
+      <p><img class="Text" height="131" src="Promotion_ID_grid_files/assign_message.png" width="151"></p>
+
+      <p>The promotion ID may be unassigned from the selected item:</p>
+
+      <p><img class="Text" height="120" src="Promotion_ID_grid_files/unassign_message.png" width="151"></p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="Coupons_linked_to_PID">Coupons linked to PID</a></h2>
+
+      <p>When a record is selected, the <strong>Coupons</strong> button in the <strong>Promotion ID</strong> grid gives access to the list of coupons that are linked to the selected promotion ID.</p>
+
+      <p>The listed coupons may be edited by clicking on <strong>Edit</strong> in the bottom menu of the grid:</p>
+
+      <p><img class="Text" height="301" src="Promotion_ID_grid_files/edit_coupon.png" width="416"></p>
+
+      <p>This gives access to the <strong><a href="../Coupon_items/Coupons/Coupons.htm">coupon wizard</a></strong>.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2><a name="Remove_a_PID_from_the_system">Remove a PID from the system</a></h2>
+
+      <p>To remove a promotion ID from the linked item/coupons, select it in the PID item list and click <strong>Remove</strong>:</p>
+
+      <p><img class="Text" height="397" src="Promotion_ID_grid_files/remove_promotion.png" width="416"></p>
+
+      <p>Confirm or cancel the removal with the help of the <strong>Action</strong> message:</p>
+
+      <p><img class="Text" height="94" src="Promotion_ID_grid_files/remove_message.png" width="189"></p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

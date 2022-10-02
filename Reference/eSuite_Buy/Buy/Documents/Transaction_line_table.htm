@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Transaction Line</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Buy - Transaction Line Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Buy <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>Transaction line</strong> table allows editing the lines in the buying documents. It opens with the <strong>Edit selected line</strong> button <img height="15" src="Transaction_header_table_files/icon_edit_header.png" width="18"> located in the toolbar of the <strong>Lines</strong> section.</p>
+
+      <p style="text-align:center"><img src="Transaction_line_table_files/transaction_line_order_table.png"></p>
+
+      <p class="Note"><strong>NOTE:</strong> In DSD documents, this button opens the payment tables (<strong>cash</strong>, <strong>check</strong>, <strong>drop</strong>).</p>
+
+      <h2>Layout</h2>
+
+      <p>The <strong>Transaction line</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>tab section</strong>.</p>
+
+      <h3>Main section</h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><img style="border-style:none" src="Transaction_line_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="13, 117, 53, 138" href="#Line">
+            <area shape="rect" coords="62, 115, 181, 140" href="#Code">
+            <area shape="rect" coords="187, 115, 447, 141" href="#Descriptor">
+            <area shape="rect" coords="452, 115, 550, 139" href="#Vendor_code">
+            <area shape="rect" coords="556, 114, 646, 140" href="#Format">
+            <area shape="rect" coords="648, 117, 668, 137" href="#Authorized">
+            <area shape="rect" coords="66, 165, 158, 189" href="#Case">
+            <area shape="rect" coords="158, 167, 178, 187" href="#Case_checkbox">
+            <area shape="rect" coords="66, 189, 157, 213" href="#Unit">
+            <area shape="rect" coords="158, 192, 178, 212" href="#Unit_checkbox">
+            <area shape="rect" coords="66, 214, 157, 239" href="#Weight">
+            <area shape="rect" coords="159, 217, 179, 237" href="#Weight_checkbox">
+            <area shape="rect" coords="264, 164, 348, 189" href="#Base_cost">
+            <area shape="rect" coords="264, 190, 349, 214" href="#Net_cost">
+            <area shape="rect" coords="265, 214, 350, 240" href="#Total_cost_$">
+            <area shape="rect" coords="437, 163, 524, 189" href="#Case_size">
+            <area shape="rect" coords="437, 189, 524, 214" href="#Total_units">
+            <area shape="rect" coords="437, 214, 524, 241" href="#Unit_cost">
+            <area shape="rect" coords="585, 164, 676, 191" href="#Price">
+            <area shape="rect" coords="586, 190, 676, 215" href="#Total">
+            <area shape="rect" coords="587, 215, 676, 240" href="#Margin">
+            <area shape="rect" coords="63, 243, 83, 263" href="#Scalable">
+            <area shape="rect" coords="133, 242, 153, 262" href="#Refund">
+            <area shape="rect" coords="189, 243, 209, 263" href="#Free">
+            <area shape="rect" coords="587, 242, 676, 269" href="#Delivery_days">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center">*Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <h3>Tab section</h3>
+      <map name="fees_tab">
+        <area shape="rect" coords="85, 27, 166, 53" href="#Bottle_deposit">
+        <area shape="rect" coords="168, 27, 241, 53" href="">
+        <area shape="rect" coords="85, 53, 167, 79" href="#Environmental_fee">
+        <area shape="rect" coords="168, 54, 240, 79" href="#Environmental_fee_total">
+        <area shape="rect" coords="325, 28, 405, 54" href="#Cost_fee_$">
+        <area shape="rect" coords="407, 28, 479, 53" href="#Cost_fee_$_total">
+        <area shape="rect" coords="324, 54, 406, 78" href="#Cost_fee_%">
+        <area shape="rect" coords="407, 53, 479, 79" href="#Cost_fee_%_total">
+        <area shape="rect" coords="325, 78, 479, 104" href="#Total_fees">
+        <area shape="rect" coords="584, 27, 676, 54" href="#Split_unit_fees">
+        <area shape="rect" coords="585, 54, 676, 78" href="#Fee_1">
+        <area shape="rect" coords="586, 79, 675, 103" href="#Fee_2">
+        <area shape="rect" coords="15, 152, 91, 177" href="#Size_cubic">
+        <area shape="rect" coords="96, 152, 171, 177" href="#Total_cubic">
+        <area shape="rect" coords="175, 151, 251, 178" href="#Rate_cubic">
+        <area shape="rect" coords="255, 150, 331, 178" href="#Fees_cubic">
+        <area shape="rect" coords="360, 152, 436, 178" href="#Size_weight">
+        <area shape="rect" coords="439, 151, 517, 177" href="#Total_weight">
+        <area shape="rect" coords="520, 150, 595, 178" href="#Rate_weight">
+        <area shape="rect" coords="598, 151, 675, 177" href="#Fees_weight">
+      </map>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" src="Transaction_line_table_files/order_tab.png" usemap="#order_tab" height="330" width="688"> <map name="order_tab">
+            <area shape="rect" coords="436, 2, 520, 27" href="#Split_item">
+            <area shape="rect" coords="11, 49, 82, 74" href="#Current">
+            <area shape="rect" coords="86, 49, 166, 74" href="#On_order">
+            <area shape="rect" coords="170, 48, 250, 75" href="#On_process">
+            <area shape="rect" coords="266, 41, 347, 75" href="#Price_table">
+            <area shape="rect" coords="362, 49, 432, 75" href="#Split_quantity">
+            <area shape="rect" coords="436, 49, 522, 76" href="#On_process_split">
+            <area shape="rect" coords="586, 49, 676, 74" href="#Status">
+            <area shape="rect" coords="12, 91, 682, 169" href="#Comments">
+            <area shape="rect" coords="12, 182, 681, 261" href="#Note">
+          </map> </td>
+
+          <td style="width: 336px"><img style="border-style:none" src="Transaction_line_table_files/fees_tab.png" usemap="#fees_tab"></td>
+
+          <td style="width: 512px"><img style="border-style:none" src="Transaction_line_table_files/deals_tab.png" usemap="#deals_tab"> <map name="deals_tab">
+            <area shape="rect" coords="81, 25, 181, 49" href="#Start_date_allowance">
+            <area shape="rect" coords="185, 24, 285, 50" href="#End_date_allowance">
+            <area shape="rect" coords="292, 25, 351, 50" href="#Amount_allowance">
+            <area shape="rect" coords="355, 24, 417, 49" href="#Percent_allowance">
+            <area shape="rect" coords="420, 24, 491, 51" href="#Total_allowance">
+            <area shape="rect" coords="497, 24, 535, 50" href="#OI_allowance">
+            <area shape="rect" coords="541, 24, 600, 51" href="#Minimum_allowance">
+            <area shape="rect" coords="605, 25, 676, 51" href="#Maximum_allowance">
+            <area shape="rect" coords="82, 50, 182, 76" href="#Start_date_discount">
+            <area shape="rect" coords="186, 50, 286, 76" href="#End_date_discount">
+            <area shape="rect" coords="292, 50, 352, 75" href="#Amount_discount">
+            <area shape="rect" coords="357, 49, 417, 75" href="#Percent_discount">
+            <area shape="rect" coords="422, 51, 490, 76" href="#Total_discount">
+            <area shape="rect" coords="496, 51, 535, 76" href="#OI_discount">
+            <area shape="rect" coords="540, 50, 600, 74" href="#Minimum_discount">
+            <area shape="rect" coords="606, 50, 676, 75" href="#Maximum_discount">
+            <area shape="rect" coords="81, 76, 183, 100" href="#Start_date_rebate">
+            <area shape="rect" coords="187, 76, 287, 100" href="#End_date_rebate">
+            <area shape="rect" coords="290, 75, 353, 101" href="#Amount_rebate">
+            <area shape="rect" coords="357, 76, 416, 101" href="#Percent_rebate">
+            <area shape="rect" coords="422, 75, 492, 101" href="#Total_rebate">
+            <area shape="rect" coords="497, 76, 536, 100" href="#OI_rebate">
+            <area shape="rect" coords="542, 74, 600, 101" href="#Minimum_rebate">
+            <area shape="rect" coords="607, 76, 675, 101" href="#Maximum_rebate">
+            <area shape="rect" coords="82, 101, 183, 124" href="#Start_date_cost_break">
+            <area shape="rect" coords="185, 101, 286, 123" href="#End_date_cost_break">
+            <area shape="rect" coords="292, 100, 352, 124" href="#Amount_cost_break">
+            <area shape="rect" coords="357, 100, 416, 125" href="#Percent_cost_break">
+            <area shape="rect" coords="423, 101, 493, 126" href="#Total_cost_break">
+            <area shape="rect" coords="498, 100, 537, 126" href="#OI_cost_break">
+            <area shape="rect" coords="544, 101, 603, 126" href="#Minimum_cost_break">
+            <area shape="rect" coords="608, 101, 676, 124" href="#Maximum_cost_break">
+            <area shape="rect" coords="87, 148, 496, 173" href="#Allowance">
+            <area shape="rect" coords="87, 173, 497, 200" href="#Discount">
+            <area shape="rect" coords="87, 197, 496, 225" href="#Rebate">
+            <area shape="rect" coords="88, 225, 495, 248" href="#Cost_break">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center">*Click on a field to get more information.</td>
+
+          <td class="Img" style="text-align:center">*Click on a field to get more information.</td>
+
+          <td class="Img" style="text-align:center">*Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+      Here is the description of the <strong>Transaction line</strong> table fields and their functionalities: 
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+
+          <tr>
+            <th colspan="2"><strong>Main section</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Line">Line</a></strong></td>
+
+          <td>The <strong>Line</strong> field contains the order number of the current line in the set of lines.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Code">Code</a></strong></td>
+
+          <td>The <strong>Code</strong> field contains the UPC of the current item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Descriptor">Descriptor</a></strong></td>
+
+          <td>The <strong>Descriptor</strong> field contains the description of the current item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor_code">Vendor code</a></strong></td>
+
+          <td>The <strong>Vendor code</strong> field contains the <a href="#Vendor_code">code used by the vendor</a> to identify the current item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Format">Format</a></strong></td>
+
+          <td>The <strong>Format</strong> field contains the buying format description of the current item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Authorized">Authorized</a></strong></td>
+
+          <td>The <strong>Authorized</strong> field if the current cost record is the official authorized cost or not.<br>
+          This field is useful in a multi-vendors case when an item has more than one cost record.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Order quantity</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Case">Case</a></strong></td>
+
+          <td>The <strong>Case</strong> field contains the number of cases ordered for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Case_checkbox">Case checkbox</a></strong></td>
+
+          <td>When selected, it makes the <strong>Case</strong> field non-editable.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Unit">Unit</a></strong></td>
+
+          <td>The <strong>Unit</strong> field contains the number of units ordered for the current item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Unit_checkbox">Unit checkbox</a></strong></td>
+
+          <td>When selected, the <strong>Unit checkbox</strong> field makes the <strong>Unit</strong> field non-editable.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Weight">Weight</a></strong></td>
+
+          <td>The <strong>Weight</strong> field contains the quantity in weight ordered for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Weight_checkbox">Weight checkbox</a></strong></td>
+
+          <td>When selected, the <strong>Weight checkbox</strong> field makes the <strong>Weight</strong> field non-editable.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Order cost</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Base_cost">Base cost</a></strong></td>
+
+          <td>The <strong>Base cost</strong> field contains the regular item cost per case for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Net_cost">Net cost</a></strong></td>
+
+          <td>The <strong>Net cost</strong> field contains the net cost per case for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_cost_$">Total cost $</a></strong></td>
+
+          <td>The <strong>Total cost $</strong> field contains the total cost for the item, according to the number of cases/units/weight ordered.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Unit</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Case_size">Case size</a></strong></td>
+
+          <td>The <strong>Case size</strong> field contains the number of units per case for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_units">Total units</a></strong></td>
+
+          <td>The <strong>Total units</strong> field contains the total number of units ordered for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Unit_cost">Unit cost</a></strong></td>
+
+          <td>The <strong>Unit cost</strong> field contains the unit cost of the item.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Retail</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Price">Price</a></strong></td>
+
+          <td>The <strong>Price</strong> field contains the retail price of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total">Total</a></strong></td>
+
+          <td>The <strong>Total</strong> field contains the total retail amount of the item according to the number of items ordered.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Margin">Margin</a></strong></td>
+
+          <td>The <strong>Margin</strong> field contains the profit margin of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Scalable">Scalable</a></strong></td>
+
+          <td>The <strong>Scalable</strong> field specifies if the item is sold by weight and therefore scaled at the POS (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Refund">Refund</a></strong></td>
+
+          <td>The <strong>Refund</strong> field specifies whether the current item is for refund (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Free">Free</a></strong></td>
+
+          <td>The <strong>Free</strong> field specifies whether the current item is for free (checked) or not (unchecked).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Delivery_days">Delivery days</a></strong></td>
+
+          <td style="height: 21px">The <strong>Delivery days</strong> field contains the number of days needed to receive the current item from the vendor after the order.</td>
+        </tr>
+
+        <tr>
+          <th colspan="2"><strong>Order tab</strong></th>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Current">Current</a></strong></td>
+
+          <td>The <strong>Current</strong> field contains the quantity in units that is available in inventory for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="On_order">On order</a></strong></td>
+
+          <td>The <strong>On order</strong> field contains the total number of units on order for the item. It includes the quantity on the purchase orders (open and closed) and on the open receiving for the current item.<br>
+          The value is calculated by the system using the <strong>Calculate live counters</strong> job in the Scheduler.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="On_process">On process</a></strong></td>
+
+          <td>The <strong>On process</strong> field contains the total number of units on process for the item. It includes the quantity on the sale orders (open and closed), on the shipping manifests (open and closed) and on the open invoices for the current item. The value is calculated by the system using the <strong>Calculate live counters</strong> job in the Scheduler.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Price_table">Price</a></strong></td>
+
+          <td>The <strong>Price</strong> field opens the <a href="../../Common/Item_maintenance/Price_Table.htm"><strong>Price</strong> table</a> for the current item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Split_item">Split item</a></strong></td>
+
+          <td>The <strong>Split item</strong> field displays the UPC of the item contained in the current item.<br>
+          Used for kits that contain one item only (1 UPC code). It works in combination with the <strong>Split quantity</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Split_quantity">Split quantity</a></strong></td>
+
+          <td>The <strong>Split quantity</strong> field displays the number of split items that are contained in the current item.<br>
+          It works in combination with the <strong>Split item</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="On_process_split">On process</a></strong></td>
+
+          <td>The <strong>On process</strong> field contains the total current quantity on process for the item contained in the current item. It includes the the number of units on the sale orders (open and closed), on the shipping manifests (open and closed) and on the open invoices for the item contained in the current item. The value is calculated by the system using the <strong>Calculate live counters</strong> job in the Scheduler.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Status">Status</a></strong></td>
+
+          <td>The <strong>Status</strong> field contains the identification characters of the status of the current item.<br>
+          The following values are possible: <em>0 (Active), BO (Allow BO), 1 (Discontinued), 2 (Seasonal), 3 (To be discontinued), 4 (Special order)</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Comments">Comments</a></strong></td>
+
+          <td>The <strong>Comments</strong> field contains a comment on the purchase order or bill.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Note">Note</a></strong></td>
+
+          <td>The <strong>Note</strong> field contains a note on the purchase order/bill.</td>
+        </tr>
+
+        <tr>
+          <th colspan="2"><strong>Fees tab</strong></th>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Environmental</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Bottle_deposit">Bottle deposit</a></strong></td>
+
+          <td>The <strong>Bottle deposit</strong> field contains the deposit amount charged by case.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Bottle_deposit_total">Bottle deposit total</a></strong></td>
+
+          <td>The <strong>Bottle deposit total</strong> field contains the total deposit amount charged for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Environmental_fee">Environmental fee</a></strong></td>
+
+          <td>The <strong>Environmental fee</strong> field contains the environmental fee amount charged by case.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Environmental_fee_total">Environmental fee total</a></strong></td>
+
+          <td>The <strong>Environmental fee total</strong> field contains the total amount of environmental fees charged for the item.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Landed fees</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cost_fee_$">Cost fee $</a></strong></td>
+
+          <td>The <strong>Cost fee $</strong> field contains the amount of the cost fees for one case, expressed in dollars.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cost_fee_$_total">Cost fee $ total</a></strong></td>
+
+          <td>The <strong>Cost fee $ total</strong> field contains the total amount in dollars of cost fees charged for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cost_fee_%">Cost fee %</a></strong></td>
+
+          <td>The <strong>Cost fee %</strong> field contains the value of the cost fees for one case, expressed in percentage.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cost_fee_%_total">Cost fee % total</a></strong></td>
+
+          <td>The <strong>Cost fee % total</strong> field contains the total amount in percents of cost fees charged for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_fees">Total fees</a></strong></td>
+
+          <td>The <strong>Total fees</strong> field total cost fees for the item, expressed in dollars.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Other fees</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Split_unit_fees">Split unit fees</a></strong></td>
+
+          <td>The <strong>Split unit fees</strong> field contains the fee amount by unit charged when the current item is bought in split case quantities.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Fee_1">Fee 1</a></strong></td>
+
+          <td>The <strong>Fee 1</strong> field contains an additional fee amount charged for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Fee_2">Fee 2</a></strong></td>
+
+          <td>The <strong>Fee 2</strong> field contains a second additional fees amount charged for the item.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Transportation - cubic</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Size_cubic">Size</a></strong></td>
+
+          <td>The <strong>Size</strong> field contains the metric volume of a case.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_cubic">Total</a></strong></td>
+
+          <td>The <strong>Total</strong> field contains the total metric volume for the current item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Rate_cubic">Rate</a></strong></td>
+
+          <td>The <strong>Rate</strong> field contains the rate of the shipping fees charged by volume for the delivery of the merchandise for this vendor.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Fees_cubic">Fees</a></strong></td>
+
+          <td>The <strong>Fees</strong> field contains the total amount of the metric volume fees charged for the item.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Transportation - weight</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Size_weight">Size</a></strong></td>
+
+          <td>The <strong>Size</strong> field contains the weight of a case, including the tare.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_weight">Total</a></strong></td>
+
+          <td>The <strong>Total</strong> field contains the total weight for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Rate_weight">Rate</a></strong></td>
+
+          <td>The <strong>Rate</strong> field contains the rate of the shipping fees charged by weight for the delivery of the merchandise for this vendor.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Fees_weight">Fees</a></strong></td>
+
+          <td>The <strong>Fees</strong> field contains the total amount of the weight fees charged for the item.</td>
+        </tr>
+
+        <tr>
+          <th colspan="2"><strong>Deals tab</strong></th>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Allowance</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Start_date_allowance">Start date</a></strong></td>
+
+          <td>The <strong>Start date</strong> field contains the date on which the allowance becomes effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="End_date_allowance">End date</a></strong></td>
+
+          <td>The <strong>End date</strong> field contains the date on which the allowance is no longer effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Amount_allowance">Amount</a></strong></td>
+
+          <td>The <strong>Amount</strong> field contains the reduction amount per case for the allowance, applicable during the effective allowance period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent_allowance">Percent</a></strong></td>
+
+          <td>The <strong>Percent</strong> field contains the reduction per case expressed as a percentage for the allowance, applicable during the effective allowance period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_allowance">Total</a></strong></td>
+
+          <td>The <strong>Total</strong> field contains the total reduction amount for the allowance.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OI_allowance">OI</a> (Off invoice)</strong></td>
+
+          <td>
+            The <strong>OI</strong> field contains the identifier for the off invoice status of the allowance. It specifies when the allowance value is given.<br>
+            The following values are possible:<br>
+             
+
+            <ul style="list-style:none">
+              <li><em>1 (Off invoice)</em>, subtracted from the invoice total.</li>
+
+              <li><em>E (End of promotion)</em>, given as a check at the end of the promotion according to the number of items bought.</li>
+
+              <li><em>S (On statement)</em>, given according to the number of items bought; appears on the vendor's statement.</li>
+
+              <li><em>M (Movement required)</em>, given as a check according to the number of items sold.</li>
+            </ul>
+            Only the <em>Off invoice (1)</em> value affects the amount of the <a href="#Total_cost_$">total cost</a>.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Minimum_allowance">Minimum</a></strong></td>
+
+          <td>The <strong>Minimum</strong> field contains the minimum quantity required, in cases, to get the allowance reduction.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Maximum_allowance">Maximum</a></strong></td>
+
+          <td>The <strong>Maximum</strong> field contains the maximum quantity, in cases, for which the allowance reduction can be applied on.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Discount</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Start_date_discount">Start date</a></strong></td>
+
+          <td>The <strong>Start</strong> field contains the date on which the discount becomes effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="End_date_discount">End date</a></strong></td>
+
+          <td>The <strong>End</strong> field contains the date on which the discount is no longer effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Amount_discount">Amount</a></strong></td>
+
+          <td>The <strong>Amount</strong> field contains the reduction amount per case for the discount, applicable during the effective discount period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent_discount">Percent</a></strong></td>
+
+          <td>The <strong>Percent</strong> field contains the reduction per case expressed as a percentage for the discount, applicable during the effective discount period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_discount">Total</a></strong></td>
+
+          <td>The <strong>Total</strong> field contains the total reduction amount for the discount.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OI_discount">OI</a> (Off invoice)</strong></td>
+
+          <td>
+            The <strong>OI</strong> field contains the identifier for the off invoice status of the discount. It specifies when the discount value is given.<br>
+             
+
+            <ul style="list-style:none">
+              <li><em>1 (Off invoice)</em>, subtracted from the invoice total.</li>
+
+              <li><em>E (End of promotion)</em>, given as a check at the end of the promotion according to the number of items bought.</li>
+
+              <li><em>S (On statement)</em>, given according to the number of items bought; appears on the vendor's statement.</li>
+
+              <li><em>M (Movement required)</em>, given as a check according to the number of items sold.</li>
+            </ul>
+            Only the <em>Off invoice (1)</em> value affects the amount of the <a href="#Total_cost_$">total cost</a>.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Minimum_discount">Minimum</a></strong></td>
+
+          <td>The <strong>Minimum</strong> field contains the minimum quantity required, in cases, to get the discount reduction.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Maximum_discount">Maximum</a></strong></td>
+
+          <td style="height: 21px">The <strong>Maximum</strong> field contains the maximum quantity, in cases, on which the discount reduction can be applied.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Rebate</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Start_date_rebate">Start date</a></strong></td>
+
+          <td>The <strong>Start</strong> field contains the date on which the rebate becomes effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="End_date_rebate">End date</a></strong></td>
+
+          <td>The <strong>End</strong> field contains the date on which the rebate is no longer effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Amount_rebate">Amount</a></strong></td>
+
+          <td>The <strong>Amount</strong> field contains the reduction amount per case for the rebate, applicable during the effective rebate period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent_rebate">Percent</a></strong></td>
+
+          <td>The <strong>Percent</strong> field contains the reduction per case expressed as a percentage for the rebate, applicable during the effective rebate period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_rebate">Total</a></strong></td>
+
+          <td>The <strong>Total</strong> field contains the total reduction amount for the rebate.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OI_rebate">OI</a> (Off invoice)</strong></td>
+
+          <td>
+            The <strong>OI</strong> field contains the identifier for the off invoice status of the rebate. It specifies when the rebate value is given.<br>
+             
+
+            <ul style="list-style:none">
+              <li><em>1 (Off invoice)</em>, subtracted from the invoice total.</li>
+
+              <li><em>E (End of promotion)</em>, given as a check at the end of the promotion according to the number of items bought.</li>
+
+              <li><em>S (On statement)</em>, given according to the number of items bought; appears on the vendor's statement.</li>
+
+              <li><em>M (Movement required)</em>, given as a check according to the number of items sold.</li>
+            </ul>
+            Only the <em>Off invoice (1)</em> value affects the amount of the <a href="#Total_cost_$">total cost</a>.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Minimum_rebate">Minimum</a></strong></td>
+
+          <td>The <strong>Minimum</strong> field contains the minimum quantity required, in cases, to get the rebate reduction.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Maximum_rebate">Maximum</a></strong></td>
+
+          <td>The <strong>Maximum</strong> field contains the maximum quantity, in cases, on which the rebate reduction can be applied.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Cost break</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Start_date_cost_break">Start date</a></strong></td>
+
+          <td>The <strong>Start</strong> field contains the date on which the cost break becomes effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="End_date_cost_break">End date</a></strong></td>
+
+          <td>The <strong>End</strong> field contains the date on which the cost break is no longer effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Amount_cost_break">Amount</a></strong></td>
+
+          <td>The <strong>Amount</strong> field contains the reduction amount per case for the cost break, applicable during the effective cost break period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent_cost_break">Percent</a></strong></td>
+
+          <td>The <strong>Percent</strong> field contains the reduction per case expressed as a percentage for the cost break, applicable during the effective cost break period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Total_cost_break">Total</a></strong></td>
+
+          <td>The <strong>Total</strong> field contains the amount of total reduction for the cost break.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OI_cost_break">OI</a> (Off invoice)</strong></td>
+
+          <td>
+            The <strong>OI</strong> field contains the identifier for the off invoice status of the cost break. It specifies when the cost break value is given.<br>
+             
+
+            <ul style="list-style:none">
+              <li><em>1 (Off invoice)</em>, subtracted from the invoice total.</li>
+
+              <li><em>E (End of promotion)</em>, given as a check at the end of the promotion according to the number of items bought.</li>
+
+              <li><em>S (On statement)</em>, given according to the number of items bought; appears on the vendor's statement.</li>
+
+              <li><em>M (Movement required)</em>, given as a check according to the number of items sold.</li>
+            </ul>
+            Only the <em>Off invoice (1)</em> value affects the amount of the <a href="#Total_cost_$">total cost</a>.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Minimum_cost_break">Minimum</a></strong></td>
+
+          <td>The <strong>Minimum</strong> field contains the minimum quantity required, in cases, to get the cost break reduction.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Maximum_cost_break">Maximum</a></strong></td>
+
+          <td>The <strong>Maximum</strong> field contains the maximum quantity, in cases, on which the cost break reduction can be applied.</td>
+        </tr>
+
+        <tr>
+          <th style="width: 156px"><strong>Qualifier</strong></th>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Allowance">Allowance</a></strong></td>
+
+          <td>The <strong>Qualifier</strong> field contains the qualifying conditions of the allowance.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Discount">Discount</a></strong></td>
+
+          <td>The <strong>Qualifier</strong> field contains the qualifying conditions of the discount.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Rebate">Rebate</a></strong></td>
+
+          <td>The <strong>Qualifier</strong> field contains the qualifying conditions of the rebate.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cost_break">Cost break</a></strong></td>
+
+          <td>The <strong>Qualifier</strong> field contains the qualifying conditions of the cost break.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

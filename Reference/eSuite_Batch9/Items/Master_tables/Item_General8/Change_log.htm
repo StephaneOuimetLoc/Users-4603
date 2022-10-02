@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Change Log</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Change Log <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuiute &gt; Items &gt; Master &gt; Change log <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0">I</a>nformation</h2>
+
+      <p>The <strong>Change logs</strong> feature allows displaying changes that have been made to any of the four item master tables: price, cost, POS and main (OBJ). These changes refer to the updating, deletion and addition of information.</p>
+
+      <p>To access the change logs:</p>
+
+      <ol>
+        <li>In the launcher, click on <strong>Items</strong>.</li>
+
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens, displaying the item-related options.</li>
+
+        <li>Click on <strong>Change log</strong>.</li>
+      </ol>
+
+      <p><img class="Text" src="Change_log_files/start_window.png"></p>
+
+      <h2>The Items - display changes wizard</h2>
+
+      <p>The <strong>Change log</strong> entry opens the <strong>Items - display changes</strong> wizard, with criteria selection that includes start and end date, price level, type of price event, item code, POS description, target and the Not for sale option for the items that cannot be sold at the POS. Criteria related to the item code range may be added with the <strong>Add criteria</strong> button.</p>
+
+      <p><img class="Text" height="635" src="Change_log_files/wizard.png" width="440"></p>
+
+      <h3>Start and end dates</h3>
+
+      <p>The start and end dates allow defining the period when changes have been made to the master tables. Both fields must be filled out for the query to be executed.</p>
+
+      <p>The <strong>Start date</strong> and the <strong>End date</strong> fields allow you to enter the date and time or select them from the picker:</p>
+
+      <p><img class="Text" height="425" src="Change_log_files/start_end_dates.png" width="414"></p>
+
+      <p>The following buttons are available:</p>
+
+      <ul>
+        <li><strong>OK</strong> confirms the time and date selection.</li>
+
+        <li><strong>Today</strong> sets the current date and time.</li>
+
+        <li><strong>Now</strong> sets the current time and date.</li>
+      </ul>
+
+      <p>Required date format: <em>mm/dd/yyyy</em>.<br>
+      </p>
+
+      <p>Required time format: <em>hh:mm:ss</em>.</p>
+
+      <h2>The Items - display changes grid</h2>
+
+      <p>The <strong>Items - display changes</strong> grid shows the price, cost, POS and OBJ changes within the selected period and according to the criteria set in the wizard.</p>
+
+      <p><img height="865" src="Change_log_files/change_log_grid.png" width="2772" class="Text"></p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Analyze</strong> allows performing item subqueries and linked queries.</li>
+
+        <li><strong>Action</strong> allows deploying the changes.</li>
+      </ul>
+
+      <h3>Price changes</h3>
+
+      <p>The following changes are displayed by default in the <strong>Price changes</strong> section of the grid:</p>
+
+      <p><img class="Text" height="472" src="Change_log_files/price_changes.png" width="1163"></p>
+
+      <p>Further columns may be added from the column headers:</p>
+
+      <p><img class="Text" src="Change_log_files/price_columns.png"></p>
+
+      <p>Here is the description of the columns and the information they may contain.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 196px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 196px"><strong>Price</strong></td>
+
+          <td>The active price of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Event source</strong></td>
+
+          <td>The type of pricing even that triggers the change: regular, sale, TPR or store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Start date</strong></td>
+
+          <td>The date on which the pricing event triggering the change will be effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>End date</strong></td>
+
+          <td>The date on which the pricing event will no longer be effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Margin</strong></td>
+
+          <td>The active margin, calculated using the active price.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Type of operation</strong></td>
+
+          <td><em>Update</em>: existing information that has been modified.<br>
+           <em>Insert</em>: new information added to the price table.<br>
+           <em>Delete</em>: information that has been removed from the price table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Next price</strong></td>
+
+          <td>The next price of the item, based on the changes made in the pricing columns of the <strong>Price</strong> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Next price date changes</strong></td>
+
+          <td>The date and time when the future pricing even will take place.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Fields of the changes</strong></td>
+
+          <td>The number of the fields that have been changed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Level</strong></td>
+
+          <td>The price level.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Responsible for the changes</strong></td>
+
+          <td>The identifier of the user that has made the change (operator number in SMS or user code in eSuite).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Target</strong></td>
+
+          <td>The target identifier.</td>
+        </tr>
+      </table>
+
+      <h4>Cost changes</h4>
+
+      <p>The following changes are displayed by default in the <strong>Cost changes</strong> section of the grid:</p>
+
+      <p><img class="Text" src="Change_log_files/cost_changes.png"></p>
+
+      <p>Further columns may be added from the column headers:</p>
+
+      <p><img class="Text" src="Change_log_files/cost_columns.png"></p>
+
+      <p>Here is the description of the columns and the information they may contain.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 196px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 196px"><strong>Cost</strong></td>
+
+          <td>The unit cost of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Cost date changes</strong></td>
+
+          <td>The date on which the cost change will be effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Type of operation</strong></td>
+
+          <td><em>Update</em>: existing information that has been modified.<br>
+           <em>Insert</em>: new information added to the cost table.<br>
+           <em>Delete</em>: information that has been removed from the cost table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Fields of the changes</strong></td>
+
+          <td>The number of the fields that have been changed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Authorized vendor</strong></td>
+
+          <td>Displays value <em>1</em> for the authorized cost records.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Vendor description</strong></td>
+
+          <td>The name of the vendor.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Case</strong></td>
+
+          <td>The number of units per case for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Responsible for the changes</strong></td>
+
+          <td>The identifier of the user that has made the change (operator number in SMS or user code in eSuite).</td>
+        </tr>
+      </table>
+
+      <h4>POS changes</h4>
+
+      <p>The following changes are displayed by default in the <strong>POS changes</strong> section of the grid:</p>
+
+      <p><img class="Text" height="441" src="Change_log_files/POS_changes.png" width="797"></p>
+
+      <p>Further columns may be added from the column headers:</p>
+
+      <p><img class="Text" src="Change_log_files/POS_columns.png"></p>
+
+      <p>Here is the description of the columns and the information they may contain.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 196px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 196px"><strong>POS description</strong></td>
+
+          <td>The item description at the POS.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>POS date changes</strong></td>
+
+          <td>The date on which the POS change will be effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Type of operation</strong></td>
+
+          <td><em>Update</em>: existing information that has been modified.<br>
+           <em>Insert</em>: new information added to the POS table.<br>
+           <em>Delete</em>: information that has been removed from the POS table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Fields of the changes</strong></td>
+
+          <td>The number of the fields that have been changed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Sub-department</strong></td>
+
+          <td>The number of the sub-department linked to the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Sub-department description</strong></td>
+
+          <td>The name of the sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Department number</strong></td>
+
+          <td>The number of the department linked to the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Promotion ID</strong></td>
+
+          <td>The identification number that links the item to one or more promotions.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Taxable (1 to 7)</strong></td>
+
+          <td>The tax applied to the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Follow subdepartment status</strong></td>
+
+          <td>Shows whether the item follows the programming set for the linked sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>FSA eligible</strong></td>
+
+          <td>Shows whether the item may be purchased using an FSA card as tender.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>WIC eligible</strong></td>
+
+          <td>Shows whether the item is eligible for the WIC program.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Food stamp</strong></td>
+
+          <td>Shows whether the item can be purchased using food stamps as tender.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Scalable item</strong></td>
+
+          <td>Shows whether the item is sold by weight and scaled at the POS.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Allow manual weight</strong></td>
+
+          <td>Shows whether the weight of the scalable item can be manually entered using the POS keyboard.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Bottle link</strong></td>
+
+          <td>The deposit value of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Other flags</strong></td>
+
+          <td>Shows additional item information.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>WIC alias</strong></td>
+
+          <td>The alternate code specific to the WIC program.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Divisor</strong></td>
+
+          <td>The weight divisor of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Tare link</strong></td>
+
+          <td>The tare value used to subtract the weight of the packaging from the total weight.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Tare prop</strong></td>
+
+          <td>The percentage used to calculate the tare value at the time of sale.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 196px"><strong>Responsible for the changes</strong></td>
+
+          <td>The identifier of the user that has made the change (operator number in SMS or user code in eSuite).</td>
+        </tr>
+      </table>
+
+      <h4>OBJ changes</h4>
+
+      <p>The following changes are displayed by default in the <strong>OBJ changes</strong> section of the grid:</p>
+
+      <p><img class="Text" height="522" src="Change_log_files/OBJ_changes.png" width="769"></p>
+
+      <p>Further columns may be added from the column headers:</p>
+
+      <p><img class="Text" height="897" src="Change_log_files/OBJ_columns.png" width="959"></p>
+
+      <p>Here is the description of the columns and the information they may contain.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 209px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 209px"><strong>Long description</strong></td>
+
+          <td>The item description at the POS.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>OBJ date changes</strong></td>
+
+          <td>The date on which the POS change will be effective.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Type of operation</strong></td>
+
+          <td><em>Update</em>: existing information that has been modified.<br>
+           <em>Insert</em>: new information added to the POS table.<br>
+           <em>Delete</em>: information that has been removed from the POS table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Brand description</strong></td>
+
+          <td>The name of the item manufacturer</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Size description</strong></td>
+
+          <td>The item size.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Alternate brand description</strong></td>
+
+          <td>The alternate name of the item manufacturer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Alternate expanded description</strong></td>
+
+          <td>The alternate description of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Alternate size description</strong></td>
+
+          <td>The alternate size of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Family code</strong></td>
+
+          <td>The code of the family to which the item is linked.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Family description</strong></td>
+
+          <td>The description of the family to which the item is linked.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Category code</strong></td>
+
+          <td>The code of the category to which the item is linked.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Category description</strong></td>
+
+          <td>The description of the category to which the item is linked.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Report code</strong></td>
+
+          <td>The report code to which the item is linked.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Report code description</strong></td>
+
+          <td>The description of the report code to which the item is linked.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>NACS code</strong></td>
+
+          <td>The NACS (National Association of Convenience Stores) to which the item is linked.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Account code</strong></td>
+
+          <td>The general ledger account that is associated to the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Reporting department</strong></td>
+
+          <td>Description to come.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Fields of the changes</strong></td>
+
+          <td>The number of the fields that have been changed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 209px"><strong>Responsible for the changes</strong></td>
+
+          <td>The identifier of the user that has made the change (operator number in SMS or user code in eSuite).</td>
+        </tr>
+      </table>
+
+      <h2>Reading the grid</h2>
+
+      <p>For each change in any of the four master tables (price, cost, POS and OBJ), the grid will display the first change in the three other master tables where the date of the change is equal to the one in the master table.</p>
+
+      <p>For example, if the TPR is changed in the <strong>Price</strong> table, all changes related to cost, POS and OBJ that match the start date for the TPR event will be displayed in the change grid. When there are no matching changes, the fields will be left emtpy.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Labels by Batch</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Labels by Batch <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Tools &gt; Labels &gt; By batch <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The <b>Label by batch</b> utility allows extracting labels on the items that are part of the following types of batches: instore price, future price, sale and TPR.</p>
+
+      <h2>Displaying the Labels by batch utility</h2>
+
+      <p>In the launcher, click the arrow in the <strong>Tools</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Labels</strong>: the <strong>Start</strong> window opens in the <strong>Labels</strong> work area.</li>
+
+        <li>Click on <strong>By batch</strong> to display the options.</li>
+
+        <li>
+          Select any of the four options:<br>
+           
+
+          <ul style="list-style:disc">
+            <li><strong>Instore price batch</strong></li>
+
+            <li><strong>Future price batch</strong></li>
+
+            <li><strong>Sale batch</strong></li>
+
+            <li><strong>TPR batch</strong></li>
+          </ul>
+        </li>
+      </ol>
+
+      <p>The <strong>Labels by batch</strong> wizard opens on the desktop.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><img class="Text" style="border-style:none" src="Labels_on_instore_batch_files/labels_by_batch_wizard.png" usemap="#labels_by_batch_wizard"> <map name="labels_by_batch_wizard">
+            <area shape="rect" coords="21, 149, 222, 174" href="#Batch_start">
+            <area shape="rect" coords="231, 148, 433, 174" href="#Batch_stop">
+            <area shape="rect" coords="16, 219, 289, 244" href="#Label_format_wizard">
+            <area shape="rect" coords="297, 219, 438, 244" href="#Quantity_for_each_label">
+            <area shape="rect" coords="17, 267, 220, 293" href="#Price_level_start">
+            <area shape="rect" coords="229, 267, 433, 293" href="#Price_level_stop">
+            <area shape="rect" coords="16, 315, 433, 340" href="#Item_selection">
+            <area shape="rect" coords="15, 363, 435, 389" href="#Price_target">
+            <area shape="rect" coords="13, 482, 268, 513" href="#Breakdown_target_by_store">
+            <area shape="rect" coords="13, 515, 267, 543" href="#Use_quantity_set_in_item_location">
+            <area shape="rect" coords="12, 545, 317, 575" href="#Only_items_having_label_format_in_location">
+            <area shape="rect" coords="9, 592, 89, 625" href="#Reset">
+            <area shape="rect" coords="342, 592, 440, 626" href="#Execute">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center">*Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <h2>Layout of the Labels by batch wizard</h2>
+
+      <p>Here is the description of the fields and functionalities in the <strong>Labels by batch</strong> wizard:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 277px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Batch_start">Batch start</a></strong></td>
+
+          <td>The <strong>Batch start</strong> field gives access to the list of batches.<br>
+          It works with the <a href="#Batch_stop"><strong>Batch stop</strong> field</a> to set the starting batch number and define the batch range.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Batch_stop">Batch stop</a></strong></td>
+
+          <td>The <strong>Batch start</strong> field gives access to the list of batches.<br>
+          It works with the <a href="#Batch_start"><strong>Batch start</strong> field</a> to set the ending batch number and define the batch range.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Label_format_wizard">Label format</a></strong></td>
+
+          <td>
+            <strong>Label format</strong> is a mandatory field that contains the following predefined label formats:<br>
+             
+
+            <ul>
+              <li>CUSTOMER_CARD.lbz</li>
+
+              <li>OPERATOR_CARD.lbz</li>
+
+              <li>REG_14UP_05162.lbz</li>
+
+              <li>REG_16UP_SHELF.lbz</li>
+
+              <li>REG_16_320_120.lbz</li>
+
+              <li>REG_16_325_120.lbz</li>
+
+              <li>REG_XMAS_2x2.lbz</li>
+
+              <li>SAL_10UP_5963.lbz</li>
+
+              <li>SAL_1_10_75.lbz</li>
+
+              <li>SAL_24UP_COMPARE.lbz</li>
+
+              <li>SAL_28UP_COMPARE.lbz</li>
+            </ul>
+            When the <strong>Label format</strong> field is populated, the <a href="#Execute"><strong>Execute</strong></a> button becomes enabled.
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Quantity_for_each_label">Quantity for each label</a></strong></td>
+
+          <td>The <strong>Quantity for each label</strong> field specifies the number of labels to print for each extracted label.<br>
+          The default value is <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Price_level_start">Price level start</a></strong></td>
+
+          <td>The <strong>Price level start</strong> field specifies the starting price level (first data record).<br>
+          The default value is <em>0: All</em>.<br>
+          It works with the <a href="#Price_level_stop"><strong>Price level stop</strong> field</a> to set the data range for the label template.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Price_level_stop">Price level stop</a></strong></td>
+
+          <td>The <strong>Price level stop</strong> field specifis the ending price level (last data record).<br>
+          The default data is <em>99999: All</em>.<br>
+          It works with the <a href="#Price_level_start"><strong>Price level start</strong> field</a> to set the data range for the label template.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Item_selection">Item selection</a></strong></td>
+
+          <td>The <strong>Item selection</strong> field specifies if the items that are flagged <em>Not for sale</em> are included in the selection.<br>
+          If the item changes are received from the host, it is possible that you are not selling some of these items. In this case, these items are flagged <em>Not for sale</em> and you may choose not to print labels on them.<br>
+          The default value is <em>All items except the ones having "NOT FOR SALE flag on</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Price_target">Price target</a></strong></td>
+
+          <td>The <strong>Price target</strong> field contains the target identifier.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Breakdown_target_by_store">Breakdown target by store</a></strong></td>
+
+          <td>The <strong>Breakdown target by store</strong> field will display the targets by store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Use_quantity_set_in_item_location">Use quantity set in item location</a></strong></td>
+
+          <td>The <strong>Use quantity set in item location</strong> field will look at the <strong>Quantity</strong> field in the <strong>Shelf location</strong> table to determine the number of labels to print.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Only_items_having_label_format_in_location">Only items having label format in location</a></strong></td>
+
+          <td>The <strong>Only items having label formation in location</strong> field allows printing labels for the items that have a label template set in the <strong>Shelf location</strong> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Reset">Reset</a></strong></td>
+
+          <td>The <strong>Reset</strong> field resets any prior values defined in the window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Execute">Execute</a></strong></td>
+
+          <td>The <strong>Execute</strong> field allows generating the&nbsp;label&nbsp;file for the selected items.<br>
+          Disabled by default.<br>
+          Enabled when the <a href="#Label_format"><strong>Label format</strong> field</a> is populated.</td>
+        </tr>
+      </table>
+
+      <h2>Print label list</h2>
+
+      <p>When the <strong>Labels by batch</strong> utility is launched, it opens the <strong>Print label list</strong> window.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Text" style="text-align:center"><img src="Labels_on_instore_batch_files/print_label_list.png" class="Text"> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center">*Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <p>Here is the description of the columns and the information they may contain:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 277px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Checkboxes">Checkboxes</a></strong></td>
+
+          <td>The checkboxes allow selecting and deselecting labels.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="User_ID">User ID</a></strong></td>
+
+          <td>The identifier of the user who has created the list of labels by batch.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Label_format_grid">Label format</a></strong></td>
+
+          <td>The label format for printing.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Quantity">Quantity</a></strong></td>
+
+          <td>The number of labels to be printed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The target identifier.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 277px"><strong><a name="Created_date">Created date</a></strong></td>
+
+          <td>The date the list of labels was created.</td>
+        </tr>
+      </table>
+
+      <p>In the bottom menu of the grid:</p>
+
+      <ul>
+        <li><strong>By store</strong> allows breaking down the list results by store.</li>
+
+        <li>
+          <strong>Action</strong> allows to: 
+
+          <ul style="list-style:disc">
+            <li><strong>View the items</strong> to be printed with the selected label.<br>
+            This opens the <strong>Show print items</strong> grid.</li>
+
+            <li><strong>Delete</strong> the selected label.</li>
+
+            <li><strong>Print</strong> the label.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

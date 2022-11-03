@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>Point Programs</title>
-    <link href="../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
-          <!-- Title/Keywords edit on new documents -->
+    ï»¿            ï»¿ ï»¿ <!-- #BeginTemplate "../../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-          <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -72,7 +73,7 @@
 
       <p>In the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a>, the <a href="../../Common/Customers/Shopper_level_table.htm#Point_programs"><b>Point programs</b> field</a> is used to identify the point programs that the customers linked to the shopper level are members of. The field allows entering or selecting multiple point programs, with no space in between.</p>
 
-      <p>The way the points are redeemed for the main point program <em>1</em> is defined in the <b>Shopper level</b> table and may be different for each shopper level. The way the points are redeemed for the secondary point programs (<em>2</em> to <em>Z</em>) is described in the System.ini <strong></strong> file, since it is identical for every shopper level.</p>
+      <p>The way the points are redeemed for the main point program <em>1</em> is defined in the <b>Shopper level</b> table and may be different for each shopper level. The way the points are redeemed for the secondary point programs (<em>2</em> to <em>Z</em>) is described in the System.ini file, since it is identical for every shopper level.</p>
 
       <h2><a name="methods"></a>Redemption methods</h2>
 
@@ -100,7 +101,7 @@
         <li>Open the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> for the right shopper level.</li>
 
         <li>Select the <em>Allow redeem on item</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Redeem_method"><strong>Redeem method</strong> field</a><i>.<br>
-        </i>The displayed value is <em>1.<br>
+        </i> The displayed value is <em>1.<br>
         <br>
          <img class="Text" height="555" src="Point_redemption_files/shopper_level_redeem_field.png" width="425"></em></li>
 
@@ -147,7 +148,7 @@
 
           <td>
             <p class="List">where x is the identifier character that identifies the point program.<br>
-            The rate corresponds to the number of points needed to get 1 penny point discount.</p>
+             The rate corresponds to the number of points needed to get 1 penny point discount.</p>
           </td>
         </tr>
       </table>
@@ -176,7 +177,7 @@
 
           <td>
             <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
-            The system redeems points according to the point redemption rate defined in the <b>Shopper level</b> table (<b>Reduction/penny</b> field).</p>
+             The system redeems points according to the point redemption rate defined in the <b>Shopper level</b> table (<b>Reduction/penny</b> field).</p>
           </td>
         </tr>
 
@@ -187,7 +188,7 @@
 
           <td>
             <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
-            The system redeems points according to the rate ##. The system takes the amount of the registration to calculate the number of points that must be redeemed.</p>
+             The system redeems points according to the rate ##. The system takes the amount of the registration to calculate the number of points that must be redeemed.</p>
           </td>
         </tr>
 
@@ -198,8 +199,8 @@
 
           <td>
             <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
-            The system redeems points according to the <i>rate ##</i>.&nbsp;The point discount associated the rate (<i>##</i>) to the amount (<i>$$</i>).<br>
-            For example: <i>10:1.00</i> means that <i>10</i> points are redeemed for a point discount of <i>$1.00</i>. So, if an item is sold at <i>$2.60</i>, <i>26</i> points are redeemed for a point discount of <i>$2.60</i></p>
+             The system redeems points according to the <i>rate ##</i>.&nbsp;The point discount associated the rate (<i>##</i>) to the amount (<i>$$</i>).<br>
+             For example: <i>10:1.00</i> means that <i>10</i> points are redeemed for a point discount of <i>$1.00</i>. So, if an item is sold at <i>$2.60</i>, <i>26</i> points are redeemed for a point discount of <i>$2.60</i></p>
           </td>
         </tr>
 
@@ -210,7 +211,7 @@
 
           <td>
             <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
-            The system redeems a fixed number of points (<i>##</i>).</p>
+             The system redeems a fixed number of points (<i>##</i>).</p>
           </td>
         </tr>
 
@@ -221,7 +222,7 @@
 
           <td>
             <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
-            The system redeems a fixed number of points (<i>##</i>) for a specified point discount (<i>$$</i>).</p>
+             The system redeems a fixed number of points (<i>##</i>) for a specified point discount (<i>$$</i>).</p>
           </td>
         </tr>
       </table>
@@ -381,7 +382,7 @@
       <p>The corresponding point discount defined in the <b>Price</b> table is automatically given when the item is sold if the customer has enough points. If a discount <u>and</u> a free value are defined for the item, the system automatically gives the best point discount (item for free or redemption discount) according to the number of points the customer has.</p>
 
       <p>For example, an item gives a discount of <i>$1.00</i> for <i>100</i> points or the item for free for <i>400</i> points. If the customer has <i>600</i> points, they will automatically have the item for free (and <i>400</i> points will be redeemed).<br>
-      If the customer has <i>200</i> points, they will automatically have a point discount of <i>$1.00</i> (and <i>100</i> points will be redeemed).<br>
+       If the customer has <i>200</i> points, they will automatically have a point discount of <i>$1.00</i> (and <i>100</i> points will be redeemed).<br>
        If the customer has <i>75</i> points, they will not have any point discount.</p>
 
       <p>The point discount decreases the item amount. The points are redeemed in the point program defined in the <b>Program</b> field.</p>
@@ -395,8 +396,8 @@
       <p>The point discount decreases the item amount. The points are redeemed in the point program used.</p>
 
       <p class="Note"><b>NOTES:<br>
-      </b>The points redeemed on functions (like tenders) are automatically redeemed when the functions are called.<br>
-      A point discount cannot be given more than once on an item (or an entry).<br>
+      </b> The points redeemed on functions (like tenders) are automatically redeemed when the functions are called.<br>
+       A point discount cannot be given more than once on an item (or an entry).<br>
        If the <span style="FONT-STYLE: normal">REDEEMx</span> parameter is set up in the <a href="../../Common/Item_maintenance/POS_Table.htm#URL"><b>URL</b> field</a> of the <a href="../../Common/Item_maintenance/POS_Table.htm"><b>POS</b> table</a> for an item, points are redeemed automatically on this item even if the automatic point redemption is not set up.</p>
 
       <h5>Customer</h5>
@@ -435,7 +436,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

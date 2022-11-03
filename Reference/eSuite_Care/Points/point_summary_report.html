@@ -1,21 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="SMS Help Document" />
-    <meta name="keywords" content=" " />
-
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+    <meta name="keywords" content=" ">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>Points Summary</title>
-    <link href="../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿ <!-- #BeginTemplate "../../../html_template.dwt" --> <!-- Title/Keywords edit on new documents --> <!-- #BeginEditable "doctitle" --> <!-- #EndEditable --> <a id="top" name="top"></a> <!-- Docs page layout --> <br />
+    ï»¿ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;             ï»¿ ï»¿ <!-- #BeginTemplate "../../../html_template.dwt" --> <!-- Title/Keywords edit on new documents --> <!-- #BeginEditable "doctitle" --> <!-- #EndEditable --> <a id="top" name="top"></a> <!-- Docs page layout --> <br>
      
 
     <h1>Point Summary Report <!-- #EndEditable --></h1>
@@ -34,7 +34,7 @@
     <p>The user can access it under <strong>eSuite Care</strong> / <strong>Points</strong> / <strong>Point summary</strong></p>
 
     <div>
-      <img alt="" src="point_summary_report_files/wizard.png" />
+      <img alt="" src="point_summary_report_files/wizard.png">
     </div>
 
     <h2>Details of Wizard Fields</h2>
@@ -42,7 +42,7 @@
     <p>Date panel</p>
 
     <div>
-      <img alt="" src="point_summary_report_files/date_panel.png" />
+      <img alt="" src="point_summary_report_files/date_panel.png">
     </div>
 
     <p>This component is the standard date panel used in eSuite in all other wizards.</p>
@@ -58,19 +58,19 @@
     <p><strong>Company legal name:</strong> Allows to search for customers having the same company name, (F1155)</p>
 
     <div>
-      <img alt="" src="point_summary_report_files/companyname.png" />
+      <img alt="" src="point_summary_report_files/companyname.png">
     </div>
 
     <p><strong>Points balance:</strong> Allows to search for all customers for a point program.&nbsp; We can put many programs, separated by a comma.</p>
 
     <div>
-      <img alt="" src="point_summary_report_files/point balance.png" />
+      <img alt="" src="point_summary_report_files/point balance.png">
     </div>
 
     <p><strong>Customer type:</strong>&nbsp;When using this report on a host with SMS Payment, the points should be in Centralized account.&nbsp; If using this on a server store using native points in SMS, we should use Local Account.</p>
 
     <div>
-      <img alt="" src="point_summary_report_files/customertype.png" />
+      <img alt="" src="point_summary_report_files/customertype.png">
     </div>
 
     <ul>
@@ -86,7 +86,7 @@
     <p>(Standard in eSuite: Target works the same way than all other reports in SMS and eSuite based on target that are for Reports.</p>
 
     <div>
-      <img alt="" src="point_summary_report_files/target.png" />
+      <img alt="" src="point_summary_report_files/target.png">
     </div>
 
     <p>&nbsp;</p>
@@ -114,7 +114,7 @@
     <h2><strong>Result Grid Overview</strong></h2>
 
     <div>
-      <img alt="" src="point_summary_report_files/grid_overview.png" />
+      <img alt="" src="point_summary_report_files/grid_overview.png">
     </div>
 
     <h3>Column details</h3>
@@ -128,23 +128,21 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>Number</td>
+      <tr>
+        <td>Number</td>
 
-          <td>Point Program number ( totalizer number)</td>
-        </tr>
+        <td>Point Program number ( totalizer number)</td>
+      </tr>
 
-        <tr>
-          <td>Description</td>
+      <tr>
+        <td>Description</td>
 
-          <td>Point Program name number ( 1 to 35 )</td>
-        </tr>
-      </tbody>
+        <td>Point Program name number ( 1 to 35 )</td>
+      </tr>
     </table>
 
     <h3>Previous</h3>
-    <br />
+    <br>
      
 
     <table class="table table-striped">
@@ -156,29 +154,27 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>Description</td>
+      <tr>
+        <td>Description</td>
 
-          <td>It is the points balance for the end of last period based on the last date before the start date</td>
-        </tr>
+        <td>It is the points balance for the end of last period based on the last date before the start date</td>
+      </tr>
 
-        <tr>
-          <td>Local Account</td>
+      <tr>
+        <td>Local Account</td>
 
-          <td>Taken from the RPT_CLT_X where X is the letter for the period. If the start is in the middle of a standard period, it will display the calculation adding data from RPT_CLT_D table from start date to the end date.<br />
-           <br />
-           <strong>Calculation</strong>: Last balance available (based on start date) +Given - Expired + Adjustments - Redeemed</td>
-        </tr>
+        <td>Taken from the RPT_CLT_X where X is the letter for the period. If the start is in the middle of a standard period, it will display the calculation adding data from RPT_CLT_D table from start date to the end date.<br>
+         <br>
+         <strong>Calculation</strong>: Last balance available (based on start date) +Given - Expired + Adjustments - Redeemed</td>
+      </tr>
 
-        <tr>
-          <td>centralized Account</td>
+      <tr>
+        <td>centralized Account</td>
 
-          <td>Taken from the RPT_PAY_M If the start is in the middle of a standard period, it will display the calculation adding data from TRS_PAY table from start date to the end date.<br />
-           <br />
-           <strong>Calculation</strong>: Last balance available (based on start date) +Given - Expired + Adjustments - Redeemed</td>
-        </tr>
-      </tbody>
+        <td>Taken from the RPT_PAY_M If the start is in the middle of a standard period, it will display the calculation adding data from TRS_PAY table from start date to the end date.<br>
+         <br>
+         <strong>Calculation</strong>: Last balance available (based on start date) +Given - Expired + Adjustments - Redeemed</td>
+      </tr>
     </table>
 
     <h3>Point Quantity</h3>
@@ -192,31 +188,29 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>Points Given</td>
+      <tr>
+        <td>Points Given</td>
 
-          <td>Totalizers 3401 or 7701 to 7735 based on selected point program</td>
-        </tr>
+        <td>Totalizers 3401 or 7701 to 7735 based on selected point program</td>
+      </tr>
 
-        <tr>
-          <td>Points Expired</td>
+      <tr>
+        <td>Points Expired</td>
 
-          <td>Totalizers 3405 or 7851 to 7885 based on selected point program</td>
-        </tr>
+        <td>Totalizers 3405 or 7851 to 7885 based on selected point program</td>
+      </tr>
 
-        <tr>
-          <td>Points Adjusted</td>
+      <tr>
+        <td>Points Adjusted</td>
 
-          <td>Totalizers 3407 or 7751 to 7785 based on selected point program</td>
-        </tr>
+        <td>Totalizers 3407 or 7751 to 7785 based on selected point program</td>
+      </tr>
 
-        <tr>
-          <td>Points Redeemed</td>
+      <tr>
+        <td>Points Redeemed</td>
 
-          <td>Totalizers 3411 or 7801 to 7835 based on selected point program</td>
-        </tr>
-      </tbody>
+        <td>Totalizers 3411 or 7801 to 7835 based on selected point program</td>
+      </tr>
     </table>
 
     <h3>Calculated</h3>
@@ -230,23 +224,21 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>Local account:</td>
+      <tr>
+        <td>Local account:</td>
 
-          <td>Based on RPT_CLT_X where X is the letter for the period. If the ends is in the middle of a standard period, it will display the calculation adding data from RPT_CLT_D table from start date to the end date.<br />
-           <br />
-           Calculation: Last balance available (based on start date) +Given - Expired + Adjustments - Redeemed</td>
-        </tr>
+        <td>Based on RPT_CLT_X where X is the letter for the period. If the ends is in the middle of a standard period, it will display the calculation adding data from RPT_CLT_D table from start date to the end date.<br>
+         <br>
+         Calculation: Last balance available (based on start date) +Given - Expired + Adjustments - Redeemed</td>
+      </tr>
 
-        <tr>
-          <td>Centralized account</td>
+      <tr>
+        <td>Centralized account</td>
 
-          <td>Taken from the RPT_PAY_M using the last end of month amount adding data from TRS_PAY table from start date to the end date.<br />
-           <br />
-           Calculation: Last balance available (based on start date) Given - Expired + Adjustments - Redeemed</td>
-        </tr>
-      </tbody>
+        <td>Taken from the RPT_PAY_M using the last end of month amount adding data from TRS_PAY table from start date to the end date.<br>
+         <br>
+         Calculation: Last balance available (based on start date) Given - Expired + Adjustments - Redeemed</td>
+      </tr>
     </table>
 
     <h3>Current</h3>
@@ -262,23 +254,21 @@
         </tr>
       </thead>
 
-      <tbody>
-        <tr>
-          <td>Local account:</td>
+      <tr>
+        <td>Local account:</td>
 
-          <td>Using RPT_CLT_N Totalizer 7901</td>
-        </tr>
+        <td>Using RPT_CLT_N Totalizer 7901</td>
+      </tr>
 
-        <tr>
-          <td>Centralized account:</td>
+      <tr>
+        <td>Centralized account:</td>
 
-          <td>Using RPT_PAY_N Totalizer 7901</td>
-        </tr>
-      </tbody>
+        <td>Using RPT_PAY_N Totalizer 7901</td>
+      </tr>
     </table>
 
     <p>Some other columns can be displayed based on what breakdown and or additional criteria we chose.</p>
-    <!-- end of main container --><a class="back-to-top shadow" href="#top">▲</a> <!-- #EndTemplate -->
+    <!-- end of main container --><a class="back-to-top shadow" href="#top">â–²</a> <!-- #EndTemplate -->
   </body>
 </html>
 

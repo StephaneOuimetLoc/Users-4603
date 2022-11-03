@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>Scheduler Edit</title>
-    <link href="../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
-          <!-- Title/Keywords edit on new documents -->
+    ï»¿            ï»¿ ï»¿ <!-- #BeginTemplate "../../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-          <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -127,66 +128,66 @@
           <td style="width: 156px; "><strong><a name="Execute">Execute</a></strong></td>
 
           <td>Runs the associated script.<br>
-          Disabled by default.<br>
-          Enabled when the <a href="#Execute_manually"><strong>Execute manually</strong> field</a> is checked.</td>
+           Disabled by default.<br>
+           Enabled when the <a href="#Execute_manually"><strong>Execute manually</strong> field</a> is checked.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Host_target">Host target</a></strong></td>
 
           <td>The <strong>Host target</strong> field contains the target identifier of the node on which the job has to run.&nbsp;<br>
-          It is a required field used with the <a href="#Number"><strong>Number</strong> field</a> to uniquely identify records in the <strong>Scheduler</strong> table.<br>
-          The default value is [the target identifier of the current node].</td>
+           It is a required field used with the <a href="#Number"><strong>Number</strong> field</a> to uniquely identify records in the <strong>Scheduler</strong> table.<br>
+           The default value is [the target identifier of the current node].</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Number">Number</a></strong></td>
 
           <td>The <b>Number</b> field contains the job number.&nbsp;<br>
-          It is a required field used with the <a href="#Host_target"><strong>Host target</strong> field</a> to uniquely identify records in the <b>Scheduler</b> table.</td>
+           It is a required field used with the <a href="#Host_target"><strong>Host target</strong> field</a> to uniquely identify records in the <b>Scheduler</b> table.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Name">Name</a></strong></td>
 
           <td>The <strong>Name</strong> field contains the job name describing the process and making it easy to identify.&nbsp;<br>
-          It is a required field.</td>
+           It is a required field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Execution_target">Execution target</a></strong></td>
 
           <td>The <strong>Execution target (Exec. target)</strong> field contains the target identifier of the node where the process results must be sent.<br>
-          The execution target can be sales terminals, other PCs, or stores configured in the <b>Terminal</b> and <b>Target</b> tables. For example, a process that collects item modifications that must be distributed to sales terminals or other stores usually has its execution target set to the configured destination.<br>
-          If no execution target is specified for a process, the process results are aimed at the <a href="#Host_target">host target</a>.</td>
+           The execution target can be sales terminals, other PCs, or stores configured in the <b>Terminal</b> and <b>Target</b> tables. For example, a process that collects item modifications that must be distributed to sales terminals or other stores usually has its execution target set to the configured destination.<br>
+           If no execution target is specified for a process, the process results are aimed at the <a href="#Host_target">host target</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Every_xx_days">Every xx days</a></strong></td>
 
           <td>The <strong>Every xx days</strong> field contains the number of days between each execution of the process.<br>
-          Its value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
+           Its value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Every_xx_months">Every xx months</a></strong></td>
 
           <td>The <strong>Every xx months</strong> field contains the number of months between each execution of the process.<br>
-          Its value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
+           Its value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Every_xx_minutes">Every xx minutes</a></strong></td>
 
           <td>The <strong>Every xx minutes</strong> field contains the number of minutes between each execution of the process.<br>
-          The <b>Every xx minutes</b> value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
+           The <b>Every xx minutes</b> value combined with the <b><a href="#Last_date">Last date</a></b> value determine exactly when the process will run (<b><a href="#Next_date">Next date</a></b> value).</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Execute_past_events">Execute past events</a></strong></td>
 
           <td>The <strong>Execute past events</strong> field specifies whether the previous unsuccessful executions of the process have to be run up to the present (checked) or not (unchecked).<br>
-          For details, see the <a href="#The_Execute_past_events_field"><strong>Execute past events</strong> field section</a> below.</td>
+           For details, see the <a href="#The_Execute_past_events_field"><strong>Execute past events</strong> field section</a> below.</td>
         </tr>
 
         <tr>
@@ -200,43 +201,43 @@
           <td style="width: 156px"><strong><a name="Next_date">Next date</a></strong></td>
 
           <td>The <strong>Next date</strong> field contains the next date and time the process will be executed.<br>
-          For details, see the <a href="#The_Next_date_field"><strong>Next date</strong> field section</a> below.</td>
+           For details, see the <a href="#The_Next_date_field"><strong>Next date</strong> field section</a> below.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Last_date">Last date</a></strong></td>
 
           <td>The <strong>Last date</strong> field contains the date and time of the last successful execution of the process.<br>
-          For details, see the <a href="#Last_date"><strong>Last date</strong> field section</a> below.</td>
+           For details, see the <a href="#Last_date"><strong>Last date</strong> field section</a> below.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Too_late">Too late</a></strong></td>
 
           <td>The <strong>Too late</strong> field contains the number of hours and minutes (HHMM) during which the system should try to execute the process after it was scheduled.<br>
-          For details, see the <a href="#The_Too_late_field"><strong>Too late</strong> field section</a> below.<br>
-          </td>
+           For details, see the <a href="#The_Too_late_field"><strong>Too late</strong> field section</a> below.<br>
+           </td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Effective_date">Effective date</a></strong></td>
 
           <td>The <strong>Effective date</strong> field contains the number of days the system should add to or subtract from the next date in order to calculate the correct date to use for the process.<br>
-          For details, see the <a href="#The_Effective_date_field"><strong>Effective date</strong> field section</a> below.</td>
+           For details, see the <a href="#The_Effective_date_field"><strong>Effective date</strong> field section</a> below.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="If_file_exists">If file exists</a></strong></td>
 
           <td>The <strong>If file exists</strong> field contains the name of the file needed for the process to be executed.<br>
-          For details, see the <a href="#The_If_file_exists_field"><strong>If file exists</strong> field section</a> below.</td>
+           For details, see the <a href="#The_If_file_exists_field"><strong>If file exists</strong> field section</a> below.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Command">Command</a></strong></td>
 
           <td>The <strong>Command</strong> field contains the command string to execute.<br>
-          For details, see the <a href="#The_Command_field"><strong>Command</strong> field section</a> below.</td>
+           For details, see the <a href="#The_Command_field"><strong>Command</strong> field section</a> below.</td>
         </tr>
       </table>
 
@@ -384,7 +385,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

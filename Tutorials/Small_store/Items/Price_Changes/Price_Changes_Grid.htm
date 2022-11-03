@@ -1,19 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.8.0" />
-    <meta name="SMS-HtmlEditor-User" content="Simon V" />
-
+<html>
+  <head>
+    
+    <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.8.0">
+    <meta name="SMS-HtmlEditor-User" content="Simon V">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <meta name="SMS-HtmlEditor-State" content="Review">
+
     <title>Price Changes Grid</title>
-    <link href="../../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../../work.css" rel="stylesheet">
   </head>
 
   <body>
-    ﻿ ﻿ ﻿ 
+    ï»¿            ï»¿ ï»¿ ï»¿ ï»¿ 
 
     <h1>Price Changes Grid</h1>
 
@@ -23,19 +24,19 @@
 
     <p>This document describes the concept of <strong>Price Changes&nbsp;</strong> under the Items section of eSuite Manage/Batch/Care/Buy/Sell.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <h2>Concept</h2>
 
     <p>The Price Changes report&nbsp;(PC report) is a report showing all the price changes in chronological order for a specified period of time.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>Key Points:</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <ul>
@@ -50,62 +51,62 @@
       <li>Available in Multi-Target as well as Multi-Tenant.</li>
     </ul>
 
-    <p><br />
+    <p><br>
     </p>
 
     <h2>Access Price Changes</h2>
 
     <p>1.&nbsp; To access the PC report click on the <strong>Items</strong> section in the launcher</p>
 
-    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/items.png" /></p>
+    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/items.png"></p>
 
     <p>2.&nbsp; Select <strong>Price Changes</strong> in the Items Start Widget</p>
-    <img src="Price_Changes_Grid_files/start_widget.png" /> 
+    <img src="Price_Changes_Grid_files/start_widget.png"> 
 
     <p><span class="alert-warning">Deploy Change <em>MUST BE</em> executed prior to running PC report to display price changes.</span></p>
 
     <p>3.&nbsp; The&nbsp;<strong>Wizard</strong>&nbsp;lets you specify the search criteria</p>
 
-    <p><img src="Price_Changes_Grid_files/wizard.png" /></p>
+    <p><img src="Price_Changes_Grid_files/wizard.png"></p>
 
     <p>4.&nbsp; Click <strong>Execute</strong></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <h2>Report</h2>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>Example report with data, columns, sorted in chronological order.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
-    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/report_grid.png" /></p>
+    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/report_grid.png"></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p><strong>Filter</strong> - The report can be filtered by the following criteria to show only the intended data set based on any variable in the filter.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
-    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/filter_window.png" /></p>
+    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/filter_window.png"></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>&nbsp;</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p><strong>New tables created in the DB:</strong></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <ul>
@@ -116,12 +117,12 @@
       <li>PRICE_EVENT_FUTUREXXX901_2: Future price and cost calculation</li>
     </ul>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p><strong>New scripts in the Office folder:</strong></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <ul>
@@ -130,109 +131,109 @@
       <li>price_event_update.sql</li>
     </ul>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p><strong>Purge:</strong></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>The purge setting in the <em>purge.ini</em> file is PRICE_EVENT=30</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>By default it will retain 30 days of data with a minimum of one entry per item even if the entry is older than 30 days.&nbsp; The reason for this is so the report always has a past price to compare too for any given item.&nbsp;</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>It wil run during the "Purge all report data" task in scheulder(Task # 90).&nbsp; When this tasks calls the purge_report.sqi script the data will be purged form the price_event tables.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <h3><strong>Labels</strong></h3>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>1 - You can generate and print your labels needed for price change events directly from the pcl report results window.&nbsp; Select all labels you wish to print and click <strong>Generate Labels</strong> at the bottom of the report</p>
 
-    <p><br />
+    <p><br>
     </p>
 
-    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/gen_labels_toolbar.png" /></p>
+    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/gen_labels_toolbar.png"></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>The next window that comes up is the Print label list</p>
 
-    <p><br />
+    <p><br>
     </p>
 
-    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/print_label_list.png" /></p>
+    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/print_label_list.png"></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>2 - With or Without like codes taken into consideration</p>
 
-    <p><br />
+    <p><br>
     </p>
 
-    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/like_code.png" /></p>
+    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/like_code.png"></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>Using like code will print a label for all items with the same like code.&nbsp; Without like code will ignore the like codes and print a label for the current item only.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>3 - The next window that comes up is the Print label list</p>
 
-    <p><br />
+    <p><br>
     </p>
 
-    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/print_label_list_again.png" /></p>
+    <p>&nbsp;&nbsp;&nbsp; <img src="Price_Changes_Grid_files/print_label_list_again.png"></p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>4 - Label list by store</p>
-    <img src="Price_Changes_Grid_files/label_list_bystore.png" /> 
+    <img src="Price_Changes_Grid_files/label_list_bystore.png"> 
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>5 - Final Print Confirmation</p>
-    <img src="Price_Changes_Grid_files/final_print_confirm.png" /> 
+    <img src="Price_Changes_Grid_files/final_print_confirm.png"> 
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>&nbsp;</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <h1>Label Template (F95)</h1>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>The order in which in which the Label Template column is populated with label format is by looking if there is a pre-defined label template and quantity for that item in the Shelf window(LOC_TAB).</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>If one exists it will be used for ALL price events(REG,TPR,SALE,STOR).&nbsp;</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>If no label templates exist in the Shelf, a label template group(Auxilary) can be created to define a default label template for a price event (REG,TPR,SALE,STOR).</p>
@@ -241,60 +242,60 @@
 
     <p>The label template groups can then be linked to the Shelf record of an item by adding multiple shelfs per item and when printing, the label engine will then dynamically choose which template to use based on the price source defined in label template group.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>I.e This is what an example of what that looks like when all label template groups are setup for one item.</p>
-    <img src="Price_Changes_Grid_files/lt_group.png" /> 
+    <img src="Price_Changes_Grid_files/lt_group.png"> 
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>Once the label template group is created you will be able to select it as a template in the Shelf window(LOC_TAB)</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>If the label template group price source defined does not match the price event for the item in question then that template will not be used.&nbsp; You can define multiple label tempate groups for an item, one for each price source if you wish to always have the same label template for a price event.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>If nothing is specified in the Shelf window(LOC_TAB), the label engine will look in the [LABEL] section of the application.ini for label templates to use for printing.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>For more information on setting this up pls look in the V3 members help in the Configuration&gt;INI files&gt;Application.ini file document or ask your reseller for assistance.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <h4><strong>LABEL NOTES</strong></h4>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p><strong>IMPORTANT&gt;</strong> When multiple labels of the SAME price event for the same item need to be printed on different dates, the FIRST one(after the Ref. record) will always take priority over the following ones of the same label template from the same item.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>Example:</p>
-    <img src="Price_Changes_Grid_files/example.png" /> 
+    <img src="Price_Changes_Grid_files/example.png"> 
 
     <p>In the above example, item 0000000000010 goes back to REG price 3 times(without counting the first Ref. record).&nbsp; A set quantity of 2 labels has been set in the Shelf record as we see the quantity column showing two for all price events.&nbsp; The rule is the first duplicate price event(after ref. record) label takes priority over the others so in this case if you need more of the REG price labels, manually modify the quantity for that particular label in the Quantity column.&nbsp; This will generate more labels and allow you to print more label templates if needed.</p>
 
-    <p><br />
+    <p><br>
     </p>
 
     <p>&nbsp;</p>
 
-    <p><br />
+    <p><br>
     </p>
     &nbsp; 
 
-    <p><br />
+    <p><br>
     </p>
   </body>
 </html>

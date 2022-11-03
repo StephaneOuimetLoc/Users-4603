@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>eSuite - Coupon Value Table</title>
-    <link href="../../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
-          <!-- Title/Keywords edit on new documents -->
+    ï»¿            ï»¿ ï»¿ <!-- #BeginTemplate "../../../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-          <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -102,15 +103,15 @@
           <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
 
           <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
-          It is a required field used to uniquely identify records in the <strong>Coupon Value list</strong>.<br>
-          The default value of the Target field is <em>PAL</em>.</td>
+           It is a required field used to uniquely identify records in the <strong>Coupon Value list</strong>.<br>
+           The default value of the Target field is <em>PAL</em>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Code">Code</a></strong></td>
 
           <td>The <strong>Code</strong> field contains the code that identifies the UCC 5 standard.<br>
-          It corresponds to the last two digits of the UPC on the vendor coupon (excluding the check digit).</td>
+           It corresponds to the last two digits of the UPC on the vendor coupon (excluding the check digit).</td>
         </tr>
 
         <tr>
@@ -135,7 +136,7 @@
           <td style="width: 156px"><strong><a name="Method">Method</a></strong></td>
 
           <td>The <strong>Method</strong> field contains the code that defines the behavior of the UCC 5 standard.<br>
-          For details, see the <a href="#The_Method_field"><strong>Method</strong> field section</a> below.</td>
+           For details, see the <a href="#The_Method_field"><strong>Method</strong> field section</a> below.</td>
         </tr>
       </table>
 
@@ -174,8 +175,8 @@
 
           <td>
             The <b>Manual value entry</b> specifies that the value of the coupon is entered manually by the cashier.<br>
-            <br>
-            The items are matched using the manufacturer code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details. 
+             <br>
+             The items are matched using the manufacturer code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details. 
 
             <div class="alert alert-success">
               <b>EXAMPLE:</b> For a special promotion, the customer gets a new item for free.
@@ -229,8 +230,8 @@
 
             <div class="alert alert-success">
               <b>EXAMPLE:</b> When the customer buys <i>2</i> <em>bags of</em> <i>Oreos</i> (same item), he gets <i>one</i> for free.<i><br>
-              </i>or<i><br>
-              </i>When the customer buys <i>1</i> <em>bag of</em> <i>Oreos</i> and <em>1</em> <em>box of</em> <i>Christie crackers</i> (different items), he gets the cheaper one for free.
+              </i> or<i><br>
+              </i> When the customer buys <i>1</i> <em>bag of</em> <i>Oreos</i> and <em>1</em> <em>box of</em> <i>Christie crackers</i> (different items), he gets the cheaper one for free.
             </div>
           </td>
         </tr>
@@ -247,14 +248,14 @@
             <p class="NoteList"><b>NOTE:</b>The <b>Buy x or more, get y free</b> method is currently <em>not effective</em>, i.e. a coupon is accepted each time x items are bought. It will be effective in a future version of the software.</p>
 
             <div class="alert alert-success">
-              <b>EXAMPLE:</b> When the customer buys <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes, he gets the cheaper one for free. Even if he buys</i> 4 items  among <i>Oreo bags</i> and Christie crackers boxes, only <i>1 item for free</i> will be given (see the note).
+              <b>EXAMPLE:</b> When the customer buys <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes, he gets the cheaper one for free. Even if he buys</i> 4 items among <i>Oreo bags</i> and Christie crackers boxes, only <i>1 item for free</i> will be given (see the note).
             </div>
           </td>
         </tr>
 
         <tr>
           <td style="width: 226px"><strong>6.</strong> <b><br>
-          Get y amount off</b></td>
+           Get y amount off</b></td>
 
           <td>
             The <b>Get y amount off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given when <i>1</i> item is bought by the customer in a transaction. 
@@ -269,7 +270,7 @@
 
         <tr>
           <td style="width: 226px; height: 119px;"><strong>7. <b><br>
-          Buy x, get y amount off</b></strong></td>
+           Buy x, get y amount off</b></strong></td>
 
           <td style="height: 119px">
             The <b>Buy x, get y amount off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given when <i>x</i> items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
@@ -284,7 +285,7 @@
 
         <tr>
           <td style="width: 226px"><strong>8.<br>
-          <b>Buy x or more, get y amount off</b></strong></td>
+           <b>Buy x or more, get y amount off</b></strong></td>
 
           <td>
             The <b>Buy x or more, get y amount off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given when <i>x or more</i> items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
@@ -301,7 +302,7 @@
 
         <tr>
           <td style="width: 226px"><strong>9.<br>
-          <b>Buy x or more of same item,<br>
+           <b>Buy x or more of same item,<br>
            get y amount off</b></strong></td>
 
           <td>
@@ -319,7 +320,7 @@
 
         <tr>
           <td style="width: 226px"><strong>10.<br>
-          <b>Buy x of same item,<br>
+           <b>Buy x of same item,<br>
            get y amount off</b></strong></td>
 
           <td>
@@ -337,7 +338,7 @@
 
         <tr>
           <td style="width: 226px"><strong>11.<br>
-          <b>Buy x, get y percent off</b></strong></td>
+           <b>Buy x, get y percent off</b></strong></td>
 
           <td>
             The <b>Buy x, get y percent off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is considered as a percentage of discount given when <i>x</i> items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
@@ -345,13 +346,13 @@
             <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
 
             <p class="List"><em>Example</em><br>
-            When the customer buys <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i>, he gets <i>5% off</i> on the cheaper one. A coupon can be used each time <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i> are bought.</p>
+             When the customer buys <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i>, he gets <i>5% off</i> on the cheaper one. A coupon can be used each time <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i> are bought.</p>
           </td>
         </tr>
 
         <tr>
           <td style="width: 226px"><strong>12.<br>
-          </strong><b>Buy x or more, get y percent off</b></td>
+          </strong> <b>Buy x or more, get y percent off</b></td>
 
           <td>
             The <b>Buy x or more, get y percent off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is considered as a percentage of discount given when <i>x</i> or more items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
@@ -368,7 +369,7 @@
 
         <tr>
           <td style="width: 226px"><strong>13.<br>
-          <b>Buy x, get y amount per pound off</b></strong></td>
+           <b>Buy x, get y amount per pound off</b></strong></td>
 
           <td>
             The <b>Buy x, get y amount per pound off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given per pound when <i>x</i> pounds of items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
@@ -383,7 +384,7 @@
 
         <tr>
           <td style="width: 226px"><strong>14.</strong><br>
-          <b>Buy x or more, get y amount per pound off</b></td>
+           <b>Buy x or more, get y amount per pound off</b></td>
 
           <td>
             The <b>Buy x or more, get y amount per pound off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given per pound when <i>x or more</i> pounds of items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
@@ -403,7 +404,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

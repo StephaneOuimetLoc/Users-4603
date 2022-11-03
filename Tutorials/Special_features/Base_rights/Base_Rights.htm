@@ -1,24 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <meta name="SMS-HtmlEditor-State" content="Review">
+
     <title>Base Rights - User Level Permissions</title>
-    <link href="../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../html_template.dwt" -->
-        <!-- Title/Keywords edit on new documents -->
+    ï»¿             ï»¿ ï»¿ <!-- #BeginTemplate "../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-            <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -33,17 +34,18 @@
 
       <h2>Information</h2>
 
-      <p>These basic rights can be modified to increase or decrease the current access levels provided by the existing base rights. The <strong>Base Rights</strong> function gives the ability to create or modify access for user levels. Base rights <strong></strong>are local to each module of eSuite.</p>
+      <p>These basic rights can be modified to increase or decrease the current access levels provided by the existing base rights. The <strong>Base Rights</strong> function gives the ability to create or modify access for user levels. Base rights are local to each module of eSuite.</p>
 
       <p>The <strong>Base Rights</strong> function has been created with 4 main fields that will allow customizing the access levels.</p>
 
       <ol>
         <li><strong><a name="Win">Win</a></strong> is the window that will be impacted by the change.<br>
-        It is identified by its Sencha class xtype. For example, the price window is called "item.itm.edit.price.master".</li>
+         It is identified by its Sencha class xtype. For example, the price window is called "item.itm.edit.price.master".</li>
 
         <li>
           <strong><a name="Query">Query</a></strong> is used to search for a component within the window selection above.<br>
-          We call a component any single visual element on a form window. Here are the supported values:<br>
+           We call a component any single visual element on a form window. Here are the supported values:<br>
+           
 
           <table class="table table-striped">
             <thead class="thead-dark">
@@ -58,28 +60,28 @@
               <td style="width: 7px">self</td>
 
               <td style="width: 637px">Means the window component itself. The whole window can be disabled so the user cannot open it. <strong><br>
-              Note</strong>: When the <em>self</em> value is entered, the only value that can be used in the <strong>Action</strong> field is <em>disable</em>.</td>
+               Note</strong>: When the <em>self</em> value is entered, the only value that can be used in the <strong>Action</strong> field is <em>disable</em>.</td>
             </tr>
 
             <tr>
               <td style="width: 7px; height: 34px;">[empty]</td>
 
               <td style="width: 637px; height: 34px;"><b id="docs-internal-guid-681430e9-7fff-781d-c00c-d43d3d2bc240" style="font-weight:normal;">Empty means all the components within the window.<br>
-              All components may be set inside a form by making them all read-only.</b></td>
+               All components may be set inside a form by making them all read-only.</b></td>
             </tr>
 
             <tr>
               <td style="width: 7px">#itemId</td>
 
               <td style="width: 637px">The most common query is based on the <em>itemId</em> value. There is an itemId on all components of the application.<br>
-              It may be used to control access to each component individually.</td>
+               It may be used to control access to each component individually.</td>
             </tr>
 
             <tr>
               <td style="width: 7px">xtype</td>
 
               <td style="width: 637px">Changes may be applied to all the components of a certain class xtype.<br>
-              For example, if set to <em>button</em>, it will affect all the buttons in the window.</td>
+               For example, if set to <em>button</em>, it will affect all the buttons in the window.</td>
             </tr>
 
             <tr>
@@ -103,11 +105,12 @@
         </li>
 
         <li><strong>Level</strong> is used to provide the access to the components and action functions.<br>
-        If&nbsp; set it to <em>6</em>, it means the "owner" and all levels above it (programmer) have access to it.</li>
+         If&nbsp; set it to <em>6</em>, it means the "owner" and all levels above it (programmer) have access to it.</li>
 
         <li>
           <strong>Action</strong> is used to select the kind of modifier to apply to the component(s).<br>
-          Here are the actions supported:<br>
+           Here are the actions supported:<br>
+           
 
           <table class="table table-striped">
             <thead class="thead-dark">
@@ -168,8 +171,8 @@
           <td style="width: 95px"><strong>Add pull-down</strong></td>
 
           <td style="width: 682px">Adds a new Base Right entry line in the list below and provides the following options:<br>
-          1. <strong>Add record above</strong>, <em>or</em><br>
-          2. <strong>Add record below</strong>, depending on where your cursor is in the list.</td>
+           1. <strong>Add record above</strong>, <em>or</em><br>
+           2. <strong>Add record below</strong>, depending on where your cursor is in the list.</td>
         </tr>
 
         <tr>
@@ -194,7 +197,7 @@
           <td style="width: 95px"><strong>Delete</strong></td>
 
           <td style="width: 682px">Allows to delete the selected Base Rights from the grid.<br>
-          <strong>Please note:</strong> You must click the <strong>Save</strong> checkmark after the use of the delete button.</td>
+           <strong>Please note:</strong> You must click the <strong>Save</strong> checkmark after the use of the delete button.</td>
         </tr>
 
         <tr>
@@ -211,7 +214,7 @@
           <td><strong>Grab view and field</strong></td>
 
           <td>Clicking on the <strong>Hand</strong> icon while the focus is on a window, grid or button will capture the correct <strong><a href="#Win">Win</a></strong> and <a href="#Query"><strong>Query</strong></a> details to be automatically added into the Base Rights window list.<br>
-          This will leave the <strong>Level</strong>, <strong>Action</strong> and <strong>Comment</strong> fields to be completed.</td>
+           This will leave the <strong>Level</strong>, <strong>Action</strong> and <strong>Comment</strong> fields to be completed.</td>
         </tr>
       </table>
 
@@ -241,10 +244,11 @@
           <br>
            <img class="img img-fluid img-thumbnail" height="62" src="Base_Right_files/Grab_view_on_menu_bar.png" width="1180"><br>
           <br>
+           
 
           <div>
             <strong><em>Note:</em></strong> At this point, open any section to create access levels for,&nbsp; any eSuite module .<br>
-            In this example, the window that will have restricted access is the <strong>Configurator</strong> window.Use the tab key until the section is highlighted then use the Grab a View field to return to the Base Rights section.
+             In this example, the window that will have restricted access is the <strong>Configurator</strong> window.Use the tab key until the section is highlighted then use the Grab a View field to return to the Base Rights section.
           </div>
           <img class="img img-fluid img-thumbnail" height="494" src="Base_Right_files/Configurator_focus.png" width="1036">
         </li>
@@ -270,10 +274,10 @@
         <li>Press the <strong>Enter</strong> key to put the cursor in the <strong>Comment</strong> field. As it is not first evident which each element is, confusion may be avoided by entering a comment to clarify what this setting does.</li>
 
         <li>Enter text to describe the base right that was created.<br>
-        <strong>Note:</strong> The <strong>Comment</strong> field is not required in order to save the base right(s) created.</li>
+         <strong>Note:</strong> The <strong>Comment</strong> field is not required in order to save the base right(s) created.</li>
 
         <li>Click on <strong>Save</strong> <img class="img img-fluid img-thumbnail" height="30" src="Base_Right_files/Save_checkmark.png" width="27"> to save the new base right(s).<br>
-        That will set all details entered for the created base right(s). When they are saved there are no red outlines for the fields.<br>
+         That will set all details entered for the created base right(s). When they are saved there are no red outlines for the fields.<br>
         <br>
          <img class="img img-fluid img-thumbnail" height="455" src="Base_Right_files/Baserights_saved.png" width="781"><br>
         </li>
@@ -309,7 +313,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

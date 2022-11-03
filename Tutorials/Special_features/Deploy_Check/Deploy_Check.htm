@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
-<html lang="en">
-  <!-- #BeginTemplate "../../../../../html_template==NO-TOC.dwt" -->
-
-<head>
+<html>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SMS Help Document"><!-- Title/Keywords edit on new documents -->
-    <!-- #BeginEditable "doctitle" -->
-    <!-- #EndEditable -->
-
+    <meta name="description" content="SMS Help Document">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Review" />
+    <meta name="SMS-HtmlEditor-State" content="Review">
+
     <title>eSuite System - Deploy Check Overview</title>
-    <link href="../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    <a name="top"></a> <!-- Docs page layout -->
+    ï»¿            ï»¿ <!-- #BeginTemplate "../../../../../html_template==NO-TOC.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -27,7 +28,7 @@
     </p>
     <!-- #BeginEditable "toc" -->
     <!--
-            -->
+                    -->
     <!-- #EndEditable -->
 
     <div class="article-contents">
@@ -47,7 +48,7 @@
         <li>When an item or several items do not exist at the Master and exist at the Slave - <strong>remove</strong> script will remove discontinued items at the Slave by sending a remove batch script in order to synchronize the data of the Slave to the Master.</li>
 
         <li>When an item or several items exist at the Master and also can be found at the Slave - the <strong>change</strong> script will compare the polled table field's checksum/s at the Master with the checksum from the dataset that was returned from Slave.<br>
-        If the checksums does not match - the external change batch will be generated at the Master side. The batch will contain the changes in order to synchronize the data of the Slave to that of the Master</li>
+         If the checksums does not match - the external change batch will be generated at the Master side. The batch will contain the changes in order to synchronize the data of the Slave to that of the Master</li>
       </ul>
 
       <p class="alert alert-warning"><strong>NOTE:</strong> <span class="auto-style6">Be advised that if the source of the deploy check contains orphan records, these orphan records in all tables (with the exception of the OBJ_TAB table) will be also be created at the receiving end.</span></p>
@@ -57,10 +58,10 @@
       <p>SMS DEPLOY_CHECK uses the same pair of files: item_chk_rsp.sqi at the MASTER and item_chk_rsp.sqm at the SLAVE.</p>
 
       <p><img alt="" height="524" src="Deploy_Check_files/DEPLOY_CHECK_FLOW.jpg" width="715"></p>
-      &nbsp;
+      &nbsp; 
 
       <p>DEPLOY_CHECK supports multi-target capability. It compares records according to the list of the fields in the polling table/s with exception.<br>
-      <strong>Items are being polled by the the target priority.</strong></p>
+       <strong>Items are being polled by the the target priority.</strong></p>
 
       <p>The user is able to collect the data, to make multi-target comparison and get data to those three group of batches (Add, Remove, Changed).</p>
 
@@ -92,7 +93,7 @@
         <li>Through scheduler as part of a weekly maintenance routine.&nbsp; N.B. Deploy_Check uses batches to sync data so if your store or host is not Activating External automatically, the process will be halted until those batches are executed manually.</li>
 
         <li>
-          Manually through the deploy check button in Tools&gt;Links in Esuite Manage
+          Manually through the deploy check button in Tools&gt;Links in Esuite Manage 
 
           <p class="indent4"><img alt="" height="490" src="Deploy_Check_files/deploy_check%20button.jpg" width="440"></p>
         </li>
@@ -132,7 +133,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

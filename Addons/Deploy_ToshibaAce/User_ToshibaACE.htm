@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
-<html lang="en">
-  <!-- #BeginTemplate "../../html_template.dwt" -->
-
-<head>
+<html>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SMS Help Document"><!-- Title/Keywords edit on new documents -->
-    <!-- #BeginEditable "doctitle" -->
-    <!-- #EndEditable -->
-
+    <meta name="description" content="SMS Help Document">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>Module - ToshibaACE Interface User Guide</title>
-    <link href="../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    <a name="top"></a> <!-- Docs page layout -->
+    ï»¿            ï»¿ <!-- #BeginTemplate "../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -40,7 +41,7 @@
 
       <ul>
         <li>
-          <a href="#deploy">Deployment</a>
+          <a href="#deploy">Deployment</a> 
 
           <ul>
             <li><a href="#aux">Deploy Auxiliary</a></li>
@@ -52,7 +53,7 @@
         </li>
 
         <li>
-          <a href="#items">Supported Item Fields</a>
+          <a href="#items">Supported Item Fields</a> 
 
           <ul>
             <li><a href="#misc">Miscellaneous Item</a></li>
@@ -64,7 +65,7 @@
         <li><a href="#operator">Supported Operator Fields</a></li>
 
         <li>
-          <a href="#customer">Supported Customer Fields</a>
+          <a href="#customer">Supported Customer Fields</a> 
 
           <ul>
             <li><a href="#ar">Accounts Receivable (AR)</a></li>
@@ -74,7 +75,7 @@
         </li>
 
         <li>
-          <a href="#report">Report Files</a>
+          <a href="#report">Report Files</a> 
 
           <ul>
             <li><a href="#compare">LOC SMS and Toshiba ACE Reports</a></li>
@@ -192,7 +193,7 @@
 
               <li>Taxable 4</li>
             </ul>
-            Restriction Tab;
+            Restriction Tab; 
 
             <ul>
               <li>Restrictor</li>
@@ -213,14 +214,14 @@
 
           <td>
             <br>
-            <br>
+             <br>
              
 
             <ul>
               <li>The <strong>Not in net</strong> flag is for paid in and paid out items; It has no meaning when used on its own.</li>
 
               <li>The <strong>FSA eligible</strong> field of the <strong>POS</strong> table works in combination with the <strong>Report code</strong> field of the <strong>Main item</strong> table;<br>
-              if the value of the <strong>Report code</strong> field is <em>892</em>, the item is an <em>RX item</em>.</li>
+               if the value of the <strong>Report code</strong> field is <em>892</em>, the item is an <em>RX item</em>.</li>
 
               <li>The regular price is sent for saving total feature on Toshiba ACE, in the <strong>Comparison pricing</strong> field;</li>
             </ul>
@@ -232,7 +233,7 @@
 
           <td>
             <br>
-            Coupon Tab;
+             Coupon Tab; 
 
             <ul>
               <li>Manufacturer family</li>
@@ -255,7 +256,7 @@
 
           <td>
             <br>
-            <br>
+             <br>
              
 
             <ul>
@@ -269,7 +270,7 @@
 
           <td>
             <br>
-            Advanced Tab;
+             Advanced Tab; 
 
             <ul>
               <li>Type</li>
@@ -278,7 +279,7 @@
 
           <td>
             <br>
-            <br>
+             <br>
              
 
             <ul>
@@ -324,7 +325,7 @@
 
           <td>
             <br>
-            Margin Tab; 
+             Margin Tab; 
 
             <ul>
               <li>Exclude from Spending</li>
@@ -339,7 +340,7 @@
 
           <td>
             <br>
-            General Tab; 
+             General Tab; 
 
             <ul>
               <li>Item link</li>
@@ -413,7 +414,7 @@
 
           <td>
             <br>
-            <br>
+             <br>
              
 
             <ul>
@@ -422,7 +423,7 @@
               <li>The <strong>Secret code</strong> field cannot be greater than 8 digits.</li>
             </ul>
             <br>
-            <em><strong><br>
+             <em><strong><br>
             <br>
             <br>
             <br>
@@ -491,7 +492,7 @@
 
           <td>
             <br>
-            Misc Tab;
+             Misc Tab; 
 
             <ul>
               <li>First name</li>
@@ -604,7 +605,7 @@
 
       <p>The Toshiba ACE system has different risk levels. By default, the LOC SMS risk level <em>1</em> is used for a <em>$0.00</em> credit limit, corresponding to the risk level <em>55</em> in the Toshiba ACE system. All other risk levels, having a credit limit higher than <em>$0.00</em>, are linked to Toshiba ACE risk level <em>50</em>. All customers assigned to a risk level, possessing a credit limit, will be verified by the Toshiba ACE system. To stop certain customer accounts from being charged, the risk level needs to be changed to <strong>1</strong><em>,</em> followed by a <em>Deploy Change</em>.</p>
 
-      <p>All LOC SMS Customer reports will work (Account Statement, Interest Charge, etc.), as if a LOC SMS-only system was used. An analysis tool named <strong>Customers Over Limit</strong> is available. The tool will help to manage customers going over the limit, at which point their risk levels may be re-assigned to a credit level of  <em>$0.00</em> to stop&nbsp;charges. The tool can be found in <em>eSuite Manage\Accounting\Receivable\Customer Accounts menu</em>.=</p>
+      <p>All LOC SMS Customer reports will work (Account Statement, Interest Charge, etc.), as if a LOC SMS-only system was used. An analysis tool named <strong>Customers Over Limit</strong> is available. The tool will help to manage customers going over the limit, at which point their risk levels may be re-assigned to a credit level of <em>$0.00</em> to stop&nbsp;charges. The tool can be found in <em>eSuite Manage\Accounting\Receivable\Customer Accounts menu</em>.=</p>
 
       <h3 id="posneg">Positive and Negative Check Files</h3>
 
@@ -725,12 +726,12 @@
 
         <tr>
           <td>Total Received on Account<br>
-          (includes Store Coupons)</td>
+           (includes Store Coupons)</td>
 
           <td>=</td>
 
           <td>Miscellaneous Transaction Items<br>
-          (Net of Paid In - Paid Out)<br>
+           (Net of Paid In - Paid Out)<br>
            (to see the breakdown of Paid In/Paid Out, see the Misc Transactions Recap report)</td>
         </tr>
 
@@ -899,7 +900,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

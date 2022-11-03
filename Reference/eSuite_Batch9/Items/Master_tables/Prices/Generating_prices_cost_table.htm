@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>Generate Prices</title>
-    <link href="../../../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
-          <!-- Title/Keywords edit on new documents -->
+    ï»¿            ï»¿ ï»¿ <!-- #BeginTemplate "../../../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-          <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -66,7 +67,7 @@
         <area shape="rect" coords="247, 216, 311, 236" href="">
         <area shape="rect" coords="246, 236, 310, 256" href="">
         <area shape="rect" coords="247, 266, 310, 286" href="">
-      </map>
+      </map> 
 
       <table style="width: 100%">
         <tr>
@@ -97,7 +98,7 @@
           <td style="width: 156px"><strong><a name="Targets">Targets</a></strong></td>
 
           <td>The <b>Targets</b> field contains the target group(s) affected by the price generation.<br>
-          It is used in global price generation.<br>
+           It is used in global price generation.<br>
            The default value is <em>PAL</em>.</td>
         </tr>
 
@@ -105,7 +106,7 @@
           <td style="width: 156px"><strong><a name="Price_levels">Price levels</a></strong></td>
 
           <td>The <strong>Price levels</strong> field contains the price level(s) for which the selling price is generated.<br>
-          The default value is <em>1</em>.</td>
+           The default value is <em>1</em>.</td>
         </tr>
 
         <tr>
@@ -130,7 +131,7 @@
           <td style="width: 156px"><strong><a name="Net_cost">Net cost</a></strong></td>
 
           <td>The <strong>Net cost</strong> field specifies that the selling price is generated (or the profit is made) from the <a href="../Cost_Table.htm#Cost"><strong>Cost</strong> field</a> in the <a href="file:///Z:/V4500/Users/eSuite/Common/Item_maintenance/Cost_Table.htm"><strong>Cost</strong> table</a>.<br>
-          Usually, the <strong>Net cost</strong> value is the same as the <strong>Base cost</strong> value unless discounts, rebates, etc. are given by the vendor. In this case, the <strong>Net cost</strong> value changes.</td>
+           Usually, the <strong>Net cost</strong> value is the same as the <strong>Base cost</strong> value unless discounts, rebates, etc. are given by the vendor. In this case, the <strong>Net cost</strong> value changes.</td>
         </tr>
 
         <tr>
@@ -143,30 +144,30 @@
           <td style="width: 156px"><strong><a name="Cost">Cost</a></strong></td>
 
           <td>The <strong>Cost</strong> field contains the cost value from which the selling price is generated.<br>
-          Not editable. Its value comes from the <b>Cost</b> table. Depending on the base selected in the <strong>Base</strong> cost, <strong>Landed cost</strong> and <strong>Net cost</strong> fields, the <b>Cost</b> field contains the base cost or the net cost.</td>
+           Not editable. Its value comes from the <b>Cost</b> table. Depending on the base selected in the <strong>Base</strong> cost, <strong>Landed cost</strong> and <strong>Net cost</strong> fields, the <b>Cost</b> field contains the base cost or the net cost.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Margin">Margin</a></strong></td>
 
           <td>The <strong>Margin</strong> field contains the profit margin on the item(s), in percentage. It is used to generate the selling price.<br>
-          Its default value is <em>Item</em>.<br>
-          For details, see the <a href="#The_Margin_field"><strong>Margin</strong> field section</a> below.</td>
+           Its default value is <em>Item</em>.<br>
+           For details, see the <a href="#The_Margin_field"><strong>Margin</strong> field section</a> below.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Round">Round</a></strong></td>
 
           <td>The <strong>Round</strong> field contains the ending number of the selling price. It works in combination with the <a href="#Margin"><strong>Margin</strong> field</a>.<br>
-          Its default value is <em>Item</em>.<br>
-          For details, see the <a href="#The_Round_field"><strong>Round</strong> field section</a> below.</td>
+           Its default value is <em>Item</em>.<br>
+           For details, see the <a href="#The_Round_field"><strong>Round</strong> field section</a> below.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Price">Price</a></strong></td>
 
           <td>The <strong>Price</strong> field displays the generated selling price.<br>
-          Not editable. Its value is generated from the cost value displayed in the <a href="#Cost"><b>Cost</b> field</a>, according to the <a href="#Margin">margin</a> and <a href="#Round">rounding</a> values entered.</td>
+           Not editable. Its value is generated from the cost value displayed in the <a href="#Cost"><b>Cost</b> field</a>, according to the <a href="#Margin">margin</a> and <a href="#Round">rounding</a> values entered.</td>
         </tr>
 
         <tr>
@@ -271,7 +272,7 @@
           <td style="width: 156px"><strong>Never</strong></td>
 
           <td>The <b>Never</b> button does not generate any selling price for any item during the current maintenance session.<br>
-          If the system is set to open the <strong>Generate price</strong> window each time a change is made in the <strong>Cost</strong> table, the <strong>Generate price</strong> window will not be displayed automatically for the complete current maintenance session. <span class="auto-style1">However, it can be opened manually by clicking on the toolbar button.</span> The <strong>Generate price</strong> window will be displayed automatically again during the next maintenance session.</td>
+           If the system is set to open the <strong>Generate price</strong> window each time a change is made in the <strong>Cost</strong> table, the <strong>Generate price</strong> window will not be displayed automatically for the complete current maintenance session. <span class="auto-style1">However, it can be opened manually by clicking on the toolbar button.</span> The <strong>Generate price</strong> window will be displayed automatically again during the next maintenance session.</td>
         </tr>
 
         <tr>
@@ -286,7 +287,7 @@
       <h3><a name="The_Margin_field">The Margin field</a></h3>
 
       <p>The <strong>Margin</strong> field contains the profit margin on the item in percentage. It is used to generate the selling price.<br>
-      The default value is <em>Item</em>.</p>
+       The default value is <em>Item</em>.</p>
 
       <p>The <b>Margin</b> field in the <b>Generate price</b> window has priority over the <a href="../Price_Table.htm#Margin_(suggested_retail)"><b>Margin</b> field</a> in the <a href="../Price_Table.htm"><b>Price</b> table</a> and overwrites it. However, the <b>Generate price</b> window can use the margin value of the <b>Price</b> table. To do so, the <i>Item</i> value must be entered in the <b>Margin</b> field of the <b>Generate price</b> window. A margin value must be entered in the <b>Price</b> table for a selling price to be calculated.</p>
 
@@ -300,7 +301,7 @@
         <li class="Steps">Type the profit margin in percentage in the <b>Margin</b> field, or</li>
 
         <li class="Steps">Type <i>Item</i> in the <b>Margin</b> field to use the profit margin entered in the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Utilities/Item_tables/Price_table/Fields/TGM_field.htm"><b>TGM</b> field</a> of the <b>Price</b> table.<br>
-        The generated selling price is automatically displayed in the <b>Price</b> field of the <b>Generate price</b> window.</li>
+         The generated selling price is automatically displayed in the <b>Price</b> field of the <b>Generate price</b> window.</li>
       </ul>
 
       <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
@@ -308,7 +309,7 @@
       <h3><a name="The_Round_field">The <span class="auto-style1">Round</span> field</a></h3>
 
       <p>The <strong>Round</strong> field contains the ending number of the selling price. It works in combination with the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Utilities/Generate_price/Fields_cost/Margin_field.htm">Margin field</a>.<br>
-      Its default value is <em>Item</em>.</p>
+       Its default value is <em>Item</em>.</p>
 
       <p>Two different ending numbers separated by a comma may be specified in the <b>Round</b> field. In this case:</p>
 
@@ -326,7 +327,7 @@
         <li class="Steps">Type the ending number(s) in the <b>Round</b> field, or</li>
 
         <li class="Steps">Type <i>Item</i> in the <b>Round</b> field to use the ending number(s) entered in the <span class="auto-style1"><b>Round</b> field</span> of the <b>Price</b> table.<br>
-        The generated selling price is automatically updated in the <b>Price</b> field of the <b>Generate price</b> window.</li>
+         The generated selling price is automatically updated in the <b>Price</b> field of the <b>Generate price</b> window.</li>
       </ul>
 
       <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
@@ -345,16 +346,16 @@
         <li>Change the <a href="#Targets">targets</a> affected, if necessary.</li>
 
         <li>Change the <a href="#Price_levels">price levels</a> affected, if necessary, or<br>
-        Click on the <a href="#All_levels"><b>All levels</b> button</a> to specify all price levels defined in the system.</li>
+         Click on the <a href="#All_levels"><b>All levels</b> button</a> to specify all price levels defined in the system.</li>
 
         <li>Select the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Item_maintenance/Utilities/Generate_price/Fields_cost/From_section.htm">cost</a> from which the selling price is generated (<a href="#Base_cost">base</a>, <a href="#Landed_cost">landed</a> or <a href="#Net_cost">net</a> cost).<br>
          The cost value of the selected base is displayed in the <a href="#Cost"><b>Cost</b> field</a> of the <b>Generate price</b> window.</li>
 
         <li>Enter the <a href="#Margin">profit margin</a>.<br>
-        The generated selling price is displayed in the <a href="#Price"><b>Price</b> field</a>.</li>
+         The generated selling price is displayed in the <a href="#Price"><b>Price</b> field</a>.</li>
 
         <li>Enter the <a href="#Round">rounding value</a>, if necessary.<br>
-        The generated selling price is updated in the <b>Price</b> field.</li>
+         The generated selling price is updated in the <b>Price</b> field.</li>
 
         <li>Specify the selling price generated.</li>
 
@@ -391,7 +392,7 @@
          The <b>Generate price</b> window is displayed.</li>
 
         <li>Select the cost from which the selling price is generated (from which the profit is made).<br>
-        The unit cost amount is displayed in the bottom of the <strong>Generate price</strong> window.</li>
+         The unit cost amount is displayed in the bottom of the <strong>Generate price</strong> window.</li>
 
         <li>Click on the appropriate button to generate the corresponding selling price.</li>
       </ol>
@@ -408,7 +409,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

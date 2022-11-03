@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>eSuite - Alternate Code Table</title>
-    <link href="../../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
-          <!-- Title/Keywords edit on new documents -->
+    ï»¿            ï»¿ ï»¿ <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-          <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -97,7 +98,7 @@
       <p>The <strong>Alternate code</strong> table grid offers quick information on the item alternate codes. The following columns are displayed: <strong><a href="#Target">Target</a></strong> and <strong><a href="#Alternate_code">Alternate code</a></strong>.</p>
 
       <p>Columns are movable, resizable and may be selected/deselected for a customized experience. They allow sorting the records in an ascending or a descending order.<br>
-      Records are displayed in ascending order by target, with the <em>PAL</em> target record selected by default. Selecting a record allows displaying and editing its information in the main section of the <strong>Alternate code</strong> table.</p>
+       Records are displayed in ascending order by target, with the <em>PAL</em> target record selected by default. Selecting a record allows displaying and editing its information in the main section of the <strong>Alternate code</strong> table.</p>
 
       <h2>Content</h2>
 
@@ -120,15 +121,15 @@
           <td><strong><a name="Target">Target</a></strong></td>
 
           <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
-          The default value of the <strong>Target</strong> field is <em>PAL</em>.<br>
-          It is grayed out unless the system is set up for multi targets.</td>
+           The default value of the <strong>Target</strong> field is <em>PAL</em>.<br>
+           It is grayed out unless the system is set up for multi targets.</td>
         </tr>
 
         <tr>
           <td><strong><a name="Alternate_code">Alternate code</a></strong></td>
 
           <td>The <strong>Alternate code</strong> field contains an alternate code, i.e. a code different than the UPC.<br>
-          For details, see the <a href="#The_Alternate_code_field"><strong>Alternate code</strong> field section</a> below.</td>
+           For details, see the <a href="#The_Alternate_code_field"><strong>Alternate code</strong> field section</a> below.</td>
         </tr>
 
         <tr>
@@ -141,22 +142,22 @@
           <td style="height: 21px"><strong><a name="Force_package_price_">Force package price #</a></strong></td>
 
           <td style="height: 21px">The <strong>Force package price #</strong> field contains the identification number of the price to use for the alternate code.<br>
-          It is used to force the system to sell the item with a specific quantity when the alternate code is used.<br>
-          For details, see the <strong>Force package price #</strong> field section below.</td>
+           It is used to force the system to sell the item with a specific quantity when the alternate code is used.<br>
+           For details, see the <strong>Force package price #</strong> field section below.</td>
         </tr>
 
         <tr>
           <td><strong><a name="Main_for_this_package">Main for this package</a></strong></td>
 
           <td>The <strong>Main for this package</strong> field specifies whether the current alternate code record is the main alternate code for the package price specified in the <a href="#Force_package_price_"><strong>Force package price #</strong> field</a> (checked), or not (unchecked).<br>
-          It is used for reporting purposes only. If a report is displayed based on the alternate codes, the system will look for the main one in the case there are many of them.</td>
+           It is used for reporting purposes only. If a report is displayed based on the alternate codes, the system will look for the main one in the case there are many of them.</td>
         </tr>
 
         <tr>
           <td><strong><a name="Force_price_level">Force price level</a></strong></td>
 
           <td>The <strong>Force price level</strong> field contains the number and the description of the price level to use when the alternate code is used.<br>
-          See the <strong><a href="#Note">Note</a></strong> below.</td>
+           See the <strong><a href="#Note">Note</a></strong> below.</td>
         </tr>
 
         <tr>
@@ -168,9 +169,9 @@
 
       <p class="Note"><strong><a name="Note">Note</a> on price levels:</strong><br>
        Starting v350x, Application.ini[TARGET_TRS] is used to determine which target to use for each item table.<br>
-      Application.ini[TARGET_TRS]PRICE_TAB='PAL' will force the Host to use the PAL record.<br>
-      Application.ini[TARGET_TRS]PRICE_TAB='@WIZGET(TARGET)' will force the Host to use the Global Store Number record.<br>
-      Application.ini[TARGET_TRS]PRICE_TAB=ISNULL((SELECT TOP 1 SUB_PRI.F1000 FROM PRICE_TAB SUB_PRI JOIN LNK_TAB SUB_LNK ON SUB_PRI.F1000=SUB_LNK.F1000 JOIN LNK_TAB SUB_LNK2 ON SUB_LNK.F1056=SUB_LNK2.F1056 AND SUB_LNK.F1057=SUB_LNK2.F1057 AND SUB_LNK2.F1000='@WIZGET(TARGET)' JOIN STO_TAB SUB_STO ON SUB_LNK.F1000=SUB_STO.F1000 WHERE SUB_PRI.F01=PRI.F01 AND SUB_PRI.F126=PRI.F126 ORDER BY SUB_STO.F1937 DESC),'PAL'). That will use the proper target set for the Global StoreID selected.</p>
+       Application.ini[TARGET_TRS]PRICE_TAB='PAL' will force the Host to use the PAL record.<br>
+       Application.ini[TARGET_TRS]PRICE_TAB='@WIZGET(TARGET)' will force the Host to use the Global Store Number record.<br>
+       Application.ini[TARGET_TRS]PRICE_TAB=ISNULL((SELECT TOP 1 SUB_PRI.F1000 FROM PRICE_TAB SUB_PRI JOIN LNK_TAB SUB_LNK ON SUB_PRI.F1000=SUB_LNK.F1000 JOIN LNK_TAB SUB_LNK2 ON SUB_LNK.F1056=SUB_LNK2.F1056 AND SUB_LNK.F1057=SUB_LNK2.F1057 AND SUB_LNK2.F1000='@WIZGET(TARGET)' JOIN STO_TAB SUB_STO ON SUB_LNK.F1000=SUB_STO.F1000 WHERE SUB_PRI.F01=PRI.F01 AND SUB_PRI.F126=PRI.F126 ORDER BY SUB_STO.F1937 DESC),'PAL'). That will use the proper target set for the Global StoreID selected.</p>
 
       <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
 
@@ -218,7 +219,7 @@
             <p class="List">This forces the system to use the package price with the quantity specified. For example, if the <strong>Package price</strong> field is set to <em>$9.99/12</em>, <em>12</em> items are sold when the alternate code is scanned once. The price for these <em>12</em> items is <em>$9.99</em>.</p>
 
             <p class="NoteList"><strong>Note:</strong><br>
-            Price 2 is used with the Volume pricing.</p>
+             Price 2 is used with the Volume pricing.</p>
           </td>
         </tr>
 
@@ -229,7 +230,7 @@
             <p class="List">This forces the system to use the limited quantity price with the quantity specified. For example, if the <strong>Limited quantity</strong> field is set to <em>$44.95/60</em>, <em>60</em> items are sold when the alternate code is scanned once. The price for these <em>60</em> items is <em>$44.95</em>.</p>
 
             <p class="NoteList"><strong>Note:</strong><br>
-            Price 3 is used with the Volume pricing.</p>
+             Price 3 is used with the Volume pricing.</p>
           </td>
         </tr>
       </table>
@@ -240,7 +241,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

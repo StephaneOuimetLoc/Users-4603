@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>Edit Cost</title>
-    <link href="../../../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
-          <!-- Title/Keywords edit on new documents -->
+    ï»¿            ï»¿ ï»¿ <!-- #BeginTemplate "../../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-          <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -61,7 +62,7 @@
       <p>Because of the multiple records capability, the <b>Cost</b> table can toggle between a simple view and a detailed view.</p>
 
       <p>The simple view consists of the quick reference section and the pricing columns.<br>
-      The detailed view adds the bottom tab section and the left tab section.</p>
+       The detailed view adds the bottom tab section and the left tab section.</p>
 
       <ul>
         <li>The <strong>Collapse/Expand left</strong> control in the toolbar hides/shows the left tab section.</li>
@@ -206,50 +207,50 @@
           <td style="width: 156px"><strong><a name="Cost">Cost</a></strong></td>
 
           <td>The <strong>Cost</strong> field shows the current cost per case for the item cost record.<br>
-          Not editable and used for information purposes only.</td>
+           Not editable and used for information purposes only.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Authorized">Authorized</a></strong></td>
 
           <td>The <strong>Authorized (Auth)</strong> field specifies whether the current cost record is the official authorized cost (checked) or not (unchecked). It is selected by default, however the database has actually no value for this field (not yes, not no; null value).<br>
-          The <strong>Authorized</strong> field is useful in multi-vendors cases, when an item has more than one cost record. The cost record officially authorized is the one used in the reports.</td>
+           The <strong>Authorized</strong> field is useful in multi-vendors cases, when an item has more than one cost record. The cost record officially authorized is the one used in the reports.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Next_date">Next date</a></strong></td>
 
           <td>The <strong>Next date</strong> field contains the date change of the next cost, i.e. the date at which the <a href="#The_Next_cost_field">next cost</a> becomes effective.<br>
-          Not editable and used for information purposes only.</td>
+           Not editable and used for information purposes only.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Next_cost">Next cost</a></strong></td>
 
           <td>The <strong>Next cost</strong> field shows the next cost event based on the allowance, discount and rebate dates.<br>
-          See the <a href="#The_Next_cost_field"><strong>Next cost</strong> field section</a>.</td>
+           See the <a href="#The_Next_cost_field"><strong>Next cost</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Source">Source</a></strong></td>
 
           <td>The <strong>Source</strong> field contains the origin of the current next cost.<br>
-          See the <a href="#The_Source_field"><strong>Source</strong> field section</a>.</td>
+           See the <a href="#The_Source_field"><strong>Source</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
 
           <td>The <strong>Target</strong> field contains the target identifier (the store group). It is a required field used as a key, along with the main item UPC and the Vendor field, to uniquely identify records in the <strong>Cost</strong> table.<br>
-          The default value is <em>PAL</em>.<br>
-          The <b>Target</b> field is grayed out unless the system is set up for multi targets.</td>
+           The default value is <em>PAL</em>.<br>
+           The <b>Target</b> field is grayed out unless the system is set up for multi targets.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Vendor_ID">Vendor ID</a></strong></td>
 
           <td>The <strong>Vendor ID</strong> field links the current item cost record to a vendor.&nbsp;<br>
-          It is a required field used as a key field, along with the main item UPC and the <a href="#Target"><strong>Target</strong> field</a>, to uniquely identify records in the <strong>Cost</strong> table.<br>
+           It is a required field used as a key field, along with the main item UPC and the <a href="#Target"><strong>Target</strong> field</a>, to uniquely identify records in the <strong>Cost</strong> table.<br>
            See the <a href="#The_Vendor_ID_field"><strong>Vendor ID</strong> field section</a>.</td>
         </tr>
 
@@ -257,14 +258,14 @@
           <td style="width: 156px"><strong><a name="Vendor_name">Vendor name</a></strong></td>
 
           <td>The <strong>Vendor name</strong> field contains the name of the vendor for the current cost record.<br>
-          The <strong>Vendor name</strong> field is not editable in the <strong>Cost</strong> table. It is based on the vendor identification number entered in the <a href="#The_Vendor_ID_field"><strong>Vendor ID</strong> field</a>. The vendor names are editable in the <a href="../Dimensions/Dimensions_tables/Vendor_Table.htm"><strong>Vendor</strong> table</a>.</td>
+           The <strong>Vendor name</strong> field is not editable in the <strong>Cost</strong> table. It is based on the vendor identification number entered in the <a href="#The_Vendor_ID_field"><strong>Vendor ID</strong> field</a>. The vendor names are editable in the <a href="../Dimensions/Dimensions_tables/Vendor_Table.htm"><strong>Vendor</strong> table</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Vendor_code">Vendor code</a></strong></td>
 
           <td>The <strong>Vendor code</strong> field contains the code used by the vendor to identify the item. This code is usually used to order the item from the vendor.<br>
-          The <strong>Vendor code</strong> field can be added and used as search criterion in the <strong>Items - General list</strong> wizard window. Item reports can be extracted by vendor, and listed in the vendor code order.</td>
+           The <strong>Vendor code</strong> field can be added and used as search criterion in the <strong>Items - General list</strong> wizard window. Item reports can be extracted by vendor, and listed in the vendor code order.</td>
         </tr>
 
         <tr>
@@ -277,22 +278,22 @@
           <td style="width: 156px"><strong><a name="Case">Case</a></strong></td>
 
           <td>The <strong>Case</strong> field contains the number of units per case for the item.<br>
-          The case value is generally used to calculate the <a href="#Unit_cost">unit cost</a> of the item.</td>
+           The case value is generally used to calculate the <a href="#Unit_cost">unit cost</a> of the item.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Unit_cost">Unit cost</a></strong></td>
 
           <td>The <strong>Unit cost</strong> field shows the unit cost of the item.<br>
-          Its value is automatically calculated (the <a href="#Base_cost">base cost</a> amount&nbsp; divided by the <a href="#Case">case</a> value).<br>
-          Not editable and used for information purposes only.</td>
+           Its value is automatically calculated (the <a href="#Base_cost">base cost</a> amount&nbsp; divided by the <a href="#Case">case</a> value).<br>
+           Not editable and used for information purposes only.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="UOM">UOM</a></strong></td>
 
           <td>The <strong>Unit of measure (UOM)</strong> field contains the identification characters of the buying format available for the current item.<br>
-          See the <a href="#The_Unit_of_measure_(UOM)_field"><strong>Unit of measure</strong> field section</a>.</td>
+           See the <a href="#The_Unit_of_measure_(UOM)_field"><strong>Unit of measure</strong> field section</a>.</td>
         </tr>
 
         <tr>
@@ -309,14 +310,14 @@
           <td style="width: 156px"><strong><a name="Split_code">Split code</a></strong></td>
 
           <td>The <strong>Split code</strong> field contains the UPC code of the item contained in the current item.<br>
-          See the <a href="#The_Split_code_field_section"><strong>Split code</strong> field section</a>.</td>
+           See the <a href="#The_Split_code_field_section"><strong>Split code</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Split_quantity">Split quantity</a></strong></td>
 
           <td>The <strong>Split quantity (Split qty)</strong> field contains the number of the item contained in the current item. It works in combination with the <a href="#Split_code"><strong>Split code</strong> field</a>.<br>
-          For example, a carton of cigarettes (UPC #0000000010000) contains 8 packs of cigarettes (UPC #0000000008000). In this case, the <strong>Split quantity</strong> field for the item #0000000010000 (carton of cigarettes) contains the value 8.</td>
+           For example, a carton of cigarettes (UPC #0000000010000) contains 8 packs of cigarettes (UPC #0000000008000). In this case, the <strong>Split quantity</strong> field for the item #0000000010000 (carton of cigarettes) contains the value 8.</td>
         </tr>
 
         <tr>
@@ -329,35 +330,35 @@
           <td style="width: 156px"><strong><a name="Quantity">Quantity</a></strong></td>
 
           <td>The <strong>Quantity (Qty)</strong> field contains the default quantity to use in the purchase orders for the current item.<br>
-          The <strong>Quantity</strong> field works in combination with the <a href="#UOM"><strong>Unit of measure (UOM)</strong> field</a> to complete its value, i.e. the format in which the default quantity is expressed (case, unit, weight).</td>
+           The <strong>Quantity</strong> field works in combination with the <a href="#UOM"><strong>Unit of measure (UOM)</strong> field</a> to complete its value, i.e. the format in which the default quantity is expressed (case, unit, weight).</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Fee_%">Fee %</a></strong></td>
 
           <td>The <strong>Fee %</strong> field contains the fee value for one case, expressed as a percentage.<br>
-          Fees may include shipping fees, administrative fees, etc. They directly affect the cost of the item and consequently its unit cost.</td>
+           Fees may include shipping fees, administrative fees, etc. They directly affect the cost of the item and consequently its unit cost.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Fee_$">Fee $</a></strong></td>
 
           <td>The <strong>Fee $</strong> field contains the fee amount for one case, expressed in dollars.<br>
-          Fees may be shipping fees, administrative fees, etc. They directly affect the cost of the item, and consequently its unit cost.</td>
+           Fees may be shipping fees, administrative fees, etc. They directly affect the cost of the item, and consequently its unit cost.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Split">Split</a></strong></td>
 
           <td>The <strong>Split</strong> field contains the fee amount by unit charged when the current item is bought in split case quantities.<br>
-          The split fees directly affect the unit cost of the item.</td>
+           The split fees directly affect the unit cost of the item.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Weight">Weight</a></strong></td>
 
           <td>The <strong>Weight</strong> field contains the weight of a case, including tare.<br>
-          It is generally used in warehouses for receiving information or to calculate the shipping fees charged by weight.</td>
+           It is generally used in warehouses for receiving information or to calculate the shipping fees charged by weight.</td>
         </tr>
 
         <tr>
@@ -371,14 +372,14 @@
           <td style="width: 156px"><strong><a name="Cases">Cases</a></strong></td>
 
           <td>The <strong>Cases (Cs)</strong> field contains the number of cases per layer on a pallet.<br>
-          It is generally used in warehouses for receiving information.</td>
+           It is generally used in warehouses for receiving information.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Layer">Layer</a></strong></td>
 
           <td>The <strong>Layer</strong> field contains the number of layers on a pallet.&nbsp;<br>
-          It is generally used in warehouses for receiving information.</td>
+           It is generally used in warehouses for receiving information.</td>
         </tr>
 
         <tr>
@@ -395,29 +396,29 @@
           <td style="width: 156px"><strong><a name="Status">Status</a></strong></td>
 
           <td>The <strong>Status</strong> field contains the identification characters of the item status.<br>
-          See the <a href="#The_Status_field"><strong>Status field</strong> section</a>.</td>
+           See the <a href="#The_Status_field"><strong>Status field</strong> section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Inventory">Inventory</a></strong></td>
 
           <td>The <strong>Inventory</strong> field contains the identification letter of the method that defines the item cost used for the inventory value of the item.<br>
-          See the <a href="#The_Inventory_field"><strong>Inventory field</strong> section</a>.</td>
+           See the <a href="#The_Inventory_field"><strong>Inventory field</strong> section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px; height: 47px;"><strong><a name="Control">Control</a></strong></td>
 
           <td style="height: 47px">The <strong>Control</strong> field contains the identification letters of the control information on the item, used to add limits to the item.<br>
-          The default value is <em>No ordering (NO)</em>, indicating that the item is not ordered on the purchase orders.<br>
-          The default list attached to the <strong>Control</strong> field may be modified. See the reseller for details.</td>
+           The default value is <em>No ordering (NO)</em>, indicating that the item is not ordered on the purchase orders.<br>
+           The default list attached to the <strong>Control</strong> field may be modified. See the reseller for details.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Delivery">Delivery</a></strong></td>
 
           <td>The <strong>Delivery (Deliv)</strong> field contains the number of days needed to receive the item from the vendor after it is ordered.<br>
-          It defines a number of days for an item in particular. Delivery schedules can be defined for the vendor of this item in the <strong>Vendor table</strong>.</td>
+           It defines a number of days for an item in particular. Delivery schedules can be defined for the vendor of this item in the <strong>Vendor table</strong>.</td>
         </tr>
 
         <tr>
@@ -436,65 +437,65 @@
           <td style="width: 156px"><b><a name="Allowance">Allowance</a></b></td>
 
           <td>An <strong>allowance</strong> is an amount subtracted from the cost of the item. It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
-          The allowance amount automatically affects the cost amount, and consequently its unit cost amount.</td>
+           The allowance amount automatically affects the cost amount, and consequently its unit cost amount.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><b><a name="Discount">Discount</a></b></td>
 
           <td>A <strong>discount</strong> is an amount subtracted from the cost of the item. It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
-          The discount amount automatically affects the cost amount, and consequently its unit cost amount.</td>
+           The discount amount automatically affects the cost amount, and consequently its unit cost amount.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><b><a name="Rebate">Rebate</a></b></td>
 
           <td>A <strong>rebate</strong> is an amount subtracted from the cost of the item. It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
-          The rebate amount automatically affects the cost amount, and consequently its unit cost amount.</td>
+           The rebate amount automatically affects the cost amount, and consequently its unit cost amount.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><b><a name="Break/quantity">Break/quantity</a><br>
-          </b>(<b>Cost break</b>)</td>
+          </b> (<b>Cost break</b>)</td>
 
           <td>A <strong>break/quantity</strong> (or a <strong>cost break</strong>) is an amount subtracted from the cost of the item when a certain quantity of that item is purchased.<br>
-          It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
-          The break/quantity is not exactly considered as a cost event since the retailer may not purchase the required quantity to claim the reduction. For that reason, the break/quantity amount does not affect the cost amount.</td>
+           It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
+           The break/quantity is not exactly considered as a cost event since the retailer may not purchase the required quantity to claim the reduction. For that reason, the break/quantity amount does not affect the cost amount.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><a name="Start_date"><strong>Start</strong> <strong>date</strong></a></td>
 
           <td>The <strong>Start date</strong> field contains the start dates for the cost events, i.e. the dates on which the cost events become effective.&nbsp;<br>
-          See the <a href="#The_Start_date_field"><strong>Start date</strong> field section</a>.</td>
+           See the <a href="#The_Start_date_field"><strong>Start date</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="End_date">End date</a></strong></td>
 
           <td>The <b>End date</b> field contains the end dates for the cost events, i.e. the dates at which the cost events are no longer effective.<br>
-          See the <a href="#The_End_date_field"><strong>End date</strong> field section</a>.</td>
+           See the <a href="#The_End_date_field"><strong>End date</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="$">$</a></strong></td>
 
           <td>The <strong>$</strong> field contains the reduction amount per case for the cost events, applicable during the effective cost event period.<br>
-          See the <a href="#The_$_field"><strong>$</strong> field section</a>.</td>
+           See the <a href="#The_$_field"><strong>$</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="%">%</a></strong></td>
 
           <td>The <strong>%</strong> field contains the reduction per case expressed as a percentage for the cost events, applicable during the effective cost event period.<br>
-          See the <a href="#The_%_field"><strong>%</strong> field section</a>.</td>
+           See the <a href="#The_%_field"><strong>%</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Min">Min</a></strong></td>
 
           <td>The <strong>Minimum (Min)</strong> field contains the minimum quantity required, in cases, to obtain the reduction of the cost events.<br>
-          See the <a href="#The_Minimum_field"><strong>Minimum</strong> field section</a>.</td>
+           See the <a href="#The_Minimum_field"><strong>Minimum</strong> field section</a>.</td>
         </tr>
 
         <tr>
@@ -508,14 +509,14 @@
           <td style="width: 156px"><strong><a name="Qualifier">Qualifier</a></strong></td>
 
           <td>The <strong>Qualifier</strong> field contains the qualifying conditions of the cost event.<br>
-          See the <a href="#The_Qualifier_field"><strong>Qualifier</strong> field section</a>.</td>
+           See the <a href="#The_Qualifier_field"><strong>Qualifier</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="OI">OI</a></strong></td>
 
           <td>The <strong>Off Invoice (OI)</strong> field contains the identification character of the off invoice status. This status specifies when the cost event value is given.<br>
-          See the <a href="#The_Off_invoice_(OI)_field"><strong>Off Invoice</strong> field section</a>.</td>
+           See the <a href="#The_Off_invoice_(OI)_field"><strong>Off Invoice</strong> field section</a>.</td>
         </tr>
 
         <tr>
@@ -526,28 +527,28 @@
           <td style="width: 156px"><strong><a name="Percent">Percent</a></strong></td>
 
           <td>The <strong>Percent (Bill back)</strong> field contains the bill back values per case, expressed as a percentage.<br>
-          See the <a href="#Percent_(Bill_back)"><strong>Percentage (Bill back)</strong> field section</a>.</td>
+           See the <a href="#Percent_(Bill_back)"><strong>Percentage (Bill back)</strong> field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><b><a name="Dollars">Dollars</a></b></td>
 
           <td>The <b>Dollars (Bill back)</b> field contains the bill back values <u>per case</u>, expressed in dollars.<br>
-          See the <a href="#Dollars_(Bill_back)_field"><strong>Dollars</strong> (Bill back) field section</a>.</td>
+           See the <a href="#Dollars_(Bill_back)_field"><strong>Dollars</strong> (Bill back) field section</a>.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Description">Description</a></strong></td>
 
           <td>The <strong>Description</strong> field contains the description of the bill back 4.<br>
-          It is used for information purposes only.</td>
+           It is used for information purposes only.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Operator_level">Operator level</a></strong></td>
 
           <td>The <strong>Operator level (Oper. lvl.)</strong> field contains the number of the minimum operator level needed to manage the current cost record.<br>
-          See the <a href="#The_Operator_level_field"><strong>Operator level</strong> field section</a>.</td>
+           See the <a href="#The_Operator_level_field"><strong>Operator level</strong> field section</a>.</td>
         </tr>
       </table>
 
@@ -688,9 +689,9 @@
       <p>The <b>Unit of measure</b> field has effects in the purchase orders. The buying formats available in the purchase orders depend on the values of the <b>Unit of measure</b> field.</p>
 
       <p class="Note"><b>NOTES:<br>
-      </b>The unit of measure may also be specified at the vendor level (<strong>Unit of measure</strong> field in the <strong>Vendor</strong> table). In this case, the value defined in the <strong>Cost</strong> table has precedence over the value defined in the <strong>Vendor</strong> table.<br>
-      If the <strong>Unit of measure</strong> field does not contain any value, the <em>case format</em> is the only buying format available.<br>
-      A maximum of two buying formats can be specified.</p>
+      </b> The unit of measure may also be specified at the vendor level (<strong>Unit of measure</strong> field in the <strong>Vendor</strong> table). In this case, the value defined in the <strong>Cost</strong> table has precedence over the value defined in the <strong>Vendor</strong> table.<br>
+       If the <strong>Unit of measure</strong> field does not contain any value, the <em>case format</em> is the only buying format available.<br>
+       A maximum of two buying formats can be specified.</p>
 
       <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
 
@@ -743,8 +744,8 @@
           <td>(empty)</td>
 
           <td>This method uses the method specified in the <i>System.ini</i> file.<br>
-          This is the default value of the <b>Inventory</b> field.<br>
-          The default value specified in the System.ini file is <i>Average cost</i>.</td>
+           This is the default value of the <b>Inventory</b> field.<br>
+           The default value specified in the System.ini file is <i>Average cost</i>.</td>
         </tr>
 
         <tr>
@@ -790,10 +791,10 @@
       <p>The <b>Rebate Start date</b> field contains the start date for the rebate, i.e. the date at which the rebate becomes effective.</p>
 
       <p>The <b>Break/quantity (Brk/qty) Start date</b> contains the start date for the break/quantity, i.e. the date at which the break/quantity becomes effective.<br>
-      The <b>Break/quantity</b> is not exactly considered as a cost event since the required quantity may not be purchased to claim the reduction. The <b>Break/quantity</b> will give you a reduction if you use the <b>Inventory</b> module to receive goods.</p>
+       The <b>Break/quantity</b> is not exactly considered as a cost event since the required quantity may not be purchased to claim the reduction. The <b>Break/quantity</b> will give you a reduction if you use the <b>Inventory</b> module to receive goods.</p>
 
       <p>The <b>Allow</b>, <b>Discount</b> and <b>Rebate</b> cost events must contain valid <b>Start</b> and <b>End</b> dates for the eSuite software to recognize the cost reductions.<br>
-      The <b>Break/quantity</b> does not require <b>Start</b> and <b>End</b> dates.</p>
+       The <b>Break/quantity</b> does not require <b>Start</b> and <b>End</b> dates.</p>
 
       <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
 
@@ -810,10 +811,10 @@
       </ul>
 
       <p>The <b>Break/quantity End date</b> field (F219) is a date field that contains the end date for the break/quantity, i.e. the date at which the break/quantity is no longer effective.<br>
-      The <b>Break/quantity</b> is not exactly considered as a cost event since the required quantity may not be purchased to claim the reduction. The <b>Break/quantity</b> will give a reduction if you use the <b>Inventory</b> module to receive goods.</p>
+       The <b>Break/quantity</b> is not exactly considered as a cost event since the required quantity may not be purchased to claim the reduction. The <b>Break/quantity</b> will give a reduction if you use the <b>Inventory</b> module to receive goods.</p>
 
       <p>The <b>Allow</b>, <b>Discount</b> and <b>Rebate</b> cost events must contain valid <b>Start</b> and <b>End</b> dates for the eSuite software to recognize the cost reductions. If the end date for the reduction is not knon, enter a distant future date.<br>
-      The <b>Break/quantity</b> does not require <b>Start</b> and <b>End</b> dates.</p>
+       The <b>Break/quantity</b> does not require <b>Start</b> and <b>End</b> dates.</p>
 
       <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
 
@@ -832,8 +833,8 @@
       </ul>
 
       <p class="Note"><b>NOTES:<br>
-      </b>The cost events must have valid <b><a href="#The_Start_date_field">Start</a></b> and <b><a href="#The_End_date_field">End</a></b> dates for the reductions to become effective.<br>
-      If a reduction amount and a reduction percentage are both entered for a cost event, they are both applied to the item cost.</p>
+      </b> The cost events must have valid <b><a href="#The_Start_date_field">Start</a></b> and <b><a href="#The_End_date_field">End</a></b> dates for the reductions to become effective.<br>
+       If a reduction amount and a reduction percentage are both entered for a cost event, they are both applied to the item cost.</p>
 
       <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
 
@@ -909,21 +910,19 @@
 
       <ul>
         <li>The <b>Allow OI</b> field contains the identification character of the off invoice status.<br>
-        This status specifies when the allowance value is given.</li>
+         This status specifies when the allowance value is given.</li>
 
         <li>The <b>Discount OI</b> field contains the identification character of the off invoice status.<br>
-        This status specifies when the discount value is given.</li>
+         This status specifies when the discount value is given.</li>
 
         <li>The <b>Rebate OI</b> field contains the identification character of the off invoice status.<br>
-        This status specifies when the rebate value is given.</li>
+         This status specifies when the rebate value is given.</li>
 
         <li>The <b>Break/quantity OI</b> field contains the identification character of the off invoice status.<br>
-        This status specifies when the break/quantity value is given.</li>
+         This status specifies when the break/quantity value is given.</li>
       </ul>
 
       <p>The following status options are available:</p>
-
-      <p></p>
 
       <table class="table table-striped">
         <thead class="thead-dark">
@@ -942,7 +941,7 @@
           <td style="width: 4px"><strong>1</strong></td>
 
           <td>The cost event value is subtracted from the invoice total.<br>
-          This affects the <b><a href="#The_Next_cost_field">Next cost</a></b> and <b><a href="#Cost">Cost</a></b> values in the <b>Cost</b> table, except for the <b>Break/quantity</b> cost event.</td>
+           This affects the <b><a href="#The_Next_cost_field">Next cost</a></b> and <b><a href="#Cost">Cost</a></b> values in the <b>Cost</b> table, except for the <b>Break/quantity</b> cost event.</td>
         </tr>
 
         <tr>
@@ -951,7 +950,7 @@
           <td style="width: 4px"><strong>E</strong></td>
 
           <td>The cost event value is given at the end of the promotion (as a check) according to the number of items bought.<br>
-          This does not affect the <b>Next cost</b> or <b>Cost</b> values in the <b>Cost</b> table.</td>
+           This does not affect the <b>Next cost</b> or <b>Cost</b> values in the <b>Cost</b> table.</td>
         </tr>
 
         <tr>
@@ -960,7 +959,7 @@
           <td style="width: 4px"><strong>S</strong></td>
 
           <td>The cost event value appears on the vendor's statement. It is given according to the number of items bought.<br>
-          This does not affect the <b>Next cost</b> or <b>Cost</b> values in the <b>Cost</b> table.</td>
+           This does not affect the <b>Next cost</b> or <b>Cost</b> values in the <b>Cost</b> table.</td>
         </tr>
 
         <tr>
@@ -969,7 +968,7 @@
           <td style="width: 4px"><strong>M</strong></td>
 
           <td>The cost event value is given (as a check) according to the number of items sold.<br>
-          This does not affect the <b>Next cost</b> and <b>Cost</b> values in the <b>Cost</b> table.</td>
+           This does not affect the <b>Next cost</b> and <b>Cost</b> values in the <b>Cost</b> table.</td>
         </tr>
       </table>
       <br>
@@ -1032,7 +1031,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

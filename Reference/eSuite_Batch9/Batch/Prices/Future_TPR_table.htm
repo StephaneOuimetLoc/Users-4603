@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>Future TPR Table</title>
-    <link href="../../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
-          <!-- Title/Keywords edit on new documents -->
+    ï»¿            ï»¿ ï»¿ <!-- #BeginTemplate "../../../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-          <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -54,7 +55,7 @@
 
         <li>Select a record and click <strong>Edit</strong> in the bottom menu of the grid.</li>
 
-        <li>Select <strong>Price batch</strong>, then <strong>TPR</strong>: the <strong>Future TPR price</strong> table <strong></strong> opens over the work area.</li>
+        <li>Select <strong>Price batch</strong>, then <strong>TPR</strong>: the <strong>Future TPR price</strong> table opens over the work area.</li>
       </ol>
 
       <p><img class="Text" src="Future_TPR_table_files/future_TPR_table.png"></p>
@@ -135,43 +136,43 @@
           <td style="width: 156px"><strong><a name="Batch">Batch</a></strong></td>
 
           <td>The <strong>Batch</strong> field contains the batch identifier that uniquely identifies the batch.<br>
-          Not editable. Its value comes from the <strong><a href="../Batch_header_table/Batch_header_table.htm#Batch_ID">Batch ID</a></strong> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future TPR record is added, linking the future TPR record to the current batch.</td>
+           Not editable. Its value comes from the <strong><a href="../Batch_header_table/Batch_header_table.htm#Batch_ID">Batch ID</a></strong> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future TPR record is added, linking the future TPR record to the current batch.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
 
           <td>The <strong>Target</strong> field contains the target identifier, i.e. the store group.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Target">target</a> value of the current price record is automatically displayed in the <strong>Target</strong> field.<br>
-          Not editable unless the <strong>Multi target</strong> option in the <em>System.ini file</em> is selected.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Target">target</a> value of the current price record is automatically displayed in the <strong>Target</strong> field.<br>
+           Not editable unless the <strong>Multi target</strong> option in the <em>System.ini file</em> is selected.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Level">Level</a></strong></td>
 
           <td>The <strong>Level (Lev)</strong> field contains the price level number.<br>
-          See the <a href="#The_Level_field"><strong>Level</strong> field section</a> below.</td>
+           See the <a href="#The_Level_field"><strong>Level</strong> field section</a> below.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Start_date">Start date</a></strong></td>
 
           <td>The <strong>Start date</strong> field is a date field that contains the starting date of the future TPR event, i.e. the date at which the future TPR event becomes effective. The starting date is inclusive.<br>
-          When a future TPR record is added, the <a href="../Batch_header_table/Batch_header_table.htm#Start_date">start date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> is automatically displayed in the <strong>Start date</strong> field. The starting date will become the <a href="../../Item_maintenance/Price_Table.htm#Start">TPR starting date</a> in the corresponding price record.</td>
+           When a future TPR record is added, the <a href="../Batch_header_table/Batch_header_table.htm#Start_date">start date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> is automatically displayed in the <strong>Start date</strong> field. The starting date will become the <a href="../../Item_maintenance/Price_Table.htm#Start">TPR starting date</a> in the corresponding price record.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="End_date">End date</a></strong></td>
 
           <td>The <strong>End date</strong> field contains the ending date of the future TPR event, i.e. the date at which the future TPR event is no longer effective. The ending date is inclusive.<br>
-          When a future TPR record is added, the <a href="../Batch_header_table/Batch_header_table.htm#End_date">ending date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> is automatically displayed in the <strong>End date</strong> field. The ending date will become the <a href="../../Item_maintenance/Price_Table.htm#End">TPR ending date</a> in the corresponding price record.</td>
+           When a future TPR record is added, the <a href="../Batch_header_table/Batch_header_table.htm#End_date">ending date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> is automatically displayed in the <strong>End date</strong> field. The ending date will become the <a href="../../Item_maintenance/Price_Table.htm#End">TPR ending date</a> in the corresponding price record.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Price">Price</a></strong></td>
 
           <td>The <strong>Price</strong> field contains the future TPR price of the item.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Price">current TPR price</a> of the item is automatically displayed in the <strong>Price</strong> field.<br>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Price">current TPR price</a> of the item is automatically displayed in the <strong>Price</strong> field.<br>
            </td>
         </tr>
 
@@ -186,49 +187,49 @@
           <td style="width: 156px"><strong><a name="TGM_(price)">TGM (price)</a></strong></td>
 
           <td>The <strong>TGM (price)</strong> field contains the future TPR profit margin on the item, in percentage.<br>
-          It is used to generate the item TPR price.</td>
+           It is used to generate the item TPR price.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Package_price">Package price</a></strong></td>
 
           <td>The <strong>Package price (Pkg price)</strong> field contains the future TPR package price of the item, i.e. a special price if a certain quantity of the item is bought by a customer within the same transaction.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Package_amount">current TPR package price</a> of the item is automatically displayed in the <strong>Package price</strong> field.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Package_amount">current TPR package price</a> of the item is automatically displayed in the <strong>Package price</strong> field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Quantity_(package_price)">Quantity (package price)</a></strong></td>
 
           <td>The <strong>Quantity (package price)</strong> field contains the future TPR package price quantity.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Package_quantity">current TPR package price quantity</a> is automatically displayed in the <strong>Quantity (package price)</strong> field.&nbsp;</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Package_quantity">current TPR package price quantity</a> is automatically displayed in the <strong>Quantity (package price)</strong> field.&nbsp;</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="TGM_(package_price)">TGM (package price)</a></strong></td>
 
           <td>The <strong>TGM (package price)</strong> field contains the future TPR package price profit margin on the item, in percentage.<br>
-          It is used to generate the item TPR package price.</td>
+           It is used to generate the item TPR package price.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Limited">Limited</a></strong></td>
 
           <td>The <strong>Limited</strong> field contains the future TPR limited quantity price for the item.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Limit_amount">current TPR limited quantity price</a> is automatically displayed in the <strong>Limited</strong> field.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Limit_amount">current TPR limited quantity price</a> is automatically displayed in the <strong>Limited</strong> field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Quantity_(limited)">Quantity (limited)</a></strong></td>
 
           <td>The <strong>Quantity (limited)</strong> field limits the quantity of an item a customer may purchase at a special TPR price.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Limit">current TPR limited quantity</a> of the item is automatically displayed in the <strong>Limited quantity</strong> field.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Limit">current TPR limited quantity</a> of the item is automatically displayed in the <strong>Limited quantity</strong> field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="TGM_(limited)">TGM (limited)</a></strong></td>
 
-          <td>The <strong>TGM</strong> field related to the <strong></strong> <a href="#Limited_quantity"><strong>Limited quantity</strong> field</a> contains the future TPR limited quantity profit margin on the item, in percentage.<br>
-          It is used to generate the item TPR limited quantity price.</td>
+          <td>The <strong>TGM</strong> field related to the <a href="#Limited_quantity"><strong>Limited quantity</strong> field</a> contains the future TPR limited quantity profit margin on the item, in percentage.<br>
+           It is used to generate the item TPR limited quantity price.</td>
         </tr>
 
         <tr>
@@ -241,53 +242,53 @@
           <td style="width: 156px"><strong><a name="Kick_back_host">Kick back host</a></strong></td>
 
           <td>The <strong>Kick back host</strong> field contains the future amount given back to the store by the host for each item sold at the future TPR price.<br>
-          The amount is considered as a compensation from the host for the reduced price.<br>
-          Used for information purposes only.</td>
+           The amount is considered as a compensation from the host for the reduced price.<br>
+           Used for information purposes only.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Discount_$">Discount $</a></strong></td>
 
           <td>The <strong>Discount $ (Dsc $)</strong> field contains the future amount of discount applied on the item when it is sold at the TPR price.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Dsc_$">current TPR amount of discount</a> applied on the item is automatically displayed in the <strong>Discount $</strong> field.<br>
-          The <a href="../../Customers/Shopper_level_table.htm#Apply_item_discount_$"><b>Apply item disc $</b> field</a> must be checked in the corresponding shopper levels for the <b>Discount $</b> to work.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Dsc_$">current TPR amount of discount</a> applied on the item is automatically displayed in the <strong>Discount $</strong> field.<br>
+           The <a href="../../Customers/Shopper_level_table.htm#Apply_item_discount_$"><b>Apply item disc $</b> field</a> must be checked in the corresponding shopper levels for the <b>Discount $</b> to work.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Discount_%">Discount %</a></strong></td>
 
           <td>The <strong>Discount % (Dsc %)</strong> field contains the future percentage of discount applied on the item when it is sold at the TPR price.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Dsc_%">current TPR percentage of discount</a> applied on the item is automatically displayed in the <strong>Discount %</strong> field.<br>
-          The <a href="../../Customers/Shopper_level_table.htm#Apply_item_discount_%"><b>Apply item disc %</b> field</a> must be checked in the corresponding shopper levels for the <b>Discount %</b> to work.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#TPR_Dsc_%">current TPR percentage of discount</a> applied on the item is automatically displayed in the <strong>Discount %</strong> field.<br>
+           The <a href="../../Customers/Shopper_level_table.htm#Apply_item_discount_%"><b>Apply item disc %</b> field</a> must be checked in the corresponding shopper levels for the <b>Discount %</b> to work.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Points">Points</a></strong></td>
 
           <td>The <strong>Points</strong> field contains the future number of points given to the customer when he buys the item at the TPR price.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Points">current TPR number of points given</a> at the TPR price for the item is automatically displayed in the <strong>Points</strong> field.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Points">current TPR number of points given</a> at the TPR price for the item is automatically displayed in the <strong>Points</strong> field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Vendor">Vendor</a></strong></td>
 
           <td>The <strong>Vendor</strong> field contains the future amount given back to the store by the vendor for each item sold at the future TPR price.<br>
-          The amount is considered as a compensation from the vendor for the reduced price.<br>
-          Used for information purposes only.</td>
+           The amount is considered as a compensation from the vendor for the reduced price.<br>
+           Used for information purposes only.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Mix">Mix</a></strong></td>
 
           <td>The <strong>Mix</strong> field links the item to a mix &amp; match, which is used to mix items to match them to a TPR price.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Mix">current TPR mix &amp; match value</a> of the item is automatically displayed in the <strong>Mix</strong> field.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Mix">current TPR mix &amp; match value</a> of the item is automatically displayed in the <strong>Mix</strong> field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Method">Method</a></strong></td>
 
           <td>The <strong>Method</strong> field contains the identification letters of the future TPR price method used, corresponding to a special TPR price behavior.<br>
-          When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Method">current TPR price method</a> of the item is automatically displayed in the <strong>Method</strong> field.</td>
+           When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Method">current TPR price method</a> of the item is automatically displayed in the <strong>Method</strong> field.</td>
         </tr>
       </table>
 
@@ -295,19 +296,19 @@
 
       <p>The <strong>Level</strong> field contains the price level number.<br>
       <br>
-      When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Level">level</a> value of the current price record is automatically displayed in the <b>Level</b> field.</p>
+       When a future TPR record is added, the <a href="../../Item_maintenance/Price_Table.htm#Level">level</a> value of the current price record is automatically displayed in the <b>Level</b> field.</p>
 
       <p class="Note"><b>NOTE:<br>
-      </b>Starting v350x, Application.ini[TARGET_TRS] is used to determine which target to use for each item table.<br>
-      Application.ini[TARGET_TRS]PRICE_TAB='PAL' will force the Host to use the PAL record.<br>
-      Application.ini[TARGET_TRS]PRICE_TAB='@WIZGET(TARGET)' will force the Host to use the Global Store Number record.<br>
-      Application.ini[TARGET_TRS]PRICE_TAB=ISNULL((SELECT TOP 1 SUB_PRI.F1000 FROM PRICE_TAB SUB_PRI JOIN LNK_TAB SUB_LNK ON SUB_PRI.F1000=SUB_LNK.F1000 JOIN LNK_TAB SUB_LNK2 ON SUB_LNK.F1056=SUB_LNK2.F1056 AND SUB_LNK.F1057=SUB_LNK2.F1057 AND SUB_LNK2.F1000='@WIZGET(TARGET)' JOIN STO_TAB SUB_STO ON SUB_LNK.F1000=SUB_STO.F1000 WHERE SUB_PRI.F01=PRI.F01 AND SUB_PRI.F126=PRI.F126 ORDER BY SUB_STO.F1937 DESC),'PAL'). That will use the proper target set for the Global StoreID selected.</p>
+      </b> Starting v350x, Application.ini[TARGET_TRS] is used to determine which target to use for each item table.<br>
+       Application.ini[TARGET_TRS]PRICE_TAB='PAL' will force the Host to use the PAL record.<br>
+       Application.ini[TARGET_TRS]PRICE_TAB='@WIZGET(TARGET)' will force the Host to use the Global Store Number record.<br>
+       Application.ini[TARGET_TRS]PRICE_TAB=ISNULL((SELECT TOP 1 SUB_PRI.F1000 FROM PRICE_TAB SUB_PRI JOIN LNK_TAB SUB_LNK ON SUB_PRI.F1000=SUB_LNK.F1000 JOIN LNK_TAB SUB_LNK2 ON SUB_LNK.F1056=SUB_LNK2.F1056 AND SUB_LNK.F1057=SUB_LNK2.F1057 AND SUB_LNK2.F1000='@WIZGET(TARGET)' JOIN STO_TAB SUB_STO ON SUB_LNK.F1000=SUB_STO.F1000 WHERE SUB_PRI.F01=PRI.F01 AND SUB_PRI.F126=PRI.F126 ORDER BY SUB_STO.F1937 DESC),'PAL'). That will use the proper target set for the Global StoreID selected.</p>
 
       <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

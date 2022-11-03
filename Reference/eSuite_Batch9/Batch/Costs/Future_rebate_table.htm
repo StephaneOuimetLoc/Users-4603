@@ -1,23 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
-<head>
+  <head>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SMS Help Document">
-
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <meta name="SMS-HtmlEditor-State" content="Draft">
+
     <title>Future Rebate Table</title>
-    <link href="../../../../work.css" rel="stylesheet">
+    <link type="text/css" href="../../../../work.css" rel="stylesheet">
   </head>
 
   <body class="bg-white">
-    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
-          <!-- Title/Keywords edit on new documents -->
+    ï»¿            ï»¿ ï»¿ <!-- #BeginTemplate "../../../../html_template.dwt" -->
+     <!-- Title/Keywords edit on new documents -->
      <!-- #BeginEditable "doctitle" -->
      <!-- #EndEditable -->
-          <a name="top"></a> <!-- Docs page layout -->
+     <a name="top"></a> <!-- Docs page layout -->
      <br>
      
 
@@ -54,7 +55,7 @@
 
         <li>Select a record and click <strong>Edit</strong> in the bottom menu of the grid.</li>
 
-        <li>Select <strong>Cost batch</strong>, then <strong>Rebate</strong>: the <strong>Future cost rebate</strong> table <strong></strong> opens over the work area.</li>
+        <li>Select <strong>Cost batch</strong>, then <strong>Rebate</strong>: the <strong>Future cost rebate</strong> table opens over the work area.</li>
       </ol>
 
       <p><img class="Text" src="Future_rebate_table_files/future_rebate_table.png"></p>
@@ -128,29 +129,29 @@
           <td style="width: 156px"><strong><a name="Batch">Batch</a></strong></td>
 
           <td>The <strong>Batch</strong> field contains the batch identifier.<br>
-           It is not editable. Its value comes from the <strong></strong> <a href="../Batch_header_table/Batch_header_table.htm#Batch_ID"><strong>Batch ID</strong></a> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future rebate record is added, linking the future rebate record to the current batch.</td>
+           It is not editable. Its value comes from the <a href="../Batch_header_table/Batch_header_table.htm#Batch_ID"><strong>Batch ID</strong></a> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future rebate record is added, linking the future rebate record to the current batch.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
 
           <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
-          When a future rebate record is added, the <a href="../../Item_maintenance/Price_Table.htm#Target">target</a> value of the current cost record is automatically displayed in the <strong>Target</strong> field.<br>
-          It is grayed out (not editable) unless the Multi target option in the <em>System.ini</em> file is selected.</td>
+           When a future rebate record is added, the <a href="../../Item_maintenance/Price_Table.htm#Target">target</a> value of the current cost record is automatically displayed in the <strong>Target</strong> field.<br>
+           It is grayed out (not editable) unless the Multi target option in the <em>System.ini</em> file is selected.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Format">Format</a></strong></td>
 
           <td>The <strong>Format</strong> field contains the future buying format description.<br>
-          When a future cost record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Format">format</a> of the current cost record is automatically displayed in the <strong>Format</strong> field.</td>
+           When a future cost record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Format">format</a> of the current cost record is automatically displayed in the <strong>Format</strong> field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Vendor">Vendor</a></strong></td>
 
           <td>The <strong>Vendor</strong> field contains the vendor ID and name. It links the item to a vendor.<br>
-          When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_ID">vendor ID</a> and the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_name">vendor name</a> of the current cost record are automatically displayed in the <strong>Vendor</strong> field.</td>
+           When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_ID">vendor ID</a> and the <a href="../../Item_maintenance/Cost_Table.htm#Vendor_name">vendor name</a> of the current cost record are automatically displayed in the <strong>Vendor</strong> field.</td>
         </tr>
 
         <tr>
@@ -158,36 +159,36 @@
 
           <td>The <strong>Start date</strong> field is a date field that contains the future rebate change date, i.e. the date on which the future rebate becomes effective. The starting date is inclusive.<br>
            When a future rebate record is added, the <a href="../Batch_header_table/Batch_header_table.htm#Start_date">start date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> is automatically displayed in the <strong>Start date</strong> field.<br>
-          The starting date will become the <a href="../../Item_maintenance/Cost_Table.htm#Start_date">rebate starting date</a> in the corresponding cost record.</td>
+           The starting date will become the <a href="../../Item_maintenance/Cost_Table.htm#Start_date">rebate starting date</a> in the corresponding cost record.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="End_date">End date</a></strong></td>
 
           <td>The <strong>End date</strong> field is a date field that contains the future rebate ending date, i.e. the date on which the future rebate is no longer effective. The ending date is inclusive.<br>
-          When a future rebate record is added, the <a href="../Batch_header_table/Batch_header_table.htm#End_date">ending date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><b>Batch header</b> table</a> is automatically displayed in the <b>End date</b> field. The ending date will become the <a href="../../Item_maintenance/Cost_Table.htm#End_date">rebate ending date</a> in the corresponding cost record.</td>
+           When a future rebate record is added, the <a href="../Batch_header_table/Batch_header_table.htm#End_date">ending date</a> of the <a href="../Batch_header_table/Batch_header_table.htm"><b>Batch header</b> table</a> is automatically displayed in the <b>End date</b> field. The ending date will become the <a href="../../Item_maintenance/Cost_Table.htm#End_date">rebate ending date</a> in the corresponding cost record.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Qualifier">Qualifier</a></strong></td>
 
           <td>The <strong>Qualifier</strong> field contains the future qualifying conditions of the rebate. It is used for information purposes only.<br>
-          When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Qualifier">rebate qualifier</a> of the current cost record is automatically displayed in the <strong>Qualifier</strong> field.</td>
+           When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Qualifier">rebate qualifier</a> of the current cost record is automatically displayed in the <strong>Qualifier</strong> field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="OI">OI</a></strong></td>
 
           <td>The <strong>Off Invoice (OI)</strong> field contains the identification character of the future off invoice status.<br>
-          This status specifies when the rebate value is given.<br>
-          For details, see the <a href="#The_OI_field"><strong>OI</strong> field section</a> below.</td>
+           This status specifies when the rebate value is given.<br>
+           For details, see the <a href="#The_OI_field"><strong>OI</strong> field section</a> below.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Rebate_$">Rebate $</a></strong></td>
 
           <td>The <strong>Rebate $</strong> field contains the future reduction amount per case for the rebate, applicable during the effective rebate period.<br>
-          When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#$">rebate reduction amount</a> of the current cost record is automatically displayed in the <strong>Rebate $</strong> field.</td>
+           When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#$">rebate reduction amount</a> of the current cost record is automatically displayed in the <strong>Rebate $</strong> field.</td>
         </tr>
 
         <tr>
@@ -214,14 +215,14 @@
           <td style="width: 156px"><strong><a name="Minimum">Minimum</a></strong></td>
 
           <td>The <strong>Minimum (Min)</strong> field contains the future minimum quantity required, in cases, to obtain the rebate reduction.<br>
-          When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Min">rebate minimum quantity</a> of the current cost record is automatically displayed in the <strong>Minimum</strong> field.</td>
+           When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Min">rebate minimum quantity</a> of the current cost record is automatically displayed in the <strong>Minimum</strong> field.</td>
         </tr>
 
         <tr>
           <td style="width: 156px"><strong><a name="Maximum">Maximum</a></strong></td>
 
           <td>The <strong>Maximum (Max)</strong> field contains the future maximum quantity, in cases, which limits the number of cases bought on the rebate.<br>
-          When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Max">rebate maximum quantity</a> of the current cost record is automatically displayed in the <strong>Maximum</strong> field.</td>
+           When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#Max">rebate maximum quantity</a> of the current cost record is automatically displayed in the <strong>Maximum</strong> field.</td>
         </tr>
       </table>
 
@@ -234,8 +235,6 @@
       <p>When a future rebate record is added, the <a href="../../Item_maintenance/Cost_Table.htm#OI">rebate off invoice value</a> of the current cost record is automatically displayed in the <b>Off Invoice</b> field.</p>
 
       <p>The following values are available:</p>
-
-      <p></p>
 
       <table class="table table-striped">
         <thead class="thead-dark">
@@ -250,28 +249,28 @@
           <td><b>Off invoice</b></td>
 
           <td>The rebate value is subtracted from the invoice total.<br>
-          This affects the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
+           This affects the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
         </tr>
 
         <tr>
           <td><b>End of promotion</b></td>
 
           <td>The rebate value is given at the end of the promotion (as a check) according to the number of items bought.<br>
-          This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
+           This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
         </tr>
 
         <tr>
           <td><b>On statement</b></td>
 
           <td>The rebate value appears on the vendor's statement. It is given according to the number of items bought.<br>
-          This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
+           This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
         </tr>
 
         <tr>
           <td><b>Movement required</b></td>
 
           <td>The rebate value is given (as a check) according to the number of items sold.<br>
-          This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
+           This does not affect the <b><a href="../../Item_maintenance/Cost_Table.htm#Next_cost">Next cost</a></b> and <b><a href="../../Item_maintenance/Cost_Table.htm#Cost">Cost</a></b> values in the <a href="../../Item_maintenance/Cost_Table.htm"><b>Cost</b> table</a>.</td>
         </tr>
       </table>
       <br>
@@ -282,7 +281,7 @@
       <!-- #EndEditable -->
     </div>
     <!-- end of main container -->
-    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+    <a class="back-to-top shadow" href="#top">â–²</a><!-- #EndTemplate -->
   </body>
 </html>
 

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
 	id="com.locsoftware.mFloor" 
-	version="3.55.1" 
+	version="3.55.2" 
 	android-versionCode="3551"
 	ios-CFBundleVersion="3.55.1.1"
 	xmlns="http://www.w3.org/ns/widgets" 

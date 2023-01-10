@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Batch Header Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Batch Header Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The <strong>Batch header</strong> table is used to create batches. It allows the association of a batch with a unique ID. It contains general information on the batch: type, target, description, start and end dates and so on.</p>
+
+      <h2><a name="Displaying_the_Batch_header">Displaying the Batch header</a> table</h2>
+
+      <p><strong>To edit an existing batch</strong>:</p>
+
+      <ol>
+        <li>In the launcher, click the arrow in the <strong>Items</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batches</strong> work area.<br>
+        </li>
+
+        <li>Select <strong>All</strong>: the list of in-store batches opens in the <strong>Batches</strong> window.</li>
+
+        <li>Select a batch and click <strong>Edit</strong> in the bottom menu: the <strong>Batch header</strong> table opens on the desktop.<br>
+        It displays the existing batch information.<br>
+         <img src="Batch_header_table_files/batch_header_existing_batch.png"></li>
+      </ol>
+
+      <p><strong>To create a batch</strong>:</p>
+
+      <ol>
+        <li>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batches</strong> work area.</li>
+
+        <li>Click on <strong>New</strong> to display the list of batch types.</li>
+
+        <li>Make a selection: the <strong>Batch header</strong> table opens in the work area.<br>
+         It displays the default information.<br>
+        <br>
+         <img src="Batch_header_table_files/new_menu.png"><br>
+        </li>
+      </ol>
+
+      <p class="Note"><strong>NOTE:</strong> You may create batches from the <strong>Price grid</strong> and <strong>Cost grid</strong> entries. Click <strong>Add</strong> in the wizard to access the list of price-related and cost-related batch types.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Batch header</strong> table displays an additional button in the toolbar menu: <strong>Open list</strong> <img class="Text" height="15" src="Batch_header_table_files/open_list_button.png" width="18">. Disabled by default. Enabled when all mandatory fields are filled in and changes have been saved.</p>
+
+      <p>The <strong>Open list</strong> button opens the batch wizard, allowing the access to the list of items for selection and addition to the batch.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img"><img class="Text" style="border-style:none" src="Batch_header_table_files/batch_header_table.png" usemap="#batch_header_table"> <map name="batch_header_table">
+            <area shape="rect" coords="8, 114, 83, 149" href="#Batch_ID">
+            <area shape="rect" coords="91, 116, 171, 142" href="#Target">
+            <area shape="rect" coords="91, 165, 168, 192" href="#State">
+            <area shape="rect" coords="10, 164, 85, 191" href="#Source">
+            <area shape="rect" coords="178, 114, 592, 141" href="#Description">
+            <area shape="rect" coords="172, 166, 228, 192" href="#Priority">
+            <area shape="rect" coords="229, 166, 327, 191" href="#Start_date">
+            <area shape="rect" coords="337, 164, 407, 190" href="#Time_(Start_date)">
+            <area shape="rect" coords="412, 164, 510, 192" href="#End_date">
+            <area shape="rect" coords="522, 165, 593, 190" href="#Time_(End_date)">
+            <area shape="rect" coords="12, 227, 130, 254" href="#Type">
+            <area shape="rect" coords="137, 228, 225, 254" href="#Count">
+            <area shape="rect" coords="230, 227, 353, 253" href="#Action">
+            <area shape="rect" coords="356, 227, 590, 254" href="#Default_label_template">
+            <area shape="rect" coords="10, 282, 578, 360" href="#Long_description">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get more information.</td>
+        </tr>
+      </table>
+
+      <h2><a name="Content">Content</a></h2>
+
+      <p>Here is the description of the <strong>Batch header</strong> fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Batch_ID">Batch ID</a></strong></td>
+
+          <td>The <strong>Batch ID</strong> contains the batch identifier.<br>
+           Not editable. Its value is automatically given by the system when a batch header record is added.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <b>Target</b> field contains the store group.<br>
+          Mandatory field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> field contains the description of the batch.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Source">Source</a></strong></td>
+
+          <td>The <strong>Source</strong> field contains the node number of the source of the batch.<br>
+          Not editable. The value is automatically given by the system when a batch header record is created.<br>
+          For an in-store batch, <em>LOCAL</em> is displayed instead of the node number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="State">State</a></strong></td>
+
+          <td>The <strong>State</strong> field contains the status of the batch.<br>
+          See the <a href="#The_State_field"><strong>State</strong> field section</a>. &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Priority">Priority</a></strong></td>
+
+          <td>The <b>Priority</b> field contains the priority level for the batch.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Start_date">Start date</a></strong></td>
+
+          <td>The <b>Start date</b> field contains the date on which the batch becomes effective.<br>
+          See the <a href="#The_Start_date_field"><strong>Start date</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Time_(Start_date)">Time (Start date)</a></strong></td>
+
+          <td>The <strong>Time</strong> (Start date) field contains the time at which the batch becomes effective during the effective day.<br>
+          If there is no specification on the start date time, the system uses <i>00:00</i>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="End_date">End date</a></strong></td>
+
+          <td>The <b>End date</b> field contains the date on which the batch terminates.<br>
+          See the <a href="#The_End_date_field"><strong>End date</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Time_(End_date)">Time (End date)</a></strong></td>
+
+          <td>The <b>Time</b> (End date) field contains the time at which the batch terminates during the ending day.<br>
+          If there is no specification on the end date time, the system uses <i>23:</i>59.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Type">Type</a></strong></td>
+
+          <td>The <strong>Type</strong> field contains the name of the file that is called to execute the batch.<br>
+          See the <a href="#The_Type_field"><strong>Type</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Count">Count</a></strong></td>
+
+          <td>The <strong>Count</strong> field is user-defined.<br>
+          It can be used by the user for any purpose necessary.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Action">Action</a></strong></td>
+
+          <td>The <strong>Action</strong> field contains the code of the action to take when the batch is executed.<br>
+          See the <a href="#The_Action_field"><strong>Action</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Default_label_template">Default label template</a></strong></td>
+
+          <td>The <strong>Default label template</strong> field contains the name of the template to use for the labels.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Long_description">Long description</a></strong></td>
+
+          <td>The <strong>Long description</strong> field allows entering comments on the batch.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_State_field">The State field</a></h3>
+
+      <p>The <strong>State</strong> field contains the status of the batch.</p>
+
+      <p>The following values are possible:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 100px"><strong>Value</strong></th>
+
+            <th><strong>Description</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 100px"><strong>[</strong><i><strong>empty</strong></i><strong>]</strong></td>
+
+          <td>The batch is open for modifications or adding new items.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 100px"><strong>Wait</strong></td>
+
+          <td>The batch will be manually executed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 100px"><strong>Closed</strong></td>
+
+          <td>The batch is closed to modifications or adding new items.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Start_date_field">The Start date field</a></h3>
+
+      <p>The <b>Start date</b> field contains the date on which the batch becomes effective. It is a required field. The start date is inclusive.</p>
+
+      <p>By default, when a batch header record is created, the start date is automatically set by the system to <i>the date of the first day of the next business week</i> (<i>next Sunday's date</i> if the business week starts on Sunday, <i>next Monday's date</i> if the business week starts on Monday, etc.).</p>
+
+      <p>The business week is defined in the <i>System.ini</i> file. See the reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_End_date_field">The End date field</a></h3>
+
+      <p>The <b>End date</b> field contains the date at which the batch terminates. The ending date is inclusive.</p>
+
+      <p>By default, when a batch header record is added, the ending date is automatically set by the system to <i>the date of the last day of the next business week</i> (the <i>Saturday's date of the next business week</i> if it starts on Sunday, the <i>Sunday's date of the next business week</i> if it starts on Monday, etc.).</p>
+
+      <p>The business week is defined in the <b>System.ini</b>. See the reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Type_field">The Type field</a></h3>
+
+      <p>The <strong>Type</strong> field contains the name of the file that is called to execute the batch.</p>
+
+      <p>The following macros are available:</p>
+
+      <p></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px; height: 19px;"><strong>Type</strong></th>
+
+            <th style="height: 19px"><strong>Description</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Price</strong></td>
+
+          <td>is for the <a href="../Future_price_table/Future_price_table.htm">future price batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Price general</strong></td>
+
+          <td>is for the <a href="../Future_general_price_table/Future_general_price_table.htm">future price general batches</a></td>
+        </tr>
+
+        <tr>
+          <td><strong>Sale</strong></td>
+
+          <td>is for the <a href="../Future_sales_price_table/Future_sales_price_table.htm">future sales batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>TPR</strong></td>
+
+          <td>is for the <a href="../Future_TPR_table/Future_TPR_table.htm">future TPR batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Instore</strong></td>
+
+          <td>is for the <a href="../Future_instore_price_table/Future_instore_price_table.htm">future in-store batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Redeem</strong></td>
+
+          <td>is for the <a href="../Future_redeem_table/Future_redeem_table.htm">future redeem batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Cost</strong></td>
+
+          <td>is for the <a href="../Future_cost_table/Future_cost_table.htm">future cost batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>General cost</strong></td>
+
+          <td>is for the <a href="../Future_general_cost_table/Future_general_cost_table.htm">future cost general batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Allowance</strong></td>
+
+          <td>is for the <a href="../Future_allowance_table/Future_allowance_table.htm">future allowance batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Rebate</strong></td>
+
+          <td>is for the <a href="../Future_rebate_table/Future_rebate_table.htm">future rebate batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Discount</strong></td>
+
+          <td>is for the <a href="../Future_discount_table/Future_discount_table.htm">future discount batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Cost break</strong></td>
+
+          <td>is for the <a href="../Future_cost_break_table/Future_cost_break_table.htm">future cost break batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Bill backs</strong></td>
+
+          <td>is for the <a href="../Future_bill_back_table/Future_bill_back_table.htm">future bill back batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Main item</strong></td>
+
+          <td>is for the <a href="../Future_main_item_table/Future_main_item_table.htm">future main item batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Point of sale</strong></td>
+
+          <td>is for the <a href="../Future_POS_table/Future_POS_table.htm">future point of sale (POS) batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Open batch</strong></td>
+
+          <td>is for the <a href="../Creating_open_batches/Creating_open_batches.htm">open batches</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Delete batch</strong></td>
+
+          <td>is for the delete batches <em>(under development)</em>.</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+       
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Action_field">The <strong>Action</strong> field</a></h3>
+
+      <p>The <strong>Action</strong> field contains the code of the action to take when the batch is executed.</p>
+
+      <p>The following values are available:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>Action</strong></th>
+
+            <th><strong>Description</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong>Change</strong></td>
+
+          <td>New records are not added; changes are done on existing records only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Add</strong></td>
+
+          <td>New records are added, but the changes are not done on existing records.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Add/Replace</strong></td>
+
+          <td>New records are added, and the changes are done on existing records.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong>Wait</strong></td>
+
+          <td>The batch will not be executed right away.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Main Item Edit</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Main Item Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>eSuite - Main Item Table</h2>
+
+      <p>The eSuite software uses relational tables to store item information. The <strong>Main item</strong> table contains the information that uniquely identifies items, UPC codes and general item information.</p>
+
+      <h2>Displaying the Main item table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item</strong> <strong>list</strong>: the <strong>Wizard</strong> tab opens, displaying the <strong>Items - General List</strong> window.</li>
+
+        <li>Enter the search criteria and click <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window.</li>
+
+        <li>Select a record.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to display the options.</li>
+
+        <li>Select <strong>Master tables,</strong> then <strong>Main master</strong>: the <strong>Main item</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Main%20Item_Table_files/main_item_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Main item</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>tab section</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img src="Main%20Item_Table_files/main_section.png" usemap="#main_part_table" class="Text" style="border-style:none"> <map name="main_part_table">
+            <area shape="rect" coords="402, 315, 471, 342" href="#Section">
+            <area shape="rect" coords="255, 264, 472, 292" href="#Family">
+            <area shape="rect" coords="12, 314, 247, 339" href="#Report">
+            <area shape="rect" coords="257, 315, 325, 341" href="#NACS">
+            <area shape="rect" coords="330, 314, 395, 341" href="#Account">
+            <area shape="rect" coords="11, 264, 248, 292" href="#Category">
+            <area shape="rect" coords="115, 115, 472, 141" href="#Description">
+            <area shape="rect" coords="9, 214, 111, 241" href="#Alternate_brand">
+            <area shape="rect" coords="10, 165, 219, 192" href="#Brand">
+            <area shape="rect" coords="99, 364, 182, 391" href="#Sell_pack">
+            <area shape="rect" coords="185, 365, 286, 391" href="#Volume/weight">
+            <area shape="rect" coords="13, 365, 97, 392" href="#Alias_code">
+            <area shape="rect" coords="289, 364, 391, 391" href="#Measure">
+            <area shape="rect" coords="223, 164, 474, 191" href="#Size">
+            <area shape="rect" coords="116, 214, 375, 241" href="#Alternate_description">
+            <area shape="rect" coords="9, 114, 110, 139" href="#UPC">
+            <area shape="rect" coords="380, 215, 470, 242" href="#Alternate_size">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Tab section</strong></p>
+      <map name="shelf_tab">
+        <area shape="rect" coords="10, 66, 112, 93" href="#Graphic_file">
+        <area shape="rect" coords="114, 66, 196, 93" href="#Container">
+        <area shape="rect" coords="284, 66, 365, 92" href="#Height">
+        <area shape="rect" coords="371, 68, 450, 93" href="#Depth">
+        <area shape="rect" coords="201, 66, 282, 93" href="#Width">
+        <area shape="rect" coords="11, 127, 460, 152" href="#Long_description">
+      </map><map name="pharmacy_tab">
+        <area shape="rect" coords="10, 68, 111, 94" href="#Medical_code">
+        <area shape="rect" coords="116, 69, 200, 93" href="#NDC/DIN">
+        <area shape="rect" coords="114, 118, 237, 144" href="#Classification">
+        <area shape="rect" coords="242, 117, 313, 145" href="#Owner">
+        <area shape="rect" coords="316, 117, 386, 144" href="#NuVal">
+        <area shape="rect" coords="329, 68, 460, 93" href="#Competitive_code">
+        <area shape="rect" coords="12, 117, 110, 144" href="#Handling_type">
+        <area shape="rect" coords="204, 68, 325, 94" href="#Manufacturer_code">
+      </map>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" src="Main%20Item_Table_files/tab_shelf.png" usemap="#shelf_tab" style="border-style:none"></td>
+
+          <td><img class="Text" src="Main%20Item_Table_files/tab_pharma.png" usemap="#pharmacy_tab" style="border-style:none" height="229" width="480"></td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+      <map name="marketing_tab">
+        <area shape="rect" coords="12, 68, 145, 95" href="#Target_customer">
+        <area shape="rect" coords="9, 118, 453, 195" href="#Marketing_justification_for_this_item">
+        <area shape="rect" coords="150, 68, 250, 94" href="#Target_store">
+      </map>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" src="Main%20Item_Table_files/tab_marketing.png" usemap="#marketing_tab" style="border-style:none" height="229" width="480"></td>
+
+          <td><map name="miscellaneous_tab">
+            <area shape="rect" coords="10, 67, 152, 95" href="#Inter-department_code">
+            <area shape="rect" coords="239, 68, 302, 95" href="#Cubic">
+            <area shape="rect" coords="80, 118, 261, 144" href="#Operator_owner">
+            <area shape="rect" coords="312, 69, 381, 94" href="#Ship_box">
+            <area shape="rect" coords="160, 69, 232, 95" href="#Weight">
+            <area shape="rect" coords="270, 117, 411, 145" href="#Level">
+            <area shape="rect" coords="9, 118, 73, 145" href="#Operator_owner">
+          </map> <img class="Text" src="Main%20Item_Table_files/tab_miscellaneous.png" usemap="#miscellaneous_tab" style="border-style:none" height="229" width="480"></td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Main item</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+
+          <tr>
+            <td class="ListDark" colspan="2"><strong>Main part</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="UPC">UPC</a></strong></td>
+
+            <td>The <strong>UPC</strong> field contains the item code.<br>
+            It is a required field used to uniquely identify records in the <strong>Items - General List</strong>.<br>
+             The <strong>UPC</strong> field is not editable by default: as there's only one single and unique UPC associated per item, a second UPC for the same item will never be accepted by the database.<br>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Description">Description</a></strong></td>
+
+            <td>The <strong>Description</strong> field contains the main item description. A short description, used at the points of sale, is entered in the <a href="POS_Table.htm"><strong>POS information</strong> tabl.</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Brand">Brand</a></strong></td>
+
+            <td>The <strong>Brand</strong> field contains the name of the item manufacturer.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Size">Size</a></strong></td>
+
+            <td>The <strong>Size</strong> field contains the item size (e.g., 125 ml).<br>
+            See the <a href="#The_Size_field"><strong>Size</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Alternate_brand">Alternate brand</a></strong></td>
+
+            <td>The <strong>Alternate brand</strong> field contains an alternate name for the item manufacturer.<br>
+            It is generally used for a second language manufacturer name.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Alternate_description">Alternate description</a></strong></td>
+
+            <td>The <strong>Alternate description</strong> field contains an alternate main description of the item.<br>
+            It is generally used for describing the item in a second language.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px; height: 21px;"><strong><a name="Alternate_size">Alternate size</a></strong></td>
+
+            <td>The <strong>Alternate size</strong> field contains an alternate item size.<br>
+            It is generally used for indicating the item size in a second language.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Category">Category</a></strong></td>
+
+            <td>The <strong>Category</strong> field allows displaying the list of categories and linking the item to the selected category.<br>
+            It contains the category number and its description.<br>
+            For details on categories in eSuite, see the <a href="../Dimensions/Dimensions_tables/Category_Table.htm"><strong>Category</strong> table</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Family">Family</a></strong></td>
+
+            <td>The <strong>Family</strong> field allows displaying the list of family codes and linking the item to the selected family code.&nbsp;<br>
+             It contains the family code and its description.<br>
+            For details on family codes in eSuite, see the <a href="../Dimensions/Dimensions_tables/FamilyCode_table.htm"><strong>Family code</strong> table</a>.<br>
+             </td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px; height: 47px;"><strong><a name="Report">Report</a></strong></td>
+
+            <td style="height: 47px">The <strong>Report</strong> field allows displaying the list of report codes and linking the item to a report code.&nbsp;<br>
+            It contains the report code and its description.<br>
+             For details on report codes in eSuite, see the <a href="../Dimensions/Dimensions_tables/Report_Code_Table.htm"><strong>Report code</strong> table</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="NACS">NACS</a></strong></td>
+
+            <td>The <strong>NACS</strong> field links the item to a NACS code.<br>
+             NACS (National Association of Convenience Stores) codes are used by gas stations to identify what is being charged to a fleet credit card.<br>
+             </td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Account">Account</a></strong></td>
+
+            <td>The <strong>Account</strong> field contains the general ledger account code associated to the item.&nbsp;<br>
+            It is used when the item must be associated to a different general ledger account than the usual one.<br>
+            It is used for information purposes only.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Section">Section</a></strong></td>
+
+            <td>The <strong>Section</strong> field contains the item section.<br>
+            Sections are another way of grouping items.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Alias_code">Alias code</a></strong></td>
+
+            <td>The <strong>Alias code</strong> field contains an item UPC code used to group items.&nbsp;<br>
+            This way of grouping items may be used to facilitate orders.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Sell_pack">Sell pack</a></strong></td>
+
+            <td>The <strong>Sell pack</strong> field contains the number of units included in the item.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Volume/weight">Volume/weight</a></strong></td>
+
+            <td>The <strong>Volume/Weight</strong> field contains the unit volume (or unit weight) of the item.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Measure">Measure</a></strong></td>
+
+            <td>The <strong>Measure</strong> field allows displaying the list of measuring units available for the item and contains the selected value.</td>
+          </tr>
+
+          <tr>
+            <td class="ListDark" colspan="2"><strong>Shelf tab</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px; &lt;strong&gt;&lt;a name="><a name="Graphic_file"><strong>Graphic file</strong></a></td>
+
+            <td style="height: 34px">The <strong>Graphic file</strong> field contains the file name of the graphic that will display on the label.<br>
+            The eSuite software only allows modifying or updating this field.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Container">Container</a></strong></td>
+
+            <td>The <strong>Container</strong> field contains the item packaging format.<br>
+             See the <a href="#The_Container_field"><strong>Container</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Width">Width</a></strong></td>
+
+            <td>The <strong>Width</strong> field contains the item width in metric or imperial units, according to the system configuration.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Height">Height</a></strong></td>
+
+            <td>The <strong>Height</strong> field contains the item height in metric or imperial units, according to the system configuration.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Depth">Depth</a></strong></td>
+
+            <td>The <strong>Depth</strong> field contains the item depth in metric or imperial units, according to the system configuration.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Long_description">Long description</a></strong></td>
+
+            <td>The <strong>Long description</strong> field contains a more detailed description of the item.</td>
+          </tr>
+
+          <tr>
+            <td class="ListDark" colspan="2"><strong>Pharmacy tab</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Medical_code">Medical code</a></strong></td>
+
+            <td>The <strong>Medical code</strong> field contains the drug code of the item.<br>
+            The code is given by the store.<br>
+            It is used for pharmaceutical items.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="NDC/DIN">NDC/DIN</a></strong></td>
+
+            <td>The <strong>NDC/DIN</strong> field contains the standardized drug code of the item.<br>
+            It is used for pharmaceutical items.<br>
+            See the <a href="#The_NDC/DIN_field"><strong>NDC/DIN</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Manufacturer_code">Manufacturer code</a></strong></td>
+
+            <td>The <strong>Manufacturer</strong> <strong>code</strong> field contains the manufacturer code (for example, the 5 manufacturer digits in the UPC code) used to group items.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Competitive_code">Competitive code</a></strong></td>
+
+            <td>The <b>Competitive code</b> field contains the UPC of an item that is considered as a competitive item to the current item (an item that can replace the current item).<br>
+            It is used for pharmaceutical items.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Handling_type">Handling type</a></strong></td>
+
+            <td>The <strong>Handling type</strong> field contains the way the item must be handled and/or preserved.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Classification">Classification</a></strong></td>
+
+            <td>The <b>Classification</b> field contains keywords that are used to find items in the system.<br>
+            It allows entering more than one keyword, separated by comma.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Owner">Owner</a></strong></td>
+
+            <td>The <strong>Owner</strong> field contains the store number of the store or host that is in the possession of the record.<br>
+            The other stores cannot modify the record unless they're in its possession.<br>
+            It is used for information purposes only.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="NuVal">NuVal</a></strong></td>
+
+            <td>The <strong>NuVal</strong> field contains information on the specific properties of the item (gluten free, organic, low sodium, etc.).</td>
+          </tr>
+
+          <tr>
+            <td class="ListDark" colspan="2"><strong>Marketing tab</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px; height: 34px"><strong><a name="Target_customer">Target customer</a></strong></td>
+
+            <td style="height: 34px">The <strong>Target customer</strong> field contains the target age group of the customers that use the item.<br>
+             It is used for information purposes only.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Target_store">Target store</a></strong></td>
+
+            <td>The <strong>Target store</strong> field contains the type of store in which the item is sold.<br>
+            The following options are available: <em>Small stores</em>, <em>Medium stores</em> and <em>Large stores</em>.<br>
+             It is used for information purposes only.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Marketing_justification_for_this_item">Marketing justification for this item</a></strong></td>
+
+            <td>The <strong>Marketing justification for this item</strong> field contains an internal note on the item.</td>
+          </tr>
+
+          <tr>
+            <td class="ListDark" colspan="2"><strong>Miscellaneous tab</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Inter-department_code">Inter-department code</a></strong></td>
+
+            <td>The <strong>Inter-department code</strong> field contains the code used for the inter-department transfers.<br>
+             See the <a href="#The_Inter-department_code_field"><strong>Inter-department code</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Weight">Weight</a></strong></td>
+
+            <td>The <strong>Weight</strong> field contains the net weight of the item.&nbsp;<br>
+            It is usually used in warehouses for shipping information.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Cubic">Cubic</a></strong></td>
+
+            <td>The <strong>Cubic</strong> field contains the metric volume of the item in meters.&nbsp;<br>
+            It is generally used in warehouses for shipping information.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Ship_box">Ship box</a></strong></td>
+
+            <td>The <strong>Ship box</strong> field contains the number of boxes needed to ship the item.<br>
+            It is generally used in warehouses for shipping information.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Operator_owner">Operator owner</a></strong></td>
+
+            <td>The <strong>Operator owner</strong> field contains the number of the operator who is responsible with the purchases of the item.<br>
+            The value can be entered or selected from a drop-down list displaying the operators in the <strong>Operator</strong> table.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Level">Level</a></strong></td>
+
+            <td>The <strong>Level</strong> field contains the number of the minimum operator level needed to manage the current main item record.<br>
+            See the <a href="#The_Level_field"><strong>Level</strong> field section</a>.</td>
+          </tr>
+        </thead>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Size_field">The Size field</a></h3>
+
+      <p>The <strong>Size</strong> field contains the item size.</p>
+
+      <p>Enter the size value by typing it in the <b>Size</b> field or by clicking the icon in the field for the zise to be automatically entered according to the <b><a href="#Sell_pack">Sell pack</a></b>, <b><a href="#Volume/weight">Volume/weight</a></b> and <b><a href="#Measure">Measure</a></b> fields:</p>
+
+      <p><img class="Text" src="Main%20Item_Table_files/size_field.png"></p>
+
+      <p class="Note"><b>NOTE:</b> The value in the <strong>Size</strong> field does not automatically update when the <a href="#Sell_pack"><b>Sell pack</b> value</a>, <a href="#Volume/weight"><b>Volume/weight</b> value</a>, and/or <a href="#Measure"><b>Measure</b> value</a> are modified.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Container_field">The Container field</a></h3>
+
+      <p>The <strong>Container</strong> field contains the item packaging format. The following options are available:</p>
+
+      <table class="table table-striped" style="min-width:25%;">
+        <thead class="thead-dark">
+          <tr>
+            <th>Option ID</th>
+
+            <th>Packaging Type</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>1</strong></td>
+
+          <td>Box</td>
+        </tr>
+
+        <tr>
+          <td><strong>2</strong></td>
+
+          <td>Can</td>
+        </tr>
+
+        <tr>
+          <td><strong>3</strong></td>
+
+          <td>Jar</td>
+        </tr>
+
+        <tr>
+          <td><strong>4</strong></td>
+
+          <td>Bottle</td>
+        </tr>
+
+        <tr>
+          <td><strong>5</strong></td>
+
+          <td>Bag</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_NDC/DIN_field">The NDC/DIN field</a></h3>
+
+      <p>The <strong>NDC/DIN</strong> field contains the standardized drug code of the item. It is given to pharmaceutical items.</p>
+
+      <p>The Drug Identification Number (DIN), used in Canada, is assigned by Health Canada to each approved drug.<br>
+      The National Drug Code (NDC), used in the USA, is assigned jointly by the FDA (Food and Drug Administration) and companies; its first part is assigned by the FDA, and its last part, by the company that manufactures the pharmaceutical item.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Inter-department_code_field">The Inter-department code field</a></h3>
+
+      <p>The <strong>Inter-dept code</strong> field contains the code used for the inter-department transfers, i.e. to transpose the inventory when the original item code is sold.</p>
+
+      <p>The inter-department transfer is used to transfer items from one department of the store to another one. It is important to manage correctly the inventory by department when items in a department are used in another department. This is often the case for the Deli department that uses meat, fruits, vegetables, etc. to produce recipes. See the <strong>Inter-department sales</strong> topic for all details.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Level_field">The Level field</a></h3>
+
+      <p>The <strong>Level</strong> field is a drop-down list with options for the minimum operator level needed to manage the current main item record. The following options are available:</p>
+
+      <table class="table table-striped" style="min-width: 25%;">
+        <thead class="thead-dark">
+          <tr>
+            <th>Level ID</th>
+
+            <th>Minimum operator level</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>1</strong></td>
+
+          <td>New user</td>
+        </tr>
+
+        <tr>
+          <td><strong>2</strong></td>
+
+          <td>Cashier</td>
+        </tr>
+
+        <tr>
+          <td><strong>3</strong></td>
+
+          <td>Clerk</td>
+        </tr>
+
+        <tr>
+          <td><strong>4</strong></td>
+
+          <td>Assistant</td>
+        </tr>
+
+        <tr>
+          <td><strong>5</strong></td>
+
+          <td>Manager</td>
+        </tr>
+
+        <tr>
+          <td><strong>6</strong></td>
+
+          <td>Owner</td>
+        </tr>
+
+        <tr>
+          <td><strong>7</strong></td>
+
+          <td>Programmer</td>
+        </tr>
+
+        <tr>
+          <td><strong>8</strong></td>
+
+          <td>Other 1</td>
+        </tr>
+
+        <tr>
+          <td><strong>9</strong></td>
+
+          <td>Other 2</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

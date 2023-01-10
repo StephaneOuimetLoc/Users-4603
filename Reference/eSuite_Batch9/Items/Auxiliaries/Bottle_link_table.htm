@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Bottle Link Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Bottle Link Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxiliaries &gt; Bottle and Environment Fees <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>Bottle link</strong> table contains bottle deposit values that are linked to items.</p>
+
+      <p class="Note"><strong>NOTE:</strong>&nbsp; The eSuite software does not support bottle link programming for all types of points of sale. Users may not be able to send the bottle link information to their points of sale. In that case, they must program the Bottle link table so that it reflect the same values as the Bottle link table in their points of sale.</p>
+
+      <h2>Displaying the Bottle link table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Auxiliary tables</strong>: the Start window opens in the <strong>Auxiliary</strong> work area.</li>
+
+        <li>Click on <strong>Bottle and Environment Fees</strong>: the tab opens in the same window, displaying the <strong>Bottle List</strong>.</li>
+
+        <li>To modify an existing bottle link, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu: the <strong>Bottle link</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new bottle link, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Bottle link</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Bottle_link_table_files/bottle_link_table.png" usemap="#bottle_link_table"> <map name="bottle_link_table">
+            <area shape="rect" coords="12, 125, 72, 152" href="#Number">
+            <area shape="rect" coords="76, 123, 246, 152" href="#Descriptor">
+            <area shape="rect" coords="250, 125, 315, 151" href="#Value">
+            <area shape="rect" coords="320, 124, 389, 151" href="#Totalizer">
+            <area shape="rect" coords="11, 174, 245, 201" href="#Environmental_fees">
+            <area shape="rect" coords="250, 174, 316, 199" href="#Value__(environmental_fees)">
+            <area shape="rect" coords="319, 176, 390, 200" href="#Totalizer_(environmental_fees)">
+            <area shape="rect" coords="252, 203, 317, 226" href="#Case_deposit">
+            <area shape="rect" coords="8, 242, 65, 264" href="#Tax_1">
+            <area shape="rect" coords="78, 242, 114, 264" href="#Tax_2">
+            <area shape="rect" coords="117, 243, 154, 264" href="#Tax_3">
+            <area shape="rect" coords="158, 243, 192, 264" href="#Tax_4">
+            <area shape="rect" coords="197, 243, 232, 264" href="#FS">
+            <area shape="rect" coords="237, 244, 284, 263" href="#WIC">
+            <area shape="rect" coords="289, 243, 392, 263" href="#Follow_sub">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Bottle link</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <strong>Number</strong> field contains the bottle link number.<br>
+          It is a required field used to uniquely identify records in the Bottle list.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Descriptor">Descriptor</a></strong></td>
+
+          <td>The <strong>Descriptor</strong> field contains the description of the bottle link entry.<br>
+          It is not a required field, but a descriptor should entered to identify the bottle link record in the <strong>Bottle list</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Value">Value</a></strong></td>
+
+          <td>The <strong>Value</strong> field contains the bottle deposit amount to add when an item linked to the bottle link entry is sold.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Totalizer">Totalizer</a></strong></td>
+
+          <td>The <strong>Totalizer</strong> field contains the totalizer number used to target the bottle deposit value.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Environmental_fees">Environmental fees</a></strong></td>
+
+          <td>The <strong>Environmental fees</strong> field contains the description of the environmental fees charged when an item associated to the bottle link is sold.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Value__(environmental_fees)">Value<br>
+           (environmental fees)</a></strong></td>
+
+          <td>The <strong>Value</strong> field contains the environmental fees amount charged when an item associated to the bottle link is sold.<br>
+          The amount must be numeric and contain a decimal point as dollars/cents separator.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Totalizer_(environmental_fees)">Totalizer<br>
+          (environmental fees)</a></strong></td>
+
+          <td>The <b>Totalizer</b> field contains the totalizer number used to target the environmental fees value.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Case_deposit">Case deposit</a></strong></td>
+
+          <td>The <strong>Case deposit</strong> field contains the deposit amount to add when a case of items associated to the bottle link is bought (in the Receiving module).<br>
+           For details, see the <a href="#The_Case_deposit_field"><strong>Case deposit</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Tax_1">Tax 1</a></strong></td>
+
+          <td>The <strong>Tax 1</strong> field specifies whether the environmental fees include the first tax for the retail region (checked) or not (unchecked).<br>
+          For details, see the <a href="#The_Tax_1_field"><strong>Tax 1</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Tax_2">Tax 2</a></strong></td>
+
+          <td>The <strong>Tax 2</strong> field specifies whether the environmental fees has the second tax for the retail region (checked) or not (unchecked).<br>
+          For details, see the <a href="#The_Tax_2_field"><strong>Tax 2</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Tax_3">Tax 3</a></strong></td>
+
+          <td>The <strong>Tax 3</strong> field specifies whether the environmental fees has the third tax for the retail region (checked) or not (unchecked).<br>
+          For details, see the <a href="#The_Tax_3_field"><strong>Tax 3</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Tax_4">Tax 4</a></strong></td>
+
+          <td>The <strong>Tax 4</strong> field specifies whether the environmental fees has the fourth tax for the retail region (checked) or not (unchecked).<br>
+          For details, see the <a href="#The_Tax_4_field"><strong>Tax 4</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="FS">FS</a></strong></td>
+
+          <td>The <strong>Food stamp (FS)</strong> field specifies whether the environmental fees can be paid using food stamps as tender (checked) or not (unchecked).<br>
+          For the food stamps to be accepted as tender for the environmental fees, the item must accept food stamps as tender.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="WIC">WIC</a></strong></td>
+
+          <td>The <strong>WIC</strong> field specifies whether the environmental fees are WIC able (checked) or not (unchecked).<br>
+          For the environmental fees to be accepted as WIC able, the item must be WIC able.<br>
+          WIC able items only exist in the United States.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Follow_sub">Follow sub</a></strong></td>
+
+          <td>The <strong>Follow sub-department (Follow sub)</strong> field specifies whether the environmental fees follow the sub-department sales information programming linked to the item (checked) or not (unchecked).</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right" class="auto-style1"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Case_deposit_field">The Case deposit field</a></h3>
+
+      <p>The <strong>Case deposit</strong> field contains the deposit amount to add when a case of items linked to the bottle link is bought (in the Receiving module). The case deposit fees are calculated according to the number of cases/items bought.</p>
+
+      <p>For example, if the case deposit value is $10.00 for a case that contains 20 items:</p>
+
+      <ol>
+        <li>When buying 1 case, the total deposit fees would be $10.00;</li>
+
+        <li>When buying 2 cases, the total deposit fees would be $20.00;</li>
+
+        <li>When buying 1 case and 10 items (1/2 case), the total deposit fees would be $15.00;</li>
+
+        <li>When buying 1 case and 1 item (1/20 case), the total deposit fees would be $10.50.</li>
+      </ol>
+
+      <p style="text-align:right" class="auto-style1"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Tax_1_field">The Tax 1 field</a></h3>
+
+      <p>The <strong>Tax 1</strong> field is a flag field that specifies whether the environmental fees include the first tax for the retail region (checked) or not (unchecked).</p>
+
+      <p>Tax 1 is often the federal tax, or the first tax to be charged when environmental fees apply. The tax 1 rate is programmed in the System.ini file.</p>
+
+      <p class="Note"><strong>NOTE:</strong> For the tax 1 to be charged on the environmental fees, the <strong>Taxable</strong> 1 field in the <strong>POS table</strong> of the item should be checked.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Tax_2_field">The Tax 2 field</a></h3>
+
+      <p>The <strong>Tax 2</strong> field specifies whether the environmental fees include the second tax for the retail region (checked) or not (unchecked).</p>
+
+      <p>Tax 2 is often the state or provincial tax, or the second tax to be charged when environmental fees apply. The tax 2 rate is programmed in the System.ini file.<br>
+      </p>
+
+      <p class="Note"><strong>NOTE:</strong> For the tax 2 to be charged on the environmental fees, the <strong>Taxable 2</strong> field in the <strong>POS table</strong> of the item should be checked.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Tax_3_field">The Tax 3 field</a></h3>
+
+      <p>The <b>Tax 3</b> field is a flag field that specifies whether the environmental fees has the third tax for the retail region (checked), or not (unchecked).</p>
+
+      <p>Tax 3 is often a local tax, or a service type tax to be charged when environmental fees are charged. The tax 3 rate is programmed in the System.ini file.</p>
+
+      <p class="Note"><b>NOTE:</b> For the tax 3 to be charged on the environmental fees, the <strong>Taxable 3</strong> field in the <strong>POS table</strong> of the item should be checked.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Tax_4_field">The Tax 4 field</a></h3>
+
+      <p>The <b>Tax</b> <strong>4</strong> field is a flag field that specifies whether the environmental fees has the third tax for the retail region (checked), or not (unchecked).</p>
+
+      <p>Tax 4 is often a local tax, or a service type tax to be charged when environmental fees are charged. The tax 3 rate is programmed in the System.ini file.</p>
+
+      <p class="Note"><b>NOTE:</b> For the tax 4 to be charged on the environmental fees, the <strong>Taxable 4</strong> field in the <strong>POS table</strong> of the item should be checked.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Types of Supported Paper Coupons</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Types of Supported Paper Coupons <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Coupon list<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p class="auto-style1">Please revise and update once all features are available in eSuite. (Raluca, 2019-09-05)</p>
+
+      <p>Paper coupons are vouchers that can be redeemed at the points of sales for cash values or free items.</p>
+
+      <p>The eSuite software supports different types of paper coupons:</p>
+
+      <ul>
+        <li><a href="#Prefix_5">UCC prefix 5 coupons</a></li>
+
+        <li><a href="#Prefix_99">UCC/EAN prefix 99 coupons</a></li>
+
+        <li><a href="#Prefix_98">UCC/EAN prefix 98 coupons</a></li>
+
+        <li><a href="#GS1">GS1 Databar coupon</a></li>
+
+        <li><b>Printed coupons</b> (exclusive to eSuite):</li>
+
+        <li class="indent4"><a href="#Prefix_90">Prefix 90 coupons</a></li>
+
+        <li><a href="#Prefix_91" class="indent4">Prefix 91 coupons</a></li>
+      </ul>
+
+      <p>The eSuite software also supports <a href="../Electronic_coupons_programming/Electronic_coupons_programming.htm">electronic coupons</a>, <a href="../Manual_coupons_programming/Manual_coupons_programming.htm">manual coupons</a>, <a href="../Printed_coupons_programming/Printed_coupons_programming.htm">printed coupons</a> and <a href="../Automatic_coupons_programming/Automatic_coupons_programming.htm">automatic coupons</a>.</p>
+
+      <h2><a name="Prefix_5">UCC</a> prefix 5 coupons</h2>
+
+      <p>UCC prefix 5 coupons are coupons emitted by vendors, which give money discounts or items for free. UCC prefix 5 coupons always start with a <em>5</em>. They contain a company number and a family code used to match the items concerned and a value code that defines the discount given. Here is an example:</p>
+
+      <p><img class="Text" height="198" src="Types_supported_coupons_files/prefix_5.png" width="219"></p>
+
+      <p>When a UCC prefix 5 coupon is scanned, the system uses the UCC standard matching to find which line or which item of the transaction should be affected. In this standard, the system tries to find any item that has the same company number (manufacture code) as the UCC prefix 5 coupon code. Once it has found the matching company number, it tries to match the family code. The family code is programmable for each item in the <a href="../../POS_Table.htm#Family"><b>Family</b> field</a> of the <a href="../../POS_Table.htm"><b>POS</b> table</a>.</p>
+
+      <p>If the item is not programmed with a family code, the system tries to match the company number, unless it is programmed differently.</p>
+
+      <p>If the UCC prefix 5 coupon gives an item for free, a family code <u>must</u> be programmed for the item. See the <a href="Paper_coupon_matching.htm"><b>Paper coupon matching</b> topic</a> for details.</p>
+
+      <p>Once the matching is done, the system uses the value code to define the discount given by the UCC prefix 5 coupon and establish if the conditions are met. The value code is associated to the <a href="../../Auxiliary_tables/Coupon_value_table.htm"><b>Coupon value</b> table</a>, which defines the behavior of the UCC coupons. If a match cannot be done, the <em class="auto-style1">Over registration error</em> message is displayed in the <b class="auto-style1">Entry</b> window.</p>
+
+      <p>UCC prefix 5 coupons do not need to be entered in the system's maintenance, since the system automatically recognizes UCC prefix 5 coupons and gives the appropriate discounts according to their coupon codes.</p>
+
+      <p class="Note"><strong>NOTE:</strong> In 2011, the UCC prefix 5 coupons were replaced by the <a href="#GS1">GS1 Databar coupon</a> in the United States and Canada.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Prefix_99">UCC</a>/EAN prefix 99 coupons</h2>
+
+      <p>UCC/EAN prefix 99 coupons are coupons emitted by the store, which give money discounts or items for free. UCC/EAN prefix 99 coupons always start with <em>99</em>. They contain a company number and a family code used to match the items concerned and a value code that defines the discount given. Here is an example:</p>
+
+      <p><img class="Text" height="236" src="Types_supported_coupons_files/prefix_99.png" width="230"></p>
+
+      <p>When a UCC/EAN prefix 99 coupon is scanned, the system uses the UCC standard matching to find which line or which item of the transaction should be affected. In this standard, the system tries to find any item that has the same company number (manufacture code) as the UCC/EAN prefix 99 coupon code. Once it has found the matching company number, it tries to match the family code. The family code is programmable for each item in the <a href="../../POS_Table.htm#Family"><b>Family</b> field</a> of the <a href="../../POS_Table.htm"><b>POS</b> table</a>.</p>
+
+      <p>If the item is not programmed with a family code, the system tries to match the company number, unless it is programmed differently.</p>
+
+      <p>If the UCC/EAN prefix 99 coupon gives an item for free, a family code <u>must</u> be programmed for the item. See the <a href="Paper_coupon_matching.htm"><b>Paper coupon matching</b> topic</a> for details.</p>
+
+      <p>Once the matching is done and the conditions met, the system uses the value code to define the discount given by the UCC/EAN prefix 99 coupon. The value code is associated to the <a href="../../Auxiliary_tables/Coupon_value_table.htm"><b>Coupon value</b> table</a>, which defines the behavior of the UCC/EAN coupon. If a match cannot be done, the <span class="auto-style1"><em>O</em></span><i class="auto-style1">ver registration error</i> message is displayed in the <b class="auto-style1">Entry</b> window.</p>
+
+      <p>UCC prefix 99 coupons do not need to be entered in the system's maintenance, since the system automatically recognizes UCC/EAN prefix 99 coupons and gives the appropriate discounts according to their coupon codes, unless they are electronic coupons.</p>
+
+      <p class="Note"><strong>NOTE:</strong> In 2011, the UCC prefix 5 coupons were replaced by the <a href="#GS1">GS1 Databar coupon</a> in the United States and Canada.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Prefix_98">UCC</a>/EAN prefix 98 coupons</h2>
+
+      <p>UCC/EAN prefix 98 coupons are coupons emitted by the store, which give money discounts or items for free. UCC/EAN prefix 98 coupons always start with <em>98</em>. They contain a company number and a family code used to match the items concerned and a value code that defines the discount given. Here an example:</p>
+
+      <p><img class="Text" height="248" src="Types_supported_coupons_files/prefix_98.png" width="221"></p>
+
+      <p>When a UCC/EAN prefix 98 coupon is scanned, the system uses the UCC standard matching to find which line or which item of the transaction should be affected. In this standard, the system tries to find any item that has the same company number (manufacture code) as the UCC/EAN prefix 98 coupon code. Once it has found the matching company number, it tries to match the family code. The family code is programmable for each item in the <a href="../../POS_Table.htm#Family"><b>Family</b> field</a> of the <a href="../../POS_Table.htm"><b>POS</b> table</a>.</p>
+
+      <p>If the item is not programmed with a family code, the system tries to match the company number, unless it is programmed differently.</p>
+
+      <p>If the UCC/EAN prefix 98 coupon gives an item for free, a family code <u>must</u> be programmed for the item. See the <a href="Paper_coupon_matching.htm"><b>Paper coupon matching</b> topic</a> for details.</p>
+
+      <p>Once the matching is done and the conditions met, the system uses the value code to define the discount given by the UCC/EAN prefix 98 coupon. The value code is associated to the <strong>Coupon value</strong> table, which defines the behavior of the UCC/EAN coupon. If a match cannot be done, the <span class="auto-style1"><em>O</em></span><i class="auto-style1">ver registration error</i> message is displayed in the <span class="auto-style1"><b>Entry</b></span> window.</p>
+
+      <p>UCC/EAN prefix 98 coupons use entries from <i>101</i> to <i>199</i> of the <b>Coupon value</b> table, even if the value code stands on 2 digits. Using the example above, the system will look for the entry <i>122</i> in the <b>Coupon value</b> table. By default, entries <i>101</i> to <i>199</i> do not exist in the <b>Coupon value</b> table; they have to be added by the store, giving the possibility of programming instore values different from the standard ones. UCC/EAN prefix 98 coupons do not need to be entered in the system's maintenance, since the system automatically recognizes UCC/EAN prefix 98 coupons and gives the appropriate discounts according to their coupon codes, unless they are electronic coupons.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="GS1">GS1</a> Databar coupons</h2>
+
+      <p>The GS1 Databar coupons are vendor or store coupons that have replaced the UCC prefix 5 and UCC/EAN prefix 99 coupons in the United States and Canada. Only the company prefix and the offer code are printed on the GS1 Databar coupon to be human-readable. This information, the save value, the primary purchase requirement, the primary purchase family code and optionally the secondary and the third conditions are all embedded in the barcode. Here is an example:</p>
+
+      <p><img class="Text" height="220" src="Types_supported_coupons_files/GS1_databar_coupon.png" width="374"></p>
+
+      <p>When a GS1 Databar coupon is scanned, a script is used to retrieve the information encoded in the barcode. Then, the system does a matching to find which line or which item of the transaction should be affected. In this matching, the system tries to find any item that has the same company prefix (manufacture code) as the GS1 Databar coupon code. Once it has found the matching company prefix, it tries to match the family code. The family code is programmable for each item in the <a href="../../POS_Table.htm#Family"><b>Family</b> field</a> of the <a href="../../POS_Table.htm"><b>POS</b> table</a>.</p>
+
+      <p>If the item is not programmed with a family code, the system tries to match the company prefix, unless it is programmed differently.</p>
+
+      <p>If the GS1 Databar coupon gives an item for free or a percentage discount, a family code <u>must</u> be programmed for the item.</p>
+
+      <p>Once the matching is done and the conditions met, the system uses the save value encoded in the barcode as the discount to give by the GS1 Databar coupon. If a match cannot be done, the "<em class="auto-style1">Criteria not respected</em>" message is displayed in the <span class="auto-style1"><strong>Entry</strong></span> window.</p>
+
+      <p>With the GS1 Databar coupon, it is possible to encode up to three conditions. <span class="auto-style1">But note that for now,</span> eSuite only validates the primary condition. <span class="auto-style1">Since the save value is encoded in the barcode, it can be any amount up to $999.99. <strong>STILL VALID?</strong></span> The expiration date can also be encoded in the barcode.</p>
+
+      <p>The barcode cannot be entered manually when the scanner fails to read it, so the needed information (save value, expiration date, purchase conditions) is printed on the coupon as human-readable. The cashier has to validate the coupon and give the discount using the vendor or the store function.</p>
+
+      <p class="Note"><strong>NOTE:</strong> The eSuite software <span class="auto-style1">currently</span> does not support all features of the GS1 Databar coupon; the intervention of the cashier is required when a feature is not supported. See the reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2>Printed Coupons</h2>
+
+      <p>The coupons below are used in particular situations. They are exclusive to the eSuite software.</p>
+
+      <h3><a name="Prefix_90">Prefix</a> 90 coupons</h3>
+
+      <p>Prefix 90 coupons are electronic coupons (vendor or store) that are printed to give money discounts on next purchases. Prefix 90 coupons starts with <em>90</em>. They contain a company number used to match the items concerned. Here is an example:</p>
+
+      <p><img class="Text" height="223" src="Types_supported_coupons_files/prefix_90.png" width="182"></p>
+
+      <p>When a prefix 90 coupon is scanned, the system tries to find any item that has the same company number (manufacture code) as the prefix 90 coupon code. Once it has found the matching company number, it tries to match the family code. The family code is programmable for each item in the <a href="../../POS_Table.htm#Family"><b>Family</b> field</a> of the <a href="../../POS_Table.htm"><b>POS</b> table</a>.</p>
+
+      <p>If the item is not programmed with a family code, the system tries to match the company number, unless it is programmed differently. See the <a href="Paper_coupon_matching.htm"><b>Paper coupon matching</b> topic</a> for details.</p>
+
+      <p>Once the matching is done, the system uses the coupon value entered in the <a href="../../Price_Table.htm"><b>Price</b> table</a>. If a match cannot be done, the <span class="auto-style1"><em>O</em></span><i class="auto-style1">ver registration error</i> message is displayed in the <span class="auto-style1"><b>Entry</b></span> window.</p>
+
+      <p>P<span class="auto-style1">refix 90 coupons are used as standard for that type of coupons, but it can be changed.</span> See the reseller for more details.</p>
+
+      <p>Since the prefix 90 coupons are electronic coupons, they must exist as items in the system.</p>
+
+      <p class="Note"><b>NOTE:</b> This kind of printed electronic coupons can only give a fixed discount (no percentage discount, no item for free).</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h3><a name="Prefix_91">Prefix</a> 91 coupons</h3>
+
+      <p>Prefix 91 coupons are electronic coupons (vendor or store) that are printed to give money discounts on next purchases. The prefix 91 coupons starts with <em>91</em>. They do not contain any particular information. Here is an example:</p>
+
+      <p><img class="Text" height="201" src="Types_supported_coupons_files/prefix_91.png" width="184"></p>
+
+      <p>When a prefix 91 coupon is scanned, the system tries to find the sales made in the same sub-department. The coupon discount specified in the <b>Price</b> table is given only if the transaction has enough sales in the matched sub-department. If a match cannot be done, the <span class="auto-style1"><em>O</em></span><i class="auto-style1">ver registration error</i> message is displayed in the <span class="auto-style1"><b>Entry</b></span> window.</p>
+
+      <p class="auto-style1">Prefix 91 coupons are used as standard for that type of coupons, but it can be changed. See the reseller for more details.</p>
+
+      <p>Since the prefix 91 coupons are electronic coupons, they must exist as items in the system.</p>
+
+      <div class="Note">
+        <b>NOTES:</b> 
+
+        <ul>
+          <li>The matching of the prefix 91 coupons is done according to the quantity <em>and</em> the value.</li>
+
+          <li>This kind of printed electronic coupons can only give a fixed discount (no percentage discount, no item for free).</li>
+        </ul>
+      </div>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

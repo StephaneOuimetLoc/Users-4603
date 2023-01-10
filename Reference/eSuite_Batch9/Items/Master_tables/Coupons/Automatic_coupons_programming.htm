@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Automatic Coupon Programming</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Automatic Coupon Programming <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxiliaries <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Automatic coupons are store and vendor coupons given by the system when the specified criteria are met. Like any item in the system, the automatic coupons have their own UPCs; they are considered negative items.</p>
+
+      <p>By default, the automatic store coupons are linked directly to the items and they affect the net sales.<br>
+      By default, the automatic vendor coupons are added as new registrations in the transactions and they do not affect the net sales.</p>
+
+      <p>Automatic coupons may be programmed in the classical way, namely by entering their <strong><a href="../../POS_Table.htm">POS</a></strong> and <strong><a href="../../Price_Table.htm">price</a></strong> information and defining the criteria by means of the <a href="../../Special_items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic coupon link</strong> table</a>.</p>
+
+      <p>However, eSuite offers the <strong>Coupon wizard</strong> that facilitates the creation of coupons by grouping all criteria (type, method, quantity, amount, etc.) that must be respected for the coupon to be applied. Once the coupon information is entered and saved, the coupon wizard assigns it a unique UPC that starts with 096 followed by the promotion number, which stands on 10 digits.</p>
+
+      <p>For the automatic coupons to be issued, the <a href="../../../Customers/Shopper_level_table.htm#Apply_coupon_links"><strong>Apply coupon link</strong> field</a> of the <a href="../../../Customers/Shopper_level_table.htm"><strong>Shopper level</strong> table</a> must be checked in the corresponding shopper levels. The automatic coupons are <em>given automatically by the system</em> as soon as the criteria are met in the transactions.</p>
+
+      <p>Automatic coupons will be <strong>repeated by default</strong>, even when no repetition method is specified. Each item sold may be part of more than one automatic coupon, but only one automatic coupon discount may be applied on an item. However, some methods may be set in the automatic coupons definition to change these default behaviors. For details, see <strong><a href="../Coupons/Coupons.htm">Coupons</a></strong>.</p>
+
+      <p>Since automatic coupons are given as soon as the criteria in the coupon wizard are met in the transaction, the order in which the items are scanned can have an impact on which coupons are applied and which ones are not.</p>
+
+      <h2>Automatic coupon example</h2>
+
+      <p>The <strong>Coupon wizard</strong> is used to program the criteria that must be respected for the automatic coupons to be applied.</p>
+
+      <p>Below are the steps for programming a <em>Promotion ID</em> automatic coupon. For more examples, see <strong><a href="Automatic_coupons_examples.htm">Automatic coupons - examples</a></strong>.</p>
+
+      <h3>Buy 3 bags of Ruffles chips, get $1.00 off - limit of 2 automatic coupons per transaction</h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="3">&nbsp;1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Value</strong> field: select <em>Cents off</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Discount</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Coupon type</strong> field: select <em>Automatic</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Sub-dpt.</strong> field: select the right sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="155" src="Automatic_coupons_programming_files/main_section.png" width="416">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Type</strong> field: select <em>Promotion ID sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Equal to</strong> field: enter the promotion identification number.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Minimum value</strong> field: enter <em>3</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 961px">Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+           This method forces the system to apply the automatic coupon discount on one of the items that is part of the Promo ID sales.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>The item(s) in this condition can only participate in one offer</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="439" src="Automatic_coupons_programming_files/add_criteria.png" width="340">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">3. In the <strong>Details</strong> tab:&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="325" src="Automatic_coupons_programming_files/coupon_details.png" width="416">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">4. In the <strong>Descriptions</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px; height: 12px;">
+          </td>
+
+          <td style="height: 12px; width: 961px;"><strong>Expanded description</strong>: enter a more detailed description of the promotion.</td>
+
+          <td style="width: 423px; height: 12px;">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="324" src="Automatic_coupons_programming_files/coupon_descriptions.png" width="416">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="157" src="Automatic_coupons_programming_files/coupon_code.png" width="416">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2">The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em><a name="Data_view">Data view</a></em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2"><img class="Text" height="325" src="Automatic_coupons_programming_files/coupon_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="322" src="Automatic_coupons_programming_files/coupon_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p>In this example:</p>
+
+      <ul>
+        <li>The customer gets <i>$1.00</i> off when they buy 3 bags of Ruffles chips.</li>
+
+        <li>The customer may get up to <em>$2.00</em> off when buying 6 bags of chips. The limit will then apply on the automatic coupon.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="Automatic_coupons_examples.htm">Go to Automatic coupons - examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

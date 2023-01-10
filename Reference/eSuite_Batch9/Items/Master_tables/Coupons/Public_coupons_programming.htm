@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Public Coupon Programming</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Public Coupon Programming<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxiliaries <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Public coupons are store and vendor coupons given by the system when the specified criteria are reached. Like any item in the system, the public coupons have their own UPCs; they are considered negative items.</p>
+
+      <p>By default, the public store coupons are linked directly to the items and they affect the net sales.<br>
+      By default, the public vendor coupons are added as new registrations in the transactions and they do not affect the net sales.</p>
+
+      <p>Public coupons may only be used with the eCommerce and Bank SMSPayment options. They are available to any customer when clipped on the eStore/mStore applications.</p>
+
+      <p>Public coupons may be programmed in the classical way, namely by entering their <strong>POS</strong> and <strong>price</strong> information and defining the criteria by means of the <strong>Electronic coupon link</strong> table.</p>
+
+      <p>However, eSuite offers the <a href="../Coupons/Coupons.htm"><strong>Coupon wizard</strong></a> that facilitates the creation of coupons by grouping all criteria (type, method, quantity, amount, etc.) that must be respected for the coupon to be applied.</p>
+
+      <p>For the public coupons to be issued, the <a href="../../../Customers/Shopper_level_table.htm#Apply_coupon_links"><b>Apply coupon link</b> field</a> of the <a href="../../../Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> must be checked in the corresponding shopper levels. The public coupons are given automatically when the criteria are reached in the transaction.</p>
+
+      <p>By default, a public coupon is only given once in a transaction, even if its criteria are matched many times. Each item sold may participate in more than one coupon, but only one coupon discount may be applied on an item. However, some methods may be set in the coupon definition to change the default behavior.</p>
+
+      <ul>
+        <li>For details, see <strong><a href="../Coupons/Coupons.htm">Coupons</a></strong>.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="Public_coupons_examples.htm">Go to Public coupons - examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

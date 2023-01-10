@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Preferred Shopper Double Coupon Examples</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Preferred Shopper Double Coupon Examples <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Customers &gt; Shopper Levels<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Another kind of promotion allowed by the <b>Shopper level</b> table is an add-on value on the vendor coupons, i.e. an additional amount given over the vendor coupons values.</p>
+
+      <p>Add-on values are applied on all types of vendor coupons, including the electronic ones.<br>
+      By default, the system considers the add-on values as store coupons.</p>
+
+      <h2><a name="List_of_examples">Examples</a></h2>
+
+      <ol>
+        <li><a href="#doubled">The vendor coupons are doubled</a></li>
+
+        <li><a href="#up_to_$1.00_are_doubled">The vendor coupons up to $1.00 are doubled</a></li>
+
+        <li><a href="#doubled_for_a_maximum_discount_amount_of_$2.00">The vendor coupons are doubled for a maximum discount amount of $2.00</a></li>
+
+        <li><a href="#amount_of_$0.50_is_added">The amount of $0.50 is added to the vendor coupons values</a></li>
+
+        <li><a href="#maximum_discount_of_$1.50_">The amount of $0.50 is added to the vendor coupons value for a maximum discount of $1.50</a></li>
+      </ol>
+
+      <h2>Vendor coupons are <a name="doubled">doubled</a></h2>
+
+      <p>Set up the <strong>Shopper level</strong> table information:</p>
+
+      <ol>
+        <li>In the Launcher, click the arrow in the <strong>Customers</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Auxiliary tables.</strong></li>
+
+        <li>In the <strong>Start</strong> window, click on <strong>Shopper levels</strong>.</li>
+
+        <li>In the list of shopper levels, select the shopper level for which the value of the vendor coupons will be doubled.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Type <em>2</em> in the <strong>Coupon multiply</strong> field.<br>
+        <br>
+         <img class="Text" height="444" src="Double_coupons_examples_files/ex1_coupon_multiply.png" width="340"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>When a vendor coupon is scanned or entered manually, the system automatically looks into the <b>Shopper level</b> table to check if an add-on value can be given.</p>
+
+      <p><strong>Examples:</strong></p>
+
+      <ul>
+        <li>
+          For a vendor coupon of <em>$1.00</em>, the total reduction will be <em>$2.00.</em> 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$1.00</td>
+
+              <td>&nbsp;</td>
+
+              <td>$2.00</td>
+            </tr>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$1.00</td>
+
+              <td>---</td>
+
+              <td><u>$2.00</u></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          For a vendor coupon of <em>$2.00</em>, the total reduction will be <em>$4.00</em>. 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td>$2.00</td>
+
+              <td>&nbsp;</td>
+
+              <td>$4.00</td>
+            </tr>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td>$2.00</td>
+
+              <td>---</td>
+
+              <td><u>$4.00</u></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Go to the list of examples</a></p>
+
+      <h2>The vendor coupons <a name="up_to_$1.00_are_doubled">up to $1.00 are doubled</a></h2>
+
+      <p>Set up the <strong>Shopper level</strong> table information:</p>
+
+      <ol>
+        <li>In the Launcher, click the arrow in the <strong>Customers</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Auxiliary tables.</strong></li>
+
+        <li>In the <strong>Start</strong> window, click on <strong>Shopper levels</strong>.</li>
+
+        <li>In the list of shopper levels, select the shopper level for which the value of the vendor coupons will be doubled.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Type <em>2</em> in the <strong>Coupon multiply</strong> field.<br>
+        <br>
+         <img class="Text" height="444" src="Double_coupons_examples_files/ex1_coupon_multiply.png" width="340"></li>
+
+        <li>Type <i>1.00</i> in the <b>Maximum value</b> field.<br>
+        <br>
+         <img class="Text" height="444" src="Double_coupons_examples_files/ex2_max_value.png" width="340"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>When a vendor coupon is entered manually or scanned, the system automatically looks into the <b>Shopper level</b> table to check if an add-on value can be given.</p>
+
+      <p><strong>Examples:</strong></p>
+
+      <ul>
+        <li>
+          For a vendor coupon of $0.50, the total reduction will be <em><span class="style2">$1.00</span>.</em> 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Maximum coupon value</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$0.50</td>
+
+              <td>$0.50</td>
+
+              <td>$1.00</td>
+
+              <td>$1.00</td>
+            </tr>
+
+            <tr>
+              <td>$0.50</td>
+
+              <td>$0.50</td>
+
+              <td>---</td>
+
+              <td><u>$1.00</u></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          For a vendor coupon of <em>$1.00</em>, the total reduction will be <em>$2.00.</em> 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Maximum coupon value</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$1.00</td>
+
+              <td>$1.00</td>
+
+              <td>$2.00</td>
+            </tr>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$1.00</td>
+
+              <td>---</td>
+
+              <td><u>$2.00</u></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          For a vendor coupon of <em>$2.00</em>, the total reduction will be <em>$2.00</em> (instead of <em>$4.00</em>). 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Maximum coupon value</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td class="style1">$2.00</td>
+
+              <td>$1.00</td>
+
+              <td>$2.00</td>
+            </tr>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td>---</td>
+
+              <td>---</td>
+
+              <td><u>$2.00</u></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Go to the list of examples</a></p>
+
+      <h2>The vendor coupons are <a name="doubled_for_a_maximum_discount_amount_of_$2.00">doubled for a maximum discount amount of $2.00</a></h2>
+
+      <p>Set up the <strong>Shopper level</strong> table information:</p>
+
+      <ol>
+        <li>In the Launcher, click the arrow in the <strong>Customers</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Auxiliary tables.</strong></li>
+
+        <li>In the <strong>Start</strong> window, click on <strong>Shopper levels</strong>.</li>
+
+        <li>In the list of shopper levels, select the shopper level for which the value of the vendor coupons will be doubled.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Type <em>2</em> in the <strong>Coupon multiply</strong> field.<br>
+        <br>
+         <img class="Text" height="444" src="Double_coupons_examples_files/ex1_coupon_multiply.png" width="340"></li>
+
+        <li>Type <em>2.00</em> in the <strong>Maximum total</strong> field.<br>
+        <br>
+         <img class="Text" height="444" src="Double_coupons_examples_files/ex3_maximum_total.png" width="340"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>When a vendor coupon is entered manually or scanned, the system automatically looks into the <b>Shopper level</b> table to check if an add-on value can be given.</p>
+
+      <p><strong>Examples:</strong></p>
+
+      <ul>
+        <li>
+          For a vendor coupon of <em>$2.00</em>, the total reduction will be <em>$2.00</em> (instead of <em>$4.00</em>). 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td class="style1">$2.00</td>
+
+              <td>$0.00</td>
+
+              <td>$2.00</td>
+            </tr>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td>---</td>
+
+              <td>---</td>
+
+              <td><u>$2.00</u></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          For a vendor coupon of <em>$1.50</em>, the total reduction will be <u>$2.00</u> (instead of $3.00). 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$1.50</td>
+
+              <td class="style1">$1.50</td>
+
+              <td>$0.50</td>
+
+              <td>$2.00</td>
+            </tr>
+
+            <tr>
+              <td>$1.50</td>
+
+              <td>---</td>
+
+              <td>$0.50</td>
+
+              <td><u>$2.00</u></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          For a vendor coupon of <em>$1.00</em>, the total reduction will be <span class="style2"><em>$2.00</em></span>. 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$1.00</td>
+
+              <td>&nbsp;</td>
+
+              <td>$2.00</td>
+            </tr>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$1.00</td>
+
+              <td>---</td>
+
+              <td><u>$2.00</u></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Go to the list of examples</a></p>
+
+      <h2>The <a name="amount_of_$0.50_is_added">amount of $0.50 is added</a> to the vendor coupons value</h2>
+
+      <p>Set up the <strong>Shopper level</strong> table information:</p>
+
+      <ol>
+        <li>In the Launcher, click the arrow in the <strong>Customers</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Auxiliary tables.</strong></li>
+
+        <li>In the <strong>Start</strong> window, click on <strong>Shopper levels</strong>.</li>
+
+        <li>In the list of shopper levels, select the shopper level for which the fixed value will be added to the vendor coupons.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Type <i></i><em>0.50</em> in the <b>Add value</b> field.<br>
+        <br>
+         <img class="Text" height="444" src="Double_coupons_examples_files/ex4_add_value.png" width="340"></li>
+
+        <li><strong>Save</strong> changes.</li>
+      </ol>
+
+      <p>When a vendor coupon is entered manually or scanned, the system automatically looks into the <b>Shopper level</b> table to check if an add-on value can be given.</p>
+
+      <p><strong>Examples:</strong></p>
+
+      <ul>
+        <li>
+          For a vendor coupon of <em>$1.00</em>, the total reduction will be <em>$1.50.</em> 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$0.50</td>
+
+              <td>
+              </td>
+
+              <td>$1.50</td>
+            </tr>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$0.50</td>
+
+              <td>---</td>
+
+              <td><u>$1.50</u></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          For a vendor coupon of <em>$2.00</em>, the total reduction will be <em>$2.50</em>. 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td>$0.50</td>
+
+              <td>
+              </td>
+
+              <td>$2.50</td>
+            </tr>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td>$0.50</td>
+
+              <td>---</td>
+
+              <td><u>$2.50</u></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Go to the list of examples</a></p>
+
+      <h2>The amount of $0.50 are added to the vendor coupons value for a <a name="maximum_discount_of_$1.50_">maximum discount of $1.50</a></h2>
+
+      <p>Set up the <strong>Shopper level</strong> table information:</p>
+
+      <ol>
+        <li>In the Launcher, click the arrow in the <strong>Customers</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Auxiliary tables.</strong></li>
+
+        <li>In the <strong>Start</strong> window, click on <strong>Shopper levels</strong>.</li>
+
+        <li>In the list of shopper levels, select the shopper level for which the fixed value will be added to the vendor coupons.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu to open the <strong>Shopper level</strong> table.</li>
+
+        <li>Type <i>0.50</i> in the <b>Add value</b> field.<br>
+        <br>
+         <img height="444" src="Double_coupons_examples_files/ex4_add_value.png" width="340"></li>
+
+        <li>Type <i>1.50</i> in the <b>Maximum total</b> field.<br>
+        <br>
+         <img height="444" src="Double_coupons_examples_files/ex5_maximum_total.png" width="340"></li>
+
+        <li>Save the changes.</li>
+      </ol>
+
+      <p>When a vendor coupon is entered manually or scanned, the system automatically looks into the <b>Shopper level</b> table to check if an add-on value can be given.</p>
+
+      <p><strong>Examples:</strong></p>
+
+      <ul>
+        <li>
+          For a vendor coupon of <em>$1.00</em>, the total reduction will be <em>$1.50.</em> 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$0.50</td>
+
+              <td>
+              </td>
+
+              <td>$1.50</td>
+            </tr>
+
+            <tr>
+              <td>$1.00</td>
+
+              <td>$0.50</td>
+
+              <td>---</td>
+
+              <td><u>$1.50</u></td>
+            </tr>
+          </table>
+        </li>
+
+        <li>
+          For a vendor coupon of <em>$2.00</em>, the total reduction will be <em>$2.00</em> (instead of <em>$2.50</em>). 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Vendor coupon value</th>
+
+                <th>Add-on amount</th>
+
+                <th>Restricted add-on amount</th>
+
+                <th>Total reduction amount</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td class="style1">$0.50</td>
+
+              <td>$0.00</td>
+
+              <td>$2.00</td>
+            </tr>
+
+            <tr>
+              <td>$2.00</td>
+
+              <td>---</td>
+
+              <td>$0.00</td>
+
+              <td><u>$2.00</u></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Go to the list of examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

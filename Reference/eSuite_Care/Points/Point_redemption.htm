@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Point Programs</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Care - Point Programs <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Care &gt; Points <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The eSuite software provides different methods to redeem points directly from your points of sale on up to 35 point programs.</p>
+
+      <p>The points may be used (redeemed) to get discounts on items or items for free, as counters to the n<sup>th</sup> item for free, to get special discounts when a certain amount of purchases has been reached by the customer, etc. The discount given using points is called "point discount".</p>
+
+      <p>The system does not need a customer to be entered in the transaction to give and redeem points. In this case, the points given in a transaction must be used (redeemed) in that transaction since they cannot be added to the customer's point balances. The unused points are lost.</p>
+
+      <p>The same thing occurs when a customer is entered in the transaction, except that the unused points are added to the point balances of the customer, or more points may be used (redeemed) if the customer already has points in the point balances.</p>
+
+      <p>The following parts compose the <b>Point redemption</b> document:</p>
+
+      <ol>
+        <li><a href="#programs">Point programs</a></li>
+
+        <li><a href="#methods">Point redemption methods</a></li>
+
+        <li><a href="#restrictions">Point redemption restrictions</a></li>
+
+        <li><a href="#decrease">Decrease points</a></li>
+
+        <li><a href="#expire">Point expiration</a></li>
+
+        <li><a href="#redeem">How to redeem points</a></li>
+
+        <li><a href="#Receipt">Receipt</a></li>
+
+        <li><a href="#Reports">Reports</a></li>
+
+        <li><a href="#note">Notes</a></li>
+      </ol>
+
+      <h2><a name="programs"></a>Point programs</h2>
+
+      <p>The system can manage up to 35 point programs, identified by a digit from <em>1</em> to <em>9</em> or a letter from <em>A</em> to <em>Z</em>. For example, the letter <em>A</em> corresponds to point program <em>10</em>, <em>B</em> corresponds to point program <em>11</em> and so on up to <em>Z</em> that corresponds to point program <em>35</em>.</p>
+
+      <p>Point program <em>1</em> is considered the main one, all the others being secondary point programs.</p>
+
+      <p>In the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a>, the <a href="../../Common/Customers/Shopper_level_table.htm#Point_programs"><b>Point programs</b> field</a> is used to identify the point programs that the customers linked to the shopper level are members of. The field allows entering or selecting multiple point programs, with no space in between.</p>
+
+      <p>The way the points are redeemed for the main point program <em>1</em> is defined in the <b>Shopper level</b> table and may be different for each shopper level. The way the points are redeemed for the secondary point programs (<em>2</em> to <em>Z</em>) is described in the System.ini <strong></strong> file, since it is identical for every shopper level.</p>
+
+      <h2><a name="methods"></a>Redemption methods</h2>
+
+      <p>The points can be redeemed according to three different point redemption methods:</p>
+
+      <ul>
+        <li><a href="#preset">Preset point redemption</a></li>
+
+        <li><a href="#any">Variable point redemption</a></li>
+
+        <li><a href="#function">Point redemption on functions</a></li>
+      </ul>
+
+      <p>The point redemption can only be done according to one point program at a time.</p>
+
+      <h3><a name="preset"></a>Preset point redemption</h3>
+
+      <p>The <b>Preset point redemption</b> method uses the point redemption values entered in the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Discount_points">Discount points</a></b> and <b><a href="../../Common/Item_maintenance/Price_Table.htm#Free_points">Free points</a></b> fields of the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a>. The point discount given corresponds respectively to the amount defined in the <a href="../../Common/Item_maintenance/Price_Table.htm#Discount_amount"><b>Discount</b> amount</a> field, or the item for free. The <b><a href="../../Common/Item_maintenance/Price_Table.htm#Program">Program</a></b> field is used to identify the point program from which the points are redeemed.</p>
+
+      <p>The number of redeemed points needed is calculated by multiplying the active point value with the quantity of items sold.</p>
+
+      <p>To set up the <strong>Preset point redemption</strong>:</p>
+
+      <ol>
+        <li>Open the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> for the right shopper level.</li>
+
+        <li>Select the <em>Allow redeem on item</em> point method in the <a href="../../Common/Customers/Shopper_level_table.htm#Redeem_method"><strong>Redeem method</strong> field</a><i>.<br>
+        </i>The displayed value is <em>1.<br>
+        <br>
+         <img class="Text" height="555" src="Point_redemption_files/shopper_level_redeem_field.png" width="425"></em></li>
+
+        <li>Save the changes.</li>
+
+        <li>Open the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a> for the selected item.</li>
+
+        <li>To give a rebate on the item, enter the number of points needed in the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Discount_points">Discount points</a></b> field and the amount of the rebate in the <a href="../../Common/Item_maintenance/Price_Table.htm#Discount_amount"><b>Discount amount</b></a> field.</li>
+
+        <li>To give the item for free, enter the number of points needed in the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Free_points">Free points</a></b> field.</li>
+
+        <li>In the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Program">Program</a></b> field, select the point program on which the points are redeemed.<br>
+        <br>
+         <img class="Text" height="535" src="Point_redemption_files/price_table_redeem_fields.png" width="800"></li>
+      </ol>
+
+      <p>Repeat these steps for all the items needed.</p>
+
+      <h3><a name="any"></a>Variable point redemption</h3>
+
+      <p>The <b>Variable point redemption</b> method uses a rate to calculate the point discount based on a number of points.</p>
+
+      <p>The amount of the point discount given is calculated by dividing the number of points used (redeemed) by the point redemption rate. If an item has a point redemption defined in the <b>Price</b> table and the <b>Preset point redemption</b> method is activated in the <b>Shopper level</b> table, the system uses the point redemption values instead of the point redemption rate for that item.</p>
+
+      <h5>For the main point program</h5>
+
+      <p>The <a href="../../Common/Customers/Shopper_level_table.htm#Red./penny"><b>Red/penny</b> field</a> of the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> is used to define the point redemption rate for the main point program (point program <em>1</em>).</p>
+
+      <h5>For the secondary point programs</h5>
+
+      <p>For the secondary point programs (<em>2</em> to <em>Z</em>), the rates are defined in the System.ini file, under the <b>Points</b> section.</p>
+
+      <p>Here is the parameter to define:</p>
+
+      <table border="1" style="WIDTH: 100%">
+        <tr>
+          <td style="width: 114px">
+            <p class="List">REDEEMx_RATE=</p>
+          </td>
+
+          <td style="width: 114px">
+            <p class="List">[rate]</p>
+          </td>
+
+          <td>
+            <p class="List">where x is the identifier character that identifies the point program.<br>
+            The rate corresponds to the number of points needed to get 1 penny point discount.</p>
+          </td>
+        </tr>
+      </table>
+
+      <h3><a name="function"></a>Point redemption on functions</h3>
+
+      <p>The <b>Point redemption on functions</b> method uses the REDEEM alpha parameter to define the point redemption rate of the functions.</p>
+
+      <p>When the function is used, the points are redeemed according to the value of the REDEEM alpha parameter defined in the function.</p>
+
+      <p>Here are its different values:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Parameter</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 105px">
+            <p class="List">REDEEMx=Y</p>
+          </td>
+
+          <td>
+            <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
+            The system redeems points according to the point redemption rate defined in the <b>Shopper level</b> table (<b>Reduction/penny</b> field).</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 105px">
+            <p class="List">REDEEMx=##</p>
+          </td>
+
+          <td>
+            <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
+            The system redeems points according to the rate ##. The system takes the amount of the registration to calculate the number of points that must be redeemed.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 105px">
+            <p class="List">REDEEMx=##:$$</p>
+          </td>
+
+          <td>
+            <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
+            The system redeems points according to the <i>rate ##</i>.&nbsp;The point discount associated the rate (<i>##</i>) to the amount (<i>$$</i>).<br>
+            For example: <i>10:1.00</i> means that <i>10</i> points are redeemed for a point discount of <i>$1.00</i>. So, if an item is sold at <i>$2.60</i>, <i>26</i> points are redeemed for a point discount of <i>$2.60</i></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 105px">
+            <p class="List">REDEEMx=F##</p>
+          </td>
+
+          <td>
+            <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
+            The system redeems a fixed number of points (<i>##</i>).</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 105px">
+            <p class="List">REDEEMx=F##:$$</p>
+          </td>
+
+          <td>
+            <p class="List">where x is the identifier character that identifies the point program. If x is not specified, it is applied to point program 1.<br>
+            The system redeems a fixed number of points (<i>##</i>) for a specified point discount (<i>$$</i>).</p>
+          </td>
+        </tr>
+      </table>
+
+      <p>The REDEEM alpha parameter can be used to reduce the use of a function, like a tender, since it costs points to use that function.</p>
+
+      <p class="Note"><b>NOTE:</b> If the customer does not have enough points, the function cannot be used.</p>
+
+      <h2><a name="restrictions"></a>Restrict the point redemption</h2>
+
+      <p>Some restrictions may be added to the point redemption. These restrictions are:</p>
+
+      <ul>
+        <li><a href="#restrict_minimum">Minimum points needed</a></li>
+
+        <li><a href="#restrict_period">Restricted to a period</a></li>
+
+        <li><a href="#limit_redeem">Limitations on the REDEEM alpha parameter</a></li>
+      </ul>
+
+      <h3><a name="restrict_minimum"></a>Minimum points</h3>
+
+      <p>The point redemption may be restricted to a minimum point condition. If the customer does not have a minimum number of points in their point balance, the point discounts are not given.</p>
+
+      <p>The minimum point condition <u>does not concern</u> the point discounts given on the preset point redemption.</p>
+
+      <p>To set up a minimum point condition:</p>
+
+      <ol>
+        <li>Open the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> for the right shopper level.</li>
+
+        <li>&nbsp;In the <a href="../../Common/Customers/Shopper_level_table.htm#Minimum_points"><b>Minimum points</b></a> field, enter the minimum number of points that the customers must have accumulated for the system to allow a point discount.</li>
+      </ol>
+
+      <h3><a name="restrict_period"></a>Period</h3>
+
+      <p>The number of points redeemed can also be restricted to a period. The point discounts are given only during a specific period.</p>
+
+      <p>The restriction periods <u>only concern</u> the point discounts given on the preset point redemption.</p>
+
+      <p>To set up a restriction period:</p>
+
+      <ol>
+        <li>Open the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a> for the right item.</li>
+
+        <li>Enter the starting date of the period in the <b><a href="../../Common/Item_maintenance/Price_Table.htm#Start_redeem">Start (Redeem)</a></b> field.</li>
+
+        <li>Enter the ending date of the period in the <b><a href="../../Common/Item_maintenance/Price_Table.htm#End_redeem">End (Redeem)</a></b> field.</li>
+      </ol>
+
+      <h3><a name="limit_redeem"></a>Limitations on the REDEEM alpha parameter</h3>
+
+      <p>It is possible to set some limitations when using the REDEEM alpha parameter to define the point redemption rate. These limitations are specified as suffixes to the rate value.</p>
+
+      <p>Here are the different suffixes values:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Value</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>
+            <p class="List">;Rxxx</p>
+          </td>
+
+          <td>
+            <p class="List">Redeems points based on the specified rate to a maximum of xxx points redeemed per item or entry.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="List">;Qxxx</p>
+          </td>
+
+          <td>
+            <p class="List">Redeems points based on the specified rate to a maximum of xxx units or weight.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="List">;Axxx</p>
+          </td>
+
+          <td>
+            <p class="List">Redeems points based on the specified rate to a maximum of xxx dollars per item or entry.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="List">;Pxx</p>
+          </td>
+
+          <td>
+            <p class="List">Redeems points based on the specified rate to a maximum of xx percent of the item sale.</p>
+          </td>
+        </tr>
+      </table>
+
+      <h2><a name="decrease"></a>Decrease points</h2>
+
+      <p>The number of points redeemed can be divided by a factor. For example, the divisor can be used to reduce to half the number of points needed for a point discount.</p>
+
+      <p>To divide the number of points redeemed:</p>
+
+      <ol>
+        <li>Open the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> for the right shopper level.</li>
+
+        <li>In the <b><a href="../../Common/Customers/Shopper_level_table.htm#Multiplier (redeem)">Multiplier (redeem)</a></b> field, enter the value of the divisor redemption factor.</li>
+      </ol>
+
+      <h2><a name="expire"></a>Point expiration</h2>
+
+      <p>For the main point program <em>1</em> only, it is possible to expire points that have not been used after a certain time. Two steps are necessary: determining the points that are to be expired and establishing how to expire them.</p>
+
+      <h3>Determining the points that are to be expired</h3>
+
+      <p>The point expiration is determined by a date defined by a number of days. This number of days is specified in the <b><a href="../../Common/Customers/Shopper_level_table.htm#Exp._days">Exp days</a></b> field of the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a>.</p>
+
+      <p>A different number of days may be defined for each shopper level.</p>
+
+      <h3>Expiring points</h3>
+
+      <p>The point expiration is done using a script. A scheduler job can be created for the expiration to run automatically. All unused points at the expiration date (today's date - number of days specified) are expired, meaning that an adjustment transaction is performed.</p>
+
+      <p class="Note"><b>NOTE:</b> Before expiring points, it is important to run the <strong>Calculate cumulative job</strong> and the <strong>Compare points calculated vs Current balance</strong> report.</p>
+
+      <h2><a name="redeem"></a>How to redeem points</h2>
+
+      <p>The point redemption can be done <a href="#manual">manually</a> or <a href="#auto">automatically</a>. The system behaves differently, depending on the point redemption method used.</p>
+
+      <h3><a name="manual"></a>Manual point redemption</h3>
+
+      <p>To manually perform a point redemption, the <b>Point redemption</b> function must be manually called for each item by selecting the <b>Point redemption</b> option in the POS (the <strong>eSuite Sell</strong> module). Make sure the cashiers have access to that function.</p>
+
+      <p>If points are redeemed based on the <strong>Preset point redemption</strong> method, the number of points redeemed and the point discount value come from the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a>. If a rebate <u>and</u> a free value are defined for the item, the system prompts the cashier to know which one to use. The points are redeemed in the point program specified in the <a href="../../Common/Item_maintenance/Price_Table.htm#Program"><b>Program</b> field</a>. The point discount decreases the item amount.</p>
+
+      <p>If points are redeemed based on the <strong>Variable point redemption</strong> method, the system prompts the cashier for the number of points to redeem. Then, the system calculates the point discount given according to the number of points entered and the point redemption rate defined in the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a>. Based on this point redemption method, the <b>Point redemption</b> function redeems points only on point program <em>1.</em> To redeem on another point program, a new function must be created. The point discount decreases the item amount.</p>
+
+      <h3><a name="auto"></a>Automatic point redemption</h3>
+
+      <p>When the automatic point redemption is set up, the <b>Point redemption</b> function is automatically called by the system each time an item is sold.</p>
+
+      <p>In the <a href="../../Common/Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a>, select <em>Automatic redeem</em> in the <b>Redeem</b> field. Then, in the System.ini file, specify the point programs for which the auto-redeem process has to be called automatically.</p>
+
+      <p>When the automatic point redemption is set up, the system first uses the redemption information defined in the <a href="../../Common/Item_maintenance/Price_Table.htm"><b>Price</b> table</a>. If no redemption information is set up in the <b>Price</b> table, the system will use the defined point redemption rate. If no point redemption rate is defined, the system does not automatically give any point discount on the item.</p>
+
+      <h5>Redemption information in the Price table</h5>
+
+      <p>The corresponding point discount defined in the <b>Price</b> table is automatically given when the item is sold if the customer has enough points. If a discount <u>and</u> a free value are defined for the item, the system automatically gives the best point discount (item for free or redemption discount) according to the number of points the customer has.</p>
+
+      <p>For example, an item gives a discount of <i>$1.00</i> for <i>100</i> points or the item for free for <i>400</i> points. If the customer has <i>600</i> points, they will automatically have the item for free (and <i>400</i> points will be redeemed).<br>
+      If the customer has <i>200</i> points, they will automatically have a point discount of <i>$1.00</i> (and <i>100</i> points will be redeemed).<br>
+       If the customer has <i>75</i> points, they will not have any point discount.</p>
+
+      <p>The point discount decreases the item amount. The points are redeemed in the point program defined in the <b>Program</b> field.</p>
+
+      <h5>Point redemption rate</h5>
+
+      <p>The maximum point discount is automatically given when an item is sold according to the number of points the customer has and the point redemption rate defined (if there is no point discount defined in the <b>Price</b> table).</p>
+
+      <p>For example, the price of an item is <i>$2.00</i> and the point redemption rate is <i>10</i>. If the customer has <i>3000</i> points, they will automatically have a point discount of <i>$2.00</i> (thus the item for free, and <i>2000</i> points will be redeemed). If the customer has <i>750</i> points, they will automatically have a point discount of <i>$0.75</i> (and <i>750</i> points will be redeemed), etc.</p>
+
+      <p>The point discount decreases the item amount. The points are redeemed in the point program used.</p>
+
+      <p class="Note"><b>NOTES:<br>
+      </b>The points redeemed on functions (like tenders) are automatically redeemed when the functions are called.<br>
+      A point discount cannot be given more than once on an item (or an entry).<br>
+       If the <span style="FONT-STYLE: normal">REDEEMx</span> parameter is set up in the <a href="../../Common/Item_maintenance/POS_Table.htm#URL"><b>URL</b> field</a> of the <a href="../../Common/Item_maintenance/POS_Table.htm"><b>POS</b> table</a> for an item, points are redeemed automatically on this item even if the automatic point redemption is not set up.</p>
+
+      <h5>Customer</h5>
+
+      <p>The points redeemed are subtracted from the point balances of the customer entered for each transaction. The Point redemption is allowed if the customer has enough points. If points are given even if no customer is entered in the transaction, the Point redemption has to be done in the same transaction since the unused points cannot be kept in a point balance. If they are not used, they are lost.</p>
+
+      <p>If the customer is entered at the end of the transaction, the system will automatically reset the points redeemed for all items, sub-department sales and department sales. However, this does not apply to points redeemed using a function (with the REDEEM parameter). In this case, the cashier needs to void the operation and reperform it. So the best way to proceed when points are redeemed using a function is to enter the customer before the function is used.</p>
+
+      <h3><a name="Receipt"></a>Receipt</h3>
+
+      <p>The points redeemed and the point balances are automatically printed on the receipt for all point programs the customer is member of. The information is also available in the Electronic journal.</p>
+
+      <h3><a name="Reports"></a>Reports</h3>
+
+      <p>The eSuite software has some reports related to points, like the point balance at a certain date, point movement, etc. These reports are related to the main point program (<em>1</em>), except for the point balance that shows the current point balance of all point programs at the specified date.</p>
+
+      <p class="Note"><strong>NOTE:</strong> Since the secondary point programs are normally used to count items and give the n<sup>th</sup> item for free or for special promotions like the Pampers program, there is no need for a statement on the points for these point programs, neither explicit details on the points given and redeemed.</p>
+
+      <h3>Customers</h3>
+
+      <p>The system no longer needs a customer to be entered in the transaction to give and redeem points. In this case, the points given in a transaction must be redeemed in that transaction, since they cannot be added to the customer's point balances. The unused points are lost.</p>
+
+      <p>The way the system works when no customer is entered in the transaction is that the points given on the previous items can be redeemed on the current item. This means that the points given on an item cannot be redeemed on it. As soon as a second item is sold, the points given by the first item can be redeemed on this second item, and so on. However, if points are redeemed when a function is used, like a tender, the points given by all items sold can be redeemed, including the last one.</p>
+
+      <p>In an automatic point redemption mode, the points given by the first item are automatically redeemed for a point discount on the second item, the points given by the second item are automatically redeemed for a point discount on the third item and so on , until the end of the transaction.</p>
+
+      <p>The same thing occurs when a customer is entered in the transaction, except that the unused points are added to the point balance of the customer, or more points may be redeemed if the customer already has points in their point balance.</p>
+
+      <h5><b>Customer change</b></h5>
+
+      <p>If points are redeemed for point discounts and the cashier changes the current customer entered in the transaction, the system automatically resets the point discounts that affect the items, the sub-department entries and the department entries. However, the point redemption done using a function <u>is not reversed</u>, because to remove the point redemption, the operation must be voided. So the new customer has to assume this point redemption. For example, a point redemption is set up on the store coupon tender, meaning that it costs points to get a store coupon. If the customer is changed, the store coupon stays in the transaction along with its associated point redemption.</p>
+
+      <p class="alert alert-warning"><b>NOTE:</b>For details on points, see the <a href="Point_redemption_examples.htm">Preferred shopper - Point redemption - Examples</a> and <b><a href="Points.htm">Preferred shopper - Points</a></b> topics.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

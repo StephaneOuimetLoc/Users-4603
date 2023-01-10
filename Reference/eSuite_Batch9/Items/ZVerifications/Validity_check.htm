@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Item Validity Check</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Item Validity Check <!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Validity Check <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Validity check</b> option is used to identify the items in the database for which certain information is missing. The report returns the list of all items in violation of validity checks.</p>
+
+      <p>To access the validity check tool:</p>
+
+      <ol>
+        <li>In the launcher, click on <strong>Items</strong>.</li>
+
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens, displaying the item-related options.</li>
+
+        <li>Click on <strong>Validity check.</strong></li>
+      </ol>
+
+      <p><img src="Validity_check_files/start_window.png"></p>
+
+      <h2>The Validity check wizard</h2>
+
+      <p>The <strong>Validity check</strong> wizard offers criteria selection that includes department, category, vendor, items, sellability validators, quality validators. The <strong>More options</strong> button adds further criteria on main item, POS, price and cost information.</p>
+
+      <p><img src="Validity_check_files/wizard.png"></p>
+
+      <h2>Wizard queries</h2>
+
+      <p>Here is the description of what the different queries in the <strong>Validity check</strong> wizard will list in the <strong>Validity check</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 332px">QUERY</th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+
+          <tr>
+            <td colspan="2"><strong>Sellability validators</strong></td>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 332px"><strong>Missing in Main item</strong></td>
+
+          <td>Lists items with a POS or price record, but no record in the <strong>Main item</strong> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Missing POS record</strong></td>
+
+          <td>Lists items with a main item record, but no record in the <strong>POS</strong> or <strong>Price</strong> tables.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Missing Price record</strong></td>
+
+          <td>Lists items with a main item record, but no record in the <strong>POS</strong> or <strong>Price</strong> tables.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad or missing sub-department/department</strong></td>
+
+          <td>Lists items that are not linked to a sub-department/department.<br>
+           It also displays items linked to an invalid sub-department/department (one that does not exist in the database).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad tare link</strong></td>
+
+          <td>Lists items linked to an invalid tare value.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Zero price (and F1120 not EZ)</strong></td>
+
+          <td>Lists items with no active price or an active price that is equal to zero ($0.00).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Conflict between main and alternate code</strong></td>
+
+          <td>Lists items whose main code is used as an alternate code for a different item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad link in the Kit table</strong></td>
+
+          <td>Used for kits that link two (2) items of the same type, such as a carton of cigarettes. In this case, the <b>Bad link in the Kit table</b> query verifies if the number of cigarette packs in the kit matches the size of the case that was sold.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad link to scale text</strong></td>
+
+          <td>Lists items that are linked to invalid scale text information.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Show like code with different price</strong></td>
+
+          <td>Lists items whose price is different from that of their like codes.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Quality validators</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Missing cost record</strong></td>
+
+          <td>Lists items with no cost record.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Missing location record</strong></td>
+
+          <td>Lists items with no location record.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad or missing category</strong></td>
+
+          <td>Lists items that are not linked to a category.<br>
+          It also displays items linked to an invalid category (one that does not exist in the database).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad or missing family</strong></td>
+
+          <td>Lists items that are not linked to a family.<br>
+          It also displays items linked to an invalid family (one that does not exist in the database).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad or missing classification</strong></td>
+
+          <td>Lists items that are not linked to a classification.<br>
+          It also displays items linked to an invalid classification (one that does not exist in the database).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad report code</strong></td>
+
+          <td>Lists items linked to an invalid report code (one that does not exist in the database).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Bad or missing vendor ID</strong></td>
+
+          <td>Lists items that are not linked to a vendor.<br>
+          It also displays items linked to an invalid vendor (one that does not exist in the database).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Blank vendor code</strong></td>
+
+          <td>Lists items with no vendor code in the cost record.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Authorized vendor flag verification</strong></td>
+
+          <td>Lists items with no authorized vendor code in the cost table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Zero cost</strong></td>
+
+          <td>Lists items with the cost equal to zero ($0.00).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Kit or split item with inventory</strong></td>
+
+          <td>Used for kits and split items that link two (2) items of the same type and have inventory.<br>
+          For a carton of cigarettes, the <b>Kit or split item with inventory</b> query verifies if the number of cigarette packs in the kit matches the size of the case specified in the inventory.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 332px"><strong>Validate for latest changes only</strong></td>
+
+          <td>When checked, the report will only list the most recent changes to items.</td>
+        </tr>
+      </table>
+
+      <h2>The Validity check report</h2>
+
+      <p>The report returns the list of all items in violation of validity checks.</p>
+
+      <p>To generate the <strong>Validity check</strong> report:</p>
+
+      <ol>
+        <li>In the wizard, check all relevant search criteria:<br>
+         <img style="padding-top:2px; padding-bottom:2px" src="Validity_check_files/wizard_selected_criteria.png"></li>
+
+        <li>Click <strong>Execute</strong>.<br>
+         The report will list all items in violation of validity checks, according to the selected criteria:<br>
+         <img style="padding-top:2px; padding-bottom:2px" src="Validity_check_files/report.png"></li>
+      </ol>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Edit</strong> provides access to the item table where bad or missing information must be corrected or added.</li>
+      </ul>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

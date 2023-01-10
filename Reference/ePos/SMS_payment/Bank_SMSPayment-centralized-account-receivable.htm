@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- #BeginTemplate "../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document"><!-- Title/Keywords edit on new documents -->
+    <!-- #BeginEditable "doctitle" -->
+    <!-- #EndEditable -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Module - SMSPayment Centralized Account Receivable - POS Operations</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->Module - SMSPayment Centralized Account Receivable - POS Operations <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->Bank_SMSPayment <span class="badge badge-warning">Unmanaged</span> <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The ability to do AR transactions using SMSPAY allows us to manage the balance of the customer in SMSPayment.</p>
+
+      <h2>Centralized account creation</h2>
+
+      <p>Before being able to use a centralized A/R account, the first thing to do is to activate it to create a new account:</p>
+
+      <ol>
+        <li>In Option, select SMSPayment</li>
+
+        <li>Select Centralized account creation (FCT 6130)</li>
+
+        <li>Enter <strong></strong>Card number</li>
+      </ol>
+
+      <h2>Centralized balance inquiry</h2>
+
+      <p>Any time after a centralized AR account is created, it is possible to get its balance. The centralized balance inquiry will retrieve the account balance:</p>
+
+      <ol>
+        <li>In Option, select SMSPayment</li>
+
+        <li>Select Centralized balance inquiry (FCT 6131)</li>
+
+        <li>Enter Card number</li>
+
+        <li>The bank stub should show the 'current balance'</li>
+      </ol>
+
+      <h2>Centralized payment</h2>
+
+      <p>A centralized AR account can be used for a partial or complete payment of a sale. For configuration on partial payment and risk limits, please see the members document <em>SMSPayment - Centralized Account Receivable</em>:</p>
+
+      <ol>
+        <li>Begin the transaction and sell item(s)</li>
+
+        <li>In Option, select SMSPayment</li>
+
+        <li>Select Centralized payment (FCT 6132)</li>
+
+        <li>Enter amount of payment to be applied to the account</li>
+
+        <li>Enter Card number</li>
+
+        <li>If a partial payment, select tender to be used to pay the balance</li>
+      </ol>
+
+      <h2>Centralized Adjustment</h2>
+
+      <p>This function is used if adjustments need to be done to a centralized AR account.</p>
+
+      <ol>
+        <li>In Option, select SMSPayment</li>
+
+        <li>Select Centralized adjustment (FCT 6133)</li>
+
+        <li>Enter amount of adjustment</li>
+
+        <li>Enter car number</li>
+
+        <li>Select Tender (cash)</li>
+
+        <li>Bank stub should show the adjustment amount and new balance</li>
+      </ol>
+
+      <h2><a name="gift_card_adjustment"></a>Centralized pre-auth</h2>
+
+      <p>This function temporarily adds the pre-authorised amount to the account balance. The pre-authorization can either be completed (FCT 6136) or canceled by means of a timeout or by cancelling the order. For configuration on timeout, please see the members document <em>SMSPayment - Centralized Account Receivable</em> for information on:</p>
+
+      <ol>
+        <li>In Option, select SMSPayment</li>
+
+        <li>Select Centralized pre-auth (FCT 6135)</li>
+
+        <li>Enter amount of pre-auth</li>
+      </ol>
+
+      <h2>&nbsp;Centralized completion</h2>
+
+      <p>Following a pre-authorization, you can complete the pre-auth using the Centralized Completion as long as you have not surpassed the timeout configured or it has not been cancelled. Once the pre-auth is completed, the account balance will be updated with the actual charge amount instead of the pre-authorization charge amount.</p>
+
+      <ol>
+        <li>Start a transaction</li>
+
+        <li>In Option, select SMSPayment</li>
+
+        <li>Select Centralized payment (FCT 6136)</li>
+
+        <li>Receipt should show updated balance with charged amount (not pre-auth amount) and will be type 'Pre-auth complete".</li>
+      </ol>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

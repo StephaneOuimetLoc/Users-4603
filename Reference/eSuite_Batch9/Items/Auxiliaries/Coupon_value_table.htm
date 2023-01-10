@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Coupon Value Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Coupon Value Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxiliaries &gt; UCC Coupon Value Table <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>UCC Coupon value</strong> table contains the UCC 5 standard definitions, used with the vendor coupons. It is already filled in according to the UCC 5 standards and does not need to be changed, unless the UCC 5 standards change.</p>
+
+      <div class="Note">
+        <b>NOTES:</b> 
+
+        <ul>
+          <li>The <b>Coupon value</b> table is used when UCC prefix 5 coupons are scanned according to the default standards (entries <em>1</em> to <em>99</em>).</li>
+
+          <li>
+            prefix 99 coupons also use the default standards (entries <em>1</em> to <em>99</em>) of the <b>Coupon value</b> list. See the UCC/EAN prefix 99 coupons information for more details. 
+
+            <ul>
+              <li><strong>UCC/EAN</strong> prefix 98 coupons use the entries <em>101</em> to <em>199</em> of the <b>Coupon value</b> list. These entries must be added according to the store's needs. See the UCC/EAN prefix 98 coupon information for more details.</li>
+            </ul>
+          </li>
+        </ul>
+        <br>
+      </div>
+
+      <h3>Displaying the UCC Coupon value table</h3>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Auxiliary tables</strong>: the <strong>Start</strong> window opens in the <strong>Auxiliary</strong> work area.</li>
+
+        <li>Click on <strong>UCC Coupon value table</strong>: the tab opens in the same window, displaying the <strong>Coupon Value List</strong>.</li>
+
+        <li>To modify an existing coupon value record (entries 101 to 199), select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu: the <strong>Coupon value</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new coupon value record (entries 101 to 199), click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Coupon value</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><img style="border-style:none" class="Text" src="Coupon_value_table_files/coupon_value_table.png" usemap="#coupon_value_table"> <map name="coupon_value_table">
+            <area shape="rect" coords="11, 114, 63, 142" href="#Target">
+            <area shape="rect" coords="72, 114, 134, 141" href="#Code">
+            <area shape="rect" coords="142, 114, 391, 142" href="#Descriptor">
+            <area shape="rect" coords="11, 165, 64, 191" hre="" href="#Min">
+            <area shape="rect" coords="72, 165, 173, 192" href="#Value">
+            <area shape="rect" coords="12, 214, 388, 240" href="#Method">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Coupon value</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
+          It is a required field used to uniquely identify records in the <strong>Coupon Value list</strong>.<br>
+          The default value of the Target field is <em>PAL</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Code">Code</a></strong></td>
+
+          <td>The <strong>Code</strong> field contains the code that identifies the UCC 5 standard.<br>
+          It corresponds to the last two digits of the UPC on the vendor coupon (excluding the check digit).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Descriptor">Descriptor</a></strong></td>
+
+          <td>The <strong>Descriptor</strong> field contains the description of the UCC 5 standard.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Min">Min</a></strong></td>
+
+          <td>The <strong>Minimum</strong> field contains the minimum quantity of the UCC 5 standard, required to obtain the coupon.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Value">Value</a></strong></td>
+
+          <td>The <strong>Value</strong> field contains the value of the UCC 5 standard that corresponds to the coupon discount value.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Method">Method</a></strong></td>
+
+          <td>The <strong>Method</strong> field contains the code that defines the behavior of the UCC 5 standard.<br>
+          For details, see the <a href="#The_Method_field"><strong>Method</strong> field section</a> below.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Method_field">The Method field</a></h3>
+
+      <p>The <b>Method</b> field contains the code that defines the behavior of the UCC 5 standard.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><img class="Text" src="Coupon_value_table_files/method_list.png"></td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p>To enter a method, type its code in the <strong>Method</strong> field or click to open the field menu and make a selection.</p>
+
+      <p>The available methods are:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><strong>METHOD</strong></th>
+
+            <th><strong>BEHAVIOUR</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 226px"><strong>1.<br>
+           Manual value entry</strong></td>
+
+          <td>
+            The <b>Manual value entry</b> specifies that the value of the coupon is entered manually by the cashier.<br>
+            <br>
+            The items are matched using the manufacturer code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details. 
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> For a special promotion, the customer gets a new item for free.
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px; height: 165px;"><b>2.<br>
+           Buy x of same item, get y free</b></td>
+
+          <td style="height: 165px">
+            The <b>Buy x of same item, get y free</b> method specifies that <em>y</em> items are given for free when <em>x</em> of the same item are bought by the customer in a transaction. The item given for free is the same as the items bought. 
+
+            <p class="List">The items are matched using the manufacturer code and the family code. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="NoteList"><b>NOTE:</b> The <b>Buy x of same item, get y free</b> method is currently <em>not effective</em>, i.e. the system <em>does not verify</em> whether the same items are bought. It will be effective in a future version of the software.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> The customer gets <i>1 bag of Oreos for free</i> when he buys <i>2 bags of Oreos</i>. A coupon can be used for every <i>2 bags of Oreos</i> bought (see the note).
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><b>3.<br>
+           Buy x or more of same item,<br>
+           get y free</b></td>
+
+          <td>
+            The <b>Buy x or more of same item, get y free</b> method specifies that y items are given for free when <i>x or more</i> of the same item are bought by the customer in a transaction. The items given for free are the same as the items bought. 
+
+            <p class="List">The items are matched using the manufacturer code and the family code. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="NoteList"><b>NOTE:</b> The <b>Buy x or more of same item, get y free</b> method is currently <em>not effective</em>, i.e. the system <em>does not verify</em> whether the same items are bought, and a coupon is accepted each time x items are bought. It will be effective in a future version of the software.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> The customer gets <i>1 bag of Oreos for free</i> when he buys <i>2 or more bags of Oreos</i>. Even if he buys <i>4 bags of Oreos</i>, only <i>1 free bag of Oreos</i> will be given (see the note).&nbsp;
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><b>4.<br>
+           Buy x, get y free</b></td>
+
+          <td>
+            The <b>Buy x, get y free</b> method specifies that <em>y</em> items are given for free when <i>x</i> items of the same manufacturer are bought by the customer in a transaction. The items given for free are the cheapest ones. 
+
+            <p class="List">The items are matched using the manufacturer code and the family code. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> When the customer buys <i>2</i> <em>bags of</em> <i>Oreos</i> (same item), he gets <i>one</i> for free.<i><br>
+              </i>or<i><br>
+              </i>When the customer buys <i>1</i> <em>bag of</em> <i>Oreos</i> and <em>1</em> <em>box of</em> <i>Christie crackers</i> (different items), he gets the cheaper one for free.
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>5.<br>
+           Buy x or more, get y free</strong></td>
+
+          <td>
+            The <b>Buy x or more, get y free</b> method specifies that <em>y</em> items are given for free when <i>x</i> or more items of the same manufacturer are bought by the customer in a transaction. The items given for free are the cheapest ones. 
+
+            <p class="List">The items are matched using the manufacture code and the family code. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="NoteList"><b>NOTE:</b>The <b>Buy x or more, get y free</b> method is currently <em>not effective</em>, i.e. a coupon is accepted each time x items are bought. It will be effective in a future version of the software.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> When the customer buys <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes, he gets the cheaper one for free. Even if he buys</i> 4 items  among <i>Oreo bags</i> and Christie crackers boxes, only <i>1 item for free</i> will be given (see the note).
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>6.</strong> <b><br>
+          Get y amount off</b></td>
+
+          <td>
+            The <b>Get y amount off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given when <i>1</i> item is bought by the customer in a transaction. 
+
+            <p class="List">The item is matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> The customer gets <i>$0.50 off</i> when he buys an <i>Oreo bag</i>. A coupon can be used for each <i>Oreo bag</i> bought.
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px; height: 119px;"><strong>7. <b><br>
+          Buy x, get y amount off</b></strong></td>
+
+          <td style="height: 119px">
+            The <b>Buy x, get y amount off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given when <i>x</i> items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
+
+            <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> When the customer buys <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i>, he gets <i>$0.50 off</i> on the cheaper one. A coupon can be used each time <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i> are bought.
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>8.<br>
+          <b>Buy x or more, get y amount off</b></strong></td>
+
+          <td>
+            The <b>Buy x or more, get y amount off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given when <i>x or more</i> items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
+
+            <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="NoteList"><b>NOTE:</b> The <b>Buy x or more, get y amount off</b> method is currently <em>not effective</em>, i.e. a coupon is accepted each time x items are bought. It will be effective in a future version of the software.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> When the customer buys <i>2 items or more</i> among <i>Oreo bags</i> and <i>Christie crackers boxes</i>, he gets <i>$0.50 off</i> on the cheapest one. Even if he buys <i>4</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i>, only <i>$0.50 off</i> will be given (see the note).
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>9.<br>
+          <b>Buy x or more of same item,<br>
+           get y amount off</b></strong></td>
+
+          <td>
+            The <b>Buy x or more of same item, get y amount off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given when <i>x or more</i> of the same item are bought by the customer in a transaction. 
+
+            <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="NoteList"><b>NOTE:</b> The <b>Buy x or more of same item, get y amount off</b> method is currently <em>not effective</em>, i.e. the system <em>does not verify</em> that same items are bought, and a coupon is accepted each time x items are bought. It will be effective in a future version of the software.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> The customer gets <i>$0.50 off</i> when he buys <i>2 or more Oreo bags</i>. Even if he buys <i>4 Oreo bags</i>, only <i>$0.50 off</i> will be given (see the note).
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>10.<br>
+          <b>Buy x of same item,<br>
+           get y amount off</b></strong></td>
+
+          <td>
+            The <b>Buy x of same item, get y amount off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given when <i>x</i> of the same item are bought by the customer in a transaction. 
+
+            <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="NoteList"><b>NOTE:</b> The <b>Buy x of same item, get y amount off</b> method is currently <em>not effective</em>, i.e. the system <em>does not verify</em> that same items are bought. It will be effective in a future version of the software.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> The customer gets <i>$0.50 off</i> when he buys <i>2 Oreo bags</i>. A coupon can be used for each <i>2 Oreo bags</i> bought (see the note).
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>11.<br>
+          <b>Buy x, get y percent off</b></strong></td>
+
+          <td>
+            The <b>Buy x, get y percent off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is considered as a percentage of discount given when <i>x</i> items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
+
+            <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="List"><em>Example</em><br>
+            When the customer buys <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i>, he gets <i>5% off</i> on the cheaper one. A coupon can be used each time <i>2</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i> are bought.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>12.<br>
+          </strong><b>Buy x or more, get y percent off</b></td>
+
+          <td>
+            The <b>Buy x or more, get y percent off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is considered as a percentage of discount given when <i>x</i> or more items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
+
+            <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="NoteList"><strong>NOTE:</strong> The <b>Buy x or more, get y percent off</b> method is currently <em>not effective</em>, i.e. a coupon is accepted each time x items are bought. It will be effective in a future version of the software.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> When the customer buys <i>2 or more</i> items among <i>Oreo bags</i> and <i>Christie crackers boxes</i>, he gets <i>5% off</i> on the cheaper one. Even if he buys <i>4</i> among <i>Oreo bags</i> and <i>Christie crackers boxes</i>, only <i>$0.50 off</i> will be given (see the note).
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>13.<br>
+          <b>Buy x, get y amount per pound off</b></strong></td>
+
+          <td>
+            The <b>Buy x, get y amount per pound off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given per pound when <i>x</i> pounds of items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
+
+            <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> The customer buys 10 pounds of meat, he gets $0.20&nbsp;off per pound on these 10 pounds.
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 226px"><strong>14.</strong><br>
+          <b>Buy x or more, get y amount per pound off</b></td>
+
+          <td>
+            The <b>Buy x or more, get y amount per pound off</b> method specifies that the discount value (<i>y</i>) entered in the <a href="#Value"><b>Value</b> field</a> is given per pound when <i>x or more</i> pounds of items of the same manufacturer are bought by the customer in a transaction. The coupon discount is given on the cheapest item. 
+
+            <p class="List">The items are matched using the manufacture code. The family code may be added to the matching. See the <b>Printed coupon matching</b> topic for more details.</p>
+
+            <p class="NoteList"><b>NOTE:</b> The Buy x or more, get y amount per pound off method is currently <em>not effective</em>, i.e. a coupon is accepted each time x pounds are bought. It will be effective in a future version of the software.</p>
+
+            <div class="alert alert-success">
+              <b>EXAMPLE:</b> The customer buys at least 5 pounds of meat, he gets $0.10 off per pound.
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

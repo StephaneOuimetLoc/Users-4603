@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Printed Coupon Programming</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Printed Coupon Programming <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxiliaries <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Printed coupons are vouchers used in future transactions; when the criteria of the coupon are respected, the coupon is printed at the end of the transaction instead of being subtracted from the transaction total.</p>
+
+      <p>Printed coupons are added as new entries (registrations) in the transaction, with the mention <em>This is a printed coupon</em>.</p>
+
+      <p>By default, the printed coupons are posted in the totalizer <span>3520</span> (function <span>552</span>). To use another function, enter the function number in the <a href="../../POS_Table.htm#Add_using_function"><strong>Add using function</strong> field</a> in the <a href="../../POS_Table.htm"><b>POS</b> table</a>.</p>
+
+      <div class="Note">
+        <b>NOTES:</b> 
+
+        <ul>
+          <li>The coupons are printed on the coupon printer; be sure the coupon printer is programmed and compatible with the coupon format.</li>
+
+          <li>The coupons are not printed while in the training mode.</li>
+        </ul>
+      </div>
+
+      <h2>Printed coupon example</h2>
+
+      <p>The <strong>Coupon wizard</strong> is used to program the criteria that must be respected for the printed coupons to be applied.</p>
+
+      <p>Below are the steps for programming a <em>Cents off</em> printed coupon.</p>
+
+      <h4>Buy 5 pounds (or kilograms) of ground beef for a total of $50.00 in the meat sub-department in the transaction, get $5.00 off on the ground beef item</h4>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="3">&nbsp;1. Add the electronic coupon criteria in the <strong>main section</strong> of the coupon wizard.<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Value</strong> field: select <em>Cents off</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Discount</strong> field: enter <em>5</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Coupon type</strong> field: select <em>Printed</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Sub-dpt.</strong> field: select the meat sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="157" src="Printed_coupons_programming_files/main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add criteria related to the item sales.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Equal to</strong> field: enter the <em>ground beef item UPC</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Minimum measure</strong> field: select <em>Weight</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Minimum value</strong> field: enter <em>5</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2">Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+           This method (see <em><a href="#Data_view">Data view</a></em> in <strong>Criteria tab</strong>) forces the system to apply the electronic coupon discount on the ground beef item.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Click <strong>OK</strong> to confirm the changes.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="441" src="Printed_coupons_programming_files/add_criteria_item_sales.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">3. In the <strong>Details</strong> tab:&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Coupon template</strong> field: click and select the coupon format.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="327" src="Printed_coupons_programming_files/coupon_details.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">4. In the <strong>Descriptions</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px; height: 12px;">
+          </td>
+
+          <td style="height: 12px;"><strong>Expanded description</strong>: enter the expanded description of the promotion.</td>
+
+          <td style="width: 423px; height: 12px;">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="326" src="Printed_coupons_programming_files/coupon_descriptions.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">5. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to&nbsp;add criteria related to the meat sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Type</strong> field: select <em>Sub-department</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Equal to</strong> field: select the meat sub-department.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Minimum measure</strong> field: select <em>Dollar</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><strong>Minimum value</strong> field: enter <em>50.</em>&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">Click <strong>OK</strong> to confirm the changes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2"><img class="Text" height="440" src="Printed_coupons_programming_files/add_criteria_sub-department.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px" colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="3">6. Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2">The system will automatically assign the record a <strong>coupon code</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2"><img class="Text" height="156" src="Printed_coupons_programming_files/coupon_code.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2">The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em><a name="Data_view">Data view</a></em>):</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td colspan="2"><img class="Text" height="325" src="Printed_coupons_programming_files/criteria_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="326" src="Printed_coupons_programming_files/criteria_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p class="List">In this example:</p>
+
+      <ul>
+        <li>The customer gets <i>$5.00</i> off when they buy <i>5</i> pounds (or kilograms) of ground beef for a total of <i>$50.00</i> in the meat sub-department in the transaction.</li>
+
+        <li>Even if the customer buys <i>10</i> pounds (or kilograms) of ground beef for a total of <i>$100.00</i> in the meat sub-department, they will only get <i>$5.00</i> off. To repeat the electronic coupon, select <i>Based on validated criteria</i> in the <strong>Multiplication and accumulation</strong> field (<strong>Add criteria</strong> window of the coupon wizard) for each criterion that must be met.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="Printed_coupons_examples.htm">Go to Printed coupons - Examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

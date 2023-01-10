@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Future POS Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Batches - Future POS Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Future POS</b> table is used to enter the future POS sales information.</p>
+
+      <h2>Displaying the Future <b>POS</b> table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batches</strong> work area.</li>
+
+        <li>Click on <strong>Item list</strong>: the <strong>Items - general list</strong> wizard opens in a new tab.</li>
+
+        <li>Enter the search criteria for the item to add to the future POS batch.</li>
+
+        <li>Click on <strong>Execute</strong>: results will display in the <strong>Items - General list</strong> window.</li>
+
+        <li>Right-click on a record and select <strong>POS</strong>: the <strong>Future POS information</strong> table <strong></strong>opens on the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Future_POS_table_files/future_POS_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Future POS</strong> table is divided in three parts: the <strong>main section</strong>, the <strong>tab section</strong> and the <strong>table grid</strong>.</p>
+
+      <h3><strong>Main section</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img"><img src="Future_POS_table_files/main_section.png" usemap="#main_section" class="Text" style="border-style:none"> <map name="main_section">
+            <area shape="rect" coords="7, 91, 123, 115" href="#Batch">
+            <area shape="rect" coords="9, 146, 93, 172" href="#Target">
+            <area shape="rect" coords="96, 145, 441, 172" href="#POS_description">
+            <area shape="rect" coords="10, 191, 243, 217" href="#Sub-department">
+            <area shape="rect" coords="10, 242, 81, 268" href="#Bottle_link">
+            <area shape="rect" coords="81, 241, 161, 268" href="#Other_flags">
+            <area shape="rect" coords="163, 241, 242, 267" href="#WIC_alias">
+            <area shape="rect" coords="9, 291, 135, 317" href="#Divisor">
+            <area shape="rect" coords="134, 291, 196, 317" href="#Tare_link">
+            <area shape="rect" coords="195, 291, 240, 317" href="#Proportional_tare">
+            <area shape="rect" coords="252, 177, 341, 198" href="#Follow_sub-department">
+            <area shape="rect" coords="252, 198, 341, 220" href="#FSA_eligible">
+            <area shape="rect" coords="253, 227, 342, 247" href="#WIC_item">
+            <area shape="rect" coords="253, 247, 343, 271" href="#Food_stamp">
+            <area shape="rect" coords="254, 277, 325, 298" href="#Scalable">
+            <area shape="rect" coords="253, 298, 324, 320" href="#Manual">
+            <area shape="rect" coords="362, 177, 439, 199" href="#Taxable_1">
+            <area shape="rect" coords="362, 199, 439, 218" href="#Taxable_2">
+            <area shape="rect" coords="363, 218, 441, 238" href="#Taxable_3">
+            <area shape="rect" coords="364, 238, 443, 257" href="#Taxable_4">
+            <area shape="rect" coords="363, 258, 443, 278" href="#Taxable_5">
+            <area shape="rect" coords="362, 279, 444, 297" href="#Taxable_6">
+            <area shape="rect" coords="362, 298, 443, 321" href="#Taxable_7">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3><strong>Tab section</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img" style="width: 708px"><img class="Text" src="Future_POS_table_files/restriction_tab.png" usemap="#restriction_tab" style="border-style:none"> <map name="restriction_tab">
+            <area shape="rect" coords="7, 70, 202, 94" href="#Restrictor">
+            <area shape="rect" coords="8, 110, 157, 133" href="#Status">
+            <area shape="rect" coords="8, 151, 80, 173" href="#Customer_age">
+            <area shape="rect" coords="84, 151, 156, 174" href="#Cashier_age">
+            <area shape="rect" coords="210, 58, 301, 76" href="#Stop_discount">
+            <area shape="rect" coords="210, 75, 301, 91" href="#Not_for_sale">
+            <area shape="rect" coords="210, 91, 303, 107" href="#Not_in_net">
+            <area shape="rect" coords="210, 108, 302, 124" href="#Force_price">
+            <area shape="rect" coords="211, 124, 301, 143" href="#Force_quantity">
+            <area shape="rect" coords="305, 58, 390, 76" href="#Stop_quantity">
+            <area shape="rect" coords="307, 76, 390, 92" href="#Visual_verify">
+            <area shape="rect" coords="307, 91, 388, 107" href="#Price_override">
+            <area shape="rect" coords="306, 107, 389, 127" href="#Stop_repeat">
+            <area shape="rect" coords="305, 127, 388, 143" href="#Stop_refund">
+          </map> </td>
+
+          <td class="Img" style="width: 709px"><img class="Text" src="Future_POS_table_files/coupon_tab.png" usemap="#coupon_tab" style="border-style:none"> <map name="coupon_tab">
+            <area shape="rect" coords="7, 72, 66, 94" href="#Family">
+            <area shape="rect" coords="68, 71, 202, 94" href="#Coupon_type">
+            <area shape="rect" coords="10, 112, 202, 136" href="#Promotion_ID">
+            <area shape="rect" coords="9, 155, 202, 179" href="#Ticket">
+            <area shape="rect" coords="212, 59, 299, 75" href="#Store_coupon">
+            <area shape="rect" coords="215, 75, 286, 91" href="#Vendor">
+            <area shape="rect" coords="213, 101, 295, 117" href="#Multipliable">
+            <area shape="rect" coords="216, 117, 276, 133" href="#Reject">
+            <area shape="rect" coords="302, 59, 383, 75" href="#Print_coupon">
+            <area shape="rect" coords="304, 76, 384, 92" href="#Bottle_return">
+            <area shape="rect" coords="304, 100, 384, 116" href="#Rain_check">
+            <area shape="rect" coords="305, 116, 383, 132" href="#Capture_data">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center; width: 708px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align: center; width: 709px;">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img" style="width: 708px"><img class="Text" src="Future_POS_table_files/miscellaneous_tab.png" usemap="#miscellaneous_tab" style="border-style:none"> <map name="miscellaneous_tab">
+            <area shape="rect" coords="9, 71, 286, 95" href="#Alternate_description">
+            <area shape="rect" coords="294, 71, 372, 95" href="#Creation_date">
+            <area shape="rect" coords="9, 112, 110, 137" href="#Normalized_UOM">
+            <area shape="rect" coords="118, 113, 187, 137" href="#PLU">
+            <area shape="rect" coords="193, 113, 247, 137" href="#Quantity_for_rent">
+            <area shape="rect" coords="253, 113, 315, 136" href="#Commission">
+          </map> </td>
+
+          <td class="Img" style="width: 709px"><img class="Text" src="Future_POS_table_files/advanced_tab.png" usemap="#advanced_tab" style="border-style:none"> <map name="Advanced_tab">
+            <area shape="rect" coords="8, 70, 203, 94" href="#Behavior_script_type">
+            <area shape="rect" coords="213, 70, 389, 95" href="#Add_function">
+            <area shape="rect" coords="9, 117, 388, 141" href="#URL">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center; width: 708px;">* Click on a field to get information on it.</td>
+
+          <td class="Img" style="text-align: center; width: 709px;">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p>&nbsp;</p>
+
+      <h3><strong>Future POS table grid</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img" style="text-align: center"><img class="Text" style="border-style:none" src="Future_POS_table_files/table_grid.png" usemap="#table_grid"> <map name="table_grid">
+            <area shape="rect" coords="8, 7, 28, 27" href="">
+            <area shape="rect" coords="8, 7, 28, 27" href="">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Future POS</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+
+          <tr>
+            <th colspan="2"><strong>Main section</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Batch">Batch</a></strong></td>
+
+          <td>The <strong>Batch</strong> field contains the batch identifier.<br>
+          Not editable. Its value comes from the <strong><a href="../Batch_header_table/Batch_header_table.htm#Batch_ID">Batch ID</a></strong> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future POS record is added, linking the future POS record to the current batch.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier, i.e. the store group.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Target">target</a> value of the current POS record is automatically displayed.<br>
+          Not editable unless the <strong>Multi target</strong> option in the <em>System.ini file</em> is selected.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="POS_description">POS description</a></strong></td>
+
+          <td>The <strong>POS description</strong> field contains the future description of the item displayed on the POS screen and/or printed on the receipt.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#POS_description">POS description</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Sub-department">Sub-department</a></strong></td>
+
+          <td>The <strong>Sub-department</strong> field links the item to a future sub-department.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Sub-department">sub-department</a> number of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Bottle_link">Bottle link&nbsp;</a></strong> </td>
+
+          <td>The <strong>Bottle link</strong> field links the item to a future bottle deposit value.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Bottle_link">bottle deposit</a> number of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Other_flags">Other flags</a></strong></td>
+
+          <td>The <strong>Other flags</strong> field contains future additional information on the item.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Other_flags">additional information</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="WIC_alias">WIC alias&nbsp;</a></strong> </td>
+
+          <td>The <strong>WIC alias</strong> field contains a future alternate code specific to the WIC program.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#WIC_alias">WIC alias</a> of the current POS record is automatically displayed. &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Divisor">Divisor</a></strong></td>
+
+          <td>The <strong>Divisor</strong> field contains the future weight divisor of the item.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Divisor">divisor</a> value of the current POS record is automatically displayed.<br>
+          The following options are available: <em>Ounces</em>, <em>100 g</em>, <em>Half pound</em> and <em>Quarter pound</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Tare_link">Tare link</a></strong></td>
+
+          <td>The <strong>Tare link</strong> field links the item to a future tare value. The tare value is used to subtract the item's packaging weight from the total weight of the item sold by weight, selling only the true item weight.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Tare_link">tare link</a> number of the current POS record is automatically displayed in the <strong>Tare link</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Proportional_tare">Proportional tare</a></strong></td>
+
+          <td>The <strong>Proportional tare (Prop tare)</strong> field contains the future constant factor (in percentage) used to calculate the item tare value at the time of sale.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Proportional_tare">proportional tare</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Follow_sub-department">Follow sub-department</a></strong></td>
+
+          <td>The <strong>Follow sub-department (Follow sub)</strong> field specifies whether the item will follow the linked sub-department sales information programming (checked), or not (unchecked).<br>
+           When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Follow_sub">follow sub-department</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="FSA_eligible">FSA eligible</a></strong></td>
+
+          <td>The <strong>FSA eligible</strong> field specifies whether the item could be purchased using a FSA card as tender (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#FSA_eligible">FSA&nbsp; eligible</a> value of the current POS record is automatically displayed.<br>
+          FSA products include medical expenses such as clinical services, dental services, prescription / RX only, vision/optical, OTC (over the counter items).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="WIC_item">WIC item</a></strong></td>
+
+          <td>The <strong>WIC item</strong> field specifies whether the item will be WIC able (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#WIC_item">WIC item</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Food_stamp">Food stamp</a></strong></td>
+
+          <td>The <strong>Food stamp</strong> field specifies whether the item could be purchased using food stamps as tender (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Food_stamp">food stamp</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Scalable">Scalable</a></strong></td>
+
+          <td>The <strong>Scalable</strong> field specifies whether the item will be sold by weight, scaled at the POS (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Scalable">scalable</a> value of the current POS record is automatically displayed.<br>
+          The <b>Scalable</b> field does not have to be checked if the item is pre-scaled and coded with the price (code-2 items, also called random weight items), except if the weight sold must be calculated (e.g. on a discount per pound).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Manual">Manual</a></strong></td>
+
+          <td>The <strong>Manual</strong> field specifies whether the weight of the scalable item could be manually entered using the POS keyboard (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Manual">manual</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_1">Taxable 1</a></strong></td>
+
+          <td>The <strong>Taxable 1</strong> field specifies whether the item will have the first tax for the retail region (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Taxable_1">tax 1</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_2">Taxable 2</a></strong></td>
+
+          <td>The <strong>Taxable 2</strong> field specifies whether the item will have the second tax for the retail region (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Taxable_2">tax 2</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_3">Taxable 3</a></strong></td>
+
+          <td>The <strong>Taxable 3</strong> field specifies whether the item will have the third tax for the retail region (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Taxable_3">tax 3</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_4">Taxable 4</a></strong></td>
+
+          <td>The <strong>Taxable 4</strong> field specifies whether the item will have the fourth tax for the retail region (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Taxable_4">tax 4</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_5">Taxable 5</a></strong></td>
+
+          <td>The <strong>Taxable 5</strong> field specifies whether the item will have the fifth tax for the retail region (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Taxable_5">tax 5</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Taxable_6">Taxable 6</a></strong></td>
+
+          <td>The <strong>Taxable 6</strong> field specifies whether the item will have the sixth tax for the retail region (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Taxable_6">tax 6</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 34px;"><strong><a name="Taxable_7">Taxable 7</a></strong></td>
+
+          <td style="height: 34px">The <strong>Taxable 7</strong> field specifies whether the item will have the seventh tax for the retail region (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Taxable_7">tax 7</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <th colspan="2"><strong>Restriction tab</strong></th>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Restrictor">Restrictor</a></strong></td>
+
+          <td>The <strong>Restrictor</strong> field links the item to a future restriction. For example, in areas where stores are allowed to sell beer, wine or alcohol, their sales might be legally restricted to certain hours of the day.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Restrictor">restriction</a> number of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Status">Status</a></strong></td>
+
+          <td>The <strong>Status</strong> field contains the future identification code of the item status.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Status">status</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Customer_age">Customer age</a></strong></td>
+
+          <td>The <strong>Customer age</strong> field contains the future minimum age the purchaser must be to buy the item. For example, in areas where stores are allowed to sell beer, wine or alcohol, purchasers must be of legal adult age (for the store's region) to buy these items.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Customer_age">customer age</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cashier_age">Cashier age</a></strong></td>
+
+          <td>The <strong>Cashier age</strong> field contains the future minimum age the cashiers must be to sell the item. For example, in areas where stores are allowed to sell beer, wine or alcohol, cashiers must be of legal adult age (for the store's region) to sell these items.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Cashier_age">cashier age</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Stop_discount">Stop discount</a></strong></td>
+
+          <td>The <strong>Stop discount</strong> field specifies whether discounts could be applied on the item when it will be sold at the POS (unchecked), or not (checked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Stop_discount">stop discount</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Not_for_sale">Not for sale</a></strong></td>
+
+          <td>The <strong>Not for sale</strong> field specifies whether the item could be sold at the POS (unchecked), or not (checked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Not_for_sale">not for sale</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Not_in_net">Not in net</a></strong></td>
+
+          <td>The <strong>Not in net</strong> field is a flag field that specifies whether the item sales will be added to the store's net sales (unchecked), or not (checked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Not_in_net">not in net</a> value of the current POS record is automatically displayed.<br>
+          The <strong>Not in net</strong> field is often referred to as "hash sales".</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Force_price">Force price</a></strong></td>
+
+          <td>The <strong>Force price</strong> field specifies whether the item price should be manually entered when the item will be sold at the POS (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Force_price">force price</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Force_quantity">Force quantity</a></strong></td>
+
+          <td>The <strong>Force quantity</strong> field specifies whether the item quantity should be entered before the item could be sold at the POS (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Force_quantity">force quantity</a> status of the current POS record is automatically displayed in the <strong>Force quantity</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Stop_quantity">Stop quantity</a></strong></td>
+
+          <td>The <strong>Stop quantity</strong> field specifies whether an item quantity could be entered for the item when it will be sold at the POS (unchecked), or not (checked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Stop_quantity">stop quantity</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Visual_verify">Visual verify</a></strong></td>
+
+          <td>The <strong>Visual verify</strong> field specifies whether the item price should be verified at the POS before the item could be sold (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Visual_verify">visual verification</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Price_override">Price override</a></strong></td>
+
+          <td>The <strong>Price override</strong> field specifies whether the cashiers will be allowed to temporarily change the item price at the POS using the Price modify function (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Price_override">price override</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Stop_repeat">Stop repeat</a></strong></td>
+
+          <td>The <strong>Stop repeat</strong> field specifies whether cashiers could see the same item more than once using the Repeat last function (unchecked), or not (checked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Stop_repeat">stop repeat</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Stop_refund">Stop refund</a></strong></td>
+
+          <td>The <strong>Stop refund</strong> field specifies whether the item could be refunded (unchecked), or not (checked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Stop_refund">stop refund</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <th colspan="2"><strong>Coupon tab</strong></th>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Family">Family</a></strong></td>
+
+          <td>The <strong>Family</strong> field contains the future coupon (vendor and store) family code, which specifies on which items the coupons apply. The family code is needed when the scanned coupons give items for free.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Family">family code</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Coupon_type">Coupon type</a></strong></td>
+
+          <td>The <strong>Coupon type</strong> field contains the future type of coupon that can be applied to the item.<br>
+          The following options are available: <em>Manual</em>, <em>Electronic</em>, <em>Targeted</em>, <em>Automatic</em> and <em>Public</em>.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Coupon_type">coupon type</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Promotion_ID">Promotion ID</a></strong></td>
+
+          <td>The <strong>Promotion ID</strong> field contains the future promotion identification number. The promotion identification number will associate the item to a promotion.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Promotion_ID">promotion identification number</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Ticket">Ticket</a></strong></td>
+
+          <td>The <strong>Ticket</strong> field contains the future name of the coupon template to be used instead of the default one.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Ticket">ticket</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Store_coupon">Store coupon</a></strong></td>
+
+          <td>The <strong>Store coupon</strong> field specifies whether the item will be a store coupon (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Store_coupon">store coupon</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor">Vendor</a></strong></td>
+
+          <td>The <strong>Vendor</strong> field specifies whether the item will be a vendor coupon (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Vendor">vendor coupon</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Multipliable">Multipliable</a></strong></td>
+
+          <td>The <strong>Multipliable</strong> field specifies whether double coupons will be accepted at the POS for the item (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Multipliable">multipliable</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Reject">Reject</a></strong></td>
+
+          <td>The <strong>Reject</strong> field specifies whether vendor coupons will be refused at the POS for the item (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm">reject</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Print_coupon">Print coupon</a></strong></td>
+
+          <td>The <b>Print coupon</b> field specifies whether coupons will be generated for the item (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Print_coupon">print</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Bottle_return">Bottle return</a></strong></td>
+
+          <td>The <strong>Bottle return</strong> field specifies whether the item will be a bottle return item (checked), or not (unchecked).<br>
+           When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Bottle_return">bottle return</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Rain_check">Rain check</a></strong></td>
+
+          <td>The <strong>Rain check</strong> field specifies whether rain checks could be generated for the item (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Rain_check">rain check</a> status of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Capture_data">Capture data</a></strong></td>
+
+          <td>The <strong>Capture data</strong> field specifies whether the item sales will be tracked by customer (checked), or not (unchecked).<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Capture_data">capture data</a> value of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <th colspan="2"><strong>Miscellaneous tab</strong></th>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Alternate_description">Alternate description</a></strong></td>
+
+          <td>The <strong>Alternate description</strong> field contains a future alternate description of the item displayed on the POS screen and/or printed on the receipt.<br>
+          Mainly used for a second language POS description.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Alternate_description">alternate description</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Creation_date">Creation date</a></strong></td>
+
+          <td>The <strong>Creation date</strong> field contains the creation date of the item.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Creation_date">creation date</a> of the current POS record is automatically displayed.<br>
+          Not editable. Used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Normalized_UOM">Normalized UOM</a></strong></td>
+
+          <td>The <strong>Normalized unit of measure (UOM)</strong> field contains the identification characters of the future buying format available for the item.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Normalized_UOM">normalized UOM</a> of the current POS record is automatically displayed.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="PLU">PLU #</a></strong></td>
+
+          <td>The <strong>PLU #</strong> field contains the future memory number which links the PLU to the scales or the cash registers.<br>
+           When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#PLU">PLU #</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Quantity_for_rent">Quantity for rent</a></strong></td>
+
+          <td>The <strong>Quantity for rent (Qty rent)</strong> field contains the future quantity of the item available for rent.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Quantity_rent">number of the item available for rent</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Commission">Commission</a></strong></td>
+
+          <td>The <strong>Commission</strong> field contains the future salesman's commission rate for the item.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Commission">commission</a> rate of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <th colspan="2"><strong>Advanced tab</strong></th>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Behavior_script_type">Behavior script type</a></strong></td>
+
+          <td>The <strong>Behavior script type</strong> field contains the future renting behavior for the item.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Behavior_script_type">renting behavior</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Add_function">Add using function</a></strong></td>
+
+          <td>The <strong>Add using function</strong> field contains the future number of the function that must be used to identify the totalizers when the item will be sold instead of the regular one.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#Add_using_function">add using function</a> number of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="URL">URL</a></strong></td>
+
+          <td>The <strong>URL</strong> field contains future special parameters to be used when the item is sold.<br>
+          When a future POS record is added, the <a href="../../Item_maintenance/POS_Table.htm#URL">URL</a> of the current POS record is automatically displayed.</td>
+        </tr>
+
+        <tr>
+          <th colspan="2"><strong>POS table grid</strong></th>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target&nbsp;column">Target column</a></strong></td>
+
+          <td>The <strong>Target</strong> column displays the list of target identifiers (store groups) for the item.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

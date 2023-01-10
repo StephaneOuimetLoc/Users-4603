@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <!-- #BeginTemplate "../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SMS Help Document" /><!-- Title/Keywords edit on new documents -->
+    <!-- #BeginEditable "doctitle" -->
+    <!-- #EndEditable -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Item Pictures</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <a name="top"></a> <!-- Docs page layout -->
+     <br />
+     
+
+    <h1><!-- #BeginEditable "Title" -->mFloor - Item Pictures<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->mFloor Item Management <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>This document explains how to take pictures with mFloor to maintain the image database corresponding to every items.</p>
+
+      <p><img height="450" src="mFloor_Products_files/Pictures.png" width="253" /></p>
+
+      <h2>Preparing the picture's information</h2>
+
+      <p>Before taking the picture directly, it is important to create its information in the system. To achieve this, please follow these steps:</p>
+
+      <ol>
+        <li>Choose the Types of the picture (Main, Nutri or Plano)</li>
+
+        <li>Chose the Angle of the picture (Back, Bottom, Front, Left, Main, Right or Top)</li>
+
+        <li>Choose the Size of the picture (Thumb or Detail)</li>
+
+        <li>Select the Top-Right menu and then Add Image.<br />
+         A new line will appear in the list with these new information.<br />
+        </li>
+
+        <li>Select this new line and move to the next part: Adding the picture.</li>
+      </ol>
+
+      <p>When choosing MAIN, MAIN, THUMB, this picture will be the default picture used everywhere (POS, mFloor, etc.). All the others are additional views of the product.</p>
+
+      <h2>Adding the picture</h2>
+
+      <p>When ready to add the picture, there are two methods: Choosing a picture already stored on the device or use the Camera to take it on the spot.</p>
+
+      <p>The first method will open a file browser and will ask the user to choose a picture from the device. It might have been taken using the device's camera application before using mFloor.</p>
+
+      <p>The second method will trigger the Camera directly. Once the picture is taken, it is uploaded to the back office server under the right folder and using the right naming convention.</p>
+
+      <p class="Note"><strong>NOTE:</strong> The Camera feature is not available on Windows PC. It's only available on an Android/Apple device using the Chrome browser, the native application or an Enterprise Browser.</p>
+
+      <h2>Deleting a picture</h2>
+
+      <ul>
+        <li>To delete a picture, select the picture in the list then open the top-right menu and press Delete image. A confirmation prompt will show asking the user to confirm the deletion.</li>
+      </ul>
+
+      <h2>Image location</h2>
+
+      <p>When a picture is added and saved, it will be placed in the following location <b>Storeman/BitMaps/ITEMS/[UPC_Part1]/[UPC_Part2]/[UPC_Part3]</b>.</p>
+
+      <p>The UPC will be broken up into three parts as seen below and this creates subfolder to avoid placing all the pictures into one single folder.</p>
+
+      <ul>
+        <li><b>[UPC_Part1]</b> is the first 3 digits of the UPC</li>
+
+        <li><b>[UPC_Part2]</b> is the next 5 digits of the UPC</li>
+
+        <li><b>[UPC_Part3]</b> is the final 5 digits of the UPC</li>
+      </ul>
+
+      <p>For example if the item's UPC is <b>0000000004011</b> the file path would be <b>Storeman/BitMaps/ITEMS/000/00000/04011</b></p>
+
+      <p>The filename will be as follow <b>[UPC]_[Types]_[Angles]_[Size].jpg</b>, these values refers to the detail selected while creating the image information above.</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

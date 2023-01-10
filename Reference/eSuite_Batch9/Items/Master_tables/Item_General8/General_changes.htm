@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title></title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     Log <!-- #EndEditable -->
+     Log Log Log Log Log Log Log      <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - General Changes <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches &gt; General changes <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0">I</a>nformation</h2>
+
+      <p>The <strong>General changes</strong> feature allows displaying the information that has been updated, deleted or added through the future master tables, including location, classification, coupons and images.</p>
+
+      <p>To view the general changes:</p>
+
+      <ol>
+        <li>In the launcher, select <strong>Items</strong>.</li>
+
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens, displaying the item-related options.</li>
+
+        <li>Click on <strong>General changes</strong>.</li>
+      </ol>
+
+      <p><img class="Text" src="General_changes_files/start_window.png" height="875" width="742"></p>
+
+      <h2>The General changes wizard</h2>
+
+      <p>The <strong>General changes</strong> wizard includes criteria such as the start and end dates of the changes, item code and description, target, vendor ID, item sub-department and item category. The <strong>More options</strong> button adds further criteria criteria related to the item whose information has changed.</p>
+
+      <p><img class="Text" src="General_changes_files/wizard.png" height="635" width="439"></p>
+
+      <p>The wizard checkboxes are selected by default. They allow breaking down the results by main item, POS, location, classification, coupons, images, price and cost.</p>
+
+      <h4>Start and end dates</h4>
+
+      <p>The start and end dates represent the period of time that is set for the query. When first accessing the wizard, both fields are automatically populated with the current date and the time range <em>00:00:00</em> to <em>23:59:59</em>.</p>
+
+      <p>The information is editable and must be filled out in both fields for the query to be executed. To do so, enter the date and time or select them from the picker:</p>
+
+      <p><img src="General_changes_files/start_end_dates.png" height="517" width="478"></p>
+
+      <p>The following buttons are available:</p>
+
+      <ul>
+        <li><strong>OK</strong> confirms the time and date selection.</li>
+
+        <li><strong>Today</strong> sets the current date and time.</li>
+
+        <li><strong>Now</strong> sets the current time and date.</li>
+      </ul>
+
+      <p>The date format is <em>mm/dd/yyyy</em>.<br>
+      </p>
+
+      <p>The time format is <em>hh:mm:ss</em>.</p>
+
+      <h2>General changes grid</h2>
+
+      <p>The <strong>General changes</strong> grid shows specifically where the changes have occurred: date, target, price level, source (batch or table), number and description of the field where changes were made, old values and new ones, identifier.</p>
+
+      <p><img src="General_changes_files/grid_main_item.png" class="Text" height="788" width="1502"></p>
+
+      <p>Use the sorting tool to customize the grid (reorder, add or hide columns):</p>
+
+      <p><img src="General_changes_files/sort_columns.png" height="540" width="372"></p>
+
+      <p>Here is the description of the columns and the information they may contain.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 244px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 244px"><strong>Date</strong></td>
+
+          <td>The date and time of the changes.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px"><strong>Target</strong></td>
+
+          <td>The target identifier (store group).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px"><strong>Price level</strong></td>
+
+          <td>The price level set for each modified item.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong><u>Source</u></strong> </td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px"><strong>Batch</strong></td>
+
+          <td>The identifier of the batch where changes were applied.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px" valign="top"><strong>Table</strong></td>
+
+          <td>The table that was used to make the changes.<br>
+          Visible when the checkbox corresponding to the table is selected in the wizard.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong><u>Changes</u></strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px"><strong>Field ID</strong></td>
+
+          <td>The number of the field that was modified.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px"><strong>Field description</strong></td>
+
+          <td>The field description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px"><strong>Old value</strong></td>
+
+          <td>The original value of the field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px"><strong>New value</strong></td>
+
+          <td>The new value of the field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 244px"><strong>Identifier</strong></td>
+
+          <td>The vendor ID and the buying format of the item.</td>
+        </tr>
+      </table>
+
+      <p>In the bottom menu of the grid:</p>
+
+      <ul>
+        <li><strong>Edit</strong> calls up the table where the changes were made.</li>
+
+        <li><strong>Analyze</strong> allows performing item subqueries and linked queries.</li>
+      </ul>
+
+      <table>
+        <tr>
+          <td style="width: 196px">
+            <h4>The grid filter tool</h4>
+
+            <p>The toolbar in the <strong>General changes</strong> grid features an additional control: the filter tool <img src="General_changes_files/filter_grid_icon.png">.</p>
+
+            <p>It opens the <strong>Filter grid</strong> window that helps refine the search results by item code and description, batch, target, price level and table:</p>
+
+            <p><img src="General_changes_files/filter_grid_window.png"></p>
+
+            <p style="text-align:right"><a href="#Top">Back to top</a></p>
+            <!-- #EndEditable -->
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

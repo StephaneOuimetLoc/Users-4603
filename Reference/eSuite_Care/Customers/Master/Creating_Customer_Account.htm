@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SMS Help Document" />
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Create Customer</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿ <!-- #BeginTemplate "../../../html_template.dwt" --> <!-- Title/Keywords edit on new documents --> <!-- #BeginEditable "doctitle" --> <!-- #EndEditable --> <a id="top" name="top"></a> <!-- Docs page layout --> <br />
+     
+
+    <h1><!-- #BeginEditable "Title" -->Create Customers<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Customers &gt;&nbsp;Master <!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" --><!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a id="Top1" name="Top1"></a>Information</h2>
+
+      <p>Customer accounts in eSuite may be created manually in the database.</p>
+
+      <p>Each account is identified by a code for which there are several rules that have to be observed:</p>
+
+      <ul>
+        <li>The customer ID is a 14-character field. It is mandatory and unique, unless eSuite is configured for multi-stores (multi-targets). In this case, it is possible to have more than one customer with the same number, but with different targets.</li>
+
+        <li>Although the customer ID is a non-numeric field, remember that it must be entered at the points of sale. Some front-end workstations may not have alpha keypads.</li>
+
+        <li>The customer ID is not editable: once it is created, it cannot be modified.</li>
+
+        <li>The customer ID and information are automatically deployed to the front-end workstations once the new account information is saved.</li>
+      </ul>
+
+      <h2>Creating a customer account</h2>
+
+      <p>Customer accounts are created with the <a href="Customer_table.htm"><strong>Customer</strong> table</a>. Follow the steps below.</p>
+
+      <p>In the Launcher, click the arrow in the <strong>Customers</strong> entry to open its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>.</li>
+
+        <li>In the <strong>Start</strong> window, click on <strong>New</strong>: the <strong>New customer</strong> window opens, overlapping the work area.<br />
+        <br />
+         <img class="Text" src="Creating_Customer_Account_files/add_new_customer.png" /></li>
+
+        <li>Enter the code for the new customer account.</li>
+
+        <li>Click on <strong>OK</strong>: the <strong>Customer edit</strong> table opens on the desktop.<br />
+        <br />
+         <img class="Text" src="Creating_Customer_Account_files/customer_table.png" /></li>
+
+        <li>Enter all the necessary information.</li>
+
+        <li>Click on <strong>Save</strong> in the toolbar to save the changes.</li>
+      </ol>
+
+      <p style="text-align: right;"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container --><a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

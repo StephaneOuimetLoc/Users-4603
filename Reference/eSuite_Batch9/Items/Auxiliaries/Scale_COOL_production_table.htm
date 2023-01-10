@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Scale COOL Production List Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Scale COOL Production List Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxialaries &gt; Scale Tables <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>Scale COOL production list</strong> table is used to specify the production steps to be printed on the labels (e.g. <em>Born in</em>, <em>Caught in</em>, <em>Raised in</em>).</p>
+
+      <p>It is not possible to link an item to a specific COOL production list. Instead, the COOL production lists are set with a given class, and that class is linked to items through the <strong>Scale information</strong> table. The scale should then display all production lists linked to that class.</p>
+
+      <p class="Note"><strong>NOTE:</strong> Even if the <strong>Scale COOL production list</strong> table is an auxiliary table, its content is deployed to the front-end workstations using the "Deploy changes" process.</p>
+
+      <h2>Displaying the Scale COOL production list table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Auxiliary tables</strong>: the Start window opens in the <strong>Auxiliary</strong> work area.</li>
+
+        <li>Click on <strong>Scale Tables</strong> and then on the <strong>Scale COOL Prod List</strong>: the <strong>Scale COOL Prod</strong> tab opens in the same window, displaying the <strong>Scale COOL Prod List</strong>.</li>
+
+        <li>To modify an existing scale COOL production record, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu: the <strong>Scale COOL production</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new scale COOL production record, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Scale COOL production</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td class="Img"><img style="border-style:none" class="Text" src="Scale_COOL_production_table_files/scale_COOL_production_table.png" usemap="#scale_COOL_production_table"> <map name="scale_COOL_production_table">
+            <area shape="rect" coords="10, 165, 91, 191" href="#OperLevel">
+            <area shape="rect" coords="13, 115, 93, 142" href="#Target">
+            <area shape="rect" coords="97, 116, 197, 142" href="#Number">
+            <area shape="rect" coords="200, 115, 272, 141" href="#S-Dept">
+            <area shape="rect" coords="277, 113, 391, 142" href="#Class">
+            <area shape="rect" coords="97, 164, 391, 192" href="#Description">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">*Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Scale COOL production list</strong> table fields and their functionalities:</p>
+
+      <table style="width: 100%">
+        <tr>
+          <th style="width: 156px" class="ListTitle">FIELD</th>
+
+          <th class="ListTitle">DESCRIPTION</th>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier, i.e. the store group.<br>
+          It is a required field used to uniquely identify records in the <strong>Scale COOL production list</strong>.<br>
+          The default value of the <strong>Target</strong> field is PAL.<br>
+           For details, see the <a href="#The_Target_field"><strong>Target</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Number">Number</a></strong></td>
+
+          <td>The <strong>Number</strong> field contains the identifier of the scale COOL production list information.<br>
+          It is a required field used to uniquely identify records in the <strong>Scale COOL production list</strong>.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="S-Dept">S-Dept</a></strong></td>
+
+          <td>The <strong>Sub-department</strong> field links the scale COOL short list information to a <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>.<br>
+          For details, see the <a href="#The_Sub-department_field">Sub-department field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Class">Class</a></strong></td>
+
+          <td>The <strong>Class</strong> field contains the class number of the scale COOL production list information. This class number is used to link scale information to scale COOL production list information.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OperLevel">OperLevel</a></strong></td>
+
+          <td>The <strong>Operator level</strong> field contains the number of the minimum operator level needed to manage the scale COOL production list records.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> field contains the description of the COOL production list.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Target_field">The Target field</a></h3>
+
+      <p>The <strong>Target</strong> field contains the target identifier, i.e. the store group. It is a required field, meaning that new COOL production list records must have a valid entry in the <strong>Target</strong> field for the record to exist. It is used as a key field, along with the <a href="#Number">COOL production list number</a>, to uniquely identify records in the <strong>Scale COOL Production List</strong> table. The default value of the <strong>Target</strong> field is <em>PAL</em>.</p>
+
+      <p>The eSuite software is designed to support multi-stores and regional pricing. The <strong>Target</strong> field is grayed out and not editable unless the system is set up for multi targets.<br>
+      See the reseller for more details.</p>
+
+      <p>Target identifiers can be modified in a multi-stores setting by typing the right information in the <strong>Target</strong> field or by selecting a target identifier in the drop-down list.</p>
+
+      <p>A warning message is displayed when an invalid target identifier is entered.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Sub-department_field">The Sub-department field</a></h3>
+
+      <p>The <strong>Sub-department</strong> <strong>(S-Dept</strong>) field links the scale COOL production list information to a <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>.</p>
+
+      <p>In most POS systems, item sales are linked to sale categories for reporting purposes. Because different POS systems use different terminology for sale links, it is important to understand the eSuite terminology and how it relates to the POS system. The eSuite software uses a three-tier sale links level organization:</p>
+
+      <ol>
+        <li>Item sales are accumulated in sub-departments.</li>
+
+        <li>Sub-department sales are accumulated in departments (a department sales total contains sales from one or more sub-departments).</li>
+
+        <li>Department sales are accumulated in group sales (a group sales total contains sales from one or more departments).</li>
+      </ol>
+
+      <p>The eSuite software sale link levels (sub-departments, departments and groups) are defined in the <strong><a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm">Sub-department</a></strong> and <strong><a href="../../Dimensions/Dimensions_tables/Department_table.htm">Department</a></strong> tables.</p>
+
+      <p>Whether or not the POS system uses the same terms, eSuite requires that items be linked to a sub-department or to a first sale link level.</p>
+
+      <p>To link the scale COOL production text information to a sub-department, type the sub-department number in the <strong>S-Dept</strong> field or select a sub-department from the <a href="../../Dimensions/Dimensions_tables/Subdpt_table.htm"><strong>Sub-department</strong> table</a><a href="../../Dimensions/Subdepartment/Subdpt_table.htm">.</a></p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

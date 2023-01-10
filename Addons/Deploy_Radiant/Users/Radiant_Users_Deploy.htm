@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Module - Radiant Interface - Users Deploy</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->Moadule - Radiant Interface - Users Deploy <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->Radiant <span class="badge badge-warning">Unmanaged</span> <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Overview</h2>
+
+      <p>When executing a deployment, new, modified and/or deleted data is stored in a file that is sent over a network from the LOC SMS server to the Radiant server. Please refer to the sections below to acquire the knowledge on functionality between the two (2) systems.</p>
+
+      <p>This portion of the document describes the auxiliary functions used between the LOC SMS back office server and the Radiant interface.</p>
+
+      <h3>Auxiliary Deployment</h3>
+
+      <p>The <strong>deploy_auxiliary</strong> process is only used to send sub-departments, departments and bottle link data to the Radiant back office server.</p>
+
+      <p>It is important to know that if changes are made and deployed for the auxiliary tables, it is required to make a minimal change to an item and execute <em>deploy changes</em> to send the items again. If this is not done, the items will not get updated with the new auxiliary settings.</p>
+
+      <h4>Sub-Departments and Departments</h4>
+
+      <p>By default, sub-departments are sent with deploy auxiliary. This can be changed to send departments instead.</p>
+
+      <p class="alert alert-warning"><strong>NOTE:</strong> If departments are meant to be sent instead, this needs to be setup during the installation process. Speak with the technician performing the installation.</p>
+
+      <h4>Bottle Links</h4>
+
+      <p>Bottle Links are considered items in Radiant. In order to differentiate bottle links from regular items, a set prefix for '<em>BottleLinkPattern</em>' will be configured by the technician performing the install in the XML file. Create the bottle link as normal. Upon deploying auxiliary, the prefix will be added to the bottle link.</p>
+
+      <p><span class="label label-info">Ex.:</span> <code>Bottle Link prefix = 9??????????????, Bottle Link number = 10. When deployed to Radiant back office, will appear as an item with code 900000000000010.</code></p>
+
+      <p class="alert alert-warning" role="alert"><strong>NOTE:</strong>Bottle links must be deployed before sending an item with a bottle link to Radiant. If an item is sent containing a bottle link, but the bottle link list was never sent, the bottle link will not appear with the item.</p>
+
+      <p>To execute the deploy auxiliary process, follow these steps:</p>
+
+      <ol>
+        <li>In <em>eSuite\man</em>, select <strong>Deploy auxiliary</strong> from the <em>Tools\Deploy</em> left hand side menu.<br>
+         <img src="Radiant_Users_Deploy_files/Deploy_AUX.png"></li>
+
+        <li>Select <strong>DRAD</strong> as <em>Target</em>, the <em>Action</em> desired and the <em>Deploy type,</em> click <strong>EXECUTE</strong>.<br>
+        <br>
+         <img src="Radiant_Users_Deploy_files/Deploy_What_DSM.png"><br>
+        </li>
+      </ol>
+
+      <h3>Auxiliary Fields</h3>
+
+      <p>The fields highlighted in orange in the table below are supported with the Radiant interface.</p>
+
+      <ul>
+        <li>For information on the Main Item table fields, please refer to the <a href="../../eSuite/Common/Dimensions/Dimensions_tables/Subdpt_table.htm">Sub-Department table</a> document.</li>
+
+        <li>For information on the POS table fields, please refer to the <a href="../../eSuite/Common/Dimensions/Dimensions_tables/Department_table.htm">Department table</a> document.</li>
+
+        <li>For information on the Price table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/Auxiliary_tables/Bottle_link_table.htm">Bottle Link table</a> document.</li>
+      </ul>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>
+              <p>Sub-Department Table</p>
+            </th>
+
+            <th>
+              <p>Department Table</p>
+            </th>
+
+            <th>
+              <p>Bottle Link Table</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><img src="Radiant_Users_Deploy_files/Fields_SDep.png" height="369" width="300"><br>
+           </td>
+
+          <td><img src="Radiant_Users_Deploy_files/Fields_Dep.png" height="405" width="300"> </td>
+
+          <td><img src="Radiant_Users_Deploy_files/Fields_BottleLink.png" height="184" width="300"> </td>
+        </tr>
+      </table>
+
+      <p><a href="#top">Back to Top</a></p>
+
+      <h2>Item Deployment</h2>
+
+      <h3>Overview</h3>
+
+      <p>This portion of the document describes the item functions used between the LOC SMS back office server and the Radiant interface.</p>
+
+      <h3>Item Creation</h3>
+
+      <p>For information on creating and deploying items, please refer to the <a href="../../eSuite/Common/Item_maintenance/Creating_items/Create_item.htm">Creating a new item</a> document.</p>
+
+      <h3>Car Wash Items</h3>
+
+      <p>In order for an item to qualify as '<em>Car Wash</em>' a few parameters must be set.</p>
+
+      <ul>
+        <li><strong>Type</strong> needs to be set to <em>10</em> in the <strong>POS Table</strong>. <em>(Image pending)</em></li>
+
+        <li>
+          <strong>NACS</strong> code needs to be set and correspond to the correct value, see table below: 
+
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Type</th>
+
+                <th>Coded</th>
+
+                <th>NACS Code</th>
+              </tr>
+            </thead>
+
+            <tr>
+              <td>Express (Basic)</td>
+
+              <td>1</td>
+
+              <td>102</td>
+            </tr>
+
+            <tr>
+              <td>Super</td>
+
+              <td>2</td>
+
+              <td>800</td>
+            </tr>
+
+            <tr>
+              <td>Deluxe</td>
+
+              <td>3</td>
+
+              <td>801</td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+
+      <h3>EAN8 Items</h3>
+
+      <p>In order for an item to qualify as <em>'EAN8',</em> simply create an 8-digit code in SMS.</p>
+
+      <p>In SMS, the code will be padded with zeroes (0) to equal 13 digits. When the item is deployed to Radiant, the padded zeroes (0) will be stripped, no check-digit is added.</p>
+
+      <h3>Item Deletion</h3>
+
+      <p><em>For information on deleting items, please refer to the Delete an item document. (Under development)</em></p>
+
+      <p class="alert alert-warning"><strong>NOTE:</strong> When deleting an item in LOC SMS and deploying to Radiant, the item will still be visible on the Radiant back office server but it will be disabled. Therefore, it cannot be sold at the POS.</p>
+
+      <h3>Item Deployment</h3>
+
+      <p>The <strong>deploy_changes</strong> process is used to send item Link data to the Radiant back office server.</p>
+
+      <h3>Item Fields</h3>
+
+      <p>The fields highlighted in orange in the table below are supported with the Radiant interface.</p>
+
+      <ul>
+        <li>For information on the Main Item table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/Main%20Item_Table.htm">Main Item table</a> document.</li>
+
+        <li>For information on the POS table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/POS_Table.htm">POS Information table</a> document.</li>
+
+        <li>For information on the Price table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/Price_Table.htm">Price table</a> document.</li>
+
+        <li>For information on the Cost table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/Cost_Table.htm">Cost table</a> document.</li>
+      </ul>
+
+      <p><img src="Radiant_Users_Deploy_files/Item_Supported_Fields.png"></p>
+
+      <p><a href="#top">Back to Top</a></p>
+
+      <h2>Mix &amp; Match Deployment</h2>
+
+      <h3>Overview</h3>
+
+      <p>This portion of the document describes the mix &amp; match functions used between the LOC SMS back office server and the Radiant interface.</p>
+
+      <h3>Mix &amp; Match Deployment</h3>
+
+      <p>The <strong>deploy_changes</strong> process is used to send mix &amp; match data to the Radiant back office server.</p>
+
+      <p>The Mix &amp; Match ID has to be created as an auxiliary <span>first</span>, which then needs to be linked to the necessary items.</p>
+
+      <p>The Mix &amp; Match promotion that will be deployed and available at the POS is the mix that corresponds with the active price. The max package price and quantity of all items with the same Mix &amp; Match ID is sent.</p>
+
+      <p class="alert alert-warning"><strong>NOTE:</strong> If the Mix &amp; Match ID is not created in the Auxiliary table prior to linking it to an item, the Mix will never attach to the item properly and will not be given at the POS.</p>
+
+      <h4>Mix &amp; Match Deletion</h4>
+
+      <p>The user can remove a <em>mix</em> from an item. Upon the next deployment, the <em>mix</em> will be deleted from the item on the Radiant back office server.</p>
+
+      <p>When all items containing this <em>mix</em> have had the <em>mix</em> deleted, the Mix &amp; Match list will be deleted from the Radiant back office server as well.</p>
+
+      <h3>Mix &amp; Match Fields</h3>
+
+      <p>The fields highlighted in orange in the table below are supported with the Radiant interface.</p>
+
+      <ul>
+        <li>For information on the Mix &amp; Match table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/Auxiliary_tables/MixMatch_table.htm">Mix &amp; Match table</a> document.</li>
+
+        <li>For information on the Price table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/Price_Table.htm">Price table</a> document.</li>
+      </ul>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><span>Mix &amp; Match table</span></th>
+
+            <th><span>Price table (Item)</span></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><img alt="" height="99" src="Radiant_Users_Deploy_files/MM_List.png" width="300"></td>
+
+          <td><img alt="" height="297" src="Radiant_Users_Deploy_files/MM_Supported_Fields.png" width="500"></td>
+        </tr>
+      </table>
+
+      <p><a href="#top">Back to Top</a></p>
+
+      <h2>Combo Deployment</h2>
+
+      <h3>Overview</h3>
+
+      <p>This portion of the document describes the combo functions used between the LOC SMS back office server and the Radiant interface.</p>
+
+      <h3>Combo Deployment</h3>
+
+      <p>The <strong>deploy_changes</strong> process is used to send combo data to the Radiant back office server.</p>
+
+      <p>Combos in Radiant are considered as electronic coupons in SMS. The coupon link requires a <em>Promo ID sales code (PID)</em> and <em>quantity</em> in order to deploy correctly to Radiant.</p>
+
+      <p>&nbsp;The combo deployed to, and available at the POS, is the combo that corresponds with the active price. The coupon needs to be linked to the necessary items with a <em>PID</em>.</p>
+
+      <p>Price Methods</p>
+
+      <ul>
+        <li>
+          The <strong>price</strong> field has 2 functionalities; 
+
+          <ul>
+            <li><em>Final price</em> for a coupon bundle (<em>CB method</em>) once the coupon link quantity is reached.</li>
+
+            <li><em>Dollar off amount</em> to the sub-total of the transaction once the coupon link quantity is reached.</li>
+          </ul>
+        </li>
+
+        <li>The <strong>discount percent</strong> field will give a <em>percent value off</em> the sub-total of the transaction once the coupon link quantity is reached.</li>
+      </ul>
+
+      <p class="alert alert-danger"><strong>WARNING:</strong> Price methods <span>cannot</span> be combined. If multiple are selected, the combo will <span>not</span> be deployed.</p>
+
+      <p>Limited Quantity</p>
+
+      <p>It is possible to limit the quantity of times the combo/discount is given to the customer in a single transaction. This can be achieved by entering a numeric value in the limited quantity field, and adding the Limit by Transaction (<em>LT</em>) method. The value entered represents how many combos may be awarded.</p>
+
+      <p class="alert alert-warning"><strong>NOTE:</strong> If the LT method is not present, the combo will be given endlessly.</p>
+
+      <h4>Combo Deletion</h4>
+
+      <p>The user can remove a <em>PID</em> from an item. Upon the next deployment, the <em>PID</em> will be deleted from the item on the Radiant back office server.</p>
+
+      <p>When all items containing this <em>PID</em> have had the <em>PID</em> deleted, the combo list will be deleted from the Radiant back office server as well.</p>
+
+      <h3>Combo Fields</h3>
+
+      <p>The fields highlighted in orange in the table below are supported with the Radiant interface.</p>
+
+      <ul>
+        <li>For information on the Combo table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/Special_items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm">Electronic Coupon Link table</a> document.</li>
+
+        <li>For information on the POS table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/POS_Table.htm">POS Information table</a> document.</li>
+
+        <li>For information on the Price table fields, please refer to the <a href="../../eSuite/Common/Item_maintenance/Price_Table.htm">Price table</a> document.</li>
+      </ul>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><span>Coupon Link table</span></th>
+
+            <th><span>POS Table (Item)</span></th>
+
+            <th><span>Price table (Item)</span></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>
+            <img src="Radiant_Users_Deploy_files/CouponLink_table.png" height="110" width="500"> 
+
+            <p><strong>Method:</strong> The method field has no significance for Radiant itself, but is important in the scenario of a hybrid store. This will ensure that coupon behavior will be the same among both SMS lanes, and Radiant lanes.</p>
+
+            <p><strong>Supported:</strong> Match (<em>M</em>), Accumulate (<em>A</em>), Repetition (<em>R</em>)<br>
+            </p>
+
+            <p>Refer to the examples below to see how the method(s) should be set in relation to hybrid stores.</p>
+
+            <p class="alert alert-warning"><strong>NOTE:</strong> When a coupon has a limit of 1, the R method is not necessary.</p>
+          </td>
+
+          <td><img src="Radiant_Users_Deploy_files/ComboPOS_table.png" height="330" width="350"></td>
+
+          <td><img src="Radiant_Users_Deploy_files/ComboPrice_table.png" height="301" width="500"></td>
+        </tr>
+      </table>
+
+      <h3>Combo Examples</h3>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>
+              <p>Combo Final Price</p>
+
+              <p>Purchase 2 of the same item, receive both for $1.00.</p>
+            </th>
+
+            <th>
+              <p>Combo Final Price with Limit per transaction</p>
+
+              <p>Purchase 2 of the same item, receive both for $1.00, limit 2 discounts per transaction.</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><img height="540" src="Radiant_Users_Deploy_files/CBFinalPrice.png" width="784"></td>
+
+          <td><img height="541" src="Radiant_Users_Deploy_files/CBFinalPriceLT.png" width="784"></td>
+        </tr>
+      </table>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>
+              <span>Combo Dollar Off Amount</span>
+
+              <p>Purchase 2 of the same item, receive $1.00 off.</p>
+            </th>
+
+            <th>
+              <span>Combo Dollar Off Amount with Limit per transaction</span>
+
+              <p>Purchase 2 of the same item, receive $1.00 off, limit 2 discounts per transaction.</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><img height="543" src="Radiant_Users_Deploy_files/CBDollarOff.png" width="782"></td>
+
+          <td><img height="544" src="Radiant_Users_Deploy_files/CBDollarOffLT.png" width="787"></td>
+        </tr>
+      </table>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>
+              <p>Combo Percent Off</p>
+
+              <p>Purchase 2 of the same item, receive 10% off</p>
+            </th>
+
+            <th>
+              <span><strong>Combo Percent Off with Limit per transaction</strong></span>
+
+              <p>Purchase 2 of the same item, receive 10% off, limit 2 discounts per transaction</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><img height="539" src="Radiant_Users_Deploy_files/CBPercentOff.png" width="784"></td>
+
+          <td><img height="540" src="Radiant_Users_Deploy_files/CBPercentOffLT.png" width="782"></td>
+        </tr>
+      </table>
+
+      <p><a href="#top">Back to Top</a></p>
+
+      <h2>Operator Deployment</h2>
+
+      <h3>Overview</h3>
+
+      <p>This portion of the document describes the operator functions used between the LOC SMS back office server and the Radiant interface.</p>
+
+      <h3>Operator Deployment</h3>
+
+      <p>The <strong>deploy_changes</strong> process is used to send operator data to the Radiant back office server.</p>
+
+      <p>The operator record requires it to be created with a number, level, password, first and/or last name and active/inactive status. Operator birth date is optional.</p>
+
+      <p class="alert alert-warning"><strong>NOTE:</strong> The level selected will correspond to the security level mapping set in the ApiXchRadiant.xml, which is configured by the reseller during installation.</p>
+
+      <h4>Operator deletion</h4>
+
+      <p>The user can remove a value from an operator record. Upon the next deployment, the record will be updated on the Radiant back office server.</p>
+
+      <p>When deleting an operator in LOC SMS and deploying to Radiant, the operator record will removed from the Radiant back office server.</p>
+
+      <p class="alert alert-warning"><strong>NOTE:</strong> It is suggested, as a best practice, to keep the operator record as inactive for a minimum of 5 to 7 years before removing it entirely in case of government auditing.</p>
+
+      <h3>Operator Fields</h3>
+
+      <p>The fields highlighted in orange in the table below are supported with the Radiant interface.</p>
+
+      <p>Operator table</p>
+
+      <div>
+        <img src="Radiant_Users_Deploy_files/Operator_SupportedFields.png">
+      </div>
+
+      <p><a href="Radiant_Users_Overview.htm">Back to Radiant Interface - Users Overview document</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

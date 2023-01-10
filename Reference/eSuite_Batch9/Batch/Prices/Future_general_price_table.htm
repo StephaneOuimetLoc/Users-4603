@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document"><!-- Title/Keywords edit on new documents -->
+    <!-- #BeginEditable "doctitle" -->
+    <!-- #EndEditable -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Future General Price Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Future General Price Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches &gt; Price information <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Future general price</b> table is used to change the future general price information of the selected items.</p>
+
+      <h2>How to display the Future general price table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batches</strong> work area.</li>
+
+        <li>Click on <strong>Price information</strong>: the <strong>Price batch</strong> wizard opens in a new tab.</li>
+
+        <li>In the <strong>Batch type</strong> field, select <strong>Price general</strong>.</li>
+
+        <li>In the <strong>Batch</strong> field, select a price general batch.</li>
+
+        <li>Enter all other necessary criteria.</li>
+
+        <li>Press <strong>Execute</strong>: results will display in the <strong>Price general batch</strong> grid.</li>
+
+        <li>Select a record and click <strong>Edit</strong> in the bottom menu of the grid.</li>
+
+        <li>Select <strong>Price batch</strong>, then <strong>General</strong>: the <strong>Future general price</strong> table <strong></strong> opens over the work area.</li>
+      </ol>
+
+      <p><img class="Text" src="Future_general_price_table_files/future_general_price_table.png"></p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Future general price</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>Future general price table grid</strong>.</p>
+
+      <h3><strong>Main section</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Future_general_price_table_files/main_section.png" usemap="#main_section"> <map name="main_section">
+            <area shape="rect" coords="12, 141, 103, 167" href="#Batch">
+            <area shape="rect" coords="107, 141, 187, 167" href="#Target">
+            <area shape="rect" coords="190, 141, 240, 165" href="#Level">
+            <area shape="rect" coords="10, 191, 187, 217" href="#Like_code">
+            <area shape="rect" coords="190, 190, 368, 217" href="#Item_link">
+            <area shape="rect" coords="11, 241, 101, 266" href="#Alternate_price">
+            <area shape="rect" coords="107, 240, 136, 267" href="#Quantity">
+            <area shape="rect" coords="10, 290, 367, 318" href="#Add_totalizer">
+            <area shape="rect" coords="9, 342, 115, 368" href="#Time_included">
+            <area shape="rect" coords="121, 342, 286, 366" href="#Discount_description">
+            <area shape="rect" coords="291, 341, 365, 367" href="#Commission">
+            <area shape="rect" coords="262, 379, 282, 399" href="#Exclude_spending">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3><strong>Future general price table grid</strong></h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img class="Text" style="border-style:none" src="Future_general_price_table_files/table_grid.png" usemap="#table_grid"> <map name="table_grid">
+            <area shape="rect" coords="2, 92, 85, 242" href="#Batch">
+            <area shape="rect" coords="86, 92, 143, 242" href="#Target">
+            <area shape="rect" coords="143, 91, 217, 241" href="#Level">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Future price redeem</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 171px; height: 22px;">FIELD</th>
+
+            <th style="height: 22px">DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Batch">Batch</a></strong></td>
+
+          <td>The <strong>Batch</strong> field contains the batch identifier.<br>
+           It is not editable. Its value comes from the <strong></strong> <a href="../Batch_header_table/Batch_header_table.htm#Batch_ID"><strong>Batch ID</strong></a> field of the <a href="../Batch_header_table/Batch_header_table.htm"><strong>Batch header</strong> table</a> and is automatically displayed when a future general price record is added, linking the future general price record to the current batch.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group).<br>
+          When a future general price record is added, the <a href="../../Item_maintenance/Price_Table.htm#Target">target</a> value of the current price record is automatically displayed in the <strong>Target</strong> field.<br>
+          It is grayed out (not editable) unless the Multi target option in the <em>System.ini</em> file is selected.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Level">Level</a></strong></td>
+
+          <td>The <strong>Level</strong> field contains the price level number.<br>
+          See the <a href="#The_Level_field"><strong>Level</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Like_code">Like code</a></strong></td>
+
+          <td>The <strong>Like</strong> code field contains the future code used to group items.<br>
+          When a future general price record is added, the <a href="../../Item_maintenance/Price_Table.htm#Like_code">like code</a> value of the current price record is automatically displayed in the <b>Like code</b> field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Item_link">Item link</a></strong></td>
+
+          <td>The <b>Item link</b> field contains the future UPC code of a linked item.<br>
+          When a future general price record is added, the <a href="../../Item_maintenance/Price_Table.htm#Item_link">item link</a> value of the current price record is automatically displayed in the <strong>Item link</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Alternate_price">Alternate price</a></strong></td>
+
+          <td>The <strong>Alternate price</strong> field contains the future alternate price of the item, which is an alternative to the retail price.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Quantity">Quantity</a></strong></td>
+
+          <td>The <strong>Alternate quantity</strong> field contains the future alternate quantity for the <a href="#Alternate_price">alternate price</a>.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Add_totalizer">Add totalizer</a></strong></td>
+
+          <td>The <b>Add totalizer</b> field contains the future number of an additional totalizer in which the value of the item sold must be added.<br>
+          When a future general price record is added, the <a href="../../Item_maintenance/Price_Table.htm#Add_totalizer">add totalizer</a> value of the current price record is automatically displayed in the <strong>Add totalizer</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Time_included">Time included</a></strong></td>
+
+          <td>The <strong>Time included</strong> field contains the number of days the item is rented at this price (or at this price level).</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Discount_description">Discount description</a></strong></td>
+
+          <td>The <strong>Discount description</strong> field contains the future description of the discount given. It may appear on the receipts and invoices when customized.<br>
+          When a future general price record is added, the <a href="../../Item_maintenance/Price_Table.htm#Discount_description">discount description</a> value of the current price record is automatically displayed in the Discout description field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Commission">Commission</a></strong></td>
+
+          <td>The <strong>Commission</strong> field contains the future salesman's commission amount for the item.<br>
+          When a future general price record is added, the <a href="../../Item_maintenance/Price_Table.htm#Commission">commission</a> value of the current price record is automatically displayed in the <strong>Commission</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td><strong><a name="Exclude_spending">Exclude spending</a></strong></td>
+
+          <td>The <strong>Exclude from spending (Exc. spend)</strong> field specifies whether the future sales of the item are excluded from the points calculation (checked), or not (unchecked).<br>
+          When a future general price record is added, the <a href="../../Item_maintenance/Price_Table.htm#Exclude_from_spending">exclude from spending</a> value of the current price record is automatically displayed in the <strong>Exclude from spending</strong> field.</td>
+        </tr>
+      </table>
+
+      <h3><a name="The_Level_field">The Level field</a></h3>
+
+      <p>The <strong>Level</strong> field contains the price level number.<br>
+      <br>
+      When a future general price record is added, the <a href="../../Item_maintenance/Price_Table.htm#Level">level</a> value of the current price record is automatically displayed in the <b>Level</b> field.</p>
+
+      <p class="Note"><b>NOTE:<br>
+      </b>Starting v350x, Application.ini[TARGET_TRS] is used to determine which target to use for each item table.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB='PAL' will force the Host to use the PAL record.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB='@WIZGET(TARGET)' will force the Host to use the Global Store Number record.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB=ISNULL((SELECT TOP 1 SUB_PRI.F1000 FROM PRICE_TAB SUB_PRI JOIN LNK_TAB SUB_LNK ON SUB_PRI.F1000=SUB_LNK.F1000 JOIN LNK_TAB SUB_LNK2 ON SUB_LNK.F1056=SUB_LNK2.F1056 AND SUB_LNK.F1057=SUB_LNK2.F1057 AND SUB_LNK2.F1000='@WIZGET(TARGET)' JOIN STO_TAB SUB_STO ON SUB_LNK.F1000=SUB_STO.F1000 WHERE SUB_PRI.F01=PRI.F01 AND SUB_PRI.F126=PRI.F126 ORDER BY SUB_STO.F1937 DESC),'PAL'). That will use the proper target set for the Global StoreID selected.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

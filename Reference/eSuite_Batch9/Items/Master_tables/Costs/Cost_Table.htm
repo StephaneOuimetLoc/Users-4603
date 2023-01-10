@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Edit Cost</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Cost Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The eSuite software uses relational tables to store item information. The <b>Cost</b> <strong>table</strong> contains all cost information, such as vendor, base cost, unit cost, discounts, etc., for the main item. The eSuite software uses the <strong>Cost</strong> <strong>table</strong> to retrieve information for purchases and inventory purposes.</p>
+
+      <h2>Displaying the Cost table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item</strong> <strong>list</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Items - General List</strong>.</li>
+
+        <li>Enter the search criteria and click on <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window.</li>
+
+        <li>Select a record.</li>
+
+        <li>Click <strong>Edit</strong> on the bottom of the item grid to display its option menu.</li>
+
+        <li>Select <strong>Master tables</strong>, then <strong>Cost master</strong>: the <strong>Cost edit table</strong> opens over the work area.</li>
+      </ol>
+
+      <p><img src="Cost_Table_files/cost_table.png"></p>
+
+      <p>The <b>Cost</b> table may contain multiple records for the same item, based on regional and vendor differences. This way, a head office can control regional (target) item cost differences. To find a cost record for the main item, the eSuite software uses a unique key made of three fields: the main item UPC, the target and the vendor. This means that each UPC can have more than one cost record in the <b>Cost</b> table, as long as the target and/or vendor change. For the same target, a UPC can have many different cost records as there are unique vendors, and for the same vendor, a UPC can have as many different cost records as there are unique targets.</p>
+
+      <p>Because of the multiple records capability, the <b>Cost</b> table can toggle between a simple view and a detailed view.</p>
+
+      <p>The simple view consists of the quick reference section and the pricing columns.<br>
+      The detailed view adds the bottom tab section and the left tab section.</p>
+
+      <ul>
+        <li>The <strong>Collapse/Expand left</strong> control in the toolbar hides/shows the left tab section.</li>
+
+        <li>The <strong>Collapse/Expand bottom</strong> control in the toolbar hides/shows the bottom tab section.</li>
+      </ul>
+
+      <h3>Cost events</h3>
+
+      <p>The <b>Cost</b> table contains several cost events that allow maintaining the different types of discounts given by a wholesaler or a manufacturer on an item. Each of the cost events contains roughly the same fields, such as <b>Start date</b>, <b>End date</b>, <b>Amount</b>, etc.</p>
+
+      <p>The cost events are: <strong><a href="#Allowance">Allowance</a></strong>, <strong><a href="#Discount">Discount</a></strong>, <strong><a href="#Rebate">Rebate</a></strong>, <a href="#Break/quantity"><strong>Break/quantity</strong> <strong>(cost break)</strong></a>. They are displayed in the <strong>Deals</strong> tab.</p>
+
+      <h3>Billbacks</h3>
+
+      <p>Sometimes, vendors can grant retroactive reductions on the purchase price (cost) provided that a certain quantity or value of goods is bought. Theses reductions are called billbacks. They consist of a refunding by the vendor of a part of the sum that was already paid for the purchase of an item.</p>
+
+      <p>The eSuite software keeps information on up to four (4) different billback values in a cost record, expressed in dollars or as a percentage.</p>
+
+      <p>The bill back values are used for information purposes only. They do not affect the cost amount since the required quantity or value may not be purchased to claim the bill backs.</p>
+
+      <p>Billbacks are displayed in the <strong>Billback</strong> tab.</p>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Cost</strong> table is divided into three parts: the <strong>main section</strong>, the <strong>bottom tab section</strong> and the <strong>Cost table grid</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img src="Cost_Table_files/main_section.png" usemap="#main_section" style="border-style:none"> <map name="main_section">
+            <area shape="rect" coords="116, 141, 192, 165" href="#Cost">
+            <area shape="rect" coords="198, 142, 218, 165" href="#Authorized">
+            <area shape="rect" coords="245, 141, 335, 167" href="#Next_date">
+            <area shape="rect" coords="338, 142, 405, 168" href="#Next_cost">
+            <area shape="rect" coords="406, 143, 478, 168" href="#Source">
+            <area shape="rect" coords="10, 140, 91, 167" href="#Target">
+            <area shape="rect" coords="11, 190, 115, 218" href="#Vendor_ID">
+            <area shape="rect" coords="116, 192, 475, 217" href="#Vendor_name">
+            <area shape="rect" coords="9, 240, 111, 268" href="#Vendor_code">
+            <area shape="rect" coords="116, 242, 192, 266" href="#Base_cost">
+            <area shape="rect" coords="197, 240, 237, 265" href="#Case">
+            <area shape="rect" coords="243, 242, 311, 267" href="#Unit_cost">
+            <area shape="rect" coords="319, 241, 400, 268" href="#UOM">
+            <area shape="rect" coords="407, 241, 476, 267" href="#Format">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Bottom tab section</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" src="Cost_Table_files/tab_more.png" usemap="#more_tab"> <map name="more_tab">
+            <area shape="rect" coords="10, 68, 112, 95" href="#Split_code">
+            <area shape="rect" coords="111, 67, 192, 95" href="#Split_quantity">
+            <area shape="rect" coords="199, 67, 259, 94" href="#Sequence">
+            <area shape="rect" coords="271, 67, 331, 94" href="#Quantity">
+            <area shape="rect" coords="341, 67, 387, 93" href="#Fee_%">
+            <area shape="rect" coords="387, 68, 451, 95" href="#Fee_$">
+            <area shape="rect" coords="459, 68, 522, 93" href="#Split">
+            <area shape="rect" coords="12, 117, 59, 144" href="#Weight">
+            <area shape="rect" coords="61, 118, 110, 144" href="#Cubic">
+            <area shape="rect" coords="120, 118, 190, 144" href="#Cases">
+            <area shape="rect" coords="201, 118, 263, 144" href="#Layer">
+            <area shape="rect" coords="13, 218, 573, 246" href="#Comment">
+            <area shape="rect" coords="11, 168, 194, 195" href="#Status">
+            <area shape="rect" coords="200, 167, 332, 194" href="#Inventory">
+            <area shape="rect" coords="460, 167, 572, 195" href="#Control">
+            <area shape="rect" coords="269, 117, 332, 144" href="#Delivery">
+            <area shape="rect" coords="339, 117, 451, 145" href="#Date_available">
+            <area shape="rect" coords="341, 168, 451, 194" href="#Method">
+          </map> </td>
+
+          <td><img style="border-style:none" src="Cost_Table_files/tab_deals.png" usemap="#deals_tab"> <map name="deals_tab">
+            <area shape="rect" coords="74, 74, 176, 174" href="#Start_date">
+            <area shape="rect" coords="178, 73, 277, 176" href="#End_date">
+            <area shape="rect" coords="280, 73, 321, 174" href="#$">
+            <area shape="rect" coords="322, 74, 354, 174" href="#%">
+            <area shape="rect" coords="356, 74, 396, 174" href="#Min">
+            <area shape="rect" coords="398, 73, 438, 176" href="#Max">
+            <area shape="rect" coords="440, 74, 528, 175" href="#Qualifier">
+            <area shape="rect" coords="532, 74, 582, 177" href="#OI">
+          </map> </td>
+
+          <td><img style="border-style:none" src="Cost_Table_files/tab_billback.png" usemap="#billback_tab"> <map name="billback_tab">
+            <area shape="rect" coords="75, 75, 391, 100" href="#Percent">
+            <area shape="rect" coords="75, 98, 390, 126" href="#Dollars">
+            <area shape="rect" coords="75, 134, 392, 161" href="#Description">
+            <area shape="rect" coords="460, 133, 572, 160" href="#Operator_level">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.</td>
+
+          <td class="Img">* Click on a field to get information on it.</td>
+
+          <td class="Img">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p><strong>Cost table grid</strong></p>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" src="Cost_Table_files/cost_table_grid.png" usemap="#cost_table_grid"> <map name="cost_table_grid">
+            <area shape="rect" coords="2, 78, 50, 281" href="#Target">
+            <area shape="rect" coords="115, 79, 178, 282" href="#Vendor_ID">
+            <area shape="rect" coords="51, 79, 115, 282" href="#Format">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align: center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h3>Content</h3>
+
+      <p>Here is the description of the <strong>Cost table</strong> fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td colspan="2"><strong>Main section</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cost">Cost</a></strong></td>
+
+          <td>The <strong>Cost</strong> field shows the current cost per case for the item cost record.<br>
+          Not editable and used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Authorized">Authorized</a></strong></td>
+
+          <td>The <strong>Authorized (Auth)</strong> field specifies whether the current cost record is the official authorized cost (checked) or not (unchecked). It is selected by default, however the database has actually no value for this field (not yes, not no; null value).<br>
+          The <strong>Authorized</strong> field is useful in multi-vendors cases, when an item has more than one cost record. The cost record officially authorized is the one used in the reports.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Next_date">Next date</a></strong></td>
+
+          <td>The <strong>Next date</strong> field contains the date change of the next cost, i.e. the date at which the <a href="#The_Next_cost_field">next cost</a> becomes effective.<br>
+          Not editable and used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Next_cost">Next cost</a></strong></td>
+
+          <td>The <strong>Next cost</strong> field shows the next cost event based on the allowance, discount and rebate dates.<br>
+          See the <a href="#The_Next_cost_field"><strong>Next cost</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Source">Source</a></strong></td>
+
+          <td>The <strong>Source</strong> field contains the origin of the current next cost.<br>
+          See the <a href="#The_Source_field"><strong>Source</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier (the store group). It is a required field used as a key, along with the main item UPC and the Vendor field, to uniquely identify records in the <strong>Cost</strong> table.<br>
+          The default value is <em>PAL</em>.<br>
+          The <b>Target</b> field is grayed out unless the system is set up for multi targets.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor_ID">Vendor ID</a></strong></td>
+
+          <td>The <strong>Vendor ID</strong> field links the current item cost record to a vendor.&nbsp;<br>
+          It is a required field used as a key field, along with the main item UPC and the <a href="#Target"><strong>Target</strong> field</a>, to uniquely identify records in the <strong>Cost</strong> table.<br>
+           See the <a href="#The_Vendor_ID_field"><strong>Vendor ID</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor_name">Vendor name</a></strong></td>
+
+          <td>The <strong>Vendor name</strong> field contains the name of the vendor for the current cost record.<br>
+          The <strong>Vendor name</strong> field is not editable in the <strong>Cost</strong> table. It is based on the vendor identification number entered in the <a href="#The_Vendor_ID_field"><strong>Vendor ID</strong> field</a>. The vendor names are editable in the <a href="../Dimensions/Dimensions_tables/Vendor_Table.htm"><strong>Vendor</strong> table</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Vendor_code">Vendor code</a></strong></td>
+
+          <td>The <strong>Vendor code</strong> field contains the code used by the vendor to identify the item. This code is usually used to order the item from the vendor.<br>
+          The <strong>Vendor code</strong> field can be added and used as search criterion in the <strong>Items - General list</strong> wizard window. Item reports can be extracted by vendor, and listed in the vendor code order.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Base_cost">Base cost</a></strong></td>
+
+          <td>The <strong>Base cost</strong> field contains the regular item cost per case.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Case">Case</a></strong></td>
+
+          <td>The <strong>Case</strong> field contains the number of units per case for the item.<br>
+          The case value is generally used to calculate the <a href="#Unit_cost">unit cost</a> of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Unit_cost">Unit cost</a></strong></td>
+
+          <td>The <strong>Unit cost</strong> field shows the unit cost of the item.<br>
+          Its value is automatically calculated (the <a href="#Base_cost">base cost</a> amount&nbsp; divided by the <a href="#Case">case</a> value).<br>
+          Not editable and used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="UOM">UOM</a></strong></td>
+
+          <td>The <strong>Unit of measure (UOM)</strong> field contains the identification characters of the buying format available for the current item.<br>
+          See the <a href="#The_Unit_of_measure_(UOM)_field"><strong>Unit of measure</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Format">Format</a></strong></td>
+
+          <td>The <strong>Format</strong> field contains the buying format.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>More tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Split_code">Split code</a></strong></td>
+
+          <td>The <strong>Split code</strong> field contains the UPC code of the item contained in the current item.<br>
+          See the <a href="#The_Split_code_field_section"><strong>Split code</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Split_quantity">Split quantity</a></strong></td>
+
+          <td>The <strong>Split quantity (Split qty)</strong> field contains the number of the item contained in the current item. It works in combination with the <a href="#Split_code"><strong>Split code</strong> field</a>.<br>
+          For example, a carton of cigarettes (UPC #0000000010000) contains 8 packs of cigarettes (UPC #0000000008000). In this case, the <strong>Split quantity</strong> field for the item #0000000010000 (carton of cigarettes) contains the value 8.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Sequence">Sequence</a></strong></td>
+
+          <td>The <strong>Sequence (Sequ)</strong> field contains a number assigned by the retailer and used to sort items within a vendor.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Quantity">Quantity</a></strong></td>
+
+          <td>The <strong>Quantity (Qty)</strong> field contains the default quantity to use in the purchase orders for the current item.<br>
+          The <strong>Quantity</strong> field works in combination with the <a href="#UOM"><strong>Unit of measure (UOM)</strong> field</a> to complete its value, i.e. the format in which the default quantity is expressed (case, unit, weight).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Fee_%">Fee %</a></strong></td>
+
+          <td>The <strong>Fee %</strong> field contains the fee value for one case, expressed as a percentage.<br>
+          Fees may include shipping fees, administrative fees, etc. They directly affect the cost of the item and consequently its unit cost.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Fee_$">Fee $</a></strong></td>
+
+          <td>The <strong>Fee $</strong> field contains the fee amount for one case, expressed in dollars.<br>
+          Fees may be shipping fees, administrative fees, etc. They directly affect the cost of the item, and consequently its unit cost.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Split">Split</a></strong></td>
+
+          <td>The <strong>Split</strong> field contains the fee amount by unit charged when the current item is bought in split case quantities.<br>
+          The split fees directly affect the unit cost of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Weight">Weight</a></strong></td>
+
+          <td>The <strong>Weight</strong> field contains the weight of a case, including tare.<br>
+          It is generally used in warehouses for receiving information or to calculate the shipping fees charged by weight.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cubic">Cubic</a></strong></td>
+
+          <td>The <strong>Cubic</strong> field contains the volume of a case.<br>
+           It is generally used in warehouses for receiving information or to calculate the shipping fees charged by volume.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cases">Cases</a></strong></td>
+
+          <td>The <strong>Cases (Cs)</strong> field contains the number of cases per layer on a pallet.<br>
+          It is generally used in warehouses for receiving information.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Layer">Layer</a></strong></td>
+
+          <td>The <strong>Layer</strong> field contains the number of layers on a pallet.&nbsp;<br>
+          It is generally used in warehouses for receiving information.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Comment">Comment</a></strong></td>
+
+          <td>The <strong>Comment</strong> field contains a comment on the cost of the item.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Deals tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Status">Status</a></strong></td>
+
+          <td>The <strong>Status</strong> field contains the identification characters of the item status.<br>
+          See the <a href="#The_Status_field"><strong>Status field</strong> section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Inventory">Inventory</a></strong></td>
+
+          <td>The <strong>Inventory</strong> field contains the identification letter of the method that defines the item cost used for the inventory value of the item.<br>
+          See the <a href="#The_Inventory_field"><strong>Inventory field</strong> section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 47px;"><strong><a name="Control">Control</a></strong></td>
+
+          <td style="height: 47px">The <strong>Control</strong> field contains the identification letters of the control information on the item, used to add limits to the item.<br>
+          The default value is <em>No ordering (NO)</em>, indicating that the item is not ordered on the purchase orders.<br>
+          The default list attached to the <strong>Control</strong> field may be modified. See the reseller for details.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Delivery">Delivery</a></strong></td>
+
+          <td>The <strong>Delivery (Deliv)</strong> field contains the number of days needed to receive the item from the vendor after it is ordered.<br>
+          It defines a number of days for an item in particular. Delivery schedules can be defined for the vendor of this item in the <strong>Vendor table</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Date_available">Date available</a></strong></td>
+
+          <td>The <strong>Date available (Date avail)</strong> field contains the date on which the item is available.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Method">Method</a></strong></td>
+
+          <td>Description to come.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Allowance">Allowance</a></b></td>
+
+          <td>An <strong>allowance</strong> is an amount subtracted from the cost of the item. It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
+          The allowance amount automatically affects the cost amount, and consequently its unit cost amount.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Discount">Discount</a></b></td>
+
+          <td>A <strong>discount</strong> is an amount subtracted from the cost of the item. It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
+          The discount amount automatically affects the cost amount, and consequently its unit cost amount.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Rebate">Rebate</a></b></td>
+
+          <td>A <strong>rebate</strong> is an amount subtracted from the cost of the item. It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
+          The rebate amount automatically affects the cost amount, and consequently its unit cost amount.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Break/quantity">Break/quantity</a><br>
+          </b>(<b>Cost break</b>)</td>
+
+          <td>A <strong>break/quantity</strong> (or a <strong>cost break</strong>) is an amount subtracted from the cost of the item when a certain quantity of that item is purchased.<br>
+          It is granted by the item wholesaler or the manufacturer to the retailer of the item.<br>
+          The break/quantity is not exactly considered as a cost event since the retailer may not purchase the required quantity to claim the reduction. For that reason, the break/quantity amount does not affect the cost amount.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><a name="Start_date"><strong>Start</strong> <strong>date</strong></a></td>
+
+          <td>The <strong>Start date</strong> field contains the start dates for the cost events, i.e. the dates on which the cost events become effective.&nbsp;<br>
+          See the <a href="#The_Start_date_field"><strong>Start date</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="End_date">End date</a></strong></td>
+
+          <td>The <b>End date</b> field contains the end dates for the cost events, i.e. the dates at which the cost events are no longer effective.<br>
+          See the <a href="#The_End_date_field"><strong>End date</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="$">$</a></strong></td>
+
+          <td>The <strong>$</strong> field contains the reduction amount per case for the cost events, applicable during the effective cost event period.<br>
+          See the <a href="#The_$_field"><strong>$</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="%">%</a></strong></td>
+
+          <td>The <strong>%</strong> field contains the reduction per case expressed as a percentage for the cost events, applicable during the effective cost event period.<br>
+          See the <a href="#The_%_field"><strong>%</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Min">Min</a></strong></td>
+
+          <td>The <strong>Minimum (Min)</strong> field contains the minimum quantity required, in cases, to obtain the reduction of the cost events.<br>
+          See the <a href="#The_Minimum_field"><strong>Minimum</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Max">Max</a></strong></td>
+
+          <td>The <strong>Maximum (Max)</strong> field contains the maximum quantity of cases for which the cost events can be applied on.<br>
+           See the <a href="#The_Maximum_field"><strong>Maximum</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Qualifier">Qualifier</a></strong></td>
+
+          <td>The <strong>Qualifier</strong> field contains the qualifying conditions of the cost event.<br>
+          See the <a href="#The_Qualifier_field"><strong>Qualifier</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="OI">OI</a></strong></td>
+
+          <td>The <strong>Off Invoice (OI)</strong> field contains the identification character of the off invoice status. This status specifies when the cost event value is given.<br>
+          See the <a href="#The_Off_invoice_(OI)_field"><strong>Off Invoice</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><strong>Billback tab</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Percent">Percent</a></strong></td>
+
+          <td>The <strong>Percent (Bill back)</strong> field contains the bill back values per case, expressed as a percentage.<br>
+          See the <a href="#Percent_(Bill_back)"><strong>Percentage (Bill back)</strong> field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b><a name="Dollars">Dollars</a></b></td>
+
+          <td>The <b>Dollars (Bill back)</b> field contains the bill back values <u>per case</u>, expressed in dollars.<br>
+          See the <a href="#Dollars_(Bill_back)_field"><strong>Dollars</strong> (Bill back) field section</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> field contains the description of the bill back 4.<br>
+          It is used for information purposes only.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Operator_level">Operator level</a></strong></td>
+
+          <td>The <strong>Operator level (Oper. lvl.)</strong> field contains the number of the minimum operator level needed to manage the current cost record.<br>
+          See the <a href="#The_Operator_level_field"><strong>Operator level</strong> field section</a>.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Next_cost_field">The Next cost field</a></h3>
+
+      <p>The <b>Next cost</b> field shows the next cost event based on the allowance, discount and rebate dates.</p>
+
+      <p>However, many factors may affect the unit cost value, such as the allowance, discount and rebate cost events (if they are off invoice) and the different fees (<a href="#The_%_field">percent %</a>, <a href="#The_$_field">dollars $</a> and <a href="#Split">split case</a>).</p>
+
+      <p>The <b>Next cost</b> field is grayed out and used for information purposes only. Its value is updated as soon as the modifications are posted (saved) to the database. The allowance, discount and rebate amounts are cumulative if they are active. If no allowance, discount or rebate is defined, the <b>Next cost</b> field is empty.</p>
+
+      <div class="alert alert-warning">
+        <b>NOTE:</b> The fees (<a href="#The_%_field">percent %</a> and <a href="#The_$_field">dollars $</a>) also affect the next cost value.
+      </div>
+
+      <p><b>Examples</b></p>
+
+      <p>The regular cost of item <i>#0000000000001</i> is <i>$45.00</i>.</p>
+
+      <p><img height="52" src="Cost_Table_files/ex_base_cost.png" width="83"></p>
+
+      <h3><b>Case 1</b></h3>
+
+      <p>No allowance, discount or rebate is defined.</p>
+
+      <p><img height="108" src="Cost_Table_files/case1_condition.png" width="415"></p>
+
+      <p>In this case, the <a href="#Cost"><b>Cost</b> field</a> shows the regular cost <i>$45.00</i>, and the <b>Next cost</b> field is empty.</p>
+
+      <p><img height="52" src="Cost_Table_files/case1_results.png" width="153"></p>
+
+      <h3><b>Case 2</b></h3>
+
+      <p>A discount is currently active (<i>$5.00</i>). No allowance or rebate is defined.</p>
+
+      <p><img height="108" src="Cost_Table_files/case2_condition.png" width="414"></p>
+
+      <p>In this case, the <b>Cost</b> field shows the regular cost (<i>$45.00</i>) less the discount amount (<i>$5.00</i>), i.e. <i>$40.00</i>, and the <b>Next cost</b> field shows the cost to which item <i>#0000000000001</i> will return after the discount end date, namely the regular cost (<i>$45.00</i>).</p>
+
+      <p><img height="52" src="Cost_Table_files/case2_results.png" width="153"></p>
+
+      <h3><b>Case 3</b></h3>
+
+      <p>A discount is defined for the next week (<i>$5.00</i>).&nbsp;No allowance or rebate is defined.</p>
+
+      <p><img height="106" src="Cost_Table_files/case3_condition.png" width="415"></p>
+
+      <p>In this case, the <b>Cost</b> field shows the regular cost (<i>$45.00</i>), and the <b>Next cost</b> field shows the cost that item <i>#000000000001</i> will be at when the discount becomes active, namely the regular cost (<i>$45.00</i>) less the discount amount (<i>$5.00</i>), i.e. <i>$40.00.</i></p>
+
+      <p><img height="52" src="Cost_Table_files/case3_results.png" width="153"></p>
+
+      <h3><b>Case 4</b></h3>
+
+      <p>A discount is currently active (<i>$5.00</i>), and a rebate is defined for the next week (<i>$10.00</i>), effective immediately after the discount.</p>
+
+      <p><img height="108" src="Cost_Table_files/case4_condition.png" width="415"></p>
+
+      <p>In this case, the <b>Cost</b> field shows the regular cost (<i>$45.00</i>) less the discount amount (<i>$5.00</i>), i.e. <i>$40.00</i>, and the <b>Next cost</b> field shows the cost that item <i>#0000000000001</i> will be at after the discount end date, namely the regular cost (<i>$45.00</i>) less the rebate amount (<i>$10.00</i>), i.e. <i>$35.00.</i></p>
+
+      <p><img height="52" src="Cost_Table_files/case4_results.png" width="153"></p>
+
+      <h3><b>Case 5</b></h3>
+
+      <p>A discount is currently active (<i>$5.00</i>), and a rebate is defined for the next week (<i>$10.00</i>), effective from the last discount active day (crossing for one day).</p>
+
+      <p><img height="104" src="Cost_Table_files/case5_condition.png" width="414"></p>
+
+      <p>In this case, the <b>Cost</b> field shows the regular cost (<i>$45.00</i>) less the discount amount (<i>$5.00</i>), i.e. <i>$40.00</i>, and the <b>Next cost</b> field shows the cost that item <i>#0000000000001</i> will be at when the rebate becomes active, that is to say the regular cost (<i>$45.00</i>) less the discount amount (<i>$5.00</i>) less the rebate amount (<i>$10.00</i>), i.e. <i>$30.00.</i></p>
+
+      <p><img height="52" src="Cost_Table_files/case5_result.png" width="153"></p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Source_field">The Source field</a></h3>
+
+      <p>The <b>Source</b> field is an 8-character field that contains the origin of the current <a href="#The_Next_cost_field">next cost</a>.</p>
+
+      <p>The <b>Source</b> field is not editable and used for information purposes only. Its possible values are:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Source</th>
+
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 6%"><b>BASE</b></td>
+
+          <td width="85%">when the future cost comes from the <b>Regular</b> cost event.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 6%"><b>ALLO</b></td>
+
+          <td width="85%">when the future cost comes from the <b>Allowance</b> cost event.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 6%"><b>DISC</b></td>
+
+          <td width="85%">when the future cost comes from the <b>Discount</b> cost event.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 6%"><b>REBAT</b></td>
+
+          <td width="85%">when the future cost comes from the <b>Rebate</b> cost event.</td>
+        </tr>
+      </table>
+
+      <p class="Note"><b>NOTE:</b> Even if the <b>Break/Quantity</b> cost event contains active dates, it does not display anything in the <b>Source</b> field because one may not purchase the quantity required to obtain the reduction.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Vendor_ID_field">The Vendor ID field</a></h3>
+
+      <p>The <b>Vendor ID</b> field links the current item cost record to a vendor. It is a required field, i.e. new cost records must have a valid entry in the <b>Vendor ID</b> field for the record to exist. It is used as a key field, along with the main item's UPC and the <a href="#Target"><b>Target</b> field</a>, to uniquely identify records in the <b>Cost</b> table.</p>
+
+      <p>A main item UPC can be linked to different vendors, creating multiple records for the same item.</p>
+
+      <p>To link the item to a vendor, type the vendor's identification code in the <strong>Vendor ID</strong> field or click on the arrow to select a vendor from the Vendor table.</p>
+
+      <p>Records must already exist in the <b>Vendor</b> table for the Vendor table to display choices. The vendor name of the specified vendor is displayed in the <a href="#Vendor_name"><b>Vendor name</b> field</a>. If not, the vendor identification code entered is not valid.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Unit_of_measure_(UOM)_field">The Unit of measure (UOM) field</a></h3>
+
+      <p>The <b>Unit of measure</b> (<b>UOM</b>) field contains the identification characters of the buying format available for the current item.</p>
+
+      <p style="TEXT-ALIGN: center"><img src="Cost_Table_files/UOM.png"></p>
+
+      <p>The <b>Unit of measure</b> field has effects in the purchase orders. The buying formats available in the purchase orders depend on the values of the <b>Unit of measure</b> field.</p>
+
+      <p class="Note"><b>NOTES:<br>
+      </b>The unit of measure may also be specified at the vendor level (<strong>Unit of measure</strong> field in the <strong>Vendor</strong> table). In this case, the value defined in the <strong>Cost</strong> table has precedence over the value defined in the <strong>Vendor</strong> table.<br>
+      If the <strong>Unit of measure</strong> field does not contain any value, the <em>case format</em> is the only buying format available.<br>
+      A maximum of two buying formats can be specified.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Split_code_field_section">The Split code field section</a></h3>
+
+      <p>The <b>Split code</b> field contains the UPC code of the item that is part of the current item. It is used for kits that contain only one (1) item (1 UPC code). It works in combination with the <a href="#Split_quantity"><strong>Split quantity</strong> field</a>.</p>
+
+      <p>For example, a carton of cigarettes (UPC #<i>0000000010000</i>) contains 8 packs of cigarettes (UPC #<i>0000000008000</i>). In this case, the <b>Split code</b> field for the item #<i>0000000010000</i> (carton of cigarettes) contains the value <i>0000000008000</i> (pack of cigarettes).</p>
+
+      <p class="Note"><b>NOTE:</b> When the base cost of the current item (in the example above, the carton of cigarettes UPC #0000000010000) is modified, the system asks whether to also change the base cost of the split item (in the example above, the pack of cigarettes UPC #0000000008000). Feature available starting in May 2019.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Status_field">The Status field</a></h3>
+
+      <p>The <strong>Status</strong> field is a drop-down list that contains the identification characters of the item status.</p>
+
+      <p><img src="Cost_Table_files/status_field.png"></p>
+
+      <p>The <strong>Status</strong> field is used to specify whether the item is accepted in a reception or not, depending on the status type.</p>
+
+      <p>The back order status of the item is also managed from the <strong>Status</strong> field. The <i>Allow BO</i> status indicates that back orders are accepted for the current item. The number of days of the back order life is defined once for all items of the vendor, in the <b>B.O.</b> field of the <b>Vendor</b> table.</p>
+
+      <p class="Note"><b>NOTE:</b> The default list can be modified. See the reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Inventory_field">The Inventory field</a></h3>
+
+      <p>The <b>Inventory</b> field is a drop-down list that contains the identification letter of the method defining the item cost used for the inventory value of the item.</p>
+
+      <p><img src="Cost_Table_files/inventory_menu.png"></p>
+
+      <p>The following options are available:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><strong>METHOD</strong></th>
+
+            <th><strong>VALUE</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td>(empty)</td>
+
+          <td>This method uses the method specified in the <i>System.ini</i> file.<br>
+          This is the default value of the <b>Inventory</b> field.<br>
+          The default value specified in the System.ini file is <i>Average cost</i>.</td>
+        </tr>
+
+        <tr>
+          <td>Average cost</td>
+
+          <td>(A)</td>
+
+          <td>This method uses the average cost of the item.</td>
+        </tr>
+
+        <tr>
+          <td>Last DB cost</td>
+
+          <td>(C)</td>
+
+          <td>This method uses the current cost of the item, defined in the <b>Cost</b> table.</td>
+        </tr>
+
+        <tr>
+          <td>Last buying cost</td>
+
+          <td>(L)</td>
+
+          <td>This method uses the cost of the last purchase of the item.</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+       
+
+      <p>Each method has a different effect on the inventory value. See the reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Start_date_field">The Start date field</a></h3>
+
+      <p>The <b>Start date</b> field is a date field that contains the start dates for the cost events, i.e. the dates at which the cost events become effective. The start date is inclusive.</p>
+
+      <p>The <b>Allow Start date</b> field contains the start date for the allowance, i.e. the date at which the allowance becomes effective.</p>
+
+      <p>The <b>Discount Start date</b> field contains the start date for the discount, i.e. the date at which the discount becomes effective.</p>
+
+      <p>The <b>Rebate Start date</b> field contains the start date for the rebate, i.e. the date at which the rebate becomes effective.</p>
+
+      <p>The <b>Break/quantity (Brk/qty) Start date</b> contains the start date for the break/quantity, i.e. the date at which the break/quantity becomes effective.<br>
+      The <b>Break/quantity</b> is not exactly considered as a cost event since the required quantity may not be purchased to claim the reduction. The <b>Break/quantity</b> will give you a reduction if you use the <b>Inventory</b> module to receive goods.</p>
+
+      <p>The <b>Allow</b>, <b>Discount</b> and <b>Rebate</b> cost events must contain valid <b>Start</b> and <b>End</b> dates for the eSuite software to recognize the cost reductions.<br>
+      The <b>Break/quantity</b> does not require <b>Start</b> and <b>End</b> dates.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_End_date_field">The End date field</a></h3>
+
+      <ul>
+        <li>The <b>End date</b> field contains the end dates for the cost events, i.e. the dates at which the cost events are no longer effective. The end date is inclusive.</li>
+
+        <li>The <b>Allow End date</b> field contains the end date for the allowance, i.e. the date at which the allowance is no longer effective.</li>
+
+        <li>The <b>Discount End date</b> field (F230) is a date field that contains the end date for the discount, i.e. the date at which the discount is no longer effective.</li>
+
+        <li>The <b>Rebate End date</b> field (F235) is a date field that contains the end date for the rebate, i.e. the date at which the rebate is no longer effective.</li>
+      </ul>
+
+      <p>The <b>Break/quantity End date</b> field (F219) is a date field that contains the end date for the break/quantity, i.e. the date at which the break/quantity is no longer effective.<br>
+      The <b>Break/quantity</b> is not exactly considered as a cost event since the required quantity may not be purchased to claim the reduction. The <b>Break/quantity</b> will give a reduction if you use the <b>Inventory</b> module to receive goods.</p>
+
+      <p>The <b>Allow</b>, <b>Discount</b> and <b>Rebate</b> cost events must contain valid <b>Start</b> and <b>End</b> dates for the eSuite software to recognize the cost reductions. If the end date for the reduction is not knon, enter a distant future date.<br>
+      The <b>Break/quantity</b> does not require <b>Start</b> and <b>End</b> dates.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_$_field">The $ field</a></h3>
+
+      <ul>
+        <li>The <b>$</b> field contains the reduction amount <u>per case</u> for the cost events, applicable during the effective cost event period.</li>
+
+        <li>The <b>Allow $</b> field contains the reduction amount <u>per case</u> for the allowance, applicable during the effective allowance period.</li>
+
+        <li>&nbsp; The <b>Discount $</b> field contains the reduction amount <u>per case</u> for the discount, applicable during the effective discount period.</li>
+
+        <li>&nbsp; The <b>Rebate $</b> field contains the reduction amount <u>per case</u> for the rebate, applicable during the effective rebate period.</li>
+
+        <li>&nbsp;The <b>Break/quantity $</b> field contains the reduction amount <u>per case</u> for the break/quantity, applicable during the effective break/quantity period when the required quantity is bought.</li>
+      </ul>
+
+      <p class="Note"><b>NOTES:<br>
+      </b>The cost events must have valid <b><a href="#The_Start_date_field">Start</a></b> and <b><a href="#The_End_date_field">End</a></b> dates for the reductions to become effective.<br>
+      If a reduction amount and a reduction percentage are both entered for a cost event, they are both applied to the item cost.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_%_field">The % field</a></h3>
+
+      <ul>
+        <li>The <b>%</b> field contains the reduction <u>per case</u> expressed as a percentage for the cost events, applicable during the effective cost event period.</li>
+
+        <li>The <b>Allow %</b> field contains the reduction <u>per case</u> expressed as a percentage for the allowance, applicable during the effective allowance period.</li>
+
+        <li>The <b>Discount %</b> field contains the reduction <u>per case</u> expressed as a percentage for the discount, applicable during the effective discount period.</li>
+
+        <li>The <b>Rebate %</b> field contains the reduction <u>per case</u> expressed as a percentage for the rebate, applicable during the effective rebate period.</li>
+
+        <li>The <b>Break/quantity %</b> field contains the reduction <u>per case</u> expressed as a percentage for the break-quantity, applicable during the effective break/quantity period when the required quantity is bought.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Minimum_field">The Minimum field</a></h3>
+
+      <ul>
+        <li>The <b>Minimum</b> <b>(Min</b>) field contains the minimum quantity in cases that is required for obtaining the reduction of the cost events.</li>
+
+        <li>The <b>Allow Minimum</b> field contains the minimum quantity in cases that is required for obtaining the allowance reduction.</li>
+
+        <li>The <b>Discount Minimum</b> field contains the minimum quantity in cases that is required for obtaining the discount reduction.</li>
+
+        <li>The <b>Rebate Minimum</b> field contains the minimum quantity in cases that is required for obtaining the rebate reduction.</li>
+
+        <li>The <b>Break/quantity Minimum</b> field contains the minimum quantity in cases that is required for obtaining the break/quantity reduction.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Maximum_field">The Maximum field</a></h3>
+
+      <ul>
+        <li>The <b>Maximum</b> <b>(Max</b>) field is a numeric-only 12-digit (including 4 decimals) field that contains the maximum quantity of cases on which the cost events can be applied.</li>
+
+        <li>The <b>Allowance Maximum</b> field contains the maximum quantity, in cases, on which the allocation can be applied.</li>
+
+        <li>The <b>Discount Maximum</b> field contains the maximum quantity, in cases, on which the discount can be applied.</li>
+
+        <li>The <b>Rebate Maximum</b> field contains the maximum quantity, in cases, on which the rebate can be applied.</li>
+
+        <li>The <b>Break/quantity Maximum</b> field contains the maximum quantity, in cases, on which the break/quantity can be applied.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Qualifier_field">The Qualifier field</a></h3>
+
+      <ul>
+        <li>The <b>Qualifier</b> field contains the qualifying conditions of the cost event. It is a description used for information purposes only.</li>
+
+        <li>The <b>Allow Qualifier</b> field contains the qualifying conditions of the allowance.</li>
+
+        <li>The <b>Discount Qualifier</b> field contains the qualifying conditions of the discount.</li>
+
+        <li>The <b>Rebate Qualifier</b> field contains the qualifying conditions of the rebate.</li>
+
+        <li>The <b>Break/quantity Qualifier</b> field contains the qualifying conditions of the break/quantity.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Off_invoice_(OI)_field">The Off Invoice (OI) field</a></h3>
+
+      <p>The <b>Off Invoice</b> (<b>OI</b>) field contains the identification character of the off invoice status. This status specifies when the cost event value is given.</p>
+
+      <p><img src="Cost_Table_files/OI_field.png"></p>
+
+      <ul>
+        <li>The <b>Allow OI</b> field contains the identification character of the off invoice status.<br>
+        This status specifies when the allowance value is given.</li>
+
+        <li>The <b>Discount OI</b> field contains the identification character of the off invoice status.<br>
+        This status specifies when the discount value is given.</li>
+
+        <li>The <b>Rebate OI</b> field contains the identification character of the off invoice status.<br>
+        This status specifies when the rebate value is given.</li>
+
+        <li>The <b>Break/quantity OI</b> field contains the identification character of the off invoice status.<br>
+        This status specifies when the break/quantity value is given.</li>
+      </ul>
+
+      <p>The following status options are available:</p>
+
+      <p></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>OFF INVOICE STATUS</strong></th>
+
+            <th style="width: 4px"><strong>VALUE</strong></th>
+
+            <th style="width: 156px"><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><b>Off invoice</b></td>
+
+          <td style="width: 4px"><strong>1</strong></td>
+
+          <td>The cost event value is subtracted from the invoice total.<br>
+          This affects the <b><a href="#The_Next_cost_field">Next cost</a></b> and <b><a href="#Cost">Cost</a></b> values in the <b>Cost</b> table, except for the <b>Break/quantity</b> cost event.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b>End of promotion</b></td>
+
+          <td style="width: 4px"><strong>E</strong></td>
+
+          <td>The cost event value is given at the end of the promotion (as a check) according to the number of items bought.<br>
+          This does not affect the <b>Next cost</b> or <b>Cost</b> values in the <b>Cost</b> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b>On statement</b></td>
+
+          <td style="width: 4px"><strong>S</strong></td>
+
+          <td>The cost event value appears on the vendor's statement. It is given according to the number of items bought.<br>
+          This does not affect the <b>Next cost</b> or <b>Cost</b> values in the <b>Cost</b> table.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><b>Movement required</b></td>
+
+          <td style="width: 4px"><strong>M</strong></td>
+
+          <td>The cost event value is given (as a check) according to the number of items sold.<br>
+          This does not affect the <b>Next cost</b> and <b>Cost</b> values in the <b>Cost</b> table.</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+       
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="Percent_(Bill_back)">Percent (Bill back)</a></h3>
+
+      <p>The <b>Bill back Percent</b> field contains the bill back values <u>per case</u>, expressed as a percentage.</p>
+      <img height="56" src="Cost_Table_files/percent_bill_back.png" width="267"> 
+
+      <p>The eSuite software keeps information on up to 4 different bill back values in a cost record:</p>
+
+      <ul>
+        <li><b>Bill back 1</b> contains the bill back 1 value per case, expressed as a percentage.</li>
+
+        <li><b>Bill back 2</b> contains the bill back 2 value per case, expressed as a percentage.</li>
+
+        <li><b>Bill back 3</b> contains the bill back 3 value per case, expressed as a percentage.</li>
+
+        <li><b>Bill back 4</b> contains the bill back 4 value per case, expressed as a percentage.</li>
+      </ul>
+
+      <p>The bill back values are used for information purposes only. They do not affect the cost amount since one may not purchase the required quantity or value to claim the bill backs.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="Dollars_(Bill_back)_field">Dollars (Bill back) field</a></h3>
+
+      <p>The <b>Bill back Dollars</b> field contains the bill back values <u>per case</u>, expressed in dollars.</p>
+      <img height="55" src="Cost_Table_files/dollars_bill_back.png" width="265"> 
+
+      <p>The eSuite software keeps information on up to 4 different bill back values in a cost record:</p>
+
+      <ul>
+        <li><b>Bill back 1</b> contains the bill back 1 value per case, expressed in dollars.</li>
+
+        <li><b>Bill back 2</b> contains the bill back 2 value per case, expressed in dollars.</li>
+
+        <li><b>Bill back 3</b> contains the bill back 3 value per case, expressed in dollars.</li>
+
+        <li><b>Bill back 4</b> contains the bill back 4 value per case, expressed in dollars.</li>
+      </ul>
+
+      <p>The bill back values are used for information purposes only. They do not affect the cost amount since one may not purchase the required quantity or value to claim the bill backs.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Operator_level_field">The Operator level field</a></h3>
+
+      <p>The <b>Operator level</b> field is a numeric-only 4-digit field that contains minimum operator level needed to manage the current cost record.</p>
+
+      <p><img src="Cost_Table_files/operator_level.png"></p>
+
+      <p>For example, the cost record may require at least a manager login access level.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

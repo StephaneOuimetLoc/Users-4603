@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Public Coupons Examples</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Public Coupons Examples <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Coupon list<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Public coupons are store and vendor coupons given by the system when the specified criteria are reached.</p>
+
+      <p>They may <em>only</em> be used with the eCommerce option.</p>
+
+      <p>Here are some examples of how to create public coupons.</p>
+
+      <h3><a name="List_of_examples">List of examples</a></h3>
+
+      <ul>
+        <li><a href="#Ex_1">Buy 5 pounds (or kilograms) of ground beef for a total of $50.00 in the transaction, get $5.00 off on the ground beef item</a></li>
+
+        <li><a href="#Ex_2">Buy packs of gum (any flavor) &amp; for a total of $10.00 in the transaction, get $0.50 off on every pack of gum bought (the packs of gum are excluded from the required $10.00)</a></li>
+
+        <li><a href="#Ex_3">Buy 2 bags of Oreo cookies, get $1.00 off if the customer has accumulated at least 3000 points in the main point program</a></li>
+
+        <li><a href="#Ex_4">Buy a bottle of Coke and a candy bar for $2.00</a></li>
+
+        <li><a href="#Ex_5">Buy 2 bags of Oreo cookies, get 1 box of Premium Plus crackers for free</a></li>
+      </ul>
+
+      <h2><a name="Ex_1">Buy</a> 5 pounds</h2>
+
+      <p>(or kilograms) of ground beef for a total of $50.00 in the transaction, get $5.00 off on the ground beef item</p>
+
+      <p>If the ground beef is sold using a code 2 item (random weight item), the <b>Scalable</b> flag must be checked in the ground beef item definition for the system to know how many pounds (or kilograms) the amount sold is associated to.</p>
+
+      <p>The <b>Price</b> field in the ground beef item definition must contain its price per pound (or kilogram).</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:<br>
+           </td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Cents off</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Discount</strong> field: enter <em>5</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Public</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select the meat sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="158" src="Public_coupons_examples_files/1_ground_beef_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>&nbsp;to add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the <em>ground beef UPC</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Weight</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>5</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in this criteria</strong>.<br>
+           This method forces the system to apply the public coupon discount on the ground beef item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="441" src="Public_coupons_examples_files/1_ground_beef_criteria_item.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the second criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Sub-department</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the meat sub-department number.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Dollar</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>50</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="443" src="Public_coupons_examples_files/1_ground_beef_criteria_subdepartment.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em> or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="325" src="Public_coupons_examples_files/1_ground_beef_details_tab.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="159" src="Public_coupons_examples_files/1_ground_beef_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="325" src="Public_coupons_examples_files/1_ground_beef_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="327" src="Public_coupons_examples_files/1_ground_beef_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <h3>In this example:</h3>
+
+      <ul>
+        <li>The customer gets <i>$5.00</i> off when they buy <i>5</i> pounds (or kilograms) of ground beef in the meat sub-department for a total of <i>$50.00</i> in the transaction.</li>
+
+        <li>Even if the customer buys <i>10</i> pounds (or kilograms) of ground beef in the meat sub-department for <i>$100.00</i> or more, they will only get <i>$5.00</i> off. To repeat the electronic coupon, add the <i>Based on validated criteria</i> method (<i>R</i>) to each criterion that must be reached again.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_2">Buy</a> packs of gum</h2>
+
+      <p>(any flavor)&nbsp;for a total of $10.00 in the transaction, get $0.50 off on every pack of gum bought (the packs of gum are excluded from the required $10.00)</p>
+
+      <p>In this example, all gum flavors must be included in the same promotion; the same promotion identification number must be entered in the <a href="../../POS_Table.htm#Promotion_ID"><b>Promotion ID</b> field</a> of the <b>POS</b> table for each gum flavor.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Cents off</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Discount</strong> field: enter <em>0.5</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Electronic</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="114" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/2_gum_main_section.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Promo ID sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the promotion identification for the packs of gum.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Based on validated criteria</em>.<br>
+          This method repeats the electronic coupon for each pack of gum (<i>R</i>).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Exclude this from accumulation</em>.<br>
+          This method excludes the packs of gum from the required <i>$10.00</i> (<i>X</i>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in this criteria</strong>.<br>
+           This method forces the system to apply the electronic coupon discount on the packs of gum (<i>M</i>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="393" src="Public_coupons_examples_files/2_gum_criteria_promotion.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the second criteria.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Total sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Totalizer</strong> field: enter <em>3</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Dollar</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>10</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="394" src="Public_coupons_examples_files/2_gum_criteria_total_sales.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Details</strong> tab:&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="235" src="Public_coupons_examples_files/details_tab.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="114" src="Public_coupons_examples_files/2_gum_final.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="237" src="Public_coupons_examples_files/2_gum_text_view.png" width="302">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="237" src="Public_coupons_examples_files/2_gum_data_view.png" width="302"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>The customer gets $0.50 off when they buy 1 pack of gum (any flavor) and an additional total of $10.00 in the transaction.</li>
+
+        <li>If the customer buys 2 packs of gum (any flavor) and an additional total of $10.00, they will get $1.00 off (2 x $0.50).</li>
+
+        <li>If the customer buys 3 packs of gum (any flavor) and an additional total of $10.00, they will get $1.50 off (3 x $0.50), and so on.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_3">Buy</a> 2&nbsp;bags of Oreo cookies</h2>
+
+      <p>Get $1.00 off if the customer has accumulated at least 3000 points in the main point program</p>
+
+      <p>In this example,&nbsp;the customer gets $1.00 off when they buy 2 bags of Oreo cookies in the transaction if they have accumulated at least 3000 points. The customer code must be entered in the transaction to get the points balance.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Cents off</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Discount</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Public</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="112" src="Public_coupons_examples_files/3_Oreo_main_section.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the <em>Oreo cookies UPC</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>2</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in this criteria</strong>.<br>
+           This method forces the system to apply the electronic coupon discount on the Oreo cookies item (<i>M</i>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="391" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/3_Oreo_criteria_quantity.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the second criteria.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Minimum point balance</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Program</strong> field: enter <em>1</em>.<br>
+          The main point program is identified by the character <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Minimum balance</strong> field: enter <em>3000</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="393" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/3_Oreo_criteria_points.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Details</strong> tab:&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="235" src="Public_coupons_examples_files/details_tab.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="115" src="Public_coupons_examples_files/3_Oreo_final.png" width="304">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="237" src="Public_coupons_examples_files/3_Oreo_text_view.png" width="302">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="238" src="Public_coupons_examples_files/3_Oreo_data_view.png" width="302"></td>
+        </tr>
+      </table>
+
+      <p class="List">In this example:</p>
+
+      <ul>
+        <li>Even if the customer buys 4 bags of Oreo cookies in the transaction, they will only get $1.00 off if they have accumulated at least 3000 points.</li>
+
+        <li>For the customer to get $2.00 off when they buy 4 bags of Oreo cookies, $3.00 off when they buy 6 bags of Oreo cookies, etc., the <em>Based on validated criteria (R)</em> method must be added to the <em>Oreo cookies</em> criterion.</li>
+
+        <li>The <em>Minimum point balance (PTS)</em> method is considered as a threshold, meaning that the discount cannot be applied twice in the same transaction, even if the customer has 6000 points.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h3><a name="Ex_4">Buy</a> a bottle of Coke and a candy bar for $2.00</h3>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Bundle price</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Discount</strong> field: enter <em>2</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Public</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="115" src="Public_coupons_examples_files/4_coke_candy_main_section.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the <em>Coke UPC</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent</em>.<br>
+          This specifies that the bottle of Coke is part of the bundle (<i>A</i>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in this criteria</strong>.<br>
+           This method forces the system to apply the electronic coupon discount on the bottle of Coke.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="394" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/4_coke_add_criteria.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the second criteria.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Promo ID sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: enter <em>Quantity</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent</em>.<br>
+          This specifies that the candy bar is part of the bundle (<i>A</i>).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="393" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/4_candy_add_criteria.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Details</strong> tab:&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="237" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/3_Oreo_details_tab.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="114" src="Public_coupons_examples_files/4_coke_candy_final.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="237" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/4_coke_candy_text_view.png" width="302">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="236" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/4_coke_candy_data_view.png" width="302"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>The customer pays $2.00 for a bottle of Coke and a candy bar.</li>
+
+        <li>The electronic coupon discount, which is the difference between the total value of the 2 items and $2.00, is applied on the bottle of Coke.</li>
+
+        <li>For the customer to pay $4.00 for 2 bottles of Coke and 2 candy bars, $6.00 for 3 bottles of Coke and 3 candy bars, etc., the <i>Based on validated criteria</i> (<i>R</i>) must be selected in the <a href="../Coupons/Coupons.htm#Multiplication_and_accumulation"><strong>Multiplication and accumulation</strong> field</a> of the <strong>Add criteria</strong> window for both criteria.</li>
+      </ul>
+
+      <p class="NoteList"><b>NOTES:</b><br>
+      For the discount to be added as a new entry in the transaction instead of being applied on the bottle of Coke, select Copy item registration or Create a coupon registration in the <a href="../Coupons/Coupons.htm#Registration_type"><strong>Registration type</strong> field</a> of the <strong>Details</strong> tab.<br>
+      Ideally, a price has to be specified in the <strong>Price</strong> field for each electronic coupon even if its value is a bundle price, in order to quantify the value of the electronic coupon. This quantification defines the priority of the electronic coupon and is useful when a <span style="FONT-STYLE: normal"><em>limited quantity of electronic coupons can be given</em>.</span> In this case, the best electronic coupon is given according to its classification (value set in the <strong>Price</strong> field multiplied by the number of times it can be given).</p>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_5">Buy</a> 2 bags of Oreo cookies</h2>
+
+      <p>Get 1 box of Premium Plus crackers for free</p>
+
+      <p>In this example, the customer buys 2 bags of Oreo cookies and get 1 box of Premium Plus crackers for free.</p>
+
+      <p>For the box of Premium Plus crackers to be given for free, it has to be scanned in the transaction; however, the public coupon will not add it to the transaction.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">&nbsp;1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Buy X get Y free</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Buy X</strong> field: enter <em>2</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Get Y</strong> field: enter <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Public</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="116" src="../Electronic_coupons_programming/Electronic_coupons_examples_files/5_Oreo_crackers_main_section.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the first criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the <em>Oreo cookies UPC</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>2</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="392" src="Public_coupons_examples_files/5_Oreo_crackers_add_criteria_oreo.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Criteria</strong> tab, click <strong>Add criteria&nbsp;</strong> to add the second criteria.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item ID sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Equal to</strong> field: enter the <em>Premium Plus crackers UPC</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">
+          </td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: enter <em>Quantity</em>.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent</em>.<br>
+          This specifies that the Premium crackers are part of the bundle (<i>A</i>).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="394" src="Public_coupons_examples_files/5_Oreo_crackers_add_criteria_crackers.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;3. In the <strong>Details</strong> tab:&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em>&nbsp;or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="235" src="Public_coupons_examples_files/details_tab.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="113" src="Public_coupons_examples_files/5_Oreo_crackers_final.png" width="302">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="237" src="Public_coupons_examples_files/5_Oreo_crackers_text_view.png" width="302">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="237" src="Public_coupons_examples_files/5_Oreo_crackers_data_view.png" width="302"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>If the customer buys 1 bag of Oreo cookies and 1 box of Premium Plus crackers, they will not get any discount.</li>
+
+        <li>If they buy 2 bags of Oreo cookies and 1 box of Premium Plus crackers, they will get the box of Premium Plus crackers for free.</li>
+
+        <li>If they buy 4 bags of Oreo cookies and 2 boxes of Premium Plus crackers in the same transaction, they will get 1 box of Premium Plus crackers for free.</li>
+
+        <li>If they buy 6 bags of Oreo cookies and 3 boxes of Premium Plus crackers in the same transaction, they will get 1 box of Premium Plus crackers for free, etc.</li>
+
+        <li>For the customer to get 2 boxes of Premium Plus crackers for free when he buys 4 bags of Oreo cookies in the same transaction, add <i>Based on validated criteria</i> (<i>R</i>) in the <a href="../Coupons/Coupons.htm#Multiplication_and_accumulation"><strong>Multiplication and accumulation</strong> field</a> of the <strong>Add criteria</strong> window for both criteria. In this case, a box of Premium Plus crackers will be given for free for every 2 bags of Oreo cookies bought by the customer in the same transaction.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

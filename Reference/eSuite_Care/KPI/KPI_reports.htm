@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Active" />
+    <title>KPI Reports</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+        <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Care - KPI Reports <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Care &gt; KPI <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The <strong>KPI (Key performance indicator)</strong> reports allow measuring department performance, comparing sales, displaying customer visits and item quantities sold by customer type. They also allow identifying customers that have been inactive for a certain period, who the most loyal customers are for a given store and where they actively shop.</p>
+
+      <p>The <strong>KPI</strong> reports are available from <strong>eSuite Care</strong>:</p>
+
+      <ol>
+        <li>In the launcher, click on <strong>KPI.</strong></li>
+
+        <li>Select the right type of report from the <strong>Start</strong> window.</li>
+      </ol>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="width: 300px"><img height="722" src="KPI_reports_files/KPI_reports.png" width="588"></td>
+
+          <td>&nbsp;</td>
+
+          <td>
+            <p><b>KPI reports:</b></p>
+
+            <ul>
+              <li><strong><a href="#Customer_mix">Customer mix</a></strong></li>
+
+              <li><strong><a href="#Customer_turnover">Customer turnover</a></strong></li>
+
+              <li><strong><a href="#Department_impact">Department impact</a></strong></li>
+
+              <li><strong><a href="#Totalizer_impact">Totalizer impact</a></strong></li>
+
+              <li><strong><a href="#Inactivity">Inactivity</a></strong></li>
+
+              <li><strong><a href="#Loyalty">Loyalty</a></strong></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <h2><a name="Customer_mix">Customer mix</a></h2>
+
+      <p>The <strong>Customer mix wizard</strong> offers criteria selection that includes period, date range and target. It allows breaking down the information by date, store (default), operator and department. The <strong>More criteria</strong> button adds criteria related to operators and departments.</p>
+
+      <p><img class="Text" height="598" src="KPI_reports_files/customer_mix_wizard.png" width="416"></p>
+
+      <p>The <strong>Customer mix report</strong> displays the sales and allows comparison by customer type:</p>
+
+      <ul>
+        <li><strong><a name="unregistered">Unregistered</a> customers</strong> hold only an SMSPayment loyalty card and no customer account record in the eSuite customer tables.<br>
+        The card number cannot be linked to a person and the store has no way of communicating with the customer.</li>
+
+        <li><strong><a name="registered">Registered</a> customers</strong> hold a customer record in eSuite customer tables and can be identified.<br>
+         The store has the necessary information to identify the customer as a person and may contact them by phone or by email, depending on the information in the customer record.</li>
+
+        <li><strong>Loyalty members</strong> represent the totality of registered and unregistered customers.<br>
+         It allows comparing the difference in sales between loyalty customers as a whole and the walk-in customers.</li>
+
+        <li><strong><a name="walk-in">Walk-in</a> customers</strong> have no store identification number and cannot be identified by the store.</li>
+      </ul>
+
+      <p><img height="472" src="KPI_reports_files/customer_mix_report.png" width="1296" class="Text"></p>
+
+      <p>The <strong>Customer mix report</strong> includes amounts spent, number of visits and quantity or volume of items purchased.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Analyze</strong> breaks down the report information by date, store, operator and department.<br>
+        It provides access to queries for further drill-down to previous results in customer lists.</li>
+      </ul>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Customer mix</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 256px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 256px"><strong>Store ID</strong></td>
+
+          <td>The store number.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2" style="text-decoration:underline"><strong>Visit count</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Total</strong></td>
+
+          <td>The total number of transactions.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Registered</strong></td>
+
+          <td>The total number of transactions made by <a href="#Registered">registered</a> customers.<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Unregistered</strong></td>
+
+          <td>The total number of transactions made by <a href="#Unregistered">unregistered</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Loyalty members</strong></td>
+
+          <td>The total number of transactions made by loyalty members, i.e. registered and unregistered customers.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Walk-in</strong></td>
+
+          <td>The total number of transactions made by <a href="#Walk-in">walk-in</a> customers.<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2" style="text-decoration:underline"><strong>Amount sum</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>T<a name="Amount_sum_total">otal</a></strong></td>
+
+          <td>The total value of all the transactions for the store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Registered</strong></td>
+
+          <td>The total amount of the transactions made by <a href="#Registered">registered</a> customers for the store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Unregistered</strong></td>
+
+          <td>The total amount of the transactions made by <a href="#Unregistered">unregistered</a> customers for the store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Loyalty members</strong></td>
+
+          <td>The total amount of the transactions made by loyalty members for the store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Walk-in customers</strong></td>
+
+          <td>The total amount of the transactions made by <a href="#Walk-in">walk-in</a> customers for the store.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Amount ratio</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Registered</strong></td>
+
+          <td>The percentage that the transactions made by <a href="#Registered">registered</a> customers represent compared to the <a href="#Amount_sum_total">total amount</a> of the transactions for the store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Unregistered</strong></td>
+
+          <td>The percentage that the transactions made by <a href="#Unregistered">unregistered</a> customers represent compared to the <a href="#Amount_sum_total">total amount</a> of the transactions for the store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Loyalty members</strong></td>
+
+          <td>The percentage that the transactions made by loyalty members represent compared to the <a href="#Amount_sum_total">total amount</a> of the transactions for the store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Walk-in customers</strong></td>
+
+          <td>The percentage that the transactions made by <a href="#Walk-in">walk-in</a> customers represent compared to the <a href="#Amount_sum_total">total amount</a> of the transactions for the store.</td>
+        </tr>
+      </table>
+
+      <p class="Note"><strong>NOTE:</strong> This report requires additional configurations to function. See your reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Customer_turnover">Customer turnover</a></h2>
+
+      <p>The <strong>Customer turnover wizard</strong> offers criteria selection that includes period, date range and target. It allows breaking down the information by store and department. The <strong>More criteria</strong> button adds criteria related to dates.</p>
+
+      <p><img class="Text" height="598" src="KPI_reports_files/customer_turnover_wizard.png" width="416"></p>
+
+      <p>The <strong>Customer turnover report</strong> displays the customer movement among the different customer statuses from three periods (the current period and the two previous ones). It also shows sales by members of the store and non-members. All customers hold a customer record in the eSuite customer tables and in SMSPayment.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Analyze</strong> breaks down the report information by store and department.<br>
+         It provides access to queries for further drill-down to previous results in customer lists.</li>
+      </ul>
+
+      <p><img class="Text" height="679" src="KPI_reports_files/customer_turnover_report.png" width="983"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Customer turnover</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 256px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 256px"><strong>Store ID</strong></td>
+
+          <td>The store number.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><u><strong>Customer</strong></u></td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Start count</strong></td>
+
+          <td>The number of customers who made purchases in the second previous period based on the period preceding the current.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong><a name="new_count">New count</a></strong></td>
+
+          <td>The number of customers who have made purchases in the current period and made no purchases in any of the two previous periods.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong><a name="lost_count">Lost count</a></strong></td>
+
+          <td>The number of customers who have made no purchases in the current period and made purchases in the first and/or second period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong><a name="back_count">Back count</a></strong></td>
+
+          <td>The number of customers who have made purchases in the current period and in the first previous period, and made no purchase in the second previous period.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Variation</strong></td>
+
+          <td>The difference between the <a href="#lost_count">lost count customers</a> and the total of <a href="#new_count">new count</a> and <a href="#back_count">back count</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>End count</strong></td>
+
+          <td>The difference between the customer start count and the customer variation.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><u><strong>Amount</strong></u></td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong><a name="Amount_total">Total</a></strong></td>
+
+          <td>The total amount of sales for the store members and the non members.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong><a name="Amount_member">Member</a></strong></td>
+
+          <td>The amount of sales for the store members.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong><a name="Amount_non_member">Non member</a></strong></td>
+
+          <td>The amount of sales for the non members.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 256px"><strong>Member vs. total</strong></td>
+
+          <td>The percentage that the difference between the <a href="#Amount_non_member">sales of non members</a> represent compared to the <a href="#Amount_total">total sales</a>.</td>
+        </tr>
+      </table>
+
+      <p class="Note"><strong>NOTE:</strong> This report requires additional configurations to function. See your reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Department_impact">Department impact</a></h2>
+
+      <p>The <strong>Department impact wizard</strong> offers criteria selection that includes period, date range, impact department and target. It allows breaking down the information by date, store and customer type.</p>
+
+      <p><img class="Text" height="598" src="KPI_reports_files/department_impact_wizard.png" width="416"></p>
+
+      <p>The <strong>Department impact report</strong> displays the values attributed to the impact department.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Analyze</strong> breaks down the report information by date, store and customer type.<br>
+        It provides access to queries for further drill-down to previous results in customer lists.</li>
+      </ul>
+
+      <p><img class="Text" height="688" src="KPI_reports_files/department_impact_report.png" width="1034"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Department impact</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 256px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Store ID</strong></td>
+
+          <td>The store number.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Visit count</strong></td>
+        </tr>
+
+        <tr>
+          <td><strong>Total</strong></td>
+
+          <td>The total number of transactions.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Impact department</strong></td>
+
+          <td>The total number of transactions for the impact department.The total number of transactions for the impact department.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Other departments</strong></td>
+
+          <td>The total number of transactions for departments other than the impact one.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Together</strong></td>
+
+          <td>The total number of transactions for the impact department and the other departments.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Amount sum</strong></td>
+        </tr>
+
+        <tr>
+          <td><strong>Total</strong></td>
+
+          <td>The total amount of transactions.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Impact department</strong></td>
+
+          <td>The total amount of the transactions for the impact department.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Other departments</strong></td>
+
+          <td>The total amount of the transactions for departments other than the impact one.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Together</strong></td>
+
+          <td>The total amount of the transactions for the impact department and the other departments.</td>
+        </tr>
+      </table>
+
+      <p class="Note"><strong>NOTE:</strong> This report requires additional configurations to function. See your reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Totalizer_impact">Totalizer impact</a></h2>
+
+      <p>The <strong>Totalizer impact wizard</strong> offers criteria selection that includes period, date range, base totalizer and target. It allows breaking down the information by date, store and customer type.</p>
+
+      <p><img class="Text" height="598" src="KPI_reports_files/totalizer_impact_wizard.png" width="416"></p>
+
+      <p>The <strong>Totalizer impact report</strong> displays the values attributed to the <strong>Base totalizer</strong> selected in the wizard and compares the net sales and the totalizer impact.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Analyze</strong> breaks down the report information by date, store and customer type.<br>
+        It provides access to queries for further drill-down to previous results in customer lists.</li>
+      </ul>
+
+      <p><img class="Text" height="699" src="KPI_reports_files/totalizer_impact_report.png" width="882"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Totalizer impact</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 256px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Store ID</strong></td>
+
+          <td>The store number.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><u><strong>Visit count</strong></u></td>
+        </tr>
+
+        <tr>
+          <td><strong>Total</strong></td>
+
+          <td>The total number of transactions.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Totalizer</strong></td>
+
+          <td>The number of transactions having the impact totalizer.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Other totalizers</strong></td>
+
+          <td>The number of transactions not having the impact totalizer.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><u><strong>Amount</strong></u></td>
+        </tr>
+
+        <tr>
+          <td><strong>Sum of impact</strong></td>
+
+          <td>The total value of the transactions having the impact totalizer.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Sum of net sales - Total</strong></td>
+
+          <td>The total amount of all transactions.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Sum of net sales - Totalizer impact</strong></td>
+
+          <td>The total amount of the transactions having the impact totalizer.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Sum of net sales - Other totalizers</strong></td>
+
+          <td>The total amount of the transactions not having the impact totalizer.</td>
+        </tr>
+      </table>
+
+      <p class="Note"><strong>NOTE:</strong> This report requires additional configurations to function. See your reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Inactivity">Inactivity</a></h2>
+
+      <p>The <strong>Inactivity wizard</strong> offers criteria selection that includes date. The <strong>More criteria</strong> button adds criteria related to movement, account and marketing.</p>
+
+      <p><img class="Text" height="598" src="KPI_reports_files/inactivity_wizard.png" width="416">&nbsp;</p>
+
+      <p>The <strong>Inactivity report</strong> displays details on customer accounts and the sales amounts based on the periodic movement.</p>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Analyze</strong> provides access to queries for further drill-down to previous results in customer lists.</li>
+
+        <li><strong>Action</strong> allows sending notifications, assigning offers, adjusting points and redeeming points for gift cards.<br>
+        It provides access to offer details.</li>
+      </ul>
+
+      <p><img class="Text" height="582" src="KPI_reports_files/inactivity_report.png" width="1196"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Inactivity</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 256px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Customer ID</strong></td>
+
+          <td>The customer account number.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><u><strong>Customer details</strong></u></td>
+        </tr>
+
+        <tr>
+          <td><strong>Name</strong></td>
+
+          <td>The customer's name.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Shopper level</strong></td>
+
+          <td>The customer's shoppe rlevel.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Group number</strong></td>
+
+          <td>The number of the customer group.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Creation date</strong></td>
+
+          <td>The date of creation of the customer's account.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Creating store</strong> </td>
+
+          <td>The number of the store where the customer account was created.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Active store</strong> </td>
+
+          <td>The number of the store for which the customer account is active.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><u><strong>Movement</strong></u></td>
+        </tr>
+
+        <tr>
+          <td><strong>Last transaction</strong></td>
+
+          <td>The date of the most recent transaction.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Last month</strong></td>
+
+          <td>The amount of the movement in the previous month.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Last quarter</strong></td>
+
+          <td>The amount of the movement in the previous quarter.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Last year</strong></td>
+
+          <td>The amount of the movement in the previous year.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Total</strong></td>
+
+          <td>The total amount of the movement.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Loyalty">Loyalty</a></h2>
+
+      <p>The <strong>Loyalty wizard</strong> offers criteria selection that includes period, date range and target. It allows breaking down the information by date and store.</p>
+
+      <p><img class="Text" height="598" src="KPI_reports_files/loyalty_wizard.png" width="416">&nbsp;</p>
+
+      <p>The <strong>Loyalty report</strong> displays the sales by customer type to determine which store the customer account belongs to, based on the majority of sales during the past three months.</p>
+
+      <ul>
+        <li><strong>Unregistered customers</strong> hold only a SMSPayment loyalty card and no customer account record in the eSuite customer tables.<br>
+        The card number cannot be linked to a person and the store has no way of communicating with the customer.</li>
+
+        <li><strong><a name="Active">Active</a> customers</strong> hold an account record in the eSuite customer tables.&nbsp;<br>
+        Based on the first transaction, a store number is defined in the <a href="../../Common/Customers/Customer_table.htm#Calling_(store)"><strong>Calling</strong> field</a> (<strong>Store</strong> section) of the <a href="../../Common/Customers/Customer_table.htm"><strong>Customer</strong> table</a>. This may change depending on the majority of the sales during the previous three months.</li>
+
+        <li><strong><a name="Created">Created</a> customers</strong> hold an account record in the eSuite customer tables.<br>
+        Based on the first transaction, a store number is defined for in the <a href="../../Common/Customers/Customer_table.htm#Created_(store)"><strong>Created</strong> field</a> (<strong>Store</strong> section) of the <a href="../../Common/Customers/Customer_table.htm"><strong>Customer</strong> table</a>.</li>
+
+        <li><strong><a name="Guest">Guest</a> customers</strong> hold an account record in the eSuite customer tables.<br>
+         Based on where they are currently considered active, a store number is defined in the <a href="../../Common/Customers/Customer_table.htm#Calling_(store)"><strong>Calling</strong> field</a> (<strong>Store</strong> section) of the <a href="../../Common/Customers/Customer_table.htm"><strong>Customer</strong> table</a>..<br>
+        They are considered guest customerswhen they make a purchase in a different store than the active one.</li>
+      </ul>
+
+      <p>In the bottom menu:</p>
+
+      <ul>
+        <li><strong>Analyze</strong> displays the report information by date and store.<br>
+         It provides access to queries for further drill-down to previous results in customer lists.</li>
+      </ul>
+
+      <p><img class="Text" height="632" src="KPI_reports_files/loyalty_report.png" width="1439"></p>
+
+      <p>Below is a brief description of the information displayed by default in the <strong>Loyalty</strong> report.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 256px">COLUMN</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Store ID</strong></td>
+
+          <td>The store number.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><b><u>Customer count</u></b></td>
+        </tr>
+
+        <tr>
+          <td><strong>Total</strong></td>
+
+          <td>The total number of customers for the selected store.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Unregistered</strong></td>
+
+          <td>The number of <a href="#unregistered">unregistered</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Active</strong></td>
+
+          <td>The number of <a href="#Active">active</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Created</strong></td>
+
+          <td>The number of <a href="#Created">created</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Guest</strong></td>
+
+          <td>The number of <a href="#Guest">guest</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><u><strong>Visit count</strong></u></td>
+        </tr>
+
+        <tr>
+          <td><strong>Total</strong> </td>
+
+          <td>The total number of transactions for the selected store.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Unregistered</strong></td>
+
+          <td>The total number of transactions made by <a href="#unregistered">unregistered</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Active</strong></td>
+
+          <td>The total number of transactions made by <a href="#Active">active</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Created</strong></td>
+
+          <td>The total number of transactions made by <a href="#Created">created</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Guest</strong></td>
+
+          <td>The total number of transactions made by <a href="#Guest">guest</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><u><strong>Amount sum</strong></u></td>
+        </tr>
+
+        <tr>
+          <td><strong>Total</strong></td>
+
+          <td>The total amount of the transactions for the selected store.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Unregistered</strong></td>
+
+          <td>The total amount of the transactions made by <a href="#unregistered">unregistered</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Active</strong></td>
+
+          <td>The total amount of the transactions made by <a href="#Active">active</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Created</strong> </td>
+
+          <td>The total amount of the transactions made by <a href="#Created">created</a> customers.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Guest</strong></td>
+
+          <td>The total amount of the transactions made by <a href="#Guest">guest</a> customers.</td>
+        </tr>
+      </table>
+
+      <p class="Note"><strong>NOTE:</strong> This report requires additional configurations to function. See your reseller for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

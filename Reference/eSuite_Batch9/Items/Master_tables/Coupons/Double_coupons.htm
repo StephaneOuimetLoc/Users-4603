@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Preferred Shopper Double Coupons</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Preferred Shopper Double Coupons<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p class="auto-style1"><strong>Please revise and update once all features are available in eSuite. (Raluca, 2019-09-06)</strong></p>
+
+      <p>Another kind of promotion allowed by the <a href="../../../Customers/Shopper_level_table.htm"><b>Shopper level</b> table</a> is the add-on value on the vendor coupons, i.e. an additional amount given over the vendor coupon value.</p>
+
+      <p>Add-on values are applied on all types of vendor coupons, including the electronic ones.<br>
+      By default, the system considers the add-on values as store coupons.</p>
+
+      <p>The present document focuses on the following:</p>
+
+      <ul>
+        <li><a href="#Add">Add-on values</a></li>
+
+        <li><a href="#restrictions">Restrictions</a></li>
+
+        <li><a href="#do_not_multiply">Some vendor coupons do not multiply</a></li>
+
+        <li><a href="#note">Notes</a></li>
+      </ul>
+
+      <h2><a name="Add">Add</a>-on values</h2>
+
+      <p>There are two distinct fields used for add-on values:</p>
+
+      <ul>
+        <li><a href="#Multiply">Multiplying the value of the vendor coupons</a></li>
+
+        <li><a href="#Increase">Increasing the value of the vendor coupons by a fixed amount</a></li>
+      </ul>
+
+      <p><a name="Multiply"><strong>Multiplying</strong></a> <strong>the vendor coupons values</strong></p>
+
+      <p>The values of the vendor coupons may be doubled, tripled or increased by half, one and a half, etc. using the <a href="../../../Customers/Shopper_level_table.htm#Coupon_multiply"><b>Coupon multiply</b> field</a> of the <b>Shopper level</b> table.</p>
+
+      <p><a name="Increase"><strong>Increasing</strong></a> <strong>the vendor coupons values</strong></p>
+
+      <p>The values of the vendor coupons may be increased by a fixed amount using the <a href="../../../Customers/Shopper_level_table.htm#Add_value"><b>Add value</b> field</a> of the <b>Shopper level</b> table.<br>
+      The amount must be a numeric value and must contain a decimal point as the dollars/cents separator. There is no fixed limit maximum amount.&nbsp;</p>
+
+      <h2><a name="restrictions">Restrict</a> the add-on values</h2>
+
+      <p>The add-on values given can be restricted by a <a href="#Add-on">maximum coupon value</a> or a <a href="#Discount">maximum discount amount</a> on all vendor coupons.</p>
+
+      <p><a name="Add-on"><strong>Restrict</strong></a> <strong>the value that can be doubled</strong></p>
+
+      <p>The add-on amounts given can be limited or restricted to a maximum value of the vendor coupons that can be doubled using the <a href="../../../Customers/Shopper_level_table.htm#Maximum_value"><b>Maximum value</b> field</a> of the <b>Shopper level</b> table.<br>
+      The amount must be a numeric value and must contain a decimal point as the dollars/cents separator. There is no fixed limit maximum amount.<br>
+      </p>
+
+      <p>The <b>Maximum value</b> field works with the <a href="../../../Customers/Shopper_level_table.htm#Coupon_multiply"><b>Coupon multiply</b> field</a> or the <a href="../../../Customers/Shopper_level_table.htm#Add_value"><strong>Add value</strong> field</a>. See the <a href="Double_coupons_examples.htm">examples</a> for details.</p>
+
+      <p><a name="Discount"><strong>Restrict</strong></a> <strong>the discount amounts</strong></p>
+
+      <p>The add-on amounts given can be limited, or restricted, to a maximum discount amount for all vendor coupons using the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Customer_maintenance/Customer_tables/Shopper_level_table/Fields/Max_total_field.htm"><b>Max total</b> field</a> of the <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Customer_maintenance/Customer_tables/Shopper_level_table/Shopper_lvl_table.htm"><b>Shopper level</b> table</a>.<br>
+      The amount must be a numeric value and must contain a decimal point as the dollars/cents separator. There is no fixed limit maximum amount.<br>
+      </p>
+
+      <p>The <b>Maximum total</b> field works with the <a href="../../../Customers/Shopper_level_table.htm#Coupon_multiply"><b>Coupon multiply</b> field</a> or the <a href="../../../Customers/Shopper_level_table.htm#Add_value"><strong>Add value</strong> field</a>. See the <a href="Double_coupons_examples.htm">examples</a> for details.</p>
+
+      <h2>Some vendor coupons <a name="do_not_multiply">do not multiply</a></h2>
+
+      <p>On some vendor coupons, it is specified that they cannot be 'doubled'. This means that the store cannot multiply the value of these vendor coupons or give an add-on amount as an additional discount. To avoid multiplying vendor coupons, make sure the <a href="../../POS_Table.htm#Multipliable"><strong>Multipliable</strong> field</a> of the <a href="../../POS_Table.htm"><strong>POS</strong> table</a> for the related items is not checked.</p>
+
+      <p class="Note"><strong>NOTE:</strong> The manufacturers should provide the stores with the list of the items for which the doubling on vendor coupons is not allowed.</p>
+
+      <p style="text-align:right"><a href="Double_coupons_examples.htm">Go to Double coupons - examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

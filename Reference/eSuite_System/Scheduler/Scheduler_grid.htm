@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Scheduler Grid</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite System - Scheduler Grid<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite System &gt; Scheduler <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>Scheduler</strong> grid contains default jobs that are already configured in the system. Some of them are automatically activated at installation time.</p>
+
+      <p>By default, the list of jobs contains five columns: <strong>Host target</strong>, <strong>Number</strong>, <strong>Name</strong>, <strong>Execution target</strong>, <strong>Last automatic execution</strong> and <strong>Next automatic execution</strong>. The grid layout can be customized. For details, see the <strong><a href="../../Common/Grids_eSuite.htm">Grids in eSuite</a></strong> topic.</p>
+
+      <p>The <strong>Scheduler</strong> grid displays records in ascending order by host target number.</p>
+
+      <h2>Displaying the <strong>Scheduler</strong> grid</h2>
+
+      <p>In the Launcher, click the <strong>Scheduler</strong> entry:</p>
+
+      <ol>
+        <li>The <strong>Scheduler</strong> window opens in the <strong>Scheduler</strong> work area.</li>
+
+        <li>Click on <strong>Scheduler</strong>: the <strong>Scheduler</strong> grid opens in the <strong>List</strong> tab.</li>
+
+        <li>To edit an existing record, click on <strong>Edit</strong> in the bottom menu to open the <strong>Scheduler</strong> table.</li>
+
+        <li>To create a new record, click <strong>Add data</strong> <img height="14" src="Scheduler_grid_files/add.png" width="15"> in the toolbar: the <a href="Scheduler_table.htm"><strong>Scheduler</strong> table</a> will open for editing.</li>
+      </ol>
+
+      <p><img src="Scheduler_grid_files/scheduler_grid.png"></p>
+
+      <h2>Executing a job manually from the Scheduler grid</h2>
+
+      <p>Sometimes, it may be necessary to execute a scheduled job manually. For example, when a process does not succeed during an automatic execution. The scheduler can also contain jobs that are not set for an automatic execution, using the scheduler as a configurable menu that contains jobs that have to be executed manually.</p>
+
+      <p>To manually execute a job from the scheduler grid:</p>
+
+      <ol>
+        <li>In the <strong>Scheduler</strong> grid, select the job to run.</li>
+
+        <li>Click on <strong>Menu</strong> at the bottom of the grid: the <strong>Edit (F3)</strong> and <strong>Execute</strong> options are displayed.</li>
+
+        <li>
+          Click the <strong>Execute</strong> button.<br>
+          A dialog box appears, allowing users to pick and confirm the date of manually executing the job:<br>
+          <br>
+           <img src="Scheduler_grid_files/date_pick_manually_execute.png"><br>
+           
+
+          <div class="alert alert-warning">
+            <strong>NOTE:</strong> If the selected job does not allow manual execution, user receives a message that the command cannot be executed manually.
+          </div>
+          <em>&nbsp;</em>
+        </li>
+
+        <li>Set the date and click <strong>Execute</strong>. A message opens, confirming that the task has been added to the queue.</li>
+
+        <li>Click <strong>OK</strong> to complete the manual execution.</li>
+      </ol>
+
+      <p class="Note"><strong>NOTE:</strong> The <strong>Execute</strong> option in the <strong>Menu</strong> is only available when the selected task can be manually executed. If not, it is greyed out and disabled.</p>
+
+      <h2>Scheduled jobs</h2>
+
+      <p>Here is the description of the jobs that are executed on the <strong>back office server</strong>:</p>
+
+      <p></p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px; height: 19px"><b>Job name</b></th>
+
+            <th style="width: 80px; height: 19px;"><b>Job number</b></th>
+
+            <th><b>Description</b></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Deploy end of day</strong> </td>
+
+          <td style="width: 80px; height: 27px;">10</td>
+
+          <td>The <b>Deploy end of day</b> job polls the NRGT (Non-Resettable Grand Total) value of each front end workstation.</td>
+        </tr>
+
+        <tr>
+          <td style="height: 27px; width: 156px;"><strong>Close events</strong> </td>
+
+          <td style="width: 80px; height: 27px;">15</td>
+
+          <td>The <b>Close events</b> job polls the net sales in the daily item movement table into different totalizers for items that were on sale, on TPR or in-store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Deploy to head office</strong> </td>
+
+          <td style="width: 80px; height: 27px;">20</td>
+
+          <td>The <b>Deploy to head office</b> job sends the sales from the store to the head office. This job can be executed while the store is running.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Calculate live counters</strong> </td>
+
+          <td style="width: 80px; height: 27px;">25</td>
+
+          <td>The <b>Calculate live counters</b> job updates the current quantities on order (purchase orders) and on process (sale orders) for all items. This job may be executed many times during the day.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Calculate cumulatives</strong> </td>
+
+          <td style="width: 80px; height: 27px;">30</td>
+
+          <td>The <b>Calculate cumulatives</b> job updates weekly, monthly and yearly totals in every report table (RPT_???). This job may be executed at any time during the day.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Set effective date</strong> </td>
+
+          <td style="width: 80px; height: 27px;">35</td>
+
+          <td>The <b>Set effective date</b> job changes the soft date. This job is used for stores that do not end the day at midnight.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Purge old promo price</strong> </td>
+
+          <td style="width: 80px; height: 27px;">37</td>
+
+          <td>The <b>Purge old promo price</b> job removes all past promotions (TPR, Sale and In-store prices).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Import files</strong> </td>
+
+          <td style="width: 80px; height: 27px;">39</td>
+
+          <td>The <b>Import</b> job imports data into the system.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Activate accept files</strong> </td>
+
+          <td style="width: 80px; height: 27px;">40</td>
+
+          <td>The <b>Activate accept files</b> job automatically execute the external batches received from the head office as a SIL file import.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Activate instore batch</strong> </td>
+
+          <td style="width: 80px; height: 27px;">45</td>
+
+          <td>The <b>Activate instore batch</b> job automatically execute the in-store batches, received from the head office (Accept files), and/or created locally.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Deploy changes</strong> </td>
+
+          <td style="width: 80px; height: 27px;">50</td>
+
+          <td>The <b>Deploy changes</b> job sends the item changes from the back office server to the front end workstations. This job can be executed while the store is running. See your reseller for a customized setup.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Deploy auxiliary</strong> </td>
+
+          <td style="width: 80px; height: 27px;">52</td>
+
+          <td>The <b>Deploy auxiliary</b> job sends the auxiliary tables data from the back office server to the front end workstations. This job <u>is never</u> scheduled since it needs answers from the operator. If the <b>Deploy auxiliary</b> job is used while the store is running, <u>do not</u> select <i>Clean and Load</i> because the job will cause all the tables to clear. See your reseller for a customized setup.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Deploy images and templates</strong> </td>
+
+          <td style="width: 80px; height: 27px;">53</td>
+
+          <td>The <b>Deploy image and template</b> job sends images (bitmaps, advertising images and pages, etc.) and templates (receipt template, etc.) from the back office server to the front end workstations and the cash registers. See your reseller for a customized setup.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Check database sync</strong> </td>
+
+          <td style="width: 80px; height: 27px;">55</td>
+
+          <td>The <b>Check database sync</b> job is used to compare the back office database and the front end workstations databases. This job <u>should never</u> be performed at the head office.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 27px"><strong>Backup program</strong> </td>
+
+          <td style="width: 80px; height: 27px;">60</td>
+
+          <td>The <b>Backup program</b> job backups the complete database by exporting the data in a SIL file format in the <i>Office/Load</i> directory. The database is backed up by table (one table = one file). This job also backups the main directories (Storeman, Options, Drivers, Office, Load) by creating zip files in the backup directory (by default <i>C:\Storeman\Backup\Program</i>). See the reseller for a customized setup.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 28px"><strong>Backup on device</strong> </td>
+
+          <td style="width: 80px; height: 28px;">62</td>
+
+          <td>The <b>Backup on device</b> job backups the zip files of the backup directory (by default, <i>C:\Storeman\Backup\Program</i>) on an external device. See the reseller for a customized setup.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 28px"><strong>Backup history</strong> </td>
+
+          <td style="width: 80px; height: 28px;">64</td>
+
+          <td>The <b>Backup history</b> job backups the sales tables (TRS_, RPT_) by creating zip files in the backup directory (by default, <i>C:\Storeman\Backup\Program</i>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 28px"><strong>Purge all report data</strong> </td>
+
+          <td style="width: 80px; height: 28px;">90</td>
+
+          <td>The <b>Purge all report data</b> job purges the LOC Store Management Suite report files. See the reseller for a customized setup.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 28px"><strong>Automatic update download</strong> </td>
+
+          <td style="width: 80px; height: 28px;">120</td>
+
+          <td>The <b>Automatic update download</b> job is used to download automatically the latest version of the eSuite software from the www.locsoftware.com website. The files downloaded are copied in the <i>Storeman/Install</i> directory of the back office server. See the reseller for a customized setup.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 28px"><strong>Execute task and cube watch</strong> </td>
+
+          <td style="width: 80px; height: 28px;">130</td>
+
+          <td>The <b>Execute task and cube watch</b> job is used to automatically email the selected eSuite reports to operators and execute the cube watches.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 28px"><strong>Set date range restriction</strong> </td>
+
+          <td style="width: 80px; height: 28px;">140</td>
+
+          <td>The <b>Set date range restriction</b> job is used to restrict the number of days it is possible to work on old documents from their creation dates. This job avoids posting old documents that may cause potential issues.</td>
+        </tr>
+      </table>
+
+      <p>Here is the description of the jobs that are executed on the <strong>front end workstations</strong>:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><b>Job name</b></th>
+
+            <th style="width: 80px"><b>Job number</b></th>
+
+            <th><b>Description</b></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><strong>Backup program</strong></td>
+
+          <td>60</td>
+
+          <td>The <b>Backup program</b> job backups the complete database by exporting the data in a SIL file format in the <i>Office/Load</i> directory.<br>
+          The database is backed up by table (one table = one file).<br>
+          This job also backups the main directories (Storeman, Options, Drivers, Office, Load) by creating zip files in the backup directory (by default <i>C:\Storeman\Backup\Program</i>).<br>
+          See the reseller for a customized setup.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Purge all report data</strong></td>
+
+          <td>90</td>
+
+          <td>The <b>Purge all report data</b> job purges the eSuite report files. See the reseller for a customized setup.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

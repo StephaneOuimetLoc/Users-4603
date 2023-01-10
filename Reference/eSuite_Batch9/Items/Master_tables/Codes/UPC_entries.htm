@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - UPC Entries</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - UPC Entries<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items&nbsp; <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p>The item UPC (Universal Product Code) uniquely identifies items in eSuite. The system allows different types of UPCs, including five that are commonly used. They are entered according to the following guidelines:</p>
+
+      <ul>
+        <li><a href="#UPC-A">UPC-A barcode</a></li>
+
+        <li><a href="#UPC-E">UPC-E barcode</a></li>
+
+        <li><a href="#EAN-13">EAN-13 barcode</a></li>
+
+        <li><a href="#EAN-8">EAN-8 barcode</a></li>
+
+        <li><a href="#GS1">GS1 Databar barcode</a></li>
+      </ul>
+
+      <p class="Note"><b>NOTE:</b> The system will automatically expand the UPC to 13 digits by adding nine zeros (<em>000000000</em>) at the beginning when the <strong>Execute</strong> button is clicked in the <a href="../Wizards_eSuite.htm">wizard</a>.</p>
+
+      <h2><a name="UPC-A">UPC-A</a> barcode</h2>
+
+      <p>The UPC-A barcode is the most common and well-known symbol in USA and Canada.&nbsp;It is the grocery standard barcode, commonly called 'UPC barcodes' or 'UPC symbols'.</p>
+
+      <p><img class="Text" height="151" src="UPC_entries_files/UPCA.jpg" width="158"></p>
+
+      <p>The UPC-A barcode has 12 numeric-only characters, divided in four areas:</p>
+
+      <ol>
+        <li>The number system (1 digit)</li>
+
+        <li>The manufacturer code (5 digits)</li>
+
+        <li>The product code (5 digits)</li>
+
+        <li>The check digit (1 digit)</li>
+      </ol>
+
+      <p>Enter only 11 digits in the system maintenance. Start with the first digit on the left (even if it is <em>zero</em>) and enter all following digits <em>except the check digit</em> (the last one). The system will automatically expand the UPC to 13 digits by adding two zeros (<em>00</em>) at the beginning when the <strong>Execute</strong> button is clicked in the <a href="../Wizards_eSuite.htm">wizard</a>.</p>
+
+      <h3>Bulk scale barcode</h3>
+
+      <p>The Bulk scale barcode is a UPC-A barcode for which the number system is <em>2</em>.&nbsp;It is used for pre-packed products (also called random weight items).&nbsp;The prices of the pre-packed products are directly printed in the Bulk scale barcodes.</p>
+
+      <p><img class="Text" height="154" src="UPC_entries_files/bulk_scale.jpg" width="157"></p>
+
+      <p>The Bulk scale barcode has 12 numeric-only characters, divided into four areas:</p>
+
+      <ol>
+        <li>The number system (1 digit) = 2</li>
+
+        <li>The scale product code (5 digits)</li>
+
+        <li>The scale product price (5 digits)</li>
+
+        <li>The check digit (1 digit)</li>
+      </ol>
+
+      <p>In the system maintenance, enter <em>2</em> followed by the five digits of the scale product code and five zeros (<em>00000</em>).&nbsp;The five zeros are used to create the code, but when a pre-packed item is scanned, the price is read by the scanner.&nbsp;The system will automatically expand the UPC to 13 digits by adding two zeros (<em>00</em>) at the beginning when the <strong>Execute</strong> button is clicked in the <a href="../Wizards_eSuite.htm">wizard</a>.</p>
+
+      <p>You can also enter the 5 digits of the scale product code followed by *. When you click on the <b>Filter</b> button, the system will add the two zeros (<em>00</em>) and the number system (<em>2</em>) at the beginning of the UPC as well as the five zeros (<em>00000</em>) at the end. For example, if you enter <i>65432*</i>, it will become <i>0026543200000</i> when the <strong>Execute</strong> button is clicked in the <a href="../Wizards_eSuite.htm">wizard</a>.</p>
+
+      <h2><a name="UPC-E">UPC-E</a> barcode</h2>
+
+      <p>The UPC-E barcode is a variation of the UPC-A barcode.&nbsp;It allows for more compact barcodes, used on products with small packaging where a full UPC-A barcode could not reasonably fit.&nbsp;The UPC-E barcode reduces the 10 digits of the message characters (manufacturer code - 5 digits and product code - 5 digits) of the UPC-A barcode into only six digits.</p>
+
+      <p><img class="Text" height="152" src="UPC_entries_files/UPCE.jpg" width="104"></p>
+
+      <p>The UPC-E barcode has eight numeric-only characters, divided into three areas:</p>
+
+      <ol>
+        <li>The number system (1 digit)</li>
+
+        <li>The message characters (6 digits)</li>
+
+        <li>The check digit (1 digit)</li>
+      </ol>
+
+      <p>The number system digit and the check digit are printed as human-readable numbers, but are encoded in the parity of the other six digits.</p>
+
+      <p>In the system maintenance, enter six digits. Start with the second digit on the left and enter all following digits <u>except the check digit</u> (the last one).&nbsp;The system will automatically convert the UPC-E code (6 digits) to a UPC-A code (11 digits) and then expand the UPC to 13 digits by adding two zeros (<em>00</em>) at the beginning when the <strong>Execute</strong> button is clicked in the <a href="../Wizards_eSuite.htm">wizard</a>.</p>
+
+      <h2><a name="EAN-13">EAN-13</a> barcode</h2>
+
+      <p>The EAN-13 barcode is the international grocery standard barcode.&nbsp;It was implemented mostly because the UPC-A barcode was not designed for international use.</p>
+
+      <p><img class="Text" height="170" src="UPC_entries_files/EAN13.jpg" width="143"></p>
+
+      <p>The EAN-13 barcode has 13 numeric-only characters, divided into four areas:</p>
+
+      <ol>
+        <li>The number system (2 digits)</li>
+
+        <li>The manufacturer code (5 digits)</li>
+
+        <li>The product code (5 digits)</li>
+
+        <li>The check digit (1 digit)</li>
+      </ol>
+
+      <p>The EAN-13 barcode is a superset of the UPC-A barcode.&nbsp;Any software or hardware capable of reading a EAN-13 barcode is automatically able to read a UPC-A barcode.&nbsp;In fact, a UPC-A barcode is an EAN-13 barcode with the first digit of the number system set to <em>zero</em>.</p>
+
+      <p>Visually, the human-readable check digit is placed below the barcode and not on its right. This does not make any difference on the encoding.</p>
+
+      <p>In the system maintenance, enter 12 digits.&nbsp;Start with the first digit on the left (even if it is <em>zero</em>) and enter all following digits <u>except the check digit</u> (the last one). The system will automatically expand the UPC to 13 digits by adding a zero (<em>0</em>) at the beginning when the <strong>Execute</strong> button is clicked in the <a href="../Wizards_eSuite.htm">wizard</a>.</p>
+
+      <h2><a name="EAN-8">EAN-8</a> barcode</h2>
+
+      <p>The EAN-8 barcode is the EAN equivalent of the UPC-E barcode in the sense that it provides a short barcode for small packages. However, the EAN-8 barcode is not compatible with the UPC-E barcode (like the EAN-13 barcode is compatible with the UPC-A barcode).&nbsp;The EAN-8 barcode has no EAN-13 equivalence; it is directly assigned by the numbering authority.</p>
+
+      <p><img class="Text" height="171" src="UPC_entries_files/EAN8.jpg" width="97"></p>
+
+      <p>The EAN-8 barcode has 8 numeric-only characters, divided into three areas:</p>
+
+      <ol>
+        <li>The number system (2 or 3 digits)</li>
+
+        <li>The product code (4 or 5 digits)</li>
+
+        <li>The check digit (1 digit)</li>
+      </ol>
+
+      <p>Unlike&nbsp; the UPC-E barcode in which only 6 digits are explicitly encoded, the EAN-8 barcode explicitly encodes all eight digits.</p>
+
+      <p>In the system maintenance, enter 7 digits.&nbsp;Start with the first digit on the left (even if it is <em>zero</em>) and enter all following digits <u>except the check digit</u> (the last one).&nbsp;The system will automatically expand the UPC to 13 digits by adding six zeros (<em>000000</em>) at the beginning when the <strong>Execute</strong> button is clicked in the <a href="../Wizards_eSuite.htm">wizard</a>.</p>
+
+      <h2><a name="GS1">GS1</a> Databar barcode</h2>
+
+      <p>The GS1 Databar is a family of barcode symbologies. Some of them are small, intended for produce and small consumer packages. Some others are larger, intended to carry more data.</p>
+
+      <p><img class="Text" height="62" src="UPC_entries_files/GS1_Databar_barcode.png" width="371"></p>
+
+      <p>See the <strong><a href="GS1%20Databar%20barcode.htm">GS1 Databar barcode</a></strong> topic for details.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <p>&nbsp;</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

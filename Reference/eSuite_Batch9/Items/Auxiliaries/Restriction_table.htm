@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Restriction Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Restriction Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxialaries &gt; Restrictors <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h1>eSuite - Restriction Table</h1>
+
+      <p>The <strong>Restriction</strong> table contains information that allows controlling the item availability; in other words, one can set time limits for when the items can be sold.</p>
+
+      <p>By default, the restrictions are bypassed by the assistant, the manager, the owner and the programmer user levels. Ask the reseller for more details.</p>
+
+      <h2>Displaying the Restriction table</h2>
+
+      <p>In the Launcher, click the chevron in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Auxiliary tables</strong>: the Start window opens in the <strong>Auxiliary</strong> work area.</li>
+
+        <li>Click on <strong>Restrictors</strong>: the tab opens in the same window, displaying the <strong>Restriction List</strong>.</li>
+
+        <li>
+          To modify an existing restriction record, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu:
+
+          <ul>
+            <li>the <strong>Restriction</strong> table opens, overlapping the work area.</li>
+          </ul>
+        </li>
+
+        <li>To create a new restriction record, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Restriction</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Restriction_table_files/restriction_table.png" usemap="#restriction_table"> <map name="restriction_table">
+            <area shape="rect" coords="9, 97, 99, 119" href="#Level">
+            <area shape="rect" coords="105, 97, 335, 119" href="#Descriptor">
+            <area shape="rect" coords="103, 140, 178, 291" href="#Start">
+            <area shape="rect" coords="187, 140, 262, 291" href="#Stop">
+            <area shape="rect" coords="73, 290, 98, 312" href="#This_is_a_permission_and_not_a_restriction">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img">*Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Restriction</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th><strong>DESCRIPTION</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Level">Level</a></strong></td>
+
+          <td>The <strong>Level</strong> field contains the restriction number.<br>
+          It is a required field used to uniquely identify records in the <strong>Restriction</strong> <strong>List</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Descriptor">Descriptor</a></strong></td>
+
+          <td>The <strong>Descriptor</strong> field contains the description of the restriction entry.<br>
+          It is not a required field; however, a descriptor should be entered to identify the restriction in the <strong>Restriction List</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Start">Start</a></strong></td>
+
+          <td>The <strong>Start</strong> field contains the starting time at which the items linked to the restriction can be sold or are prohibited from being sold, depending on the value of the <a href="#This_is_a_permission_and_not_a_restriction"><strong>This is a permission and not a restriction</strong> field</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Stop">Stop</a></strong></td>
+
+          <td>The <strong>Stop</strong> field contains the ending time at which the items linked to the restriction can be sold or are prohibited from being sold, depending on the value of the <a href="#This_is_a_permission_and_not_a_restriction"><strong>This is a permission and not a restriction</strong> field</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="This_is_a_permission_and_not_a_restriction">This is a permission and not a restriction</a></strong></td>
+
+          <td>The <strong>This is a permission and not a restriction</strong> field specifies whether the periods defined by the <strong><a href="#Start">Start</a></strong> and the <strong><a href="#Stop">Stop</a></strong> fields are permitted periods of sale (checked) or prohibited periods of sale (unchecked).</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

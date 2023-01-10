@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Label Management</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Label Management <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The common modules of the eSuite software offer the tools for generating and printing shelf labels and promotional signs.</p>
+
+      <p>The present document shows how to:</p>
+
+      <ul>
+        <li><a href="#Generating_labels">Generate labels from the item and the batch grids</a></li>
+
+        <li><a href="#Labels_entry">Generate labels from the <strong>Labels</strong> entry</a></li>
+
+        <li><a href="#Printing">Print labels</a></li>
+
+        <li><a href="#Showing_print_items">Display the list of labels to print</a></li>
+
+        <li><a href="#Restoring">Restore print jobs</a></li>
+      </ul>
+
+      <p>It also describes the layout of the <a href="#Item_browser_wizard"><strong>Item browser</strong> wizard</a> and the <a href="#Item_label_table_-_layout"><strong>Item label</strong> table</a>.</p>
+
+      <h2><a name="Generating_labels">Generating labels</a></h2>
+
+      <p>There are two ways of extracting data and generating labels:</p>
+
+      <ul>
+        <li>Based on grid selection (items and batches), through the <strong>Labels - Item browser</strong> wizard.</li>
+
+        <li>Based on price events and on RFC scans, from the <strong>Labels</strong> entry in the launcher.</li>
+      </ul>
+
+      <h2><strong>Generating</strong> labels through <strong>the Item browser</strong> wizard</h2>
+
+      <p>The label generation based on grid selection can be done with the <strong>Labels - Item browser</strong> wizard from the general list of items and from the list of batches.</p>
+      To access the <strong>Labels - Item browser</strong> wizard from the general list of items: 
+
+      <ol>
+        <li>In the launcher, click the arrow in the <strong>Items</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item list</strong> to open the wizard.</li>
+
+        <li>Enter the search criteria then click on <strong>Execute</strong>: results will display in the item grid.<br>
+        It is possible to increase the number of items displayed by page with the <strong>Page size</strong> control in the bottom menu.<em><br>
+         <img height="162" src="Labels_in_eSuite_files/page_size.png" width="120"></em></li>
+
+        <li>Select the items that require label printing.</li>
+
+        <li>Click on <strong>Action</strong> in the bottom menu of the item grid.</li>
+
+        <li>Select <strong>Generate label</strong>: the <a href="#Item_browser_layout"><strong>Labels - Item Browser</strong> wizard</a> opens in the work area.</li>
+
+        <li>Enter the label criteria.</li>
+
+        <li>Click on <strong>Execute</strong>: the <strong>Print label</strong> list opens, displaying the labels that are ready to print.</li>
+      </ol>
+
+      <p>To access the <strong>Labels - Item browser</strong> wizard from the list of batches:</p>
+
+      <ol>
+        <li>In the launcher, click the arrow in the <strong>Items</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batches</strong> work area.</li>
+
+        <li>Click on <strong>Batches</strong> to open the wizard.</li>
+
+        <li>Enter the search criteria and click on <strong>Execute</strong>: results will display in the in-store batches grid.</li>
+
+        <li>Double click on the batch that requires label printing to display the items.</li>
+
+        <li>Select the items that require label printing.</li>
+
+        <li>Click on <strong>Action</strong> in the bottom menu.</li>
+
+        <li>Select <strong>Generate label</strong>: the <a href="#Item_browser_layout"><strong>Labels - Item Browser</strong> wizard</a> opens in the work area.</li>
+
+        <li>Enter the label criteria.</li>
+
+        <li>Click on <strong>Execute</strong>: the <strong>Print label</strong> list opens, displaying the labels that are ready to print.</li>
+      </ol>
+
+      <h2><a name="Item_browser_layout">Item browser - layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><img style="border-style:none" src="Labels_in_eSuite_files/item_browser.png" class="Text" usemap="#item_browser"> <map name="item_browser">
+            <area shape="rect" coords="16, 128, 219, 155" href="#Target">
+            <area shape="rect" coords="231, 128, 436, 154" href="#Label_format">
+            <area shape="rect" coords="17, 178, 220, 204" href="#Label_count">
+            <area shape="rect" coords="231, 177, 436, 204" href="#Source">
+            <area shape="rect" coords="16, 230, 222, 258" href="#Price_level_start">
+            <area shape="rect" coords="229, 231, 433, 257" href="#Price_level_stop">
+            <area shape="rect" coords="137, 264, 326, 292" href="#Saved_configuration">
+            <area shape="rect" coords="333, 264, 436, 291" href="#Save">
+            <area shape="rect" coords="71, 299, 433, 324" href="#Grid_layout">
+            <area shape="rect" coords="9, 543, 270, 567" href="#Use_template_from_shelf">
+            <area shape="rect" coords="9, 591, 90, 624" href="#Menu">
+            <area shape="rect" coords="339, 592, 443, 624" href="#Execute">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p>Here is the description of the <strong>Item browser</strong> wizard fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 162px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Label_format">Label format</a></strong></td>
+
+          <td>
+            <strong>Label format</strong> is a mandatory field that contains the following predefined label formats:<br>
+             
+
+            <ul>
+              <li>CUSTOMER_CARD.lbz</li>
+
+              <li>OPERATOR_CARD.lbz</li>
+
+              <li>REG_14UP_05162.lbz</li>
+
+              <li>REG_16UP_SHELF.lbz</li>
+
+              <li>REG_16_320_120.lbz</li>
+
+              <li>REG_16_325_120.lbz</li>
+
+              <li>REG_XMAS_2x2.lbz</li>
+
+              <li>SAL_10UP_5963.lbz</li>
+
+              <li>SAL_1_10_75.lbz</li>
+
+              <li>SAL_24UP_COMPARE.lbz</li>
+
+              <li>SAL_28UP_COMPARE.lbz</li>
+            </ul>
+            When the <strong>Label format</strong> field is populated, the <a href="#Execute"><strong>Execute</strong></a> button becomes enabled.<br>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Label_count">Label count</a></strong></td>
+
+          <td>The <strong>Label count</strong> field specifies the number of labels to print for each extracted label.<br>
+          The default value is <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Source">Source</a></strong></td>
+
+          <td>The <strong>Source</strong> field specifies the price (Retail, Sale, TPR, Instore Price, Active or Next) to appear on the label.<br>
+          The default value is <em>Active</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Price_level_start">Price level start</a></strong></td>
+
+          <td>The <strong>Price level start</strong> field specifies the starting price level (first data record).<br>
+          The default value is <em>0</em>.<br>
+          It works with the <a href="#Price_level_stop"><strong>Price level stop</strong> field</a> to set the data range for the label template.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Price_level_stop">Price level stop</a></strong></td>
+
+          <td>The <strong>Price level</strong> stop field specifies the ending price level (last data record).<br>
+          The default value is <em>9999</em>.<br>
+          It works with the <a href="#Price_level_start"><strong>Price level start</strong> field</a> to set the data range for the label template.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Saved_configuration">Saved configuration</a></strong></td>
+
+          <td>The <strong>Saved configuration</strong> field allows saving the selected values for future use.<br>
+          It may be set to <strong>Public</strong> or remain as <strong>Private</strong> (only the eSuite user who created the saved configuration will be able to view it and use it).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Save">Save</a></strong></td>
+
+          <td>The <strong>Save</strong> button allows saving the selected values.<br>
+           It offers a drop-down menu with the <strong>Save as</strong> option allowing to save the wizard <a href="#Saved_configuration">configuration</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Grid_layout">Grid layout</a></strong></td>
+
+          <td>The <strong>Grid layout</strong> field allows selecting a saved configuration.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Use_template_from_shelf">Use template from shelf</a></strong></td>
+
+          <td>The <strong>Use template from shelf</strong> option indicates (when checked) that only the items having a label template specified in the <a href="../Item_maintenance/Auxiliary_tables/Shelf_ID_table.htm"><strong>Shelf</strong> table</a> will be extracted.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Reset">Reset</a></strong></td>
+
+          <td>The <strong>Reset</strong> field resets any prior values defined in the window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 162px"><strong><a name="Execute">Execute</a></strong></td>
+
+          <td>The <strong>Execute</strong> field allows generating the&nbsp;label&nbsp;file for the selected items.<br>
+          Disabled by default.<br>
+          Enabled when the <a href="#Label_format"><strong>Label format</strong> field</a> is populated.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><strong>Generating labels from the <a name="Labels_entry">Labels entry</a></strong></h2>
+
+      <p>The <strong>Labels</strong> entry in the launcher provides tools for <a href="#Editing">editing</a>, <a href="#Printing">printing</a>, displaying the <a href="#Showing_print_items">list of the labels</a> and <a href="#Restoring">restoring print jobs</a>.</p>
+
+      <p style="text-align:center"><img class="Text" src="Labels_in_eSuite_files/labels_start.png"></p>
+
+      <h4><strong>Generate labels based on price events</strong></h4>
+      The <strong>Generate labels based on price events</strong> utility can be used to identify the items for which the system has to print labels for a specific date. The system takes care of all batches and events defined in the items and compiles the next event for the selected date. For details on this option, refer to the <strong><a href="Price_events.htm">Price events</a></strong> topic.
+
+      <h4><strong>Generate labels based on RFC Scan</strong></h4>
+
+      <p><em>Currently under development.</em></p>
+
+      <p>This option extracts labels for all the items that have been scanned by the RFC label generation page. The items scanned by MFloor or the PDA devices will be available for creating labels.</p>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Printing">Printing</a> labels</h2>
+
+      <p>The label printing tool in eSuite is located in the <strong>Labels</strong> entry under <strong>Tools</strong>.</p>
+
+      <ol>
+        <li>Click on <strong>Labels</strong>: the <strong>Start</strong> window opens in the <strong>Labels</strong> work area.</li>
+
+        <li>Click on <strong>Print label</strong> to open the label wizard:<br>
+         <img src="Labels_in_eSuite_files/label_list_wizard.png"></li>
+
+        <li>Select a label format.</li>
+
+        <li>Select a target.</li>
+
+        <li>If necessary, select the <strong>By store</strong> checkbox to have the results displayed by store number.</li>
+
+        <li>Click on <strong>Execute</strong>: the <strong>Print label list</strong> tab <strong></strong>opens in the same window, displaying the list of labels that are ready to print.<br>
+         <img src="Labels_in_eSuite_files/print_label_list.png"><br>
+        </li>
+
+        <li>
+          Select a label and click <strong>Action</strong> in the bottom menu of the list.<br>
+           
+
+          <ul style="list-style:disc">
+            <li><strong>View items</strong> will open the list of items for which labels will be printed.</li>
+
+            <li><strong><a name="Delete_label">Delete label</a></strong> will delete the selected label.</li>
+
+            <li><strong>Print label</strong> will open the printing parameters.</li>
+          </ul>
+        </li>
+
+        <li>Select <strong>Print label</strong>.</li>
+
+        <li>Add the print settings in the <strong>Label print options</strong> window.<span><br>
+         <img src="Labels_in_eSuite_files/label_print_options.png"></span></li>
+
+        <li>Click <strong>Print</strong>: a confirmation message will be prompted.<br>
+         <img height="165" src="Labels_examples_files/confirm_delete_printed.png" width="480"><br>
+        </li>
+
+        <li>Click <strong>Yes</strong> to delete the selected labels.<br>
+        Deleted labels may be restored with the <a href="#Restoring"><strong>Restore print jobs</strong> utility</a>.</li>
+
+        <li>Click <strong>No</strong> to keep the selected labels in the <strong>Print label list.</strong></li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><strong><a name="Showing_print_items">Showing the print items</a></strong></h2>
+
+      <p>To display the list of labels that are ready to print and the items these labels have been generated from:</p>
+
+      <ol>
+        <li>In the launcher, click on <strong>Tools</strong>, then on <strong>Labels</strong>: the <strong>Start</strong> window opens in the <strong>Labels</strong> work area.</li>
+
+        <li>Select <strong>Show print items</strong>: the <strong>Labels - show print items</strong> wizard opens on the desktop.<br>
+         <img src="Labels_in_eSuite_files/show_print_items_wizard.png"><br>
+        </li>
+
+        <li>Enter the search criteria.</li>
+
+        <li>Click <strong>Execute</strong>: the <strong>Show print items</strong> grid opens in a new tab, displaying the labels that are ready to print and the items that are attached to each label.<br>
+        By default, items are grouped by label format:<br>
+         <img height="748" src="Labels_in_eSuite_files/show_print_items_list.png" width="1074"><br>
+        </li>
+
+        <li>To edit a label, select the item in the grid and click <strong>Edit</strong> in the bottom menu: this opens the <strong>Item label</strong> table.<br>
+        See the <a href="#Editing"><strong>Editing labels</strong> section</a> for details.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Editing">Editing</a> labels</h2>
+
+      <p>Labels in eSuite are edited in the <strong>Item label</strong> table:</p>
+
+      <ol>
+        <li>In the launcher, click on <strong>Tools</strong>, then on <strong>Labels</strong>: the <strong>Start</strong> windows opens in the <strong>Labels</strong> work area.</li>
+
+        <li>Select <strong>Show print items</strong>.</li>
+
+        <li>Enter the necessary criteria and click <strong>Execute</strong>: <strong></strong> the <strong>Show print items</strong> grid opens on the desktop.<br>
+        </li>
+
+        <li>Select the item whose label requires editing.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu: the <strong>Item label</strong> table opens on the desktop.</li>
+
+        <li>Make any necessary changes and click <b>Save</b> in the top menu.</li>
+      </ol>
+
+      <h2><a name="Item_label_table_-_layout">Item label table - layout</a></h2>
+
+      <p>&nbsp;</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td style="text-align:center"><img style="border-style:none" class="Text" src="Labels_in_eSuite_files/item_label_table.png" usemap="#label_edit"> <map name="label_edit">
+            <area shape="rect" coords="326, 89, 470, 118" href="#Item">
+            <area shape="rect" coords="328, 140, 380, 168" href="#Quantity_label_section">
+            <area shape="rect" coords="388, 141, 590, 168" href="#Label_format_label_edit">
+            <area shape="rect" coords="600, 141, 678, 168" href="#Destination">
+            <area shape="rect" coords="329, 191, 680, 217" href="#Description">
+            <area shape="rect" coords="328, 240, 541, 266" href="#Brand">
+            <area shape="rect" coords="548, 240, 680, 268" href="#Size">
+            <area shape="rect" coords="330, 290, 680, 317" href="#Message_line">
+            <area shape="rect" coords="330, 386, 450, 413" href="#Shelf_location">
+            <area shape="rect" coords="457, 387, 578, 414" href="#Price">
+            <area shape="rect" coords="329, 436, 448, 463" href="#Shelf_life">
+            <area shape="rect" coords="459, 436, 582, 463" href="#Quantity_(Shelf_life)">
+            <area shape="rect" coords="330, 487, 451, 514" href="#Shelf_tag_quantity">
+            <area shape="rect" coords="459, 488, 579, 514" href="#Package_price">
+            <area shape="rect" coords="330, 536, 451, 563" href="#Facing_position">
+            <area shape="rect" coords="459, 536, 580, 564" href="#Quantity_(Facing_position)">
+            <area shape="rect" coords="595, 388, 673, 415" href="#Tax_1">
+            <area shape="rect" coords="597, 420, 674, 449" href="#Tax_2">
+            <area shape="rect" coords="597, 453, 674, 480" href="#Tax_3">
+            <area shape="rect" coords="596, 487, 675, 515" href="#Tax_4">
+            <area shape="rect" coords="597, 519, 676, 545" href="#Scalable">
+            <area shape="rect" coords="327, 622, 500, 650" href="#Sub-department">
+            <area shape="rect" coords="508, 623, 681, 650" href="#Link_code">
+            <area shape="rect" coords="328, 672, 679, 700" href="#Vendor_ID">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img" style="text-align:center">* Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <p>Here is the description of the <strong>Item label table</strong> fieldsand their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 170px">FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Item">Item</a></strong></td>
+
+          <td>The <strong>Item</strong> column contains the code of the item for which the label will be printed.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Quantity_label_section">Quantity</a></strong></td>
+
+          <td>The <strong>Quantity</strong> field contains the number of labels to print for the selected item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Label_format_label_edit">Label format</a></strong></td>
+
+          <td>The <strong>Label format</strong> field contains the label format for the selected item.<br>
+          It provides a drop-down menu with the predefined label formats.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Destination">Destination</a></strong></td>
+
+          <td>The <strong>Destination</strong> field contains the target to which the label applies.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> field contains the item description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Brand">Brand</a></strong></td>
+
+          <td>The <strong>Brand</strong> field contains the name of the item manufacturer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Size">Size</a></strong></td>
+
+          <td>The <strong>Size</strong> field contains the weight or volume of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Message_line">Message line</a></strong></td>
+
+          <td>The <strong>Message line</strong> field contains additional information on the item.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Location</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Shelf_location">Shelf location</a></strong></td>
+
+          <td>The <strong>Shelf location</strong> field contains the location/position of the item in the store.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Price">Price</a></strong></td>
+
+          <td>The <strong>Price</strong> field contains the price (retail, sale, TPR, instore) of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Shelf_life">Shelf life</a></strong></td>
+
+          <td>The <strong>Shelf life</strong> contains the amount of time the item can stay on the shelf.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Quantity_(Shelf_life)">Quantity (Shelf life)</a></strong></td>
+
+          <td>The <strong>Quantity</strong> field (shelf life) contains the quantity for the item.<br>
+          It works with the <strong>Shelf life</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Shelf_tag_quantity">Shelf tag quantity</a></strong></td>
+
+          <td>The <strong>Shelf tag quantity</strong> field contains the quantity of the item on the shelf.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Package_price">Package price</a></strong></td>
+
+          <td>The <strong>Package price</strong> field contains the package price of the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Facing_position">Facing position</a></strong></td>
+
+          <td>The <strong>Facing position</strong> field contains the column section of the item on the shelf.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Quantity_(Facing_position)">Quantity (Facing position)</a></strong></td>
+
+          <td>The <strong>Quantity</strong> (facing position) field contains the number of shelf tags to print for the item.<br>
+          It works with the <strong>Facing position</strong> field.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Tax_1">Tax 1</a></strong></td>
+
+          <td>The <strong>Tax 1</strong> field specifies if the tax 1 is applicable on the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Tax_2">Tax 2</a></strong></td>
+
+          <td>The <strong>Tax 2</strong> field specifies if the tax 2 is applicable on the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Tax_3">Tax 3</a></strong></td>
+
+          <td>The <strong>Tax 3</strong> field specifies if the tax 3 is applicable on the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Tax_4">Tax 4</a></strong></td>
+
+          <td>The <strong>Tax 4</strong> field specifies if the tax 4 is applicable on the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Scalable">Scalable</a></strong></td>
+
+          <td>The <strong>Scalable</strong> field specifies if the item is sold by weight or not.</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong>Links</strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Sub-department">Sub-department</a></strong></td>
+
+          <td>The <strong>Sub-department</strong> field contains the sub-department number the item is associated to.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Link_code">Link code</a></strong></td>
+
+          <td>The <strong>Link code</strong> field contains the bottle link number associated to the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 170px"><strong><a name="Vendor_ID">Vendor ID</a></strong></td>
+
+          <td>The <strong>Vendor ID</strong> contains the vendor's identification number.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+
+      <h2><a name="Restoring">Restoring</a> print jobs</h2>
+
+      <p>The <strong>Restore print jobs</strong> option helps recover <a href="#Delete_label">deleted labels</a>.</p>
+
+      <p>To restore print jobs:</p>
+
+      <ol>
+        <li>In the launcher, click on <strong>Tools</strong>, then on <strong>Labels</strong>: the <strong>Start</strong> window opens in the <strong>Labels</strong> work area.</li>
+
+        <li>Select <strong>Restore print jobs</strong>: the <strong>Labels - Restore jobs</strong> wizard opens on the desktop.</li>
+
+        <li>Set the date range.</li>
+
+        <li>Define the target for which the old label batches are restored.</li>
+
+        <li>Click <strong>Execute</strong>: <strong></strong> the <strong>Restore job list</strong> opens on the desktop.</li>
+
+        <li>Click <strong>View</strong> to see the list of deleted labels.</li>
+
+        <li>Click <strong>Restore</strong>: the <strong>Print label list</strong> opens. It displays the list of labels that are ready for printing, including the restored ones.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

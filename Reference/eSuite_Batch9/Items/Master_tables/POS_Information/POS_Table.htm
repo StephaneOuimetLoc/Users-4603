@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+<style type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.auto-style1 {
+    font-weight: normal;
+}
+</style>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - POS Information Table</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+      <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - POS Information Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Master &gt; Item list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <div>
+        <h2>Information</h2>
+
+        <p>The eSuite software uses relational tables to store item information. The <strong>POS table</strong> contains POS sales information such as tax status, discount status, etc. for each item in the <a href="Main%20Item_Table.htm"><strong>Main item</strong> table</a>. Some of the POS table information may not apply to all POS systems.</p>
+
+        <p>The <strong>POS information table</strong> can contain multiple records for the same item based on regional differences such as taxability, so that a head office can control regional (target) differences. The eSuite software uses a unique key made up of two fields: the main item UPC and the target. This means that each UPC can have more than one point of sale record in the <strong>POS information table</strong>, as long as the targets change. The same UPC can have as many different records in the POS Information table as there are unique targets.</p>
+
+        <h2>Displaying the POS information table</h2>
+
+        <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+        <ol>
+          <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area</li>
+
+          <li>Click on <strong>Item list</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Items - General List</strong></li>
+
+          <li>Enter the search criteria and click on <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window</li>
+
+          <li>Select a record and click on <strong>Edit</strong> on the bottom of the item grid: the option menu is displayed</li>
+
+          <li>Select <strong>Master tables</strong> and then <strong>POS master</strong>: the <strong>POS information edit table</strong> opens overlapping the work area</li>
+        </ol>
+
+        <p><img class="img img-fluid img-thumbnail" src="POS_Table_files/POS_table.png"></p>
+
+        <h2><a name="Layout">Layout</a></h2>
+
+        <p>The <strong>POS information</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>bottom tab section</strong>.</p>
+
+        <p>The multi-target installations also offer the <strong>POS table grid</strong> on the left-hand side of the POS table.</p>
+
+        <p><strong>Main section</strong></p>
+
+        <table style="width: 100%">
+          <tr>
+            <td><img class="img img-fluid img-thumbnail" src="POS_Table_files/main_section.png" usemap="#main_section" style="border-style:none"> <map name="main_section">
+              <area shape="rect" coords="11, 145, 92, 171" href="#Target">
+              <area shape="rect" coords="94, 145, 439, 173" href="#POS_description">
+              <area shape="rect" coords="11, 191, 241, 219" href="#Sub-department">
+              <area shape="rect" coords="12, 240, 81, 268" href="#Bottle_link">
+              <area shape="rect" coords="80, 241, 160, 268" href="#Other_flags">
+              <area shape="rect" coords="162, 241, 240, 267" href="#WIC_alias">
+              <area shape="rect" coords="12, 291, 135, 318" href="#Divisor">
+              <area shape="rect" coords="138, 290, 195, 319" href="#Tare_link">
+              <area shape="rect" coords="196, 291, 241, 319" href="#Proportional_tare">
+              <area shape="rect" coords="254, 180, 335, 200" href="#Follow_sub">
+              <area shape="rect" coords="255, 199, 341, 218" href="#FSA_eligible">
+              <area shape="rect" coords="253, 230, 332, 249" href="#WIC_item">
+              <area shape="rect" coords="255, 250, 346, 272" href="#Food_stamp">
+              <area shape="rect" coords="256, 280, 326, 299" href="#Scalable">
+              <area shape="rect" coords="256, 299, 326, 317" href="#Manual">
+              <area shape="rect" coords="363, 182, 442, 199" href="#Taxable_1">
+              <area shape="rect" coords="364, 200, 441, 217" href="#Taxable_2">
+              <area shape="rect" coords="364, 219, 441, 238" href="#Taxable_3">
+              <area shape="rect" coords="364, 240, 441, 258" href="#Taxable_4">
+              <area shape="rect" coords="365, 261, 437, 279" href="#Taxable_5">
+              <area shape="rect" coords="365, 281, 440, 298" href="#Taxable_6">
+              <area shape="rect" coords="366, 301, 441, 322" href="#Taxable_7">
+            </map> </td>
+          </tr>
+
+          <tr>
+            <td style="text-align: center">* Click on a field to get information on it.</td>
+          </tr>
+        </table>
+
+        <p><strong>Bottom tab section</strong></p>
+
+        <table style="width: 100%">
+          <tr>
+            <td style="width: 708px"><img class="img img-fluid img-thumbnail" src="POS_Table_files/tab_restriction.png" style="border-style:none" usemap="#restriction_tab"> <map name="restriction_tab">
+              <area shape="rect" coords="12, 75, 240, 99" href="#Restrictor">
+              <area shape="rect" coords="12, 117, 187, 143" href="#Status">
+              <area shape="rect" coords="12, 168, 97, 195" href="#Customer_age">
+              <area shape="rect" coords="101, 169, 186, 193" href="#Cashier_age">
+              <area shape="rect" coords="253, 58, 355, 76" href="#Stop_discount">
+              <area shape="rect" coords="254, 77, 356, 96" href="#Not_for_sale">
+              <area shape="rect" coords="256, 98, 349, 114" href="#Not_in_net">
+              <area shape="rect" coords="255, 117, 350, 133" href="#Force_price">
+              <area shape="rect" coords="255, 136, 355, 156" href="#Force_quantity">
+              <area shape="rect" coords="362, 58, 466, 76" href="#Stop_quantity">
+              <area shape="rect" coords="364, 80, 467, 96" href="#Visual_verify">
+              <area shape="rect" coords="365, 99, 469, 115" href="#Price_override">
+              <area shape="rect" coords="364, 116, 468, 136" href="#Stop_repeat">
+              <area shape="rect" coords="367, 136, 466, 159" href="#Stop_refund">
+            </map> </td>
+
+            <td style="width: 709px"><img class="img img-fluid img-thumbnail" src="POS_Table_files/tab_coupon.png" style="border-style:none" usemap="#coupon_tab"> <map name="coupon_tab">
+              <area shape="rect" coords="9, 75, 74, 98" href="#Family">
+              <area shape="rect" coords="75, 76, 240, 99" href="#Coupon_type">
+              <area shape="rect" coords="9, 122, 240, 148" href="#Promotion_ID">
+              <area shape="rect" coords="11, 172, 241, 198" href="#Ticket">
+              <area shape="rect" coords="251, 59, 354, 75" href="#Store_coupon">
+              <area shape="rect" coords="256, 79, 321, 95" href="#Vendor">
+              <area shape="rect" coords="253, 108, 351, 124" href="#Multipliable">
+              <area shape="rect" coords="252, 128, 330, 144" href="#Reject">
+              <area shape="rect" coords="355, 59, 440, 75" href="#Print_coupon">
+              <area shape="rect" coords="355, 78, 458, 97" href="#Bottle_return">
+              <area shape="rect" coords="358, 106, 456, 126" href="#Rain_check">
+              <area shape="rect" coords="359, 127, 460, 145" href="#Capture_data">
+              <area shape="rect" coords="254, 173, 340, 198" href="#Coupon_ID">
+            </map> </td>
+          </tr>
+
+          <tr>
+            <td style="text-align: center; width: 708px;">* Click on a field to get information on it.</td>
+
+            <td style="text-align: center; width: 709px;">* Click on a field to get information on it.</td>
+          </tr>
+        </table>
+
+        <table style="width: 100%">
+          <tr>
+            <td style="width: 708px"><img class="img img-fluid img-thumbnail" src="POS_Table_files/tab_miscellaneous.png" style="border-style:none" usemap="#miscellaneous_tab"> <map name="miscellaneous_tab">
+              <area shape="rect" coords="10, 73, 342, 97" href="#Alternate_description">
+              <area shape="rect" coords="350, 71, 443, 99" href="#Creation_date">
+              <area shape="rect" coords="9, 122, 133, 150" href="#Normalized_UOM">
+              <area shape="rect" coords="141, 122, 220, 149" href="#PLU">
+              <area shape="rect" coords="231, 122, 292, 148" href="#Quantity_rent">
+              <area shape="rect" coords="300, 121, 374, 149" href="#Commission">
+            </map> </td>
+
+            <td style="width: 709px"><img class="img img-fluid img-thumbnail" src="POS_Table_files/tab_advanced.png" style="border-style:none" usemap="#advanced_tab"> <map name="Advanced_tab">
+              <area shape="rect" coords="10, 75, 241, 99" href="#Behavior_script_type">
+              <area shape="rect" coords="254, 74, 464, 99" href="#Add_using_function">
+              <area shape="rect" coords="9, 128, 461, 155" href="#URL">
+            </map> </td>
+          </tr>
+
+          <tr>
+            <td style="text-align: center; width: 708px;">* Click on a field to get information on it.</td>
+
+            <td style="text-align: center; width: 709px;">* Click on a field to get information on it.</td>
+          </tr>
+        </table>
+
+        <h2>Content</h2>
+
+        <p>Here is the description of the <strong>POS information table</strong> fields and their functionalities:</p>
+
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>FIELD</th>
+
+              <th>DESCRIPTION</th>
+            </tr>
+          </thead>
+
+          <tr>
+            <td colspan="2"><strong>Main section</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+            <td>The <strong>Target</strong> field contains the target identifier (store group).<br>
+            It is a required field.<br>
+            The default value is <em>PAL</em>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="POS_description">POS description</a></strong></td>
+
+            <td>The <strong>POS description</strong> field contains the description of the item displayed on the POS screen and printed on the receipt.<br>
+            See the <a href="#The_POS_description_field"><strong>POS description</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Sub-department">Sub-department</a></strong></td>
+
+            <td>The <strong>Sub-department</strong> field links the item to a sub-department.<br>
+            See the <a href="#The_Sub-department_field"><strong>Sub-department</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Bottle_link">Bottle link</a></strong></td>
+
+            <td>The <strong>Bottle link</strong> field links the item to a bottle link that contains a deposit value. The bottle links are displayed in the drop-down menu.<br>
+            Records must already exist in the <a href="Auxiliary_tables/Bottle_link_table.htm"><strong>Bottle link</strong> table</a> for the drop-down list to display choices.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Other_flags">Other flags</a></strong></td>
+
+            <td>The <strong>Other flags</strong> field contains additional item information.<br>
+            See the <a href="#The_Other_flags_field"><strong>Other flags</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="height: 21px;"><strong><a name="WIC_alias">WIC alias</a></strong></td>
+
+            <td style="height: 21px">The <strong>WIC alias</strong> field contains an alternate code specific to the WIC program.<br>
+            See the <a href="#The_WIC_alias_field"><strong>WIC alias</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Divisor">Divisor</a></strong></td>
+
+            <td>The <strong>Divisor</strong> field contains the weight divisor of the item.<br>
+            See the <a href="#The_Divisor_field"><strong>Divisor</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Tare_link">Tare link</a></strong></td>
+
+            <td>The <strong>Tare link</strong> field links the item to a tare value that is used to subtract the item packaging weight from the total weight.<br>
+            See the <a href="Auxiliary_tables/Tare_table.htm"><strong>Tare</strong> table</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Proportional_tare">Proportional tare</a></strong></td>
+
+            <td>The <strong>Proportional tare (Prop. tare)</strong> field contains the constant factor, expressed in percentage, used to calculate the item tare value at the sale time.<br>
+            It is generally used when the item packaging weight increases proportionally with the item weight. In this case, it may be possible to determine a constant tare value per kilogram or pound.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Follow_sub">Follow sub</a></strong></td>
+
+            <td>The <strong>Follow sub-department (Follow sub)</strong> field specifies whether the item follows the linked sub-department sales information programming (checked), or not (unchecked).<br>
+            See the <strong></strong> <a href="#The_Follow_sub-department_field"><strong>Follow sub-department</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="FSA_eligible">FSA eligible</a></strong></td>
+
+            <td>The <strong>FSA eligible</strong> field specifies whether the item can be purchased using an FSA card as tender (checked) or not (unchecked).<br>
+            See the <a href="#The_FSA_eligible_field"><strong>FSA eligible</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="WIC_item">WIC item</a></strong></td>
+
+            <td>The <strong>WIC item</strong> field specifies whether the item is eligible for the WIC program (checked) or not (unchecked).<br>
+            For this field to work, the item must not be programmed to <a href="#Follow_sub">follow the sub-department settings</a>.<br>
+            The <b>WIC item</b> flag may be specified for a whole <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm#WIC_item">sub-department</a> or <a href="../Dimensions/Dimensions_tables/Department_table.htm#WIC_item">department keys</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Food_stamp">Food stamp</a></strong></td>
+
+            <td>The <strong>Food stamp</strong> field specifies whether the item can be purchased using food stamps as tender (checked) or not (unchecked).<br>
+            For this field to work, the item must not be programmed to <a href="#Follow_sub">follow the sub-department settings</a>.<br>
+            The <strong>Food stamp</strong> flag may be specified for a whole <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm#WIC_item">sub-department</a> or <a href="../Dimensions/Dimensions_tables/Department_table.htm#WIC_item">department keys</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Scalable">Scalable</a></strong></td>
+
+            <td>The <strong>Scalable</strong> field specifies whether the item is sold by weight and scaled at the POS (checked) or sold by price (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Manual">Manual</a></strong></td>
+
+            <td>The <strong>Manual</strong> field specifies whether the weight of the scalable item can be manually entered using the POS keyboard (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Taxable_1">Taxable 1</a></strong></td>
+
+            <td>The <strong>Taxable 1</strong> field specifies whether the item has the first tax for the retail region (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Taxable_2">Taxable 2</a></strong></td>
+
+            <td>The <strong>Taxable 2</strong> field specifies whether the item has the second tax for the retail region (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Taxable_3">Taxable 3</a></strong></td>
+
+            <td>The <strong>Taxable 3</strong> field specifies whether the item has the third tax for the retail region (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Taxable_4">Taxable 4</a></strong></td>
+
+            <td>The <strong>Taxable 4</strong> field specifies whether the item has the fourth tax for the retail region (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Taxable_5">Taxable 5</a></strong></td>
+
+            <td>The <strong>Taxable 5</strong> field specifies whether the item has the fifth tax for the retail region (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Taxable_6">Taxable 6</a></strong></td>
+
+            <td>The <strong>Taxable 6</strong> field specifies whether the item has the sixth tax for the retail region (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Taxable_7">Taxable 7</a></strong></td>
+
+            <td>The <strong>Taxable 7</strong> field specifies whether the item has the seventh tax for the retail region (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td colspan="2"><strong>Restriction tab</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Customer_age">Customer age</a></strong></td>
+
+            <td>The <strong>Customer age</strong> field contains the minimum age the customer must be to buy the item.<br>
+            See the <a href="#The_Customer_age_field"><strong>Customer age</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Restrictor">Restrictor</a></strong></td>
+
+            <td>The <strong>Restrictor</strong> field links restrictions to departments, sub-departments or items.<br>
+             See the <a href="#The_Restrictor_field_section"><strong>Restrictor</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Status">Status</a></strong></td>
+
+            <td>The <strong>Status</strong> field contains the identification code of the item status.<br>
+            See the <a href="#The_Status_field"><strong>Status</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Cashier_age">Cashier age</a></strong></td>
+
+            <td>The <b>Cashier age</b> field contains the minimum age the cashier must be to sell the item.<br>
+            See the <a href="#The_Cashier_age_field"><strong>Cashier age</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><a name="Stop_discount"><strong>Stop discount</strong></a></td>
+
+            <td>The <strong>Stop discount</strong> field specifies whether discounts may be applied on the item when it is sold at the POS (unchecked) or not (checked).<br>
+            See the <a href="#The_Stop_discount_field"><strong>Stop discount</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Not_for_sale">Not for sale</a></strong></td>
+
+            <td>The <strong>Not for sale</strong> field specifies whether the item can be sold at the POS (unchecked) or not (checked).<br>
+            See the <a href="#The_Not_for_sale_field"><strong>Not for sale</strong> field</a> section below.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Not_in_net">Not in net</a></strong></td>
+
+            <td>The <strong>Not in net</strong> field specifies whether the item's sales are added to the store's net sales (unchecked) or not (checked).<br>
+            See the <a href="#The_Not_in_net_field"><strong>Not in net</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Force_price">Force price</a></strong></td>
+
+            <td>The <strong>Force price</strong> field specifies whether the item price must be manually entered when the item is sold at the POS (checked) or not (unchecked).<br>
+            See the <a href="#The_Price_force_field"><strong>Force price</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Force_quantity">Force quantity</a></strong></td>
+
+            <td>The <strong>Force quantity</strong> field specifies whether the item quantity must be entered before the item can be sold at the POS (checked) or not (unchecked).<br>
+            See the <a href="#The_Force_quantity_field"><strong>Force quantity</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Stop_quantity">Stop quantity</a></strong></td>
+
+            <td>The <strong>Stop quantity</strong> field specifies whether an item quantity can be entered for the item when it is sold at the POS (unchecked) or not (checked).<br>
+            See the <a href="#The_Stop_quantity_field"><strong>Stop quantity</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Visual_verify">Visual verify</a></strong></td>
+
+            <td>The <strong>Visual verify</strong> field specifies whether the item price must be verified at the POS before the item can be sold (checked) or not (unchecked).<br>
+            See the <a href="#The_Visual_verify_field"><strong>Visual verify</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Price_override">Price override</a></strong></td>
+
+            <td>The <strong>Price override</strong> field specifies whether operators are allowed to temporarily override the price at the POS using the Price modify function (checked) or not (unchecked), regardless of operator's access level.<br>
+            See the <a href="#The_Price_override_field"><strong>Price override</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Stop_repeat">Stop repeat</a></strong></td>
+
+            <td>The <strong>Stop repeat</strong> field specifies whether cashiers can sell the same item more than once using the <strong>Repeat last</strong> function at the POS (unchecked) or not (checked).<br>
+            On most points of sale, it is possible to press the PLU or code key to repeatedly sell the last item entered.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Stop_refund">Stop refund</a></strong></td>
+
+            <td>The <strong>Stop refund</strong> field specifies whether the item may be refunded (unchecked) or not (checked).</td>
+          </tr>
+
+          <tr>
+            <td colspan="2"><strong>Coupon tab</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Family">Family</a></strong></td>
+
+            <td>The <b>Family</b> field contains the coupon (vendor and store) family code specifying on which items the coupons apply.<br>
+            See the <a href="#The_Family_field"><strong>Family</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Coupon_type">Coupon type</a></strong></td>
+
+            <td>The <strong>Coupon type</strong> field contains the type of coupon that can be applied to the item.<br>
+            This following options are available: <em>Manual</em>, <em>Electronic</em>, <em>Targeted</em>, <em>Automatic</em> and <em>Public</em>.<br>
+            See <strong><a href="Coupon_items/Coupons/Coupons.htm">Coupons</a></strong>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Promotion_ID">Promotion ID</a></strong></td>
+
+            <td>The <b>Promotion ID</b> field contains the promotion identification number that associates the item to one or more promotions (see the electronic coupon examples).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Ticket">Ticket</a></strong></td>
+
+            <td>The <strong>Ticket</strong> field contains the name of the coupon template to use instead of the default one.<br>
+            See the <a href="#The_Ticket_field_section"><strong>Ticket</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Store_coupon">Store coupon</a></strong></td>
+
+            <td>The <strong>Store coupon</strong> field specifies whether the item is an electronic store coupon (checked) or not (unchecked).<br>
+             See the <a href="#The_Store_coupon_field"><strong>Store coupon</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Vendor">Vendor</a></strong></td>
+
+            <td>The <strong>Vendor</strong> field specifies whether the item is an electronic vendor coupon (checked) or not (unchecked).<br>
+            See the <a href="#The_Vendor_field"><strong>Vendor</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Multipliable">Multipliable</a></strong></td>
+
+            <td>The <strong>Multipliable</strong> field specifies whether coupon values may be multiplied at the POS for the item (checked) or not (unchecked).<br>
+            See the <a href="#The_Multipliable_field"><strong>Multipliable</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Reject">Reject</a></strong></td>
+
+            <td>The <strong>Reject</strong> field specifies whether coupons (vendor, store, electronic vendor and electronic store) are refused at the POS for the item (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td><strong><a name="Print_coupon">Print coupon</a></strong></td>
+
+            <td>The <b>Print coupon</b> field is used to print the electronic coupon instead of subtracting the value of the electronic coupon within the transaction.<br>
+            This is the method to use to postpone a discount on a future purchase.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Bottle_return">Bottle return</a></strong></td>
+
+            <td>The <b>Bottle return</b> field specifies whether the item is a bottle return item (checked) or not (unchecked).</td>
+          </tr>
+
+          <tr>
+            <td><strong><a name="Rain_check">Rain check</a></strong></td>
+
+            <td>The <strong>Rain check</strong> field specifies whether rain checks can be generated for the item (checked) or not (unchecked).<br>
+            See the <a href="#The_Rain_check_field"><strong>Rain check</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px;"><strong><a name="Capture_data">Capture data</a></strong></td>
+
+            <td style="height: 47px">The <strong>Capture data</strong> field specifies whether the item sales are tracked by customer (checked) or not (unchecked).<br>
+             The item sales tracked are used to know how many times a customer purchased an item over a period of time. It is often used with electronic coupons.<br>
+            The items are automatically tracked when they are programmed with a <a href="Price_Table.htm#Method">limited method</a> (LT, LD, LW, LM or LN).</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Coupon_ID">Coupon ID</a></strong></td>
+
+            <td>The <strong>Coupon ID</strong> field contains the number of the coupon linked to this item.</td>
+          </tr>
+
+          <tr>
+            <td colspan="2"><strong>Miscellaneous tab</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Alternate_description">Alternate description</a></strong></td>
+
+            <td>The <strong>Alternate description</strong> field contains an alternate description of the item displayed on the POS screen and/or printed on the receipt.<br>
+            It is mainly used for a second language POS description.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Creation_date">Creation date</a></strong></td>
+
+            <td>The <strong>Creation date</strong> field contains the date of the creation of the item.<br>
+            Not editable and used for information purposes only.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Normalized_UOM">Normalized UOM</a></strong></td>
+
+            <td>The <strong>Normalized unit of measure (UOM)</strong> field contains the identification characters of the buying format available for the item.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="PLU">PLU#</a></strong></td>
+
+            <td>The <strong>PLU#</strong> field contains the memory number which links the PLU to the scales or the cash registers.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Quantity_rent">Quantity for rent</a></strong></td>
+
+            <td>The <strong>Quantity for rent (Qty rent)</strong> field contains the quantity of the item available for rent.<br>
+            The system automatically rents the item instead of selling it, when a value is entered in the <strong>Quantity rent</strong> field.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Commission">Commission</a></strong></td>
+
+            <td>The <strong>Commission</strong> field contains the salesman's commission rate for the item.<br>
+            When a commission report is generated, it is used to obtain the commission rate on each item.<br>
+            The commission may also be specified for a whole <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm#Commission">sub-department</a> or a whole <a href="../Dimensions/Dimensions_tables/Department_table.htm#Commission">department</a>.</td>
+          </tr>
+
+          <tr>
+            <td colspan="2"><strong>Advanced tab</strong></td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Behavior_script_type">Behavior script type</a></strong></td>
+
+            <td>The <strong>Behavior script type</strong> field contains a keyword that gives a specific behavior for the item.<br>
+            See the <a href="#The_Behavior_script_type_field"><strong>Behavior script type</strong> field section</a>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="Add_using_function">Add using function</a></strong></td>
+
+            <td>The <strong>Add using function</strong> field contains the number of the function that must be used instead of the regular one to identify the totalizers when the item is sold.<br>
+            When a function is specified in the <strong>Add using function</strong> field, the default totalizers are replaced by the totalizers included in the specified function.<br>
+            This is used, for example, when an item is a printed coupon: it appears in the transaction like any other item, but its amount is added in a different totalizer, like a <strong>Printed coupon</strong>.</td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong><a name="URL">URL</a></strong></td>
+
+            <td>The <strong>URL</strong> field contains special parameters used when the item is sold.<br>
+            See the <a href="#The_URL_field"><strong>URL</strong> field section</a>.</td>
+          </tr>
+        </table>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_POS_description_field">The POS description field</a></h2>
+
+        <p>The <strong>POS description</strong> field contains the description of the item displayed on the POS screen and/or printed on the receipt.</p>
+
+        <p>Since some POS systems, such as the ECR systems, can only display/print a limited number of item descriptor characters on the POS screen/receipt, the item descriptor (<a href="Main%20Item_Table.htm#Descriptor">main item descriptor</a>) may be truncated to fit the POS screen/receipt if it contains more characters than the POS character limit. In this case, it can be difficult to correctly identify the item by its descriptor. The <b>POS description</b> field allows you to control the descriptor characters sent to the POS system.</p>
+
+        <p>To enter a POS description, type the POS description of the item in the <b>POS description</b> field while respecting the POS system descriptor character limit (specified in the POS system documentation).</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Sub-department_field">The Sub-department field</a></h2>
+
+        <p>The <b>Sub-department</b> field links the item to a <a href="../Dimensions/Subdepartment/Subdpt_table.htm">sub-department</a>.</p>
+
+        <p>In most POS systems, item sales are linked to sale categories for reporting purposes. Because different POS systems use different terminology for sale links, it is important to understand the eSuite terminology and how it relates to the POS system. The eSuite software uses a three-tier sales link level organization:</p>
+
+        <ol>
+          <li>Item sales are accumulated in sub-departments.</li>
+
+          <li>Sub-department sales are accumulated in departments (a department sales total contains sales from one or more sub-departments).</li>
+
+          <li>Department sales are accumulated in group sales (a group sales total contains sales from one or more departments).</li>
+        </ol>
+
+        <p>The eSuite software sales link levels (sub-departments, departments and groups) are defined in the <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm"><b>Sub-department</b></a> and <a href="../Dimensions/Dimensions_tables/Department_table.htm"><b>Department</b></a> tables.</p>
+
+        <p>Whether or not the POS system uses the same terms, eSuite requires that items be linked to a sub-department or a first sales link level.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Other_flags_field">The Other flags field</a></h2>
+
+        <p>The <b>Other flags</b> field contains additional item information.</p>
+
+        <p>For this field to work, the item must not be programmed to <a href="#The_Follow_sub-department_field">follow the sub-department settings</a>.<br>
+        <strong><br>
+        </strong> The <b>Other flags</b> information may be specified for a whole <a href="../Dimensions/Subdepartment/Subdpt_table.htm#The_Other_flags_field">sub-department</a> or <a href="../Dimensions/Department/Department_table.htm#The_Other_flags_field">department</a> keys.</p>
+
+        <p><img class="img img-fluid img-thumbnail" src="POS_Table_files/other_flags.png"></p>
+
+        <p>To enter additional item information, type the abbreviation of the desired information in the <strong>Other flags</strong> field or click the arrow to open the menu and select an option:</p>
+
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th><strong>OTHER FLAGS INFORMATION</strong></th>
+
+              <th style="width: 82px"><strong>ABBREVIATION</strong></th>
+
+              <th><strong>DESCRIPTION</strong></th>
+            </tr>
+          </thead>
+
+          <tr>
+            <td>Enable zero price</td>
+
+            <td style="width: 82px">EZ</td>
+
+            <td>The item accepts a zero price in the price fields of the <a href="Auxiliary_tables/Price_level_table.htm"><strong>Price</strong> table</a> ($0.00).</td>
+          </tr>
+
+          <tr>
+            <td>No cost plus price</td>
+
+            <td style="width: 82px">NC</td>
+
+            <td>No cost plus price can be calculated for the item .</td>
+          </tr>
+
+          <tr>
+            <td style="height: 21px">No update from import</td>
+
+            <td style="width: 82px">NI</td>
+
+            <td style="height: 21px">(information to come)</td>
+          </tr>
+
+          <tr>
+            <td style="height: 21px">WIC 2</td>
+
+            <td style="width: 82px">W2</td>
+
+            <td style="height: 21px">The item is WIC able 2.</td>
+          </tr>
+
+          <tr>
+            <td>WIC 3</td>
+
+            <td style="width: 82px">W3</td>
+
+            <td>The item is WIC able 3.</td>
+          </tr>
+
+          <tr>
+            <td>WIC 4</td>
+
+            <td style="width: 82px">W4</td>
+
+            <td>The item is WIC able 4.</td>
+          </tr>
+
+          <tr>
+            <td>Web Order</td>
+
+            <td style="width: 82px">FE</td>
+
+            <td>The item can be ordered from the Web.</td>
+          </tr>
+
+          <tr>
+            <td id="fixweight0"><a name="Scale_fix_weight">Scale fix weight</a></td>
+
+            <td style="width: 82px">FW</td>
+
+            <td>The scaled item has fixed weights (e.g. store-made muffins). See the scale manual for more information.</td>
+          </tr>
+
+          <tr>
+            <td id="fixbycount"><a name="Scale_fix_weight_by_count">Scale fix weight by count</a></td>
+
+            <td style="width: 82px">FC</td>
+
+            <td>The scaled item has fixed weight and is 'by count'.</td>
+          </tr>
+
+          <tr>
+            <td id="fixprice"><a name="Scale_fix_price">Scale fix price</a></td>
+
+            <td style="width: 82px">SF</td>
+
+            <td>The scaled item has fixed prices (e.g. store-made pizzas). See the scale manual for more information.</td>
+          </tr>
+
+          <tr>
+            <td id="turkeyware"><a name="Scale_special_weigh">Scale special weigh</a>t</td>
+
+            <td style="width: 82px">SW</td>
+
+            <td>The scaled item is 'weighable' and 'by count'.</td>
+          </tr>
+
+          <tr>
+            <td id="openprice" style="height: 21px"><a name="Scale_open_price">Scale open price</a></td>
+
+            <td style="width: 82px">SO</td>
+
+            <td style="height: 21px">The scaled item allows an operator to enter a price per pound/kilogram and the system will calculate the price based on the weight of the item.</td>
+          </tr>
+
+          <tr>
+            <td id="forcetare"><a name="Scale_force_tare">Scale force tare</a></td>
+
+            <td style="width: 82px">FT</td>
+
+            <td>The scaled item has a tare that is forced in the scale. See the scale manual for more information.</td>
+          </tr>
+        </table>
+
+        <div class="Note">
+          <b>NOTES:</b> 
+
+          <ul>
+            <li>More than one type of information may be selected. To manually enter a value, type its abbreviation and press the Enter key on the keyboard.</li>
+
+            <li>For detailed information on the Scale settings, please refer to the <strong>Scale - Overview and Deplo</strong><strong>y</strong> document.</li>
+          </ul>
+        </div>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_WIC_alias_field">The WIC alias field</a></h2>
+
+        <ul>
+          <li>The <strong>WIC alias</strong> field contains alternate codes that are specific to the WIC program but do not exist in the WIC Authorized Product List (APL).</li>
+
+          <li>For example, the 4031 PLU code for watermelon could be used as a WIC alias for a package of sliced watermelon.</li>
+
+          <li>The WIC alias is decided by the store.</li>
+        </ul>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Divisor_field">The Divisor field</a></h2>
+
+        <p>The <strong>Divisor</strong> field contains the weight divisor of the item.</p>
+
+        <p><img class="img img-fluid img-thumbnail" src="POS_Table_files/divisor.png"></p>
+
+        <p>Sometimes, item prices by weight can be very high per kilogram or pound. In these situations, it is preferable to use a smaller measure for pricing.&nbsp;When the item is sold, the POS divides the weight by the divisor and the prices accordingly.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Follow_sub-department_field">The Follow sub-department field</a></h2>
+
+        <p>The <b>Follow sub-department</b> <strong>(Follow sub)</strong> field specifies whether the item follows the linked sub-department sales information programming (checked), or not (unchecked). It is checked <i></i> by default.</p>
+
+        <p>It is possible to program the point of sale information once for a <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a>, and then apply the programming to the items that are linked to that sub-department. This accelerates the item programming process since you do not have to individually set each item's sales information.</p>
+
+        <p>When the Follow sub-department field is checked, some fields that may be programmed at the sub-department level get read-only. They all become available when the Follow subdepartment field is unchecked.</p>
+
+        <p class="Note"><strong>NOTES:</strong><br>
+        The <a href="Price_Table.htm#Exclude_from_spending"><strong>Exclude spending</strong></a> field of the <a href="Price_Table.htm"><strong>Price</strong> table</a> is also included in the fields that are linked to the <strong>Follow sub-department</strong> field.<br>
+        The default list of fields can be modified. See the reseller for more details.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_FSA_eligible_field">The FSA eligible field</a></strong></b></h2>
+
+        <p>The <b>FSA eligible</b> field specifies whether the item can be purchased using a FSA card as tender (checked) or not (unchecked).</p>
+
+        <p>FSA products include medical expenses such as:</p>
+         <b></b>
+
+        <ul>
+          <li><b>Clinical services</b></li>
+
+          <li><b>Dental services</b></li>
+
+          <li><b>Prescription / RX only</b></li>
+
+          <li><b>Vision / Optical</b></li>
+
+          <li><b>OTC <strong>(Over The Counter items)</strong></b></li>
+        </ul>
+
+        <p class="Note"><b><strong><b>NOTES:<br>
+        </b></strong></b>For this field to work, the item must not be programmed to <a href="#The_Follow_sub-department_field">follow the sub-department settings</a>.<b><strong><br>
+        </strong></b>The FSA eligible field may be specified for a whole <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm#FSA_eligible">sub-department</a><b><strong></strong></b>or<b><strong></strong></b> <a href="../Dimensions/Dimensions_tables/Department_table.htm#FSA_eligible">department</a> keys.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_Restrictor_field_section">The Restrictor field section</a></strong></b></h2>
+
+        <p>The <b>Restrictor</b> field links the item, the department or the sub-department to a restriction, i.e. a special rule that the item sales must follow. For example, in areas where stores are allowed to sell beer, wine or alcohol, their sales might be legally restricted to certain hours of the day.</p>
+         <b><strong></strong></b>
+
+        <p class="Note"><b><strong>NOTES:<br>
+        </strong></b>For this field to work, the item must not be programmed to <a href="#The_Follow_sub-department_field">follow the sub-department settings</a>.<br>
+        The <b>Restrictor</b> field may be specified for a whole <a href="../Dimensions/Subdepartment/Subdpt_table.htm#Restrict.">sub-department</a> or <a href="../Dimensions/Department/Department_table.htm#Restrict.">department</a> keys.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_Status_field">The Status field</a></strong></b></h2>
+
+        <p>The <b>Status</b> field contains the identification code of the item status. The following options are available:</p>
+         <b><strong></strong></b>
+
+        <p><b><strong><img class="img img-fluid img-thumbnail" src="POS_Table_files/status.png"></strong></b></p>
+
+        <p>The back order status of the item is managed from the <b>Status</b> field. The <i>Allow BO</i> status indicates that back orders are accepted for the current item. The number of days of the back order's life is defined once for each customer, in the <a href="../Customers/Customer_table.htm#BO"><b>B.O.</b> field</a> of the <a href="../Customers/Customer_table.htm"><b>Customer</b> table</a>.</p>
+         <b><strong></strong></b>
+
+        <p class="Note"><b><strong>NOTE:</strong></b> The default list can be modified; see the reseller for details.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_Customer_age_field">The Customer age field</a></strong></b></h2>
+
+        <p>The <b>Customer age</b> field contains the minimum age the customers must be of to buy the item. For example, in areas where stores are allowed to sell beer, wine or alcohol, customers must be of legal adult age for that area to buy these items.</p>
+
+        <p>The <b>Customer age</b> may be specified for a whole <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm">sub-department</a> or <a href="../Dimensions/Dimensions_tables/Department_table.htm">department</a> keys.<br>
+        If there is no customer age specified at the item level, the system automatically looks for a customer age at the sub-department level ONLY if the <a href="#The_Follow_sub-department_field"><b>Follow sub-department</b> field</a> is checked.<b><strong><br>
+        </strong></b></p>
+
+        <p>When the customer's age is specified both at the item level and at the sub-department level, the system verifies both values. If these values are different, the customer age specified at the item level has precedence over the customer age specified at the sub-department level.</p>
+
+        <p>When a sale is performed at the POS, the cashier is prompted to enter the customer's birth date. The system automatically calculatee the customer's age and compares it to the value ointhe <b>Customer age</b> field. If the customer is under the minimum age required, a warning message is displayed on the POS screen.</p>
+         <strong></strong>
+
+        <p class="Note"><strong>NOTES:<br>
+        </strong> If the operator is a level 5 or higher, this restriction will be bypassed.<br>
+        See the reseller regarding the possible alternate configurations (System.ini file). <b><strong></strong></b></p>
+
+        <h4><b><strong>Example</strong></b></h4>
+
+        <p>The customer's minimum age for the department #1 is 18. The information entered in the <strong>POS</strong> table looks like this:</p>
+         <b><strong></strong></b>
+
+        <p><b><strong><img class="img img-fluid img-thumbnail" height="55" src="POS_Table_files/customer_age.png" width="92"></strong></b></p>
+
+        <p>When a customer buys an item in the department #1, the POS information looks like this:</p>
+         <b><strong></strong></b>
+
+        <ol>
+          <li><b><strong>Item #0000000000001 is scanned; <span class="auto-style1">the POS asks for the customer's date of birth:</span><br>
+           <img class="img img-fluid img-thumbnail" height="139" src="POS_Table_files/POS_birth_date.png" width="222"></strong></b></li>
+
+          <li><b>The customer's date of birth should be entered in the requested format:<br>
+          <br>
+           <img class="img img-fluid img-thumbnail" height="140" src="POS_Table_files/POS_birth_date_2.png" width="227"></b></li>
+
+          <li><b>If the customer is under the specified age, a warning message is displayed and it will be impossible to sell that item to that very customer:<br>
+           <img class="img img-fluid img-thumbnail" height="142" src="POS_Table_files/POS_InsCustDate.png" width="227"></b></li>
+        </ol>
+
+        <p class="Note"><b><strong>NOTE:</strong></b> This example has been given based on the default configuration.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_Cashier_age_field">The Cashier age field</a></strong></b></h2>
+
+        <p>The <strong>Cashier age</strong> field contains the minimum age that the cashiers must be of to perform sales at the department, sub-department or item level. For example, in areas where stores are allowed to sell beer, wine or alcohol, cashiers must be of legal adult age for that area in order to sell these items.</p>
+
+        <p>The cashier's age is verified based on the information entered in the <strong>Birth date</strong> field of the <strong>Operator table</strong>. If no birth date has been specified in this field, the system does not perform any age validation.</p>
+         <strong><b></b></strong>
+
+        <p class="Note"><strong><b>NOTES:<br>
+        </b></strong>The cashier's age may be specified for a whole <a href="../Dimensions/Dimensions_tables/Subdpt_table.htm#The_Cashier_age_field">sub-department</a>,&nbsp; <a href="../Dimensions/Department/Department_table.htm#The_Cashier_age_field">department key</a><b><strong></strong></b> or by item.<b><strong><br>
+        </strong></b> If there is no cashier age specified at the item level, the system automatically looks for a cashier age at the sub-department level even if the <strong><a href="#Follow_sub">Follow sub-department</a></strong> field is not checked. <b><strong></strong></b></p>
+
+        <p><b><strong><b>Example</b></strong></b></p>
+
+        <p>The cashier's minimum age required for selling item #0000000000001 is 18. Cashier #29 is younger than the required age. The information entered in the <b>POS</b> table (cashier's age) and the one in the <b>Operator</b> table (cashier's date of birth) look like this:</p>
+         <b><strong></strong></b>
+
+        <table>
+          <tr>
+            <td style="width: 708px" style="text-align:right"><img class="img img-fluid img-thumbnail" height="61" src="POS_Table_files/cashier_age.png" width="94"></td>
+
+            <td style="width: 709px"><img class="img img-fluid img-thumbnail" height="62" src="POS_Table_files/cashier_DOB.png" width="118"></td>
+          </tr>
+        </table>
+
+        <p>When cashier #29 tries to sell an item in department #1, the POS information will display the following message:</p>
+         <b><strong></strong></b>
+
+        <p><b><strong><img class="img img-fluid img-thumbnail" height="143" src="POS_Table_files/POS_InsCashDate.png" width="227"></strong></b></p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_Stop_discount_field">The Stop discount field</a></strong></b></h2>
+
+        <p>The <strong>Stop discount</strong> field specifies whether discounts may be applied on the item when it is sold at the POS (unchecked) or not (checked).</p>
+
+        <p>It does not allow manual item discounts, proportional discounts, global discounts, customer discounts (shopper level discounts) and sub-department discounts on the item.</p>
+
+        <p class="Note"><b>NOTES:<br>
+        </b>For this field to work, the item must not be programmed to <a href="#The_Follow_sub-department_field">follow the sub-department settings</a>.<br>
+        The <b>Stop discount</b> behavior may be specified for a whole <a href="../Dimensions/Subdepartment/Subdpt_table.htm#The_Stop_discount_field">sub-department</a> or <a href="../Dimensions/Department/Department_table.htm#The_Stop_discount_field">department</a> keys.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_Not_for_sale_field">The Not for sale field</a></strong></b></h2>
+
+        <p>The <strong>Not for sale</strong> field specifies whether the item can be sold at the POS (unchecked) or not (checked).</p>
+
+        <p>When the <strong>Not for sale</strong> field is checked, the item remains in the database, but cashiers are not able to sell it at the POS. This is useful for out-of-season items that will be available again later. Cashiers will not be able to sell the item by manual code entry error, and skewing the inventory reports.</p>
+
+        <div class="alert alert-warning">
+          <strong>NOTE:</strong> If a scalable item is set as 'Not for sale' and deployed, the code SPID will be sent to the scale which is an item delete. The item and its information will be removed from the scale.
+        </div>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_Not_in_net_field">The Not in net field</a></strong></b></h2>
+
+        <p>The <b>Not in net</b> field specifies whether the item sales are added to the store net sales (unchecked) or not (checked).</p>
+
+        <p>When the <b>Not in net</b> field is checked, the POS will treat the drawer amounts for balancing purposes, but the sales amounts will not appear in the net sales.&nbsp;For example, a PLU code can be assigned to a consigned item, which is not considered as a sale for the store.</p>
+
+        <p class="Note"><b>NOTES:<br>
+        </b>For this field to work, the item must not be programmed to <a href="#The_Follow_sub-department_field">follow the sub-department settings</a>.<br>
+        The <b>Not in net</b> field is often referred to as "hash sales".</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b><strong></strong></b></p>
+
+        <h2><b><strong><a name="The_Price_force_field">The Force price field</a></strong></b></h2>
+
+        <p>The <strong>Force price</strong> field specifies whether the item price must be manually entered when the item is sold at the POS (checked) or not (unchecked).</p>
+
+        <p>The <strong>Force price</strong> field is used when the item price varies and must be established at sales time.</p>
+
+        <p class="Note"><strong>NOTES:</strong><br>
+        When the <strong>Force price</strong> field is checked on a random weight item, the weight or quantity will not be calculated.<br>
+        To set up an open price item, the <strong>Force Price</strong> field needs to be checked, but the <strong><a href="Price_Table.htm#Price">Price</a></strong> field should be left empty in the <a href="Price_Table.htm"><strong>Price</strong> table</a>. Otherwise, the item will be calculated as gas and will show the amount calculation at the POS.</p>
+         <strong><b></b></strong>
+
+        <h4><strong><b>Example</b></strong></h4>
+
+        <p>The following message is displayed on the POS screen when the cashier sells an item for which the <b>Force price</b> field is checked:</p>
+         <b><strong></strong></b>
+
+        <p><b><strong><img class="img img-fluid img-thumbnail" height="99" src="POS_Table_files/force_price_POS.png" width="219"></strong></b></p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b></b></p>
+
+        <h2><b><a name="The_Force_quantity_field">The Force quantity field</a></b></h2>
+
+        <p>The <b>Force quantity</b> field specifies whether the item quantity must be entered before the item can be sold at the POS (checked) or not (unchecked).</p>
+
+        <p>The <b>Force quantity</b> field is often used for items such as canned drinks that do not have a separate code for the individual can and the package (for example, a 6-pack). This way, the individual item can be sold at the regular price, and the package at the package price. Since the <b>Force quantity</b> field forces the cashiers to enter a quantity, the package cannot be sold at the individual item price.</p>
+
+        <p class="Note"><b>NOTE:</b> The following message is displayed on the POS screen when the cashier does not enter the item quantity for an item for which the <b>Force quantity</b> flag is checked:</p>
+
+        <p><img class="img img-fluid img-thumbnail" height="63" src="POS_Table_files/force_quantity_POS.png" width="218"></p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Stop_quantity_field">The Stop quantity field</a></h2>
+
+        <ul>
+          <li>The <b>Stop quantity</b> field specifies whether an item quantity can be entered for the item when it is sold at the POS (unchecked) or not (checked).</li>
+
+          <li>The <b>Stop quantity</b> field prevents cashiers from entering a quantity before scanning or entering the item code. It can be used, for example, to prevent cashiers from selling items that have the same format and price together as one code, even though they have different flavors, potentially throwing out inventory figures.</li>
+        </ul>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a> <b></b></p>
+
+        <h2><b><a name="The_Visual_verify_field">The Visual verify field</a></b></h2>
+
+        <ul>
+          <li>The <b>Visual verify</b> field specifies whether the item price must be verified at the POS before the item can be sold (checked), or not (unchecked).</li>
+
+          <li>The item price is displayed, prompting the cashier to accept or change it.</li>
+        </ul>
+         <b></b>
+
+        <h4><b>Example</b></h4>
+
+        <p>The following message is displayed on the POS screen when the cashier sells an item for which the <b>Visual verify</b> flag is checked:</p>
+
+        <p><img class="img img-fluid img-thumbnail" height="102" src="POS_Table_files/visual_verify_POS.png" width="219"></p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Price_override_field">The Price override field</a></h2>
+
+        <p>The <strong>Price override</strong> field specifies whether operators are allowed to temporarily override the price at the POS using the Price modify function (checked) or not (unchecked), regardless of operator's access level.</p>
+
+        <p class="Note"><b>NOTES:</b><br>
+        For this field to work, the item must not be programmed to <a href="#The_Follow_sub-department_field">follow the sub-department settings</a>. Also, cashiers are allowed to temporarily change the item retail price if an access to the <b>Price modify</b> function is given to them. See the reseller for more details.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Family_field">The Family field</a></h2>
+
+        <p>The <b>Family</b> field contains the coupon (vendor and store) family code specifying on which items the coupons apply. The family code is needed when the scanned coupons give items for free.</p>
+
+        <p>Each vendor (UCC5 and GS1 Databar) and store (UCC99, UCC98 and GS1 Databar) coupon contains a family code, which must match with the family code defined in the item specifications when the coupon gives an item for free. The system can be set up to match the family code for all vendor and store coupons. See the reseller for more details.</p>
+
+        <p class="Note"><b>NOTE:</b> The list of manufacturer family codes should be provided by the manufacturers.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Ticket_field_section">The Ticket field section</a></h2>
+
+        <p>The <b>Ticket</b> field contains the name of the coupon template to use instead of the default one, which is <i>trs_pos_frm_cpn_txt.htm</i> for the text coupon template and <i>trs_pos_frm_cpn_win.htm</i> for the graphic coupon template.</p>
+
+        <p>To use one of the default coupon templates, click the <strong>Ticket</strong> field and select an option from the menu.</p>
+
+        <p>To use a coupon template other than the default one, type the last part of the file name corresponding to the template to use in the <b>Ticket</b> field. The first part of the file name must be the same as the default template file name (<i>trs_pos_frm</i>):</p>
+
+        <table style="width: 1379px">
+          <tr>
+            <td style="text-align:right" style="width: 688px"><em>trs_pos_frm_cpn_test.htm:</em></td>
+
+            <td style="width: 689px"><img class="img img-fluid img-thumbnail" height="40" src="POS_Table_files/ticket_cpn_test.png" width="189"></td>
+          </tr>
+        </table>
+
+        <p>The <b>Ticket</b> field is also used for the car wash items (to specify the template used to print the car wash code):</p>
+
+        <table style="width: 1379px">
+          <tr>
+            <td style="text-align:right"><em>trs_pos_frm_carwash.htm:</em></td>
+
+            <td style="width: 689px"><img class="img img-fluid img-thumbnail" height="39" src="POS_Table_files/ticket_carwash.png" width="189"></td>
+          </tr>
+        </table>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Store_coupon_field">The Store coupon field</a></h2>
+
+        <p>The <b>Store coupon</b> field specifies whether the item is an electronic store coupon (checked) or not (unchecked).</p>
+
+        <p>Store coupons are used by retail businesses to promote sales. They can be coded and scanned, or manually entered. A store coupon is negative within a POS transaction.</p>
+
+        <p>By default, an electronic store coupon directly affects the amount of the items in the transactions like any item discount, so it affects the item sales. It also borrows the taxability of the items. The discount of an electronic store coupon is assumed by the store.</p>
+
+        <p class="Note"><b>NOTE:</b> For more information on the electronic store coupons, see the <b>Electronic coupons programming</b> topic.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Vendor_field">The Vendor field</a></h2>
+
+        <p>The <b>Vendor</b> field specifies whether the item is an electronic vendor coupon (checked) or not (unchecked).</p>
+
+        <p>Vendor coupons are distributed by manufacturers and vendors to promote sales. They can be coded and scanned, or manually entered. A vendor coupon is negative within a POS transaction.</p>
+
+        <p>By default, an electronic vendor coupon is added as a new entry (registration) in the transactions, so it does not affect the item sales, and the taxability of the items is not borrowed. The discount of an electronic vendor coupon is usually assumed by the manufacturer or the vendor.</p>
+
+        <p class="Note"><b>NOTE:</b> For more information on the electronic vendor coupons, see the <b>Electronic coupons programming</b> topic.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Multipliable_field">The Multipliable field</a></h2>
+
+        <p>The <b>Multipliable</b> field specifies whether coupon values may be multiplied at the POS for the item (checked) or not (unchecked).</p>
+
+        <p>On some vendor coupons, manufacturers do not allow double coupons, that is the store cannot multiply the value of these vendor coupons or give an add-on amount as an additional discount for the customer.</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Rain_check_field">The Rain check field</a></h2>
+
+        <p>The <strong>Rain check</strong> field specifies whether rain checks can be generated for the item (checked) or not (unchecked).</p>
+
+        <p>Occasionally, retail outlets run out-of-stock for a promotional item, but would like that the customers be able to purchase the item later (after restocking) at the promotional price, even if the promotion has ended. In this case, print coupons (or rain checks) may be issued for the item, allowing the customer to use them later to obtain the promotional price.</p>
+
+        <p class="Note"><strong>NOTE:</strong> For the rain checks, or the electronic coupons, to be printed, a form can be defined in the <a href="#The_Ticket_field_section"><b>Ticket</b> field</a> of the <b>POS</b> table; in this case, this form is used instead of the default one (see the <b>How to program rain checks</b> topic or <b>How to program printed electronic coupons</b> topic for more details).</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_Behavior_script_type_field">The Behavior script type field</a></h2>
+
+        <p>The <strong>Behavior script type</strong> field contains a keyword that gives a specific behavior for the item.</p>
+        <img class="img img-fluid img-thumbnail" src="POS_Table_files/behavior_script_type.png"> 
+
+        <p>Some keywords are available from the list, others have to be entered manually. Here is the list of the available keywords:</p>
+
+        <p></p>
+
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th style="width: 156px">KEYWORD</th>
+
+              <th>DESCRIPTION</th>
+            </tr>
+          </thead>
+
+          <tr>
+            <td style="width: 156px"><strong>Video rental</strong></td>
+
+            <td>
+              <p class="Table">The <strong>Video rental</strong> (RENT_VIDEO) keyword defines the item as a video to rent.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong>Tools rental</strong></td>
+
+            <td>
+              <p class="Table">The <strong>Tools rental</strong> (RENT_TOOLS) keyword defines the item as an equipment to rent.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong>Blackhawk card item</strong></td>
+
+            <td>
+              <p class="Table">The <strong>Blackhawk card item</strong> (BLACKHAWK) keyword defines the item as a Blackhawk card.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong>Carwash</strong></td>
+
+            <td>
+              <p class="Table">The <strong>Carwash</strong> (CARWASH) keyword defines the item as a car wash item.</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="width: 156px"><strong>Serial number</strong></td>
+
+            <td>The <strong>Serial number</strong> (SERIALNUMBER) keyword specifies that the item requires a serial number.<br>
+            When the item is sold, the POS asks for the serial number. See the <strong>Serial number</strong> topic for details.</td>
+          </tr>
+        </table>
+        <br>
+        <br>
+         
+
+        <p class="Note"><strong>NOTE:</strong> The renting behavior (RENT_VIDEO or RENT_TOOLS) may also be specified in the <i>System.ini</i> file. In this case, it defines the default renting behavior for all rent able items. So you do not need to specify a renting behavior for every item, except for the items that do not follow the default renting behavior. If no behavior is defined, neither in the <i>System.ini</i> file nor in the <b>Type</b> field of the rentable items, the default behavior used is <b>Video</b> (<i>RENT_VIDEO</i>).</p>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+        <h2><a name="The_URL_field">The URL field</a></h2>
+
+        <ul>
+          <li>The <strong>URL</strong> field contains special parameters (also called 'alpha parameters') used when the item is sold.</li>
+
+          <li>The <b>URL</b> field can contain more than one parameter, separated by spaces.</li>
+        </ul>
+
+        <p>Examples of alpha parameters for the URL field:</p>
+
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>KEYWORD</th>
+
+              <th>DESCRIPTION</th>
+            </tr>
+
+            <tr>
+              <td>WIT=REG<br>
+              WIT=NEWREG<br>
+              WIT=NEWCPN</td>
+
+              <td>
+                These alpha parameters are used on electronic coupons to change their default behavior. 
+
+                <p>It is useful to change the behavior of specific electronic coupons instead of all of them. See the reseller to get the details of possible behaviors.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>POINTx=</td>
+
+              <td>
+                This alpha parameter is used to give (or do not give) points on specific items for the points program x. 
+
+                <p>Possible values are:</p>
+
+                <ul>
+                  <li><em>yyy</em>: defines a rate to calculate the points based on the price of the item (e.g. POINT1=100 will give 1 point per $1.00)</li>
+
+                  <li><em>Y</em>: tells the system to use the rate defined in the shopper level the customer is linked to (e.g. POINT1=Y)</li>
+
+                  <li><em>N</em>: tells the system to do not give points on this item (e.g. POINT1=N)</li>
+
+                  <li><em>Fyy</em>: defines a fixed number of points to give on this item (e.g. POINT1=F10)</li>
+                </ul>
+
+                <p>This alpha parameter can be used to multiply points on specific item (meaning additional points are given on this item).</p>
+              </td>
+            </tr>
+          </thead>
+        </table>
+
+        <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      </div>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

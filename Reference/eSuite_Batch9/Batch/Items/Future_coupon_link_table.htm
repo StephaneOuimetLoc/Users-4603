@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Future Coupon Link Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Future Coupon Link Table<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Batches <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Future coupon link</b> table is used to enter the future criteria of the electronic coupons. It contains the future coupon link information.</p>
+
+      <h2>Displaying the Future coupon link table</h2>
+
+      <p>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Batches</strong>: the <strong>Start</strong> window opens in the <strong>Batch</strong> work area.</li>
+
+        <li>Click on <strong>Price grid</strong>: the <strong>Wizard</strong> opens in a new tab.</li>
+
+        <li>Select a batch in the <strong>Batch</strong> field and enter all other necessary criteria. Press <strong>Execute</strong>: results will display in a record grid, in the <strong>Items</strong> tab of the same window.</li>
+
+        <li>Select a record and click right or press <strong>Edit</strong> on the bottom of the item grid.</li>
+
+        <li>Select <strong>Price batch</strong> in the menu, then <strong>Future coupon link</strong>: the <strong>Future coupon link edit table</strong> opens overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <p>The <strong>Future coupon link</strong> table is divided in two parts: the <strong>main section</strong> and the <strong>Future coupon link table grid</strong>.</p>
+
+      <p><strong>Main section</strong></p>
+
+      <p><strong>Future coupon link table grid</strong></p>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Future coupon link</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Type">Type</a></strong></td>
+
+          <td>The <strong>Type</strong> field contains the abbreviation of the type of the future criterion which needs to be respected in order to get the future electronic coupon.<br>
+          See the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm#Type"><strong>Type</strong> field</a> of the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic</strong> coupon link table</a> for a complete description of each available type.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Code">Code</a></strong></td>
+
+          <td>The <strong>Code</strong> field contains the code associated to the selected <a href="mk:@MSITStore:C:/storeman/SMSUsers.chm::/SMSPro/Maintenance/Batch_maintenance/Batch_tables/Future_coupon_link_table/Fields/Type_field.htm">type</a> for the future criterion of the future electronic coupon.<br>
+          A different code is associated to each <a href="#Type">type</a>. See the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm#Code"><strong>Code</strong> field</a> of the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic</strong> coupon link table</a> for a complete description of each association.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px">
+          </td>
+
+          <td>
+            The <strong>Cumulative (Cum.)</strong> field contains&nbsp;the cumulative identifier, used to specify that the minimum quantity, amount or weight required to get the future electronic coupon comes from a transaction or a cumulative of many transactions.&nbsp;<br>
+            Its default value is T (for transaction). See the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm#Cumulative"><strong>Cumulative</strong> field</a> of the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic</strong> coupon link table</a> for the list of all cumulative identifiers.<br>
+             
+
+            <div class="alert alert-warning">
+              <strong>NOTE:</strong> Be careful when you set the cumulative field to Daily, Weekly, Monthly and Grand total:&nbsp;since the POS needs to send a request to the backoffice database to get the movement for the specified items, this can slow down the tendering process. The system automatically cumulates the number of items purchased by each customer, when the cumulative identifier is different than Transaction (T). This means that the <a href="../Future_POS_table/Future_POS_table.htm#Capture_data"><strong>Capture data</strong> field</a> in the <a href="../Future_POS_table/Future_POS_table.htm"><strong>Future POS</strong> table</a> for these items does not need to checked.
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Totalizer">Totalizer</a></strong></td>
+
+          <td>The <strong>Totalizer (Tlz)</strong> field contains&nbsp;the totalizer number used to target the future electronic coupon's criteria.&nbsp;Its default value is 3 (Net sales).<br>
+          Specific totalizers may be used according to the <a href="#Type">type</a> selected.<br>
+          See the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm#Totalizer"><strong>Totalizer</strong> field</a> of the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic</strong> coupon link table</a> for a complete description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Quantity">Quantity</a></strong></td>
+
+          <td>The <strong>Quantity</strong> field contains the minimum quantity required to reach the future criterion and get the future electronic coupon.<br>
+          Depending on the <a href="#Type">type</a> used, the <strong>Quantity</strong> field has different meanings. See the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm#Quantity"><strong>Quantity</strong> field</a> of the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic</strong> coupon link table</a> for a complete description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Amount">Amount</a></strong></td>
+
+          <td>The <strong>Amount</strong> field contains the minimum amount required to reach the future criterion and get the future electronic coupon.<br>
+          Depending on the <a href="#Type">type</a> used, the <strong>Amount</strong> field has different meanings. See the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm#Amount"><strong>Amount</strong> field</a> of the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic</strong> coupon link table</a> for a complete description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Weight">Weight</a></strong></td>
+
+          <td>The <strong>Weight</strong> field contains the minimum weight required to reach the future criterion and get the future electronic coupon.<br>
+          Depending on the <a href="#Type">type</a> used, the <strong>Weight</strong> field has different meanings. See the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm#Weight"><strong>Weight</strong> field</a> of the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm"><strong>Electronic</strong> coupon link table</a> for a complete description.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Batch_number">Batch number</a></strong></td>
+
+          <td>The <strong>Batch number</strong> field contains the batch identifier.<br>
+          Not editable.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier, i.e. the store group.&nbsp;Its default value is <em>PAL</em>.<br>
+          When a future coupon link record is added, the <a href="../../Item_maintenance/Special%20items/Electronic_coupon_link_table/Electronic_coupon_link_table.htm#Target">target</a> value of the current coupon link record is automatically displayed in the <strong>Target</strong> field.<br>
+          Not editable unless the <strong>Multi target</strong> option in the <em>System.ini file</em> is selected.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Descriptor">Descriptor</a></strong></td>
+
+          <td>The <strong>Descriptor</strong> field contains the future description of the electronic coupon.<br>
+           By default, when an ITM type is added, the description of the selected item is automatically copied in the <strong>Description</strong> field. Description or Descriptor?</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <p>&nbsp;</p>
+
+      <p>&nbsp;</p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

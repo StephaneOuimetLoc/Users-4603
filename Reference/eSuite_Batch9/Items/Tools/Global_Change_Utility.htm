@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Global Change Utility</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Global Change Utility <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Context Tools &gt;&nbsp; Global Change<!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a name="Top0"></a>Information</h2>
+
+      <p><strong>Global change</strong> is used for applying changes made to a single record to all the records selected in a list of items or batches (the global change function for batches is currently under development).</p>
+
+      <p>The following fields may not be changed with the <strong>Global change</strong> utility:</p>
+
+      <ul>
+        <li>UPC code</li>
+
+        <li>Vendor ID</li>
+
+        <li>Price level</li>
+
+        <li>Batch ID</li>
+
+        <li>Target</li>
+
+        <li>Record status</li>
+
+        <li>Active price</li>
+
+        <li>Active price quantity</li>
+
+        <li>Active price changed date</li>
+
+        <li>Autorun descriptor</li>
+
+        <li>Buying format</li>
+      </ul>
+
+      <p>The <strong>Global Change</strong> utility is available in the <strong>Context Tools</strong> window when <strong>Master</strong> and <strong>Batches</strong> are selected under <strong>Items</strong> in the Launcher:</p>
+
+      <p><img height="646" src="Global_Change_Utility_files/context_tools.png" width="292"></p>
+
+      <p>The entry becomes expandable once records have been changed. It lists the names of the item tables impacted by the changes and gives access to the <strong>Apply global change</strong> window:</p>
+
+      <p><img height="607" src="Global_Change_Utility_files/GC_expanded.png" width="288"></p>
+
+      <h2>Displaying the Apply global change window</h2>
+
+      <p>Click <strong>Apply global change</strong> <img height="21" src="Global_Change_Utility_files/apply_GC_icon.png" width="23"> on the right of any of the item-related tables: the <strong>Apply global change (Main item/POS/Price/Cost)</strong> window opens on the desktop.</p>
+
+      <p class="Note"><strong>NOTE:</strong> To globally change the value of a field in the <strong>Cost</strong> table, all items displayed in the item list must have the same vendor.</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th><strong>Apply global change (Main item)</strong></th>
+
+            <th><strong>Apply global change (POS)</strong></th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><img height="367" src="Global_Change_Utility_files/apply_GC_OBJ.png" width="491"></td>
+
+          <td><img height="366" src="Global_Change_Utility_files/apply_GC_POS.png" width="491"></td>
+        </tr>
+
+        <tr>
+          <td>&nbsp;</td>
+
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <td><strong>Apply global change (Price)</strong></td>
+
+            <td><strong>Apply global change (Cost)</strong></td>
+          </tr>
+        </thead>
+
+        <tr>
+          <td><img height="366" src="Global_Change_Utility_files/apply_GC_price.png" width="491"></td>
+
+          <td><img height="368" src="Global_Change_Utility_files/apply_GC_cost.png" width="491"></td>
+        </tr>
+      </table>
+
+      <h2><a name="Layout">Layout</a></h2>
+      The <strong>Apply global change</strong> window is divided into several parts visible depending on the type of change applied on the item: 
+
+      <ul>
+        <li>The <strong><a href="#Main_section">main section</a></strong>, common to all <strong>Apply global change</strong> type of windows <strong>(Main item</strong>, <strong>POS</strong>, <strong>Price</strong> and <strong>Cost)</strong></li>
+
+        <li>The <strong><a href="#Target_section">Target section</a></strong>, common to <strong>Apply global change (POS</strong>, <strong>Price</strong> and <strong>Cost)</strong></li>
+
+        <li>The <strong><a href="#Price_level_section">Price level section</a></strong>, available in <strong>Apply global change (Price)</strong></li>
+
+        <li>The <a href="#Button_section"><strong>button section</strong></a>, common to all <strong>Apply global change</strong> type of windows <strong>(Main item</strong>, <strong>POS</strong>, <strong>Price</strong> and <strong>Cost)</strong></li>
+      </ul>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" src="Global_Change_Utility_files/apply_GC_price_fields.png" usemap="#apply_global_change_window"> <map name="apply_global_change_window">
+            <area shape="rect" coords="56, 34, 324, 56" href="#Selection">
+            <area shape="rect" coords="327, 30, 442, 54" href="#Show_changes_only">
+            <area shape="rect" coords="327, 53, 441, 74" href="#Create_as_needed">
+            <area shape="rect" coords="0, 75, 25, 212" href="#Checkbox_field">
+            <area shape="rect" coords="25, 75, 120, 212" href="#Field">
+            <area shape="rect" coords="120, 75, 252, 212" href="#Before">
+            <area shape="rect" coords="252, 75, 382, 212" href="#After">
+            <area shape="rect" coords="382, 75, 439, 213" href="#Changed">
+            <area shape="rect" coords="479, 67, 640, 88" href="#Filter_target">
+            <area shape="rect" coords="446, 91, 472, 206" href="#Checkbox_target">
+            <area shape="rect" coords="472, 90, 520, 206" href="#Target">
+            <area shape="rect" coords="521, 89, 642, 205" href="#Description_target">
+            <area shape="rect" coords="474, 275, 639, 298" href="#Filter_price_level">
+            <area shape="rect" coords="443, 298, 469, 387" href="#Checkbox_price_level">
+            <area shape="rect" coords="469, 298, 509, 389" href="#Level">
+            <area shape="rect" coords="509, 298, 640, 390" href="#Description_price_level">
+            <area shape="rect" coords="392, 451, 514, 479" href="#Apply_[x_records]">
+            <area shape="rect" coords="520, 451, 641, 480" href="#Cancel">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it</td>
+
+          <td>
+          </td>
+        </tr>
+      </table>
+
+      <p>Here is the description of the <strong>Apply global change</strong> window fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px">FIELD</th>
+
+            <th>DESCRIPTION&nbsp;</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong><span style="text-decoration:underline"><a name="Main_section">Main section</a></span></strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Selection">Selection</a></strong></td>
+
+          <td>The <strong>Selection</strong> field contains the list where the changes are applied.<br>
+           The default value is <em>Items - General list</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Show_changes_only">Show changes only</a></strong></td>
+
+          <td><strong>Show changes only</strong> allows displaying the fields and values that have been changed in the record (checked) or all fields available for change (unchecked).<br>
+           For details, see the <a href="#The_Show_changes_only_field"><strong>Show changes only</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Create_as_needed">Create as needed</a></strong></td>
+
+          <td>The <strong>Create as needed</strong> is used to apply the values that have been changed in the record and create a new record if it does not exist for an item.<br>
+           For details, see the <a href="#Create_as_needed"><strong>Create as needed</strong> field section</a> below.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Checkbox_field">Checkbox</a>es</strong>&nbsp;</td>
+
+          <td>The <strong>checkboxes</strong> in the main section allow selecting the fields to which global change will apply.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Field">Field</a></strong></td>
+
+          <td>The <strong>Field</strong> column contains the name of the fields affected by global change.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Before">Before</a></strong></td>
+
+          <td>The <strong>Before</strong> column contains the old value of the respective field.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="After">After</a></strong></td>
+
+          <td>The <strong>After</strong> column contains the new value of the respective field. &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Changed">Changed</a></strong></td>
+
+          <td>The <strong>Changed</strong> column displays the fields that are subject to global change.<br>
+           Checked and grayed out by default. &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong><span style="text-decoration:underline"><a name="Target_section">Target section</a></span></strong>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Filter_target">Filter</a></strong></td>
+
+          <td>The <strong>Filter</strong> field allows entering target IDs and refreshing the target list.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Checkbox_target">Checkbox</a>es</strong>&nbsp;</td>
+
+          <td>The <strong>checkboxes</strong> in the target section allow selecting the targets to which global change will apply.&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> column contains the target IDs.<br>
+           The <em>PAL</em>&nbsp;target is checked by default.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Description_target">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> column contains the target description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong><a name="Price_level_section">Price level</a> <em>(see the note below)</em></strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Filter_price_level">Filter</a></strong></td>
+
+          <td>The <strong>Filter</strong> field allows entering price levels and refreshing the price level list.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Checkbox_price_level">Checkbox</a>es</strong>&nbsp;</td>
+
+          <td>The <strong>checkboxes</strong> in the price level section allow selecting the price levels to which global change will apply.<br>
+           Price level <em>1</em> is checked by default.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Level">Level</a></strong></td>
+
+          <td>The <strong>Level</strong> column contains the price level identifier. &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Description_price_level">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> column contains the description of the price level. &nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td class="ListDark" colspan="2"><strong><span style="text-decoration:underline"><a name="Button_section">Button section</a></span></strong></td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Apply_[x_records]">Apply [x records]</a></strong></td>
+
+          <td>The <strong>Apply</strong>&nbsp;<strong>[x records]</strong> allows applying the global change to the selected records.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Cancel">Cancel</a></strong></td>
+
+          <td>The <strong>Cancel</strong> button allows canceling the global change for the selected records.<br>
+           It closes the <strong>Apply global change</strong> window.&nbsp;</td>
+        </tr>
+      </table>
+
+      <p class="Note"><strong><a name="Note"></a>NOTE:</strong><br>
+      Starting v350x, Application.ini[TARGET_TRS] is used to determine which target to use for each item table.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB='PAL' will force the Host to use the PAL record.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB='@WIZGET(TARGET)' will force the Host to use the Global Store Number record.<br>
+      Application.ini[TARGET_TRS]PRICE_TAB=ISNULL((SELECT TOP 1 SUB_PRI.F1000 FROM PRICE_TAB SUB_PRI JOIN LNK_TAB SUB_LNK ON SUB_PRI.F1000=SUB_LNK.F1000 JOIN LNK_TAB SUB_LNK2 ON SUB_LNK.F1056=SUB_LNK2.F1056 AND SUB_LNK.F1057=SUB_LNK2.F1057 AND SUB_LNK2.F1000='@WIZGET(TARGET)' JOIN STO_TAB SUB_STO ON SUB_LNK.F1000=SUB_STO.F1000 WHERE SUB_PRI.F01=PRI.F01 AND SUB_PRI.F126=PRI.F126 ORDER BY SUB_STO.F1937 DESC),'PAL'). That will use the proper target set for the Global StoreID selected.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Show_changes_only_field">The Show changes only field</a></h3>
+
+      <p><strong>Show changes only</strong> allows displaying the fields and values that have been changed in the record (checked).</p>
+
+      <p>When unchecked, it displays all fields in the respective item table that are available for global change. It allows the selection of any of these fields for the purpose of global change.</p>
+
+      <p><strong>Example</strong></p>
+
+      <p>Item <em>0000000002022</em> has changed the category. By default, the <strong>Apply global change (Main item)</strong> window will display the changes only.</p>
+
+      <p>When the <strong>Show changes only</strong> field is unchecked, all fields in the <strong>Main item</strong> table that are available for global change become visible and may be selected:</p>
+
+      <p><img height="363" src="Global_Change_Utility_files/uncheck_show_only.png" width="491"></p>
+
+      <p>&nbsp;&nbsp;That means that the values in the respective fields will globally apply to the records (3) that have been selected in the item list.</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h3><a name="The_Create_as_needed_field">The Create as needed field</a></h3>
+
+      <p>The <strong>Create as needed</strong> is used to apply the values that have been changed in the record and create a new record if it does not exist for an item.</p>
+
+      <p><strong>Example</strong></p>
+
+      <p>Item <em>0000000000021</em> has a single price level record, the <strong>Regular (1)</strong> one. This price level will change from <em>$1.75</em> to <em>$1.99</em>.</p>
+
+      <p>The new value will also apply to the <strong>Super saver (5)</strong> price level that will be created for the item by checking the <strong>Create as needed</strong> field in the <strong>Apply global change (Price)</strong> window.</p>
+
+      <p>All these changes will globally apply to several other items as well. All these items will have two price level records, i.e. the regular (1) and the super saver (5) set to <em>$1.99</em>.</p>
+
+      <p><img height="368" src="Global_Change_Utility_files/create_as_needed.png" width="491">&nbsp;</p>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+
+      <h2>Example</h2>
+
+      <h4>Applying global change&nbsp;after record modified in the POS table</h4>
+
+      <p>In the following example, all Gatorade energy drinks are recalled.<br>
+      The <strong>Not for sale</strong> case will be checked in the <strong>POS</strong> table and global change will be applied to all Gatorade energy drinks selected in the item grid.<br>
+      </p>
+
+      <ol>
+        <li>In the Launcher, click the arrow in the <strong>Items</strong> entry to display its menu.</li>
+
+        <li>Click on <strong>Master</strong>: the <strong>Start</strong> window opens in the <strong>Items</strong> work area.</li>
+
+        <li>Click on <strong>Item list</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Items - General list</strong>.</li>
+
+        <li>Enter the search criteria for the Gatorade items that are recalled and click <strong>Execute</strong>: results display in <strong>Items - General list</strong>.</li>
+
+        <li>Select one of the Gatorade items.</li>
+
+        <li>Click <strong>Edit</strong> in the bottom menu, then select <strong>Master tables</strong> and <strong>POS master.</strong><br>
+        </li>
+
+        <li>In the POS table, check the <strong>Not for sale</strong> box:<br>
+         <img src="Global_Change_Utility_files/Gatorade_not_for_sale.png"></li>
+
+        <li>Save the changes and close the <strong>POS</strong> table.</li>
+
+        <li>In <strong>Items - General list</strong>, select all the Gatorade items the global change will apply to:<br>
+        </li>
+
+        <li>In <strong>Context tools</strong>, click <strong>+</strong> next to <strong>Global change</strong> to expand the panel:<br>
+         <img height="612" src="Global_Change_Utility_files/Gatorade_GC_panel.png" width="265"></li>
+
+        <li>Click <img height="21" src="Global_Change_Utility_files/apply_GC_icon.png" width="23"> next to <strong>POS</strong>: the <strong>Apply global change (Main item)</strong> window opens, displaying the <em>before</em> and <em>after</em> values of the modified field(s).<br>
+         The <strong>Apply [x records]</strong> button indicates the number of records to which the global change will apply.<br>
+         <img height="373" src="Global_Change_Utility_files/Gatorade_apply_global_change.png" width="505"></li>
+
+        <li>Click <strong>Apply [12 records]</strong>.<br>
+         The following confirmation message is displayed:<br>
+        </li>
+
+        <li>Click <strong>OK</strong>.<br>
+         The <strong>Apply global change (POS)</strong> window remains available and displays the "before" and "after" values until further changes are made and saved in the item grid or master tables. In this case, the <strong>Apply [records]</strong> button is disabled and indicates "0 records":<br>
+         <img height="379" src="Global_Change_Utility_files/Gatorade_apply_disabled.png" width="498"><br>
+         This allows selecting further items and applying the same changes.</li>
+      </ol>
+
+      <p style="text-align:right"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

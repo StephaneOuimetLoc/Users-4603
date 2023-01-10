@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Targeted Offers Overview</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+            <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite Care - Targeted Offers Overview <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite Care &gt; Offers &gt; Offer Items <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Targeted offers are store and vendor coupons given by the system once the coupon criteria are reached.</p>
+
+      <p>When a loyalty card is entered at the POS, the targeted offers available for the customer are loaded into memory. With each item that is scanned, the system validates the applicable offers and adds them to the transaction. At the end of the sale, it updates the server with the targeted offers that have been used.</p>
+
+      <p>Offers in eSuite may be assigned to specific customers. They may also be available to anyone that clips them from the store website.</p>
+
+      <p>The following types of offers are available to specific customers:</p>
+
+      <ol>
+        <li><strong>Targeted coupons</strong>, programmed through the <a href="../../../Common/Item_maintenance/Coupon_items/Coupons/Coupons.htm">coupon wizard utility</a> and assigned to a <a href="../Assign_targeted_coupons/Assign_targeted_coupons.htm#single_customer">single customer</a> or to <a href="../Assign_targeted_coupons/Assign_targeted_coupons.htm#multiple_customers">multiple customers</a> using the <a href="#Link_offer"><strong>Link offer</strong> table</a>.</li>
+
+        <li><strong>GS1 Databar coupons</strong>, generated through the <strong>Create GS1 coupon</strong> table following the GS1 Databar coupon barcode rules.<br>
+         Currently under development in eSuite.</li>
+      </ol>
+      The offers available to everyone can only be <strong>targeted coupons</strong> working with the eStore and mStore options. As soon as a targeted coupon is created, it becomes available on the store website. Customers have to go online and clip the offers they would like to have attached to their account. 
+
+      <p>Targeted offers require the Bank_SMSPayment module.</p>
+
+      <h2>Displaying the <a name="Link_offer">Link offer</a> table</h2>
+
+      <ol>
+        <li>In the Launcher, click on <strong>Offers</strong>: the <strong>Offers</strong> start window opens in the <strong>Offer</strong> tab.</li>
+
+        <li>Click on <strong>Targeted offers</strong>: the <strong>Wizard</strong> tab opens in the same window, displaying the <strong>Targeted offers</strong> wizard.</li>
+
+        <li>Enter the search criteria and click on <strong>Execute</strong>: results will display in a record grid, in the<span>&nbsp;<strong>Offers</strong>&nbsp;</span> tab of the same window.</li>
+
+        <li>Select a record and click <strong>Action</strong>, then <strong>Assign offer</strong> in the bottom menu: the&nbsp;<strong>Link offer</strong> table&nbsp;opens, overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Targeted_Offers%20_Overview_files/link_offer_table.png" usemap="#link_offer_table"> <map name="link_offer_table">
+            <area shape="rect" coords="21, 87, 262, 107" href="#Offer_code">
+            <area shape="rect" coords="267, 88, 305, 108" href="#Type">
+            <area shape="rect" coords="20, 123, 305, 143" href="#Description">
+            <area shape="rect" coords="21, 157, 142, 177" href="#Customer_code">
+            <area shape="rect" coords="249, 157, 296, 177" href="#Reload">
+            <area shape="rect" coords="21, 206, 101, 226" href="#Offer_quantity">
+            <area shape="rect" coords="108, 205, 185, 226" href="#Clip_needed">
+            <area shape="rect" coords="21, 242, 306, 311" href="#Long_description">
+            <area shape="rect" coords="3, 370, 104, 398" href="#Create_GS1_coupon">
+            <area shape="rect" coords="215, 372, 275, 396" href="#Global">
+            <area shape="rect" coords="279, 372, 335, 396" href="#Save">
+          </map> </td>
+        </tr>
+
+        <tr>
+          <td class="Img">* Click on a field to get information on it.&nbsp;</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is the description of the <strong>Link offer</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>FIELD</th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Offer_code">Offer code</a></strong></td>
+
+          <td>The <strong>Offer code</strong> field contains the UPC of the targeted coupon selected in the list of offers.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Type">Type</a></strong></td>
+
+          <td>The <strong>Type</strong> field contains the type of offer.<br>
+           The default value is <em>ITM</em> for 'item'.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Description">Description</a></strong></td>
+
+          <td>The <strong>Description</strong> field contains the description of the offer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Customer_code">Customer code</a></strong></td>
+
+          <td>The <strong>Customer code</strong> field contains the code of the customer to whom the offer should apply.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Reload">Reload</a></strong></td>
+
+          <td>Description to come</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Offer_quantity">Offer quantity</a></strong></td>
+
+          <td>The <strong>Offer quantity</strong> field contains the number of times the customer can get the offer.<br>
+          The default value is <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Clip_needed">Clip needed</a></strong></td>
+
+          <td>The <strong>Clip needed</strong> field indicates if the offer should be clipped (checked) or not (unchecked) for the customer to get the offer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Long_description">Long description</a></strong></td>
+
+          <td>The <strong>Long description</strong> field contains the long description of the offer.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Create_GS1_coupon">Create GS1 coupon</a></strong></td>
+
+          <td>The <strong>Create GS1 coupon</strong> button opens the table for the creation of a GS1 coupon.<br>
+          Currently under development in eSuite.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Global">Global</a></strong></td>
+
+          <td>The <strong>Global</strong> button is used to create an offer that is assigned to <a href="../Assign_targeted_coupons/Assign_targeted_coupons.htm#multiple_customers">multiple customers</a>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Save">Save</a></strong></td>
+
+          <td>The <strong>Save</strong> button finalizes the creation of the offer assigned to <a href="../Assign_targeted_coupons/Assign_targeted_coupons.htm#single_customer">one specific customer</a>.</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

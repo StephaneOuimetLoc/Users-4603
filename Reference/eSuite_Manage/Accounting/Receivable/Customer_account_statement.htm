@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SMS Help Document" />
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>Customer Account Statement</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿ <!-- #BeginTemplate "../../../../html_template.dwt" --> <!-- Title/Keywords edit on new documents --> <!-- #BeginEditable "doctitle" --> <!-- #EndEditable --> <a id="top" name="top"></a> <!-- Docs page layout --> <br />
+     
+
+    <h1><!-- #BeginEditable "Title" -->Customer Account Statement <!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Customers <!-- #EndEditable --></p>
+    <!-- #BeginEditable "toc" --><!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2><a id="Top0" name="Top0"></a>Information</h2>
+
+      <p class="auto-style1">Needs reviewing and updating once all features are available in eSuite.<br />
+       Please make sure that the SMS Pro images, which I've kept for reference only, will be replaced with their eSuite equivalent. (Raluca, 2019-09-13)</p>
+      This document explains how the <b>Customer account statement</b> works. 
+
+      <p>Make sure that the information in the account statement report is displayed. This is done by the <em>Calculate cumulatives</em> command in the Scheduler, which must be executed on a daily basis.</p>
+
+      <h2>Example:</h2>
+
+      <ol>
+        <li>The customer has a starting balance of $0.00.</li>
+
+        <li>The account is charged $50.00 in a transaction.</li>
+      </ol>
+
+      <p>The following report shows what will be displayed <em>without</em> the <em>Calculate cumulatives</em> command being executed.</p>
+
+      <p><img width="569" height="171" class="Text" src="Customer_account_statement_files/empty.jpg" />&nbsp;</p>
+
+      <p>The following report shows what will be displayed <em>after</em> the <em>Calculate cumulatives</em> command was executed.</p>
+
+      <p><img width="569" height="175" class="Text" src="Customer_account_statement_files/charge.jpg" /></p>
+
+      <p>Let us go a step further and make a payment, then apply another charge on the account <em>without</em> executing the <em>Calculate cumulatives</em> job. This is what the report will reflect:</p>
+
+      <p><img width="569" height="194" class="Text" src="Customer_account_statement_files/withpay.jpg" />&nbsp;</p>
+
+      <p>As shown above, the <strong>End of month</strong> balance is displayed, but has not changed.&nbsp;The payment and the new charge had no effect upon the balance.</p>
+
+      <p>Below is the report <em>after</em> the <em>Calculate cumulatives</em> command was executed.</p>
+
+      <p><img width="588" height="200" class="Text" src="Customer_account_statement_files/aftercal.jpg" /></p>
+
+      <p>For the account balances, there is no <strong>Previous month</strong> balance. Let us change the system date to the following month (in this case, from January to February) <em>without</em> executing the <em>Calculate cumulatives</em> command.</p>
+
+      <p><img width="569" height="171" class="Text" src="Customer_account_statement_files/empty.jpg" /></p>
+
+      <p>The image below shownsthee <strong>Previous month balance</strong> <em>after</em> having executed thee <em>Calculate cumulatives</em> command. The <strong>Previous month balance</strong> and <strong>End of month balance</strong> are both displayed:</p>
+
+      <p><img width="569" height="172" class="Text" src="Customer_account_statement_files/monthaft.jpg" /></p>
+
+      <p style="text-align: right;"><a href="#Top">Back to top</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container --><a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Automatic Coupons Examples</title>
+    <link href="../../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Automatic Coupons Examples <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Coupons list <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>Automatic coupons are store and vendor coupons given by the system when the specified criteria are met. They may be programmed with the help of the coupon wizard.</p>
+
+      <p>Here are some examples of how to create automatic coupons.</p>
+
+      <h2><a name="List_of_examples">Examples</a></h2>
+
+      <ol>
+        <li><a href="#Ex_1">Buy for a total of $10.00, get a 50% discount on a bag of Uncle Bens instant rice</a></li>
+
+        <li><a href="#Ex_2">Buy 2 cans of corn cream, get the third one free</a></li>
+
+        <li><a href="#Ex_3">Buy a bottle of Pepsi and a bag of Ruffles chips for $3.00</a></li>
+
+        <li><a href="#Ex_4">Buy $10.00 worth of groceries, get $5.00 off if the customer has accumulated at least 5000 points in the main point program</a>&nbsp;</li>
+      </ol>
+
+      <h2><a name="Ex_1">Buy</a> for a total of $10.00</h2>
+
+      <p>Get a 50% discount on a bag of Uncle Bens instant rice</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Percent</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Percent</strong> field: enter <em>50</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Automatic</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="157" src="Automatic_coupons_examples_files/1_UncleBens_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>&nbsp;to add the first coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the <em>Uncle Ben's item UPC.</em>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: Select <em>Exclude from accumulation</em>.<br>
+          This method excludes the bag of rice from the required $10.00.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+           This method forces the system to apply the automatic coupon discount on the bag of rice.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>The item(s) in this condition can only participate in one offer</strong>.<br>
+           This method limits the participation of this item towards other coupons.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="441" src="Automatic_coupons_examples_files/1_UncleBens_add_criteria_rice.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>&nbsp;to add the second coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Total sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Totalizer</strong> field: leave the default value to <em>3.</em>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Dollar</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>10</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>The item(s) in this condition can only participate in one offer</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="443" src="Automatic_coupons_examples_files/1_UncleBens_add_criteria_total_sales.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em> or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="325" src="Automatic_coupons_examples_files/1_UncleBens_details_tab.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">6.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="159" src="Automatic_coupons_examples_files/1_UncleBens_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="325" src="Automatic_coupons_examples_files/1_UncleBens_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="322" src="Automatic_coupons_examples_files/1_UncleBens_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>The customer gets 50% off the bag of Uncles Bens instant rice when they buy 1 bag of rice and an additional total of $10.00 in the transaction.</li>
+      </ul>
+
+      <p>&nbsp;</p>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_2">Buy</a> 2 cans of corn cream</h2>
+
+      <p>Get the third one free</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Buy X get Y free</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Buy X</strong> field: enter <em>3</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Get Y</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Automatic</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="157" src="Automatic_coupons_examples_files/2_corn_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>&nbsp;to add the coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the <em>cream corn can UPC.</em>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>3</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+           This method forces the system to apply the automatic coupon discount on the cans of cream corn.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>The item(s) in this condition can only participate in one offer</strong>.<br>
+           This method limits the participation of this item towards other coupons.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="443" src="Automatic_coupons_examples_files/2_corn_add_criteria.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em> or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="325" src="Automatic_coupons_examples_files/2_corn_details_tab.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img height="160" src="Automatic_coupons_examples_files/2_corn_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="325" src="Automatic_coupons_examples_files/2_corn_text_view.png" width="416">&nbsp;&nbsp;&nbsp;&nbsp; <img class="Text" height="323" src="Automatic_coupons_examples_files/2_corn_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p><strong>In this example:</strong>&nbsp;</p>
+
+      <ul>
+        <li>The customer buys 2 cans of corn cream in a transaction and gets the third one for free.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_3">Buy</a> a bottle of Pepsi and a bag of Ruffles chips for $3.00</h2>
+
+      <p>In this example, all flavors of Ruffles chips must be included in the same promotion; the same promotion identifier must be entered in the <a href="../../POS_Table.htm#Promotion_ID"><b>Promotion ID</b> field</a> of the <b>POS</b> table for each flavor of Ruffles.</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Bundle price</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Price</strong> field: enter <em>1</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Automatic</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="154" src="Automatic_coupons_examples_files/3_pepsi_ruffles_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>&nbsp;to add the first coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Promo ID sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the promotion identification for the <em>Ruffles.</em>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent (A)</em>.<br>
+          This specifies that the Ruffles chips are part of the bundle (<i>A</i>). &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="441" src="Automatic_coupons_examples_files/3_pepsi_ruffles_add_criteria_promoID.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>&nbsp;to add the second coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Item sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Equal to</strong> field: enter the <em>Pepsi UPC.</em>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Quantity</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>1</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Multiplication and accumulation</strong> field: select <em>Accumulate for bundle or percent (A)</em>.<br>
+          This specifies that the Pepsi items are part of the bundle (<i>A</i>). &nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>Select <strong>Make sure the discount affects the item(s) in these criteria</strong>.<br>
+           This method forces the system to apply the manual coupon discount on the Pepsi items (<i>M</i>).&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="443" src="Automatic_coupons_examples_files/3_pepsi_ruffles_add_criteria_item.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em> or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="325" src="Automatic_coupons_examples_files/1_UncleBens_details_tab.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="153" src="Automatic_coupons_examples_files/3_pepsi_ruffles_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="327" src="Automatic_coupons_examples_files/3_pepsi_ruffles_text_view.png" width="416">&nbsp;&nbsp;&nbsp; <img class="Text" height="324" src="Automatic_coupons_examples_files/3_pepsi_ruffles_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>&nbsp;The customer pays $3.00 when buying a bottle of Pepsi and any bag of Ruffles chips that are part of the Promotion ID.</li>
+
+        <li>The automatic coupon discount, which is the difference between the total value of the 2 items and $3.00, is applied on the bottle of Pepsi.&nbsp;</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+
+      <h2><a name="Ex_4">Buy</a> $10.00 worth of groceries</h2>
+
+      <p>Get $5.00 off if the customer has accumulated at least 5000 points in the main point program</p>
+
+      <table style="width: 100%">
+        <tr>
+          <td colspan="2">1. In the <strong>main section</strong> of the coupon wizard, add the following coupon information:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Value</strong> field: select <em>Cents off</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Price</strong> field: enter <em>5</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Coupon type</strong> field: select <em>Automatic</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Description</strong> field: add a meaningful description.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Sub-department</strong> field: select a sub-department.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="157" src="Automatic_coupons_examples_files/4_points_main_section.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong>&nbsp;to add the first coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Minimum point balance</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Program</strong> field: enter <em>1.<br>
+          </em>The main point program is identified by the character <i>1</i>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum balance</strong> field: select <em>5000</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="440" src="Automatic_coupons_examples_files/4_points_add_criteria_points.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">2. In the <strong>Criteria</strong> tab, click <strong>Add criteria</strong> to add the second coupon criteria.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Type</strong> field: select <em>Total sales</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><strong>Totalizer</strong> field: enter <em>3.</em>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum measure</strong> field: select <em>Dollar</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Minimum value</strong> field: enter <em>10</em>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Add a <strong>Manual description</strong> (optional).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Click <strong>OK</strong> to confirm the changes and to close the <strong>Add criteria</strong> window.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="442" src="Automatic_coupons_examples_files/4_points_add_criteria_dollars.png" width="340"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">3. In the <strong>Details</strong> tab:</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Funding</strong> field: select <em>Store</em> or <em>Vendor</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><strong>Event type</strong> field: select <em>Sale</em>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter a <strong>Start date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">Enter an <strong>End date</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="325" src="Automatic_coupons_examples_files/1_UncleBens_details_tab.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">4. Add any necessary description in the <strong>Descriptions</strong> tab.</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td colspan="2">5.&nbsp;Click <strong>Save</strong> in the toolbar to finalize the coupon creation.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px">The system will automatically assign the record a <strong>coupon code</strong>.&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td style="width: 423px"><img class="Text" height="157" src="Automatic_coupons_examples_files/4_points_final.png" width="416"></td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td>The <strong>Criteria</strong> tab will display the following information (<em>Text view</em> and <em>Data view</em>).</td>
+        </tr>
+
+        <tr>
+          <td style="width: 27px">&nbsp;</td>
+
+          <td><img class="Text" height="323" src="Automatic_coupons_examples_files/4_points_text_view.png" width="416">&nbsp;&nbsp;&nbsp; <img class="Text" height="327" src="Automatic_coupons_examples_files/4_points_data_view.png" width="416"></td>
+        </tr>
+      </table>
+
+      <p class="List"><strong>In this example</strong>:</p>
+
+      <ul>
+        <li>The customer gets $5.00 off when they buy at least $10.00 worth of groceries in the transaction.</li>
+
+        <li>The customer must have accumulated at least 5000 points.</li>
+
+        <li>The customer ID must be entered in the transaction for them to get the points balance.</li>
+      </ul>
+
+      <p style="text-align:right"><a href="#List_of_examples">Back to the list of examples</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

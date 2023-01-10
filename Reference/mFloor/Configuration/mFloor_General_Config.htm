@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SMS Help Document" />
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>General Configuration</title>
+    <link href="../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br />
+     
+
+    <h1><!-- #BeginEditable "Title" -->mFloor - General Configuration<!-- #EndEditable --></h1>
+
+    <p><!-- #BeginEditable "tag_line" -->mFloor Configuration <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <strong>General configuration</strong> screen for mFloor provides lookup and scanner-specific settings. The screen include drop down, text boxes and checkboxes for setting different parameters.</p>
+
+      <h2>Changing General Config settings</h2>
+
+      <p>Modifying the general configuration settings is the same as that for any other mFloor module, however the general settings apply to ALL mFloor modules. Once modified, the individual settings are saved to a profile, in this way individual users may have their own settings and preferences.</p>
+
+      <p>To access and change the General configuration settings, follow this procedure:</p>
+
+      <ol>
+        <li class="Steps">From the <strong>Main menu</strong> click or tap <strong>General config.</strong></li>
+
+        <li class="Steps">Enter the access code (the default value is <em>999</em>) and click or tap <strong>OK.<br />
+         <img alt="" height="419" src="mFloor_General_Config_files/mFloor_General_config_access_code.png" width="254" /></strong></li>
+
+        <li>
+          At the <strong>Config SMS</strong> screen there are several settings available to the user:<br />
+           <img alt="" class="auto-style2" height="415" src="mFloor_General_Config_files/mFloor_General_config_settings.png" width="258" /><br />
+           
+
+          <ol>
+            <li class="Steps" type="a"><strong>Lookup order<br />
+            </strong> This setting modifies how items are looked up when scanned or typed in. The default entry (123) refers to (UPC(1), Alternate(2) and vendor(3). Click or tap to open the dropdown and select from the choices provided. Once chosen the <strong>Lookup order</strong> field will initially show the chosen order e.g.: "<em>UPC and alternate</em>", however once saved and user opens the configuration once again, the <strong>Lookup order</strong> field will then show the numerical equivalents e.g.: "12"<br />
+             <img alt="" height="350" src="mFloor_General_Config_files/mFloor_General_config_Lookup_Order_choices.png" width="220" /></li>
+
+            <li class="Steps" type="a"><strong>Scan prefix -</strong> <span>The scan prefix is set in the scanner and sent to SMS with the rest of the code (example: S08A for NCR). This field is used to strip this code so that SMS can decode the barcode.</span></li>
+
+            <li class="Steps" type="a"><strong>Scan suffix -</strong> <span>The scan suffix is set in the scanner and sent to SMS with the rest of the code. This field is used to strip this code so that SMS can decode the barcode.</span></li>
+
+            <li class="Steps" type="a"><strong>Strip Check digit from scanner -</strong> If the scanner scans all the data and there are no check digits set up in the item codes in the database, then this field must be selected to strip out the check digit. This setting is&nbsp; either configured in the scanner or must be set in SMS, this field.</li>
+
+            <li class="Steps" type="a"><strong>Strip last digit from manual entry -</strong> <span>Same as the previous field, however it is used when codes are entered manually into mFloor. This is normally selected if the store uses normal UPC codes and cleared (unselected) when store uses their own item barcodes.</span></li>
+
+            <li class="Steps" type="a"><strong>Strip check digit from EB</strong> - Strips the check digit for those using the <strong>Enterprise Browser</strong> in the mobile device.</li>
+          </ol>
+        </li>
+
+        <li class="Steps">When all settings have been changed click or tap <strong>Save</strong> and the <strong>Save profile</strong> dialog box <strong></strong>appears. To discard changes and return to <strong>Products</strong> menu, click or tap <strong>Cancel.</strong><br />
+        </li>
+
+        <li class="Steps">Either enter the profile name associated to the user/operator or enter "1" and click or tap <strong>OK</strong> to save to the Default for ALL users. More information on profiles can be found in the <strong>Profile - Operator table field</strong> topic<strong>.<br />
+         <img alt="" height="360" src="mFloor_General_Config_files/mFloor_General_config_save_profile_prompt.png" width="228" /></strong></li>
+
+        <li class="Steps">On successful saving of the profile the <strong>Profile saved</strong> dialog box displays the name of the saved profile for confirmation.<br />
+         <img alt="" height="370" src="mFloor_General_Config_files/mFloor_General_config_saved_profile_confirmation.png" width="230" /><br />
+        </li>
+      </ol>
+
+      <p class="auto-style3"><a href="../mFloor_Overview.htm#Main">Return to mFloor - Main menu</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

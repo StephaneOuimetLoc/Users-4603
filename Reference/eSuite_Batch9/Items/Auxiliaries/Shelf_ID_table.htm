@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SMS Help Document">
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="SMS-HtmlEditor-State" content="Draft" />
+    <title>eSuite - Shelf ID Table</title>
+    <link href="../../../../work.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-white">
+    ﻿  <!-- #BeginTemplate "../../../../html_template.dwt" -->
+          <!-- Title/Keywords edit on new documents -->
+     <!-- #BeginEditable "doctitle" -->
+     <!-- #EndEditable -->
+          <a name="top"></a> <!-- Docs page layout -->
+     <br>
+     
+
+    <h1><!-- #BeginEditable "Title" -->eSuite - Shelf ID Table <!-- #EndEditable -->
+    </h1>
+
+    <p><!-- #BeginEditable "tag_line" -->eSuite &gt; Items &gt; Item auxialaries <!-- #EndEditable -->
+    </p>
+    <!-- #BeginEditable "toc" -->
+    <!-- #EndEditable -->
+
+    <div class="article-contents">
+      <!-- #BeginEditable "Body" -->
+
+      <h2>Information</h2>
+
+      <p>The <b>Shelf ID</b> table specifies where each item is located in the store and controls the shelf facing.</p>
+
+      <h2>Displaying the Shelf ID Table</h2>
+
+      <p>In the Launcher, click the chevron in the <strong>Items</strong> entry to display its menu and then:</p>
+
+      <ol>
+        <li>Click on <strong>Auxiliary tables</strong>: the Start window opens in the <strong>Auxiliary</strong> work area.</li>
+
+        <li>Click on <strong>Shelf ID</strong>: the tab opens in the same window, displaying the <strong>Shelves List</strong>.</li>
+
+        <li>To modify an existing shelf ID, select it in the list and double-click on it, press the F3 key on the keyboard or click the <strong>Edit</strong> command in the bottom menu: the <strong>Shelf ID</strong> table opens, overlapping the work area.</li>
+
+        <li>To create a new shelf ID, click on <strong>Add</strong> in the bottom menu of the grid: the <strong>Shelf ID</strong> table opens, overlapping the work area.</li>
+      </ol>
+
+      <h2><a name="Layout">Layout</a></h2>
+
+      <table style="width: 100%">
+        <tr>
+          <td><img style="border-style:none" class="Text" src="Shelf_ID_Table_files/shelf_ID_table.png" usemap="#shelf_ID_table"> <map name="shelf_ID_table">
+            <area shape="rect" coords="9, 97, 55, 119" href="#Target">
+            <area shape="rect" coords="58, 97, 134, 119" href="#Shelf_ID">
+            <area shape="rect" coords="138, 97, 203, 119" href="#Aisle">
+            <area shape="rect" coords="207, 97, 271, 119" href="#Side">
+            <area shape="rect" coords="275, 97, 334, 119" href="#Segment">
+            <area shape="rect" coords="12, 140, 135, 162" href="#Section">
+            <area shape="rect" coords="137, 140, 203, 162" href="#Shelf_life">
+            <area shape="rect" coords="207, 140, 275, 162" href="#Tag_quantity">
+            <area shape="rect" coords="12, 182, 335, 204" href="#Label_template">
+            <area shape="rect" coords="12, 232, 134, 254" href="#Latitude">
+            <area shape="rect" coords="137, 232, 264, 254" href="#Latitude">
+            <area shape="rect" coords="267, 232, 333, 254" href="#Pos_Z">
+          </map></td>
+        </tr>
+
+        <tr>
+          <td class="Img">*Click on a field to get information on it.</td>
+        </tr>
+      </table>
+
+      <h2>Content</h2>
+
+      <p>Here is a description of the <strong>Shelf ID</strong> table fields and their functionalities:</p>
+
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 156px"><strong>FIELD</strong></th>
+
+            <th>DESCRIPTION</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Target">Target</a></strong></td>
+
+          <td>The <strong>Target</strong> field contains the target identifier, i.e. the store group.&nbsp;<br>
+          It is a required used to uniquely identify records in the <strong>Shelf</strong> <strong>table</strong>.&nbsp;<br>
+          The default value of the <strong>Target</strong> field is PAL.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Shelf_ID">Shelf ID</a></strong></td>
+
+          <td>The <strong>Shelf ID</strong> field contains the shelf identifier within the aisle where the item is located.&nbsp;<br>
+          It is a required field used to uniquely identify records in the <strong>Shelves List</strong>.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Aisle">Aisle</a></strong></td>
+
+          <td>The <strong>Aisle</strong> field contains the aisle where the item is located.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Side">Side</a></strong></td>
+
+          <td>The <b>Side</b> field contains the side of the <a href="#Aisle">aisle</a> where the item is located.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Segment">Segment</a></strong></td>
+
+          <td>Description to come</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 21px;"><strong><a name="Section">Section</a></strong></td>
+
+          <td>The <strong>Section</strong> field contains the section of the store where the item is located.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Shelf_life">Shelf life</a></strong></td>
+
+          <td>The <strong>Shelf life</strong> field contains the number of days the item is available for sale before being removed from the sales area.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Tag_quantity">Tag quantity</a></strong></td>
+
+          <td>The <strong>Tag quantity</strong> field contains the number of shelf tags to print for this item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Label_template">Label template</a></strong></td>
+
+          <td>The <strong>Label template</strong> field contains the default type of shelf tag to be printed for the item.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px; height: 21px;"><strong><a name="Longitude">Longitude</a></strong></td>
+
+          <td style="height: 21px">Description to come</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Latitude">Latitude</a></strong></td>
+
+          <td>Description to come</td>
+        </tr>
+
+        <tr>
+          <td style="width: 156px"><strong><a name="Pos_Z">Pos Z</a></strong></td>
+
+          <td>Description to come</td>
+        </tr>
+      </table>
+
+      <p style="text-align:right"><a href="#Layout">Back to layout</a></p>
+      <!-- #EndEditable -->
+    </div>
+    <!-- end of main container -->
+    <a class="back-to-top shadow" href="#top">▲</a><!-- #EndTemplate -->
+  </body>
+</html>
+

@@ -1,4 +1,4 @@
-GitLock=StephaneOuimet
+AllMacro.htm
 NumericMacros.htm
 MemoryInformation.htm
 LiveInformationTransaction.htm
@@ -12,7 +12,6 @@ IniFileInformation.htm
 Database
 CgiMacros.htm
 BooleanMacros.htm
-AllMacro.htm
 DataDisplayFormat.htm
 FormattingOther.htm
 EncodeCharacters.htm

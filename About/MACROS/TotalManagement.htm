@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Total management
+</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style3 {
+	color: #000080;
+}
+.auto-style4 {
+	font-weight: normal;
+}
+.auto-style5 {
+	font-weight: normal;
+	color: #000080;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+
+<h1>Total management</h1>
+<p>These macros are used to manipulate variables representing totals.<br />
+The name of a total variable must use alphanumeric characters and must begin 
+with a letter.<br />
+No limit on the number of total variable used.<br />
+<br />
+Here is a list of macros that increments a total variable :<br />
+<strong>&nbsp;&nbsp; @Fmt(COMA,</strong>&lt;<em>ParamName</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>,</strong>&lt;<em>ParamList</em>&gt;<strong>)<br />
+&nbsp;&nbsp; @dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)<br />
+&nbsp;&nbsp; @dbFind(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SearchFieldName</em>&gt;<strong>,</strong>&lt;<em>SearchValue</em>&gt;<strong>,</strong>&lt;<em>ReturnFieldName</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)<br />
+&nbsp;&nbsp; @dbHot(</strong>&lt;<em>OpenFileName</em>&gt;<strong>,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></p>
+<p>&nbsp;</p>
+
+<h2 id="rptTTL1">@rptTTL(<span class="auto-style4">&lt;<em>TotalId</em>&gt;</span>,<span class="auto-style4">&lt;<em>NumericDisplayFormat</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns the formatted value of a &lt;<em>TotalId</em>&gt; 
+variable.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">TotalId</td>
+		<td class="List" >Alphanumeric variable.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List" >Display format of a numeric value.<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>		
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Formatted value of a &lt;TotalId&gt; variable.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@dbView(Q4,Select F01,F38,F39 
+		from COST_TAB)<br />
+		@rptTTL(T1,$12:2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style3">
+		<strong>&nbsp;$0.00</strong></span>" <br />
+		@dbRow(Q4,F38,$12:2,T1)<strong>&nbsp; </strong>willl return "&nbsp;&nbsp;&nbsp;
+		<span class="auto-style3"><strong>&nbsp;$105.99</strong></span>" and T1 
+		contains 105.99<br />
+		@rptTTL(T1,$12:2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style3">
+		<strong>&nbsp;$0.00</strong></span>"<br />
+		@dbRow(Q4,F38,$12:2,T1)<strong>&nbsp; </strong>willl return "&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="auto-style3"><strong>$105.99</strong></span>" and T1 
+		contains 211.98<br />
+		@rptTTL(T1,#10:2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> &nbsp; </strong>&nbsp;will return "&nbsp;&nbsp;&nbsp;
+		<span class="auto-style3"><strong>211.98</strong></span>"</td>
+	</tr>	
+</table>
+
+<h2 id="rptCLR">@rptCLR(<span class="auto-style4">&lt;<em>TotalId</em>&gt;&lt;<em><strong>=</strong>Value</em>&gt;</span>,<span class="auto-style4">&lt;<em>TotalId</em>&gt;&lt;<em><strong>=</strong>Value</em>&gt;<strong>,</strong>...</span>)</h2>
+<p class="MsoNormal">This macro initializes one or more Total variables.<br />
+You can pass a value to initialize a Total variable, otherwise it will be 
+initialized to 0.<br />
+You can initialize multiple Total variables by separating them with commas.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">TotalId</td>
+		<td class="List" >Alphanumeric variable.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		Value</td>
+		<td class="List" >Number that can contain a fractional part.</td>
+		<td class="List" style="width: 50px">Optionnal</td>
+	</tr>		
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">
+		@rptCLR(T1,T2=101,SubTotal,Total=200)<br />
+		@rptTTL(T1,#3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return " <span class="auto-style3"><strong>0</strong></span>" <br />
+		@rptTTL(T2,#3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return "<span class="auto-style3"><strong>101</strong></span>"
+		<br />
+		@rptTTL(SubTotal,#3)<strong>&nbsp; </strong>will return "
+		<span class="auto-style3"><strong>0</strong></span>" <br />
+		@rptTTL(Total,#3)&nbsp;&nbsp;&nbsp;&nbsp; <strong>&nbsp; </strong>will 
+		return "<span class="auto-style3"><strong>200</strong></span>" </td>
+	</tr>	
+</table>
+
+
+
+
+
+<h2 id="rptTTL2">@rptTTL(<span class="auto-style4">&lt;<em>ArithmeticExpression</em>&gt;</span>,<span class="auto-style4">&lt;<em>NumericDisplayFormat</em>&gt;</span>,<span class="auto-style4">&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns the formatted result of the arithmetic 
+expression and adds the result to the &lt;<em>TotalId</em>&gt; variable.<br />
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal; ">ArithmeticExpression</td>
+		<td class="List" >This is an arithmetic expression using additions <strong>+</strong>, 
+subtractions <strong>-</strong>, multiplications <strong>*</strong> or divisions
+<strong>/</strong><br />
+No parenthesis <strong>(</strong> <strong>)</strong> is allowed.<br />
+Expressions are always evaluated from left to right.<br />
+There is no priority of operators.<br />
+		A simple number without calculation is allowed.<br />
+Examples : <br />
+&nbsp;&nbsp; 10+3*2 will return 26<br />
+&nbsp;&nbsp; 4-2*3 will return 6<br />
+&nbsp;&nbsp; 4*2-5 will return 3<br />
+&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return 10</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal; "><a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List" >Display format of a numeric value.</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>		
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List" >A total variable. The system will add the return value 
+		of the macro to the value of the TotalId.<br />
+		Add <strong>=</strong> at the beginning of TotalId to clear the value of
+		<em>&lt;TotalId&gt;</em> before adding the value.&nbsp; Example:
+		<span class="auto-style4"><strong><span class="auto-style3">=T1</span><br />
+		</strong></span>Add <strong>-</strong> at the beginning of &lt;<em>TotalId</em>&gt; 
+		to substract the return value of the macro to the value of the &lt;<em>TotalId</em>&gt;. 
+		Example: <strong><span class="auto-style3">-T1</span><br />
+		</strong>Add <strong>-</strong> at the end of TotalId to substract the 
+		value of &lt;<em>TotalId</em>&gt; to the return value of the macro. Example:
+		<span class="auto-style5"><strong>T1-</strong></span></td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Formatted value of the result of the arithmetic 
+		expression.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >EExamples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@rptCLR(T1)<br />
+		@rptTTL(10,$12:2,T1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return "
+		<span class="auto-style3"><strong>$10.00</strong></span>"&nbsp; (and T1 
+		contains 10.00)<br />
+		@rptTTL(10,$12:2,T1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return "
+		<span class="auto-style3"><strong>$10.00</strong></span>"&nbsp; (and T1 
+		contains 20.00)<br />
+		@rptTTL(10,$12:2,=T1)&nbsp;&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong> 
+		$10.00</strong></span>"&nbsp; (and T1 contains 10.00)<br />
+		@rptTTL(10,$12:2,T1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong> 
+		$10.00</strong></span>"&nbsp; (and T1 contains 20.00)<br />
+		@rptTTL(10,$12:2,T1)&nbsp;&nbsp;&nbsp;&nbsp; <strong>&nbsp; </strong>
+		will return " <span class="auto-style3"><strong>$10.00</strong></span>"&nbsp; 
+		(and T1 contains 30.00)<br />
+		@rptTTL(10,$12:2,-T1)&nbsp;&nbsp;&nbsp;&nbsp; will return "
+		<span class="auto-style3"><strong>$10.00</strong></span>"&nbsp; (and T1 
+		contains 20.00)<br />
+		@rptTTL(10,$12:2,T1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return "
+		<span class="auto-style3"><strong>$10.00</strong></span>"&nbsp; (and T1 
+		contains 30.00)<br />
+		@rptTTL(10,$12:2,T1-)&nbsp;&nbsp; <strong>&nbsp; </strong>will return "
+		<span class="auto-style3"><strong>$10.00</strong></span>"&nbsp; (and T1 
+		contains -20.00)<br />
+		<br />
+		@rptCLR(T1)<br />
+		@rptTTL(100-50,$12:2,T1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return 
+		"&nbsp;&nbsp;&nbsp; <span class="auto-style3"><strong>&nbsp; $50.00</strong></span>" 
+		and T1 contains 50.00 <br />
+		@rptTTL(-25+1/2*10,$12:2,T1) will return "&nbsp;&nbsp;
+		<span class="auto-style3"><strong>&nbsp;-$120.00</strong></span>" and T1 
+		contains -70.00 </td>
+	</tr>	
+</table>
+</body>
+</html>

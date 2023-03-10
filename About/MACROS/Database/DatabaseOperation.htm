@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Database operations</title>
+	<link rel="stylesheet" href="../work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style2 {
+	color: #000080;
+}
+.auto-style3 {
+	text-decoration: underline;
+}
+.auto-style4 {
+	font-family: "Courier New", Courier, monospace;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+<h1>Database operations</h1>
+
+
+<h2 id="DBSELECT">@dbSelect(<span class="auto-style1">&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>SQLSelectStatement</em>&gt;</span>)</h2>
+<p>This macro returns all the fields value from the first record of the result 
+set separated by commas.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">DataDisplayFormat</td>
+		<td class="List">		
+		Display format of the query result.<br />
+		Please note: The format is applied to all returned field values.<table id="table4" style="margin:0px"  border="1">
+			<tr>
+				<td style="width: 10px"><strong>S</strong><br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<strong>R</strong><br />
+				<strong>C</strong><br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<strong>H</strong><br />
+				<strong>D</strong><br />
+				</td>
+				<td style="width: 895px; ">Replaces :<br />
+&nbsp;&nbsp; carriage return + line feed (#13#10) by 1 space<br />
+&nbsp;&nbsp; carriage return (#13) by 1 space<br />
+&nbsp;&nbsp; line feed (#10) by 1 space<br />
+&nbsp;&nbsp; <strong>,</strong> (comma) by ;<br />
+&nbsp;&nbsp; <strong>(</strong> by <strong>[</strong><br />
+&nbsp;&nbsp; <strong>)</strong> by <strong>]</strong><br />
+				Removes :<br />
+&nbsp;&nbsp; Single quote<br />
+&nbsp;&nbsp; Double quotes<br />
+				Text as is. Without transformation.<br />
+				Add a single quote at the beginning and end of the value if the 
+				value contains at least one of the following characters:<br />
+&nbsp;&nbsp; space<br />
+&nbsp;&nbsp; <strong>,</strong> (comma)<br />
+&nbsp;&nbsp; <strong>&amp;</strong><br />
+&nbsp;&nbsp; Single quote<br />
+&nbsp;&nbsp; Double quotes<br />
+				Implicit call to the macro <strong>@FMT(2HTML,</strong>&lt;<em>TextValue</em>&gt;<strong>)<br />
+				</strong>Convert date to SQL format</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List">Optionnal Default: <strong>S</strong></td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">SQLSelectStatement</td>
+		<td class="List">SQL Select</td>
+		<td class="List">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >All the fields value from the first record of the 
+		result set separated by commas.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >Some Field/Value ​​from the COST_TAB table :<br />
+		<span class="auto-style4"><span class="auto-style3">&nbsp; F01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		F38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		F1976&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+		<br class="auto-style3" />
+&nbsp; 0000000000100&nbsp;&nbsp; 105.99&nbsp; <strong>&nbsp; </strong>2019-02-26&nbsp;&nbsp;&nbsp;&nbsp; 
+		(A),"B"&amp;&lt;C&gt; <br />
+		</span><br />
+		@dbSELECT(S,Select F01,F38,F39,F1976 from COST_TAB)&nbsp; will return 		<span class="auto-style2"><strong>
+		0000000000100,105.99,2019-02-26,[A];B&amp;&lt;C&gt; </strong></span><br />
+		@dbSELECT(Select F01,F38,F39,F1976 from COST_TAB)&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>
+		0000000000100,105.99,2019-02-26,[A];B&amp;&lt;C&gt; <br />
+		</strong></span>@dbSELECT(R,Select F1976 from COST_TAB)&nbsp; will 
+		return <span class="auto-style2"><strong>(A),"B"&amp;&lt;C&gt;</strong></span><br />
+		@dbSELECT(C,Select F1976 from COST_TAB)&nbsp; will return
+		<span class="auto-style2"><strong>'(A),"B"&amp;&lt;C&gt;' </strong></span><br />
+		@dbSELECT(H,Select F1976 from COST_TAB)&nbsp; will return&nbsp;
+		<span class="auto-style2"><strong>[A],&amp;quot;B&amp;quot;&amp;amp;&amp;lt;C&amp;gt;</strong><br />
+		</span>@dbSELECT(D,Select F39 from COST_TAB)&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return&nbsp; <span class="auto-style2"><strong>0202-26-2019 <br />
+		</strong></span><br />
+		@dbSELECT(Select F1033,F01,F1034 FROM ACC_TAB where 
+		F1068 = 'AP');&nbsp;&nbsp;&nbsp; will return <span class="auto-style2"><strong> &nbsp;DPT,1,8201</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="DBEXEC">@dbExec(<span class="auto-style1">&lt;<em>SQLStatement</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro executes a SQL statement against the database. 
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">SQLStatement</td>
+		<td class="List">SQL command such as INSERT, UPDATE, DELETE</td>
+		<td class="List">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbEXEC(UPDATE RPT_CLT SET F65=0 WHERE 
+		F01='@WIZGET(F01)');</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="DBPLAN">@dbPlan(<span class="auto-style1">&lt;<em>SQLSelectStatementId</em>&gt;<strong>,</strong>&lt;<em>Parameter1</em>&gt;<strong>,</strong>&lt;<em>Parameter2</em>&gt;,...</span>)</h2>
+<p class="MsoNormal">This macro executes a SQL query defined in the Prepare.ini 
+file.</p>
+<p class="MsoNormal">The Prepare.ini can contain an unlimited number of SQL 
+statement that are prepared when the application is loaded so they execute 
+faster. .</p>
+<p class="MsoNormal">Format of Prepare.ini :<br />
+&nbsp;&nbsp;&nbsp; [SQLtatementID]<br />
+&nbsp;&nbsp;&nbsp; SQL Statement</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">SQLSelectStatementId</td>
+		<td class="List">SQL Select ID defined in Prepare.ini</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Parameters</td>
+		<td class="List">Format : &lt;<em>Name</em>&gt;=&lt;<em>Value</em>&gt;<br />
+&nbsp;&lt;Name&gt;&nbsp; A parameter name of the SQL Select<br />
+&nbsp;&lt;Value&gt;&nbsp; The value to apply to the parameter<br />
+		You can pass many parameters separated by commas.</td>
+		<td class="List">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List"  >The macro returns the list of 
+		fields/values of the select statement separated by commas.<br />
+		<br />
+		Format : &lt;Name&gt;=&lt;Value&gt;<br />
+&nbsp; &lt;Name&gt; A parameter name of the SQL Select<br />
+&nbsp; &lt;Value&gt; The value returned by SQL Select</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Techinal note</th>
+	</tr>
+	<tr>
+		<td class="List" style="height: 86px" >From inside SMS, the dbPlan 
+		function can be called directly. Depending of if the system have direct 
+		access to the database or if it needs to go by mail slot, the dbPlan 
+		will figure this out and return the result as the function result. If 
+		the result is empty, it will return a empty string.<br />
+		<br />
+		You may add a parameter to tell the DbPlan which alias should be used 
+		first for a specific command. To do so, you need to add a line AliasLink 
+		in the the section just before the COMMAND line. When the AliasLink is 
+		set, DbPlan will look for this DbAlias first. If it is not set in the 
+		System.ini file, then it will look for the mailslot in the Startup.ini 
+		file. Then, if the mailslot is not set, DbPlan will query the local 
+		database.<br />
+		<br />
+		Prepare.ini example with AliasLink:<br />
+		[RPT_CLT_TEST]<br />
+		AliasLink=AliasClientReport <br />
+		COMMAND=SELECT F65 FROM RPT_CLT_D WHERE F1148=:F1148 AND F254=:F254 AND 
+		F1034=3</td>
+	</tr>	
+
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example 1</th>
+	</tr>
+	<tr>
+		<td class="List" >Prepare.ini :<br />
+&nbsp; [POS]<br />
+&nbsp; COMMAND=SELECT F02,F04,F81 FROM POS_TAB WHERE F01=:F01<br />
+		<br />
+		Macro : @dbPlan(POS,F01=0000000000001);<br />
+		<br />
+		Result : <span class="auto-style2"><strong>F02='Christmas turkey 
+		promotion',F04=3,F81='' </strong></span> </td>
+	</tr>	
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example 2</th>
+	</tr>
+	<tr>
+		<td class="List" >Prepare.ini :<br />
+&nbsp; [POS]<br />
+&nbsp; COMMAND=SELECT F02,F04,F81 FROM POS_TAB WHERE F01=:F01<br />
+		<br />
+		Macro : @dbPlan(POS,F01=0000000000001);<br />
+		<br />
+		Where POS is the SQLStatementID and the F01=0000000000001 is a parameter 
+		needed by the query (:F01). <br />
+		The POS can sends the command by mail slot like this:<br />
+		<br />
+		@winmail(\\.\Mailslot\WIN901,'Â©exec(Â®dbPlan(POS,F01=0000000000001))');<br />
+		<br />
+		Or, the POS can also write a file full of dbPlan and ask the server to 
+		render the page. <br />
+		The file would look like this:<br />
+		@dbPlan(POS,F01=0000000000001);<br />
+		@dbPlan(POS,F01=0000000100055);<br />
+		@dbPlan(POS,F01=0000000100125);<br />
+		<br />
+		and by executing a command like this:<br />
+		@winmail(\\.\Mailslot\WIN901,'Â®exec(CGI=Source_filename,output=target_filename));<br />
+		<br />
+		get a result file like:<br />
+		<span class="auto-style2"><strong>F02='Christmas turkey promotion',F04=3,F81=''<br />
+		F02='ASPARAGUS TIPS',F04=1,F81=''<br />
+		F02='CUT GREEN BEANS',F04=1,F81=''</strong></span></td>
+	</tr>	
+</table>
+
+
+
+<h2 id="DBGEN1">@dbGen(<span class="auto-style1">&lt;<em>FieldName</em>&gt;</span>)</h2>
+<p>This macro returns the value of &lt;FieldName&gt; defined in SYS_TAB table.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FieldName</td>
+		<td class="List">Field name of SYS_TAB table</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List"  >Value of &lt;<em>FieldName</em>&gt; in SYS_TAB table<br />
+		Format: Length 8 padded with zeros on the left.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >Value of column F1764 in SYS_TAB is 00000100.<br />
+		@dbGEN(F1764)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style2"><strong>00000100</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="DBGEN2">@dbGen(<span class="auto-style1">&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>Increment</em>&gt;<strong>,</strong>&lt;<em>MaxValue</em>&gt;</span>)</h2>
+<p>This macro increments the value of &lt;<em>FieldName</em>&gt; defined in SYS_TAB 
+table 
+and returns the new value.<br />
+If &lt;<em>MaxValue</em>&gt; is passed to the macro, it represents the maximum value 
+before returning to 0.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FieldName</td>
+		<td class="List">Field name of SYS_TAB table</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Increment</td>
+		<td class="List">The value of the field will be increased by this 
+		value.<br />
+		Can be positive or negative.</td>
+		<td class="List">Optionnal</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">MaxValue</td>
+		<td class="List">The maximum counter value before returning to 0.</td>
+		<td class="List">Optionnal</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List"  >New value of &lt;<em>FieldName</em>&gt; in 
+		SYS_TAB table<br />
+		Format: Length 8 padded with zeros on the left.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >Value of column F1764 in SYS_TAB is 00000100.<br />
+		@dbGEN(F1764,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style2"><strong>00000101</strong></span> and the new value will be 
+		00000101<br />
+		@dbGEN(F1764,5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style2"><strong>00000106</strong></span> and the new value will be 
+		00000106<br />
+		@dbGEN(F1764,5,107) will return <span class="auto-style2"><strong>00000107</strong></span> 
+		and the new value will be 00000107<br />
+		@dbGEN(F1764,5,107) will return <span class="auto-style2"><strong>00000000</strong></span> 
+		and the new value will be 00000000<br />
+		</td>
+	</tr>	
+</table>
+
+</body>
+</html>

@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Registry information</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+.auto-style4 {
+	background-color: #FFFFFF;
+}
+.auto-style5 {
+	background-color: #FF0000;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+<h1>Registry information</h1>
+
+
+
+
+<h2 id="REGGEN1">@dbHot(REGGEN,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns a counter represented by a key in the 
+registry.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">The name of the key.<br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Return the value of the registry.<br />
+		Format: Length 8 padded with zeros on the left.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REGGEN,MyCounterA,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>00000001</strong></span> <br />
+		</td>
+	</tr>	
+</table>
+
+<h2 id="REGGEN2">@dbHot(REGGEN,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;</span>,<span class="auto-style1">&lt;<em>Increment</em>&gt;</span>,<span class="auto-style1">&lt;<em>MaxValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro builds a counter with a key in the 
+registry.<br />
+If &lt;MaxValue&gt; is passed to the macro, it represents the maximum value before 
+returning to 0.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">The name of the key created.<br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Increment</td>
+		<td class="List">Increment counter by this value</td>
+		<td class="List">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">MaxValue</td>
+		<td class="List">The maximum counter value before going back to
+		0</td>
+		<td class="List">Optionnal</td>
+	</tr>	
+	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Return the value of the registry before 
+		incrementation.<br />
+		Format: Length 8 padded with zeros on the left.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REGGEN,MyCounterA,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>00000001</strong></span> <br />
+		@dbHot(REGGEN,MyCounterA,1)&nbsp;&nbsp; &nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>00000002</strong></span> <br />
+		@dbHot(REGGEN,MyCounterA,1,4)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>00000003</strong></span> <br />
+		@dbHot(REGGEN,MyCounterA,1,4)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>00000004</strong></span> <br />
+		@dbHot(REGGEN,MyCounterA,1,4)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>00000000</strong></span> <br />
+		@dbHot(REGGEN,MyCounterA,1,4)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>00000001</strong></span> <br />
+		<br />
+		@dbHot(REGGEN,MyCounterB,1,4)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>00000001</strong></span> <br />
+		@dbHot(REGGEN,MyCounterB,5,4)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>00000000</strong></span> </td>
+	</tr>	
+</table>
+
+
+<h2 id="REGVALUE">@dbHot(REGVALUE,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;</span>,<span class="auto-style1">&lt;<em>DataType</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns a value of a registry key based 
+on the data type.</p>
+<p class="MsoNormal">See macro @dbHot(REG,...) for more flexibility.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">Name of the registry to find. 
+		Location is optional. <br />
+		<br />
+		If no location is specified, the key is searched under :<br />
+&nbsp;&nbsp; For windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+&nbsp;&nbsp; Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">DataType</td>
+		<td class="List">CURR:&nbsp;&nbsp;&nbsp; Currency 
+		value<br />
+		DWORD: Integer value<br />
+		STRING: String value</td>
+		<td class="List">Optionnal<br />
+		Default : STRING</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The value of the registry</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REGVALUE,MyRegistryKey)<br />
+		@dbHot(REGVALUE,@PROFILE/MyRegistryKey)<br />
+		@dbHot(REGVALUE,MyCounter,DWORD)<br />
+		@dbHot(REGVALUE,\\HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\Version,STRING)</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="REG">@dbHot(REG,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;</span>,<span class="auto-style1">&lt;<em>TextDisplayFormat</em>&gt;,&lt;<em>DefaultValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns a formatted value of a String registry key. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">Name of the registry to find. 
+		Location is optional. <br />
+		<br />
+		If no location is specified, the key is searched under :<br />
+&nbsp;&nbsp; For windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+&nbsp;&nbsp; Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		<br />
+		Please note: The name of the key can not be SET or DELETE.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px"><a href="DataDisplayFormat.htm#TextDisplayFormat">TextDisplayFormat</a></td>
+		<td class="List">Format for displaying a text value.</td>
+		<td class="List">Optionnal<br />
+		</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">DefaultValue</td>
+		<td class="List">The default value will be used if the registry key does 
+		not exist. The format is also applied to the default value.</td>
+		<td class="List">Optionnal<br />
+		</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The formatted value of the registry</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REG,MyStringKey)<br />
+		@dbHot(REG,@PROFILE/MyStringKey)<br />
+		@dbHot(REG,MyStringKey,RAW,My default value)<br />
+		@dbHot(REG,MyStringKey,HTML)</td>
+	</tr>	
+</table>
+
+<h2 id="VARGET">@dbHot(VARGET,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;</span>,<span class="auto-style1"><strong>,</strong>&lt;<em>TextDisplayFormat</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns a formatted value of a String registry key. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">sParameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">Name of the registry to find. 
+		Location is optional. <br />
+		<br />
+		If no location is specified, the key is searched under :<br />
+&nbsp;&nbsp; For windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+&nbsp;&nbsp; Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		<br />
+		Please note: The name of the key can not be SET or DELETE.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px"><a href="DataDisplayFormat.htm#TextDisplayFormat">TextDisplayFormat</a></td>
+		<td class="List">Format for displaying a text value.</td>
+		<td class="List">Optionnal</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The formatted value of the registry</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(VARGET,MyStringKey)<br />
+		@dbHot(VARGET,@PROFILE/MyStringKey)<br />
+		@dbHot(VARGET,MyStringKey,,HTML)</td>
+	</tr>	
+</table>
+
+
+<h2 id="REGSET">@dbHot(REG<span class="auto-style1"><strong>SET</strong></span>,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;<em>,&lt;</em>DataType<em>&gt;,&lt;</em>Value<em>&gt;</em></span>)</h2>
+<p class="MsoNormal">This macro saves a value in a registry key. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">Name of registry key to save. <br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">DataType</td>
+		<td class="List">CURR:&nbsp;&nbsp;&nbsp; Currency 
+		value<br />
+		DWORD: Integer value<br />
+		BINARY: Binary value<br />
+		STRING: String value</td>
+		<td class="List" style="width: 50px">Optionnal<br />
+		Default: String</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px;">Value</td>
+		<td class="List">The value to save in registry key</td>
+		<td class="List" style="width: 50px;">Required</td>
+	</tr>	
+</table>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List">Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REGSET,Param1,DWORD,10)<br />
+		@dbHot(REGSET,Param2,STRING,Hello)<br />
+		@dbHot(REGSET,@PROFILE\Param3,,Hello)<br />
+		</td>
+	</tr>	
+</table>
+
+<h2 id="VARSET1">@dbHot(VAR<span class="auto-style1"><strong>SET</strong></span>,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;<em><strong>,</strong>&lt;Value&gt;</em></span>)</h2>
+<p class="MsoNormal">This macro saves a String value in a registry key. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">Name of registry key to save. <br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px;">Value</td>
+		<td class="List">The value to save in registry key</td>
+		<td class="List" style="width: 50px;">Required</td>
+	</tr>	
+</table>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List">Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(VARSET,PARAM1,Hello) will store
+		<span class="auto-style3"><strong>Hello</strong></span> in
+		<span class="auto-style3"><strong>PARAM1</strong></span> String registry 
+		key <br />
+		@dbHot(VARSET,@PROFILE\PARAM2,Hello) will store
+		<span class="auto-style3"><strong>Hello</strong></span> in
+		<span class="auto-style3"><strong>PARAM2</strong></span> String registry 
+		(\\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Store Management\Counters\<span class="auto-style3"><strong>Default</strong></span>\ 
+		where @PROFILE contain <strong>Default</strong>)<br />
+		</td>
+	</tr>	
+</table>
+
+
+
+
+<h2 id="VARSET2">@dbHot(VARSET,<span class="auto-style1">&lt;<em>PoolParameterName</em>&gt;<strong>*</strong></span>)</h2>
+<p class="MsoNormal">This macro saves the value of one or more pool parameters in String registry keys of the same name.</p>
+<p class="MsoNormal">Please note : Character <strong>*</strong> is mandatory to 
+execute this macro.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+This macro do the same thing as <strong>@dbHOT(REG,SET,</strong>&lt;<em>PoolParameterName</em>&gt;<strong>*)</strong></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">PoolParameterName</td>
+		<td class="List">Name of the pool parameter to save 
+		in registry. <br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		<br />
+		Use * at the end of the pool parameter name allows you to define all 
+		parameters whose names begin with these characters.<br />
+		<br />
+		Please note: Using the folder delimiter (\ or /) in pool parameter name 
+		allows the creation of subkeys in Windows Registry.<br />
+		Example: A pool parameter with name=SECTION\MYKEY and a call to this 
+		macro : @dbHOT(REG,SET,SECTION\MYKEY) will create the key MYKEY in the 
+		subkey SECTION of // HKEY LOCAL MACHINE\SOFTWARE\WOW6432Node\Store 
+		Management\Counter</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List">Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@WizSet(Param1=Value1)<br />
+		@WizSet(Param2=Value2)<br />
+		@dbHot(VARSET,Param1*)&nbsp; will store <span class="auto-style3">
+		<strong>Value1</strong></span> in <span class="auto-style3"><strong>
+		Param1</strong></span> Registry 
+		(\\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Store Management\Counters)
+		<br />
+		@dbHot(VARSET,Param*) <strong>&nbsp;&nbsp; </strong>will store
+		<span class="auto-style3"><strong>Value1</strong></span> in
+		<span class="auto-style3"><strong>Param1</strong></span> Registry and 
+		Value2 in Param2 Registry 
+		(\\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Store Management\Counters)
+		<br />
+		@dbHot(VARSET,Param3*)&nbsp; will store nothing <br />
+		<br />
+		Where @Profile contain Default<br />
+		@WizSet(@Profile\Param1=Value1)<br />
+		@WizSet(@Profile\Param2=Value2)<br />
+		@dbHot(VARSET,@PROFILE\*)&nbsp;&nbsp; will store
+		<span class="auto-style3"><strong>Value1</strong></span> in
+		<span class="auto-style3"><strong>Param1</strong></span> Registry and
+		<span class="auto-style3"><strong>Value2</strong></span> in
+		<span class="auto-style3"><strong>Param2</strong></span> Registry 
+		(\\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Store Management\Counters\<strong>Default</strong>\</td>
+	</tr>	
+</table>
+
+<h2 id="REGSET2">@dbHot(REG,<span class="auto-style1"><strong>SET</strong></span>,<span class="auto-style1">&lt;<em>PoolParameterName</em>&gt;<em><strong>*</strong></em></span>)</h2>
+<p class="MsoNormal">This macro saves the value of one or more 
+pool parameters in String registry keys of the same name.<br />
+This macro do the same thing as <strong>@dbHOT(VARSET,</strong>&lt;<em>PoolParameterName</em>&gt;<strong>*)</strong></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">PoolParameterName</td>
+		<td class="List">Name of the pool parameter to save 
+		in registry. <br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		<br />
+		Use * at the end of the pool parameter name allows you to define all 
+		parameters whose names begin with these characters.<br />
+		<br />
+		Please note: Using the folder delimiter (\ or /) in pool parameter name 
+		allows the creation of subkeys in Windows Registry.<br />
+		Example: A pool parameter with name=SECTION\MYKEY and a call to this 
+		macro : @dbHOT(REG,SET,SECTION\MYKEY) will create the key MYKEY in the 
+		subkey SECTION of // HKEY LOCAL MACHINE\SOFTWARE\WOW6432Node\Store 
+		Management\Counter<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List">Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@WizSet(Param1=Value1)<br />
+		@WizSet(Param2=Value2)<br />
+		@dbHot(REG,SET,Param1*)&nbsp; will store <span class="auto-style3">
+		<strong>Value1</strong></span> in <span class="auto-style3"><strong>
+		Param1</strong></span> Registry 
+		(\\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Store Management\Counters)
+		<br />
+		@dbHot(REG,SET,Param*) <strong>&nbsp;&nbsp; </strong>will store
+		<span class="auto-style3"><strong>Value1</strong></span> in
+		<span class="auto-style3"><strong>Param1</strong></span> Registry and 
+		Value2 in Param2 Registry 
+		(\\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Store Management\Counters)
+		<br />
+		@dbHot(REG,SET,Param3*)&nbsp; will store nothing <br />
+		<br />
+		Where @Profile contain Default<br />
+		@WizSet(@Profile\Param1=Value1)<br />
+		@WizSet(@Profile\Param2=Value2)<br />
+		@dbHot(REG,SET,@PROFILE\*)&nbsp;&nbsp; will store
+		<span class="auto-style3"><strong>Value1</strong></span> in
+		<span class="auto-style3"><strong>Param1</strong></span> Registry and
+		<span class="auto-style3"><strong>Value2</strong></span> in
+		<span class="auto-style3"><strong>Param2</strong></span> Registry 
+		(\\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Store Management\Counters\<strong>Default</strong>\</td>
+	</tr>	
+</table>
+
+
+<h2 id="dbHOTREGDELETE">@dbHot(REG,<span class="auto-style1"><strong>DELETE</strong></span>,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro deletes a registry key.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">Name of the registry to delete. <br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List">Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REG,DELETE,Param1)<br />
+		@dbHot(REG,DELETE,@PROFILE\Param1)<br />
+		</td>
+	</tr>	
+</table>
+
+<h2 id="dbHOTREGSETDELETE">@dbHot(REGSET,<span class="auto-style1">&lt;<em>RegistryKey</em>&gt;<strong>,DELETE</strong></span>)</h2>
+<p class="MsoNormal">This macro deletes a registry key.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">Name of the registry to delete. <br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List">Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REGSET,Param1,DELETE)<br />
+		@dbHot(REGSET,@PROFILE\Param1,DELETE)<br />
+		</td>
+	</tr>	
+</table>
+
+
+<!--ToFix
+<h2 id="VARRESET" class="auto-style4"><span class="auto-style4">@dbHot(VARRESET,</span><span class="auto-style1">&lt;<em><span class="auto-style4">RegistryKey</span></em>&gt;<strong><span class="auto-style4">*</span></strong></span><span class="auto-style4">)</span></h2>
+<p class="MsoNormal">This macro deletes one or more registry keys.</p>
+<p class="auto-style5">BUG : Détruit toute les clés peut-importe le masque : 
+Détruit tout @dbHot(VARRESET,PARAM1*)</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">RegistryKey</td>
+		<td class="List">Name of the registry to delete. 
+		<br />
+		<br />
+		Location for windows 7 or higher using 64 bit: \\HKEY LOCAL 
+		MACHINE\SOFTWARE\WOW6432Node\Store Management\Counter<br />
+		Otherwise: \\HKEY LOCAL MACHINE\SOFTWARE\Store Management\Counter<br />
+		<br />
+		Use * at the end of the registry key allows you to delete all registry 
+		keys whose names begin with these characters.<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List">Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(VARRESET,MyRegistryKey)<br />
+		@dbHot(VARRESET,@PROFILE\My*)<br />
+		</td>
+	</tr>	
+</table>
+-->
+
+</body>
+</html>

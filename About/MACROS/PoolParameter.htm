@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Pool parameters</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	background-color: #FFFFFF;
+}
+.auto-style4 {
+	color: #000080;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+<h1>Pool parameters</h1>
+<p>These macros have been developed to work with the parameter pool.</p>
+
+
+
+<h2 id="WizReset">@WizReset</h2>
+<p>This macro resets all the parameter in the pool. </p>
+
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" style="height: 23px" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizReset</td>
+	</tr>	
+</table>
+
+
+<h2 id="WizSet">@WizSet(<span class="auto-style1">&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;</span>)</h2>
+<p>This macro creates and sets the value of a pool parameter if it does not 
+exist.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Name</td>
+		<td class="List">Pool parameter name </td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Value</td>
+		<td class="List">Value</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizSet(V01=Hello)</td>
+	</tr>	
+</table>
+
+<h2 id="WizRpl">@WizRpl(<span class="auto-style1">&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;</span>)</h2>
+<p>This macro replaces the value of a pool parameter.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Name</td>
+		<td class="List">Pool parameter name</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Value</td>
+		<td class="List">Value</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizRpl(V01=Bye)</td>
+	</tr>	
+</table>
+
+<h2 id="WizAppend">@wizAppend(<span class="auto-style1">&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;</span>)</h2>
+<p>This macro appends the value &lt;<em>Value</em>&gt; to the current value of a pool 
+parameter.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Name</td>
+		<td class="List">Pool parameter name</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Value</td>
+		<td class="List">The append value</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@wizSet(V01=Loc)<br />
+		@wizAppend(V01= Software)<br />
+		@wizGet(V01)&nbsp;&nbsp; will return "<span class="auto-style4"><strong>Loc 
+		Software</strong></span>"</td>
+	</tr>	
+</table>
+
+<h2 id="WizClr">@WizClr(<span class="auto-style1">&lt;<em>Name</em>&gt;</span>)</h2>
+<p>This macro clears the value of a pool parameter.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Name</td>
+		<td class="List">Pool parameter name</td>
+		<td class="List">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizClr(V01)</td>
+	</tr>	
+</table>
+
+<span id="WizGet"> </span>
+<h2 >@WizGet(<span class="auto-style1">&lt;<em>Name</em>&gt;</span>)</h2>
+<p>This macro returns the value of a pool parameter.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Name</td>
+		<td class="List">Pool parameter name</td>
+		<td class="List">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value of the pool parameter</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizGet(V01)</td>
+	</tr>	
+</table>
+
+
+<h2 id="WizIsBlank" class="auto-style3">@WizIsBlank(<span class="auto-style1">&lt;<em>Name</em>&gt;</span>)</h2>
+<p>This macro checks whether a pool parameter is missing or this value is empty.</p>
+<p>Please note:&nbsp; Space character is not an empty value.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Name</td>
+		<td class="List">Pool parameter name</td>
+		<td class="List">Required</td>
+	</tr>
+
+</table>
+
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >1 if the pool parameter is missing or this value is 
+		empty otherwise 0</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizIsBlank(V01)</td>
+	</tr>	
+</table>
+
+<h2 id="WizExist" class="auto-style3">@WizExist(<span class="auto-style1">&lt;<em>Name</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro checks if a pool parameter exist in the pool.<o:p></o:p></p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Name</td>
+		<td class="List">Pool parameter name</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >1 if the parameter exist otherwise 0</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizExist(V01)</td>
+	</tr>	
+</table>
+
+<h2 id="WizExistAll" class="auto-style3">@WizExistAll(<span class="auto-style1">&lt;<em>NameMask</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro checks if a pool parameter name beginning with &lt;<em>NameMask</em>&gt; 
+exist in the pool.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">NameMask</td>
+		<td class="List">The first characters of a 
+		parameter name.</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >1 if at least one parameter exist otherwise 0</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizExistAll(V)</td>
+	</tr>	
+</table>
+
+
+<h2 id="ParamToLine">@TOOLS(PARAMTOLINE)</h2>
+<p class="MsoNormal">This macro returns a string containing all the pool 
+parameters with their value.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Format : <strong>/</strong>&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;
+		<strong>/</strong>&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;
+		<strong>/</strong>&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;
+		<strong>…<br />
+		</strong>Where &lt;<em>Name</em>&gt; is a pool parameter name and &lt;<em>Value</em>&gt; 
+		is the value assigned to the parameter.</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@WizRpl(PARAM1=Value1);<br />
+		@WizRpl(PARAM2=Value2);<br />
+		@WizRpl(PARAM3=Value3);<br />
+		@TOOLS(PARAMTOLINE)&nbsp;&nbsp;&nbsp;&nbsp; will return&nbsp; "<span class="auto-style4"><strong>/PARAM1=Value1 
+		/PARAM2=Value2 /PARAM3=Value3</strong></span>"</td>
+	</tr>	
+</table>
+
+
+</body>
+</html>

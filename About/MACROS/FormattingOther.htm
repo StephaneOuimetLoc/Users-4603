@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Miscellaneous formatting &amp; routines</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+.auto-style5 {
+	background-color: #FFFF00;
+}
+.auto-style6 {
+	background-color: #FFFFFF;
+}
+.auto-style4 {
+	color: #000080;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+
+<h1>Miscellaneous formatting &amp; routines</h1>
+
+
+
+
+<h2 id="FMTRND"><span class="auto-style6">@Fmt(RND</span><span class="auto-style1"><strong><span class="auto-style6">,</span></strong>&lt;<em><span class="auto-style6">Value</span></em><span class="auto-style6">&gt;</span></span><span class="auto-style6">)</span></h2>
+<p class="MsoNormal">This macro normalizes a UPC code.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px ">Value</td>
+		<td class="List"  >Value to be formatted.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@Fmt(RND,123)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<strong>
+		<span class="auto-style3" >0000000000123<br />
+		</span></strong><span >@Fmt(RND,4027)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp; </strong>will return<strong>
+		<span class="auto-style3">0000000004027</span></strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTUPCA">@Fmt(UPCA<span class="auto-style1"><strong>,</strong>&lt;<em>Code</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro reformats a UPC &lt;<em>Code</em>&gt; to print a UPC 
+bar code.<br />
+The macro normalizes UPC code before reformat.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Code</td>
+		<td class="List"  >UPC Code to be formatted.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >UPC Code formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(NUL,0000000000123)&nbsp; will return
+		<span class="auto-style3"><strong>P00000p@@ABCf</strong></span><br />
+		@Fmt(NUL,123)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return 		<span class="auto-style3"><strong>P00000p@@ABCf</strong></span></td>
+	</tr>	
+</table>
+
+
+
+<h2 id="FMTUPC">@Fmt(UPC<span class="auto-style1"><strong>,</strong>&lt;<em>Code</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro normalizes Universal Product Code(UPC) &lt;<em>Code</em>&gt;<br />
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Code</td>
+		<td class="List"  >UPC code to be normalized.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >UPC Code normalized.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(UPC,123)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>0000000000123</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="FMTGPC">@Fmt(GPC<span class="auto-style1"><strong>,</strong>&lt;<em>Code</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro normalizes Global Product Classification(GPC)&nbsp; &lt;<em>Code</em>&gt;&nbsp;&nbsp;&nbsp;</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Code</td>
+		<td class="List"  >GPC code to be normalized.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >GPC Code normalized.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(GPC,100) will return
+		<span class="auto-style3"><strong>00000000100 <br />
+		</strong></span>@Fmt(GPC,1000000000100) will return
+		<span class="auto-style3"><strong>0000000001007 </strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTVER">@Fmt(VER<span class="auto-style1"><strong>,</strong>&lt;<em>VersionStr</em>&gt;&lt;<em>V</em>&gt;&lt;<strong>.</strong><em>M</em>&gt;&lt;<strong>.</strong><em>R</em>&gt;&lt;<strong>.</strong><em>B</em>&gt;<strong>,</strong>&lt;<em>OutputMask</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro formats the SMS version number.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">VersionStr</td>
+		<td class="List"  >V or Ver or Version.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">V</td>
+		<td class="List"  >Version number.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+		<tr>
+		<td class="List" style="width: 100px">M</td>
+		<td class="List"  >Minor version number.</td>
+		<td class="List" style="width: 50px">Optionnal</td>
+	</tr>	
+		<tr>
+		<td class="List" style="width: 100px">R</td>
+		<td class="List"  >Revision number</td>
+		<td class="List" style="width: 50px">Optionnal</td>
+	</tr>	
+		<tr>
+		<td class="List" style="width: 100px">B</td>
+		<td class="List"  >Build number.</td>
+		<td class="List" style="width: 50px">Optionnal</td>
+	</tr>	
+		<tr>
+		<td class="List" style="width: 100px">OutputMask</td>
+		<td class="List"  >
+		<span style="mso-ansi-language:EN-US">
+<o:p>VV=Version,</o:p><o:p>MM=Minor,RR=Revision,BB=Build.</o:p></span></td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >SMS version number formatted.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(VER,V1,VVMMRRBB)&nbsp; &nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>01000000</strong></span><br />
+		@Fmt(VER,Ver2.1,VMM)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>201</strong></span><br />
+		@Fmt(VER,V3.2.12,VMMRRBB)&nbsp;will return <span class="auto-style3"><strong>
+		3021200</strong></span></td>
+	</tr>	
+</table>
+
+
+
+<h2 id="FMTMARGIN">@Fmt(MARGIN:<span class="auto-style1">&lt;<em>NumberOfDecimal</em>&gt;<strong>,</strong>&lt;<em>UnitCost</em>&gt;<strong>,</strong>&lt;<em>SellingPrice</em>&gt;<strong>,</strong>&lt;<em>SellingQuantity</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro returns the calculated margin percentage.</p>
+<p class="MsoNormal">Mathematical formula: ((&lt;SellingPrice&gt; / &lt;SellingQuantity&gt;) 
+- &lt;UnitCost&gt;) / (&lt;SellingPrice&gt; / &lt;SellingQuantity) * 100</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px font-weight: normal;">
+		NumberOfDecimal</td>
+		<td class="List"  >Number of decimals of margin 
+		percentage returned.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		UnitCost</td>
+		<td class="List"  >Unit net cost. Example: Content 
+		of field F1140.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+		<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		SellingPrice</td>
+		<td class="List"  >Selling price. Example: Content 
+		of field F30.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+		<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		SellingQuantity</td>
+		<td class="List"  >Selling price quantity. Example: 
+		Content of field F31.</td>
+		<td class="List" style="width: 50px">Required</td>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Margin percentage including percent sign at the end.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(MARGIN:2,0.50,0.75,1) will 
+		return <span class="auto-style3"><strong>33.33%</strong><br />
+		</span>@Fmt(MARGIN:1,0.50,1.25,2) will return <span class="auto-style3">
+		<strong>20.0%</strong></span></td>
+	</tr>	
+</table>
+
+
+
+
+<h2 id="FMTCOMA">@Fmt(COMA<span class="auto-style1"><strong>,</strong>&lt;<em>ParamName</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>,</strong>&lt;<em>ParamList</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro returns a formatted numeric value or a string 
+value of a parameter from a comma parameter list.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId&gt;.<br />
+</em>Case is insensitive.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		ParamName</td>
+		<td class="List" >Name of a parameter to search.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"  >Display format of a numeric 
+		value.<br />
+		If the format is not present, the value is returned without formatting.</td>
+		<td class="List" style="width: 50px">Optionnal</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List"  >A total variable. The system will add the return 
+		value of the macro to the value of the TotalId.<br />
+		Add <strong>=</strong> at the beginning of TotalId to clear the value of
+		<em>&lt;TotalId&gt;</em> before adding the value.&nbsp; Example:
+		<span class="auto-style4"><strong>=T1<br />
+		</strong></span>Add <strong>-</strong> at the beginning of &lt;<em>TotalId</em>&gt; 
+		to substract the return value of the macro to the value of the &lt;<em>TotalId</em>&gt;. 
+		Example: <strong><span class="auto-style3">-T1</span><br />
+		</strong>Add <strong>-</strong> at the end of TotalId to substract the 
+		value of &lt;<em>TotalId</em>&gt; to the return value of the macro. Example:
+		<strong>
+		<span class="auto-style4">T1-<br />
+		</span></strong>You can increment or decrement more than one TotalId.&nbsp; 
+		Just separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		ParamList</td>
+		<td class="List" >ParamList format: Name1=Value1<strong>,</strong>Name2=Value2<strong>,</strong>Name3=Value3 …<br />
+		Each <em>Name=Value</em> is separated by a comma.<br />
+		Example: F1034=200.99,F01=00000100</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Formatted parameter value.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">
+		@Fmt(COMA,F1034,$10:2,T1,F1034=200.99,F01=00000100) will return "<span class="auto-style3"><strong> 
+		$200.99"</strong></span><br />
+		@Fmt(COMA,F01,,,F1034=200.99,F01=00000100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return "<span class="auto-style3"><strong>00000100"</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="FMTCMP">@Fmt(CMP<span class="auto-style1"><strong>,</strong>&lt;<em>Condition</em>&gt;<strong>,</strong>&lt;<em>TrueStatements</em>&gt;<strong>,</strong>&lt;<em>FalseStatements</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro executes code depending on whether a 
+condition is true or false.<br />
+Fix value can be returned or multiple macros can be executed in &lt;<em>TrueStatements</em>&gt; 
+and &lt;<em>FalseStatements</em>&gt;<br />
+<br />
+<strong>Please note: <br />
+</strong>Be sure to put <strong>®</strong> in place of <strong>@</strong> when 
+you want to run a macro based on the result of the condition.<br />
+Macros with <strong>®</strong> will be executed only if the condition is true or 
+false.<br />
+<br />
+Value compare are always string comparison. To be able to do numeric comparison, 
+you need to fix the length to be the same on both side of the condition.<br />
+Example: To get True as a result of the @WIZGET (X1) &lt;@WIZGET (X2) condition 
+when X1 = 2 and X2 = 100, you must do the following:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+@FMT(R3,000@WIZGET(X1))&gt;@FMT(R3,000@WIZGET(X2))</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px;">
+		Condtion</td>
+		<td class="List"  >Code in the condition must return 
+		True or False.</td>
+		<td class="List" style="width: 50px;">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px;">
+		TrueStatements</td>
+		<td class="List"  >Fix value or multiple macros</td>
+		<td class="List" style="width: 50px;">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px;">
+		FalseStatements</td>
+		<td class="List"  >Fix value or multiple macros</td>
+		<td class="List" style="width: 50px">Optionnal</td>
+	</tr>			
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Fix value returned or multiple macros executed.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">
+		@WizRpl(X1=2); @WizRpl(X2=100);<br />
+		@Fmt(CMP,@Fmt(R3,000@WizGet(X1))&lt;@Fmt(R3,000@WizGet(X2)),2 is lower than 
+		100, 2 is not lower than 100)&nbsp;&nbsp; will return "<span class="auto-style3"><strong>2 
+		is lower than 100</strong></span>"<br />
+		<br />
+		CMP=@Fmt(CMP,1=1,"Identical")&nbsp;&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong>Identical</strong></span>"
+		<br />
+		CMP=@Fmt(CMP,1=0,"Identical")&nbsp;&nbsp;&nbsp;&nbsp; will return 
+		nothing because the &lt;<em>FalseStatements</em>&gt; is not define <br />
+		<br />
+		@WizClr(X);<br />
+		@Fmt(CMP,1=1,®WizAppend(X=1);®WizAppend(X=1);,®WizAppend(X=2);®WizAppend(X=2))&nbsp;&nbsp;&nbsp;&nbsp; 
+		The content of <span class="auto-style3"><strong>X</strong></span> will 
+		be <span class="auto-style3"><strong>11</strong></span> <br />
+		<br />
+		@WizClr(X);<br />
+		@Fmt(CMP,1=2,®WizAppend(X=1);®WizAppend(X=1);,®WizAppend(X=2);®WizAppend(X=2))&nbsp;&nbsp;&nbsp;&nbsp; 
+		The content of <span class="auto-style3"><strong>X</strong></span> will 
+		be <span class="auto-style3"><strong>22</strong></span> <br />
+		<br />
+		@Fmt(CMP,@WizGet(F81)=1,TAXABLE,NON TAXABLE) will return "<span class="auto-style3"><strong>TAXABLE"</strong></span> 
+		if the content of F81 is equal to 1</td>
+	</tr>	
+</table>
+
+
+
+
+
+<h2 id="dbHOTREPORTFOOTER">@dbH<span class="auto-style1"><strong>ot(CURRENT,REPORTFOOTER,</strong>&lt;<em>Store</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro returns the store name (F1531) and the store 
+long number (F1530) in a string for the current store or store passed as a 
+parameter.<br />
+The store name (F1531) and the store long number (F1530) are separated by 
+space+hyphen+space ( - )<br />
+If the store does not exist, an empty string will be returned.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Store</td>
+		<td class="List"  >Terminal store.<br />
+		If the parameter is missing then the current magazine will be used</td>
+		<td class="List" style="width: 50px; ">Optionnal</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Store name (F1531) and the store long number (F1530) .</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@dbHot(CURRENT,REPORTFOOTER)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>Grocey Store - 5901<br class="auto-style5" />
+		</strong></span>@dbHot(CURRENT,REPORTFOOTER,001) will return
+		<span class="auto-style3"><strong>Grocey Store - 5901</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="dbHOTDRL">@dbH<span class="auto-style1"><strong>ot(CURRENT,DRL,</strong>&lt;<em>Field</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro returns the value of a field of the table 
+DRIL_PAGE according to the current positioning in the table.<br />
+The default field is the combination of fields F1597 and F1598 separated by:</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List"  >Field name.</td>
+		<td class="List" style="width: 50px; ">Optionnal</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value of field.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@dbHot(CURRENT,DRL)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>Ac1Fct:0 <br />
+		</strong></span>@dbHot(CURRENT,DRL,F1600) will return
+		<span class="auto-style3"><strong>exit </strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="dbHOTFCT">@dbH<span class="auto-style1"><strong>ot(CURRENT,FCT,</strong>&lt;<em>Field</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro returns the value of a field of the FCT_TAB table 
+(<strong>Function</strong> table) according to the current positioning in the table.<br />
+The default field is F1063</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List"  >Field name.</td>
+		<td class="List" style="width: 50px; ">Optionnal</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value of field.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@dbHot(CURRENT,FCT)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>1</strong></span> <br />
+		@dbHot(CURRENT,FCT,F1064) will return <span class="auto-style3"><strong>
+		Start</strong></span> </td>
+	</tr>	
+</table>
+
+
+
+</body>
+</html>

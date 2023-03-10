@@ -1,0 +1,722 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>General informations</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+.auto-style4 {
+	background-color: #FFFF00;
+}
+.auto-style5 {
+	background-color: #FFFFFF;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+<h1>General informations</h1>
+<p>These macros return memory information.</p>
+
+
+
+<h2 id="STORE">@STORE</h2>
+<p>This macro returns the current store number.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current store number</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@Store</td>
+	</tr>	
+</table>
+
+<h2 id="TER">@TER</h2>
+<p>This macro returns the current terminal/station number.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current terminal/station number</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@TER</td>
+	</tr>	
+</table>
+
+<h2 id="USER">@USER</h2>
+<p>This macro returns the current user code.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current user code</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@USER</td>
+	</tr>	
+</table>
+
+<h2 id="USERNAME">@USERNAME</h2>
+<p>This macro returns the current user name.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current user name</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@USERNAME</td>
+	</tr>	
+</table>
+
+<h2 id="RUN">@RUN</h2>
+<p>This macro returns the current storeman directory.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current storeman directory</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@RUN</td>
+	</tr>	
+</table>
+
+<h2 id="OFFICE">@OFFICE</h2>
+<p>This macro returns the current office directory.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current office directory</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@OFFICE</td>
+	</tr>	
+</table>
+
+<h2 id="CNC">@CNC</h2>
+<p>This macro returns the current session secret code.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current session secret code</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@CNC</td>
+	</tr>	
+</table>
+
+
+<h2 id="PROFILE">@PROFILE</h2>
+<p>This macro returns the current CN user number.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current CN user number</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@PROFILE</td>
+	</tr>	
+</table>
+
+<!--ToComplete
+<h2 id="READKEY">@READKEY(<span class="auto-style1">&lt;<em>ModuleNumber</em>&gt;</span>)</h2>
+<p>This macro checks if a module exist in the registration key.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List" style="width: 1010px">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ModuleNumber</td>
+		<td class="List" style="width: 1010px; background-color: #FFFF00">
+		Incomplete</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >If the module exist then it return 1 otherwise it return 0</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@READKEY(???)</td>
+	</tr>	
+</table> -->
+
+<h2 id="NETOFFICE">@dbHot(NET_OFFICE,<span class="auto-style1">&lt;<em>StoreNumber</em>&gt;</span>,<span class="auto-style1">&lt;<em>TerminalNumber</em>&gt;</span>)</h2>
+<p>This macro returns the office path of a particular node by looking for the store and 
+terminal number inside the exchange provider to get the path this node. The 
+sending target path is used to get the office directory by removing the end of 
+the driver path.<br />
+Example of sending driver: \\POS1\C\STOREMAN\OFFICE\XF001001\ and the result of 
+the macro would be \\POS1\C\STOREMAN\OFFICE\.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">StoreNumber</td>
+		<td class="List" >Searched store number </td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TerminalNumber</td>
+		<td class="List">Searched terminal number</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Office path</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(NET_OFFICE,001,901)</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="COMPUTER">@dbHot(COMPUTER)</h2>
+<p>This macro returns the computer name in network neighbourhood.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Computer name</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(COMPUTER)</td>
+	</tr>	
+</table>
+
+
+<h2 id="REDIRMSG">@dbHot(REDIRMSG)</h2>
+<p>This macro returns the current message redirection node.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" style="background-color: #FFFFFF" >Current message 
+		redirection node</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REDIRMSG)</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="REDIRMAIL">@dbHot(REDIRMAIL)</h2>
+<p>This macro returns the current mail redirection node.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List">Return value</th>
+	</tr>
+	<tr>
+		<td class="List" style="background-color: #FFFFFF" >Current mail 
+		redirection node</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHOT(REDIRMAIL)</td>
+	</tr>	
+</table>
+
+
+<h2 id="USERLEVEL">@dbHot(USERLEVEL)</h2>
+<p>This macro returns the current user level of the logged in user.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current user level of the logged in user</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(USERLEVEL)</td>
+	</tr>	
+</table>
+
+<h2 id="LEVELFIELD">@dbHot(LEVELFIELD)</h2>
+<p>This macro returns the field associate with the user right in the function table.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Field associate with the user right in the function table</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(LevelField) return<span class="auto-style3"><strong> F1054</strong></span></td>
+	</tr>	
+</table>
+
+
+
+<h2 id="LANGUAGE">@dbHot(LANGUAGE)</h2>
+<p>This macro returns the current language code from the operating system.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current language code from the operating system</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(LANGUAGE) return <span class="auto-style3">
+		<strong>EN</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="APPLICATION">@dbHot(APPLICATION)</h2>
+<p>This macro returns what is the application process that is running this 
+macro.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" ><span class="auto-style3"><strong>SMSHTTPS</strong></span> if it's the HTTPS server 
+		process <br />
+		<span class="auto-style3">
+		<strong>WINSERVER</strong></span> if it's the Win server process<br />
+		<span class="auto-style3">
+		<strong>WINPROCESSOR</strong></span> if it's the Processor process<br />
+		<span class="auto-style3">
+		<strong>WIN</strong></span> or <span class="auto-style3"> <strong>TRS</strong></span> if 
+		it's the 350 
+		applications.</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbHot(APPLICATION)</td>
+	</tr>	
+</table>
+
+<h2 id="TABLEBYTERMINAL">@dbHot(TABLEBYTERMINAL)</h2>
+<p>This macro returns the string <strong>_@STORE@TER </strong>if <em>
+TableByTerminal</em>=1 in System.ini<br />
+<strong>@STORE</strong> is replaced by the current store number.<br />
+<strong>@TER</strong> is replaced by the current terminal/station number.<br />
+<br />
+Reminder : <em>TableByTerminal</em> specifies if the system avoids to use the 
+same transaction tables on all POS terminals.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" ><strong>_@STORE@TER </strong>if <em>TableByTerminal</em>=1 
+		in System.ini</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(TABLEBYTERMINAL) return
+		<span class="auto-style3">
+		<strong>_001901</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="dbHOTCURRENT">@dbH<span class="auto-style1"><strong>ot(CURRENT,</strong>&lt;<em>PropertyName</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro returns the value of a property of the<span class="auto-style5"> CNO 
+object.&nbsp; </span> </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		PropertyName</td>
+		<td class="List">Properties that can be modified:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>DN<br />
+				XN</strong><br />
+				<strong>DEVIDX</strong><br />
+				<strong>DEVXCH</strong><br />
+				<strong>DEVCAP<br />
+				CLIENTIPADDRESS</strong><br />
+				</td>
+				<td style="width: 255px">Save login device&nbsp;&nbsp;&nbsp;
+				<br />
+				Save login device&nbsp;&nbsp;&nbsp;&nbsp;<br />
+				Save login dev idx<br />
+				Allowed Xchange for this device<br />
+				Allowed Capability for this device<br />
+				Client IP address</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		Value</td>
+		<td class="List"  >Value of property.</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@dbHot(CURRENT,DN)&nbsp; 
+		will return <span class="auto-style3"><strong>ESUITE<br />
+		</strong></span>@dbHot(CURRENT,XN)&nbsp; will return
+		<span class="auto-style3"><strong>HTTP</strong></span> </td>
+	</tr>	
+</table>
+
+<h2 id="dbHOTCURRENTSET">@dbH<span class="auto-style1"><strong>ot(CURRENT,</strong>&lt;<em>PropertyName</em>&gt;<strong>,SET,</strong>&lt;<em>Value</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro assigns a new value to a property of the<span class="auto-style5"> CNO 
+object.&nbsp;</span></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		PropertyName</td>
+		<td class="List">Properties that can be modified:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>DN<br />
+				XN</strong><br />
+				<strong>DEVIDX</strong><br />
+				<strong>DEVXCH</strong><br />
+				<strong>DEVCAP</strong><br />
+				</td>
+				<td style="width: 255px">Save login device&nbsp;&nbsp;&nbsp;
+				<br />
+				Save login device&nbsp;&nbsp;&nbsp;&nbsp;
+				<br />
+				Save login dev idx<br />
+				Allowed Xchange for this device<br />
+				Allowed Capability for this device</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		Value</td>
+		<td class="List"  >New value to assign.</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@dbHot(CURRENT,DN,SET,<span class="auto-style4">?</span>)</td>
+	</tr>	
+</table>
+
+
+
+
+<h2 id="dbHOTCLK">@dbHot<span class="auto-style1"><strong>(CLK,</strong>&lt;<em>InfoType</em>&gt;</span>)&nbsp;</h2>
+<p class="MsoNormal">This macro returns general information about the current 
+session.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		InfoType</td>
+		<td class="List"  >Available information:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>RND<br />
+				NUM<br />
+				REF<br />
+				CODE<br />
+				NAME<br />
+				USERLEVEL<br />
+				LEVELFIELD<br />
+				FILTER<br />
+				LANGUAGE<br />
+				PROFILE<br />
+				OUTPUT<br />
+				DEVICENAME<br />
+				DEVICE<br />
+				DEVIDX<br />
+				DEVXCH<br />
+				DEVCAP<br />
+				GASPUMP<br />
+				STORE<br />
+				CUSTOMER<br />
+				DATE</strong><br />
+				</td>
+				<td style="width: 292px">Secret number<br />
+				Sequence number<br />
+				Access number <br />
+				Operator<br />
+				User name <br />
+				User level<br />
+				Field user level<br />
+				Cashier Fitler<br />
+				Cashier Language<br />
+				Session Name<br />
+				Save login output<br />
+				Save login device<br />
+				Save login device<br />
+				Save login dev idx<br />
+				Allowed Xchange for this device<br />
+				Allowed Capability for this device<br />
+				Pump linked to this session<br />
+				Global store<br />
+				Global customer<br />
+				Global date in SQL format</td>
+			</tr>
+			
+		</table></td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Specific information.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000; ">
+		@dbHot(CLK,DEVICE)&nbsp; <strong>&nbsp;</strong>&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>ESUITE</strong></span><br />
+		@dbHot(CLK,OUTPUT)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return 		<span class="auto-style3"><strong>HTTPSTREAM</strong></span><br />
+		@dbHot(CLK,USERLEVEL)&nbsp; will return <span class="auto-style3">
+		<strong>7</strong></span><br />
+		@dbHot(CLK,LEVELFIELD) will return <span class="auto-style3"><strong>
+		F1047<br />
+		</strong></span>@dbHot(CLK,DATE)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<strong><span class="auto-style3">12/30/2019</span></strong></td>
+	</tr>	
+</table>
+
+
+<h2 id="dbHOTCURRENTTEMP">@dbHot<span class="auto-style1"><strong>(CURRENT,TEMP</strong></span>)&nbsp;</h2>
+<p class="MsoNormal">This macro returns a unique name. Often used to generate a 
+unique file name.</p>
+<p class="MsoNormal">The name is composed by : <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Current store number.<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Current terminal/station number.<br />
+&nbsp;&nbsp;&nbsp;&nbsp; A underscore character.<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Current session number (length = 3, left padding with 
+0).<br />
+&nbsp;&nbsp;&nbsp;&nbsp; TMPDB counter defined in Windows Registry. Equivalent 
+to @dbhot(regGen,TMPDB,1,30). (length = 2, left padding with 0).</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Returns a unique name.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000; ">
+		@dbHot(CURRENT,TEMP) <strong>&nbsp;</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>001901_00112</strong></span><br />
+		TMP_@dbHot(CURRENT,TEMP)<strong>&nbsp; </strong>&nbsp;<strong> </strong>&nbsp;will 
+		return <span class="auto-style3"><strong>TMP_001901_00113</strong></span></td>
+	</tr>	
+</table>
+
+
+
+</body>
+</html>

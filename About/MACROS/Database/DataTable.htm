@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Data table &amp; view</title>
+	<link rel="stylesheet" href="../work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style2 {
+	color: #000080;
+}
+.auto-style3 {
+	background-color: #FFFF00;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+<h1>Data table &amp; view</h1>
+<p>These macros is used to select data from the database. The data returned is 
+stored in a result table, called result set. The result set will be referred 
+by the variable &lt;<em>ResultSetId</em>&gt;.&nbsp; </p>
+<table id="table4" style="margin:0px; padding:0px"  border="1">
+	<tr>
+		<td style="padding:0px" >Format of &lt;ResultSetId&gt;:<br /> </td>
+		<td style="padding:0px">Length: 2<br />
+				First character: Q<br />
+				Second character: number 1 to 9 inclusive.<br />
+		</td>
+	</tr>			
+</table>
+
+
+<p>List of macros using an initialized &lt;<em>ResultSetId</em>&gt;:<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>@dbTable(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FILTER</strong> 
+&lt;<em>SQLWhereClause</em>&gt;<strong>)</strong><br />
+&nbsp; &nbsp; <strong>&nbsp; @dbTable(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SQLWhereClause</em>&gt;<strong>)<br />
+&nbsp;
+</strong>&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIELD_COUNT,#)<br />
+&nbsp;
+</strong>&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,RECORD_COUNT,#)<br />
+&nbsp;
+</strong>&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIELD,</strong>&lt;<em>ColumnIndex</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIRST)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,PREV)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,NEXT)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,LAST)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbAuto(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;NumberOfColumns&gt;<strong>)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,NODES,</strong>&lt;PrefixTag&gt;<strong>,</strong>&lt;<em>SuffixTag</em>&gt;<strong>)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,VALUES,</strong>&lt;<em>OutputFormat</em>&gt;<strong>)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,SAVE_BLOB,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>FileName</em>&gt;<strong>)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbFind(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SearchFieldName</em>&gt;<strong>,</strong>&lt;<em>SearchValues</em>&gt;<strong>,</strong>&lt;<em>ReturnFieldNames</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIELDS)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FINDFIELD,</strong>&lt;<em>FieldName</em>&gt;<strong>)</strong><br />
+&nbsp;
+&nbsp;&nbsp;&nbsp; <strong>@DbAutoHdr(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>NumberOfColumns</em>&gt;<strong>)</strong></p>
+
+
+<h2 id="DBTABLE1">&nbsp;@dbTable(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SQLSelectStatement</em>&gt;</span>)</h2>
+<p>This macro executes a query and stores the result in a result set.<br />
+Please note: If a date is used, for example in a WHERE clause, then its format 
+is MM/DD/YYYY (SQL Format)</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">ResultSetId</td>
+		<td class="List">An identifier that will contain a result set.<br />
+		Length: 2<br />
+				First character: Q<br />
+				Second character: number 1 to 9 inclusive.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">SQLSelectStatement</td>
+		<td class="List">SQL Select.<br />
+		</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q1,SELECT F03, F238 FROM DEPT_TAB ORDER BY 
+		F1965,F03)<br />
+		@dbView(Q1,Select F01,F02,* from Pos_tab where F09='@WizGet(Date)');</td>
+	</tr>	
+</table>
+
+
+<h2 id="DBTABLE2">@dbTable(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;<strong>,FILTER </strong>&lt;<em>SQLWhereClause</em>&gt;</span>)</h2>
+<p>This macro applies a filter on an existing result set.</p>
+<p>Can only be used after a call to @dbTable 
+or @dbView.</p>
+<p>Please note: If a date is used, then its format is MM/DD/YYYY (SQL Format)</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; height: 71px;">ResultSetId</td>
+		<td class="List" style="height: 71px" >An identifier containing a result set.<br />
+		Length: 2<br />
+				First character: Q<br />
+				Second character: number 1 to 9 inclusive.</td>
+		<td class="List" style="height: 71px" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		SQLWhereClause</td>
+		<td class="List">SQL Where clause.<br />
+		</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q1,SELECT F03, F238 FROM DEPT_TAB ORDER BY 
+		F1965)<br />
+		@dbTable(Q1,FILTER F03=5)<br />
+		<br />
+		@WizRpl(F09=10/18/2012);<br />
+		@dbView(Q3,Select F01,F02,* from Pos_tab order by Pos_tab.F01);<br />
+		@dbTable(Q3,FILTER F09='@WizGet(F09)');</td>
+	</tr>	
+</table>
+
+<h2 id="DBTableEXEC">@dbTable(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;<strong>,EXEC
+</strong>&lt;<em>SQLStoreProc</em>&gt;</span>)</h2>
+<p>This macro executes a SQL store procedure and stores the result in a result 
+set.<br />
+Before execute the SQL store procedure, you must assign a pool parameter for 
+each parameter of the store procedure.<br />
+<br />
+Example : Store procedure: ALTER PROCEDURE [dbo].[eSuite_pos_ttl] (@F1032 
+INT=NULL) <br />
+Parameter: @WizRPL(1032=7)<br />
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List">An identifier that will contain a result set.<br />
+		Length: 2<br />
+				First character: Q<br />
+				Second character: number 1 to 9 inclusive.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">SQLStoreProc</td>
+		<td class="List">Name of the SQL store procedure</td>
+		<td class="List">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List"  >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@WIZRPL(F1032=7)<br />
+		@dbTable(Q1,EXEC dbo.eSuite_pos_ttl) <br />
+		@dbRow(Q1,RECORD_COUNT,#)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>3<br />
+		</strong></span>@dbRow(Q1,F1034,#)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>3008<br />
+		</strong></span>@dbTable(Q1,FILTER F65&gt;0) <br />
+		@dbRow(Q1,RECORD_COUNT,#)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>1</strong></span><br />
+		@dbRow(Q1,F1034,#)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>4002</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="DBVIEW">@dbView(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SQLSelectStatement</em>&gt;</span>)</h2>
+<p>This macro executes a query and stores the result in a result set.</p>
+<p>Please note: If a date is used, for example in a WHERE clause, then its 
+format is MM/DD/YYYY (SQL Format)</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List">An identifier that will contain a result set.<br />
+		Length: 2<br />
+				First character: Q<br />
+				Second character: number 1 to 9 inclusive.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">SQLSelectStatement</td>
+		<td class="List">SQL Select.<br />
+		</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbView(Q9,SELECT F03, F238 FROM DEPT_TAB ORDER BY 
+		F1965,F03)<br />
+		@dbTable(Q9,FILTER F03&gt;10); </td>
+	</tr>	
+</table>
+
+
+<h2 id="DBTableEXEC">@dbView(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;<strong>,EXEC
+</strong>&lt;<em>SQLStoreProc</em>&gt;</span>)</h2>
+<p>This macro executes a SQL store procedure and stores the result in a result 
+set.<br />
+Before execute the SQL store procedure, you must assign a pool parameter for 
+each parameter of the store procedure.<br />
+<br />
+Example : Store procedure: ALTER PROCEDURE [dbo].[eSuite_pos_ttl] (@F1032 
+INT=NULL) <br />
+Parameter: @WizRPL(1032=7)<br />
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List">An identifier that will contain a result set.<br />
+		Length: 2<br />
+				First character: Q<br />
+				Second character: number 1 to 9 inclusive.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">SQLStoreProc</td>
+		<td class="List">Name of the SQL store procedure</td>
+		<td class="List">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List"  >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@WIZRPL(F1032=7)<br />
+		@dbView(Q1,EXEC dbo.eSuite_pos_ttl) <br />
+		@dbRow(Q1,RECORD_COUNT,#)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>3<br />
+		</strong></span>@dbRow(Q1,F1034,#)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>3008<br />
+		</strong></span>@dbTable(Q1,FILTER F65&gt;0) <br />
+		@dbRow(Q1,RECORD_COUNT,#)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>1</strong></span><br />
+		@dbRow(Q1,F1034,#)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>4002</strong></span></td>
+	</tr>	
+</table>
+
+</body>
+</html>

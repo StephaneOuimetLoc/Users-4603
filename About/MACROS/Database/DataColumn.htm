@@ -1,0 +1,557 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Data column</title>
+	<link rel="stylesheet" href="../work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style2 {
+	color: #000080;
+}
+.auto-style4 {
+	color: #000000;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+<h1>Data Column</h1>
+
+
+
+<h2 id="DBROWFIELDS">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,FIELDS) </h2>
+<p>This macro returns the field list of the result set.<span style="font-size:10.5pt;font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;color:black;
+mso-ansi-language:EN-CA;mso-fareast-language:EN-CA;mso-bidi-language:AR-SA"><span style="mso-spacerun:yes">&nbsp;
+</span>All fields are separated by a comma.<br />
+Can only be used after a call to @dbTable or @dbView.</span></p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List" >An identifier containing a result set.</td>
+		<td class="List" >Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The field list of the query.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbROW(Q3,FIELDS)&nbsp;&nbsp;will return <span class="auto-style2">
+		<strong>F01, F38, F39</strong></span></td>
+	</tr>	
+	</table>
+
+
+<h2 id="DBROWFINDFIELD">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,FINDFIELD,<span class="auto-style1">&lt;<em>FieldName</em>&gt;</span>) </h2>
+<p>This macro checks if a field name exists in a result set.<br />
+Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px;">ResultSetId</td>
+		<td class="List" >An identifier containing a result set.</td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FieldName</td>
+		<td class="List" >Column name.</td>
+		<td class="List" >Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List">Returns the field name if it 
+		exists in the query else returns empty string.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbROW(Q3,FINDFIELD,F38)&nbsp;&nbsp;will return 
+		<span class="auto-style2"><strong>F38</strong></span><br />
+		@dbROW(Q3,FINDFIELD,F10)&nbsp;&nbsp;will return 
+		<span class="auto-style2"><em><strong>empty</strong></em></span> string</td>
+	</tr>	
+	</table>
+
+
+<h2 id="DBAUTOHDR">@dbAutoHdr(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,<span class="auto-style1">&lt;<em>NumberOfFields</em>&gt;</span>) </h2>
+<p>This macro returns the name of the fields of a result set in Html format.<br />
+You can generate only the first X fields using the &lt;<em>NumberOfFields</em>&gt; 
+parameter.<br />
+Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List" >An identifier containing a result set.</td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">
+		<span class="auto-style1">NumberOfFields</span></td>
+		<td class="List">Number of fields to generate.<br />
+		If not specified, all fields will be generated. </td>
+		<td class="List">Optionnal</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List">Return value</th>
+	</tr>
+	<tr>
+		<td class="List">Returns the name of each field.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39,F1000 from COST_TAB)<br />
+		@dbAutoHdr(Q3)&nbsp;&nbsp;&nbsp;&nbsp; will return :<br />
+		<span class="auto-style2"><strong>UPC code&lt;/th&gt;<br />
+		&lt;th&gt;Base cost&lt;/th&gt;<br />
+		&lt;th&gt;Base cost date&lt;/th&gt;<br />
+		&lt;th&gt;Target Identifier</strong><br />
+		</span><br />
+		@dbAutoHdr(Q3,2)&nbsp;&nbsp;will return :<br />
+		<span class="auto-style2"><strong>UPC code&lt;/th&gt;<br />
+		&lt;th&gt;Base cost</strong></span><br />
+		</td>
+	</tr>	
+	</table>
+
+
+<h2 id="dbFLD">@dbFld(<span class="auto-style1">&lt;<em>TableName</em>&gt;</span>,<span class="auto-style1">&lt;<em>Prefix</em>&gt;<strong>,</strong>&lt;<em>ExcludeListOfFieldNames</em>&gt;</span>) </h2>
+<p>This macro returns a comma-separated list of all available fields from a 
+table.<br />
+A prefix can be added to each field name returned. <br />
+A list of field names can be excluded from the list of returned fields.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">TableName</td>
+		<td class="List"  >Name of SQL table.</td>
+		<td class="List"  >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Prefix</td>
+		<td class="List" >Prefix added to each field name.</td>
+		<td class="List" >Optionnal</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">
+		ExcludeListOfFieldNames</td>
+		<td class="List">List of field names to exclude from the list of 
+		returned fields.<br />
+		Each field name must be separate by a semicolon.</td>
+		<td class="List">Optionnal</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List">Return value</th>
+	</tr>
+	<tr>
+		<td class="List">List of field names separated by commas.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbFld(REC_TTL)&nbsp;&nbsp;&nbsp; wil return&nbsp;
+		<span class="auto-style2"><strong>
+		F1032,F1034,F64,F65,F67,F1039,F1067,F1093,F1094,F1095,F1096,F1097,F1098<br />
+		</strong></span>@dbFld(REC_TTL,prfx.)&nbsp;&nbsp; will return&nbsp;
+		<span class="auto-style2"><strong>
+		prfx.F1032,prfx.F1034,prfx.F64,prfx.F65,prfx.F67,prfx.F1039,prfx.F1067,prfx.F1093,prfx.F1094,prfx.F1095,prfx.F1096,prfx.F1097,prfx.F1098
+		<br />
+		</strong></span>
+		@dbFld(REC_TTL,,F1067;F1093;F1094;F1095;F1096;F1097;F1098) will return&nbsp;
+		<span class="auto-style2"><strong>F1032,F1034,F64,F65,F67,F1039 </strong></span>
+		</td>
+	</tr>	
+	</table>
+
+
+<h2 id="dbDCT">@dbDct(<span class="auto-style1">&lt;<em>ListOfFieldNames</em>&gt;</span>) </h2>
+<p>This macro returns a list of fields with their data type.<br />
+The list of fields passed in parameter to the macro is a comma-separated list.<br />
+Useful to create a SQL table.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">ListOfFieldNames</td>
+		<td class="List" >List of field names sparated by 
+		comma.</td>
+		<td class="List"  >Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List">Return value</th>
+	</tr>
+	<tr>
+		<td class="List">List of field names with their data type separated by commas.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List"  >@dbDct(F01,F03) will return
+		<span class="auto-style2"><strong>F01 CHAR(13),F03 INTEGER </strong>
+		</span><br />
+		@dbDct(F09,F10) will return <span class="auto-style2"><strong>F09 
+		DATE(7),F10 TIME(4) </strong></span><br />
+		@dbDct(F12,F30,F40) will return <span class="auto-style2"><strong>F12 
+		NUMBER(5,3),F30 MONEY,F40 FLAG(1) </strong></span>
+		</td>
+	</tr>	
+	</table>
+
+
+<h2 id="dbCol">@dbCol(<span class="auto-style1">&lt;<em>TableName1</em>&gt;<strong>,</strong>&lt;<em>TableName2</em>&gt;<strong>,</strong>&lt;<em>Prefix</em>&gt;</span>) </h2>
+<p>This macro returns a list of all fields present in both tables &lt;<em>TableName1</em>&gt; 
+and &lt;<em>TableName2</em>&gt;.<br />
+Instead of supplying a table name :<br />
+&nbsp;&nbsp; You can supply a field list by setting &lt;<em>TableName1</em>&gt; or &lt;<em>TableName2</em>&gt; 
+to <strong>'</strong>FIELDS=&lt;FieldName&gt;,&lt;FieldName&gt;, etc.<strong>'</strong> (Don’t forget to put 
+in quotes)<br />
+&nbsp;&nbsp; You can supply the name of a pool parameter which contains a field 
+list by setting &lt;<em>TableName1</em>&gt; or &lt;<em>TableName2</em>&gt; to 
+PARAM=&lt;PoolParameterName&gt;<br />
+&nbsp;&nbsp; You can supply query identifier created by the dbTable or dbView 
+by setting &lt;<em>TableName1</em>&gt; or &lt;<em>TableName2</em>&gt; to QUERY=&lt;<em>ResultSetId</em>&gt;<br />
+You can optionally add a prefix to all fields by setting the &lt;<em>Prefix</em>&gt; 
+parameter.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">TableName1</td>
+		<td class="List"  >Name of SQL table.<br />
+		or<br />
+		FIELDS=<strong>'</strong>&lt;FieldName&gt;,&lt;FieldName&gt;, etc.<strong>'</strong><br />
+		or<br />
+		PARAM=&lt;PoolParameterName&gt;<br />
+		or<br />
+		QUERY=&lt;ResultSetId&gt;</td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">TableName2</td>
+		<td class="List" >Name of SQL table.<br />
+		or<br />
+		FIELDS=<strong>'</strong>&lt;FieldName&gt;,&lt;FieldName&gt;, etc.<strong>'</strong><br />
+		or<br />
+		PARAM=&lt;PoolParameterName&gt;<br />
+		or<br />
+		QUERY=&lt;ResultSetId&gt;</td>
+		<td class="List" >Required</td>
+	</tr>		
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">Prefix</td>
+		<td class="List"  >Prefix added to each field name.</td>
+		<td class="List"  >Optionnal</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List">Return value</th>
+	</tr>
+	<tr>
+		<td class="List">List of field names separated by commas.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List"  >@dbCol(ACC_TAB,REC_TTL)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return<span class="auto-style2"><strong> F1034, F1039 </strong>
+		<br />
+		</span>@dbCol(ACC_TAB,POS_TAB,PRFX.)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will returns <span class="auto-style2"><strong>PRFX.F01,PRFX.F1000 <br />
+		</strong></span>@dbCol('FIELDS=F01,F201,F04',POS_TAB,PRFX.) will returns
+		<span class="auto-style2"><strong>PRFX.F01,PRFX.F04 <br />
+		</strong></span>@dbCol('FIELDS=F01,F201,F04','FIELDS=F202,F04',PRFX.)&nbsp; 
+		will return<span class="auto-style2"> </span><strong>
+		<span class="auto-style2">PRFX.F04 </span><br />
+		<br />
+		</strong>@WizRPL(Test1=F01,F03,F04)<br />
+		@dbCol('FIELDS=F01,F02,F03',PARAM=TEST1)&nbsp;&nbsp; will return&nbsp;
+		<span class="auto-style2"><strong>F01,F03 <br />
+		<br />
+		</strong></span>@dbView(Q4,Select F01,F38,F39 from COST_TAB)<br />
+		@dbCol(QUERY=Q4,'FIELDS=F01,F02,F03')<span class="auto-style2"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></span>
+		will return<span class="auto-style2"><strong> F01 </strong></span></td>
+	</tr>	
+	</table>
+	
+	
+	
+	<h2 id="dbColOp">@dbCol(<span class="auto-style1">&lt;<em>TableName1</em>&gt;<strong>,</strong>&lt;<em>TableName2</em>&gt;<strong>,</strong>&lt;<em>Prefix1</em>&gt;<strong>,</strong>&lt;<em>Operator</em>&gt;<strong>,</strong>&lt;<em>Prefix2</em>&gt;</span>) </h2>
+<p>This macro returns a SQL string or HTML code according to the &lt;<em>Operator</em>&gt; with the list of all fields 
+present in both tables &lt;TableName1&gt; and &lt;TableName2&gt;.<br />
+Instead of supplying a table name :<br />
+&nbsp;&nbsp; You can supply a field list by setting &lt;<em>TableName1</em>&gt; or &lt;<em>TableName2</em>&gt; 
+to <strong>'</strong>FIELDS=&lt;<em>FieldName</em>&gt;,&lt;<em>FieldName</em>&gt;, etc.<strong>'</strong> (Don’t forget to put 
+in quotes)<br />
+&nbsp;&nbsp; You can supply the name of a pool parameter which contains a field 
+list by setting &lt;<em>TableName1</em>&gt; or &lt;<em>TableName2</em>&gt; to 
+PARAM=PoolParameterName<br />
+&nbsp;&nbsp; You can supply query identifier created by the dbTable or dbView 
+by setting &lt;<em>TableName1</em>&gt; or &lt;<em>TableName2</em>&gt; to QUERY=&lt;<em>ResultSetId</em>&gt;<br />
+Add a prefix to the fields corresponding to &lt;<em>TableName1</em>&gt; by setting the 
+&lt;<em>Prefix1</em>&gt; parameter.<br />
+Add a prefix to the fields corresponding to &lt;<em>TableName2</em>&gt; by setting the 
+&lt;<em>Prefix2</em>&gt; parameter.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">TableName1</td>
+		<td class="List" >Name of SQL table.<br />
+		or<br />
+		FIELDS=<strong>'</strong>&lt;FieldName&gt;,&lt;FieldName&gt;, etc.<strong>'</strong><br />
+		or<br />
+		PARAM=&lt;PoolParameterName&gt;<br />
+		or<br />
+		QUERY=&lt;ResultSetId&gt;</td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">TableName2</td>
+		<td class="List"  >Name of SQL table.<br />
+		or<br />
+		FIELDS=<strong>'</strong>&lt;FieldName&gt;,&lt;FieldName&gt;, etc.<strong>'</strong><br />
+		or<br />
+		PARAM=&lt;PoolParameterName&gt;<br />
+		or<br />
+		QUERY=&lt;ResultSetId&gt;</td>
+		<td class="List"  >Required</td>
+	</tr>
+		<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">Prefix1</td>
+		<td class="List"  >Prefix added to each field name of &lt;TableName1&gt;</td>
+		<td class="List" >Optionnal</td>
+	</tr>
+		<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">Operator</td>
+		<td class="List" style="height: 91px"><table id="table7" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 10px"><strong>=AND<br />
+				<br />
+				&lt;&gt;OR</strong><br />
+				<strong><br />
+				=:</strong><br />
+				<strong><br />
+				HTMLTABLE</strong><br />
+				<strong><br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				HTMLSIMPLE</strong></td>
+				<td style="width: 922px">Generate the where clause to compare if 
+				all values are equal in the 2 tables.<br />
+				<br />
+				Generate the where clause to compare if there is at least a 
+				different value for the same field in the 2 tables. <br />
+				<br />
+				Generate a set clause to assign field to a memory value.<br />
+				<br />
+				Generate HTML table for fields with different content in both 
+				tables.<br />
+				Work only if &lt;<em>TableName</em>&gt; is a query : QUERY=&lt;<em>ResultSetId</em>&gt;<br />
+				&lt;<em>Prefix1</em>&gt; and &lt;<em>Prefix2</em>&gt; are not used with this 
+				operator.<br />
+				Format : <br />
+&nbsp; &lt;table class="RptTab"&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th colspan="2" class="RptCap"&gt;<span class="auto-style2"><strong>FieldName</strong></span>&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td class="RptValNew"&gt;<span class="auto-style2"><strong>Value 
+				of the field in TableName1</strong></span>&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td class="RptValOld"&gt;<span class="auto-style2"><strong>Value 
+				of the field in TableName2</strong></span>&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />
+&nbsp; &lt;/table&gt;<br />
+				<br />
+				Generate HTML table for fields with different content in both 
+				tables.<br />
+				Work only if &lt;<em>TableName</em>&gt; is a query : QUERY=&lt;<em>ResultSetId</em>&gt;<br />
+				&lt;<em>Prefix1</em>&gt; and &lt;<em>Prefix2</em>&gt; are not used with this 
+				operator.<br />
+				Format : <br />
+&nbsp; &lt;table class="RptTab"&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th class="RptCap"&gt;<span class="auto-style2"><strong>FieldName</strong></span>&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td class="RptValNew"&gt;<span class="auto-style2"><strong>Value 
+				of the field in TableName1</strong></span>&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;<br />
+&nbsp; &lt;/table&gt;</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List"  >Required</td>
+	</tr>
+		<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">Prefix2</td>
+		<td class="List"  >Prefix added to each field name of &lt;TableName2&gt;</td>
+		<td class="List" >Optionnal</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List">Return value</th>
+	</tr>
+	<tr>
+		<td class="List">String.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List"  >@dbCol(ACC_TAB,REC_TTL,PRFX1.,=AND,PRFX2.)<br />
+		will generate :<br />
+		<span class="auto-style2"><strong>&nbsp; (PRFX1.F1034=PRFX2.F1034 OR 
+		(PRFX1.F1034 IS NULL AND PRFX2.F1034 IS NULL)) and <br />
+&nbsp; (PRFX1.F1039=PRFX2.F1039 OR (PRFX1.F1039 IS NULL AND PRFX2.F1039 IS 
+		NULL)) <br />
+		<br />
+		</strong></span>@dbCol(ACC_TAB,REC_TTL,PRFX1.,&lt;&gt;OR,PRFX2.) <br />
+		will generate :<br />
+		<span class="auto-style2"><strong>&nbsp;&nbsp; PRFX1.F1034&lt;&gt;PRFX2.F1034 
+		or (PRFX1.F1034 IS NULL AND PRFX2.F1034 IS NOT NULL) or (PRFX1.F1034 IS 
+		NOT NULL AND PRFX2.F1034 IS NULL) or<br />
+&nbsp;&nbsp; PRFX1.F1039&lt;&gt;PRFX2.F1039 or (PRFX1.F1039 IS NULL AND PRFX2.F1039 IS 
+		NOT NULL) or (PRFX1.F1039 IS NOT NULL AND PRFX2.F1039 IS NULL) <br />
+		<br />
+		</strong></span>@dbCol(ACC_TAB,REC_TTL,PRFX1.,=:,PRFX2.)<strong><br />
+		</strong>will generate :<br />
+		<strong><span class="auto-style2">&nbsp;&nbsp; 
+		PRFX1.F1034=:PRFX2.F1034,PRFX1.F1039=:PRFX2.F1039 <br />
+		</span></strong><br />
+		@dbTable(Q1,Select * from ACC_TAB);<br />
+		@dbTable(Q2,Select * from REC_TTL);<br />
+		@dbCol(QUERY=Q1,QUERY=Q2,,HTMLTABLE)<br />
+		will generate :<br />
+		<strong><span class="auto-style2">&lt;table class="RptTab"&gt;<br />
+&nbsp; &lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th colspan="2" class="RptCap"&gt;F103<span >9&lt;/th&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--ToFix		</span><span class="auto-style3">&lt;/td&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="auto-style3">Devrait etre &lt;/th&gt; Corriger macro ?<br />-->
+		</span></span><br class="auto-style2" />
+		<span class="auto-style2">&nbsp; &lt;/tr&gt;<br />
+&nbsp; &lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td class="RptValNew"&gt;Description from Q1&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td class="RptValOld"&gt;Description from Q2&lt;/td&gt;<br />
+&nbsp; &lt;/tr&gt;<br />
+		&lt;/table&gt;<br />
+		<br />
+		</span></strong><span class="auto-style4">@dbTable(Q1,Select * from 
+		ACC_TAB);<br />
+		@dbTable(Q2,Select * from REC_TTL);<br />
+		@dbCol(QUERY=Q1,QUERY=Q2,,HTMLSIMPLE)<br />
+		will generate :<br />
+		</span><strong><span class="auto-style2">&lt;table class="RptTab"&gt;<br />
+&nbsp; &lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th class="RptCap"&gt;F1039 &lt;/th&gt;&nbsp;&nbsp;&nbsp;
+<!--ToFix		<span class="auto-style3">&lt;/td&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="auto-style3">Devrait etre &lt;/th&gt; Corriger macro ?<br />-->
+		</span><br />
+		<span class="auto-style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td class="RptValNew"&gt;Description from Q1&lt;/td&gt;<br />
+&nbsp; &lt;/tr&gt;<br />
+		&lt;/table&gt;</span></strong></span></td>
+	</tr>	
+	</table>
+
+
+</body>
+</html>

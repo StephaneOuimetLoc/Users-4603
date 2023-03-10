@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Encode /Decode specials characters</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+.auto-style4 {
+	font-size: 11.0pt;
+	font-family: Calibri, sans-serif;
+	margin-left: 0cm;
+	margin-right: 0cm;
+	margin-top: 0cm;
+	margin-bottom: .0001pt;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+
+
+
+
+
+<h1>Encode/decode specials characters</h1>
+<p>Some characters have special significance in different cases (HTML, URL, 
+Javascript,etc.) and should be converted to preserve their meanings.<br />
+For example, in HTML, it is not possible to use the <strong>&lt;</strong> character as it is used to 
+create and close tags. It must be converted to its corresponding <strong>&amp;lt;</strong> entity to be 
+displayed in the content of an HTML page.</p>
+
+
+<h2 id="FMT2HTML">@Fmt(<span class="auto-style1"><strong>2HTML,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro encodes text to HTML by replacing:<br />
+&nbsp;&nbsp;&nbsp; <span class="auto-style3"><strong>&lt;</strong></span> 
+by <em>&amp;lt;</em><br />
+&nbsp;&nbsp;&nbsp; <span class="auto-style3"><strong>&gt;</strong></span> 
+by <em>&amp;gt;</em><br />
+&nbsp;&nbsp;&nbsp; <span class="auto-style3"><strong>&amp;</strong></span> 
+by <em>&amp;amp;</em><br />
+&nbsp;&nbsp;&nbsp; <span class="auto-style3"><strong>(</strong></span> by
+<span class="auto-style3"><strong>[</strong></span>&nbsp;&nbsp; and
+<span class="auto-style3"><strong>&nbsp;&nbsp; )</strong></span> by
+<span class="auto-style3"><strong>]</strong></span>&nbsp;&nbsp;&nbsp; for macro 
+parentheses. i.e. @WizGet(A) will become @WizGet[A]<br />
+&nbsp;&nbsp;&nbsp; double quotes <span class="auto-style3"><strong>"</strong></span> 
+by <em>&amp;quot;</em></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to encode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Encoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@Fmt(2HTML,(&lt;"A&amp;B"&gt;)) will return
+		<strong>
+		<span class="auto-style3">[&amp;lt;&amp;quot;A&amp;amp;B&amp;quot;&amp;gt;]<br />
+		<br />
+		</span></strong>If Registry TheKey=(Description = @WizGet(DSC))<br />
+		@dbHot(VARGET,TheKey,,MACRO)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>(Description = 
+		@WizGet(DSC))<br />
+		</strong></span>@Fmt(2HTML,@dbHOT(VARGET,TheKey,,MACRO)) will return
+		<span class="auto-style3"><strong>(Description = @WizGet[DSC])</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="FMTHTML2">@Fmt(<span class="auto-style1"><strong>HTML2,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro decode text from HTML by replacing:<br />
+&nbsp;&nbsp;&nbsp; <em>&amp;quot;</em> by double quote
+<span class="auto-style3"><strong>"</strong></span><br />
+&nbsp;&nbsp;&nbsp; <em>&amp;lt;</em> by <span class="auto-style3"><strong>
+&lt;</strong></span> <br />
+&nbsp;&nbsp;&nbsp; <em>&amp;gt;</em> by <span class="auto-style3"><strong>
+&gt;</strong></span><br />
+&nbsp;&nbsp;&nbsp; <em>&amp;amp;</em> by <span class="auto-style3">
+<strong>&amp;</strong></span><br />
+&nbsp;&nbsp;&nbsp; <em>&amp;space; </em>by <span class="auto-style3">
+<strong>space</strong></span><br />
+&nbsp;&nbsp;&nbsp; <em>&amp;reg;</em> by <span class="auto-style3">
+<strong>«</strong></span> (#174)<br />
+&nbsp;&nbsp;&nbsp; <em>&amp;copy; </em>by <span class="auto-style3">
+<strong>®</strong></span> (#169)</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to decode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Decoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(HTML2,[&amp;lt;&amp;quot;A&amp;amp;B&amp;quot;&amp;gt;]) will return
+		<span class="auto-style3"><strong>[&lt;"A&amp;B"&gt;] </strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="FMT2URL">@Fmt(<span class="auto-style1"><strong>2URL,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p class="auto-style4"><span style="mso-fareast-language:EN-CA">This macro 
+encode text to URL by replacing each space by<span class="auto-style3"> <strong>
++</strong></span><o:p><br />
+</o:p>
+Also, if 
+character not in : <span class="auto-style3"><strong>0</strong></span> to
+<span class="auto-style3"><strong>9</strong></span>, <span class="auto-style3">
+<strong>a</strong></span> to <span class="auto-style3"><strong>z</strong></span> 
+and <span class="auto-style3"><strong>A</strong></span> to
+<span class="auto-style3"><strong>Z</strong></span> the macro replace the 
+character by %Hexadecimal ASCII Character (Ex : <span class="auto-style3">
+<strong>!</strong></span> replaced by %21)<o:p></o:p></span></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to encode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Encoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(2URL,@Loc Software!) will return
+		<span class="auto-style3"><strong>%40Loc+Software%21 </strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTURL2">@Fmt(<span class="auto-style1"><strong>URL2,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p class="auto-style4"><span style="mso-fareast-language:EN-CA">This macro 
+decode text from URL by replacing :<br />
+<span style="mso-fareast-language:EN-CA">
+<span class="auto-style3"> <strong>&nbsp;&nbsp;&nbsp; + </strong></span>by<span class="auto-style3"> </span><o:p>space<br />
+&nbsp;&nbsp;&nbsp; %Hexadecimal ASCII 
+Character by corresponding character (Ex: %21 replaced by !)</o:p></span></span></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to decode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Decoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(URL2,%40Loc+Software%21) will return
+		<span class="auto-style3"><strong>@Loc Software!</strong></span></td>
+	</tr>	
+</table>
+
+
+
+
+
+<h2 id="FMT2JS">@Fmt(<span class="auto-style1"><strong>2JS,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p>This macro encodes text to Javascript by replacing:<br />
+&nbsp;&nbsp;&nbsp; backslash&nbsp; <span class="auto-style3"><strong>\</strong></span>&nbsp; 
+by <span class="auto-style3"><strong>\\</strong></span><br />
+&nbsp;&nbsp;&nbsp; double quotes&nbsp; <span class="auto-style3"><strong>"</strong></span> 
+by <span class="auto-style3"><strong>\"<br />
+</strong></span>&nbsp;&nbsp;&nbsp; single quote&nbsp;
+<span class="auto-style3"><strong>'</strong></span> 
+by <span class="auto-style3"><strong>\'</strong></span></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to encode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Encoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(2JS,\don't Stop) will return
+		<span class="auto-style3"><strong> 
+		\\don\'t Stop</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTJS2">@FMT(<span class="auto-style1"><strong>JS2,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p>This macro decode text from Javascript by replacing:<br />
+&nbsp;&nbsp;&nbsp; <span class="auto-style3"><strong>\\&nbsp;&nbsp; </strong>
+</span>by backslash&nbsp; <span class="auto-style3"><strong>\</strong></span>&nbsp; <br />
+<span class="auto-style3"><strong>&nbsp;&nbsp;&nbsp; \"&nbsp;&nbsp; </strong>
+</span>by double quotes&nbsp; <span class="auto-style3"><strong>"</strong></span>&nbsp;
+&nbsp;&nbsp;&nbsp; <br />
+<strong><span class="auto-style3">&nbsp;&nbsp;&nbsp; \'</span></strong>&nbsp;&nbsp;&nbsp; 
+by single quote&nbsp; <span class="auto-style3"><strong>'</strong></span></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to decode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Decoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(JS2,\\don\'t Stop) will return
+		<span class="auto-style3"><strong>\don't Stop</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMT2SPACE">@Fmt(<span class="auto-style1"><strong>2SPACE,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p>This macro encodes the space character.<br />
+Space is replaced by underscore character <span class="auto-style3"><strong>_</strong></span>.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to encode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Encoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(2SPACE,Loc Software) will return<span class="auto-style3"><strong> 
+		Loc_Software</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTSPACE2">@Fmt(<span class="auto-style1"><strong>SPACE2,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p>This macro decodes the space character.<br />
+Underscore character <span class="auto-style3"><strong>_</strong></span> is 
+replaced by a space.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to decode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Decoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(SPACE2,Loc_Software) will return
+		<span class="auto-style3"><strong>Loc Software</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMT2QUOT">@Fmt(<span class="auto-style1"><strong>2QUOT,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro encodes text by replacing :<br />
+&nbsp;&nbsp;&nbsp; each quote by 2 quotes<br />
+&nbsp;&nbsp;&nbsp; carriage return + line feed (#13#10) by 1 space<br />
+&nbsp;&nbsp;&nbsp; carriage return (#13) by 1 space<br />
+&nbsp;&nbsp;&nbsp; line feed (#10) by 1 space</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to encode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Encoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(2QUOT,Don't stop believin) will return "<span class="auto-style3"><strong>Don''t 
+		stop believin</strong></span>"<br />
+		</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="FMTQUOT2">@Fmt(<span class="auto-style1"><strong>QUOT2,</strong>&lt;<em>TextValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro decodes text by replacing 2 consecutives quotes 
+by 1 quote.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TextValue</td>
+		<td class="List" >Text to decode.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Decoded text</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(QUOT2,Don''t stop believin) will return "<span class="auto-style3"><strong>Don't 
+		stop believin</strong></span>"<br />
+		</td>
+	</tr>	
+</table>
+
+
+</body>
+</html>

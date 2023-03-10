@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Boolean routines</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+
+
+
+
+
+<h1>Boolean routines</h1>
+<p>The macros in this section allow you to manipulate boolean.</p>
+
+<h2>@Fmt(FLG<span class="auto-style1"><strong>,</strong>&lt;<em>Value</em>&gt;<strong>,</strong>&lt;<em>TrueText</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns a specific text if &lt;<em>Value</em>&gt; is 
+equal to <strong>1</strong>.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Value</td>
+		<td class="List" >Boolean value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">TrueText</td>
+		<td class="List" >Returns this text if the value is 1.</td>
+		<td class="List" style="width: 50px">Optionnal<br />
+		Default<span class="auto-style3"><strong>: checked</strong></span></td>
+	</tr>		
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Boolean formatted value.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(FLG,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong>checked</strong></span>"<br />
+		@Fmt(FLG,1,True) will return "<span class="auto-style3"><strong>True</strong></span>"<br />
+		@Fmt(FLG,0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return ""<br />
+		@Fmt(FLG,0,True) will return "" </td>
+	</tr>	
+</table>
+
+
+
+
+
+</body>
+</html>

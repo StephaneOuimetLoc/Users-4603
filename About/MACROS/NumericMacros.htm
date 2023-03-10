@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Numeric routines</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+.auto-style4 {
+	background-color: #FFFF00;
+}
+.auto-style5 {
+	background-color: #FFFFFF;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+<h1>Numeric routines</h1>
+<p>The macros in this section allow you to manipulate numbers and 
+currency.</p>
+
+
+
+
+<h2 id="FMT">@Fmt(<span class="auto-style1">&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>Value</em>&gt;<strong>)</strong></span></h2>
+<p class="MsoNormal">This macro formats number and currency.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; "><a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List" >Display format of a numeric value.<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">Value</td>
+		<td class="List" >The numeric value to format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>			
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The numeric value formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(Z$10:2,0.0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return ""<br />
+		@Fmt($10:2,10.253)&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong> 
+		$10.25</strong></span>"<br />
+		@Fmt(#10:2,10.253)&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong> 
+		10.25</strong></span>"<br />
+		@Fmt(%10:2,10.253)&nbsp;&nbsp; will return " <span class="auto-style3">
+		<strong>10.25%</strong></span>" <br />
+		@Fmt(Z%10:2,10.253) will return " <span class="auto-style3"><strong>
+		10.25%</strong></span>" </td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTPAD">@Fmt(<span class="auto-style1"><strong>!</strong>&lt;<em>PadCharacter</em>&gt;<strong>:</strong>&lt;<em>LengthInCharacters</em>&gt;<strong>:</strong>&lt;<em>NumberOfDecimal</em>&gt;<strong>,</strong>&lt;<em>Value</em>&gt;<strong>)</strong></span></h2>
+<p class="MsoNormal">This macro formats number/currency and replace white spaces 
+by &lt;<em>PadCharacter</em>&gt;.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">PadCharacter</td>
+		<td class="List" >The character is used to replace white spaces in the 
+		formatted value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+		<tr>
+		<td class="List" style="width: 100px; font-weight: normal">LengthInCharacters</td>
+		<td class="List">Maximum length for the formatted 
+		value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+		<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">NumberOfDecimal</td>
+		<td class="List">Number of decimal of the 
+		formatted value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">Value</td>
+		<td class="List" >The numeric value to format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>		
+	
+	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The numeric value formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(!0:10:0,10.253)&nbsp;&nbsp;&nbsp; wil return "<span class="auto-style3"><strong>0000000010</strong></span>"
+		<br />
+		@Fmt(!0:10:1,10.253)&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong>00000010.3</strong></span>"
+		<br />
+		@Fmt(!Z:5:0,100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return "<span class="auto-style3"><strong>ZZ100</strong></span>"</td>
+	</tr>	
+</table>
+
+<h2 id="FMTNUL">@Fmt(NUL<span class="auto-style1"><strong>,</strong>&lt;<em>Value</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns an empty string if &lt;<em>Value</em>&gt; 
+is equal 
+to <strong>n/a</strong>. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Value</td>
+		<td class="List"  >Value to be formatted.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(NUL,n/a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return ""<br />
+		@Fmt(NUL,1234.55)&nbsp; will return "<span class="auto-style3"><strong>1234.55</strong></span>"&nbsp; </td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTTRIMZERO">@Fmt(TRIMZERO<span class="auto-style1"><strong>,</strong>&lt;<em>Value</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macros removes leading zeros of numeric &lt;<em>Value</em>&gt;<br />
+This macros also removes leading and trailing space.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Value</td>
+		<td class="List" >Numeric value</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value formatted.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(TRIMZERO,000200)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<strong>"</strong><span class="auto-style3"><strong>200</strong>"<br />
+		</span>@Fmt(TRIMZERO,000200.200)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3">
+		<strong>"200.200</strong>"<br />
+		</span>@Fmt(TRIMZERO,&nbsp;&nbsp;&nbsp; 000200&nbsp;&nbsp;&nbsp; )&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3">
+		<strong>"200</strong>"</span></td>
+	</tr>	
+</table>
+
+<h2 id="FMTMOD10">@Fmt(MOD10<span class="auto-style1"><strong>,</strong>&lt;<em>IntValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macros returns the modulus 10 (Luhn algorithm) check 
+digit of &lt;<em>IntValue</em>&gt;</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">IntValue</td>
+		<td class="List" >Integer value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Number between 0 and 9.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(MOD10,202)&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>8</strong></span><br />
+		@Fmt(MOD10,203)&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>5</strong></span><br />
+		@Fmt(MOD10,204)&nbsp;&nbsp; will return <span class="auto-style3">
+		<strong>2</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="FMTMOD10P">@Fmt(MOD10P<span class="auto-style1"><strong>,</strong>&lt;<em>IntValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macros returns the modulus 10 (Plessey algorithm) check 
+digit of &lt;<em>IntValue</em>&gt;</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">IntValue</td>
+		<td class="List" >Integer value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Number between 0 and 9.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(MOD10P,202)&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>2</strong></span><br />
+		@Fmt(MOD10P,203)&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>0</strong></span><br />
+		@Fmt(MOD10P,204)&nbsp;&nbsp; will return <span class="auto-style3">
+		<strong>8</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="FMTHUDON">@Fmt(HUDON<span class="auto-style1"><strong>,</strong>&lt;<em>IntValue</em>&gt;</span>)</h2>
+<p class="MsoNormal"><span class="auto-style5">This macros returns the Hudon 
+check digits of &lt;</span><em><span class="auto-style5">IntValue</span></em>&gt;</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">IntValue</td>
+		<td class="List" >Integer value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" style="background-color: #FFFFFF" >Check digits</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(HUDON,10202) will return
+		<span class="auto-style3"><strong>102020 <br />
+		</strong></span>@Fmt(HUDON,9203)<strong>&nbsp; </strong>&nbsp;will 
+		return <span class="auto-style3"><strong>092031</strong></span> </td>
+	</tr>	
+</table>
+
+<h2 id="FMTHENING">@Fmt(HENING<span class="auto-style1"><strong>,</strong>&lt;<em>IntValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macros returns the Henning Brauer check digits of &lt;<em>IntValue</em>&gt; </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">IntValue</td>
+		<td class="List" >Integer value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" style="background-color: #FFFFFF; " >Number between 0 and 9.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(HENING,202) will return
+		<span class="auto-style3"><strong>2 </strong></span><br />
+		@Fmt(HENING,203) will return <span class="auto-style3"><strong>0</strong></span><br />
+		@Fmt(HENING,208) will return <span class="auto-style3"><strong>9</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTLTR">@Fmt(LTR<span class="auto-style1">&lt;<em>Language</em>&gt;<strong>,</strong>&lt;<em>IntValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro converts a number &lt;<em>IntValue</em>&gt; in a 
+literal format.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Language</td>
+		<td class="List" >EN&nbsp;&nbsp; English<br />
+		FR&nbsp;&nbsp; French<br />
+		ES&nbsp;&nbsp; Spanish</td>
+		<td class="List" style="width: 50px">Optionnal<br />
+		Default: <strong>EN</strong></td>
+	</tr>		
+	<tr>
+		<td class="List" style="width: 100px">IntValue</td>
+		<td class="List" >Must be greater than zero.<br />
+		Value 0 returns an empty string.<br />
+		If the value contains decimals, they will be truncated before 
+		processing.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >String.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(LTR,1001)&nbsp;&nbsp;&nbsp; 
+		will return "<span class="auto-style3"><strong>One thousand, one</strong></span>"<br />
+		@Fmt(LTRES,1001) will return "<span class="auto-style3"><strong>MIL UNO</strong></span>"<br />
+		@Fmt(LTRFR,1001) will return "<span class="auto-style3"><strong>Mille
+		</strong></span>un"</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="FMTTRUNC">@Fmt(TRUNC<span class="auto-style1">&lt;FloatingPointNumber&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns the integer part of a floating point 
+number. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FloatingPointNumber</td>
+		<td class="List" >Number that can contain a fractional part. </td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Integer value.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(TRUNC,12.55) <strong>&nbsp;&nbsp;
+		</strong>will return <span class="auto-style3"><strong>12 <br />
+		</strong></span>@Fmt(TRUNC,-10.99)&nbsp; will return
+		<span class="auto-style3"><strong>-10 </strong></span><br />
+		@Fmt(TRUNC,10.001)&nbsp; will return <span class="auto-style3"><strong>
+		10 </strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTRANDOM">@Fmt(RANDOM<span class="auto-style1">&lt;<em>MaxNumber</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro generates random number larger or equal to 0 and 
+strictly less than &lt;<em>MaxNumber</em>&gt;. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">MaxNumber</td>
+		<td class="List" >Integer value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Random integer value.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(RANDOM,5) will return
+		<span class="auto-style3"><strong>4</strong></span> <br />
+		@Fmt(RANDOM,5) will return <span class="auto-style3"><strong>1</strong></span><br />
+		@Fmt(RANDOM,5) will return <span class="auto-style3"><strong>0</strong></span> </td>
+	</tr>	
+</table>
+
+</body>
+</html>

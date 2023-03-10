@@ -1,0 +1,1027 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Data display formats</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+.auto-style8 {
+	font-family: "Courier New", Courier, monospace;
+}
+.auto-style9 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.auto-style10 {
+	text-align: left;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+
+
+<h1>Data display formats &amp; text operation</h1>
+<p>This section describes data display formats and 
+operations to apply to text before formatting.<br />
+</p>
+<p>Data display format depends on the type of data to be displayed. <br />
+Here is the list of data display formats:</p>
+
+
+<td class="List" >
+	<table id="table8" style="margin:0px" border="1">
+		<tr>
+			<td style="width: 10px">&lt;<strong>TextDisplayFormat</strong>&gt;<strong><br />
+				</strong>&lt;<strong>NumericDisplayFormat</strong>&gt;<br />
+				&lt;<strong>DateDisplayFormat</strong>&gt;
+			</td>
+			<td style="width: 922px">To format a string.<br />
+				To format a string representing a number.<br />
+				To format a string representing a date or a time.
+			</td>
+		</tr>			
+	</table>
+</td>
+
+<p>&lt;<em>DataDisplayFormat</em>&gt; represents all the different formats.</p>
+<p>Data display format will be used in several macros like : </p>
+
+
+<td class="List" >
+	<table id="table7" style="margin:0px" border="1">
+   		<tr>
+			<td >
+				<strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DataDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong><br />
+				<strong>@dbHot(</strong>&lt;<em>FileName</em>&gt;<strong>,[</strong>&lt;<em>Section</em>&gt;<strong>]</strong>&lt;<em>Parameter</em>&gt;<strong>,</strong>&lt;<em>TextDisplayFormat</em>&gt;<strong>)</strong><br />
+				<strong>@dbHot(REG,</strong>&lt;<em>RegistryKey</em>&gt;<strong>,</strong>&lt;<em>TextDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>DefaultValue</em>&gt;<strong>)</strong><br />
+			</td>
+		</tr>			
+	</table>
+</td>
+
+
+<p>A text operation is used to manipulate text and it can be used in a macro or 
+combined with a &lt;<strong>TextDisplayFormat</strong>&gt;.<br />
+Here is a the list of text operation :</p>
+
+<td class="List" >
+	<table id="table7" style="margin:0px" border="1">
+		<tr>
+			<td style="width: 310px">&lt;<strong>TextOperationAlign</strong>&gt;<strong><br />
+				</strong>&lt;<strong>TextOperationMultiLines</strong>&gt;<br />
+				&lt;<strong>TextOperationSubString</strong>&gt;<br />
+			&lt;<strong>TextOperationFind</strong>&gt;<br />
+			&lt;<strong>TextOperationDate</strong>&gt;<br />
+			&lt;<strong>TextOperationTime</strong>&gt;<br />
+			</td>
+			<td style="width: 922px">&nbsp;
+			</td>
+		</tr>			
+	</table>
+</td>
+
+<p>For example, a text operation can be used in a macro like <strong>@Fmt(</strong>&lt;<em>TextOperationAlign</em>&gt;<strong>,</strong>&lt;<em>Text</em>&gt;<strong>)</strong> 
+and in all macros using a &lt;<strong>DataDisplayFormat</strong>&gt; or a &lt;<strong>TextDisplayFormat</strong>&gt;</p>
+
+
+<h2 id="TextDisplayFormat" class="auto-style1"><strong>TextDisplayFormat</strong>: 
+<span class="auto-style1">&lt;<em>TextFormat</em>&gt;<strong>-</strong>&lt;<em>TextOperation</em>&gt;</span></h2>
+<p class="MsoNormal">Format for displaying a text value. A predefined &lt;<em>TextOperation</em>&gt; 
+can be combined to the &lt;<em>TextFormat</em>&gt;.<br />
+Separate &lt;<em>TextFormat</em>&gt; and &lt;<em>TextOperation</em>&gt; with a dash if both 
+are present.</p>
+<p class="MsoNormal">This text display format can be used in a macro like
+<strong>@dbHot(</strong>&lt;<em>FileName</em>&gt;<strong>,[</strong>&lt;<em>Section</em>&gt;<strong>]</strong>&lt;<em>Parameter</em>&gt;<strong>,</strong>&lt;<em>TextDisplayFormat</em>&gt;<strong>) </strong>and in 
+all macros using a &lt;<em>DataDisplayFormat</em>&gt;. <br />
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 119px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 119px; ">TextFormat</td>
+<td class="List" ><table id="table7" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 10px"><strong>RAW<br />
+				MACRO<br />
+				TXT<br />
+				<br />
+				</strong><br />
+				<em><br />
+				empty</em><br />
+				</td>
+				<td style="width: 922px">Text as is. Without transformation. The 
+				macros in the text are parsed.<br />
+				Text as is. Without transformation. The macros in the text are 
+				NOT parsed.<br />
+				Substitution of the following characters:<br />
+				<strong>(</strong> by <strong>[</strong><br />
+				<strong>)</strong> by <strong>]<br />
+				</strong>The macros in the text are parsed.<strong><br />
+				</strong>If the format is empty then text is encoded in HTML by 
+				replacing:<br />
+				<strong>&lt;</strong> by <strong>&amp;lt;<br />
+				&gt;</strong> by <strong>&amp;gt;<br />
+				&amp;</strong> by <strong>&amp;amp;<br />
+				(</strong> by <strong>[</strong> and <strong>)</strong> by
+				<strong>]</strong> for macro parentheses. i.e. @WizGet(A) will 
+				become @WizGet[A]</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List" style="width: 50px">Optionnal<br />
+		Default:<span class="auto-style3"><em><strong>empty</strong></em></span></td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 119px; ">TextOperation</td>
+<td class="List" >Can be one of these text operations:<table id="table7" style="margin:0px" border="1">
+			<tr> 
+				<td style="width: 10px">&lt;<strong>TextOperationAlign</strong>&gt;<strong><br />
+				</strong>&lt;<strong>TextOperationMultiLines</strong>&gt;<strong><br />
+				</strong>&lt;<strong>TextOperationSubString</strong>&gt;<br />
+				&lt;<strong>TextOperationFind</strong>&gt;<strong><br />
+				</strong>&lt;<strong>TextOperationDate</strong>&gt;<br />
+				&lt;<strong>TextOperationTime</strong>&gt;</td>
+				<td style="width: 922px">Align a text value.<br />
+				Extract a string in a multi lines text<br />
+				Extract substring from a string.<br />
+				Retrieve text value from a list of key-value.<br />
+				Format a date in SQL format (MM/DD/YYYY)<br />
+				Format a time from HHMMSS format</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List" style="width: 50px">Optionnal<br />
+		Default:<span class="auto-style3"><em><strong>empty</strong></em></span></td>
+	</tr>
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">Key x of section [100] content <strong>
+		&lt;AA&gt;@WizGet(V1);ZZ<br />
+		</strong>@dbHot(popup.ini,[100]x,Macro)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>&lt;AA&gt;@WizGet(V1);ZZ<br />
+		</strong></span>@dbHot(popup.ini,[100]x,RAW)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>&lt;AA&gt;ZZ<br />
+		</strong></span>@dbHot(popup.ini,[100]x,TXT)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>&lt;AA&gt;@WizGet[V1];ZZ<br />
+		</strong></span>@dbHot(popup.ini,[100]x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>&amp;lt;AA&amp;gt;@WizGet[V1];ZZ<br />
+		</strong></span>@dbHot(popup.ini,[100]x,RAW-L4) will return
+		<span class="auto-style3"><strong>&lt;AA&gt;<br />
+		</strong></span>@dbHot(popup.ini,[100]x,RAW-R2) will return
+		<span class="auto-style3"><strong>ZZ<br />
+		<br />
+		</strong></span>Key x of section [100] content <strong>Loc Software<br />
+		</strong>@dbHot(popup.ini,[100]x,RAW-R20:*) will return
+		<span class="auto-style3"><strong>********Loc Software</strong></span><br />
+		@dbHot(popup.ini,[100]x,RAW-L20:*) will return <span class="auto-style3">
+		<strong>Loc Software********</strong></span></td>
+	</tr>	
+</table>
+
+
+
+
+<h2 id="NumericDisplayFormat" class="auto-style1"><strong>NumericDisplayFormat</strong>: <span class="auto-style1">&lt;<em>SpecialFormat</em>&gt;&lt;<em>NumericFormat</em>&gt;&lt;<em>LengthInCharacter</em>&gt;<strong>:</strong>&lt;<em>NumberOfDecimal</em>&gt;</span></h2>
+<p class="MsoNormal">Format for displaying a numeric value.<br />
+</p>
+<p class="MsoNormal">The &lt;<em>NumericDisplayFormat</em>&gt; can be used with some 
+macros :<br />
+<strong>&nbsp;&nbsp; @FMT(</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>Value</em>&gt;<strong>)<br />
+&nbsp;&nbsp; @FMT(COMA,</strong>&lt;<em>ParamName</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>,</strong>&lt;<em>ParamList</em>&gt;<strong>)&nbsp;<br />
+&nbsp;&nbsp; @dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong>
+<br />
+<strong>&nbsp;&nbsp; @dbFind(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SearchFieldName</em>&gt;<strong>,</strong>&lt;<em>SearchValue</em>&gt;<strong>,</strong>&lt;<em>ReturnFieldName</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong>
+<br />
+<strong>&nbsp;&nbsp; @dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIELD,</strong>&lt;<em>ColumnIndex</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;) </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">SpecialFormat</td>
+		<td class="List" ><strong>Z&emsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Return empty 
+		string if value equal zero.<br />
+		<strong>RAW&nbsp; </strong>Value as is. Without transformation.</td>
+		<td class="List" style="width: 50px">Optionnal</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">NumericFormat</td>
+		<td class="List" ><strong>$</strong>&nbsp;&nbsp;&nbsp; Return the value 
+		as amount starting with a dollar sign .<br />
+		<strong>#</strong>&nbsp; <strong>&nbsp; </strong>Return the value as 
+		quantity.<br />
+		<strong>%&nbsp;&nbsp; </strong>Return the value as percentage ending 
+		with a percent sign.</td>
+		<td class="List" style="width: 50px">Required if SpecialFormat&lt;&gt;<strong>RAW</strong></td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal">
+		LengthInCharacter</td>
+		<td class="List">Maximum length for the formatted 
+		value (including $ or % if present).<br />
+		The value is aligned to the right side.</td>
+		<td class="List" style="width: 50px">Required if SpecialFormat&lt;&gt;<strong>RAW</strong></td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		NumberOfDecimal</td>
+		<td class="List" >Number of decimal of the 
+		formatted value.</td>
+		<td class="List" style="width: 50px">Required if SpecialFormat&lt;&gt;<strong>RAW</strong></td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@FMT(Z$10:2,0.0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return ""<br />
+		@FMT($10:2,10.253)&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong> 
+		$10.25</strong></span>"<br />
+		@FMT(#10:2,10.253)&nbsp;&nbsp;&nbsp; will return "<span class="auto-style3"><strong> 
+		10.25</strong></span>"<br />
+		@FMT(%10:2,10.253)&nbsp;&nbsp; will return " <span class="auto-style3">
+		<strong>10.25%</strong></span>" <br />
+		@FMT(Z%10:2,10.253) will return " <span class="auto-style3"><strong>
+		10.25%</strong></span>" </td>
+	</tr>	
+</table>
+
+
+<h2 id="DateDisplayFormat1" class="auto-style1"><strong>DateDisplayFormat</strong>: &lt;<em>DateType</em>&gt;&lt;<em>Period</em>&gt;&lt;<em>PositionPeriod</em>&gt;</h2>
+<p class="MsoNormal">Format for displaying a date.<br />
+</p>
+<p class="MsoNormal">The &lt;<em>DateDisplayFormat</em>&gt; can be used with some 
+macros :<br />
+&nbsp;&nbsp;&nbsp;<strong>@DATE(</strong>&lt;<em>Date</em>&gt;<strong>,D</strong>&lt;<em>DateDisplayFormat</em>&gt;<strong>)</strong><br />
+<strong>&nbsp;&nbsp;&nbsp;@D</strong>&lt;<em>DateDisplayFormat</em>&gt;<br />
+&nbsp;&nbsp; <strong>@dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)
+<br />
+&nbsp;&nbsp; @dbFind(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SearchFieldName</em>&gt;<strong>,</strong>&lt;<em>SearchValue</em>&gt;<strong>,</strong>&lt;<em>ReturnFieldName</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)
+<br />
+&nbsp;&nbsp; @dbRow(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIELD,</strong>&lt;<em>ColumnIndex</em>&gt;<strong>,</strong>&lt;<em>DisplayFormat</em>&gt;<strong>)
+</strong></p>
+
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">DateType</td>
+		<td class="List" >Output date type:
+		<table id="table5" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>S</strong><br />
+				<strong>J</strong><br />
+				<strong>I</strong><br />
+				<strong>D</strong><br />
+				<strong>M</strong><br />
+				<strong>Y</strong><br />
+				<strong>W</strong><br />
+				<strong>6</strong><br />
+				<strong>5</strong><br />
+				<strong>3</strong><br />
+				<strong>A</strong><br />
+				<strong>F</strong><br />
+				<strong>2</strong><br />
+				<strong>X</strong><br />
+				<strong>P</strong><br />
+				<strong>
+				<br />
+				L<br />
+				H</strong></td>
+				<td >SQL <br />
+				Julian <br />
+				International <br />
+				day only <br />
+				Month only <br />
+				Year only <br />
+				Windows international setting<br />
+				Compress date <br />
+				Compress date short year <br />
+				Compress month <br />
+				American format <br />
+				French format <br />
+				Two digit year <br />
+				XML <br />
+				POS format <br />
+				<br />
+				Long date format<br />
+				Only time<br />
+				</td>
+				<td >MM/DD/YYYY<br />
+				YYYYDDD<br />
+				YYYYMMDD<br />
+				DD<br />
+				MM<br />
+				YYYY<br />
+				<br />
+				YYMMDD<br />
+				YMMDD<br />
+				YMM<br />
+				MMDDYYYY<br />
+				DDMMYYYY<br />
+				YY<br />
+				YYYY-MM-DD<br />
+				MMDDYYYY in English<br />
+				DDMMYYYY is French<br />
+				<br />
+				HHNNSS<br />
+				</td>				
+			</tr>
+		</table>
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Period</td>
+		<td class="List" >Period applied to the date
+		<table id="table4" style="margin:0px"  border="1">
+			<tr>
+				<td style="width: 37px"><strong>D</strong><br />
+				<strong>W</strong><br />
+				<strong>M</strong><br />
+				<strong>Y</strong><br />
+				<strong>C</strong><br />
+				<strong>S</strong></td>
+				<td style="width: 287px; ">Day<br />
+				Week<br />
+				Month<br />
+				Year<br />
+				Century<br />
+				Use current system date (not soft date)</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">PositionPeriod<br />
+		<br />
+		</td>
+		<td class="List">Position in the period
+		<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>D</strong> <br />
+				<strong>F</strong> <br />
+				<strong>+ddd</strong><br />
+				<strong>-ddd</strong></td>
+				<td style="width: 525px">Beginning<br />
+				Ending<br />
+				Ending date + offset in days&nbsp; 
+				(Ex: +002&nbsp; +2days)<br />
+				Ending date - offset in days&nbsp; (Ex: -010&nbsp;&nbsp; 
+				-10days)</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List">Required</td>
+	</tr>	
+	
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >Examples with macro <strong>@Date(</strong>&lt;<em>Date</em>&gt;<strong>,</strong>&lt;<em>DateDisplayFormat</em>&gt;<strong>)</strong> <br />
+		@Date(04/11/2019,DIWD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+		<span class="auto-style3"><strong>20190407</strong></span><br />
+		@Date(04/11/2019,DXWF)&nbsp;&nbsp;&nbsp;&nbsp; return
+		<span class="auto-style3"><strong>2019-04-13<br />
+		</strong></span>@Date(04/11/2019,D2DD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		return <span class="auto-style3"><strong>19<br />
+		</strong></span>@Date(04/11/2019,DSM+001) return
+		<span class="auto-style3"><strong>05/01/2019<br />
+		</strong></span>@Date(04/11/2019,DSM-002) return
+		<span class="auto-style3"><strong>04/28/2019</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="DateDisplayFormat2"><span class="auto-style1"><strong>DateDisplayFormat</strong>: &lt;<em>DateType</em>&gt;&lt;<em>Period</em>&gt;&lt;<em>Operation</em>&gt;&lt;<em>OperationPeriod</em>&gt;&lt;<em>NumberOfPeriod</em>&gt;&lt;<em>PositionPeriod</em>&gt;</span></h2>
+<p class="MsoNormal">Format for displaying a date.<br />
+</p>
+<p class="MsoNormal">The &lt;<em>DateDisplayFormat</em>&gt; can be used with some 
+macros :<br />
+&nbsp;&nbsp;&nbsp;<strong>@DATE(</strong>&lt;<em>Date</em>&gt;<strong>,D</strong>&lt;<em>DateDisplayFormat</em>&gt;<strong>)</strong><br />
+<strong>&nbsp;&nbsp;&nbsp;@D</strong>&lt;<em>DateDisplayFormat</em>&gt;</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">DateType</td>
+		<td class="List" >Output date type:
+		<table id="table5" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>S</strong><br />
+				<strong>J</strong><br />
+				<strong>I</strong><br />
+				<strong>D</strong><br />
+				<strong>M</strong><br />
+				<strong>Y</strong><br />
+				<strong>W</strong><br />
+				<strong>6</strong><br />
+				<strong>5</strong><br />
+				<strong>3</strong><br />
+				<strong>A</strong><br />
+				<strong>F</strong><br />
+				<strong>2</strong><br />
+				<strong>X</strong><br />
+				<strong>P</strong><br />
+				<strong>
+				<br />
+				L</strong></td>
+				<td>SQL <br />
+				Julian <br />
+				International <br />
+				day only <br />
+				Month only <br />
+				Year only <br />
+				Windows international setting<br />
+				Compress date <br />
+				Compress date short year <br />
+				Compress month <br />
+				American format <br />
+				French format <br />
+				Two digit year <br />
+				XML <br />
+				POS format <br />
+				<br />
+				Long date format<br />
+				</td>
+				<td>MM/DD/YYYY<br />
+				YYYYDDD<br />
+				YYYYMMDD<br />
+				DD<br />
+				MM<br />
+				YYYY<br />
+				<br />
+				YYMMDD<br />
+				YMMDD<br />
+				YMM<br />
+				MMDDYYYY<br />
+				DDMMYYYY<br />
+				YY<br />
+				YYYY-MM-DD<br />
+				MMDDYYYY in English<br />
+				DDMMYYYY is French<br />
+				<br />
+				</td>				
+			</tr>
+		</table>
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Period</td>
+		<td class="List" >Period applied to the date<table id="table4" style="margin:0px"  border="1">
+			<tr>
+				<td style="width: 37px" class="auto-style2"><strong>D</strong><br />
+				<strong>W</strong><br />
+				<strong>M</strong><br />
+				<strong>Y</strong><br />
+				<strong>C</strong><br />
+				<strong>S</strong></td>
+				<td style="width: 287px; ">Day<br />
+				Week<br />
+				Month<br />
+				Year<br />
+				Century<br />
+				Use current system date (not soft date)</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List" >Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">Operation</td>
+		<td class="List"><table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>+</strong><br />
+				<strong>-</strong> <br />
+				</td>
+				<td style="width: 224px">Will add from the date<br />
+				Will substract from the date</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px;" >OperationPeriod</td>
+		<td class="List" ><table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>D<br />
+				W<br />
+				M<br />
+				Y</strong><br />
+				</td>
+				<td style="width: 255px">Add or subtract days to 
+				the date<br />
+				Add or subtract weeks to the date<br />
+				Add or subtract months to the date<br />
+				Add or subtract year to the date</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List" >Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">NumberOfPeriod</td>
+		<td class="List">The numbers of days, weeks, etc to subtract or add to 
+		the date.
+		</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">PositionPeriod</td>
+		<td class="List"><table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>D</strong><br />
+				<strong>F</strong> <br />
+				</td>
+				<td style="width: 441px">Starting day, week, etc. 
+				after adding or subtracting to the date.<br />
+				Ending day, week, etc. after adding or subtracting to the date.</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List">Required</td>
+	</tr>
+		
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List"><span>@Date(04/11/2019,DSD+M1F)&nbsp; will return the 
+		current day, and then the system will add one month and return the end 
+		of that month.</span><span ><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>05/31/2019 </strong></span>
+		<br />
+		<span >@Date(04/11/2019,DSW-W3F) will return the 
+		current week ending date, then the system will subtract 3 weeks and 
+		return the end of that week.</span><br  />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Will return 
+		<span class="auto-style3"><strong>03/23/2019 </strong></span>
+		</span><br  />
+		</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="TextOperationAlign">&lt;TextOperationAlign&gt;: <span class="auto-style1">&nbsp; &lt;<em>Alignment</em>&gt;&lt;L<em>ength</em>&gt;&lt;<em><strong>:</strong>PadCharacter</em>&gt;</span></h2>
+<p class="MsoNormal">Operation on text to align a text value.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px;">Alignment</td>
+		<td class="List" ><table id="table7" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 10px"><strong>L<br />
+				<br />
+				R<br />
+				</strong><br />
+				<strong>C</strong><br />
+				</td>
+				<td style="width: 922px">Text is left-justified<br />
+				If the length of the text is larger than &lt;<em>Length</em>&gt; then 
+				the text will be truncated on the right.<br />
+				Text is right-justified<br />
+				If the length of the text is larger than &lt;<em>Length</em>&gt; then 
+				the text will be truncated on the left.<br />
+				Text is centered<br />
+				&lt;<em>PadCharacter</em>&gt; is not used for center alignement. A 
+				space character is always used for padding.<br />
+				A trim right is done after centering the text.<br />
+				If the length of the &lt;<em>Text</em>&gt; is larger than &lt;<em>Length</em>&gt; 
+				then the text will not be truncated. All the &lt;<em>Text</em>&gt; 
+				will be returned.</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List" >Required</td>
+	</tr>		
+
+	<tr>
+		<td class="List" style="width: 100px">Length</td>
+		<td class="List">Number of characters of the returned text in which.</td>
+
+		<td class="List">Optionnal<br />
+		Default: All characters</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px"><strong>:</strong>PadCharacter</td>
+		<td class="List" >The character use to pad left or right. Default 
+		padding character is the space character. <br />
+		Use SPACE for HTML space character: &amp;nbsp;</td>
+		<td class="List" style="width: 50px">Optionnal<br />
+		Default: Blank</td>
+	</tr>
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List"><span class="auto-style9">@dbHot(VARSET,Key,One Two)<br />
+		<br />
+		@dbHot(REG,Key,RAW-<strong>L3</strong>)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;
+		</strong>will return <span class="auto-style3"><strong>One</strong>
+		<br />
+		</span>@dbHot(REG,Key,RAW-<strong>L</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>One Two <br />
+		</strong></span>@dbHot(REG,Key,TXT-<strong>L10:#</strong>)&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>One Two### <br />
+		</strong></span><br />
+		@dbHot(REG,Key,<strong>R3</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>Two <br />
+		</strong></span>@dbHot(REG,Key,RAW-<strong>R10:#</strong>)&nbsp; will 
+		return <span class="auto-style3"><strong>###One Two <br />
+		<br />
+		</strong></span>@dbHot(REG,Key,<strong>C15</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>&nbsp;&nbsp;&nbsp;&nbsp; </strong>will return "<strong><span class="auto-style3">&nbsp;&nbsp;&nbsp; 
+		One Two</span></strong></span><strong><span class="auto-style8">"</span></strong><span class="auto-style8">
+		</span>&nbsp;</td>
+	</tr>	
+</table>
+
+
+<h2 id="TextOperationMultiLines">&lt;TextOperationMultiLines&gt;:<strong>&nbsp;&nbsp; M</strong><span class="auto-style1">&lt;<em>LineNumber</em>&gt;<strong>:</strong>&lt;MaxLength&gt;</span></h2>
+<p class="MsoNormal">Operation on text to extract a string in a multi lines text.
+Formatting with this concept will allow to word-wrap the strings and insure that 
+none of the words will be cut. <br />
+The formatting text support an unlimited number of lines. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">LineNumber</td>
+		<td class="List" >Line number based on lines of 
+		maximum &lt;<em>MaxLength</em>&gt; characters.</td>
+
+		<td class="List" >Required</td>
+	</tr>		
+
+	<tr>
+		<td class="List" style="width: 100px">MaxLength</td>
+		<td class="List">Maximum length of the text to return.</td>
+
+		<td class="List">Required</td>
+	</tr>	
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@WizSet(TEXT=Computer programming is a way of telling a 
+		computer how to do certain things.);<br />
+		@Fmt(<strong>M1:25</strong>,@WizGet(TEXT)) will return <span class="auto-style3"><strong>
+		Computer programming is <br />
+		</strong></span>@Fmt(<strong>M2:25</strong>,@WizGet(TEXT)) will return
+		<span class="auto-style3"><strong>a way of telling a </strong></span>
+		<br />
+		@Fmt(<strong>M3:25</strong>,@WizGet(TEXT)) will return <strong>
+		<span class="auto-style3">computer how to do&nbsp; <br />
+		<br />
+		</span> </strong>@dbHot(VARSET,Key,Computer programming is a way of 
+		telling a computer how to do certain things.)<br />
+		@dbHot(REG,Key,RAW-<strong>M2:25</strong>) will return
+		<span class="auto-style3"><strong>a way of telling a</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="TextOperationSubString">&lt;TextOperationSubString&gt;:&nbsp;&nbsp; S<span class="auto-style1">&lt;<em>Index</em>&gt;&lt;<em>:Length</em>&gt;</span></h2>
+<p class="MsoNormal">Operation on text to extract substring from a string.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Index</td>
+		<td class="List"  >Starting character position in &lt;<em>Text</em>&gt;.</td>
+
+		<td class="List"  >Required</td>
+	</tr>		
+
+	<tr>
+		<td class="List" style="width: 100px"><strong>:</strong>Length</td>
+		<td class="List">Number of characters to return.<br />
+		If no length is specified, all text from the index will be returned.</td>
+
+		<td class="List">Optionnal</td>
+	</tr>	
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(<strong>S5:4</strong>,Loc Software)<strong>
+		</strong>&nbsp;<strong> </strong>will return&nbsp; "<span class="auto-style3"><strong>Soft</strong></span>"<br />
+		@Fmt(<strong>S5,</strong>Loc Software))&nbsp;&nbsp;&nbsp; will return&nbsp; "<span class="auto-style3"><strong>Software</strong></span>"</td>
+	</tr>	
+</table>
+
+
+<h2 id="TextOperationFind">&lt;TextOperationFind&gt;:&nbsp;&nbsp; F:<span class="auto-style1">&lt;<em>Name</em>&gt;</span></h2>
+<p class="MsoNormal">Operation on text to retrieve text value from a list of 
+key-value.<br />
+<br />
+Each key-value can be separated by character <em>ampersand</em> (<strong>&amp;</strong>) 
+or a <em>comma</em>(<strong>,</strong>) or a <em>space</em>.<br />
+To use one of the following characters: <em>ampersand</em> (<strong>&amp;</strong>)
+<em>comma </em>(<strong>,</strong>) <em>space</em> in the value; you must set 
+the value between quotation marks. Ex : 'One&amp;Two and Three'<br />
+At the beginning of the name, the following characters will not be considered:
+<em>backslash</em> (<strong>\</strong>) <em>dash</em> (<strong>-</strong>)</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px;">Name</td>
+		<td class="List"   >Name of the key whose value will 
+		be returned.</td>
+
+		<td class="List"  >Required</td>
+	</tr>		
+
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@WizRpl(KEY="/Item1=AA /Item2=BB 
+		/Item3=CC");<br />
+		@Fmt(F:Item1,@WizGet(KEY)) will return <span class="auto-style3">
+		<strong>AA</strong></span><br />
+		@Fmt(F:Item2,@WizGet(KEY)) will return <span class="auto-style3">
+		<strong>BB</strong></span><br />
+		@Fmt(F:Item3,@WizGet(KEY)) will return <span class="auto-style3">
+		<strong>CC</strong></span><br />
+		<br />
+		KEY Registry contains <strong>
+		-Item1='A,&amp;B',/Item2='BBB BB'&amp;Item3=CCC</strong><br />
+		@dbHot(REG,Key,RAW-F:Item1) will return <strong>
+		<span class="auto-style3">A,&amp;B</span><br />
+		</strong>@dbHot(REG,Key,F:Item2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>BBB BB</strong><br />
+		</span>@dbHot(REG,Key,F:Item3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>CCC<br />
+		<br />
+		</strong></span>@Fmt(F:PIN,PIN=1 CARDTPYE=D)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>1</strong></span> <br />
+		@Fmt(F:CARDTYPE,PIN=1 CARDTYPE=D) <strong>&nbsp; </strong>will return
+		<span class="auto-style3"><strong>D</strong></span></td>
+	</tr>	
+</table>
+
+
+
+<h2 id="TextOperationDate">&lt;TextOperationDate&gt;:&nbsp;&nbsp; D<span class="auto-style1">&lt;<em>InputDateFormat</em>&gt;</span></h2>
+<p class="MsoNormal">Operation on text to format a date in SQL format 
+(MM/DD/YYYY).</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">InputDateFormat</td>
+				<td class="List" ><table id="table7" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 10px"><strong>5<br />
+				6<br />
+				I<br />
+				J<br />
+				P<br />
+				<br />
+				X<br />
+				W</strong><br />
+				</td>
+				<td style="width: 217px" >Compress date short year <br />
+				Compress date <br />
+				International <br />
+				Julian <br />
+				POS format <br />
+				<br />
+				XML<br />
+				Windows international setting</td>
+				<td >YMMDD<br />
+				YYMMDD<br />
+				YYYYMMDD<br />
+				YYYYDDD<br />
+				MMDDYYYY in English<br />
+				DDMMYYYY is French<br />
+				YYYY-MM-DD</td>
+			</tr>
+			
+		</table>
+		</td>
+
+
+		<td class="List"  >Required</td>
+	</tr>		
+
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@dbHot(VARSET,Key,91230)<br />
+		@dbHot(REG,Key,<strong>D5</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3">
+		<strong>12/30/2019 <br />
+		</strong></span><br />
+		@dbHot(VARSET,Key,191230)<br />
+		@dbHot(REG,Key,<strong>D6</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3">
+		<strong>12/30/2019<br />
+		</strong></span><br />
+		@dbHot(VARSET,Key,20191230)<br />
+		@dbHot(REG,Key,<strong>DI</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return<span class="auto-style3"><strong> 
+		12/30/2019<br />
+		</strong></span><br />
+		@dbHot(VARSET,Key,2019364)<br />
+		@dbHot(REG,Key,<strong>DJ</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3">
+		<strong>12/30/2019</strong></span><br />
+		<br />
+		@dbHot(VARSET,Key,12302019)<br />
+		@dbHot(REG,Key,<strong>DP</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3">
+		<strong>12/30/2019</strong></span><br />
+		<br />
+		@dbHot(VARSET,Key,2019-12-30)<br />
+		@dbHot(REG,Key,<strong>DX</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3">
+		<strong>12/30/2019</strong></span><br />
+		<br />
+		@dbHot(VARSET,Key,12/30/2019)<br />
+		@dbHot(REG,Key,<strong>DW</strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3">
+		<strong>12/30/2019</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="TextOperationTime">&lt;TextOperationTime&gt;:&nbsp;&nbsp; T<span class="auto-style1">&lt;<em>OutputTimeFormat</em>&gt;&lt;End&gt;</span></h2>
+<p class="MsoNormal">Operation on text to format a time from HHMMSS format.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">OutputTimeFormat</td>
+				<td class="List" ><table id="table7" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 10px" class="auto-style10"><strong>I<br />
+				4<br />
+				6<br />
+				I2</strong><br />
+				</td>
+				<td  >HH:MM:SS AM/PM<br />
+				HH:MM<br />
+				HH:MM<br />
+				HHMMSS 
+				(Input format must be : HH:MM:SS)</td>
+
+			
+			</tr>
+
+			
+		</table>
+		</td>
+
+
+		<td class="List"  >Required</td>
+	</tr>		
+	<tr>
+		<td class="List" style="width: 100px">End</td>
+		<td class="List">If &lt;<em>OutputTimeformat</em>&gt; is I, 4 or 6, add
+		<strong>F</strong> at the end to use 59 for minutes and 59 for seconds 
+		if they are not present.</td>
+
+		<td class="List">Optionnal</td>
+	</tr>	
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(TI,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:00:00 PM<br />
+		</strong></span>@Fmt(TIF,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:59:59 PM<br />
+		</strong></span>@Fmt(TI2,12:34:56)&nbsp;&nbsp;&nbsp; will return
+		<strong>
+		<span class="auto-style3">123456</span><br />
+		</strong>@Fmt(T4,123456)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return<strong>
+		<span class="auto-style3"><strong>12:34<br />
+		</strong></span></strong>@Fmt(T6,123456)&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; will return<strong>
+		<span class="auto-style3"><strong>12:34:56</strong></span><br />
+		</strong>@Fmt(T4,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+		will return<strong> <span class="auto-style3"><strong>12:00<br />
+		</strong></span></strong>@Fmt(T4F,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <strong> <span class="auto-style3">12:59<br />
+		</span></strong>@Fmt(T6,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return<strong> <span class="auto-style3"><strong>12:00:00</strong></span><br />
+		</strong>@Fmt(T6F,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return<strong> <span class="auto-style3"><strong>12:59:59</strong></span><br />
+		</strong>@Fmt(T6,1234)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <strong> <span class="auto-style3">12:34:00</span><br />
+		</strong>@Fmt(T6F,1234)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; will 
+		return<strong> <span class="auto-style3"><strong>12:34:59</strong></span></td>
+	</tr>	
+	<tr>
+		<td class="List" style="color: #000000">&nbsp;</td>
+	</tr>	
+</table>
+
+
+
+
+</body>
+</html>

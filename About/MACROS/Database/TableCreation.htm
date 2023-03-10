@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Table creation</title>
+	<link rel="stylesheet" href="../work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style2 {
+	background-color: #FF0000;
+}
+</style>
+    <meta name="SMS-HtmlEditor-GitLock" content="StephaneOuimet">
+</head>
+<body>
+<h1>Table creation</h1>
+
+
+<h2 id="CREATE">@CREATE(<span class="auto-style1"><em>&lt;TableName&gt;</em></span>,<span class="auto-style1"><em>&lt;TableDefinition&gt;</em></span>)</h2>
+<p>If a file <strong>CREATE_TABLE_&lt;<em>TableDefinition</em>&gt;.sqi</strong> exist in the 
+office directory, the system will execute it to create the table. You can use 
+this to customize the table creation. Before the script gets called, the system 
+assign &lt;<em>TableName</em>&gt; to the pool parameter <strong>
+CREATE_TABLE_NAME</strong>.<br />
+<br />
+If not, the system will create a table in the database using the data dictionary
+<strong>fields.csv</strong> to obtain the file definition structure. The system 
+will also combine the table definition structure of the data dictionary <strong>
+fields2.csv</strong> 
+if the file exist. 
+
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TableName</td>
+		<td class="List">Name of the new table </td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TableDefinition</td>
+		<td class="List">The column name of file fields.csv containing the table 
+		definition structure</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@CREATE(SAL_HDR,HDRSAL)</td>
+	</tr>	
+</table>
+
+<!--ToFix
+<h2 id="CREATEINDEX">@CREATE_INDEX(<span class="auto-style1">&lt;<em>TableName</em>&gt;</span>,<span class="auto-style1">&lt;<em>TableDefinition</em>&gt;</span>)</h2>
+<p class="auto-style2"><span class="auto-style2">This procedure is empty : 
+Remove the macro of documentation ?</span><br class="auto-style2" />
+<span class="auto-style2">procedure 
+TSku.CreateSkuIndex(sTableName,sTableDct,sStoreMan,sDBType:String);</span><br class="auto-style2" />
+<span class="auto-style2">begin</span><br class="auto-style2" />
+<span class="auto-style2">end;</span></p>
+<p>This macro deletes and recreates only the indexes of the table using the data dictionary 
+fields.csv to option the index layout. The system will also combine the table 
+definition structure of the data dictionary <strong>
+fields2.csv</strong> 
+if the file exist. 
+
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TableName</td>
+		<td class="List">Name of the existing table </td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TableDefinition</td>
+		<td class="List">The column name of file fields.csv containing the table 
+		definition structure</td>
+		<td class="List">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@CREATE_INDEX(SAL_HDR,HDRSAL)</td>
+	</tr>	
+</table>
+-->
+
+</body>
+</html>

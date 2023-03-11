@@ -1,0 +1,1280 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>All macro</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+
+table td:first-child{
+    width:645px;
+	}
+.auto-style1 {
+	font-weight: normal;
+	}
+</style>
+</head>
+<body>
+
+
+<h1>Introduction</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="Introduction.htm"><strong>About SMS Macro</strong></a></td>
+	</tr>		
+</table>
+
+<h1>Pool parameters</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="PoolParameter.htm#WizReset"><strong>@WizReset</strong></a></td>
+		<td class="List">Reset all the parameter in the pool.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="PoolParameter.htm#WizSet"><strong>@WizSet</strong></a><strong>(</strong>&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List">Create and set the value of a pool parameter if it 
+		does not exist.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="PoolParameter.htm#WizRpl">
+		<strong>@WizRpl</strong></a><strong>(</strong>&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List">Replace the value of a pool parameter.</td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="PoolParameter.htm#WizAppend">
+		<strong>@WizAppend</strong></a><strong>(</strong>&lt;<em>Name</em>&gt;<strong>=</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List" >Append a value to the current value of a pool 
+		parameter.</td>
+	</tr>		
+	<tr>
+		<td class="List" ><strong><a href="PoolParameter.htm#WizClr">@WizClr</a></strong></td>
+		<td class="List">Clear the value of a pool parameter.</td>
+	</tr>
+		<tr>
+		<td class="List" >
+		<a href="PoolParameter.htm#WizGet"><strong>@WizGet</strong></a><strong>(</strong>&lt;<em>Name</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the value of a 
+		pool parameter.</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="PoolParameter.htm#WizIsBlank">
+		<strong>@WizIsBlank</strong></a><strong>(</strong>&lt;<em>Name</em>&gt;<strong>)</strong></td>
+		<td class="List">Check whether a pool parameter is missing 
+		or this value is empty.</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="PoolParameter.htm#WizExist">
+		<strong>@WizExist</strong></a><strong>(</strong>&lt;<em>Name</em>&gt;<strong>)</strong></td>
+		<td class="List">Check if a pool parameter exist in the pool.</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="PoolParameter.htm#WizExistAll">
+		<strong>@WizExistAll</strong></a><strong>(</strong>&lt;<em>NameMask</em>&gt;<strong>)</strong></td>
+		<td class="List">Check if a pool parameter name beginning with 
+		&lt;<em>NameMask</em>&gt; exist in the pool.</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="PoolParameter.htm#ParamToLine">
+		<strong>@TOOLS</strong></a><strong>(PARAMTOLINE)</strong></td>
+		<td class="List">Return a string containing all the pool parameters with 
+		their value.</td>
+	</tr>
+	
+</table>
+
+<h1>General informations</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#STORE"><strong>@STORE</strong></a></td>
+		<td class="List">Return the current store number.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#TER"><strong>@TER</strong></a></td>
+		<td class="List">Return the current terminal/station number.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#USER"><strong>@USER</strong></a></td>
+		<td class="List">Return the current user code.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#USERNAME"><strong>@USERNAME</strong></a></td>
+		<td class="List">Return the current user name.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#RUN"><strong>@RUN</strong></a></td>
+		<td class="List">Return the current storeman directory.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#OFFICE"><strong>@OFFICE</strong></a></td>
+		<td class="List">Return the current office directory.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#CNC"><strong>@CNC</strong></a></td>
+		<td class="List">Return the current session secret code.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#PROFILE"><strong>@PROFILE</strong></a></td>
+		<td class="List">Return the current CN user number.</td>
+	</tr>
+<!--ToComplete	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#READKEY"><strong>
+		@READKEY</strong></a><strong>(</strong>&lt;<em>ModuleNumber</em>&gt;<strong>)</strong></td>
+		<td class="List">Checks if a module exist in the registration key.
+		<span class="auto-style2">Incomplete</span></td>
+	</tr> -->
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#NETOFFICE">
+		<strong>@dbHot</strong></a><strong>(NET_OFFICE,</strong>&lt;<em>StoreNumber</em>&gt;<strong>,</strong>&lt;<em>TerminalNumber</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the office path of a particular node by looking 
+		for the store and terminal number inside the exchange provider to get 
+		the path this node.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#COMPUTER">
+		<strong>@dbHot</strong></a><strong>(COMPUTER)</strong></td>
+		<td class="List">Return the computer name in network 
+		neighbourhood.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#REDIRMSG">
+		<strong>@dbHot</strong></a><strong>(REDIRMSG)</strong></td>
+		<td class="List">Return the current message redirection node.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#REDIRMAIL">
+		<strong>@dbHot</strong></a><strong>(REDIRMAIL)</strong></td>
+		<td class="List">Return the current mail redirection 
+		node.&nbsp; </td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#USERLEVEL">
+		<strong>@dbHot</strong></a><strong>(USERLEVEL)</strong></td>
+		<td class="List" >Return the current user level of the logged 
+		in user.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#LEVELFIELD">
+		<strong>@dbHot</strong></a><strong>(LEVELFIELD)</strong></td>
+		<td class="List">Return the field associate with the user 
+		right in the function table.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#LANGUAGE">
+		<strong>@dbHot</strong></a><strong>(LANGUAGE)</strong></td>
+		<td class="List">Return the current language code from the 
+		operating system.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#APPLICATION">
+		<strong>@dbHot</strong></a><strong>(APPLICATION)</strong></td>
+		<td class="List">Return what is the application process that 
+		is running this macro.</td>
+	</tr>																
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#TABLEBYTERMINAL">
+		<strong>@dbHot</strong></a><strong>(TABLEBYTERMINAL)</strong></td>
+		<td class="List">Return the string _@STORE@TER if <em>TableByTerminal</em>=1 
+		in System.ini</td>
+	</tr>																	
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#dbHOTCURRENT">
+		<strong>@dbHot</strong></a><strong>(CURRENT,</strong>&lt;<em>PropertyName</em>&gt;<strong>)&nbsp;</strong></td>
+		<td class="List" >Return the value of a property of the CNO object.</td>
+	</tr>							
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#dbHOTCURRENTSET">
+		<strong>@dbHot</strong></a><strong>(CURRENT,</strong>&lt;<em>PropertyName</em>&gt;<strong>,SET,</strong>&lt;<em>Value</em>&gt;<strong>)&nbsp;</strong></td>
+		<td class="List" >Assign a new value to a property 
+		of the CNO object.</td>
+	</tr>								
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#dbHOTCLK">
+		<strong>@dbHot</strong></a><strong>(CLK,</strong>&lt;<em>InfoType</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return general information about the current session.</td>
+	</tr>									
+	<tr>
+		<td class="List" ><a href="MemoryInformation.htm#dbHOTCURRENTTEMP">
+		<strong>@dbHot</strong></a><strong>(CURRENT,TEMP)</strong></td>
+		<td class="List" >Return a unique name. Often used to generate a unique 
+		file name.</td>
+	</tr>										
+</table>
+
+<!--ToComplete
+<h1>Live informations from transaction</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List"  >
+		<a href="LiveInformationTransaction.htm">
+		<strong>@</strong></a></td>
+		<td class="List" >
+		<span class="auto-style2">Incomplete</span></td>
+	</tr>	
+</table>-->
+
+
+<h1>Data display formats &amp; text operation</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List"  ><a href="DataDisplayFormat.htm#TextDisplayFormat">
+		<strong>TextDisplayFormat</strong></a>: &lt;<em>TextFormat</em>&gt;&lt;<em><strong>-</strong>TextOperation</em>&gt;</td>
+		<td class="List" >Format for displaying a text value.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="DataDisplayFormat.htm#NumericDisplayFormat">
+		<strong>
+		NumericDisplayFormat</strong></a>:&nbsp; &lt;<em>SpecialFormat</em>&gt;&lt;<em>NumericFormat</em>&gt;&lt;<em>LengthInCharacter</em>&gt;:&lt;<em>NumberOfDecima</em>l&gt;</td>
+		<td class="List">Format for displaying a numeric 
+		value.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="DataDisplayFormat.htm#DateDisplayFormat1">
+		<strong>DateDisplayFormat</strong></a>:&lt;<em>DateType</em>&gt;&lt;<em>Period</em>&gt;&lt;<em>PositionPeriod&gt;</em></td>
+		<td class="List" >Format for displaying a date.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="DataDisplayFormat.htm#DateDisplayFormat2">
+		<strong>DateDisplayFormat</strong></a>: &lt;<em>DateType</em>&gt;&lt;<em>Period</em>&gt;&lt;<em>Operation</em>&gt;&lt;<em>OperationPeriod</em>&gt;&lt;<em>NumberOfPeriod</em>&gt;&lt;<em>PositionPeriod</em>&gt;</td>
+		<td class="List">Format for displaying a date.</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="DataDisplayFormat.htm#TextOperationAlign">
+		<strong>TextOperationAlign</strong></a>: 
+		&lt;<em>Alignment</em>&gt;&lt;<em>Length</em>&gt;&lt;:<em>PadCharacter</em>&gt;</td>
+		<td class="List">Align a text value.</td>
+	</tr>			
+	<tr>
+		<td class="List" ><a href="DataDisplayFormat.htm#TextOperationMultiLines">
+		<strong>TextOperationMultiLines</strong></a>: <strong>M</strong>&lt;<em>LineNumber</em>&gt;:&lt;<em>MaxLength</em>&gt;</td>
+		<td class="List">Extract a string in a multi lines text.</td>
+	</tr>				
+	<tr>
+		<td class="List" ><a href="DataDisplayFormat.htm#TextOperationSubString">
+		<strong>TextOperationSubString</strong></a>: <strong>S</strong>&lt;<em>Index</em>&gt;&lt;:<em>Length</em>&gt;</td>
+		<td class="List">Extract substring from a string.</td>
+	</tr>					
+	<tr>
+		<td class="List" ><strong>
+		<a href="DataDisplayFormat.htm#TextOperationFind">TextOperationFind</a></strong>: 
+		<strong>F-</strong>&lt;<em>Name</em>&gt;</td>
+		<td class="List">Retrieve text value from a list of key-value.</td>
+	</tr>						
+	<tr>
+		<td class="List" ><strong>
+		<a href="DataDisplayFormat.htm#TextOperationDate">TextOperationDate</a></strong>: 
+		<strong>D</strong>&lt;<em>InputDateFormat</em>&gt;</td>
+		<td class="List">Format a date in SQL format (MM/DD/YYYY).</td>
+	</tr>							
+	<tr>
+		<td class="List" ><strong>
+		<a href="DataDisplayFormat.htm#TextOperationTime">TextOperationTime</a></strong>:
+		<strong>T</strong>&lt;<em>OutputTimeFormat</em>&gt;</td>
+		<td class="List">Format a time from HHMMSS format.</td>
+	</tr>								
+</table>
+
+
+
+<h1>Text routines</h1><table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMT">
+		<strong>@Fmt</strong></a><strong>(</strong>&lt;<em>TextOperationAlign</em>&gt;<strong>,</strong>&lt;<em>Text</em>&gt;<strong>)&nbsp;</strong></td>
+		<td class="List">Align a text value.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMTM">
+		<strong>@Fmt</strong></a><strong>(</strong>&lt;<em>TextOperationMultiLines&gt;</em><strong>,</strong>&lt;<em>Text</em>&gt;<strong>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+		<td class="List">Format multiple text lines </td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMTS">
+		<strong>@Fmt</strong></a><strong>(</strong>&lt;<em>TextOperationSubString</em>&gt;<strong>,</strong>&lt;<em>Text</em>&gt;<strong>)</strong></td>
+		<td class="List">Return a substring from a text. </td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMTF">
+		<strong>@Fmt</strong></a><strong>(</strong>&lt;<em>TextOperationFind</em>&gt;<strong>,</strong>&lt;<em>Text</em>&gt;<strong>)</strong></td>
+		<td class="List">Retrieve text value from a list of key-value. </td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMTNUS">
+		<strong>@Fmt</strong></a><strong>(NUS,</strong>&lt;<em>Text</em>&gt;<strong>)</strong></td>
+		<td class="List">Return an empty string if &lt;<em>Text</em>&gt; is equal 
+		to n/a. </td>
+	</tr>
+	<tr>
+		<td class="List" >
+		<a href="TextMacros.htm#FMTCHR"><strong>@Fmt</strong></a><strong>(CHR,</strong>&lt;<em>IntValue</em>&gt;<strong>)</strong></td>
+		<td class="List" >Convert an &lt;<em>IntValue</em>&gt; 
+		Integer into ASCII character.</td>
+	</tr>
+	<tr>
+		<td class="List" >
+		<a href="TextMacros.htm#FMTORD"><strong>@Fmt</strong></a><strong>(ORD,</strong>&lt;<em>Character</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the ordinal value of a ASCII character.</td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMTUPPER">
+		<strong>@Fmt</strong></a><strong>(UPPER,</strong>&lt;<em>Text</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the upper case string of &lt;<em>Text</em>&gt;</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMTTRIM">
+		<strong>@Fmt</strong></a><strong>(TRIM,</strong>&lt;<em>Text</em>&gt;<strong>)</strong></td>
+		<td class="List">Remove leading and trailing space of 
+		string &lt;<em>Text</em>&gt;.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMTLEN">
+		<strong>@Fmt</strong></a><strong>(LEN,</strong>&lt;<em>Text</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the length of string &lt;<em>Text</em>&gt;.</td>
+	</tr>							
+	<tr>
+		<td class="List" ><a href="TextMacros.htm#FMTPOS">
+		<strong>@Fmt</strong></a><strong>(POS,</strong>&lt;<em>SubString</em>&gt;<strong>,</strong>&lt;<em>Text</em>&gt;<strong>,</strong>&lt;<em>N</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the position of the &lt;<em>N</em>&gt;-th 
+		occurrence of a &lt;<em>SubString</em>&gt; in a &lt;<em>Text</em>&gt;.</td>
+	</tr>								
+</table>
+
+
+
+
+
+
+<h1>Numeric routines</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="NumericMacros.htm#FMT">
+		<strong>
+		@Fmt</strong></a><strong>(</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List">Format number and currency.</td>
+	</tr>	
+	<tr>
+		<td class="List"  ><a href="NumericMacros.htm#FMTPAD">
+		<strong>
+		@Fmt</strong></a><strong>(!</strong>&lt;<em>PadCharacter</em>&gt;<strong>:</strong>&lt;<em>LengthInCharacters</em>&gt;<strong>:</strong>&lt;<em>NumberOfDecimal</em>&gt;<strong>,</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List" >Format number/currency and replace white 
+		spaces by &lt;<em>PadCharacter</em>&gt;.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="NumericMacros.htm#FMTNUL">
+		<strong>@Fmt</strong></a><strong>(NUL,</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List">Return an empty string if &lt;<em>Value</em>&gt; is equal 
+		to n/a. </td>
+	</tr>
+	<tr>
+		<td class="List"><a href="NumericMacros.htm#FMTTRIMZERO">
+		<strong>@Fmt</strong></a><strong>(TRIMZERO,</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List" >Remove leading zeros of numeric 
+		&lt;<em>Value</em>&gt;</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="NumericMacros.htm#FMTMOD10">
+		<strong>@Fmt</strong></a><strong>(MOD10,</strong>&lt;<em>IntValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the modulus 10 (Luhn algorithm) 
+		check digit of &lt;<em>IntValue&gt;</em></td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="NumericMacros.htm#FMTMOD10P">
+		<strong>@Fmt</strong></a><strong>(MOD10P,</strong>&lt;<em>IntValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the modulus 10 (Plessey algorithm) 
+		check digit of &lt;<em>IntValue</em>&gt;</td>
+	</tr>	
+	<tr>
+		<td class="List"  ><a href="NumericMacros.htm#FMTHUDON">
+		<strong>@Fmt</strong></a><strong>(HUDON,</strong>&lt;<em>IntValue</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the Hudon checksums of &lt;<em>IntValue</em>&gt;
+		</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="NumericMacros.htm#FMTHENING">
+		<strong>@Fmt</strong></a><strong>(HENING,</strong>&lt;<em>IntValue</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the Henning Brauer check digit of &lt;<em>IntValue</em>&gt;</td>
+	</tr>			
+	<tr>
+		<td class="List" ><a href="NumericMacros.htm#FMTLTR">
+		<strong>@Fmt</strong></a><strong>(LTR</strong>&lt;<em>Language</em>&gt;<strong>,</strong>&lt;<em>IntValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Convert a number &lt;<em>IntValue</em>&gt; in a literal 
+		format.</td>
+	</tr>					
+	<tr>
+		<td class="List" ><a href="NumericMacros.htm#FMTTRUNC">
+		<strong>@Fmt</strong></a><strong>(TRUNC</strong>&lt;<em>FloatingPointNumber</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the integer part of a floating point number. </td>
+	</tr>						
+	<tr>
+		<td class="List" ><a href="NumericMacros.htm#FMTRANDOM">
+		<strong>@Fmt</strong></a><strong>(RANDOM</strong>&lt;<em>MaxNumber</em>&gt;<strong>)</strong></td>
+		<td class="List">Generate random number larger or equal to 0 and 
+		strictly less than &lt;<em>MaxNumber</em>&gt;. </td>
+	</tr>							
+</table>
+
+
+<h1>Date/time routines</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#D">
+		<strong>@D</strong></a>&lt;<em>DateDisplayFormat</em>&gt;</td>
+		<td class="List">Calculate and format a date from the soft 
+		date.</td>
+	</tr>
+	
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#DATE">
+		<strong>@Date</strong></a><strong>(</strong>&lt;<em>Date</em>&gt;<strong>,</strong>&lt;<em>DateDisplayFormat</em>&gt;<strong>)</strong></td>
+		<td class="List">Calculate and format a date from a SQL 
+		date passed in first parameter.</td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#FMTD">
+		<strong>@Fmt</strong></a><strong>(</strong>&lt;<em>TextOperationDate</em>&gt;<strong>,</strong>&lt;Date&gt;<strong>)</strong></td>
+		<td class="List">Convert a date from specific format to SQL format.</td>
+	</tr>
+	
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#DATEPERIOD">
+		<strong>@Date</strong></a><strong>(</strong>&lt;<em>StartDate</em>&gt;<strong>,</strong>&lt;<em>Period</em>&gt;,&lt;<em>StopDate</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the number of days or number of 
+		weeks between two dates including the first day or week.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#DATELTR"><strong>
+		@Date</strong></a><strong>(</strong>&lt;<em>Date</em>&gt;<strong>,LTR,</strong>&lt;<em>InfoType</em>&gt;<strong>)</strong></td>
+		<td class="List">Return Windows information about a specific 
+		date.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#DATEGMT">
+		<strong>@Date</strong></a><strong>(</strong>&lt;<em>Date</em>&gt;<strong>,GMT)</strong></td>
+		<td class="List">Adjust a SQL date/time according to 
+		Greenwich Mean Time (GMT).</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#DATEDAYOFWEEK">
+		<strong>@Date</strong></a><strong>(</strong>&lt;<em>Date</em>&gt;<strong>,DAYOFWEEK)</strong></td>
+		<td class="List">Return an index number for the day of the 
+		week.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#FMTNUD">
+		<strong>@Fmt</strong></a><strong>(NUD,</strong>&lt;<em>Date</em>&gt;<strong>)</strong></td>
+		<td class="List">Return an empty string if &lt;<em>Date</em>&gt; contains 
+		1899.</td>
+	</tr>						
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#TIME">
+		<strong>@TIME</strong></a></td>
+		<td class="List">Return the current time in HHMM format.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#NOW"><strong>@NOW</strong></a></td>
+		<td class="List">Return the current time in HHMMSS format.</td>
+	</tr>						
+	
+	<tr>
+		<td class="List" ><a href="DateTimeMacros.htm#FMTT">
+		<strong>@Fmt</strong></a><strong>(</strong>&lt;<em>TextOperationTime</em>&gt;<strong>,</strong>&lt;Time&gt;<strong>)</strong></td>
+		<td class="List" >Format a time information.</td>
+	</tr>	
+	<tr>
+		<td class="List"  ><a href="DateTimeMacros.htm#FMTT">
+		<strong>@NULL</strong></a><strong>(</strong>&lt;<em>Date</em>&gt;<strong>)</strong></td>
+		<td class="List"  >Return the null if the date is 
+		not initialized.</td>
+	</tr>		
+</table>
+
+
+
+
+
+
+<h1>Boolean routines/</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="BooleanMacros.htm">
+		<strong>@FMT</strong></a>(FLG,&lt;Value&gt;,&lt;TrueText&gt;)</td>
+		<td class="List">Return a specific text if &lt;<em>Value</em>&gt; is equal 
+		to 1.</td>
+	</tr>
+</table>
+
+
+
+<h1>Miscellaneous formatting &amp; routines</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#FMTRND">
+		<strong>@Fmt</strong></a><strong>(RND,</strong>&lt;<em>Value</em>&gt;<strong>)</strong> </td>
+		<td class="List">Reformat a random weight UPC for data yyy
+		</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#FMTUPCA">
+		<strong>@Fmt</strong></a><strong>(UPCA,</strong>&lt;<em>Code</em>&gt;<strong>)</strong></td>
+		<td class="List">Reformat a UPC &lt;<em>Code</em>&gt; to print a UPC bar 
+		code.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#FMTUPC">
+		<strong>@Fmt</strong></a><strong>(UPC,</strong>&lt;<em>Code</em>&gt;<strong>)</strong></td>
+		<td class="List">Normalize Universal Product Code(UPC) &lt;<em>Code</em>&gt;</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#FMTGPC">
+		<strong>@Fmt</strong></a><strong>(GPC,</strong>&lt;<em>Code</em>&gt;<strong>)</strong></td>
+		<td class="List">Normalize Global Product Classification(GPC) &lt;<em>Code</em>&gt;&nbsp;
+		</td>
+	</tr>			
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#FMTVER">
+		<strong>@Fmt</strong></a><strong>(VER,</strong>&lt;<em>VersionStr</em>&gt;&lt;<em>V</em>&gt;&lt;<em><strong>.</strong>M</em>&gt;&lt;<strong>.</strong><em>R</em>&gt;&lt;<strong>.</strong><em>B</em>&gt;,&lt;<em>OutputMask</em>&gt;<strong>)</strong></td>
+		<td class="List">Format the SMS version number.</td>
+	</tr>			
+	<tr>
+		<td class="List"  ><a href="FormattingOther.htm#FMTMARGIN">
+		<strong>@Fmt</strong></a><strong>(MARGIN:</strong>&lt;<em>NumberOfDecimal</em>&gt;<strong>,</strong>&lt;<em>UnitCost</em>&gt;<strong>,</strong>&lt;<em>SellingPrice</em>&gt;<strong>,</strong>&lt;<em>SellingQuantity</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the calculated margin percentage.</td>
+	</tr>				
+
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#FMTCOMA">
+		<strong>@Fmt</strong></a><strong>(COMA,</strong>&lt;<em>ParamName</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>,</strong>&lt;<em>ParamList</em>&gt;<strong>)</strong></td>
+		<td class="List">Return a formatted numeric value or a string value of a 
+		parameter from a comma parameter list.</td>
+	</tr>						
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#FMTCMP">
+		<strong>@Fmt</strong></a><strong>(CMP,</strong>&lt;<em>Condition</em>&gt;<strong>,</strong>&lt;<em>TrueStatements</em>&gt;<strong>,</strong>&lt;<em>FalseStatements</em>&gt;<strong>)&nbsp;</strong></td>
+		<td class="List">Execute code depending on whether a 
+condition is true or false.</td>
+	</tr>							
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#dbHOTREPORTFOOTER">
+		<strong>@dbHot</strong></a><strong>(CURRENT,REPORTFOOTER,</strong>&lt;<em>Store</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the store name (F1531) and the store 
+long number (F1530) in a string for the current store or store passed as a 
+parameter.</td>
+	</tr>							
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#dbHOTDRL">
+		<strong>@dbHot</strong></a><strong>(CURRENT,DRL,</strong>&lt;<em>Field</em>&gt;<strong>)&nbsp;</strong></td>
+		<td class="List" >Return the value of a field of the table 
+DRIL_PAGE according to the current positioning in the table.</td>
+	</tr>								
+	<tr>
+		<td class="List" ><a href="FormattingOther.htm#dbHOTFCT">
+		<strong>@dbHot</strong></a><strong>(CURRENT,FCT,</strong>&lt;<em>Field</em>&gt;<strong>)&nbsp;</strong></td>
+		<td class="List" >Return the value of a field of the FCT_TAB table (<strong>Function</strong> table) according to the current positioning in the table.</td>
+	</tr>									
+</table>
+
+
+<h1>Encode /Decode specials characters</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMT2HTML">
+		<strong>@Fmt</strong></a><strong>(2HTML,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Encode text to HTML.</td>
+	</tr>		
+		<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMTHTML2">
+		<strong>@Fmt</strong></a><strong>(HTML2,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Decode text from HTML.</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMT2URL">
+		<strong>@Fmt</strong></a><strong>(2URL,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Encode text to URL.</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMTURL2">
+		<strong>@Fmt</strong></a><strong>(URL2,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List" >Decode text from URL.</td>
+	</tr>		
+		<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMT2JS">
+		<strong>@Fmt</strong></a><strong>(2JS,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Encode text to Javascript.</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMTJS2">
+		<strong>@Fmt</strong></a><strong>(JS2,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Decode text from Javascript.</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMT2SPACE">
+		<strong>@Fmt</strong></a><strong>(2SPACE,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Encode space character.</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMTSPACE2">
+		<strong>@Fmt</strong></a><strong>(SPACE2,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Decode space character.</td>
+	</tr>							
+	<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMT2QUOT">
+		<strong>@Fmt</strong></a><strong>(2QUOT,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Encode text. Mainly single quote.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="EncodeCharacters.htm#FMTQUOT2">
+		<strong>@Fmt</strong></a><strong>(QUOT2,</strong>&lt;<em>TextValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Decode text. Mainly single quote.</td>
+	</tr>
+	
+</table>
+
+
+<h1>INI file</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="IniFileInformation.htm#dbHOTINI">
+		<strong>@dbHot</strong></a><strong>(INI,</strong>&lt;<em>FileName</em>&gt;<strong>,</strong>&lt;<em>Section</em>&gt;<strong>,</strong>&lt;<em>Parameter</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the content of a parameter inside an 
+		INI file.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="IniFileInformation.htm#dbHOTINI2">
+		<strong>@dbHot</strong></a><strong>(<span class="auto-style1">&lt;<em>FileName</em>&gt;</span>,[<span class="auto-style1">&lt;<em>Section</em>&gt;</span>]<span class="auto-style1">&lt;<em>Parameter</em>&gt;,&lt;<em>TextDisplayFormat</em>&gt;</span>)</strong></td>
+		<td class="List">Return the content formatted of a parameter inside an 
+		INI file.</td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="IniFileInformation.htm#dbHOTSET">
+		<strong>@dbHot</strong></a><strong>(</strong>&lt;<em>FileName</em>&gt;<strong>,SET,[</strong>&lt;<em>Section</em>&gt;<strong>]</strong>&lt;<em>Parameter</em>&gt;<strong>)</strong></td>
+		<td class="List">Save the value of one or many Pool parameter in an INI 
+		file.</td>
+	</tr>	
+<!--ToComplete	<tr>
+		<td class="List" ><a href="IniFileInformation.htm#msgTable">
+		<strong>@msgTable</strong></a><strong>(</strong>&lt;<em>INIResultSet</em>&gt;<strong>,</strong>&lt;<em>FileName</em>&gt;<strong>,</strong>&lt;<em>Section</em>&gt;<strong>,</strong>&lt;<em>Parameter</em>&gt;<strong>)</strong></td>
+		<td class="List">
+		<span class="auto-style2">A completer</span></td>
+	</tr>		 -->
+</table>
+
+
+
+<h1>Disk file</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="DiskFileInformation.htm">
+		<strong>@dbHot</strong></a><strong>(FINDFIRST,</strong>&lt;<em>FileMask</em>&gt;<strong>,</strong>&lt;<em>Count</em>&gt;<strong>)</strong></td>
+		<td class="List">Search for the nth instance of a file name 
+		in a specified path.</td>
+	</tr>
+</table>
+
+
+<h1>Registry</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="RegistryInformation.htm#REGGEN1">
+		<strong>@dbHot</strong></a><strong>(REGGEN,</strong>&lt;<em>RegistryKey</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return a counter represented by a key in the registry.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="RegistryInformation.htm#REGGEN2">
+		<strong>@dbHot</strong></a><strong>(REGGEN,</strong>&lt;<em>RegistryKey</em>&gt;<strong>,</strong>&lt;<em>Increment</em>&gt;<strong>,</strong>&lt;<em>MaxValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Use to build a counter with a key in the 
+		registry.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="RegistryInformation.htm#REGVALUE">
+		<strong>@dbHot</strong></a><strong>(REGVALUE,</strong>&lt;<em>RegistryKey</em>&gt;<strong>,</strong>&lt;<em>DataType</em>&gt;<strong>)</strong></td>
+		<td class="List">Return a value of a registry key based on 
+		the data type.</td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="RegistryInformation.htm#REG">
+		<strong>@dbHot</strong></a><strong>(REG,</strong>&lt;<em>RegistryKey</em>&gt;<strong>,</strong>&lt;<em>TextDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>DefaultValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Return a formatted value of a String 
+		registry key. </td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="RegistryInformation.htm#VARGET">
+		<strong>@dbHot</strong></a><strong>(VARGET,</strong>&lt;<em>RegistryKey</em>&gt;<strong>,,</strong>&lt;<em>TextDisplayFormat</em>&gt;<strong>)</strong></td>
+		<td class="List">Return a formatted value of a String 
+		registry key. </td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="RegistryInformation.htm#REGSET">
+		<strong>@dbHot</strong></a><strong>(REGSET,</strong>&lt;<em>RegistryKey</em>&gt;<strong>,</strong>&lt;<em>DataType</em>&gt;<strong>,</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List">Save a value in a registry key.</td>
+	</tr>	
+	<tr>
+		<td class="List" ><a href="RegistryInformation.htm#VARSET1">
+		<strong>@dbHot</strong></a><strong>(VARSET,</strong>&lt;<em>RegistryKey</em>&gt;<strong>,</strong>&lt;<em>Value</em>&gt;<strong>)</strong></td>
+		<td class="List">Save a String value in a registry 
+		key. </td>
+	</tr>	
+	<tr>
+		<td class="List" >
+		<a href="RegistryInformation.htm#VARSET2">
+		<strong>@dbHot</strong></a><strong>(VARSET,</strong>&lt;<em>PoolParameterName</em>&gt;<strong>*)</strong></td>
+		<td class="List" >Save the 
+		value of one or more pool parameters in String registry keys of the same 
+		name.</td>
+	</tr>	
+	<tr>
+		<td class="List" >
+		<a href="RegistryInformation.htm#REGSET2">
+		<strong>@dbHot</strong></a><strong>(REG,SET,</strong>&lt;<em>PoolParameterName</em>&gt;<strong>*)</strong></td>
+		<td class="List" >Save the 
+		value of one or more pool parameters in String registry keys of the same 
+		name.</td>
+	</tr>	
+
+	<tr>
+		<td class="List"  ><a href="RegistryInformation.htm#dbHOTREGDELETE">
+		<strong>@dbHot</strong></a><strong>(REG,DELETE,</strong>&lt;<em>RegistryKey</em>&gt;<strong>)</strong></td>
+		<td class="List" >Delete a registry key.</td>
+	</tr>								
+	
+	<tr>
+		<td class="List"  ><a href="RegistryInformation.htm#dbHOTREGSETDELETE">
+		<strong>@dbHot</strong></a><strong>(REGSET,</strong>&lt;<em>RegistryKey</em>&gt;<strong>,DELETE)</strong></td>
+		<td class="List" >Delete a registry key.</td>
+	</tr>									
+	
+<!--ToFix	<tr>
+		<td class="List"  ><a href="RegistryInformation.htm#VARRESET">
+		<strong>@dbHot</strong></a><strong>(VARRESET,</strong>&lt;<em>RegistryKey</em>&gt;<strong>*)</strong></td>
+		<td class="List" style="background-color: #FF0000;">BUG : 
+		Détruit toute les clés peut-importe le masque : Détruit tout 
+		@dbHot(VARRESET,PARAM1*)</td>
+	</tr>
+	-->									
+</table>
+
+
+
+
+
+<h1>Database - Table informations</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" >
+		<a href="database/TableInformation.htm#FINDTABLE"><strong>
+		@dbHot</strong></a><strong>(FINDTABLE,</strong>&lt;<em>TableName</em>&gt;<strong>)</strong></td>
+		<td class="List">Check if a SQL table exist.</td>
+	</tr>
+	<tr>
+		<td class="List" >
+		<a href="database/TableInformation.htm#TABLES_RECORDCOUNT"><strong>
+		@Tools</strong></a><strong>(TABLES_RECORDCOUNT)</strong></td>
+		<td class="List">Check if a SQL table exist.</td>
+	</tr>	
+</table>
+
+
+
+<h1>Database - Table creation</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" >
+		<a href="database/TableCreation.htm#CREATE"><strong>
+		@CREATE</strong></a><strong>(</strong>&lt;<em>TableName</em>&gt;<strong>,</strong>&lt;<em>TableDefinition</em>&gt;<strong>)</strong></td>
+		<td class="List">&nbsp;</td>
+	</tr>
+<!--ToFix	<tr>
+		<td class="List" >
+		<a href="database/TableCreation.htm#CREATEINDEX"><strong>
+		@CREATE_INDEX</strong></a><strong>(</strong>&lt;<em>TableName</em>&gt;<strong>,</strong>&lt;<em>TableDefinition</em>&gt;<strong>)</strong></td>
+		<td class="List" style="background-color: #FF0000">Procedure is Empty</td>
+	</tr>	
+	-->
+</table>
+
+
+<h1>Database - Operation</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" >
+		<a href="database/DatabaseOperation.htm#DBSELECT"><strong>
+		@dbSelect</strong></a><strong>(</strong>&lt;<em>DisplayFormat</em>&gt;<strong>,</strong>&lt;<em>SQLSelectStatement</em>&gt;<strong>)</strong></td>
+		<td class="List">Return all the fields value from the first 
+		record of the result set separated by commas.</td>
+	</tr>
+	<tr>
+		<td class="List" >
+		<a href="database/DatabaseOperation.htm#DBEXEC"><strong>@dbExec</strong></a><strong>(</strong>&lt;<em>SQLStatement</em>&gt;<strong>)</strong></td>
+		<td class="List">Execute a SQL statement against the 
+		database. </td>
+	</tr>
+	<tr>
+		<td class="List" >
+		<a href="database/DatabaseOperation.htm#DBPLAN"><strong>
+		@dbPlan</strong></a><strong>(</strong>&lt;<em>SQLSelectStatementId</em>&gt;<strong>,</strong>&lt;<em>Parameter1</em>&gt;<strong>,</strong>&lt;<em>Parameter2</em>&gt;<strong>,...)</strong></td>
+		<td class="List">Execute a SQL query defined in the 
+		Prepare.ini file.</td>
+	</tr>
+	<tr>
+		<td class="List"  >
+		<a href="database/DatabaseOperation.htm#DBGEN1"><strong>@dbGen</strong></a><strong>(</strong>&lt;<em>FieldName</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the value of &lt;<em>FieldName</em>&gt; 
+		defined in SYS_TAB table.</td>
+	</tr>			
+	<tr>
+		<td class="List" >
+		<a href="database/DatabaseOperation.htm#DBGEN2"><strong>@dbGen</strong></a><strong>(</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>Increment</em>&gt;<strong>,</strong>&lt;<em>MaxValue</em>&gt;<strong>)</strong></td>
+		<td class="List">Increment the value of &lt;<em>FieldName</em>&gt; defined 
+		in SYS_TAB table and return the new value.</td>
+	</tr>				
+</table>
+
+
+
+
+
+
+<h1>Database - Data table &amp; view</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="database/DataTable.htm#DBTABLE1"><strong>@dbTable</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SQLSelectStatement</em>&gt;<strong>)</strong></td>
+		<td class="List">Execute a query and store the result in a result set.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataTable.htm#DBTABLE2"><strong>@dbTable</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FILTER</strong> 
+		&lt;<em>SQLWhereClause</em>&gt;<strong>)</strong></td>
+		<td class="List">Applie a filter on an existing result set.</td>
+	</tr>	
+	<tr>
+		<td class="List"  >
+		<a href="database/DataTable.htm#DBTableEXEC"><strong>@dbTable</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,EXEC 		</strong>&lt;<em>SQLStoreProc</em>&gt;<strong>)</strong></td>
+		<td class="List" >Execute a SQL store procedure and store the result 
+		in a result set.</td>
+	</tr>					
+	<tr>
+		<td class="List"><a href="database/DataTable.htm#DBVIEW"><strong>@dbView</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SQLSelectStatement</em>&gt;<strong>)</strong></td>
+		<td class="List">Execute a query and store the result in a result set.</td>
+	</tr>	
+	<tr>
+		<td class="List"  >
+		<a href="database/DataTable.htm#DBTableEXEC"><strong>@dbView</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,EXEC 		</strong>&lt;<em>SQLStoreProc</em>&gt;<strong>)</strong></td>
+		<td class="List" >Execute a SQL store procedure and store the result 
+		in a result set.</td>
+	</tr>						
+</table>
+
+
+<h1>Database - Data row</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWFIELDCOUNT">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIELD_COUNT,#) 		</strong></td>
+		<td class="List">Return the fields count contained in the result set.</td>
+	</tr>
+	<tr>
+		<td class="List" > <a href="database/DataRow.htm#DBROWRECORDCOUNT">
+		<strong> @dbRow</strong></a>(&lt;<em>ResultSetId</em>&gt;<strong>,RECORD_COUNT,#) </strong> </td>
+		<td class="List">Return the row count contained in the result set.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWFIELD">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIELD,</strong>&lt;FieldIndex&gt;<strong>,</strong>&lt;<em>DataDisplayFormat</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the value of a field based on &lt;<em>FieldIndex</em>&gt;
+		and the current row of the result set.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROW1">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DataDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the value of a field based on &lt;<em>FieldName</em>&gt;
+		and the current row of the result set.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWFIRST">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIRST)</strong></td>
+		<td class="List">Select the first record of the result set.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWPREV">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,PREV)</strong></td>
+		<td class="List">Select the previous record of the result set.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWNEXT">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,NEXT)</strong></td>
+		<td class="List">Select the next record of the result set.&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWLAST">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,LAST)</strong></td>
+		<td class="List">Select the last record of the result set.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBAUTO">
+		<strong>@dbAuto</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>NumberOfFields</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the current row of the result set in HTML 
+		format</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWNODES">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,NODES,</strong>&lt;<em>PrefixTag</em>&gt;<strong>,</strong>&lt;<em>SuffixTag</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the current row of the resut set in XML format.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWVALUES">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,VALUES,</strong>&lt;<em>OutputFormat</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the current&nbsp;row of the result set in two different output 
+formats.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBROWSAVEBLOB">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,SAVE_BLOB,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>FileName</em>&gt;<strong>)</strong></td>
+		<td class="List">Save the contents of a blob field in a disk file.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#DBFIND">
+		<strong>
+		@dbFind</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SearchFieldNames</em>&gt;<strong>,</strong>&lt;<em>SearchValues</em>&gt;<strong>,</strong>&lt;<em>ReturnFieldName</em>&gt;<strong>,</strong>&lt;<em>DataDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></td>
+		<td class="List">Do a "find" within the result set to 
+obtain specific information.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataRow.htm#dbHOTOpenTableName">
+		<strong>@dbHot</strong></a><strong>(</strong>&lt;<em>OpenTableName</em>&gt;<strong>,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DataDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the contents of a field from the current row of a table 
+that should already be open.</td>
+	</tr>													
+</table>
+
+
+
+<h1>Database - Data column</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List"  >
+		<a href="database/DataColumn.htm#DBROWFIELDS"><strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FIELDS)</strong></td>
+		<td class="List"  >Return the field list of the result set. </td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataColumn.htm#DBROWFINDFIELD">
+		<strong>@dbRow</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,FINDFIELD,</strong>&lt;<em>FieldName</em>&gt;<strong>)</strong></td>
+		<td class="List">Check if a field name exists in a result set.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="database/DataColumn.htm#DBAUTOHDR">
+		<strong>@dbAutoHdr</strong></a><strong>(</strong>&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>NumberOfFields</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the name of the fields of a result set in Html format.</td>
+	</tr>		
+	<tr>
+		<td class="List"  ><a href="database/DataColumn.htm#dbFLD">
+		<strong>@dbFld</strong></a><strong>(</strong>&lt;<em>TableName</em>&gt;<strong>,</strong>&lt;<em>Prefix</em>&gt;<strong>,</strong>&lt;<em>ExludeListOfFieldNames</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return a comma-separated list of all available fields 
+		from a table.</td>
+	</tr>		
+	<tr>
+		<td class="List" ><a href="database/DataColumn.htm#dbDCT">
+		<strong>@dbDct</strong></a><strong>(</strong>&lt;<em>ListofFieldNames</em>&gt;<strong>)</strong></td>
+		<td class="List">Return a list of fields with their data type.</td>
+	</tr>			
+	<tr>
+		<td class="List" ><a href="database/DataColumn.htm#dbCol">
+		<strong>@dbCol</strong></a><strong>(</strong>&lt;<em>TableName1</em>&gt;<strong>,</strong>&lt;<em>TableName2</em>&gt;<strong>,</strong>&lt;<em>Prefix</em>&gt;<strong>)</strong></td>
+		<td class="List">Return a list of all fields present in both tables &lt;<em>TableName1</em>&gt; 
+and &lt;<em>TableName2</em>&gt;.</td>
+	</tr>				
+	<tr>
+		<td class="List"  ><a href="database/DataColumn.htm#dbColOp">
+		<strong>@dbCol</strong></a><strong>(</strong>&lt;<em>TableName1</em>&gt;<strong>,</strong>&lt;<em>TableName2</em>&gt;<strong>,</strong>&lt;<em>Prefix1</em>&gt;<strong>,</strong>&lt;<em>Operator</em>&gt;<strong>,</strong>&lt;<em>Prefix2</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return a SQL string or HTML code according to the &lt;<em>Operator</em>&gt; with the list of all fields 
+present in both tables &lt;<em>TableName1</em>&gt; and &lt;<em>TableName2</em>&gt;.</td>
+	</tr>					
+</table>
+
+
+
+<h1>Total management</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List"   ><a href="TotalManagement.htm#rptTTL1"><strong>@rptTTL</strong></a><strong>(</strong>&lt;<em>TotalId</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>)</strong></td>
+		<td class="List"  >Return the formatted value of a 
+		&lt;<em>TotalId</em>&gt; variable.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="TotalManagement.htm#rptCLR"><strong>@rptCLR</strong></a><strong>(</strong>&lt;<em>TotalId</em>&gt;&lt;<strong>=</strong><em>Value</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;&lt;<strong>=</strong><em>Value</em>&gt;<strong>,...)</strong></td>
+		<td class="List">Initialize one or more Total variables.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="TotalManagement.htm#rptTTL2"><strong>@rptTTL</strong></a><strong>(</strong>&lt;<em>ArithmeticExpression</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></td>
+		<td class="List">Return the formatted result of the arithmetic 
+		expression and add the result to the &lt;<em>TotalId</em>&gt; variable.</td>
+	</tr>
+	
+</table>
+
+
+<h1>Transaction</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTREC_TTLADD"><strong>@dbHot</strong></a><strong>(REC_TTL,ADD,</strong>&lt;<em>Totalizer</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;<strong>,</strong>&lt;<em>Amount</em>&gt;<strong>,</strong>&lt;NumericDisplayFormat&gt;<strong>,</strong>&lt;TotalId&gt;<strong>)</strong></td>
+		<td class="List" >Add an &lt;<em>Amount</em>&gt; to the value of &lt;<em>Field</em>&gt; 
+		for the &lt;<em>Totalizer</em>&gt; of the <strong>Receiving transaction totals</strong> 
+		memory object of the current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List" ><a href="Transaction.htm#dbHOTREC_TTLRPL"><strong>@dbHot</strong></a><strong>(REC_TTL,RPL,</strong>&lt;<em>Totalizer</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;<strong>,</strong>&lt;<em>Amount</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)<br />
+		</strong></td>
+		<td class="List"  >Replace the value of &lt;<em>Field</em>&gt; 
+		for the &lt;<em>Totalizer</em>&gt; of the <strong>Receiving transaction totals</strong> 
+		memory object of the current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTREC_TTLFIND"><strong>@dbHot</strong></a><strong>(REC_TTL_FIND,</strong>&lt;<em>Totalizer</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)<br />
+		</strong></td>
+		<td class="List" >Return the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+		of the <strong>Receiving transaction totals</strong> memory object of 
+		the current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTREC_TTL"><strong>@dbHot</strong></a><strong>(REC_TTL)</strong></td>
+		<td class="List" >Update the REC_TTL table from the <strong>Receiving 
+		transaction totals</strong> memory object of the current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTSAL_TTLADD"><strong>@dbHot</strong></a><strong>(SAL_TTL,ADD,</strong>&lt;<em>Totalizer</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;<strong>,</strong>&lt;<em>Amount</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)<br />
+		</strong></td>
+		<td class="List" >Add an &lt;<em>Amount</em>&gt; to the value of &lt;<em>Field</em>&gt; 
+		for the &lt;<em>Totalizer</em>&gt; of the <strong>Sale transaction totals</strong> 
+		memory object of the current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTSAL_TTLRPL"><strong>@dbHot</strong></a><strong>(SAL_TTL,RPL,</strong>&lt;<em>Totalizer</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;<strong>,</strong>&lt;<em>Amount</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></td>
+		<td class="List" >Replace the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+		of the <strong>Sale transaction totals</strong> memory object of the 
+		current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTSAL_TTLFIND"><strong>@dbHot</strong></a><strong>(SAL_TTL,FIND,</strong>&lt;<em>Totalizer</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)<br />
+		</strong></td>
+		<td class="List" >Return the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+		of the <strong>Sale transaction totals</strong> memory object of the 
+		current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTSAL_TTL_FIND"><strong>@dbHot</strong></a><strong>(SAL_TTL_FIND,</strong>&lt;<em>Totalizer</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+		of the <strong>Sale transaction totals</strong> memory object or the 
+		SAL_TTL table of the current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTSAL_TTL"><strong>@dbHot</strong></a><strong>(SAL_TTL)</strong></td>
+		<td class="List" >Update the SAL_TTL table from the <strong>Sale 
+		transaction totals</strong> memory object of the current transaction.</td>
+	</tr>
+	<tr>
+		<td class="List"  ><a href="Transaction.htm#dbHOTSAL_REG_FIND"><strong>@dbHot</strong></a><strong>(SAL_REG_FIND,</strong>&lt;<em>Filter</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></td>
+		<td class="List" >Return a total registration from the current 
+		transaction.</td>
+	</tr>
+	
+</table>
+
+
+
+<h1>CGI File</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="CgiMacros.htm#TABLE_RECORD"><strong>@dbHot</strong></a>(TABLE_RECORD)</td>
+		<td class="List">Return the current row number of the executed dbTable.</td>
+	</tr>
+</table>
+
+<!--ToComplete
+<h1 class="auto-style8">Missing Code ...</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" >@dbHot(PRINTER,Receipt,OFFLINE) </td>
+		<td class="List" >&nbsp;</td>				
+	</tr>
+	<tr>
+		<td class="List" >@dbHot(PRINTER,Receipt,COVEROPEN)</td>
+		<td class="List" >&nbsp;</td>				
+	</tr>		
+	<tr>
+		<td class="List" >@dbHot(PRINTER,Receipt,LOWPAPER)</td>
+		<td class="List" >&nbsp;</td>				
+	</tr>			
+	<tr>
+		<td class="List" >@FMT(I2OF5,yyyy)<br />
+		</td>
+		<td class="List" >Reformat a code to print Interleave 2 of 5 bar code</td>		
+	</tr>				
+</table>
+
+
+<h1 class="auto-style8">Non fonctionnel </h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" >@WizClrAll</td>
+		<td class="List" >cMacWizClrAll: begin<br />
+&nbsp;&nbsp; sWizPrm:=Copy(sCmd,9,length(sCmd)-9); // <strong>Devrait plutot 
+		etre -12</strong><br />
+&nbsp;&nbsp; TCNO(CNO).oPrm.ClrParamAll(sWizPrm);</td>				
+	</tr>
+	<tr>
+		<td class="List" >@dbHot(regGen,TMPDB,1,30)&nbsp; (Compteur)</td>
+		<td class="List" >Use a key in the registry to build a counter. TMPDB is 
+		the name of the key created under \\HKEY_LOCAL_MACHINE\SOFTWARE\Store 
+		Management\Counter. The 1 is increment the counter by 1. The 30 is the 
+		maximum incrementation before going back to <strong>1</strong>.<br />
+		<strong>Plutôt 0. Erreur dans la documentation ou erreur dans la macro ?</strong></td>				
+	</tr>		
+	<tr>
+		<td class="List" >@dbHot(VARRESET,&lt;RegistryKey&gt;*)</td>
+		<td class="List" >Détruit toutes les Key de Store Management\Counters 
+		peut importe ce qui est passé en paramètre à &lt;RegistryKey&gt;</td>				
+	</tr>			
+	<tr>
+		<td class="List" >&nbsp;</td>
+		<td class="List" >&nbsp;</td>		
+	</tr>				
+</table>
+
+<h1 class="auto-style8">Not used in V4</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" >@dbHot(DBPASSWORDC)</td>
+		<td class="List" >BDE</td>				
+	</tr>
+	<tr>
+		<td class="List" >@dbHot(DBUSERNAME)</td>
+		<td class="List" >BDE</td>				
+	</tr>		
+	<tr>
+		<td class="List" >@dbHot(DBALIAS)</td>
+		<td class="List" >BDE</td>		
+	</tr>			
+	<tr>
+		<td class="List" >@dbHot(FINDWINDOW,FBtnWin,3)</td>
+        <td class="List" >Not web user interface</td>
+	</tr>				
+	<tr>
+		<td class="List"  >@dbSND(TABLE1,TABLE2)</td>
+        <td class="List"  >This macro is deprecated and no longer supported from 
+		version 2.2.2</td>
+	</tr>					
+	<tr>
+		<td class="List"  >@dbSET(TABLE1,TABLE2)</td>
+        <td class="List"  >This macro is deprecated and no longer supported from 
+		version 2.2.2</td>
+	</tr>					
+	
+	<tr>
+		<td class="List"  >@FMT(UPC<strong>0</strong>,&lt;Code&gt;)</td>
+        <td class="List"  >Exactly the same macro as 
+		@FMT(UPC,&lt;Code&gt;)</td>
+	</tr>					
+	<tr>
+		<td class="List" >&nbsp;</td>
+        <td class="List" >&nbsp;</td>
+	</tr>						
+	
+</table>
+
+<h1 class="auto-style8">Macros converti pour Web ?</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>
+		@wizINIT</strong></a></td>
+		<td class="List">Initializes the wizard views</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>
+		@wizDATE(DATE)</strong></a></td>
+		<td class="List">Used to select a single date</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>
+		@wizDATES(START,STOP)</strong></a></td>
+		<td class="List">Used to select a two date interval</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>
+		@wizTARGET(TARGET)</strong></a></td>
+		<td class="List">Used to select target store group</td>
+	</tr>
+		<tr>
+		<td class="List"  >
+		<a href="database/TableInformation.htm"><strong>@wizDETAIL(DETAIL)</strong></a></td>
+		<td class="List" >Used to select a period type 
+		(week, day, etc.)</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>
+		@wizEDIT(UPC,Enter UPC)</strong></a></td>
+		<td class="List">Used to ask for a manual entry</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>
+		@wizLBL(STYLE)</strong></a></td>
+		<td class="List">Used to select a label format</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>
+		@wizMENU(ORDER)</strong></a></td>
+		<td class="List">Used to display a menu. A menu can be built using the 
+		following syntax:</td>
+	</tr>
+		<tr>
+		<td class="List"  >
+		<a href="database/TableInformation.htm"><strong>
+		@WIZMENU(ORDER=TITLE,DATA1=Choice 1,DATA2=Choice 2);</strong></a></td>
+		<td class="List" >The ORDER parameter will be set 
+		with DATA1 or DATA2 depending on the menu selection (Choice 1 and Choice 
+		2)</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>
+		@wizDISPLAY</strong></a></td>
+		<td class="List">End of the wizard definition and display the resulting 
+		wizard</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>@wizFIL(FIL1=1,FIL2=999,SELECT 
+		* FROM HEADER_BAT)</strong></a></td>
+		<td class="List">Used to select a range of value from specified field 
+		from a query. The returning value will be the first field of the query</td>
+	</tr>
+		<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>@</strong></a></td>
+		<td class="List">&nbsp;</td>
+	</tr>
+	
+</table>
+
+
+
+<h1 class="auto-style2">Notes</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" >@STORE=@MACSHORT(STORE)&nbsp; @TER=@MACSHORT(TER)&nbsp; 
+		etc.<br />
+&nbsp; Pourquoi @MacShort ? <br />
+&nbsp; Quelle macro documenter ? @STORE ou @MACSHORT(STORE) ?<br />
+		</td>
+
+	</tr>
+</table>
+
+
+<h1 class="auto-style2">XXXX</h1>
+<table class="List" width="100%">
+	<tr>
+		<td class="List" ><a href="database/TableInformation.htm"><strong>@</strong></a></td>
+		<td class="List">&nbsp;</td>
+	</tr>
+</table>
+-->
+
+</body>
+</html>

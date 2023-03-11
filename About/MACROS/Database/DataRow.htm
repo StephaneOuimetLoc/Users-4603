@@ -1,0 +1,873 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Data row</title>
+	<link rel="stylesheet" href="../work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style4 {
+	color: #000080;
+}
+.auto-style3 {
+	color: #000080;
+}
+</style>
+</head>
+<body>
+<h1>Data row</h1>
+
+
+<h2 id="DBROWFIELDCOUNT">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,FIELD_COUNT,#) </h2>
+<p>This macro returns the fields count contained in the result set.</p>
+<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The fields count contained in result set.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q1,SELECT F03, F238 FROM DEPT_TAB ORDER BY 
+		F1965,F03)<br />
+		@dbROW(Q1,FIELD_COUNT,#)&nbsp;&nbsp;&nbsp; will return&nbsp; <span class="auto-style4">
+		<strong>2</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="DBROWRECORDCOUNT">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,RECORD_COUNT,#) </h2>
+<p>This macro returns the row count contained in the result set.</p>
+<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The row count contained in the result set.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q1,SELECT F03, F238 FROM DEPT_TAB ORDER BY 
+		F1965,F03)<br />
+		@dbROW(Q1,RECORD_COUNT,#)&nbsp;&nbsp; will return <span class="auto-style4"><strong>34</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="DBROWFIELD">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,FIELD,<span class="auto-style1">&lt;<em>FieldIndex</em>&gt;<strong>,</strong>&lt;<em>DataDisplayFormat</em>&gt;</span>) </h2>
+<p>This macro returns the value of a field based on &lt;<em>FieldIndex</em>&gt; and 
+the current row of the result set.</p>
+<p>For fields whose data type is not varchar, the return value is formatted 
+according to &lt;<em>DataDisplayFormat</em>&gt;.</p>
+<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FieldIndex</td>
+		<td class="List">Field index of the result set (first 
+		field = 1, second field = 2, etc 
+		...)</td>
+		<td class="List">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">DataDisplayFormat</td>
+		<td class="List">If field is numeric, see &lt;<a href="../DataDisplayFormat.htm#NumericDisplayFormat"><em>NumericDisplayFormat</em></a>&gt;<br />
+		If field is date/time, see &lt;<a href="../DataDisplayFormat.htm#DateDisplayFormat1"><em>DateDisplayFormat</em></a>&gt;<br />
+		If field is text, see &lt;<a href="../DataDisplayFormat.htm#TextDisplayFormat"><em>TextDisplayFormat</em></a>&gt;</td>
+		<td class="List">Required</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Formatted Value.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List"  >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbROW(Q3,FIELD,1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style4"><strong>0000000000100</strong></span><br />
+		@dbROW(Q3,FIELD,2,$12:2)<strong>&nbsp;&nbsp; </strong>will return&nbsp;"&nbsp;&nbsp;&nbsp;&nbsp; <strong> 
+		<span class="auto-style4">$105.99</span>"</strong><br />
+		@dbROW(Q3,FIELD,3,DSDF)&nbsp;&nbsp; will return&nbsp; 
+		<span class="auto-style4"><strong>02/02/2019</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="DBROW1">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,<span class="auto-style1">&lt;<em>FieldName</em>&gt;</span>,<span class="auto-style1">&lt;<em>DataDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>) </h2>
+<p>This macro returns the value of a field based on &lt;<em>FieldName</em>&gt; and 
+the current row of the result set.</p>
+<p>For fields whose data type is not varchar, the return value is formatted 
+according to &lt;<em>DataDisplayFormat</em>&gt;.</p>
+<p>The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.</p>
+<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List" >An identifier containing a result set.</td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FieldName</td>
+		<td class="List" >Field name.</td>
+		<td class="List" >Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">DataDisplayFormat</td>
+		<td class="List">If field is numeric, see &lt;<a href="../DataDisplayFormat.htm#NumericDisplayFormat"><em>NumericDisplayFormat</em></a>&gt;<br />
+		If field is date/time, see &lt;<a href="../DataDisplayFormat.htm#DateDisplayFormat1"><em>DateDisplayFormat</em></a>&gt;<br />
+		If field is text, see &lt;<a href="../DataDisplayFormat.htm#TextDisplayFormat"><em>TextDisplayFormat</em></a>&gt;</td>
+		<td class="List">Required</td>
+	</tr>		
+	<tr>
+		<td class="List" style="width: 100px">TotalId</td>
+		<td class="List">A total variable. The system will add the return value 
+		of the macro to the value of the TotalId.<br />
+		Add <strong>=</strong> at the beginning of TotalId to clear the value of
+		<em>&lt;TotalId&gt;</em> before adding the value.&nbsp; Example:
+		<span class="auto-style4"><strong>=T1<br />
+		</strong></span>Add <strong>-</strong> at the beginning of &lt;<em>TotalId</em>&gt; 
+		to substract the return value of the macro to the value of the &lt;<em>TotalId</em>&gt;. 
+		Example: <strong><span class="auto-style4">-T1</span><br />
+		</strong>Add <strong>-</strong> at the end of TotalId to substract the 
+		value of &lt;<em>TotalId</em>&gt; to the return value of the macro. Example:
+		<span class="auto-style4"><strong>T1-<br />
+		</strong></span>You can increment or decrement more than one TotalId.&nbsp; 
+		Just separate them with a semicolon. Example:<span class="auto-style4"><strong>
+		<span class="auto-style3">+T1;-T2</span></strong></span></td>
+		<td class="List">Optionnal</td>
+	</tr>			
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value of the selected field formatted.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbTable(Q4,Select F01,F02 from POS_TAB);<br />
+		@dbROW(Q3,F01)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return<span class="auto-style4"><strong> 0000000000100<br />
+		</strong></span>@dbROW(Q4,F02,RAW)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style4"><strong>COFFEE 350ml<br />
+		<br />
+		</strong></span>@dbROW(Q3,F38,$12:2,T1)&nbsp;&nbsp;&nbsp; will return&nbsp;"&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style4"><strong> 
+		$100.00</strong></span>"&nbsp; (and T1 contains 100.00)<br />
+		@dbROW(Q3,F38,$12:2,T1))&nbsp;&nbsp; will return&nbsp;"&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style4"><strong> 
+		$100.00</strong></span>"&nbsp; (and T1 contains 200.00)<br />
+		@dbROW(Q3,F38,$12:2,=T1)) will return&nbsp;"&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style4"><strong> 
+		$100.00</strong></span>"&nbsp; (and T1 contains 100.00)<br />
+		<br />
+		@dbROW(Q3,F39,DSDF)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return&nbsp;<span class="auto-style4"><strong> 02/02/2019</strong></span></td>
+	</tr>	
+
+</table>
+
+
+
+<h2 id="DBROWFIRST">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,FIRST) </h2>
+<p>This macro selects the first record of the result set.<span style="font-size:10.5pt;font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;color:black;
+mso-ansi-language:EN-CA;mso-fareast-language:EN-CA;mso-bidi-language:AR-SA"><span style="mso-spacerun:yes">&nbsp;</span></span></p>
+		<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List" >An identifier containing a result set.</td>
+		<td class="List" >Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbROW(Q3,FIRST)&nbsp;</td>
+	</tr>	
+
+</table>
+
+<h2 id="DBROWPREV">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,PREV) </h2>
+<p>This macro selects the previous record of the result set.<span style="font-size:10.5pt;font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;color:black;
+mso-ansi-language:EN-CA;mso-fareast-language:EN-CA;mso-bidi-language:AR-SA"><span style="mso-spacerun:yes">&nbsp;</span></span></p>
+		<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px;">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbROW(Q3,PREV)&nbsp;</td>
+	</tr>	
+
+</table>
+
+
+<h2 id="DBROWNEXT">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,NEXT) </h2>
+<p>This macro selects the next record
+<span style="font-size:10.5pt;font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;color:black;
+mso-ansi-language:EN-CA;mso-fareast-language:EN-CA;mso-bidi-language:AR-SA">
+<span style="mso-spacerun:yes">of the result set.&nbsp;</span></span></p>
+		<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbROW(Q3,NEXT)&nbsp;</td>
+	</tr>	
+</table>
+
+<h2 id="DBROWLAST">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,LAST) </h2>
+<p>This macro selects the last record of the result set.<span style="font-size:10.5pt;font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;color:black;
+mso-ansi-language:EN-CA;mso-fareast-language:EN-CA;mso-bidi-language:AR-SA"><span style="mso-spacerun:yes">&nbsp;</span></span></p>
+		<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbROW(Q3,LAST)&nbsp;</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="DBAUTO">@dbAuto(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,<span class="auto-style1">&lt;<em>NumberOfFields</em>&gt;</span>) </h2>
+<p>This macro returns the current row of the result set in HTML format.</p>
+<p>You can generate only the first X fields using the &lt;<em>NumberOfFields</em>&gt; 
+parameter.</p>
+		<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 129px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">Number of fields</td>
+		<td class="List" >Number of fields to generate.<br />
+		If not specified, all fields will be generated.</td>
+		<td class="List" >Optionnal</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Html code for the current row.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39,F1000 from COST_TAB)<br />
+		@dbAuto(Q3)&nbsp;&nbsp;will return :<br />
+		<span class="auto-style4"><strong>0000000000100&lt;/td&gt;<br />
+		&lt;td&gt;105.99&lt;/td&gt;<br />
+		&lt;td&gt;2019-02-01&lt;/td&gt;<br />
+		&lt;td&gt;PAL<br />
+		</strong></span>
+		<br />
+		@dbAuto(Q3,2)&nbsp;&nbsp;will return :<br />
+		<span class="auto-style4"><strong>0000000000100&lt;/td&gt;<br />
+		&lt;td&gt;105.99</strong></span></td>
+	</tr>	
+	</table>
+
+
+
+<h2 id="DBROWNODES">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,<span class="auto-style1"><strong>NODES,</strong>&lt;<em>PrefixTag</em>&gt;<strong>,</strong>&lt;<em>SuffixTag</em>&gt;</span>) </h2>
+<p>This macro returns the current row of the resut set in XML format.</p>
+<p>The name of each tag is represented by : &lt;<em>PrefixTag</em>&gt;FieldName&lt;<em>SuffixTag</em>&gt;</p>
+<p>If a macro is present in the value, the macro will not be parsed.</p>
+		<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 129px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">Prefix tag</td>
+		<td class="List" >Text placed before the name of the field 
+		to form tag Name.</td>
+		<td class="List" >Optionnal</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 129px">Suffix tag</td>
+		<td class="List" >Text placed after the name of the field 
+		to form tag Name.</td>
+		<td class="List" >Optionnal</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >XML code for the current row.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbRow(Q3,NODES,COL-)&nbsp;&nbsp;will return :<br />
+		<span class="auto-style4"><strong>&lt;COL-F01&gt;0000000000100&lt;/COL-F01&gt;<br />
+		&lt;COL-F38&gt;105.99&lt;/COL-F38&gt;<br />
+		&lt;COL-F39&gt;02/01/2019&lt;/COL-F39&gt;</strong></span><br />
+		<br />
+		@dbRow(Q3,NODES,PFX-,-SFX)&nbsp;&nbsp;will return :<br />
+		<span class="auto-style4"><strong>&lt;PFX-F01-SFX&gt;0000000000100&lt;/PFX-F01-SFX&gt;<br />
+		&lt;PFX-F38-SFX&gt;105.99&lt;/PFX-F38-SFX&gt;<br />
+		&lt;PFX-F39-SFX&gt;02/01/2019&lt;/PFX-F39-SFX&gt;</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="DBROWVALUES">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,<span class="auto-style1"><strong>VALUES,</strong>&lt;OutputFormat&gt;</span>) </h2>
+<p>This macro returns the current&nbsp;row of the result set in two different output 
+formats.<br />
+<br />
+&nbsp;&nbsp;&nbsp; Format XML : List of fields: &lt;<em>FieldName</em>&gt;="&lt;<em>Value</em>&gt;" 
+&lt;<em>FieldName</em>&gt;="&lt;<em>Value</em>&gt;" &lt;<em>FieldName</em>&gt;="&lt;<em>Value</em>&gt;" ...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Date format: YYYY-MM-DD<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ex : F01="0000000000100" F38="105.99" F39="2019-02-01" <br />
+<br />
+&nbsp;&nbsp;&nbsp; Format SIL :&nbsp; List of field values: &lt;<em>Value</em>&gt; &lt;<em>Value</em>&gt; 
+...<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Date format: Julian Date <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+For date and string data types, the value will be displayed inside quotes.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ex: '0000000000100',105.99,'2019032'</p>
+<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 129px;">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px;">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">Output format</td>
+		<td class="List" >XML or SIL</td>
+		<td class="List" >Optionnal<br />
+		Default: SIL</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current row in specific output format.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbTable(Q3,Select F01,F38,F39 from COST_TAB)<br />
+		@dbRow(Q3,VALUES,XML)&nbsp;&nbsp;will return 
+		<span class="auto-style4"><strong>F01="0000000000100" F38="105.99" F39="2019-02-01"
+		<br />
+		</strong></span>@dbRow(Q3,VALUES)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return 
+		<span class="auto-style4"><strong>'0000000000100',105.99,'2019032'</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="DBROWSAVEBLOB">@dbRow(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;</span>,<span class="auto-style1"><strong>SAVE_BLOB,</strong>&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>FileName</em>&gt;</span>) </h2>
+<p>This macro saves the contents of a blob field in a disk file.<br />
+The data type of the field must be varchar (max).</p>
+<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 129px">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">FieldName</td>
+		<td class="List" >Field name.</td>
+		<td class="List" >Required<br />
+		</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 129px">FileName</td>
+		<td class="List" >A String value that contains the full path name of the 
+		file to which the contents of the Blob will be saved. <br />
+		The file must have been previously created. The macro does not create 
+		the file.</td>
+		<td class="List" >Required</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbView(Q5,Select F2687,F2670,F2671 from profile_tab);<br />
+		@dbROW(Q5,SAVE_BLOB,F2671,'c:\temp\F2671.txt');</td>
+	</tr>	
+</table>
+
+<h2 id="DBFIND">@dbFind(<span class="auto-style1">&lt;<em>ResultSetId</em>&gt;<strong>,</strong>&lt;<em>SearchFieldNames</em>&gt;<strong>,</strong>&lt;<em>SearchValues</em>&gt;<strong>,</strong>&lt;<em>ReturnFieldName</em>&gt;<strong>,</strong>&lt;<em>DataDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>) </h2>
+<p>This macro will do a "find" within the result set to 
+obtain specific information.<br />
+By preparing the query, the "find" command is a lot less lengthily and a lot 
+faster to execute.</p>
+<p>The macro looks for a row where the values of the &lt;<em>SearchFieldNames</em>&gt; 
+fields are equals to the &lt;<em>SearchValues</em>&gt;.<br />
+The macro then returns the value of the &lt;<em>ReturnFieldName</em>&gt; field.<br />
+For fields whose data type is not varchar, the return value is formatted 
+according to &lt;<em>DataDisplayFormat</em>&gt;.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;</p>
+<p>The data type of the field is determined by its definition in the Field.csv 
+file.<br />
+If the field does not exist in the Field.csv file, then the definition of the 
+field in the SQL table will be used.</p>
+<p>Can only be used after a call to @dbTable or @dbView.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 129px">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">ResultSetId</td>
+		<td class="List">An identifier containing a result set.</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">SearchFieldNames</td>
+		<td class="List" >List of field names. Each field name must be separated 
+		by a semicolon.</td>
+		<td class="List" >Required<br />
+		</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 129px">SearchValues</td>
+		<td class="List" >List of field values. Each value must be separated by 
+		a semicolon.<br />
+		If you use a macro to pass the value as @WizGet (Value); do not forget 
+		to add an extra semicolon at the end of the macro. Example: 
+		@WizGet(Val1);;@WizGet(Val2);;@WizGet(Val3)<br />
+		For a date field: <br />
+&nbsp;&nbsp; If &lt;<em>SearchFieldNames</em>&gt; contains a single field, the date 
+		must be in the SQL format (MM/DD /YYYY). <br />
+&nbsp;&nbsp; If &lt;<em>SearchFieldNames</em>&gt; contains multiple fields, the format 
+		of the date will be the format configured in Windows.</td>
+		<td class="List" >Required</td>
+	</tr>		
+	<tr>
+		<td class="List" style="width: 129px">ReturnFieldName</td>
+		<td class="List" >The value of this field will be returned by the macro.</td>
+		<td class="List" >Required</td>
+	</tr>		
+	<tr>
+		<td class="List" style="width: 100px">DataDisplayFormat</td>
+		<td class="List">If field is numeric, see &lt;<a href="../DataDisplayFormat.htm#NumericDisplayFormat"><em>NumericDisplayFormat</em></a>&gt;<br />
+		If field is date/time, see &lt;<a href="../DataDisplayFormat.htm#DateDisplayFormat1"><em>DateDisplayFormat</em></a>&gt;<br />
+		If field is text, see &lt;<a href="../DataDisplayFormat.htm#TextDisplayFormat"><em>TextDisplayFormat</em></a>&gt;</td>
+		<td class="List">Required</td>
+	</tr>		
+	<tr>
+		<td class="List" style="width: 100px">TotalId</td>
+		<td class="List">A total variable. The system will add the return value 
+		of the macro to the value of the TotalId.<br />
+		Add <strong>=</strong> at the beginning of TotalId to clear the value of
+		<em>&lt;TotalId&gt;</em> before adding the value.&nbsp; Example:
+		<span class="auto-style4"><strong>=T1<br />
+		</strong></span>Add <strong>-</strong> at the beginning of &lt;<em>TotalId</em>&gt; 
+		to substract the return value of the macro to the value of the &lt;<em>TotalId</em>&gt;. 
+		Example: <strong><span class="auto-style4">-T1</span><br />
+		</strong>Add <strong>-</strong> at the end of TotalId to substract the 
+		value of &lt;<em>TotalId</em>&gt; to the return value of the macro. Example:
+		<span class="auto-style4"><strong>T1-<br />
+		</strong></span>You can increment or decrement more than one TotalId.&nbsp; 
+		Just separate them with a semicolon. Example:<strong><span class="auto-style4">
+		<span class="auto-style3">+T1;-T2</span></span></strong></td>
+		<td class="List">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List"  >The formatted value of the &lt;<em>ReturnFieldName</em>&gt;.<br />
+		<br />
+		If the &lt;<em>ResultSetId</em>&gt; is not defined, the macro return:
+		<span class="auto-style4"><strong>n/a</strong></span>.<br />
+		If the macro can’t find a &lt;<em>SearchFieldName</em>&gt; whose value is equal to 
+		&lt;<em>SearchValue</em>&gt; and &lt;<em>DisplayFormat</em>&gt; is present, the macro returns: <strong>
+		n/a</strong>.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbView(Q5,Select F2687,F2670,F2671 from profile_tab);<br />
+		@DbFind(Q5,F2687,Trs,F2671)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style4">
+		<strong>eSuite</strong></span><br />
+		<br />
+		@dbView(Q4,Select F01,F38,F39 from COST_TAB)<br />
+		@DbFind(Q4,F01,0000000000101,F38,$12:2,T1)&nbsp;&nbsp; will return&nbsp; <strong>"<span class="auto-style4">&nbsp;&nbsp;&nbsp; &nbsp;$100.00</span></strong>"&nbsp; 
+		(and T1 contains 100.00)<br />
+		@DbFind(Q4,F01,0000000000101,F38,$12:2,T1)&nbsp;&nbsp; will return&nbsp; <strong>"<span class="auto-style4">&nbsp;&nbsp;&nbsp; &nbsp;$100.00</span></strong>"&nbsp; 
+		(and T1 contains 200.00)<br />
+		@DbFind(Q4,F01,0000000000101,F38,$12:2,=T1) will return&nbsp; <strong>"<span class="auto-style4">&nbsp;&nbsp;&nbsp; &nbsp;$100.00</span></strong>"&nbsp; 
+		(and T1 contains 100.00)<br />
+		@DbFind(Q4,F01,0000000000101,F38,$12:2,T1)&nbsp;&nbsp; will return&nbsp; <strong>"<span class="auto-style4">&nbsp;&nbsp;&nbsp; &nbsp;$100.00</span></strong>"&nbsp; 
+		(and T1 contains 200.00)<br />
+		@DbFind(Q4,F01,0000000000101,F38,$12:2,T1)&nbsp;&nbsp; will return&nbsp; <strong>"<span class="auto-style4">&nbsp;&nbsp;&nbsp; &nbsp;$100.00</span></strong>"&nbsp; 
+		(and T1 contains 300.00)<br />
+		@DbFind(Q4,F01,0000000000101,F38,$12:2,-T1)<strong>&nbsp; </strong>will 
+		return&nbsp; <strong>"<span class="auto-style4">&nbsp;&nbsp;&nbsp; &nbsp;$100.00</span></strong>"&nbsp; 
+		(and T1 contains 200.00)<br />
+		@DbFind(Q4,F01,0000000000101,F38,$12:2,T1)&nbsp;&nbsp; will return&nbsp; <strong>"<span class="auto-style4">&nbsp;&nbsp;&nbsp; &nbsp;$100.00</span></strong>"&nbsp; 
+		(and T1 contains 300.00)<br />
+		@DbFind(Q4,F01,0000000000101,F38,$12:2,T1-)<strong>&nbsp; </strong>will 
+		return&nbsp; <strong>"<span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp; $100.00</span></strong>"&nbsp; 
+		(and T1 contains -200.00)<br />
+		<br />
+		@DbFind(Q9,F01,0000000000101,F38,$12:2,T1) will return&nbsp;
+		<strong>
+		<span class="auto-style4">n/a<br />
+		<br />
+		<br />
+		</span></strong>@dbView(Q1,Select F254,F64,F1034 from INV_REG); <br />
+		@WizRpl(F254ValueSQL=11/20/2018);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="auto-style4"><strong>SQL Format<br />
+		</strong></span>@WizRpl(F254ValueWin=2018-11-20);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong><span class="auto-style4">Windows Format</span><br />
+		</strong><br />
+		@dbFind(Q1,F1034,8801,F64,RAW);<br />
+		<br />
+		@dbFind(Q1,F254,11/20/2018,F64,RAW); <br />
+		@dbFind(Q1,F254,@WizGet(F254ValueSQL);,F64,RAW);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<span class="auto-style4"><strong>Same macro as above </strong></span>
+		<br />
+		<br />
+		@dbFind(Q1,F254;F1034,2018-11-20;8801,F64,RAW);<br />
+		@dbFind(Q1,F254;F1034,@WizGet(F254ValueWin);;8801,F64,RAW);
+		<span class="auto-style4"><strong>Same macro as above </strong></span></td>
+	</tr>	
+</table>
+
+
+
+
+
+
+<h2 id="dbHOTOpenTableName">@dbHot(<span class="auto-style1">&lt;<em>OpenTableName</em>&gt;</span>,<span class="auto-style1">&lt;<em>FieldName</em>&gt;<strong>,</strong>&lt;<em>DataDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;<strong>)</strong></span></h2>
+<p>This macro returns the contents of a field from the current row of a table 
+that should already be open.<br />
+This macro works only in maintenance and transaction and only if the table is 
+already open. Otherwise, it returns n/a. <br />
+<br />
+The return value is formatted according to the &lt;<em>DataDisplayFormat</em>&gt;.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 129px">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">OpenTableName</td>
+		<td class="List">Supported tables for maintenance:<br />
+&nbsp; SCL_TAB<br />
+&nbsp; CLT_TAB<br />
+&nbsp; OBJ_TAB<br />
+&nbsp; POS_TAB<br />
+&nbsp; PRICE_TAB<br />
+&nbsp; COST_TAB<br />
+&nbsp; STO_TAB<br />
+&nbsp; HEADER_BAT<br />
+		<br />
+		Supported tables for transaction:<br />
+&nbsp; SAL_REG OK<br />
+&nbsp; SAL_HDR OK<br />
+&nbsp; REC_REG OK<br />
+&nbsp; REC_HDR OK<br />
+&nbsp; SCL_TAB <br />
+&nbsp; OBJ_TAB<br />
+&nbsp; POS_TAB<br />
+&nbsp; PRICE_TAB<br />
+&nbsp; COST_TAB<br />
+&nbsp; CLT_TAB</td>
+		<td class="List">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 129px">FieldName</td>
+		<td class="List" >Field name.</td>
+		<td class="List" >Required<br />
+		</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">DataDisplayFormat</td>
+		<td class="List">If field is numeric, see &lt;<a href="../DataDisplayFormat.htm#NumericDisplayFormat"><em>NumericDisplayFormat</em></a>&gt;<br />
+		If field is date/time, see &lt;<a href="../DataDisplayFormat.htm#DateDisplayFormat1"><em>DateDisplayFormat</em></a>&gt;<br />
+		If field is text, see &lt;<a href="../DataDisplayFormat.htm#TextDisplayFormat"><em>TextDisplayFormat</em></a>&gt;</td>
+		<td class="List">Required</td>
+	</tr>			<tr>
+		<td class="List" style="width: 129px">TotalId</td>
+		<td class="List" >A total variable. The system will add the return value 
+		of the macro to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style4"><strong>=T1<br />
+		</strong></span>Add - at the beginning of &lt;<em>TotalId</em>&gt; to substract the return 
+		value of the macro to the value of the &lt;<em>TotalId</em>&gt;. Example:
+		<span class="auto-style4"><strong>-T1<br />
+		</strong></span>Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example: <span class="auto-style4">
+		<strong>T1-<br />
+		</strong></span>You can increment or decrement more than one TotalId.&nbsp; 
+		Just separate them with a semicolon. Example:<strong><span class="auto-style4">
+		<span class="auto-style3">+T1;-T2</span></span></strong></td>
+		<td class="List" >Optionnal</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value of the selected field formatted.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbHot(HEADER_BAT,F902)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style4"> <strong>00000059</strong></span><br />
+		@dbHot(HEADER_BAT,F907,DIWD)&nbsp;&nbsp; will return
+		<span class="auto-style4"><strong>20190310</strong></span></td>
+	</tr>	
+</table>
+
+</body>
+</html>

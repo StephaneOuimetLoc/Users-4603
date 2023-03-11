@@ -1,0 +1,877 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Boolean routines</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+<h1>Transaction</h1>
+
+
+<h2 id="dbHOTREC_TTLADD">@dbHot(REC_TTL,ADD,<span class="auto-style1">&lt;<em>Totalizer</em>&gt;</span>,<span class="auto-style1">&lt;<em>Field</em>&gt;</span>,<span class="auto-style1">&lt;<em>Amount</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro adds an &lt;<em>Amount</em>&gt; to the value of &lt;<em>Field</em>&gt; 
+for the &lt;<em>Totalizer</em>&gt; of the <strong>Receiving transaction totals</strong> 
+memory object of the current transaction.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.<br />
+This value will be saved in the database via the macro @dbHOT(REC_TTL).<br />
+This macro works only in transaction.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Totalizer</td>
+		<td class="List"  >Totalizer number (F1034).</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List">Possible fields:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>F64<br />
+				F65<br />
+				F67</strong></td>
+				<td style="width: 255px">Total units<br />
+				Total dollars<br />
+				Total weight</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Amount</td>
+		<td class="List"  >Amount to add.</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"  >Display format of a numeric 
+		value.<br />
+		It will be applied to the new value of &lt;<em>Field</em>&gt;<br />
+		</td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px;  font-weight: normal;">
+		TotalId</td>
+		<td class="List"  >A total variable. The system 
+		will add the new value of &lt;<em>Field</em>&gt; to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style3"><strong>=T1<br />
+		</strong></span>Add - at the beginning of &lt;TotalId&gt; to substract the return value of the 
+		macro to the value of the &lt;<em>TotalId</em>&gt;. Example: <strong>
+		<span class="auto-style3">-T1</span><br />
+		</strong>Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example: <span class="auto-style3">
+		<strong>T1-<br />
+		</strong></span>You can increment or decrement more than one TotalId.&nbsp; 
+		Just separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px; ">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >If &lt;<em>NumericDisplayFormat</em>&gt; is present, will 
+		return the new value of &lt;<em>Field&gt;</em> otherwise nothing will be 
+		returned.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REC_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</strong>will return nothing but the field F65 is now equal to 100.50<br />
+		@dbHot(REC_TTL,ADD,29999,F65,100.50,$)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>$201.00</strong></span> and the 
+		field F65 is now equal to 201.00<br />
+		@dbHot(REC_TTL,ADD,29999,F65,100.50,$,T1)&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>$301.50</strong></span> and the field 
+		F65 is now equal to 201.00 and T is equal to 100.50<br />
+		@dbHot(REC_TTL,ADD,29999,F65,100.50,$,T1)&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>$402.00</strong></span> and the field 
+		F65 is now equal to 201.00 and T is equal to 201.00</td>
+	</tr>	
+</table>
+
+<h2 id="dbHOTREC_TTLRPL">@dbHot(REC_TTL,RPL,<span class="auto-style1">&lt;<em>Totalizer</em>&gt;</span>,<span class="auto-style1">&lt;<em>Field</em>&gt;</span>,<span class="auto-style1">&lt;<em>Amount</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro replaces the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+of the <strong>Receiving transaction totals</strong> memory object of the 
+current transaction.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.<br />
+This value will be saved in the database via the macro @dbHOT(REC_TTL).<br />
+This macro works only in transaction.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Totalizer</td>
+		<td class="List"  >Totalizer number (F1034).</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List">Possible fields:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>F64<br />
+				F65<br />
+				F67</strong></td>
+				<td style="width: 255px">Total units<br />
+				Total dollars<br />
+				Total weight</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Amount</td>
+		<td class="List"  >Amount to replace.</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px;  font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"   >Display format of a numeric 
+		value.<br />
+		It will be applied to the new value of &lt;<em>Field</em>&gt;<br />
+		</td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List"   ><strong>
+		<!--ToFix<span class="auto-style5">Bug dans le code &lt;NumericDisplayFormat&gt; est 
+		utlise comme TotalId au lieu de &lt;TotalId&gt;</span><br class="auto-style5" />-->
+		</strong>A total variable. The system 
+		will add the new value of &lt;<em>Field</em>&gt; to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style3"><strong>=T1<br />
+		</strong></span>Add - at the beginning of &lt;TotalId&gt; to substract the return value of the 
+		macro to the value of the &lt;<em>TotalId</em>&gt;. Example: 
+		<span class="auto-style3"><strong>-T1</strong><br />
+		</span>Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example: <span class="auto-style3">
+		<strong>T1-</strong></span><br />
+		You can increment or decrement more than one TotalId.&nbsp; Just 
+		separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >If &lt;<em>NumericDisplayFormat</em>&gt; is present, will 
+		return the new value of &lt;<em>Field&gt;</em> otherwise nothing will be 
+		returned.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REC_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</strong>will return nothing but the field F65 is now equal to 100.50<br />
+		@dbHot(REC_TTL,ADD,29999,F65,100.50,$)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>$201.00</strong></span> and the 
+		field F65 is now equal to 201.00<br />
+		@dbHot(REC_TTL,RPL,29999,F65,20.00,$,=T1)&nbsp;&nbsp; &nbsp; will return
+		<span class="auto-style3"><strong>$20.00</strong></span> and the field 
+		F65 is now equal to 20.00 and T is equal to 20.00<br />
+		</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="dbHOTREC_TTL_FIND">@dbHot(REC_TTL,FIND,<span class="auto-style1">&lt;<em>Totalizer</em>&gt;</span>,<span class="auto-style1">&lt;<em>Field</em>&gt;</span>,<span class="auto-style1">&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+of the <strong>Receiving transaction totals</strong> memory object of the 
+current transaction.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.<br />
+This macro works only in transaction.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Totalizer</td>
+		<td class="List"  >Totalizer number (F1034).</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List">Possible fields:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>F64<br />
+				F65<br />
+				F67</strong></td>
+				<td style="width: 255px">Total units<br />
+				Total dollars<br />
+				Total weight<br />
+				</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"   >Display format of a numeric 
+		value.<br />
+		It will be applied to the return value of &lt;<em>Field</em>&gt;<br />
+		</td>
+		<td class="List" style="width: 50px;">Required</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List"   >A total variable. The system 
+		will add the value of &lt;<em>Field</em>&gt; to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style3"><strong>=T1</strong></span><br />
+		Add - at the beginning of &lt;TotalId&gt; to substract the return value of the 
+		macro to the value of the &lt;<em>TotalId</em>&gt;. Example: 
+		<span class="auto-style3"><strong>-T1<br />
+		</strong></span>Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example: <span class="auto-style3">
+		<strong>T1-<br />
+		</strong></span>You can increment or decrement more than one TotalId.&nbsp; 
+		Just separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Formatted value of &lt;<em>field</em>&gt;.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REC_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br />
+		</strong>@dbHot(REC_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+		@dbHot(REC_TTL_FIND,29999,F65,$)&nbsp;&nbsp; &nbsp; will return
+		<span class="auto-style3"><strong>$201.00</strong></span> 
+		</td>
+	</tr>	
+</table>
+
+<h2 id="dbHOTREC_TTL">@dbHot(REC_TTL)</h2>
+<p class="MsoNormal">This macro updates the REC_TTL table from the <strong>
+Receiving transaction totals</strong> memory object of the current transaction.<br />
+Fields saved in the REC_TTL table:<br />
+&nbsp;&nbsp; F64&nbsp;&nbsp; Total units<br />
+				&nbsp;&nbsp; F65&nbsp;&nbsp;
+				Total dollars<br />
+				&nbsp;&nbsp; F67&nbsp;&nbsp;
+				Total weight<br />
+This macro works only in transaction.</p>
+
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(REC_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br />
+		</strong>@dbHot(REC_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<br />
+		@dbHot(REC_TTL)<br />
+		</td>
+	</tr>	
+</table>
+
+
+<h2 id="dbHOTSAL_TTLADD">@dbHot(SAL_TTL,ADD,<span class="auto-style1">&lt;<em>Totalizer</em>&gt;</span>,<span class="auto-style1">&lt;<em>Field</em>&gt;</span>,<span class="auto-style1">&lt;<em>Amount</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro adds an &lt;<em>Amount</em>&gt; to the value of &lt;<em>Field</em>&gt; 
+for the &lt;<em>Totalizer</em>&gt; of the <strong>Sale transaction totals</strong> 
+memory object of the current transaction.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.<br />
+This value will be saved in the database via the macro @dbHOT(SAL_TTL).<br />
+This macro works only in transaction.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Totalizer</td>
+		<td class="List"  >Totalizer number (F1034).</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List">Possible fields:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>F64<br />
+				F65<br />
+				F67</strong></td>
+				<td style="width: 255px">Total units<br />
+				Total dollars<br />
+				Total weight</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Amount</td>
+		<td class="List"  >Amount to add.</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"  >Display format of a numeric 
+		value.<br />
+		It will be applied to the new value of &lt;<em>Field</em>&gt;<br />
+		</td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List"   >A total variable. The system 
+		will add the new value of &lt;<em>Field</em>&gt; to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style3"><strong>=T1<br />
+		</strong></span>Add - at the beginning of &lt;<em>TotalId</em>&gt; to substract the return value of the 
+		macro to the value of the &lt;<em>TotalId</em>&gt;. Example: 
+		<span class="auto-style3"><strong>-T1</strong></span><br />
+		Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example: <span class="auto-style3">
+		<strong>T1-<br />
+		</strong></span>You can increment or decrement more than one TotalId.&nbsp; 
+		Just separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >If &lt;<em>NumericDisplayFormat</em>&gt; is present, will 
+		return the new value of &lt;<em>Field&gt;</em> otherwise nothing will be 
+		returned.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(SAL_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</strong>will return nothing but the field F65 is now equal to 100.50<br />
+		@dbHot(SAL_TTL,ADD,29999,F65,100.50,$)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>$201.00</strong></span> and the 
+		field F65 is now equal to 201.00<br />
+		@dbHot(SAL_TTL,ADD,29999,F65,100.50,$,T1)&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>$301.50</strong></span> and the field 
+		F65 is now equal to 201.00 and T is equal to 100.50<br />
+		@dbHot(SAL_TTL,ADD,29999,F65,100.50,$,T1)&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>$402.00</strong></span> and the field 
+		F65 is now equal to 201.00 and T is equal to 201.00</td>
+	</tr>	
+</table>
+
+<h2 id="dbHOTSAL_TTLRPL">@dbHot(SAL_TTL,RPL,<span class="auto-style1">&lt;<em>Totalizer</em>&gt;</span>,<span class="auto-style1">&lt;<em>Field</em>&gt;</span>,<span class="auto-style1">&lt;<em>Amount</em>&gt;<strong>,</strong>&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro replaces the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+of the <strong>Sale transaction totals</strong> memory object of the current 
+transaction.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.<br />
+This value will be saved in the database via the macro @dbHOT(SAL_TTL).<br />
+This macro works only in transaction.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Totalizer</td>
+		<td class="List"  >Totalizer number (F1034).</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List">Possible fields:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>F64<br />
+				F65<br />
+				F67</strong></td>
+				<td style="width: 255px">Total units<br />
+				Total dollars<br />
+				Total weight</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Amount</td>
+		<td class="List"  >Amount to replace.</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"   >Display format of a numeric 
+		value.<br />
+		It will be applied to the new value of &lt;<em>Field</em>&gt;<br />
+		</td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List"   ><strong>
+<!--ToFix		<span class="auto-style5">Bug dans le code &lt;NumericDisplayFormat&gt; est 
+		utlise comme TotalId au lieu de &lt;TotalId&gt;</span><br class="auto-style5" />-->
+		</strong>A total variable. The system 
+		will add the new value of &lt;<em>Field</em>&gt; to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style3"><strong>=T1</strong></span><br />
+		Add - at the beginning of &lt;<em>TotalId</em>&gt; to substract the return value of the 
+		macro to the value of the &lt;<em>TotalId</em>&gt;. Example:<span class="auto-style3"><strong> -T1</strong></span><br />
+		Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example:<span class="auto-style3"><strong> T1-</strong></span><br />
+		You can increment or decrement more than one TotalId.&nbsp; Just 
+		separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >If &lt;<em>NumericDisplayFormat</em>&gt; is present, will 
+		return the new value of &lt;<em>Field&gt;</em> otherwise nothing will be 
+		returned.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(SAL_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</strong>will return nothing but the field F65 is now equal to 100.50<br />
+		@dbHot(SAL_TTL,ADD,29999,F65,100.50,$)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>$201.00</strong></span> and the 
+		field F65 is now equal to 201.00<br />
+		@dbHot(SAL_TTL,RPL,29999,F65,20.00,$,=T1)&nbsp;&nbsp; &nbsp; will return
+		<span class="auto-style3"><strong>$20.00</strong></span> and the field 
+		F65 is now equal to 20.00 and T is equal to 20.00<br />
+		</td>
+	</tr>	
+</table>
+
+
+<h2 id="dbHOTSAL_TTLFIND">@dbHot(SAL_TTL,FIND,<span class="auto-style1">&lt;<em>Totalizer</em>&gt;</span>,<span class="auto-style1">&lt;<em>Field</em>&gt;</span>,<span class="auto-style1">&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+of the <strong>Sale transaction totals</strong> memory object of the current 
+transaction.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.<br />
+This macro works only in transaction.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Totalizer</td>
+		<td class="List"  >Totalizer number (F1034).</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List">Possible fields:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>F64<br />
+				F65<br />
+				F67</strong></td>
+				<td style="width: 255px">Total units<br />
+				Total dollars<br />
+				Total weight</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"   >Display format of a numeric 
+		value.<br />
+		It will be applied to the return value of &lt;<em>Field</em>&gt;<br />
+		</td>
+		<td class="List" style="width: 50px;">Required</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List"   >A total variable. The system 
+		will add the value of &lt;<em>Field</em>&gt; to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style3"><strong>=T1</strong></span><br />
+		Add - at the beginning of &lt;<em>TotalId</em>&gt; to substract the return value of the 
+		macro to the value of the &lt;<em>TotalId</em>&gt;. Example: 
+		<span class="auto-style3"><strong>-T1</strong></span><br />
+		Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example: <span class="auto-style3">
+		<strong>T1-</strong></span><br />
+		You can increment or decrement more than one TotalId.&nbsp; Just 
+		separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px;">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Formatted value of &lt;<em>field</em>&gt;.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(SAL_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br />
+		</strong>@dbHot(SAL_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+		@dbHot(SAL_TTL,FIND,29999,F65,$)&nbsp;&nbsp; &nbsp; will return
+		<span class="auto-style3"><strong>$201.00</strong></span> 
+		</td>
+	</tr>	
+</table>
+
+<h2 id="dbHOTSAL_TTL_FIND">@dbHot(SAL_TTL_FIND,<span class="auto-style1">&lt;<em>Totalizer</em>&gt;</span>,<span class="auto-style1">&lt;<em>Field</em>&gt;</span>,<span class="auto-style1">&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns the value of &lt;<em>Field</em>&gt; for the &lt;<em>Totalizer</em>&gt; 
+of the <strong>Sale transaction totals</strong> memory object or the SAL_TTL 
+table of the current transaction.<br />
+If the macro is called in a transaction then the value will be read in the 
+memory object otherwise it will be read in the database.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.<br />
+</p>
+<p>By using this macro you can get a particular total from the
+<font color="#ffffff" style="BACKGROUND-COLOR: #0078d7">SAL_TTL</font> and use 
+it to register something.<br />
+This example fetch the total net sales and then multiply by .33 and then enter 
+the result in the function 510(bottle deposit):<br />
+&nbsp;&nbsp; @WIZRPL(ENTRY=@rptttl(@dbHot(<font color="#ffffff" style="BACKGROUND-COLOR: #0078d7">SAL_TTL</font>_FIND,3,F65,#)*.033,#));<br />
+&nbsp;&nbsp; @EXEC(FCT=510).</p>
+<p class="MsoNormal">&nbsp;</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Totalizer</td>
+		<td class="List"  >Totalizer number (F1034).</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List">Possible fields:<table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 37px"><strong>F64<br />
+				F65<br />
+				F67</strong></td>
+				<td style="width: 255px">Total units<br />
+				Total dollars<br />
+				Total weight<br />
+				</td>
+			</tr>
+			
+		</table>
+		</td>
+
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"   >Display format of a numeric 
+		value.<br />
+		It will be applied to the return value of &lt;<em>Field</em>&gt;<br />
+		</td>
+		<td class="List" style="width: 50px;">Required</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List"   >A total variable. The system 
+		will add the returned value to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style3"><strong>=T1</strong></span><br />
+		Add - at the beginning of &lt;<em>TotalId</em>&gt; to substract the return value of the 
+		macro to the value of the &lt;<em>TotalId</em>&gt;. Example: 
+		<span class="auto-style3"><strong>-T1</strong></span><br />
+		Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example: <span class="auto-style3">
+		<strong>T1-</strong></span><br />
+		You can increment or decrement more than one TotalId.&nbsp; Just 
+		separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px; ">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Formatted value of &lt;<em>field</em>&gt;.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(SAL_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br />
+		</strong>@dbHot(SAL_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+		@dbHot(SAL_TTL_FIND,29999,F65,$)&nbsp;&nbsp; &nbsp; will return
+		<span class="auto-style3"><strong>$201.00</strong></span> 
+		</td>
+	</tr>	
+</table>
+
+<h2 id="dbHOTSAL_TTL">@dbHot(SAL_TTL)</h2>
+<p class="MsoNormal">This macro updates the SAL_TTL table from the <strong>Sale 
+transaction totals</strong> memory 
+object of the current transaction.<br />
+<br />
+Fields saved in the SAL_TTL table:<br />
+&nbsp;&nbsp; F64&nbsp;&nbsp; Total units<br />
+				&nbsp;&nbsp; F65&nbsp;&nbsp;
+				Total dollars<br />
+				&nbsp;&nbsp; F67&nbsp;&nbsp;
+				Total weight<br />
+This macro works only in transaction.</p>
+
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(SAL_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp; <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<br />
+		</strong>@dbHot(SAL_TTL,ADD,29999,F65,100.50)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<br />
+		@dbHot(SAL_TTL)<br />
+		</td>
+	</tr>	
+</table>
+
+<h2 id="dbHOTSAL_REG_FIND">@dbHot(SAL_REG_FIND,<span class="auto-style1">&lt;<em>Filter</em>&gt;<strong>,</strong>&lt;<em>Field</em>&gt;</span>,<span class="auto-style1">&lt;<em>NumericDisplayFormat</em>&gt;<strong>,</strong>&lt;<em>TotalId</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns a total registration from the current 
+transaction.<br />
+Returns the total of the &lt;<em>Field</em>&gt; of all rows that match the filter from 
+the current sale.<br />
+The return value can be used to increment the total variable &lt;<em>TotalId</em>&gt;.<br />
+This macro works only in transaction.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px; ">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Filter</td>
+		<td class="List"  >Filtering expression to find the records that will be 
+		added up<br />
+		You can enter a complex filter command like F1067='ITEM' and F03=3.</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; ">
+		Field</td>
+		<td class="List">The total value of this field for all selected rows 
+		will be returned.</td>
+
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#NumericDisplayFormat">NumericDisplayFormat</a></td>
+		<td class="List"   >Display format of a numeric 
+		value.<br />
+		It will be applied to the return value of &lt;<em>Field</em>&gt;<br />
+		</td>
+		<td class="List" style="width: 50px;">Required</td>
+	</tr>			
+	<tr>
+		<td class="List" style="width: 100px; font-weight: normal;">
+		TotalId</td>
+		<td class="List"   >A total variable. The system 
+		will add the returned value to the value of the TotalId.<br />
+		Add = at the beginning of TotalId to clear the value of &lt;<em>TotalId</em>&gt; 
+		before adding the value. Example: <span class="auto-style3"><strong>=T1</strong></span><br />
+		Add - at the beginning of &lt;<em>TotalId</em>&gt; to substract the return value of the 
+		macro to the value of the &lt;<em>TotalId</em>&gt;. Example: 
+		<span class="auto-style3"><strong>-T1</strong></span><br />
+		Add - at the end of TotalId to substract the value of &lt;<em>TotalId</em>&gt; 
+		to the return value of the macro. Example: <span class="auto-style3">
+		<strong>T1-</strong></span><br />
+		You can increment or decrement more than one TotalId.&nbsp; Just 
+		separate them with a semicolon. Example: <span class="auto-style3">
+		<strong>+T1;-T2</strong></span></td>
+		<td class="List" style="width: 50px; ">Optionnal</td>
+	</tr>				
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >The total value of this field for all selected rows.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Example</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(SAL_REG_FIND,F01='10',F65,$,T1)</td>
+	</tr>	
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Text routines</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+</style>
+</head>
+<body>
+
+
+<h1>Text routines</h1>
+<p>The macros in this section allow you to manipulate text.</p>
+
+
+
+
+
+<h2 id="FMT">@Fmt(<span class="auto-style1">&lt;<em>TextOperationAlign</em>&gt;</span>,<span class="auto-style1">&lt;Text&gt;</span>)</h2>
+<p class="MsoNormal">This macro aligns and formats a text value.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 99px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 99px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#TextOperationAlign">TextOperationAlign</a></td>
+		<td class="List" >Text operation to align a text value.</td>
+		<td class="List" >Required</td>
+	</tr>		
+
+	<tr>
+		<td class="List" style="width: 99px">Text</td>
+		<td class="List" >Text to be align.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Text aligned</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(L,MyText)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return "<span class="auto-style3"><strong>MyText</strong></span>" 		
+		<br />
+		@Fmt(L10,MyText)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return "<span class="auto-style3"><strong>MyText&nbsp;&nbsp;&nbsp;
+		</strong></span>" 		<br />
+		@Fmt(R10:#,MyText)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return 
+		"<span class="auto-style3"><strong>####MyText</strong></span>" <br />
+		@Fmt(R10:SPACE,MyText) will return "<span class="auto-style3"><strong>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;MyText</strong></span>""
+		<br />
+		@Fmt(C10,MyText)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return "<strong>&nbsp; <span class="auto-style3">MyText</span></strong>" 		<br />
+		@Fmt(L5,MyBigText)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return "<span class="auto-style3"><strong>MyBig</strong></span>" <br />
+		@Fmt(R5,MyBigText)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return "<span class="auto-style3"><strong>gText</strong></span>" <br />
+		@Fmt(C5,MyBigText)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return "<span class="auto-style3"><strong>MyBigText</strong></span>" </td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTM">@Fmt(&lt;<span class="auto-style1"><em>TextOperationMultiLines</em><strong>&gt;,</strong>&lt;<em>Text</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro formats multiple text lines.<br />
+Formatting with this concept will allow to word-wrap the strings and insure that 
+none of the words will be cut. <br />
+The macro support an unlimited number of lines. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px;">Parameter</th>
+		<th class="List" >Description</th>
+		<th class="List" >Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 99px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#TextOperationMultiLines">TextOperationMultiLines</a></td>
+
+		<td class="List" >Text operation to extract a string in a multi lines 
+		text</td>
+
+		<td class="List" >Required</td>
+	</tr>		
+
+	<tr>
+		<td class="List" style="width: 100px">Text</td>
+		<td class="List" >Text to be format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Text of the requested line number.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@WizSet(TEXT=Computer programming is a way of telling a 
+		computer how to do certain things.);<br />
+		@Fmt(M1:25,@wizGet(TEXT)) will return <span class="auto-style3"><strong>
+		Computer programming is <br />
+		</strong></span>@Fmt(M2:25,@wizGet(TEXT)) will return
+		<span class="auto-style3"><strong>a way of telling a </strong></span>
+		<br />
+		@Fmt(M3:25,@wizGet(TEXT)) will return <span class="auto-style3"><strong>
+		computer how to do&nbsp; </strong></span> </td>
+	</tr>	
+</table>
+
+
+
+
+<h2 id="FMTS">@Fmt(<span class="auto-style1"><strong>&lt;</strong><em>TextOperationSubString</em><strong>&gt;,</strong>&lt;<em>Text</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns a substring from a text. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 99px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#TextOperationSubString">TextOperationSubString</a></td>
+		<td class="List"  >Text operation to extract substring from a string.</td>
+
+		<td class="List"  >Required</td>
+	</tr>		
+
+
+	<tr>
+		<td class="List" style="width: 100px">Text</td>
+		<td class="List" >Text to be format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Substring from the text.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(S5:4,Loc Software)<strong>
+		</strong>&nbsp;<strong> </strong>will return&nbsp; "<span class="auto-style3"><strong>Soft</strong></span>"<br />
+		@Fmt(S5,Loc Software))&nbsp;&nbsp;&nbsp; will return&nbsp; "<span class="auto-style3"><strong>Software</strong></span>"</td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTF">@Fmt(<span class="auto-style1">&lt;<em>TextOperationFind</em>&gt;<strong>,</strong>&lt;<em>Text</em>&gt;</span>)</h2>
+<p>Operation on text to retrieve text value from a list of key-value.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 99px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#TextOperationFind">TextOperationFind</a></td>
+		<td class="List"  >Text operation to retrieve text value from a list of 
+		key-value.</td>
+
+		<td class="List"  >Required</td>
+	</tr>		
+
+
+	<tr>
+		<td class="List" style="width: 100px">Text</td>
+		<td class="List" >List of key-value.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Value of key.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@WizRpl(KEY="/Item1=AA /Item2=BB 
+		/Item3=CC");<br />
+		@Fmt(F-Item1,@WizGet(KEY)) will return <span class="auto-style3">
+		<strong>AA</strong></span><br />
+		@Fmt(F-Item2,@WizGet(KEY)) will return <span class="auto-style3">
+		<strong>BB</strong></span><br />
+		@Fmt(F-Item3,@WizGet(KEY)) will return <span class="auto-style3">
+		<strong>CC</strong></span></td>
+	</tr>	
+</table>
+
+
+
+<h2 id="FMTNUS">@Fmt(NUS<span class="auto-style1"><strong>,</strong>&lt;<em>Text</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns an empty string if &lt;<em>Text</em>&gt; 
+is equal 
+to <strong>n/a</strong>. </p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Text</td>
+		<td class="List" >Text to be format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Text formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(NUS,n/a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return ""<br />
+		@Fmt(NUS,My Text) will return "<span class="auto-style3"><strong>My Text</strong></span>" </td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTCHR">@Fmt(CHR<span class="auto-style1"><strong>,</strong>&lt;<em>IntValue</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro converts an &lt;<em>IntValue</em>&gt; Integer into 
+ASCII character.<br />
+You can use this to stop the execution of a script by doing @FMT(CHR,27) which 
+mean Escape, which mean stop.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">IntValue</td>
+		<td class="List" >Integer value to be converted.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >ASCII character</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(CHR,64)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>A</strong></span><br />
+		@Fmt(CHR,97)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3"><strong>a</strong></span><br />
+		</td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTORD">@Fmt(ORD<span class="auto-style1"><strong>,</strong>&lt;Character&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns the ordinal value of a ASCII character.<br />
+</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Character</td>
+		<td class="List" >ASCII Character</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Ordinal value</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(ORD,A)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>64</strong></span><br />
+		@Fmt(ORD,a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>97</strong></span><br />
+		</td>
+	</tr>	
+</table>
+
+
+
+<h2 id="FMTUPPER">@Fmt(UPPER<span class="auto-style1"><strong>,</strong>&lt;<em>Text</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macros returns the upper case string of &lt;Text&gt;</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Text</td>
+		<td class="List" >Text to be converted in uppercase.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Text converted in uppercase.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(UPPER,loc software)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>LOC SOFTWARE</strong></span><br />
+		</td>
+	</tr>	
+</table>
+
+<h2 id="FMTTRIM">@Fmt(TRIM<span class="auto-style1"><strong>,</strong>&lt;<em>Text</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macros removes leading and trailing space of string &lt;<em>Text</em>&gt;.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Text</td>
+		<td class="List" >Text to format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Text converted in uppercase.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(TRIM,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; loc software&nbsp;&nbsp;&nbsp;&nbsp; )&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<strong>"</strong><span class="auto-style3"><strong>loc software</strong>"</span><br />
+		</td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTLEN">@Fmt(LEN<span class="auto-style1"><strong>,</strong>&lt;<em>Text</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macros returns the length of string &lt;<em>Text</em>&gt;.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Text</td>
+		<td class="List" >Text to be evaluated.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Length of string &lt;<em>Text</em>&gt;</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(LEN,loc software)&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12</strong></span><br />
+		@Fmt(LEN, loc software ) will return <span class="auto-style3"><strong>
+		18</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTPOS">@Fmt(POS<span class="auto-style1"><strong>,</strong>&lt;<em>SubString</em>&gt;<strong>,</strong>&lt;<em>Text</em>&gt;,&lt;<em>N</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macros returns the position of the &lt;<em>N</em>&gt;-th 
+occurrence of a &lt;<em>SubString</em>&gt; in a &lt;<em>Text</em>&gt;.<br />
+The case is insensitive.<br />
+Return 0 if it is not found.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">SubString</td>
+		<td class="List" >Substring to search for.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">Text</td>
+		<td class="List" >Text where the search is done.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">N</td>
+		<td class="List" >&nbsp;N-th occurrence of the substring.</td>
+		<td class="List" style="width: 50px">Optionnal Default: 1</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Position of the &lt;N&gt;-th occurrence</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(POS,ware,Loc Software,1)&nbsp; 
+		will return <strong><span class="auto-style3">9</span> <br />
+		</strong>@Fmt(POS,Loc,Loc LOCK Loc,2)&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>5<br />
+		</strong></span>@Fmt(POS,Loc,Loc Loc,3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3"><strong>0</strong></span></td>
+	</tr>	
+</table>
+
+
+
+
+
+</body>
+</html>

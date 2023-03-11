@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<link rel="stylesheet" href="Work.css" type="text/css">
+<title>About SMS Script Language</title>
+</head>
+
+<body class="Work">
+
+<h1>SMS Macro</h1>
+
+<p>LOC SMS supports its own set of Macro commands. These commands are proprietary, and have been created to access
+features related to LOC SMS only. All LOC SMS commands start with an @
+character.</p>
+<p>The concept of the &quot;macro functions&quot; is that the command will be replaced by 
+the result of the macro function. This replacement can be very powerful if you 
+think about putting the macro functions in a template. When the template is 
+being parsed, the macro functions are replaced with the result of the function. 
+The macro functions can also be used in any other command string. The embedded 
+macro functions will first be replaced before the command is executed. A macro 
+function can be include as a parameter for another functions and so on. <br><br>
+There is pretty large number of macro functions. Ranging from the simple system 
+information to a complete report generating macro.</p>
+<p>All macro name are not case sensitive.<br><br>All variable names are not case 
+sensitive.<br><br>The parameters are separated by a comma and no space and no 
+carriage return. The space is use for a string parameter.</p>
+<p>A macro can have a semicolon at the end for better visibility, but it is not 
+required.</p>
+<p>It's possible to put remark in the file by using these delimited start = /* 
+end = */ <br>&nbsp;&nbsp;&nbsp;&nbsp; Ex: @WizRpl(MyParam=12); /* Remark: Set 
+MyParam to 12 */<br></p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Table informations</title>
+	<link rel="stylesheet" href="../work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style2 {
+	color: #000080;
+}
+</style>
+</head>
+<body>
+<h1>Table informations</h1>
+
+
+<h2 id="FINDTABLE">@dbHot(<span class="auto-style1"><strong>FINDTABLE</strong></span>,<span class="auto-style1">&lt;<em>TableName</em>&gt;</span>)</h2>
+<p>This macro checks if a SQL table exist.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TableName</td>
+		<td class="List">Name of SQL table </td>
+		<td class="List">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Return the table name if the SQL table exist. If not, it 
+		return blank.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@dbHOT(FindTable,CLK_TAB) will return
+		<span class="auto-style2"><strong>CLK_TAB</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="RECORD_COUNT">@TOOLS(TABLES_RECORDCOUNT)</h2>
+<p>This macro returns the list of all SQL SMS tables with its records count.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List" style="width: 50px">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">TableName</td>
+		<td class="List">Name of SQL table </td>
+		<td class="List">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Format : For each table : &lt;<em>TableName</em>&gt;=&lt;<em>RecordCount</em>&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; One table per 
+		line.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@TOOLS(TABLES_RECORDCOUNT) will return
+		<span class="auto-style2"><strong><br />
+		ACC_TAB=59<br />
+		ALLOW_BAT=0<br />
+		ALT_TAB=27<br />
+		BTL_TAB=42<br />
+		CAT_TAB=61<br />
+		etc.</strong></span></td>
+	</tr>	
+</table>
+
+</body>
+</html>

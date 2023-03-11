@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Date &amp; time routines</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style3 {
+	color: #000080;
+}
+.auto-style4 {
+	background-color: #FFFF00;
+}
+</style>
+</head>
+<body>
+
+<h1>Date &amp; Time routines</h1>
+
+
+
+
+<h2 id="D">@D<span class="auto-style1">&lt;<em>DateDisplayFormat</em>&gt;</span></h2>
+<p class="MsoNormal">This macro calculates and formats a date from the soft 
+date.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px"><a href="DataDisplayFormat.htm#DateDisplayFormat">DateDisplayFormat</a></td>
+		<td class="List" >Display format of a date.<br />
+		</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Date formatted</td>
+	</tr>	
+</table>
+
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List">Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@DSW-W3F The DSW will return the current week ending 
+		date, then the system will subtract 3 weeks and return the end of that 
+		week <br />
+		@DSD+M1F&nbsp; The DSD will return the current day, and then the system will 
+		add one month and return the end of that month </td>
+	</tr>	
+</table>
+
+<h2 id="DATE">@Date(<span class="auto-style1">&lt;<em>Date</em>&gt;</span>,<span class="auto-style1">&lt;<em>DateDisplayFormat</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro calculates and formats a date from a SQL date 
+passed in first parameter.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Date</td>
+		<td class="List">Input date. The date must be in 
+		SQL date format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px"><a href="DataDisplayFormat.htm#DateDisplayFormat1">DateDisplayFormat</a></td>
+		<td class="List">Display format of a date.&nbsp;<br />
+		</td>
+		<td class="List">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Date formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" >@Date(04/11/2019,DIWD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		return <span class="auto-style3"><strong>20190407</strong></span><br />
+		@Date(04/11/2019,DXWF)&nbsp;&nbsp;&nbsp;&nbsp; return
+		<span class="auto-style3"><strong>2019-04-13<br />
+		</strong></span>@Date(04/11/2019,D2DD)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		return <span class="auto-style3"><strong>19<br />
+		</strong></span>@Date(04/11/2019,DSM+001) return
+		<span class="auto-style3"><strong>05/01/2019<br />
+		</strong></span>@Date(04/11/2019,DSM-002) return
+		<span class="auto-style3"><strong>04/28/2019</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="FMTD"><em>@Fmt(</em><span class="auto-style1">&lt;<em>TextOperationDate&gt;<strong>,</strong>&lt;Date&gt;</em></span>)</h2>
+<p class="MsoNormal">This macro converts a date from specific format to SQL 
+format.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 99px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#TextOperationDate">TextOperationDate</a></td>
+		<td class="List" >Text operation to format a date in SQL format</td>
+		<td class="List" >Required</td>
+	</tr>			<tr>
+		<td class="List" style="width: 100px">Date</td>
+		<td class="List" >Date to format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Date formatted (MM/DD/YYYY).</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List"  >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(D5,81231) will return
+		<span class="auto-style3"><strong>12/31/2018 </strong></span><br />
+		@Fmt(D6,20181231) will return <span class="auto-style3"><strong>
+		12/31/2018 </strong></span><br />
+		@Fmt(DI,20181231) will return <span class="auto-style3"><strong>
+		12/31/2018 </strong></span><br />
+		@Fmt(DJ,2018365) will return <span class="auto-style3"><strong>
+		12/31/2018 </strong></span><br />
+		@Fmt(DP,12312018) will return <span class="auto-style3"><strong>
+		12/31/2018 </strong></span><br />
+		@Fmt(DX,2018-12-31) will return <span class="auto-style3"><strong>
+		12/31/2018 </strong></span><br />
+		@Fmt(DW,2018-12-31) will return <span class="auto-style3"><strong>
+		12/31/2018</strong></span> </td>
+	</tr>	
+</table>
+
+
+
+
+
+<h2 id="DATEPERIOD">@Date(<span class="auto-style1">&lt;<em>StartDate</em>&gt;</span>,<span class="auto-style1">&lt;<em>Period</em>&gt;<strong>,</strong>&lt;<em>StopDate</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns the number of days or number of weeks 
+between two dates including the first day or week.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">StartDate</td>
+		<td class="List">The date must be in 
+		SQL date format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Period</td>
+		<td class="List">DAYS or WEEKS</td>
+		<td class="List">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px">StopDate</td>
+		<td class="List">The date must be in 
+		SQL date format.</td>
+		<td class="List">Required</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Number of days or weeks</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@Date(02/14/2019,DAYS,02/14/2019) will return
+		<span class="auto-style3"><strong>1</strong></span> <br />
+		@Date(02/14/2019,DAYS,02/15/2019) will return <span class="auto-style3">
+		<strong>2</strong></span> <br />
+		@Date(02/14/2019,DAYS,02/19/2019) will return <span class="auto-style3">
+		<strong>6 </strong></span><br />
+		@Date(02/14/2019,WEEKS,02/19/2019) will return <span class="auto-style3">
+		<strong>1 </strong></span><br />
+		@Date(02/14/2019,WEEKS,03/01/2019) will return <span class="auto-style3">
+		<strong>3 </strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="DATELTR">@Date(<span class="auto-style1">&lt;<em>Date</em>&gt;</span>,<span class="auto-style1"><em><strong>LTR</strong></em><strong>,</strong>&lt;InfoType&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns Windows information about a specific 
+date according to windows setting language.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Date</td>
+		<td class="List">The date must be in 
+		SQL date format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+	<tr>
+		<td class="List" style="width: 100px">InfoType</td>
+		<td class="List"><table id="table6" style="margin:0px" border="1">
+			<tr>
+				<td style="width: 18px"><strong>D<br />
+				AD</strong><br />
+				<strong>M<br />
+				AM</strong> <br />
+				</td>
+				<td style="width: 224px">Long day name (Ex: Thu)<br />
+				Short day name (Ex: Thursday)<br />
+				Long month name (Ex: Feb)<br />
+				Short month name (Ex: February)</td>
+			</tr>
+			
+		</table>
+		</td>
+		<td class="List">Required</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >String information</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@Date(02/27/2019,LTR,D)<strong>&nbsp;&nbsp;&nbsp;
+		</strong>will return<span class="auto-style3"><strong> 
+		Thursday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></span><br class="auto-style4" />
+		@Date(02/14/2019,LTR,AD)<strong>&nbsp; </strong>will return <span class="auto-style3"><strong>
+		Thu</strong></span><br />
+		@Date(02/27/2019,LTR,M)<strong> &nbsp;&nbsp; </strong>will return
+		<span class="auto-style3"><strong>February</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="DATEGMT">@Date(<span class="auto-style1">&lt;<em>Date</em>&gt;</span>,<span class="auto-style1"><em><strong>GMT</strong></em></span>)</h2>
+<p class="MsoNormal">This macro adjusts a SQL date/time according to Greenwich 
+Mean Time (GMT).</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Date</td>
+		<td class="List">The date must be in 
+		SQL date format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >SQL Date/time</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@Date(02/27/2019,GMT)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>02/27/2019 05:00:00</strong></span><br />
+		@Date(02/14/2019 16:23:00,GMT)<strong>&nbsp;&nbsp;&nbsp; </strong>will 
+		return <span class="auto-style3"><strong>02/14/2019 21:23:00</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="DATEDAYOFWEEK">@Date(<span class="auto-style1">&lt;<em>Date</em>&gt;</span>,DAYOFWEEK)</h2>
+<p class="MsoNormal">This macro returns an index number for the day of the week 
+:<br />
+&nbsp;&nbsp;&nbsp; 0 = Sunday<br />
+&nbsp;&nbsp;&nbsp; 1 = Monday<br />
+&nbsp;&nbsp;&nbsp; 2 = Tuesday<br />
+&nbsp;&nbsp;&nbsp; 3 = Wednesday<br />
+&nbsp;&nbsp;&nbsp; 4 = Thursday<br />
+&nbsp;&nbsp;&nbsp; 5 = Friday<br />
+&nbsp;&nbsp;&nbsp; 6 = Saturday</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Date</td>
+		<td class="List">The date must be in 
+		SQL date format.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Interger between 0 and 6</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@WizSet(StartDate=02/27/2019)<br />
+		@Date(@WizGet(StartDate),DAYOFWEEK) <strong>&nbsp; </strong>will return
+		<span class="auto-style3"><strong>3<br />
+		</strong></span>@Date(02/14/2019,DAYOFWEEK)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>4</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="FMTNUD">@Fmt(NUD<span class="auto-style1"><strong>,</strong>&lt;<em>Date</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro returns an empty string if &lt;<em>Date</em>&gt; 
+contains <strong>1899.</strong></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Date</td>
+		<td class="List"  >Any format that contains YYYY.</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>	
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Date formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="color: #000000">@Fmt(NUD,1899-12-12)) will 
+		return "" <br />
+		@Fmt(NUD,12/12/1899)) will return "" <br />
+		@Fmt(NUD,12/31/2018)) will return "<span class="auto-style3"><strong>12/31/2018</strong></span>"&nbsp; </td>
+	</tr>	
+</table>
+
+
+
+<h2 id="TIME">@TIME</h2>
+<p>This macro returns the current time in HHMM format.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current time formatted</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@TIME&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3"><strong>1130</strong></span>&nbsp;&nbsp; (11 hours 30 minutes)</td>
+	</tr>	
+</table>
+
+<h2 id="NOW">@NOW</h2>
+<p>This macro returns the current time in HHMMSS format.</p>
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Current time formatted</td>
+	</tr>	
+</table>
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Example</th>
+	</tr>
+	<tr>
+		<td class="List" >@NOW&nbsp;&nbsp;&nbsp;&nbsp; will return <span class="auto-style3"><strong>113050</strong></span>&nbsp;&nbsp; (11 hours 30 minutes 50 
+		seconds)</td>
+	</tr>	
+</table>
+
+
+<h2 id="FMTT">@Fmt(<span class="auto-style1">&lt;<em>TextOperationTime</em>&gt;</span>,<span class="auto-style1">&lt;<em>Time</em>&gt;</span>)</h2>
+<p class="MsoNormal">This macro formats a time information.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 99px; font-weight: normal;">
+		<a href="DataDisplayFormat.htm#TextOperationTime">TextOperationTime</a></td>
+		<td class="List" >Text operation to format a time from HHMMSS format.</td>
+		<td class="List" >Required</td>
+	</tr>		
+
+		<tr>
+		<td class="List" style="width: 100px">Time</td>
+		<td class="List" >Time to format</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Time formatted</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@Fmt(TI,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:00:00 PM<br />
+		</strong></span>@Fmt(TIF,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:59:59 PM<br />
+		</strong></span>@Fmt(TI2,12:34:56)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>123456</strong></span><br />
+		@Fmt(T4,123456)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>12:34<br />
+		</strong></span>@Fmt(T4,123456)&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>12:34<br />
+		</strong></span>@Fmt(T6,123456)&nbsp;&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>12:34:56<br />
+		</strong></span>@Fmt(T4,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:00<br />
+		</strong></span>@Fmt(T4F,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:59<br />
+		</strong></span>@Fmt(T6,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:00:00<br />
+		</strong></span>@Fmt(T6F,12)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:59:59<br />
+		</strong></span>@Fmt(T6,1234)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>12:34:00<br />
+		</strong></span>@Fmt(T6F,1234)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will 
+		return <span class="auto-style3"><strong>12:34:59</strong></span></td>
+	</tr>	
+</table>
+
+<h2 id="NULL">@NULL(<span class="auto-style1">&lt;Date&gt;</span>)</h2>
+<p class="Ms/oNormal">This macro returns null if the date is not initialized, 
+otherwise it returns the original string.<br />
+Here are the values ​​considered as uninitialized :<br />
+&nbsp;&nbsp; Empty string<br />
+&nbsp;&nbsp; <strong>''</strong>&nbsp;&nbsp; (two single quotes)<br />
+&nbsp;&nbsp; 12/30/1899<br />
+&nbsp;&nbsp; <strong>'</strong>12/30/1899<strong>'<br />
+</strong>&nbsp;&nbsp; n/a</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Date</td>
+		<td class="List" >Date of format: DD/MM/YYYY </td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Return null string or the original string.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@Null(02/02/2019)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>02/02/2019 </strong></span><br />
+		@Null(12/30/1899)&nbsp;&nbsp;&nbsp; will return
+		<span class="auto-style3"><strong>null</strong></span> <br />
+		@Null(n/a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>null</strong></span> <br />
+		@Null('')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style3"><strong>null</strong></span> </td>
+	</tr>	
+</table>
+
+</body>
+</html>

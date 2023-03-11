@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>INI file information</title>
+	<link rel="stylesheet" href="work.css" type="text/css" />
+<style>
+pre {
+	background-color: #eaeaea;
+	font-size: 8pt;
+	}	
+.auto-style1 {
+	font-weight: normal;
+}
+.auto-style2 {
+	color: #000080;
+}
+.auto-style3 {
+	text-decoration: underline;
+}
+.auto-style4 {
+	color: #000080;
+	background-color: #FFFF00;
+}
+</style>
+</head>
+<body>
+<h1>INI file information</h1>
+
+
+
+<h2 id="dbHOTINI">@dbHot(INI,<span class="auto-style1">&lt;<em>FileName</em>&gt;</span>,<span class="auto-style1">&lt;<em>Section</em>&gt;</span>,<span class="auto-style1">&lt;<em>Parameter</em>&gt;</span>)</h2>
+<p>This macro returns the content of a parameter inside an INI file.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FileName</td>
+		<td class="List" >Some file name are recognized by the system.<br />
+		<strong>SYSTEM</strong> and <strong>SETUP</strong> : The system will look inside the current system.ini or setup.ini. 
+        Sometime the system or setup file are called SYSTEM_001901.ini to make them specific for a particular workstation. Well SMS will automatically use the right system.ini or setup.ini that is currently used for that specific terminal.
+         <strong><br />
+		<br />
+		STARTUP</strong> : The system will look inside the current STARTUP.ini, whatever the real name is.
+        For this filename, you must not  add the &lt;<em>SECTION</em>&gt; parameter.  Ex:  @dbHot(INI,STARTUP,DBSERVER)<br />
+		<br />
+        You can also use other Ini files. For this, you can use a file without path that will be read in the 
+		Storeman\Office folder or use a  filename with his path.
+        In both cases, you must specify the INI extension.</td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Section</td>
+		<td class="List">The group section inside the INI file. Ex: [RECEIPT]</td>
+		<td class="List" style="width: 50px">Optionnal</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Parameter</td>
+		<td class="List">The parameter name inside the section.</td>
+		<td class="List">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Content of the parameter inside the INI file.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@dbHot(INI,STARTUP,DBSERVER) return 
+		<span class="auto-style2"><strong>(LOCAL)\SQLEXPRESS<br />
+		</strong></span>@dbHot(INI,SETUP,PAYMENT,Driver) return 
+		<span class="auto-style2"><strong>APILoopback.dll<br />
+		</strong></span>@dbHot(INI,SYSTEM,SMS,Name) return 
+		<span class="auto-style2"><strong>Loc Software<br />
+		</strong></span>@dbHot(INI,prepare.ini,RPT_ITM_N,AliasLink) return 
+		<span class="auto-style2"><strong>AliasItemReport<br />
+		</strong></span>@dbHot(INI,c:\windows\media\desktop.ini,LocalizedFileNames,chimes.wav) 
+		return <span class="auto-style2"><strong>@%windir%\system32\mmres.dll,-700</strong></span></td>
+	</tr>	
+</table>
+
+
+<h2 id="dbHOTINI2">@dbHot(<span class="auto-style1">&lt;<em>FileName</em>&gt;</span>,[<span class="auto-style1">&lt;<em>Section</em>&gt;</span>]<span class="auto-style1">&lt;<em>Parameter</em>&gt;<strong>,</strong>&lt;<em>TextDisplayFormat</em>&gt;</span>)</h2>
+<p>This macro returns the content formatted of a parameter inside an INI file.</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FileName</td>
+		<td class="List" >INI file name.<br />
+		You can use a file without path that will be read in the Storeman\Office folder or use a  filename with his path.
+        In both cases, you must specify the INI extension.</td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Section</td>
+		<td class="List">The group section inside the INI file. Ex: [RECEIPT]</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Parameter</td>
+		<td class="List">The parameter name inside the section.</td>
+		<td class="List">Required</td>
+	</tr>	
+	<tr>
+		<td class="List" style="width: 100px"><a href="DataDisplayFormat.htm#TextDisplayFormat">TextDisplayFormat</a></td>
+		<td class="List">Format for displaying a text value.</td>
+		<td class="List">Optionnal</td>
+	</tr>		
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >Content of the parameter inside the INI file.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">INI file: MyIniFile.ini<br />
+		[SectionName]<br />
+&nbsp; keyname1=value<br />
+&nbsp; keyname2=(Hello)&lt;&amp;&gt;<br />
+		<br />
+		@dbHot(MyIniFile.ini,[SectionName]keyname1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>value</strong></span><br />
+		@dbHot(MyIniFile.ini,[SectionName]keyname2,RAW) will return
+		<span class="auto-style2"><strong>(Hello)&lt;&amp;&gt;)<br />
+		</strong></span>@dbHot(MyIniFile.ini,[SectionName]keyname2,TXT)<strong>&nbsp;
+		</strong>will return <span class="auto-style2"><strong>[Hello]&lt;&amp;&gt;)<br />
+		</strong></span>@dbHot(MyIniFile.ini,[SectionName]keyname2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		will return <span class="auto-style2"><strong>[Hello]&amp;lt;&amp;amp;&amp;gt;</strong></span></td>
+	</tr>	
+</table>
+
+
+
+<h2 id="dbHOTSET">@dbHot(<span class="auto-style1">&lt;<em>FileName</em>&gt;</span>,SET,[<span class="auto-style1">&lt;<em>Section</em>&gt;</span>]<span class="auto-style1">&lt;<em>Parameter</em>&gt;</span>)</h2>
+<p>This macro saves the value of one or many Pool parameter in an INI file.<br />
+Format of the pool parameter name : [&lt;Section&gt;]&lt;Parameter&gt;<br />
+<span class="auto-style3">Example :</span><br class="auto-style3" />
+Filename = MyIniFile.ini<br />
+&nbsp; [SectionName]<br />
+&nbsp;&nbsp; keyname1=value<br />
+&nbsp;&nbsp; keyname2=value<br />
+<br />
+To change the value of keyname1, you must create this parameter:<br />
+&nbsp;&nbsp; @WizSet([SectionName]keyname1,NewValue)<br />
+And then make a call to the macro as follows:<br />
+&nbsp;&nbsp; @dbHot(MyIniFile.ini,SET,[SectionName]keyname1)<br />
+<br />
+The macro will take the value of the pool parameter and assign it to the key of 
+the INI file.<br />
+<br />
+Use * at the end of the parameter name allows you to define all parameters whose 
+names begin with these characters.<br />
+With the example above, if we want to assign in a single operation the values 
+​​of keyname1 and keyname2, we will do:<br />
+<br />
+&nbsp;&nbsp; @WizSet([SectionName]keyname1,NewValue1)<br />
+&nbsp;&nbsp; @WizSet([SectionName]keyname2,NewValue2)<br />
+&nbsp;&nbsp; @dbHot(MyIniFile.ini,SET,[SectionName]keyname*)</p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FileName</td>
+		<td class="List" >INI file name.<br />
+		You can use a file without path that will be read in the Storeman\Office folder or use a  filename with his path.
+        In both cases, you must specify the INI extension.</td>
+		<td class="List" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Section</td>
+		<td class="List">The group section inside the INI file. Ex: [RECEIPT]</td>
+		<td class="List" style="width: 50px">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Parameter</td>
+		<td class="List">The parameter name inside the section.</td>
+		<td class="List">Required</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None.</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List">@WizRpl([CLOSE_ALL]user_rpt_periods=NewValue)<br />
+		@dbHot(Application.INI,SET,[CLOSE_ALL]user_rpt_periods)<br />
+		<br />
+		@WizRpl([CLOSE_ALL]user_rpt_names=NewValue1) <br />
+		@WizRpl([CLOSE_ALL]user_rpt_periods=NewValue2)<br />
+		@WizRpl([CLOSE_ALL]user_rpt_details=NewValue3) <br />
+		@dbHot(Application.INI,SET,[CLOSE_ALL]user_rpt*)<br />
+		<br />
+		@WizRpl([TheSection]MyParameter=MyValue)<br />
+		@dbHot(C:\temp\MyIniFile.ini,SET,[TheSection]MyParameter)</td>
+	</tr>	
+</table>
+
+<!--ToComplete
+<h2 id="msgTable">@msgTable(<span class="auto-style1">&lt;INIResultSet&gt;<strong>,</strong>&lt;<em>FileName</em>&gt;</span>,<span class="auto-style1">&lt;<em>Section</em>&gt;,&lt;<em>Parameter</em>&gt;</span>)</h2>
+<p>This macro
+		<span class="auto-style4">A completer</span></p>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List" style="width: 100px">Parameter</th>
+		<th class="List">Description</th>
+		<th class="List">Required/Optionnal</th>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px; height: 15px;"><span class="auto-style1">
+		INIResultSet</span></td>
+		<td class="List" style="height: 15px" >
+		<span class="auto-style4">A completer</span></td>
+		<td class="List" style="height: 15px" >Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">FileName</td>
+		<td class="List" >INI file name.<br />
+		You can use a file without path that will be read in the Storeman\Office folder or use a  filename with his path.
+        In both cases, you must specify the INI extension.</td>
+		<td class="List" >Required</td>
+	</tr>
+	
+	<tr>
+		<td class="List" style="width: 100px; >Section</td>
+		<td class="List" >The group section inside the INI file. Ex: [RECEIPT]</td>
+		<td class="List" style="width: 50px; ">Required</td>
+	</tr>
+	<tr>
+		<td class="List" style="width: 100px">Parameter</td>
+		<td class="List">?<span class="auto-style4">A completer</span></td>
+		<td class="List">Optionnal</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%">
+	<tr>
+		<th class="List"  >Return value</th>
+	</tr>
+	<tr>
+		<td class="List" >None. ??</td>
+	</tr>	
+</table>
+
+<table class="List" width="100%" >
+	<tr>
+		<th class="List" >Examples</th>
+	</tr>
+	<tr>
+		<td class="List" style="background-color: #FFFF00">????????????????????</td>
+	</tr>	
+</table>
+-->
+
+
+
+</body>
+</html>
